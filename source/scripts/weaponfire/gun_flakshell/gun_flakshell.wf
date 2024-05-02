@@ -1,0 +1,18 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:50 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "dmg_cloud_spray_large"
+bulletfx = "bullet_flak_combo"
+nopenetratefx = "nopen_generic"
+deathtype = "deathCannon"
+firefx = "muzzle_flash_combo_small_frigate"
+scartype = "default"
+fire_sfx = "WEAPON/fsflak"
+--bullet_nlips = 0.0005
+--hit_nlips = 0.0005
+bullet_sfx = "WEAPON/fsflakExp"
+nopenetrate_sfx = "WEAPON/fsflakExp"
+hit_clamp =
+{ 1, 1, }

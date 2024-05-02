@@ -1,0 +1,15 @@
+fps = 25
+startFrame = 0
+loopCount = 10
+texture = 
+        { "data:/ART/FX/ankheton/ankheton_particle0000.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0001.tga",
+"data:/ART/FX/ankheton/ankheton_particle0002.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0003.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0004.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0005.tga",
+"data:/ART/FX/ankheton/ankheton_particle0006.tga",
+"data:/ART/FX/ankheton/ankheton_particle0007.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0008.tga",  
+"data:/ART/FX/ankheton/ankheton_particle0009.tga", 
+"data:/ART/FX/ankheton/ankheton_particle0010.tga", }

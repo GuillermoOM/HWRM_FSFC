@@ -1,0 +1,18 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:53 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "shi_laser_hit2"
+bulletfx = "vgr_wave_beam_combo_small"
+nopenetratefx = "shi_laser_hit"
+deathtype = "deathBeam"
+firefx = ""
+scartype = "Plasma_Bomb/Plasma_Bomb"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+fire_sfx = "WEAPON/SHIVANHEAVYLASER"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

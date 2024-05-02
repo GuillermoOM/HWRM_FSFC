@@ -1,0 +1,17 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:51 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "morningstar_hit"
+bulletfx = "morningstar"
+nopenetratefx = "morningstar_hit"
+deathtype = "deathCannon"
+scartype = "Kinetic_Small/Kinetic_Small"
+fire_sfx = "WEAPON/flail"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+firefx = "mekhu_squirt_small"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

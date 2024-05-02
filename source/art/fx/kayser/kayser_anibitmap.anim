@@ -1,0 +1,8 @@
+fps = 3
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/kayser/kayser_anibitmap_0000.tga", 
+"data:/ART/FX/kayser/kayser_anibitmap_0001.tga",
+"data:/ART/FX/kayser/kayser_anibitmap_0002.tga", 
+"data:/ART/FX/kayser/kayser_anibitmap_0003.tga",  }

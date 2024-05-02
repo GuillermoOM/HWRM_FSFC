@@ -1,0 +1,9 @@
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/kayser/BMuzzle_0000.tga", 
+"data:/ART/FX/kayser/BMuzzle_0001.tga",
+"data:/ART/FX/kayser/BMuzzle_0002.tga", 
+"data:/ART/FX/kayser/BMuzzle_0003.tga", 
+"data:/ART/FX/kayser/BMuzzle_0004.tga",  }

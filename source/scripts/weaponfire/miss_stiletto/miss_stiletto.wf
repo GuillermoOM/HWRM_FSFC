@@ -1,0 +1,16 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:52 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "dmg_sml_missle_combo"
+bulletfx = "bullet_generic"
+nopenetratefx = "dmg_sml_missle_combo"
+deathtype = "deathCannon"
+fire_sfx = "WEAPON/stiletto"
+firefx = "TORPEDO_STEAM_SPRAY"
+scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
+hit_sfx = "WEAPON/smallmissileblast"
+nopenetrate_sfx = "WEAPON/smallmissileblast"
+hit_clamp = 
+    { 1, 1, }

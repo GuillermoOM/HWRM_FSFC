@@ -1,0 +1,40 @@
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_disruptor", "Normal", 2000, 2000, 0, 0, 0, 0, 1, 1, 0,
+    0.35, 0, 0, 0, 0, 260, 240, 0.1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 30, 30, "")
+
+setAngles(NewWeaponType, 0, -12.5, 12.5, -12.5, 12.5)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 0.1, },
+    { LightArmour = 0.1, },
+    { MediumArmour = 0.1, },
+    { HeavyArmour = 0.1, },
+    { SubSystemArmour = 2, },
+    { TurretArmour = 1, },
+    { ResArmour = 0.1, },
+    { MoverArmour = 0.1, },
+    { PlanetKillerArmour = 1, },
+    { MineArmour = 0.1, },
+    { ChunkArmour = 0.1, })
+
+setAccuracy(NewWeaponType, 1,
+    { Fighter = 0, },
+    { Corvette = 0, },
+    { Fighter_hw1 = 0, },
+    { Corvette_hw1 = 0, },
+    { Frigate = 0, },
+    { Utility = 0, },
+    { munition = 0, },
+    { SmallCapitalShip = 0, },
+    { BigCapitalShip = 0, },
+    { Mothership = 0, },
+    { Emplacement = 0, },
+    { UnAttackable = 0, },
+    { SubSystem = 1, },
+    { Resource = 0, },
+    { ResourceLarge = 0, },
+    { Capturer = 0, },
+    { Chimera = 0, })

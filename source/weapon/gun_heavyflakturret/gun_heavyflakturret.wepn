@@ -1,0 +1,45 @@
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_FlakShell", "Normal", 3000, 2250, 0, 0, 0, 0, 1, 1, 0,
+    0.67, 0, 0, 1, 1, 70, 90, 0.1, "Normal", 1, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 10, 10, "")
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
+AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
+
+setAngles(NewWeaponType, 0, -180, 180, 0, 80)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 1, },
+    { LightArmour = 1, },
+    { MediumArmour = 1, },
+    { HeavyArmour = 1, },
+    { SubSystemArmour = 1, },
+    { TurretArmour = 1, },
+    { ResArmour = 1, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
+setAccuracy(NewWeaponType, 1,
+    { Fighter = 0.25, },
+    { Corvette = 0.5, },
+    { Fighter_hw1 = 0.25, },
+    { Corvette_hw1 = 0.5, },
+    { Frigate = 1, },
+    { Utility = 0.8, },
+    { munition = 0.05, },
+    { HeavyMissile = 1, },
+    { SmallCapitalShip = 1, },
+    { BigCapitalShip = 1, },
+    { Mothership = 1, },
+    { Emplacement = 0.3, },
+    { UnAttackable = 0, },
+    { SubSystem = 1, },
+    { Resource = .6, },
+    { ResourceLarge = 1, },
+    { Capturer = 1, },
+    { Chimera = 1, })
+
+addAnimTurretSound(NewWeaponType, "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

@@ -1,0 +1,25 @@
+-- LuaDC version 0.9.20
+-- 2014-01-20 22:40:20
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+name = "Circle"
+displayName = "AWACS"
+mesh = 
+{ 
+    colour = 
+        { 0, 0, 0, 0, }, 
+    lineWeight = 1, 
+    renderFlags = 
+        { "scaleX", "scaleY", }, 
+    LODs = 
+        { 1, "UI\\TacticalIcons\\Meshes\\Circle.hod", }, }
+mouseOverMesh = 
+{ 
+    colour = 
+        { 0, 0, 0, 0, }, 
+    lineWeight = 2, 
+    renderFlags = 
+        { "scaleX", "scaleY", }, 
+    LODs = 
+        { 1, "UI\\TacticalIcons\\Meshes\\Circle.hod", }, }

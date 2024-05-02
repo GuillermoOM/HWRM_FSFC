@@ -1,0 +1,319 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:24:01 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Trail",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation2 =
+        {
+            name = "Death",
+            length = 5,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation3 =
+        {
+            name = "Deathtrail",
+            length = 3,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation4 =
+        {
+            name = "dmg01",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.25,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation5 =
+        {
+            name = "dmg02",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.5,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation6 =
+        {
+            name = "dmg03",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.75,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation7 =
+        {
+            name = "ABStart",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = { "" }
+        },
+        animation8 =
+        {
+            name = "ABDo",
+            length = 6,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = { "" }
+        },
+        animation9 =
+        {
+            name = "ABStop",
+            length = 1,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = { "" }
+        },
+    },
+    events =
+    {
+        trail1 =
+        {
+            { "anim",     "Trail", },
+            { "animtime", "0", },
+            { "marker",   "trail1", },
+            { "fx",       "fighter_trail_spray", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        trail2 =
+        {
+            { "anim",     "Trail", },
+            { "animtime", "0", },
+            { "marker",   "trail2", },
+            { "fx",       "fighter_trail_spray", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event6 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "death_generic_fighter", },
+            { "sound",    "EXPLOSION/boom_3", },
+            { "fx_scale", "2", },
+        },
+        event7 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0.5", },
+            { "marker",   "root", },
+            { "fx",       "fiery_trail_lines_spray", },
+            { "fx_scale", "entity", },
+        },
+        event8 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0.5", },
+            { "marker",   "root", },
+            { "fx",       "fiery_trail_death_combo", },
+            { "sound",    "EXPLOSION/boom_2", },
+            { "fx_scale", "20", },
+        },
+        event9 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "1", },
+            { "marker",   "root", },
+            { "fx",       "fiery_trail_shockwave_small", },
+            { "fx_scale", "entity", },
+        },
+        event10 =
+        {
+            { "anim",     "dmg01", },
+            { "animtime", "-1", },
+            { "marker",   "marker1,maker2", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "5", },
+            { "fx_nlips", "on", },
+        },
+        event11 =
+        {
+            { "anim",     "dmg02", },
+            { "animtime", "-1", },
+            { "marker",   "marker3,maker4", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "7.5", },
+            { "fx_nlips", "on", },
+        },
+        event12 =
+        {
+            { "anim",     "dmg03", },
+            { "animtime", "-1", },
+            { "marker",   "marker5", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "10", },
+            { "fx_nlips", "on", },
+        },
+        ABStart1 =
+        {
+            { "anim",     "ABStart", },
+            { "animtime", "0", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "", },
+            { "sound",    "SPECIAL/AB_START", },
+            { "fx_scale", "1", },
+        },
+        ABDo1 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "-1", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "SPECIAL/AB_DO", },
+            { "fx_scale", "1", },
+        },
+        ABDo2 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "-1", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo11 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.16", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo21 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.16", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo12 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.33", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo22 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.33", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo13 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.5", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo23 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.5", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo14 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.66", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo24 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.66", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo15 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.83", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        ABDo25 =
+        {
+            { "anim",     "ABDo", },
+            { "animtime", "0.83", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_AB_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+
+        ABStop =
+        {
+            { "anim",     "ABStop", },
+            { "animtime", "0", },
+            { "marker",   "trail1, trail2", },
+            { "fx",       "", },
+            { "sound",    "SPECIAL/AB_End", },
+            { "fx_scale", "0.25", },
+        },
+    },
+}

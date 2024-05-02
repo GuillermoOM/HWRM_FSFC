@@ -1,0 +1,28 @@
+fps = 60
+startFrame = 0
+loopCount = 60
+texture = 
+        { "data:/ART/FX/shivan_beam/SBeamAGlow_0000.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0001.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0002.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0003.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0004.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0005.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0006.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0007.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0008.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0009.tga",  
+"data:/ART/FX/shivan_beam/SBeamAGlow_0010.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0011.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0012.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0013.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0014.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0015.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0016.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0017.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0018.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0019.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0020.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0021.tga",
+"data:/ART/FX/shivan_beam/SBeamAGlow_0022.tga", 
+"data:/ART/FX/shivan_beam/SBeamAGlow_0023.tga",   }

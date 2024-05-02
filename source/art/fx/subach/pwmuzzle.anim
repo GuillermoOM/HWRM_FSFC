@@ -1,0 +1,8 @@
+fps = 15
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/subach/PWMuzzle_0000.tga", 
+"data:/ART/FX/subach/PWMuzzle_0001.tga", 
+"data:/ART/FX/subach/PWMuzzle_0002.tga", 
+"data:/ART/FX/subach/PWMuzzle_0003.tga",  }

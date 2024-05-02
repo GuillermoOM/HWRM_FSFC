@@ -1,0 +1,14 @@
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/kayser/kayser_impact0000.tga", 
+"data:/ART/FX/kayser/kayser_impact0001.tga",
+"data:/ART/FX/kayser/kayser_impact0002.tga", 
+"data:/ART/FX/kayser/kayser_impact0003.tga", 
+"data:/ART/FX/kayser/kayser_impact0004.tga", 
+"data:/ART/FX/kayser/kayser_impact0005.tga",
+"data:/ART/FX/kayser/kayser_impact0006.tga",
+"data:/ART/FX/kayser/kayser_impact0007.tga", 
+"data:/ART/FX/kayser/kayser_impact0008.tga", 
+"data:/ART/FX/kayser/kayser_impact0009.tga",   }

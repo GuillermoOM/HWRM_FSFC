@@ -1,0 +1,18 @@
+
+-- formats:
+-- SetFireEffect(NewWeaponFireType, <filename>, real32 distance)
+-- SetBulletEffect(NewWeaponFireType, <filename>, real32 distance)
+-- SetHitEffect(NewWeaponFireType, <filename>, real32 distance)
+-- the 'distance' variable sets the max distance to which this effect is visible.
+
+hitfx = "lamprey_hit"
+bulletfx = "lamprey"
+nopenetratefx = "lamprey_hit"
+deathtype = "deathCannon"
+scartype = "default"
+fire_sfx = "WEAPON/lamprey"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+firefx = "mekhu_squirt_small"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = {1.0, 1.0}

@@ -1,0 +1,15 @@
+fps = 10
+startFrame = 0
+loopCount = 10
+texture = 
+        { "data:/ART/FX/shivan_beam/Particle_red_0000.tga", 
+"data:/ART/FX/shivan_beam/Particle_red_0001.tga",
+"data:/ART/FX/shivan_beam/Particle_red_0002.tga", 
+"data:/ART/FX/shivan_beam/Particle_red_0003.tga",
+"data:/ART/FX/shivan_beam/Particle_red_0004.tga", 
+"data:/ART/FX/shivan_beam/Particle_red_0005.tga",
+"data:/ART/FX/shivan_beam/Particle_red_0006.tga",
+"data:/ART/FX/shivan_beam/Particle_red_0007.tga", 
+"data:/ART/FX/shivan_beam/Particle_red_0008.tga", 
+"data:/ART/FX/shivan_beam/Particle_red_0009.tga",  
+"data:/ART/FX/shivan_beam/Particle_red_0010.tga",    }

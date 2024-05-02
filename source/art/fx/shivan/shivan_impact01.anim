@@ -1,0 +1,21 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 11:11:19 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 30
+startFrame = 0
+loopCount = 0
+texture = { 
+"data:/ART/FX/shivan/shivan_impact010000.tga", 
+"data:/ART/FX/shivan/shivan_impact010001.tga", 
+"data:/ART/FX/shivan/shivan_impact010002.tga", 
+"data:/ART/FX/shivan/shivan_impact010003.tga", 
+"data:/ART/FX/shivan/shivan_impact010004.tga", 
+"data:/ART/FX/shivan/shivan_impact010005.tga", 
+"data:/ART/FX/shivan/shivan_impact010006.tga", 
+"data:/ART/FX/shivan/shivan_impact010007.tga", 
+"data:/ART/FX/shivan/shivan_impact010008.tga", 
+"data:/ART/FX/shivan/shivan_impact010009.tga", 
+"data:/ART/FX/shivan/shivan_impact010010.tga", 
+}

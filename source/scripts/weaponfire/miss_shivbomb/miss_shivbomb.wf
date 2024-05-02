@@ -1,0 +1,15 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:52 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "FS_bomb_impact_combo"
+bulletfx = "bullet_generic"
+nopenetratefx = "FS_bomb_impact_combo"
+deathtype = "deathCannon"
+scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
+fire_sfx = "WEAPON/bomblaunch"
+hit_sfx = "WEAPON/FS2BOMBHIT"
+nopenetrate_sfx = "WEAPON/FS2BOMBHIT"
+hit_clamp = 
+    { 1, 1, }

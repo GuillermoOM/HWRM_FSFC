@@ -1,0 +1,11 @@
+hitfx = "dmg_cloud_combo_yellow"
+bulletfx = "bullet_generic"
+nopenetratefx = "dmg_cloud_combo_yellow"
+deathtype = "deathCannon"
+fire_sfx = "WEAPON/m_rockeye"
+firefx = "TORPEDO_STEAM_SPRAY"
+scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
+hit_sfx = "WEAPON/smallmissileblast"
+nopenetrate_sfx = "WEAPON/smallmissileblast"
+hit_clamp =
+{ 1, 1, }

@@ -1,0 +1,76 @@
+-- LuaDC version 0.9.20
+-- 2014-01-20 22:40:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects = 
+{ 
+    animations = 
+    { 
+ 	animation1 =
+        {
+            name = "Death",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation2 = 
+        { 
+            name = "Missile", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, },  }, 
+    events = 
+    { 
+        event1 = 
+            { 
+                { "anim", "Missile", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_IonCan1_Muzzle", }, 
+                { "fx", "torpedo_steam_spray", }, 
+                { "sound", "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH", }, 
+                { "fx_scale", "1", }, 
+            }, 
+        -- event2 = 
+        --     { 
+        --         { "anim", "Weapon_IonCan1", }, 
+        --         { "animtime", "0.25", }, 
+        --         { "marker", "Weapon_IonCan1Slave_Muzzle", }, 
+        --         { "fx", "ion_beam_charge_combo_bc", }, 
+        --         { "sound", "WEAPON/CARRIER/FIRE/WEAPON_BATTLECRUISER_ION_CANNON_BEAM", }, 
+        --         { "fx_scale", "1", }, 
+        --     }, 
+        event3 = 
+            { 
+                { "anim", "Weapon_IonCan1", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "vent1", }, 
+                { "fx", "ion_cannon_steam_spray", }, 
+            }, 
+        event4 = 
+            { 
+                { "anim", "Death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "Root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", }, 
+                { "fx_scale", "5", }, 
+            }, 
+        event5 = 
+            { 
+                { "anim", "Death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "Root", }, 
+                { "fx", "dmg_cloud_main_explosion_combo", }, 
+                { "sound", "Explosion/Subhit", }, 
+                { "fx_scale", "5", }, 
+            },
+
+}, }

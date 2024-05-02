@@ -1,0 +1,135 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:54 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Death",
+            length = 1,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation2 =
+        {
+            name = "Damage",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation3 =
+        {
+            name = "dmg01",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.25,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation4 =
+        {
+            name = "dmg02",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.5,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation5 =
+        {
+            name = "dmg03",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.75,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+    },
+    events =
+    {
+        event1 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.2", },
+            { "marker",   "marker2", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+            { "fx_scale", "1", },
+        },
+        event2 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0", },
+            { "marker",   "marker3", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "Explosion/Small/ETG_Explode_Small_Plasma", },
+            { "fx_scale", "0.6", },
+        },
+        event3 =
+        {
+            { "anim",     "Death" },
+            { "animtime", "0" },
+            { "marker",   "Root" },
+            { "sound",    "WEAPON/FS2MEGABOMBHIT" },
+            { "fx",       "shockwave_combo" },
+            { "fx_scale", "35", },
+        },
+        event4 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.1", },
+            { "marker",   "marker4", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+            { "fx_scale", "0.6", },
+        },
+        event5 =
+        {
+            { "anim",     "dmg01", },
+            { "animtime", "-1", },
+            { "marker",   "marker1,marker2", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "3", },
+            { "fx_nlips", "on", },
+        },
+        event6 =
+        {
+            { "anim",     "dmg02", },
+            { "animtime", "-1", },
+            { "marker",   "marker2,marker3", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "2", },
+            { "fx_nlips", "on", },
+        },
+        event7 =
+        {
+            { "anim",     "dmg03", },
+            { "animtime", "-1", },
+            { "marker",   "marker4", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "5", },
+            { "fx_nlips", "on", },
+        },
+    },
+}

@@ -1,0 +1,9 @@
+hitfx = "dmg_laser_hit"
+bulletfx = "kinetic_small_bullet"
+nopenetratefx = "dmg_laser_hit"
+deathtype = "deathCannon"
+scartype = "Kinetic_Small/Kinetic_Small"
+fire_sfx = "WEAPON/avenger"
+hit_sfx = "WEAPON/impact"
+hit_clamp =
+{ 1, 1, }

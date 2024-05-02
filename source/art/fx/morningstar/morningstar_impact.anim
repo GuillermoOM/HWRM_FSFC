@@ -1,0 +1,12 @@
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/morningstar/morningstar_impact0000.tga", 
+"data:/ART/FX/morningstar/morningstar_impact0001.tga",
+"data:/ART/FX/morningstar/morningstar_impact0002.tga", 
+"data:/ART/FX/morningstar/morningstar_impact0003.tga", 
+"data:/ART/FX/morningstar/morningstar_impact0004.tga", 
+"data:/ART/FX/morningstar/morningstar_impact0005.tga",
+"data:/ART/FX/morningstar/morningstar_impact0006.tga",
+"data:/ART/FX/morningstar/morningstar_impact0007.tga",  }

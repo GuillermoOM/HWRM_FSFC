@@ -1,0 +1,16 @@
+fps = 3
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/prometheus/prometheus_AniBitmap_0000.tga", 
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0001.tga",
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0002.tga", 
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0003.tga", 
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0004.tga", 
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0005.tga",
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0006.tga",
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0007.tga",  
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0008.tga", 
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0009.tga",
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0010.tga",
+"data:/ART/FX/prometheus/prometheus_AniBitmap_0011.tga", }

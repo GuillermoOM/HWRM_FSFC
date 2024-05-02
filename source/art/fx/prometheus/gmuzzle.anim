@@ -1,0 +1,9 @@
+fps = 15
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/prometheus/GMuzzle_0000.tga", 
+"data:/ART/FX/prometheus/GMuzzle_0001.tga", 
+"data:/ART/FX/prometheus/GMuzzle_0002.tga", 
+"data:/ART/FX/prometheus/GMuzzle_0003.tga",
+"data:/ART/FX/prometheus/GMuzzle_0004.tga",   }

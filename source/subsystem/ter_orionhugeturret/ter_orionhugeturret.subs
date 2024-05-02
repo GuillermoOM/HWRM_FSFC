@@ -1,0 +1,42 @@
+-- LuaDC version 0.9.20
+-- 2014-01-20 22:40:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "Terran Huge Turret"
+NewSubSystemType.sobDescription = "Range: 4200m \nDamage per Shot: 500 \nDPS: 375 (sustained) \nCycle Time: 4s"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 10000
+NewSubSystemType.regentime = 400
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0
+NewSubSystemType.selectionLimit = 0
+NewSubSystemType.preciseATILimit = 0
+NewSubSystemType.selectionPriority = 0
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "gun_terhugeturret"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 120
+NewSubSystemType.activateHealthPercentage = 0.5
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+LoadHODFile(NewSubSystemType, 1)
+NewSubSystemType.BuildFamily = "SubSystem_Ter"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "TurretArmour"
+StartSubSystemWeaponConfig(NewSubSystemType, "gun_terhugeturret", "Weapon_IonCan1", "HL1")

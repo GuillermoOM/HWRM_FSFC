@@ -1,0 +1,13 @@
+--============================================================================
+--    Name    : hwat_vay_ffassault.madStates
+--    Purpose : Animation state data.
+--
+-- Created 100630, updated 101006 by Heresy Heavy Industries.
+-- Copyright Relic Entertainment, Inc.  All rights reserved.
+-- Heresy and Terror! :3
+-- May contain traces of thoughts.
+--============================================================================
+TER_LEVIATHAN_Normal_OnSet = function(ship)
+    startAnim(ship, "radar")
+    setLoopCount(ship, "radar", 100000000)   --infinite looping.
+end

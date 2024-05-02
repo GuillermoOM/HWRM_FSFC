@@ -1,0 +1,16 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:52 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "FS_megabomb_impact_combo"
+bulletfx = "bullet_generic"
+nopenetratefx = "FS_megabomb_impact_combo"
+deathtype = "deathCannon"
+fire_sfx = "WEAPON/m_megabomblaunch"
+firefx = "TORPEDO_STEAM_SPRAY"
+scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
+hit_sfx = "WEAPON/M_MEGABOMBHIT"
+nopenetrate_sfx = "WEAPON/M_MEGABOMBHIT"
+hit_clamp =
+{ 1, 1, }

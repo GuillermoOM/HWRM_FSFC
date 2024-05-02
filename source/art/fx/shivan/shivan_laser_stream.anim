@@ -1,0 +1,22 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 11:11:19 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 35
+startFrame = 0
+loopCount = 0
+texture = 
+    {
+"data:/ART/FX/shivan/shivan_Laser_Stream0001.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0002.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0003.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0004.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0005.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0006.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0007.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0008.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0009.tga", 
+"data:/ART/FX/shivan/shivan_Laser_Stream0010.tga", 
+
+}

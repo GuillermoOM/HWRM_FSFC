@@ -1,0 +1,13 @@
+hitfx = "prometheus_hit"
+bulletfx = "prometheus_combo"
+nopenetratefx = "prometheus_hit"
+deathtype = "deathBeam"
+firefx = "prometheus_squirt_small"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+fire_sfx = "WEAPON/prometheusS"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+hit_sfx = "WEAPON/impact"
+nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

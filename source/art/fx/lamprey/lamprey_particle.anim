@@ -1,0 +1,13 @@
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/lamprey/lamprey_particle0000.tga", 
+"data:/ART/FX/lamprey/lamprey_particle0001.tga",
+"data:/ART/FX/lamprey/lamprey_particle0002.tga", 
+"data:/ART/FX/lamprey/lamprey_particle0003.tga", 
+"data:/ART/FX/lamprey/lamprey_particle0004.tga", 
+"data:/ART/FX/lamprey/lamprey_particle0005.tga",
+"data:/ART/FX/lamprey/lamprey_particle0006.tga",
+"data:/ART/FX/lamprey/lamprey_particle0007.tga", 
+"data:/ART/FX/lamprey/lamprey_particle0008.tga",  }

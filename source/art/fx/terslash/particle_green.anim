@@ -1,0 +1,15 @@
+fps = 10
+startFrame = 0
+loopCount = 10
+texture = 
+        { "data:/ART/FX/terslash/Particle_Green_0000.tga", 
+"data:/ART/FX/terslash/Particle_Green_0001.tga",
+"data:/ART/FX/terslash/Particle_Green_0002.tga", 
+"data:/ART/FX/terslash/Particle_Green_0003.tga",
+"data:/ART/FX/terslash/Particle_Green_0004.tga", 
+"data:/ART/FX/terslash/Particle_Green_0005.tga",
+"data:/ART/FX/terslash/Particle_Green_0006.tga",
+"data:/ART/FX/terslash/Particle_Green_0007.tga", 
+"data:/ART/FX/terslash/Particle_Green_0008.tga", 
+"data:/ART/FX/terslash/Particle_Green_0009.tga",  
+"data:/ART/FX/terslash/Particle_Green_0010.tga",    }

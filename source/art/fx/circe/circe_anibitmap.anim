@@ -1,0 +1,24 @@
+fps = 30
+startFrame = 0
+loopCount = 10
+texture = 
+        { "data:/ART/FX/circe/circe_anibitmap0000.tga", 
+"data:/ART/FX/circe/circe_anibitmap0001.tga",
+"data:/ART/FX/circe/circe_anibitmap0002.tga", 
+"data:/ART/FX/circe/circe_anibitmap0003.tga",
+"data:/ART/FX/circe/circe_anibitmap0004.tga", 
+"data:/ART/FX/circe/circe_anibitmap0005.tga",
+"data:/ART/FX/circe/circe_anibitmap0006.tga",
+"data:/ART/FX/circe/circe_anibitmap0007.tga", 
+"data:/ART/FX/circe/circe_anibitmap0008.tga", 
+"data:/ART/FX/circe/circe_anibitmap0009.tga",  
+"data:/ART/FX/circe/circe_anibitmap0010.tga", 
+"data:/ART/FX/circe/circe_anibitmap0011.tga",
+"data:/ART/FX/circe/circe_anibitmap0012.tga", 
+"data:/ART/FX/circe/circe_anibitmap0013.tga", 
+"data:/ART/FX/circe/circe_anibitmap0014.tga", 
+"data:/ART/FX/circe/circe_anibitmap0015.tga",
+"data:/ART/FX/circe/circe_anibitmap0016.tga",
+"data:/ART/FX/circe/circe_anibitmap0017.tga", 
+"data:/ART/FX/circe/circe_anibitmap0018.tga", 
+"data:/ART/FX/circe/circe_anibitmap0019.tga",    }

@@ -1,0 +1,18 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:53 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "mekhu_hit"
+bulletfx = "kayser_combo"
+nopenetratefx = "mekhu_hit"
+deathtype = "deathBeam"
+firefx = "kayser_fire"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+fire_sfx = "WEAPON/banshee"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+hit_sfx = "WEAPON/impact"
+nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

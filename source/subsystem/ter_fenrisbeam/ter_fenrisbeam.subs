@@ -1,0 +1,42 @@
+-- LuaDC version 0.9.20
+-- 2014-01-20 22:40:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "Guardian Spear - Light Slashing Beam Cannon"
+NewSubSystemType.sobDescription = "DPS: 220"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 750
+NewSubSystemType.regentime = 400
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.68
+NewSubSystemType.selectionLimit = 5000
+NewSubSystemType.preciseATILimit = 5000
+NewSubSystemType.selectionPriority = 37.5
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "beam_sgreencruiser"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 60
+NewSubSystemType.activateHealthPercentage = 0.5
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+LoadHODFile(NewSubSystemType, 1)
+NewSubSystemType.BuildFamily = "SubSystem_Ter"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "TurretArmour"
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_sgreencruiser", "Weapon_IonCan1", "Weapon_IonCan1")

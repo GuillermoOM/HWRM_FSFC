@@ -1,0 +1,22 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 11:11:19 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 80
+startFrame = 0
+loopCount = 2
+texture = 
+    {
+"data:/ART/FX/shivan/shivan_particle020001.tga", 
+"data:/ART/FX/shivan/shivan_particle020002.tga", 
+"data:/ART/FX/shivan/shivan_particle020003.tga", 
+"data:/ART/FX/shivan/shivan_particle020004.tga", 
+"data:/ART/FX/shivan/shivan_particle020005.tga", 
+"data:/ART/FX/shivan/shivan_particle020006.tga", 
+"data:/ART/FX/shivan/shivan_particle020007.tga", 
+"data:/ART/FX/shivan/shivan_particle020008.tga", 
+"data:/ART/FX/shivan/shivan_particle020009.tga", 
+"data:/ART/FX/shivan/shivan_particle020010.tga", 
+
+}

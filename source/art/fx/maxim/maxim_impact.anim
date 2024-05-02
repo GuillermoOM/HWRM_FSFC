@@ -1,0 +1,27 @@
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/maxim/maxim_impact_0000.tga", 
+"data:/ART/FX/maxim/maxim_impact_0001.tga",
+"data:/ART/FX/maxim/maxim_impact_0002.tga", 
+"data:/ART/FX/maxim/maxim_impact_0003.tga", 
+"data:/ART/FX/maxim/maxim_impact_0004.tga", 
+"data:/ART/FX/maxim/maxim_impact_0005.tga",
+"data:/ART/FX/maxim/maxim_impact_0006.tga",
+"data:/ART/FX/maxim/maxim_impact_0007.tga", 
+"data:/ART/FX/maxim/maxim_impact_0008.tga", 
+"data:/ART/FX/maxim/maxim_impact_0009.tga", 
+"data:/ART/FX/maxim/maxim_impact_0010.tga",
+"data:/ART/FX/maxim/maxim_impact_0011.tga",
+"data:/ART/FX/maxim/maxim_impact_0012.tga", 
+"data:/ART/FX/maxim/maxim_impact_0013.tga", 
+"data:/ART/FX/maxim/maxim_impact_0014.tga", 
+"data:/ART/FX/maxim/maxim_impact_0015.tga",
+"data:/ART/FX/maxim/maxim_impact_0016.tga",
+"data:/ART/FX/maxim/maxim_impact_0017.tga", 
+"data:/ART/FX/maxim/maxim_impact_0018.tga", 
+"data:/ART/FX/maxim/maxim_impact_0019.tga", 
+"data:/ART/FX/maxim/maxim_impact_0020.tga",  
+"data:/ART/FX/maxim/maxim_impact_0021.tga",
+"data:/ART/FX/maxim/maxim_impact_0022.tga", }

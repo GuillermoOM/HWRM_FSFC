@@ -1,0 +1,10 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 11:11:19 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 20
+startFrame = 0
+loopCount = 999999
+texture = 
+    { "data:/ART/FX/beam/blueglow1.tga", "data:/ART/FX/beam/blueglow2.tga", "data:/ART/FX/beam/blueglow3.tga", "data:/ART/FX/beam/blueglow4.tga", "data:/ART/FX/beam/blueglow5.tga", "data:/ART/FX/beam/blueglow6.tga", }

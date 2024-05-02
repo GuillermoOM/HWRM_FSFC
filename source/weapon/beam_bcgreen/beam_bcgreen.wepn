@@ -1,0 +1,32 @@
+StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "Beam_BGreen", "Normal Only", 0, 8000, 0, 7.6, 3.5, 0, 30, 0, 1,
+    22, 0, 0, 1, 1, 0, 0, 1, "Normal", 0, 0, 5000)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 26400, 264000, "")
+
+setAngles(NewWeaponType, 65, 0, 0, 0, 0)
+
+setPenetration(NewWeaponType, 100, 1,
+    { PlanetKillerArmour = 0 },
+    { SwarmerArmor = 0.10 },
+    { SpaceMineArmor = 1 },
+    { TorpedoArmor = 0 },
+    { HeavyMissileArmor = 0 },
+    { SmallMissileArmor = 0 },
+    { SubSystemArmour = .3 },
+    { MediumArmour = 0.5 },
+    { HeavyArmour = 1.0 });
+
+setAccuracy(NewWeaponType, 1,
+    { Swarmer = 0.01 },
+    { SpaceMine = 0.01 },
+    { Torpedo = 0 },
+    { HeavyMissile = 0 },
+    { SmallMissile = 0 },
+    { Fighter = 0 },
+    { Fighter_hw1 = 0 },
+    { Corvette = 0 },
+    { Corvette_hw1 = 0 },
+    { munition = 0 },
+    { SmallCapitalShip = 1.0 },
+    { BigCapitalShip = 1.0 },
+    { Frigate = 1.0 });

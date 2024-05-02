@@ -1,0 +1,23 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:24:08 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects =
+{
+    animations =
+    {
+    },
+    events =
+    {
+        event1 =
+        {
+            { "anim",     "death1", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "death_generic", },
+            { "sound",    "Explosion/Large/ETG_Explode_Large_Firey", },
+            { "fx_scale", "entity", },
+        },
+    },
+}

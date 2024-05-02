@@ -1,0 +1,25 @@
+fps = 10
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/maxim/maxim_particle0000.tga", 
+"data:/ART/FX/maxim/maxim_particle0001.tga",
+"data:/ART/FX/maxim/maxim_particle0002.tga", 
+"data:/ART/FX/maxim/maxim_particle0003.tga", 
+"data:/ART/FX/maxim/maxim_particle0004.tga", 
+"data:/ART/FX/maxim/maxim_particle0005.tga",
+"data:/ART/FX/maxim/maxim_particle0006.tga",
+"data:/ART/FX/maxim/maxim_particle0007.tga", 
+"data:/ART/FX/maxim/maxim_particle0008.tga", 
+"data:/ART/FX/maxim/maxim_particle0009.tga", 
+"data:/ART/FX/maxim/maxim_particle0010.tga", 
+"data:/ART/FX/maxim/maxim_particle0011.tga",
+"data:/ART/FX/maxim/maxim_particle0012.tga", 
+"data:/ART/FX/maxim/maxim_particle0013.tga", 
+"data:/ART/FX/maxim/maxim_particle0014.tga", 
+"data:/ART/FX/maxim/maxim_particle0015.tga",
+"data:/ART/FX/maxim/maxim_particle0016.tga",
+"data:/ART/FX/maxim/maxim_particle0017.tga", 
+"data:/ART/FX/maxim/maxim_particle0018.tga", 
+"data:/ART/FX/maxim/maxim_particle0019.tga",  
+"data:/ART/FX/maxim/maxim_particle0020.tga",  }

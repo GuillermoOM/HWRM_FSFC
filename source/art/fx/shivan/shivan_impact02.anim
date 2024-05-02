@@ -1,0 +1,30 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 11:11:19 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 35
+startFrame = 0
+loopCount = 0
+texture = { 
+"data:/ART/FX/shivan/shivan_impact020000.tga", 
+"data:/ART/FX/shivan/shivan_impact020001.tga", 
+"data:/ART/FX/shivan/shivan_impact020002.tga", 
+"data:/ART/FX/shivan/shivan_impact020003.tga", 
+"data:/ART/FX/shivan/shivan_impact020004.tga", 
+"data:/ART/FX/shivan/shivan_impact020005.tga", 
+"data:/ART/FX/shivan/shivan_impact020006.tga", 
+"data:/ART/FX/shivan/shivan_impact020007.tga", 
+"data:/ART/FX/shivan/shivan_impact020008.tga", 
+"data:/ART/FX/shivan/shivan_impact020009.tga", 
+"data:/ART/FX/shivan/shivan_impact020010.tga", 
+"data:/ART/FX/shivan/shivan_impact020011.tga", 
+"data:/ART/FX/shivan/shivan_impact020012.tga", 
+"data:/ART/FX/shivan/shivan_impact020013.tga", 
+"data:/ART/FX/shivan/shivan_impact020014.tga", 
+"data:/ART/FX/shivan/shivan_impact020015.tga", 
+"data:/ART/FX/shivan/shivan_impact020016.tga", 
+"data:/ART/FX/shivan/shivan_impact020017.tga", 
+"data:/ART/FX/shivan/shivan_impact020018.tga", 
+"data:/ART/FX/shivan/shivan_impact020019.tga", 
+}

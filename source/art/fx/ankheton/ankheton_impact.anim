@@ -1,0 +1,10 @@
+fps = 25
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/ankheton/ankheton_impact0000.tga", 
+"data:/ART/FX/ankheton/ankheton_impact0001.tga",
+"data:/ART/FX/ankheton/ankheton_impact0002.tga", 
+"data:/ART/FX/ankheton/ankheton_impact0003.tga", 
+"data:/ART/FX/ankheton/ankheton_impact0004.tga", 
+"data:/ART/FX/ankheton/ankheton_impact0005.tga",  }

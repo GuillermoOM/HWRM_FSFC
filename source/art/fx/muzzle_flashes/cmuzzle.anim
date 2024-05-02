@@ -1,0 +1,8 @@
+fps = 10
+startFrame = 0
+loopCount = 1
+texture = 
+        { "data:/ART/FX/muzzle_flashes/Cmuzzle_0000.tga", 
+"data:/ART/FX/muzzle_flashes/Cmuzzle_0001.tga",
+"data:/ART/FX/muzzle_flashes/Cmuzzle_0002.tga", 
+"data:/ART/FX/muzzle_flashes/Cmuzzle_0003.tga",   }

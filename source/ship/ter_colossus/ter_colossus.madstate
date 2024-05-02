@@ -1,0 +1,23 @@
+--============================================================================
+--    Name    : hwat_vay_ffassault.madStates
+--    Purpose : Animation state data.
+--
+-- Created 100630, updated 101006 by Heresy Heavy Industries.
+-- Copyright Relic Entertainment, Inc.  All rights reserved.
+-- Heresy and Terror! :3
+-- May contain traces of thoughts.
+--============================================================================
+TER_COLOSSUS_Normal_OnSet = function(ship)
+    startAnim(ship, "Radar1")
+    setLoopCount(ship, "Radar1", 100000000)   --infinite looping.
+    startAnim(ship, "Radar2")
+    setLoopCount(ship, "Radar2", 100000000)   --infinite looping.
+    startAnim(ship, "Radar3")
+    setLoopCount(ship, "Radar3", 100000000)   --infinite looping.
+    startAnim(ship, "Radar4")
+    setLoopCount(ship, "Radar4", 100000000)   --infinite looping.
+    startAnim(ship, "Radar5")
+    setLoopCount(ship, "Radar5", 100000000)   --infinite looping.
+    startAnim(ship, "Radar6")
+    setLoopCount(ship, "Radar6", 100000000)   --infinite looping.
+end

@@ -1,0 +1,17 @@
+StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "exp_blast", "Normal", 0, 0, 60, 2, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0.1, "Normal", 1, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 0, 775, "")
+
+setPenetration(NewWeaponType, 30, 1,
+    { Unarmoured = 0, },
+    { lightarmour = 0, },
+    { MediumArmour = 0, },
+    { HeavyArmour = 0, },
+    { SubSystemArmour = 1, },
+    { TurretArmour = 1, },
+    { resarmour = 0, },
+    { MoverArmour = 0, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 0, },
+    { ChunkArmour = 0, })
