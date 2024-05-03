@@ -1,0 +1,15 @@
+= -$S_DIR=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\current_project_processing
+= -$T_DIR=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\freespace
+= -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
+= -$SHADE_OPT_LOADDAE=Force8888
+= -$HOD_SAVE_OPTS=ForceScars FilterScars=thruster,bay
+= -$IN_CAT=\ship_working_on
+= -$OUT_CAT=ship
+= -$HOD=shi_nephilim
+= -$NEWHOD=shi_nephilim
+= -log
+= -$CONVERT_IN=$[S_DIR]\$[IN_CAT]\$[HOD]\$[HOD].DAE
+= -$CONVERT_OUT=$[T_DIR]\$[OUT_CAT]\$[NEWHOD]\$[NEWHOD].hod
+= -do=convert
+= -action=null
+= -wait

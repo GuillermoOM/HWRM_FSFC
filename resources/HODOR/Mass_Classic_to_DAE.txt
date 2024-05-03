@@ -1,0 +1,14 @@
+= -$$ROOT=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\uncompressed_bigs\freespace_remastered
+= -$$IN_SCAN=$[ROOT]\ship
+= -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
+= -echo=-- Scan Path: $[IN_SCAN]$[CR]
+= -setmask=*.hod
+= -dump
+= -log
+= -$CONVERT_IN=$[SCAN_ROOT]\$[SCAN_REL_PATH]\$[SCAN_FILE].$[SCAN_TYPE]
+= -$CONVERT_OUT=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\current_project_processing\ship\$[SCAN_REL_PATH]\$[SCAN_FILE].DAE
+= -$SCAN_PARAMS=-do=convert
+= -scan=$[IN_SCAN]
+= -action=null
+= -echo=Scan Complete!$[CR]
+= -wait

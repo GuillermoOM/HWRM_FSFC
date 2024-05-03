@@ -1,0 +1,16 @@
+Place the contents of this archive in GBXTools\HODOR. Four scripts are included, in combination of two categories
+
+Single... scripts take an individual file and convert it.
+Mass... scripts convert every file in a given directory structure. This can take a while!
+...Classic_to_DAE scripts convert a .HOD file from Homeworld 2 to a collada model file and associated textures.
+...DAE_To_Remastered scripts convert a collada model file and textures to a Homeworld Remastered .HOD file.
+
+Each one comes with a .txt file and a .bat file. To change what is being targeted you need to edit the .txt, the .bat will feed the script to HODOR. These scripts generally assume you are keeping the files in a mod directory structure, so you don't just have a ship at "C:\MyShip\MyShip.Hod" but rather that you have it in, at the least "C:\MyMod\ships\MyShip.hod". The scripts will break if this assumption is not true. 
+
+Configuring a Single script:
+In both single scripts the first four lines of the text file define, in order, the mod directory the file you are converting is placed in, the type of hod it is(ship, background, missile, etc), and the name of the hod itself. These should be the only ones you need to edit, then run the appropriate batch file.
+
+Configuring a Mass script:
+The mass scripts are a bit less consistent. The DAE to remastered script assumes you have a "mymod\data" directory while it will put finished hods, and a "mymod\hodor_staging" directory where you'll put your DAE files, with a directory structure to match the data directory. That is, you'll have a "mymod\hodor_staging\ship\myship.dae" and it will put the result in "mymod\data\ship\myship.hod". Classic_to_DAE takes a mod root directory in the first line, then further down the line starting with " = -$CONVERT_OUT= " defines where it puts files.
+
+If you want to make a new HWR hod using CFHodEd, make a hod in a mod-like file structure, configure the single_classic_to_dae script and the single_dae_to_remastered scripts to point to the appropriate places, then run both of them in order whenever you make an edit to the hod. 
