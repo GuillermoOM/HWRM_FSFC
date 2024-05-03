@@ -1,7 +1,7 @@
 -nomovies
 -luatrace
 -traceHODs
--moddatapath GBXTools\WorkshopTool\HWRM_FSF\source
+-moddatapath GBXTools\WorkshopTool\HWRM_FSFC\source
 -lvlPassTags=test
 
 -load parkinglot_cmdline
@@ -29,7 +29,7 @@
 -Spawn_Rot_3=0,0,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=shi_astaroth
+-Spawn_Ship_4=shi_azrael
 -Spawn_Pos_4=400,0,0
 -Spawn_Rot_4=0,0,0
 -Spawn_Team_4=0
