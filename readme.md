@@ -23,10 +23,12 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 ## What Works
 
+- *NEW* Integration with HW ships on the same game
 - Terran Race:
     - All ships are migrated
     - Working fleet chatter
-- *NEW* Integration with HW ships on the same game
+- Shivan Race:
+    - Currently available ships: Demon, Cain and a fighter
   
 ## Current Issues
 
