@@ -1,0 +1,38 @@
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_shivlightlasernoflash", "Normal", 1800, 1800, 0, 0, 0, 0,
+    1, 1, 0, 0.3, 0, 0, 1, 1, 260, 260, 0.1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 8, 8, "")
+
+setAngles(NewWeaponType, 0, -80, 80, -80, 80)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 1, },
+    { LightArmour = 1, },
+    { MediumArmour = 0.2, },
+    { HeavyArmour = 0.2, },
+    { SubSystemArmour = 0.25, },
+    { TurretArmour = 0.25, },
+    { ResArmour = 0.7, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 1, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
+setAccuracy(NewWeaponType, 1,
+    { Swarmer = 0.01 },
+    { SpaceMine = 0.35 },
+    { Torpedo = 0 },
+    { HeavyMissile = 0 },
+    { SmallMissile = 0 },
+    { Fighter = 1.0 },
+    { Fighter_hw1 = 1.0 },
+    { Corvette = 0.75 },
+    { Corvette_hw1 = 0.82 },
+    { munition = 0.13 },
+    { Frigate = 0.80 },
+    { Resource = 0.80 },
+    { SmallCapitalShip = 0.80 },
+    { BigCapitalShip = 0.80 },
+    { ResourceLarge = 0.60 });
