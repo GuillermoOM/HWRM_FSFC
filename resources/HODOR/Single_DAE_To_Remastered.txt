@@ -3,10 +3,10 @@
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
 = -$SHADE_OPT_LOADDAE=Force8888
 = -$HOD_SAVE_OPTS=ForceScars FilterScars=thruster,bay
-= -$IN_CAT=\ship_working_on
+= -$IN_CAT=ship_working_on
 = -$OUT_CAT=ship
-= -$HOD=shi_azrael
-= -$NEWHOD=shi_azrael
+= -$HOD=shi_manticore
+= -$NEWHOD=shi_manticore
 = -log
 = -$CONVERT_IN=$[S_DIR]\$[IN_CAT]\$[HOD]\$[HOD].DAE
 = -$CONVERT_OUT=$[T_DIR]\$[OUT_CAT]\$[NEWHOD]\$[NEWHOD].hod

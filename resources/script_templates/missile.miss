@@ -221,6 +221,13 @@ NewMissileType.weaponName = "Miss_Pihrana"
 loadShipPatchList(NewMissileType,"data:sound/sfx/ship/hiigaran/NonMilitary/Engines/",0,"HTorpedoEng");
 
 --------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewMissileType, 1)
+-- If you want to load the model from another missile
+-- LoadSharedModel(NewMissileType, "miss_rockeye")
+--------------------------------------------------
+
+--------------------------------------------------
 --- Engines
 --------------------------------------------------
 
@@ -230,5 +237,3 @@ setEngineBurn(NewMissileType,10,0.5,1,10,0,0.7,0.1,15);
 --------------------------------------------------
 --- Custom fields
 --------------------------------------------------
-
-LoadHODFile(NewMissileType,1);

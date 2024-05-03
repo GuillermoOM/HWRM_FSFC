@@ -106,6 +106,13 @@ NewSubSystemType.nlipsFarRange = 0
 AddSubSystemAbility(NewSubSystemType,"Cloak",1,"ThisShipOnly",0);
 
 --------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewSubSystemType, 1)
+-- If you want to load the model from another subsystem
+-- LoadSharedModel(NewSubSystemType, "ter_colbeam")
+--------------------------------------------------
+
+--------------------------------------------------
 --- Weapons
 --------------------------------------------------
 
@@ -124,5 +131,3 @@ AddSubSystemMultiplier(NewSubSystemType, "SecondarySensorsRange", "OwnShipsWithi
 --------------------------------------------------
 
 setTargetBox(NewShipType, 0, -0.4,-0.7,-0.7, 0.4,0.7,0.4)
-
-LoadHODFile(NewSubSystemType,1);
