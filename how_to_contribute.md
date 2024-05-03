@@ -37,12 +37,13 @@ https://discord.com/channels/128196211969753088/1198120423422959647
 ## How do I migrate a Ship?
 
 Migrating a ship involves the following:
-1. Copy the directory of the ship to the new one (except the HOD file)
-2. Extract the HOD with RODOH (HOD to DAE extraction)
-3. Open the DAE file with DAEnerys to verify everything is where it should and no errors are present.
-4. Repack the file into HOD using HODOR
-5. Place the new HOD to the ship's directory
-6. Make sure the .events file has no references to non existing markers.
-7. Make sure the .ship script contains the correct info on its properties and functions (family types, weapon names, subsystems, etc)
-8. Making sure the subsystems HODs are migrated the same way
+1. Extract the big file of the old mod [downloaded from the steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=408410200)
+2. Copy the directory of the ship to the new one (except the HOD file)
+3. Extract the HOD with RODOH (HOD to DAE extraction)
+4. Open the DAE file with DAEnerys to verify everything is where it should and no errors are present.
+5. Repack the file into HOD using HODOR
+6. Place the new HOD to the ship's directory
+7. Make sure the .events file has no references to non existing markers.
+8. Make sure the .ship script contains the correct info on its properties and functions (family types, weapon names, subsystems, etc)
+9. Making sure the subsystems HODs are migrated the same way
 10. test!
