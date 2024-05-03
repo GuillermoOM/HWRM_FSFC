@@ -377,7 +377,7 @@ StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret2", "Fir
 
 -- Ship Missiles
 StartShipWeaponConfig(NewShipType, "miss_shivbomb", "Weapon_Bomb2", "")
-StartShipWeaponConfig(NewShipType, "miss_shivbomb", "Weapon_Bomb3", "")
+StartShipWeaponConfig(NewShipType, "miss_shivmegabomb", "Weapon_Bomb3", "")
 StartShipWeaponConfig(NewShipType, "miss_infyrno", "Weapon_Bomb1", "")
 
 --------------------------------------------------

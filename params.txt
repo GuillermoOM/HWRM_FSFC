@@ -14,7 +14,7 @@
 -Spawn_Rot_0=0,0,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=ter_perseus
+-Spawn_Ship_1=ter_fenris
 -Spawn_Pos_1=-4000,0,0
 -Spawn_Rot_1=0,0,0
 -Spawn_Team_1=1
