@@ -400,12 +400,12 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 25)
 --- Custom fields
 --------------------------------------------------
 
----addCustomCode(NewShipType,"data:ship/ABFix.lua","","","AfterburnerFix","","AfterburnerFix",10)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
+    "BasiliskInterceptor", 1.25)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
 
 --------------------------------------------------
 --- MISC
 --------------------------------------------------
 
-addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
-    "BasiliskInterceptor", 1.25)
-addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
+
