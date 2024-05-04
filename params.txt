@@ -29,7 +29,7 @@
 -Spawn_Rot_3=0,0,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=shi_manticore
+-Spawn_Ship_4=shi_lilith
 -Spawn_Pos_4=500,0,0
 -Spawn_Rot_4=0,0,0
 -Spawn_Team_4=0
