@@ -1,9 +1,11 @@
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Missile", "miss_pihrana", "Normal", 270, 3000, 0, 0, 0, 0, 1, 1, 0,
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_pihrana", "Normal", 270, 3000, 0, 0, 0, 0, 1, 1, 0,
   10, 0, 0,
   1,
-  1, 100, 100, 0.1, "Normal", 0, 0, 0)
+  1, 100, 100, 0.1, "Normal", 1, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
+
+setAngles(NewWeaponType, 180, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
   {
@@ -43,7 +45,3 @@ setAccuracy(NewWeaponType, 1,
   { Capturer = 1, },
   { Chimera = 1, },
   { HeavyMissile = 1, })
-
-
-setAngles(NewWeaponType, 0, -180, 180, -25, 85)
-setMiscValues(NewWeaponType, 0, 0)
