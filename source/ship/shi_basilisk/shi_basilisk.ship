@@ -9,7 +9,7 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "SF Manticore"
+NewShipType.displayedName = "SF Basilisk"
 NewShipType.sobDescription = "Interceptor"
 
 --------------------------------------------------	
@@ -31,7 +31,7 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
-NewShipType.CombatFamily = "Fighter"
+NewShipType.UnitCapsFamily = "Fighter"
 
 --------------------------------------------------
 --- Supply
@@ -45,8 +45,8 @@ setSupplyValue(NewShipType, "LayoutFighter", 3.0)
 --------------------------------------------------	
 
 NewShipType.SquadronSize = 3
-NewShipType.buildCost = 450
-NewShipType.buildTime = 31
+NewShipType.buildCost = 620
+NewShipType.buildTime = 37
 NewShipType.buildPriorityOrder = 20
 
 --------------------------------------------------	
@@ -80,19 +80,19 @@ NewShipType.detectionStrength = 4
 --- Movement	
 --------------------------------------------------
 
-NewShipType.mass = 200
+NewShipType.mass = 300
 
-NewShipType.thrusterMaxSpeed = 414
+NewShipType.thrusterMaxSpeed = 246
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1.5
 
-NewShipType.mainEngineMaxSpeed = 414
+NewShipType.mainEngineMaxSpeed = 246
 NewShipType.mainEngineAccelTime = 3
 NewShipType.mainEngineBrakeTime = 1.5
 
-NewShipType.rotationMaxSpeed = 113
-NewShipType.rotationAccelTime = 0.6
-NewShipType.rotationBrakeTime = 0.3
+NewShipType.rotationMaxSpeed = 103
+NewShipType.rotationAccelTime = 0.8
+NewShipType.rotationBrakeTime = 0.4
 
 --------------------------------------------------	
 --- Advanced Movement	
@@ -100,7 +100,7 @@ NewShipType.rotationBrakeTime = 0.3
 
 NewShipType.controllerType = "Ship"
 
-NewShipType.thrusterUsage = 0.25
+NewShipType.thrusterUsage = 0.5
 NewShipType.accelerationAngle = 170
 NewShipType.mirrorAngle = 30
 NewShipType.secondaryTurnAngle = 90
@@ -155,7 +155,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 
 --------------------------------------------------	
 --- Formations	
---------------------------------------------------
+--------------------------------------------------	
 
 NewShipType.buildBatch = 3
 NewShipType.formationSpacing = 30
@@ -180,7 +180,6 @@ NewShipType.launchFormation = "n_delta"
 --------------------------------------------------
 
 NewShipType.holdSlots = 2
-NewShipType.dontDockWithOtherRaceShips = 1
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1
@@ -196,9 +195,9 @@ NewShipType.fighterValue = 8
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 2
-NewShipType.antiCorvetteValue = 6
-NewShipType.antiFrigateValue = 0
+NewShipType.antiFighterValue = 0
+NewShipType.antiCorvetteValue = 0
+NewShipType.antiFrigateValue = 8
 NewShipType.totalValue = 8
 
 --------------------------------------------------
@@ -246,7 +245,6 @@ NewShipType.tumbleSpecialDynamicZ = 700
 --------------------------------------------------	
 --- Layout Boundary	
 --------------------------------------------------	
-
 
 
 --------------------------------------------------	
@@ -331,10 +329,9 @@ addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 20, 80, 0, 3)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
-addAbility(NewShipType, "RetireAbility", 1, 0)
+addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, .2, 0.3)
-addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,, SmallCapitalShip, BigCapitalShip, Mothership",
     "Fighter_vs_Frigate",
@@ -351,7 +348,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
 
 addAbility(NewShipType, "CustomCommand", 1, "Speed Burst", 1, 0, 38, 0, 1, 0.1, 0,
     "data:scripts/custom_scripts/Afterburner.lua",
-    "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "shi_manticore", 0.5, 3, 1)
+    "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "shi_basilisk", 0.5, 3, 1)
 
 --------------------------------------------------
 --- MODEL MUST LOAD AT THIS POINT
@@ -362,18 +359,20 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
--- StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun1", "")
+StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun1", "")
+StartShipWeaponConfig(NewShipType, "gun_shivheavylaser", "Weapon_Gun2", "")
 StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile", "")
-StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile2", "")
+StartShipWeaponConfig(NewShipType, "miss_tempest", "Weapon_Missile2", "")
 
 --------------------------------------------------
 --- HardPoints
 --------------------------------------------------
 
----StartShipHardPointConfig(NewShipType,"Shield","Hardpoint_Shield","System","Innate","Damageable","shield_manticore","","","","","","","","")
----StartShipHardPointConfig(NewShipType, "Gun_1", "Weapon_Gun1", "Weapon", "Production", "Destroyable", "gun_shivmegalaser", "gun_shivmegalaser", "", "", "", "", "", "", "")
----StartShipHardPointConfig(NewShipType, "Missile1", "Weapon_Missile", "Weapon", "Sensors", "Destroyable", "miss_rockeye", "")
----StartShipHardPointConfig(NewShipType, "Missile2", "Weapon_Missile2", "Weapon", "Sensors", "Destroyable", "miss_rockeye", "")
+---StartShipHardPointConfig(NewShipType,"Shield","Hardpoint_Shield","System","Innate","Damageable","shield_basilisk","","","","","","","","")
+---StartShipHardPointConfig(NewShipType, "Gun_1", "Weapon_Gun1", "Weapon", "Production", "Destroyable", "wep_shimegalaser", "wep_prometheusfs1", "", "", "", "", "", "", "")
+---StartShipHardPointConfig(NewShipType, "Gun_1", "Weapon_Gun2", "Weapon", "Production", "Destroyable", "wep_shimegalaser", "wep_prometheusfs1", "", "", "", "", "", "", "")
+---StartShipHardPointConfig(NewShipType, "Missile1", "Weapon_Missile", "Weapon", "Sensors", "Destroyable", "wep_shihornet", "wep_rockeye", "wep_empadv", "wep_tempest", "wep_hornet", "wep_tornadonormal", "wep_harpoon", "wep_trebuchet", "")
+---StartShipHardPointConfig(NewShipType, "Missile2", "Weapon_Missile2", "Weapon", "Sensors", "Destroyable", "wep_shitempest", "wep_rockeye_2", "wep_empadv_2", "wep_tempest_2", "wep_hornet_2", "wep_tornadonormal_2", "wep_harpoon_2", "wep_trebuchet_2", "")
 
 --------------------------------------------------
 --- Latch Points
@@ -385,28 +384,28 @@ StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile2", "")
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "sf_old", "")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanFighter", "", 3, "", "Root")
 
 --------------------------------------------------
 --- Da Shader Things
 --------------------------------------------------
 
-
-
 --------------------------------------------------
 --- Engines
 --------------------------------------------------
 
-setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 28)
+setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 25)
 
 --------------------------------------------------
 --- Custom fields
 --------------------------------------------------
 
-addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
-    "ManticoreInterceptor", 1.25)
-addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
+---addCustomCode(NewShipType,"data:ship/ABFix.lua","","","AfterburnerFix","","AfterburnerFix",10)
 
 --------------------------------------------------
 --- MISC
 --------------------------------------------------
+
+addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
+    "BasiliskInterceptor", 1.25)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
