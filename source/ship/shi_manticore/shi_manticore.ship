@@ -349,7 +349,9 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
     { Mothership = "Fighter_vs_Mothership" },
     { ResourceLarge = "Fighter_vs_ResourceLarge" })
 
-
+addAbility(NewShipType, "CustomCommand", 1, "Speed Burst", 1, 0, 38, 0, 1, 0.1, 0,
+    "data:scripts/custom_scripts/Afterburner.lua",
+    "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "shi_manticore", 0.5, 3, 1)
 
 --------------------------------------------------
 --- MODEL MUST LOAD AT THIS POINT
@@ -401,8 +403,9 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 28)
 --- Custom fields
 --------------------------------------------------
 
--- addCustomCode(NewShipType,"data:scripts/custom_scripts/interceptor.lua","","","updateInterceptor","","ManticoreInterceptor",1.25)
--- addCustomCode(NewShipType,"data:scripts/custom_scripts/ABFix.lua","","","AfterburnerFix","","AfterburnerFix",10)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
+    "ManticoreInterceptor", 1.25)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
 
 --------------------------------------------------
 --- MISC
