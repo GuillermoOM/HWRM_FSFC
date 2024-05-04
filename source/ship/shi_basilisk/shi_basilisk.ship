@@ -31,7 +31,7 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
-NewShipType.UnitCapsFamily = "Fighter"
+NewShipType.CombatFamily = "Fighter"
 
 --------------------------------------------------
 --- Supply
