@@ -2407,6 +2407,83 @@ HW1_FighterTank                   = Icon_Subsystem_Engine
 
 -- Ships
 
+Shi_Basilisk =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_basilisk.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 490, 245, },
+		stretchOnDraw = 1,
+	},
+}
+
+Shi_Nephilim =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_nephilim.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 480, 240, },
+		stretchOnDraw = 1,
+	},
+}
+
+Shi_Manticore =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_manticore.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 400, 200, },
+		stretchOnDraw = 1,
+	},
+}
+
+Shi_Azrael =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_azrael.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 350, 175, },
+		stretchOnDraw = 1,
+	},
+}
+
+Shi_Cain =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_cain.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 400, 200, },
+		stretchOnDraw = 1,
+	},
+}
+Shi_Lilith =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_lilith.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 400, 200, },
+		stretchOnDraw = 1,
+	},
+}
+
 Shi_Astaroth =
 {
 	LargeIcon =
@@ -3110,3 +3187,19 @@ shi_demonturret03 =
 		stretchOnDraw = 1,
 	},
 }
+
+shi_cainsred =
+{
+	SmallIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_cainlilithcannon.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 96, 72, },
+		stretchOnDraw = 1,
+	},
+}
+shi_lilithlred = shi_cainsred
+shi_cainheavylaser = shi_cainsred
+shi_lilithheavylaser = shi_cainsred

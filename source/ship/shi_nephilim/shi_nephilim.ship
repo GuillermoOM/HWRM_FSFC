@@ -344,7 +344,6 @@ addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
 addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, .25, 0)
-addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CanAttack", 1, 3, 1, 0, 0.35, 1,
     "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Corvette, Corvette_hw1, Fighter, Fighter_hw1, Utility",
     "FlyBy_Bomber_vs_Frigate",

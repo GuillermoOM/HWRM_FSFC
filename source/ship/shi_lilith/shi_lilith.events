@@ -1,0 +1,352 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:24:01 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Fire1",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation2 =
+        {
+            name = "Fire2",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation3 =
+        {
+            name = "Fire3",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation4 =
+        {
+            name = "Fire4",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation5 =
+        {
+            name = "Fire5",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation6 =
+        {
+            name = "Fire6",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation7 =
+        {
+            name = "Death",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation8 =
+        {
+            name = "Damage",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation9 =
+        {
+            name = "dmg01",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.25,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation10 =
+        {
+            name = "dmg02",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.5,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+        animation11 =
+        {
+            name = "Fire",
+            length = 0.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+        animation12 =
+        {
+            name = "dmg03",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.75,
+            maximum = 1,
+            markers =
+            { "", },
+        },
+    },
+    events =
+    {
+        Firefx =
+        {
+            { "anim",     "Fire", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Beam1_Muzzle", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire1fx =
+        {
+            { "anim",     "Fire1", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun1_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire2fx =
+        {
+            { "anim",     "Fire2", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun2_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire3fx =
+        {
+            { "anim",     "Fire3", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun3_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire4fx =
+        {
+            { "anim",     "Fire4", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun4_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire5fx =
+        {
+            { "anim",     "Fire5", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun5_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        Fire6fx =
+        {
+            { "anim",     "Fire6", },
+            { "animtime", "0", },
+            { "marker",   "Weapon_Gun6_Position", },
+            { "fx",       "sunfire_squirt_small2", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event3 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0", },
+            { "marker",   "marker2", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "Explosion/small2/ETG_Explode_small2_Plasma", },
+            { "fx_scale", "1.5", },
+        },
+        event4 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.2", },
+            { "marker",   "marker6", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "fx_scale", "1", },
+        },
+        event5 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.1", },
+            { "marker",   "marker4", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA", },
+            { "fx_scale", "1.5", },
+        },
+        event6 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.3", },
+            { "marker",   "marker8", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "fx_scale", "2.5", },
+        },
+        event7 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.4", },
+            { "marker",   "Root", },
+            { "fx",       "dmg_capital_explosion_combo", },
+            { "sound",    "EXPLOSION/cruiserexp", },
+            { "fx_scale", "10", },
+        },
+        event8 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.05", },
+            { "marker",   "marker1", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "fx_scale", "1", },
+        },
+        event9 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.1", },
+            { "marker",   "marker5", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "Explosion/small2/ETG_Explode_small2_Plasma", },
+            { "fx_scale", "2.5", },
+        },
+        event10 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.25", },
+            { "marker",   "marker7", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "fx_scale", "2", },
+        },
+        event11 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.2", },
+            { "marker",   "marker3", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "Explosion/cruiserexp", },
+            { "fx_scale", "0.75", },
+        },
+        event12 =
+        {
+            { "anim",     "dmg01", },
+            { "animtime", "-1", },
+            { "marker",   "marker1,maker2", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "5", },
+            { "fx_nlips", "on", },
+        },
+        event13 =
+        {
+            { "anim",     "dmg02", },
+            { "animtime", "-1", },
+            { "marker",   "marker3,maker4", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "7.5", },
+            { "fx_nlips", "on", },
+        },
+        event18 =
+        {
+            { "anim",     "Death", },
+            { "animtime", "0.4", },
+            { "marker",   "Root", },
+            { "fx",       "shockwavecruiser_combo", },
+            { "sound",    "", },
+            { "fx_scale", "entity", },
+        },
+        event19 =
+        {
+            { "anim",     "death", },
+            { "animtime", "0.4", },
+            { "marker",   "debris1", },
+            { "fx",       "debris_cain1_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event20 =
+        {
+            { "anim",     "death", },
+            { "animtime", "0.4", },
+            { "marker",   "debris2", },
+            { "fx",       "debris_cain2_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event21 =
+        {
+            { "anim",     "death", },
+            { "animtime", "0.4", },
+            { "marker",   "debris3", },
+            { "fx",       "debris_cain3_combo", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event22 =
+        {
+            { "anim",     "dmg03", },
+            { "animtime", "-1", },
+            { "marker",   "marker5", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
+            { "fx_scale", "10", },
+            { "fx_nlips", "on", },
+        },
+    },
+}

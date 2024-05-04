@@ -26,7 +26,7 @@ NewShipType.collisionMultiplier = 1
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "Cruiser_Ter"
+NewShipType.BuildFamily = "Cruiser_Shi"
 NewShipType.AttackFamily = "Frigate"
 NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "Frigate"
@@ -34,6 +34,7 @@ NewShipType.DisplayFamily = "Cruiser"
 NewShipType.AutoFormationFamily = "Frigate"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "MediumArmour"
+NewShipType.CombatFamily = "Frigate"
 
 --------------------------------------------------
 --- Supply
