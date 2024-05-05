@@ -2510,6 +2510,19 @@ Shi_Demon =
 	},
 }
 
+Shi_Dragon = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\dragon.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 416, 208, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
+
 Ter_Hades =
 {
 	LargeIcon =
