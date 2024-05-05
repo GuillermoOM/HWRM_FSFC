@@ -10,7 +10,7 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = "SF Basilisk"
-NewShipType.sobDescription = "Interceptor"
+NewShipType.sobDescription = "Strike Fighter"
 
 --------------------------------------------------	
 --- Main Ship Data	
