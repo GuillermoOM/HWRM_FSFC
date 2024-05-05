@@ -2514,7 +2514,7 @@ Shi_Dragon =
 { 
     LargeIcon = 
     { 
-        texture = "DATA:\\Ship\\Icons\\dragon.tga", 
+        texture = "DATA:\\Ship\\Icons\\shi_dragon.tga", 
         textureUV_TL = 
             { 0, 0, }, 
         textureUV_WH = 
