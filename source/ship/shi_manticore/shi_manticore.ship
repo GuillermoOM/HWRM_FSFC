@@ -362,7 +362,7 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
--- StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun1", "")
+StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun1", "")
 StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile", "")
 StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile2", "")
 
@@ -385,7 +385,7 @@ StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile2", "")
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "sf_old", "")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "sf_old", "", 3, "", "Root")
 
 --------------------------------------------------
 --- Da Shader Things

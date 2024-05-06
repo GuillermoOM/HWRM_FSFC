@@ -384,7 +384,7 @@ StartShipWeaponConfig(NewShipType, "miss_tempest", "Weapon_Missile2", "")
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanFighter", "", 3, "", "Root")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "sf_old", "", 3, "", "Root")
 
 --------------------------------------------------
 --- Da Shader Things
