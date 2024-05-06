@@ -1,87 +1,198 @@
---===========================================================================
---  Purpose : Lua definition file for Homeworld Ship.
---            Contains loading information and flight dynamics information (among other things?)
---
---  Copyright Relic Entertainment, Inc.  All rights reserved.
---===========================================================================
+--------------------------------------------------
+--- Base Template of a missile with all variables and functions organized by type
+--- Reference:
+--- Variables: https://github.com/HWRM/KarosGraveyard/wiki/Variable;-Missile
+--- Functions: https://github.com/HWRM/KarosGraveyard/wiki/Scope;-Missile
+--------------------------------------------------
+
 NewShipType = StartMissileConfig()
-NewShipType.displayedName="Fury"
-NewShipType.sobDescription="Dumb fire missile"
-NewShipType.TOScale=1
-NewShipType.TODistanceFade0=7000
-NewShipType.TODistanceDisappear0=5000
-NewShipType.TODistanceFade1=350
-NewShipType.TODistanceDisappear1=300
-NewShipType.TODistanceFade2=25000
-NewShipType.TODistanceDisappear2=12000
-NewShipType.TOGroupScale=1
-NewShipType.TOGroupMergeSize=0
-NewShipType.mouseOverMinFadeSize=0.045
-NewShipType.mouseOverMaxFadeSize=0.1
-NewShipType.maxhealth=40
-NewShipType.regentime=0
-NewShipType.sideArmourDamage=1
-NewShipType.rearArmourDamage=1
-NewShipType.maxShield=0
-NewShipType.shieldRechargeTime=0
-NewShipType.nlips=0.001
-NewShipType.nlipsRange=2000
-NewShipType.nlipsFar=0.001
-NewShipType.nlipsFarRange=10000
-NewShipType.SMRepresentation="Invisible"
-NewShipType.meshRenderLimit=2000
-NewShipType.dotRenderLimit=4000
-NewShipType.minLOD=0.2
-NewShipType.upLOD=500
-NewShipType.upLOD=1000
-NewShipType.downLOD=505
-NewShipType.downLOD=1005
-NewShipType.minimumZoomFactor=1
-NewShipType.selectionPriority=30
-NewShipType.weaponName="Miss_Fury"
-NewShipType.noCollisionTime=0
-NewShipType.lifeTime=1.5
-NewShipType.launchTime=0
-NewShipType.detectionDistance=0
-NewShipType.proximityDetonationDist=30
-NewShipType.sobDieTime=0.5
-NewShipType.density=1
-NewShipType.thrusterMaxSpeed=230
-NewShipType.mainEngineMaxSpeed=1830
-NewShipType.rotationMaxSpeed=0
-NewShipType.thrusterAccelTime=0.2
-NewShipType.thrusterBrakeTime=0.2
-NewShipType.mainEngineAccelTime=0.8
-NewShipType.mainEngineBrakeTime=0.5
-NewShipType.rotationAccelTime=0.4
-NewShipType.rotationBrakeTime=0.4
-NewShipType.thrusterUsage=0.5
-NewShipType.accelerationAngle=60
-NewShipType.mirrorAngle=30
-NewShipType.maxBankingAmount=85
-NewShipType.descendPitch=0
-NewShipType.goalReachEpsilon=5
-NewShipType.controllerType="Missile"
-NewShipType.slowdownFactor=0.5
-NewShipType.tumbleStaticX=0
-NewShipType.tumbleStaticY=0
-NewShipType.tumbleStaticZ=0
-NewShipType.tumbleDynamicX=0
-NewShipType.tumbleDynamicY=0
-NewShipType.tumbleDynamicZ=0
-NewShipType.tumbleSpeed=0
-NewShipType.targetAngle=2
-NewShipType.spiralsPerSecondMin=0
-NewShipType.spiralsPerSecondMax=0
-NewShipType.BuildFamily="NotBuildable"
-NewShipType.AttackFamily="UnAttackable"
-NewShipType.DockFamily="CantDock"
-NewShipType.AvoidanceFamily="DontAvoid"
-NewShipType.DisplayFamily="Munition"
-NewShipType.AutoFormationFamily="Fighter"
-NewShipType.ArmourFamily="Unarmoured"
-LoadHODFile(NewShipType,1);
-setEngineTrail(NewShipType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
-setEngineBurn(NewShipType,10,0.5,1,10,0,0.7,0.1,13);
-loadShipPatchList(NewShipType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
-                             ,0,"VMissleEng");
+
+--------------------------------------------------
+--- Shipinfo
+--------------------------------------------------
+
+NewShipType.displayedName = "Fury"
+NewShipType.sobDescription = "Dumb fire missile"
+
+--------------------------------------------------
+--- Families
+--------------------------------------------------
+
+NewShipType.BuildFamily = "NotBuildable"
+NewShipType.AttackFamily = "UnAttackable"
+NewShipType.DockFamily = "CantDock"
+NewShipType.AvoidanceFamily = "DontAvoid"
+NewShipType.DisplayFamily = "Munition"
+NewShipType.AutoFormationFamily = "Fighter"
+NewShipType.ArmourFamily = "Unarmoured"
+
+--------------------------------------------------	
+--- Health and Armour	
+--------------------------------------------------	
+
+NewShipType.lifeTime = 1.5
+
+NewShipType.maxhealth = 40
+NewShipType.regentime = 0
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
+
+--------------------------------------------------	
+--- Shields
+--------------------------------------------------	
+
+NewShipType.maxShield = 0
+NewShipType.shieldRechargeTime = 0
+
+--------------------------------------------------	
+--- Sensors	
+--------------------------------------------------	
+
+NewShipType.detectionDistance = 0
+
+--------------------------------------------------	
+--- Movement	
+--------------------------------------------------	
+
+NewShipType.thrusterMaxSpeed = 230
+NewShipType.thrusterAccelTime = 0.1
+NewShipType.thrusterBrakeTime = 0.1
+
+NewShipType.mainEngineMaxSpeed = 1830
+NewShipType.mainEngineAccelTime = 0.1
+NewShipType.mainEngineBrakeTime = 0.1
+
+NewShipType.rotationMaxSpeed = 0
+NewShipType.rotationAccelTime = 0.4
+NewShipType.rotationBrakeTime = 0.4
+
+--------------------------------------------------	
+--- Advanced Movement	
+--------------------------------------------------	
+
+NewShipType.density = 1
+
+NewShipType.thrusterUsage = 1
+NewShipType.accelerationAngle = 180
+NewShipType.mirrorAngle = 0
+NewShipType.maxBankingAmount = 0
+NewShipType.descendPitch = 0
+NewShipType.goalReachEpsilon = 5
+NewShipType.controllerType = "Missile"
+
+NewShipType.targetAngle = 2
+
+--------------------------------------------------	
+--- Special Flight Maneuvers (missiles)
+--------------------------------------------------	
+
+NewShipType.spiralsPerSecondMin = 0
+NewShipType.spiralsPerSecondMax = 0
+
+--------------------------------------------------
+--- Launching
+--------------------------------------------------
+
+NewShipType.launchTime = 0
+
+--------------------------------------------------
+--- Damage & Death
+--------------------------------------------------
+
+NewShipType.noCollisionTime = 0
+
+NewShipType.slowdownFactor = 0.5
+NewShipType.proximityDetonationDist = 30
+NewShipType.sobDieTime = 0.5
+
+--------------------------------------------------
+--- Death Tumble
+--------------------------------------------------
+
+NewShipType.tumbleStaticX = 0
+NewShipType.tumbleStaticY = 0
+NewShipType.tumbleStaticZ = 0
+NewShipType.tumbleDynamicX = 0
+NewShipType.tumbleDynamicY = 0
+NewShipType.tumbleDynamicZ = 0
+NewShipType.tumbleSpeed = 0
+
+--------------------------------------------------	
+--- Selection	
+--------------------------------------------------	
+
+NewShipType.selectionPriority = 30
+
+--------------------------------------------------	
+--- Tactical Overlay Icon	
+--------------------------------------------------	
+
+NewShipType.TOScale = 1
+NewShipType.TODistanceFade0 = 7000
+NewShipType.TODistanceDisappear0 = 5000
+NewShipType.TODistanceFade1 = 350
+NewShipType.TODistanceDisappear1 = 300
+NewShipType.TODistanceFade2 = 25000
+NewShipType.TODistanceDisappear2 = 12000
+NewShipType.TOGroupScale = 1
+NewShipType.TOGroupMergeSize = 0
+
+--------------------------------------------------	
+--- Overlays	
+--------------------------------------------------	
+
+NewShipType.SMRepresentation = "Invisible"
+
+--------------------------------------------------	
+--- Rendering	
+--------------------------------------------------	
+
+NewShipType.meshRenderLimit = 2000
+NewShipType.dotRenderLimit = 4000
+
+NewShipType.minimumZoomFactor = 1
+
+--------------------------------------------------
+--- Non linear Scaling
+--------------------------------------------------
+
+NewShipType.nlips = 0.001
+NewShipType.nlipsRange = 2000
+NewShipType.nlipsFar = 0.001
+NewShipType.nlipsFarRange = 10000
+
+--------------------------------------------------
+--- Level of Detail
+--------------------------------------------------
+
+NewShipType.minLOD = 0.2
+NewShipType.upLOD = 500
+NewShipType.upLOD = 1000
+NewShipType.downLOD = 505
+NewShipType.downLOD = 1005
+
+--------------------------------------------------
+--- Weapons
+--------------------------------------------------
+
+NewShipType.weaponName = "Miss_Fury"
+
+--------------------------------------------------
+--- Addendum
+--------------------------------------------------
+
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/vaygr/NonMilitary/Engines/", 0, "VMissleEng");
+
+--------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewShipType, 1)
+-- If you want to load the model from another missile
+-- LoadSharedModel(NewShipType, "miss_rockeye")
+--------------------------------------------------
+
+--------------------------------------------------
+--- Engines
+--------------------------------------------------
+
+setEngineTrail(NewShipType, 0, 3, "missiletrail04.tga", 0.2, 0.5, 0.025, 8);
+setEngineBurn(NewShipType, 10, 0.5, 1, 10, 0, 0.7, 0.1, 13);

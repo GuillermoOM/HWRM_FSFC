@@ -53,6 +53,25 @@ build =
 		Description =
 		"<b>Description:</b> The Manticore fighter is the fastest known craft in the Shivan armada. With a single, powerful laser and two missile banks, it is a dangerous offensive weapon. Its Achilles' heel lies in its thin hull and weak shields. Manticores do not last long in dogfights against other fighters. They prefer to target bombers, which are nearly helpless against the Manticore's speed and weaponry. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 2x Anti-Bomber Laser, 1x Anti-Bomber Missile, 1x Anti-Fighter missile.",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_dragon", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 3, 
+        DisplayedName = "SF Dragon - Interceptor <c=12AB06>39s</c>", 
+        Description = "<b>Description:</b> The Shivan fighter class SF Dragon is a fast, extremely agile craft. Its five lasers pack a deadly punch. The Dragon's weakness seems to be a thin hull. The trouble is that their speed and maneuverability make them extremely difficult to hit. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 5x Anti-Fighter Laser, 1x Anti-Fighter Missile.",
+	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_basilisk", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 4, 
+        DisplayedName = "SF Basilisk - Strike Fighter <c=12AB06>37s</c>", 
+        Description = "<b>Description:</b> The SF Basilisk is a Shivan heavy attack fighter. Slow but heavily armed and well-protected, the Basilisk targets slower-moving vessels, such as bombers, freighters, and gas miners. Their powerful lasers make them a danger to all such craft, so they must be engaged and destroyed as quickly as possible. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Missiles. \n\n<b>Armaments:</b> 4x Anti-Cruiser Laser, 2x Swarm Missile, 2x Shivan Rockets.",
+	},
+	
 
 
 	-- Bombers --------------
