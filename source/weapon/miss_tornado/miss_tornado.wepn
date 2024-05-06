@@ -1,11 +1,9 @@
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 240, 3220, 0, 0, 0, 0, 1, 0, 1, 0.09, 0.4,
-    5, 0, 0, 0, 0, 0.1, "Normal", 0, 1, 0)
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 240, 3220, 0, 0, 0, 0, 1, 0, 1, 0.2, 0.8,
+ 6, 0, 0, 0, 0, 1, "Normal", 0, 1, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 100, "")
 
-setAngles(NewWeaponType, 20, 0, 0, 0, 0)
-
-setMiscValues(NewWeaponType, 0, 0)
+setAngles(NewWeaponType, 45, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 30, 1,
     { Unarmoured = 1, },
@@ -21,22 +19,4 @@ setPenetration(NewWeaponType, 30, 1,
     { ChunkArmour = 1, },
     { SmallMissileArmor = 1, })
 
-setAccuracy(NewWeaponType, 1,
-    { Fighter = 1, },
-    { Corvette = 1, },
-    { Fighter_hw1 = 1, },
-    { Corvette_hw1 = 1, },
-    { Frigate = 1, },
-    { Utility = 1, },
-    { munition = 0, },
-    { SmallCapitalShip = 1, },
-    { BigCapitalShip = 1, },
-    { Mothership = 1, },
-    { Emplacement = 1, },
-    { UnAttackable = 0, },
-    { SubSystem = 1, },
-    { Resource = 1, },
-    { ResourceLarge = 1, },
-    { Capturer = 1, },
-    { Chimera = 1, },
-    { HeavyMissile = 1, })
+setAccuracy(NewWeaponType, 1)

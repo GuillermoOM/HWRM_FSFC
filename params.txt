@@ -10,12 +10,12 @@
 -Spawn_Back=ez01
 
 -Spawn_Ship_0=ter_orion
--Spawn_Pos_0=-8000,0,0
+-Spawn_Pos_0=-5000,0,0
 -Spawn_Rot_0=0,90,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=ter_apollo
--Spawn_Pos_1=-2000,0,0
+-Spawn_Ship_1=ter_fenris
+-Spawn_Pos_1=-1500,0,0
 -Spawn_Rot_1=0,90,0
 -Spawn_Team_1=1
 
@@ -24,12 +24,7 @@
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=0
 
--Spawn_Ship_3=ter_apollo
--Spawn_Pos_3=200,0,0
+-Spawn_Ship_3=ter_ares
+-Spawn_Pos_3=1500,0,0
 -Spawn_Rot_3=0,-90,0
 -Spawn_Team_3=0
-
--Spawn_Ship_4=shi_lilith
--Spawn_Pos_4=3000,0,0
--Spawn_Rot_4=0,-90,0
--Spawn_Team_4=0

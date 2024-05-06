@@ -8,6 +8,6 @@ fire_sfx = "WEAPON/prometheusS"
 bullet_nlips = 0.0002
 hit_nlips = 0.0002
 hit_sfx = "WEAPON/impact"
-nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate = "WEAPON/impact"
 hit_clamp = 
     { 1, 1, }

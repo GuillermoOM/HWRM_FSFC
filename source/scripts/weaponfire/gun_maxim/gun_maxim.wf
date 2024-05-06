@@ -12,7 +12,7 @@ scartype = "Plasma_Bomb/Plasma_Bomb"
 fire_sfx = "WEAPON/maxim"
 bullet_nlips = 0.0002
 hit_nlips = 0.0002
-hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
-nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_sfx = "WEAPON/impact"
+nopenetrate = "WEAPON/impact"
 hit_clamp = 
     { 1, 1, }
