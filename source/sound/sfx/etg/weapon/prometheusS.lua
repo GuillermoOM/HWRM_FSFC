@@ -1,90 +1,45 @@
--- This file is generated automatically by the Relic Audio Tool
-
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:29:12 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
 version = 4
-
-volume = 0.750000
-maxPolyphony = 7
-envelope = {
-  {
-    distance = 0.000000,
-    volume = 0.370000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-    }
-  },
-  {
-    distance = 516.666687,
-    volume = 0.365000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              0.750000,
-              0.750000,
-              0.640000,
-              0.620000,
-    }
-  },
-  {
-    distance = 1200.000000,
-    volume = 0.285000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              0.750000,
-              0.750000,
-              0.640000,
-              0.620000,
-    }
-  },
-  {
-    distance = 1950.000000,
-    volume = 0.145000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              0.770000,
-              0.660000,
-              0.520000,
-              0.440000,
-              0.420000,
-    }
-  },
-  {
-    distance = 2916.666748,
-    volume = 0.000000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              0.740000,
-              0.410000,
-              0.170000,
-              0.040000,
-              0.000000,
-    }
-  },
+volume = 0.5
+volumeRand = 0.2
+maxPolyphony = 4
+envelope =
+{
+    {
+        distance = 0,
+        volume = 0.4,
+        reverb = 0,
+        duration = 0,
+        equalizer =
+        { 1, 1, 1, 1, 1, 1, 1, 1, },
+    },
+    {
+        distance = 700,
+        volume = 0.2,
+        reverb = 0,
+        duration = 0,
+        equalizer =
+        { 1, 1, 1, 1, 1, 0.89, 0.8, 0.61, },
+    },
+    {
+        distance = 1400,
+        volume = 0.1,
+        reverb = 0,
+        duration = 0,
+        equalizer =
+        { 1, 1, 1, 1, 0.7, 0.67, 0.69, 0.56, },
+    },
+    {
+        distance = 2100,
+        volume = 0,
+        reverb = 0,
+        duration = 0,
+        equalizer =
+        { 1, 1, 1, 1, 0.71, 0.56, 0.46, 0.29, },
+    },
 }
 randSampContainer = 0
-

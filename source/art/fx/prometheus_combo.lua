@@ -27,7 +27,7 @@ fx =
         { 
             name = "FX3", 
             type = "VARTYPE_STRING", 
-            value = "prometheus_beam03", }, 
+            value = "", }, 
         property_01 = 
         { 
             name = "Fx2", 
