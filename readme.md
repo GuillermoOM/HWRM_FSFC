@@ -27,17 +27,15 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 - *NEW* Integration with HW ships on the same game
 - Terran Race:
-    - All ships are migrated
+    - Almost all ships migrated
     - Working fleet chatter
 - Shivan Race:
-    - Currently available ships: Demon, Cain and a fighter
+    - Currently available ships: Demon, Cain and some fighters
   
 ## Current Issues
 
 - AI For Terran Race doesn't work, it only grabs resources and does nothing else
 - Colossus has no fleet chatter
-- Engine burns not configured properly
-- Engine Trails not working properly
 - Audio Balancing
 - Weapons Balancing
 - Ship health Balancing
