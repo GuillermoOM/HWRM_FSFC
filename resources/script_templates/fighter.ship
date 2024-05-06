@@ -121,8 +121,8 @@ setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98
 --- Special Flight Maneuvers	
 --------------------------------------------------	
 
-NewShipType.mirrorAboveManeuver="ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
-NewShipType.mirrorBelowManeuver="Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
+NewShipType.mirrorAboveManeuver = " ImmelMann, ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, None"
+NewShipType.mirrorBelowManeuver = " Split_S, Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, None"
 NewShipType.specialTurnLeftManeuver = "EmergencyLeftTurn, NinetyDegLeftTurn, None"
 NewShipType.specialTurnRightManeuver = "EmergencyRightTurn, NinetyDegRightTurn, None"
 
@@ -141,7 +141,7 @@ NewShipType.swayRotateFactor = 0.1
 --- Tactics And Multipliers
 --------------------------------------------------	
 
-NewShipType.defaultStance = "Neutral" -- Agressive, Neutral or Evasive
+NewShipType.defaultStance = "Agressive" -- Agressive, Neutral or Evasive
 NewShipType.defaultROE = "Defensive"    -- Offensive, Defensive, Passive
 
 setTacticsMults(NewShipType, "MAXSPEED", 1.0, 1.10, 1.0)
@@ -164,7 +164,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 4
+NewShipType.SquadronSize = 1
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = "Batch_delta"
 
@@ -297,7 +297,7 @@ NewShipType.hideNormalAttackUICooldown = 1
 --------------------------------------------------	
 
 NewShipType.AlwaysInRenderList = 0
-NewShipType.meshRenderLimit = 10000
+NewShipType.meshRenderLimit = 11000
 NewShipType.dotRenderLimit = 10
 
 NewShipType.visibleInSecondary = 1
@@ -321,6 +321,8 @@ NewShipType.nlipsFarRange = 10000
 --------------------------------------------------
 
 NewShipType.minLOD = 0.25
+NewShipType.upLOD = 3500
+NewShipType.downLOD = 3000
 
 --------------------------------------------------
 --- alternative Hyperspace Gate

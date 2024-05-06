@@ -35,7 +35,6 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
-NewShipType.CombatFamily = "Fighter_Lance"
 
 --------------------------------------------------
 --- Supply
@@ -48,7 +47,7 @@ setSupplyValue(NewShipType, "LayoutFighter", 5.0)
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 1
+NewShipType.buildBatch = 1
 NewShipType.buildCost = 420
 NewShipType.buildTime = 30
 NewShipType.buildPriorityOrder = 20
@@ -168,7 +167,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 
 NewShipType.paradeData = "shi_build_parade"
 
-NewShipType.buildBatch = 1
+NewShipType.SquadronSize = 1
 NewShipType.formationSpacing = 40
 NewShipType.batchFormation = "Batch_delta"
 
@@ -197,10 +196,10 @@ NewShipType.holdSlots = 3
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1
-NewShipType.dockFormation = "dockline"
-NewShipType.queueFormation = "n_delta"
 NewShipType.dontDockWithOtherRaceShips = 1
 NewShipType.ignoreRaceWhenDocking = 0
+NewShipType.dockFormation = "dockline"
+NewShipType.queueFormation = "n_delta"
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -477,4 +476,5 @@ setEngineTrail(NewShipType, 0, 4, "trail_ribbon.tga", 1, 2, 0.025, 3)
 --------------------------------------------------
 
 addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
-addCustomCode(NewShipType,"data:scripts/custom_scripts/interceptor.lua","","","updateInterceptor","","ManticoreInterceptor",1.25)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
+    "ManticoreInterceptor", 1.25)
