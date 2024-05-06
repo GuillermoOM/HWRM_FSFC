@@ -71,6 +71,15 @@ build =
         DisplayedName = "SF Basilisk - Strike Fighter <c=12AB06>37s</c>", 
         Description = "<b>Description:</b> The SF Basilisk is a Shivan heavy attack fighter. Slow but heavily armed and well-protected, the Basilisk targets slower-moving vessels, such as bombers, freighters, and gas miners. Their powerful lasers make them a danger to all such craft, so they must be engaged and destroyed as quickly as possible. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Missiles. \n\n<b>Armaments:</b> 4x Anti-Cruiser Laser, 2x Swarm Missile, 2x Shivan Rockets.",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_mara", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 5, 
+        DisplayedName = "SF Mara - Space Superiority <c=12AB06>47s</c>", 
+        Description = "<b>Description:</b> The SF Mara class of Shivan fighters was first encountered by the GTC Vigilant while patrolling the Gamma Draconis jump node in the Capella system. All other information concerning the Mara is classified level Psi. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x Anti-Fighter Laser, 2x Anti-Fighter missile, 2x Shivan Heatseekers.",
+	},
 	
 
 

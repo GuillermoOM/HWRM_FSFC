@@ -328,7 +328,6 @@ NewShipType.downLOD = 3000
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
--- NewShipType["alternativeHyperspaceV"] = "no_hyperspace_gate"
 NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
 NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
