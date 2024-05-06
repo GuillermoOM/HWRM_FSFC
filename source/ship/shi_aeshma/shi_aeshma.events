@@ -104,7 +104,7 @@ effects =
             { 
                 { "anim", "Deathtrail", }, 
                 { "animtime", "0", }, 
-                { "marker", "marker_death", }, 
+                { "marker", "root", }, 
                 { "fx", "FIERY_EXPLOSION_WAVE", }, 
                 { "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", }, 
                 { "fx_scale", "0.5", }, 
@@ -149,7 +149,7 @@ effects =
             { 
                 { "anim", "Deathtrail", }, 
                 { "animtime", "0", }, 
-                { "marker", "marker_death", }, 
+                { "marker", "root", }, 
                 { "fx", "FIERY_TRAIL_SPRAY", }, 
                 { "sound", "EXPLOSION/DEATHTRAIL", }, 
                 { "fx_scale", "5", }, 
@@ -158,7 +158,7 @@ effects =
             { 
                 { "anim", "Deathtrail", }, 
                 { "animtime", "0", }, 
-                { "marker", "marker_death", }, 
+                { "marker", "root", }, 
                 { "fx", "fiery_trail_spray_small", }, 
                 { "fx_scale", "5", }, 
             }, 
@@ -166,7 +166,7 @@ effects =
             { 
                 { "anim", "Deathtrail", }, 
                 { "animtime", "0", }, 
-                { "marker", "marker_death", }, 
+                { "marker", "root", }, 
                 { "fx", "fiery_flash_ring_long", }, 
                 { "fx_scale", "30", }, 
             }, 
@@ -218,7 +218,7 @@ effects =
             { 
                 { "anim", "dmg02", }, 
                 { "animtime", "-1", }, 
-                { "marker", "marker3,marker4", },
+                { "marker", "marker3,marker4", }, 
                 { "fx", "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", }, 
                 { "sound", "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", }, 
                 { "fx_scale", "7.5", }, 
@@ -238,7 +238,7 @@ effects =
 				{ 
 						{ "anim", "ABStart", }, 
 						{ "animtime", "0", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "", }, 
 						{ "sound", "SPECIAL/AB_START", }, 
 						{ "fx_scale", "1", }, 
@@ -247,7 +247,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "-1", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "SPECIAL/AB_DO", }, 
 						{ "fx_scale", "1", }, 
@@ -256,7 +256,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "-1", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -265,7 +265,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.16", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -274,7 +274,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.16", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -283,7 +283,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.33", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -292,7 +292,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.33", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -301,7 +301,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.5", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -310,7 +310,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.5", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -319,7 +319,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.66", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -328,7 +328,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.66", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -337,7 +337,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.83", }, 
-						{ "marker", "e1", }, 
+						{ "marker", "EngineNozzle1", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
@@ -346,7 +346,7 @@ effects =
 				{ 
 						{ "anim", "ABDo", }, 
 						{ "animtime", "0.83", }, 
-						{ "marker", "e2", }, 
+						{ "marker", "EngineNozzle2", }, 
 						{ "fx", "fighter_AB_combo", }, 
 						{ "sound", "", }, 
 						{ "fx_scale", "1", }, 
