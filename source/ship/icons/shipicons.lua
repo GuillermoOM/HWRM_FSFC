@@ -2534,6 +2534,18 @@ Shi_Mara =
         stretchOnDraw = 1, 
 	}, 
 }
+Shi_Aeshma = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\shi_aeshma.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 420, 210, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
 Ter_Hades =
 {
 	LargeIcon =

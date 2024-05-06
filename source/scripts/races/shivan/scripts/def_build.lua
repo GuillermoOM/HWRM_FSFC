@@ -80,6 +80,16 @@ build =
         DisplayedName = "SF Mara - Space Superiority <c=12AB06>47s</c>", 
         Description = "<b>Description:</b> The SF Mara class of Shivan fighters was first encountered by the GTC Vigilant while patrolling the Gamma Draconis jump node in the Capella system. All other information concerning the Mara is classified level Psi. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x Anti-Fighter Laser, 2x Anti-Fighter missile, 2x Shivan Heatseekers.",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_aeshma", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 6, 
+        DisplayedName = "SF Aeshma - Strike Fighter <c=12AB06>35s</c>", 
+        Description = "<b>Description:</b> The SF Aeshma is a relatively rare, and only recently encountered, class of Shivan fighter. It appears to be a heavy attack fighter, like the Basilisk. With a low known top speed, Aeshmas seem to target slower-moving vessels, such as bombers, freighters, and gas miners. Their powerful lasers make them a danger to all such craft, so they must be engaged and destroyed as quickly as possible. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Missiles. \n\n<b>Armaments:</b> 4x Anti-Cruiser Laser, 2x Swarm Missile (Advanced Upgrade).",
+
+	},
 	
 
 
