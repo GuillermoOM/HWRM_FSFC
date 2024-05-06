@@ -326,7 +326,6 @@ NewShipType.downLOD = 3000
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
--- NewShipType["alternativeHyperspaceV"] = "no_hyperspace_gate"
 NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
 NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
@@ -361,7 +360,7 @@ addAbility(NewShipType, "CanAttack", 1, 2, 1, 0, 0.35, 2.5,
 
 addAbility(NewShipType, "CustomCommand", 1, "Speed Burst", 1, 0, 38, 0, 1, 0.1, 0,
     "data:scripts/custom_scripts/Afterburner.lua",
-    "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "ter_apollo", 0.5, 3, 1)
+    "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "shi_mara", 0.5, 3, 1)
 
 --------------------------------------------------
 LoadModel(NewShipType, 1)
@@ -373,8 +372,6 @@ LoadModel(NewShipType, 1)
 
 -- Ship Weapons
 StartShipWeaponConfig(NewShipType, "gun_shivheavylaser", "Weapon_Gun1", "")
-StartShipWeaponConfig(NewShipType, "gun_shivheavylaser", "Weapon_Gun2", "")
-StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun1", "")
 StartShipWeaponConfig(NewShipType, "gun_shivmegalaser", "Weapon_Gun2", "")
 
 -- Ship Missiles
@@ -412,5 +409,3 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 30)
 --------------------------------------------------
 
 addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
-addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
-    "MaraInterceptor", 1.25)
