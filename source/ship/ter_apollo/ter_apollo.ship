@@ -121,8 +121,8 @@ setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98
 --- Special Flight Maneuvers	
 --------------------------------------------------	
 
-NewShipType.mirrorAboveManeuver = " ImmelMann, ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, None"
-NewShipType.mirrorBelowManeuver = " Split_S, Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, None"
+NewShipType.mirrorAboveManeuver="ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
+NewShipType.mirrorBelowManeuver="Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
 NewShipType.specialTurnLeftManeuver = "EmergencyLeftTurn, NinetyDegLeftTurn, None"
 NewShipType.specialTurnRightManeuver = "EmergencyRightTurn, NinetyDegRightTurn, None"
 
