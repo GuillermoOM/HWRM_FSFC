@@ -30,7 +30,7 @@ NewMissileType.ArmourFamily = "Unarmoured"
 --- Health and Armour	
 --------------------------------------------------	
 
-NewMissileType.lifeTime = 10
+NewMissileType.lifeTime = 5
 
 NewMissileType.maxhealth = 40
 NewMissileType.regentime = 0
