@@ -1,8 +1,3 @@
--- LuaDC version 0.9.19
--- 5/23/2004 7:23:52 PM
--- LuaDC by Age2uN
--- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
---
 hitfx = "dmg_missle_explode_combo"
 bulletfx = "bullet_generic"
 nopenetratefx = "dmg_missle_explode_combo"

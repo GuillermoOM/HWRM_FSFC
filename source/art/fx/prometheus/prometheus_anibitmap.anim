@@ -1,5 +1,5 @@
-fps = 3
-startFrame = 0
+fps = 2
+startFrame = 1
 loopCount = 1
 texture = 
         { "data:/ART/FX/prometheus/prometheus_AniBitmap_0000.tga", 

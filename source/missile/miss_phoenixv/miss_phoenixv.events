@@ -58,7 +58,7 @@ effects =
 			},
 			{
 				"sound",
-				"Weapon/treblaunch",
+				"Weapon/trebuchet",
 			},
 			{
 				"fx_scale",
