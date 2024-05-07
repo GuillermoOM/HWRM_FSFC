@@ -18,7 +18,6 @@ NewShipType.sobDescription = "Space Superiority"
 --------------------------------------------------	
 
 NewShipType.isTransferable = 1
-NewShipType.unavailableWhenCaptured = 1
 
 --------------------------------------------------
 --- Families
@@ -113,6 +112,8 @@ NewShipType.descendPitch = 0
 NewShipType.goalReachEpsilon = 5
 NewShipType.slideMoveRange = 0
 NewShipType.relativeMoveFactor = 6
+
+NewShipType.agileFlight = 1
 
 setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
 
@@ -225,18 +226,6 @@ NewShipType.deadSobFadeTime = 0
 NewShipType.allowScuttle = 1
 
 --------------------------------------------------
---- Explosion Damage
---------------------------------------------------
-
-NewShipType.minFalloffDamageDist = 15
-NewShipType.maxFalloffDamageDist = 15 * 3
-NewShipType.maxFalloffScuttleDamageDist = 15 * 6
-NewShipType.explosiveScuttleDamageOnDeath = 15
-NewShipType.maxFalloffForce = 15 * 10
-NewShipType.explosiveDamageOnDeath = 3.4
-NewShipType.radiusDamageEvadeMod = 1.1
-
---------------------------------------------------
 --- Death Tumble
 --------------------------------------------------
 
@@ -299,7 +288,7 @@ NewShipType.AlwaysInRenderList = 0
 NewShipType.meshRenderLimit = 11000
 NewShipType.dotRenderLimit = 10
 
-NewShipType.visibleInSecondary = 1
+NewShipType.visibleInSecondary = 0
 
 NewShipType.goblinsStartFade = 210
 NewShipType.goblinsOff = 210

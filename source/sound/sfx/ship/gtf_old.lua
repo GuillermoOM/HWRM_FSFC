@@ -6,7 +6,7 @@ envelope =
 {
     {
         distance = 0,
-        volume = 0.6,
+        volume = 0.8,
         reverb = 0,
         duration = 0,
         equalizer =
@@ -14,7 +14,7 @@ envelope =
     },
     {
         distance = 350,
-        volume = 0.4,
+        volume = 0.6,
         reverb = 0,
         duration = 0,
         equalizer =
@@ -22,7 +22,7 @@ envelope =
     },
     {
         distance = 750,
-        volume = 0.3,
+        volume = 0.4,
         reverb = 0,
         duration = 0,
         equalizer =
