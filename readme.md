@@ -3,7 +3,7 @@
 
 This is the remaster of an existing and abandoned mod for Homeworld Remastered based of the Freespace series of games.
 
-[Gameplay Video](https://www.youtube.com/watch?v=ECahGmY8wGY)
+[Gameplay Video](https://www.youtube.com/watch?v=w_qDnGNCQX4)
 
 [Link to the original mod this is based off](https://steamcommunity.com/sharedfiles/filedetails/?id=408410200)
 
