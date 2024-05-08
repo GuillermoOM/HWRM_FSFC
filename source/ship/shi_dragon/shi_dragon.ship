@@ -44,7 +44,7 @@ setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 --- Construction  BuildBatch = Sqdr Size
 --------------------------------------------------	
 
-NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 4)
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 4)
 NewShipType.buildCost = 670
 NewShipType.buildTime = 39
 NewShipType.buildPriorityOrder = 20
@@ -114,8 +114,8 @@ NewShipType.relativeMoveFactor = 6
 
 NewShipType.agileFlight = 1
 
-NewShipType.homingDistance=1000
-NewShipType.homingDelay=0.5
+NewShipType.homingDistance = 1000
+NewShipType.homingDelay = 0.5
 
 setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
 
@@ -123,8 +123,10 @@ setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98
 --- Special Flight Maneuvers	
 --------------------------------------------------	
 
-NewShipType.mirrorAboveManeuver = "ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
-NewShipType.mirrorBelowManeuver = "Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
+NewShipType.mirrorAboveManeuver =
+"ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
+NewShipType.mirrorBelowManeuver =
+"Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
 NewShipType.specialTurnLeftManeuver = "NinetyDegLeftTurn, None, None"
 NewShipType.specialTurnRightManeuver = "NinetyDegRightTurn, None, None"
 
@@ -166,7 +168,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations  DO NOT MODIFY
 --------------------------------------------------	
 
-NewShipType.SquadronSize=getShipNum(NewShipType, "SquadronSize", 1)
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 
 NewShipType.formationSpacing = 50
 NewShipType.batchFormation = "Batch_delta"
@@ -214,7 +216,7 @@ NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
 
 --------------------------------------------------
---- Damage & Death  DO NOT MODIFY 
+--- Damage & Death  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType.dustCloudDamageTime = 160
@@ -334,7 +336,7 @@ addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
 addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
-addAbility(NewShipType, "CanAttack", 1, 4, 0, 1, 0.35, 2.5,
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 2.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,, SmallCapitalShip, BigCapitalShip, Mothership",
     "FlyBy_Interceptor_vs_Frigate",
     { Fighter = "Dogfight" },
