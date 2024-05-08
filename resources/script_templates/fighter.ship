@@ -214,7 +214,7 @@ NewShipType.totalValue = 8
 NewShipType.dustCloudDamageTime = 160
 NewShipType.nebulaDamageTime = 80
 
-NewShipType.collisionMultiplier = 0.35
+NewShipType.collisionMultiplier = 3
 
 NewShipType.battleScarCoverage = 0
 
