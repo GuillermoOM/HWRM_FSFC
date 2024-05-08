@@ -80,6 +80,15 @@ build =
         DisplayedName = "SF Mara - Space Superiority <c=12AB06>47s</c>", 
         Description = "<b>Description:</b> The SF Mara class of Shivan fighters was first encountered by the GTC Vigilant while patrolling the Gamma Draconis jump node in the Capella system. All other information concerning the Mara is classified level Psi. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x Anti-Fighter Laser, 2x Anti-Fighter missile, 2x Shivan Heatseekers.",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_scorpion", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 6, 
+        DisplayedName = "SF Scorpion - Recon <c=12AB06>28s</c>", 
+        Description = "<b>Description:</b> We originally thought the Scorpion was the Shivans' best fighter.  However, we now believe that the Scorpion is nothing more than a Shivan scout ship.  Their vast numbers and seeming unimportance to the Shivan war effort leads us to this belief.  Regardless of its purpose, the Scorpion is highly maneuverable, fast, and difficult to destroy.  It can also do damage equivalent to our space superiority fighters. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> 4x Shivan Medium Laser, 1x Shivan Heatseeker.",
+	},
 	
 
 

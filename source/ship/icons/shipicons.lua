@@ -2522,6 +2522,7 @@ Shi_Dragon =
         stretchOnDraw = 1, 
 	}, 
 }
+
 Shi_Mara = 
 { 
     LargeIcon = 
@@ -2534,6 +2535,20 @@ Shi_Mara =
         stretchOnDraw = 1, 
 	}, 
 }
+
+Shi_scorpion = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\shi_scorpion.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 600, 300, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
+
 Ter_Hades =
 {
 	LargeIcon =
