@@ -169,7 +169,6 @@ NewShipType.formationSpacing = 30
 NewShipType.batchFormation = "Batch_delta"
 
 NewShipType.canSurround = 0
-NewShipType.agileFlight = 1
 
 --------------------------------------------------
 --- Launching

@@ -19,7 +19,7 @@
 -Spawn_Team_1=1
 
 
--Spawn_Ship_2=ter_perseus
+-Spawn_Ship_2=ter_myrmidon
 -Spawn_Pos_2=-2000,0,0
 -Spawn_Rot_2=0,90,0
 -Spawn_Team_2=0

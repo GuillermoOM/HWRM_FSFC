@@ -145,9 +145,9 @@ addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "JustShoot")
 
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_1", "")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_2", "")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_3", "")
+-- StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_1", "")
+-- StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_2", "")
+-- StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_3", "")
 
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.battleScarCoverage=1
