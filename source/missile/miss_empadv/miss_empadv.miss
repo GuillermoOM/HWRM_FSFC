@@ -1,87 +1,223 @@
---===========================================================================
---  Purpose : Lua definition file for Homeworld Ship.
---            Contains loading information and flight dynamics information (among other things?)
---
---  Copyright Relic Entertainment, Inc.  All rights reserved.
---===========================================================================
-NewShipType = StartMissileConfig()
-NewShipType.displayedName="Adv EMP"
-NewShipType.sobDescription="Advanced EMP Bomb"
-NewShipType.TOScale=1
-NewShipType.TODistanceFade0=7000
-NewShipType.TODistanceDisappear0=5000
-NewShipType.TODistanceFade1=350
-NewShipType.TODistanceDisappear1=300
-NewShipType.TODistanceFade2=25000
-NewShipType.TODistanceDisappear2=12000
-NewShipType.TOGroupScale=1
-NewShipType.TOGroupMergeSize=0
-NewShipType.mouseOverMinFadeSize=0.045
-NewShipType.mouseOverMaxFadeSize=0.1
-NewShipType.maxhealth=40
-NewShipType.regentime=0
-NewShipType.sideArmourDamage=1
-NewShipType.rearArmourDamage=1
-NewShipType.maxShield=0
-NewShipType.shieldRechargeTime=0
-NewShipType.nlips=0.001
-NewShipType.nlipsRange=2000
-NewShipType.nlipsFar=0.001
-NewShipType.nlipsFarRange=10000
-NewShipType.SMRepresentation="Invisible"
-NewShipType.meshRenderLimit=10000
-NewShipType.dotRenderLimit=4000
-NewShipType.minLOD=0.2
-NewShipType.upLOD=500
-NewShipType.upLOD=1000
-NewShipType.downLOD=505
-NewShipType.downLOD=1005
-NewShipType.minimumZoomFactor=1
-NewShipType.selectionPriority=30
-NewShipType.weaponName="Miss_empadv"
-NewShipType.noCollisionTime=0
-NewShipType.lifeTime=6.5
-NewShipType.launchTime=0
-NewShipType.detectionDistance=1000
-NewShipType.proximityDetonationDist=90
-NewShipType.sobDieTime=0.5
-NewShipType.density=1
-NewShipType.thrusterMaxSpeed=250
-NewShipType.mainEngineMaxSpeed=440
-NewShipType.rotationMaxSpeed=325
-NewShipType.thrusterAccelTime=0.8
-NewShipType.thrusterBrakeTime=0.5
-NewShipType.mainEngineAccelTime=0.8
-NewShipType.mainEngineBrakeTime=0.5
-NewShipType.rotationAccelTime=0.4
-NewShipType.rotationBrakeTime=0.4
-NewShipType.thrusterUsage=0.5
-NewShipType.accelerationAngle=60
-NewShipType.mirrorAngle=30
-NewShipType.maxBankingAmount=85
-NewShipType.descendPitch=0
-NewShipType.goalReachEpsilon=5
-NewShipType.controllerType="Missile"
-NewShipType.slowdownFactor=0.5
-NewShipType.tumbleStaticX=0
-NewShipType.tumbleStaticY=0
-NewShipType.tumbleStaticZ=0
-NewShipType.tumbleDynamicX=0
-NewShipType.tumbleDynamicY=0
-NewShipType.tumbleDynamicZ=0
-NewShipType.tumbleSpeed=0
-NewShipType.targetAngle=2
-NewShipType.spiralsPerSecondMin=0.1
-NewShipType.spiralsPerSecondMax=0.15
-NewShipType.BuildFamily="NotBuildable"
-NewShipType.AttackFamily="UnAttackable"
-NewShipType.DockFamily="CantDock"
-NewShipType.AvoidanceFamily="DontAvoid"
-NewShipType.DisplayFamily="Munition"
-NewShipType.AutoFormationFamily="Fighter"
-NewShipType.ArmourFamily="Unarmoured"
-LoadHODFile(NewShipType,1);
-setEngineTrail(NewShipType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
-setEngineBurn(NewShipType,10,0.5,1,10,0,0.7,0.1,13);
-loadShipPatchList(NewShipType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
+--------------------------------------------------
+--- Base Template of a missile with all variables and functions organized by type
+--- Reference:
+--- Variables: https://github.com/HWRM/KarosGraveyard/wiki/Variable;-Missile
+--- Functions: https://github.com/HWRM/KarosGraveyard/wiki/Scope;-Missile
+--------------------------------------------------
+
+NewMissileType = StartMissileConfig()
+
+--------------------------------------------------
+--- Shipinfo
+--------------------------------------------------
+
+NewMissileType.displayedName="Adv EMP"
+NewMissileType.sobDescription="Advanced EMP Bomb"
+
+--------------------------------------------------
+--- Families
+--------------------------------------------------
+
+NewMissileType.BuildFamily = "NotBuildable"
+NewMissileType.AttackFamily = "Torpedo"
+NewMissileType.DockFamily = "CantDock"
+NewMissileType.AvoidanceFamily = "DontAvoid"
+NewMissileType.DisplayFamily = "Munition"
+NewMissileType.AutoFormationFamily = "Fighter"
+NewMissileType.ArmourFamily = "TorpedoArmor"
+
+--------------------------------------------------	
+--- Health and Armour	
+--------------------------------------------------	
+
+NewMissileType.lifeTime = 6.5
+
+NewMissileType.maxhealth = 5
+NewMissileType.regentime = 0
+NewMissileType.sideArmourDamage = 1
+NewMissileType.rearArmourDamage = 1
+
+--------------------------------------------------	
+--- Shields
+--------------------------------------------------	
+
+NewMissileType.maxShield = 0
+NewMissileType.shieldRechargeTime = 0
+
+--------------------------------------------------	
+--- Sensors	
+--------------------------------------------------	
+
+NewMissileType.detectionDistance = 10
+
+--------------------------------------------------	
+--- Movement	
+--------------------------------------------------	
+
+NewMissileType.thrusterMaxSpeed = 250
+NewMissileType.thrusterAccelTime = 0.8
+NewMissileType.thrusterBrakeTime = 0.5
+
+NewMissileType.mainEngineMaxSpeed = 440
+NewMissileType.mainEngineAccelTime = 0.8
+NewMissileType.mainEngineBrakeTime = 0.5
+
+NewMissileType.rotationMaxSpeed = 325
+NewMissileType.rotationAccelTime = 0.4
+NewMissileType.rotationBrakeTime = 0.4
+
+--------------------------------------------------	
+--- Advanced Movement	
+--------------------------------------------------	
+
+NewMissileType.density = 1
+
+NewMissileType.thrusterUsage = 0.5
+NewMissileType.accelerationAngle = 60
+NewMissileType.mirrorAngle = 30
+NewMissileType.maxBankingAmount = 85
+NewMissileType.descendPitch = 0
+NewMissileType.goalReachEpsilon = 5
+NewMissileType.controllerType = "Missile"
+
+--------------------------------------------------	
+--- Special Flight Maneuvers (missiles)
+--------------------------------------------------	
+
+NewMissileType.targetAngle = 2
+NewMissileType.spiralsPerSecondMin=0.1
+NewMissileType.spiralsPerSecondMax = 0.15
+
+--------------------------------------------------	
+--- Tactics And Multipliers
+--------------------------------------------------	
+
+setTacticsMults(NewMissileType, "WEAPONDAMAGE", 1.0, 1.0, 1.0)
+
+--------------------------------------------------	
+--- Random Targets (this is for mines)
+--------------------------------------------------	
+
+NewMissileType.useTargetRandom = 1
+NewMissileType.targetRandomPointXMin = -0.1
+NewMissileType.targetRandomPointXMax = 0.1
+NewMissileType.targetRandomPointYMin = -0.1
+NewMissileType.targetRandomPointYMax = 0.1
+NewMissileType.targetRandomPointZMin = -0.1
+NewMissileType.targetRandomPointZMax = 0.1
+
+--------------------------------------------------
+--- Launching
+--------------------------------------------------
+
+NewMissileType.launchTime = 0
+
+--------------------------------------------------
+--- Damage & Death
+--------------------------------------------------
+
+NewMissileType.noCollisionTime = 0
+
+NewMissileType.slowdownFactor = 1.0
+NewMissileType.proximityDetonationDist = 4000
+NewMissileType.sobDieTime = 0.5
+
+--------------------------------------------------
+--- Death Tumble
+--------------------------------------------------
+
+NewMissileType.tumbleStaticX = 0
+NewMissileType.tumbleStaticY = 0
+NewMissileType.tumbleStaticZ = 0
+NewMissileType.tumbleDynamicX = 0
+NewMissileType.tumbleDynamicY = 0
+NewMissileType.tumbleDynamicZ = 0
+NewMissileType.tumbleSpeed = 0
+
+--------------------------------------------------	
+--- Selection	
+--------------------------------------------------	
+
+NewMissileType.selectionPriority = 30
+
+--------------------------------------------------	
+--- Tactical Overlay Icon	
+--------------------------------------------------	
+
+NewMissileType.TOScale = 1
+NewMissileType.TODistanceFade0 = 7000
+NewMissileType.TODistanceDisappear0 = 5000
+NewMissileType.TODistanceFade1 = 350
+NewMissileType.TODistanceDisappear1 = 300
+NewMissileType.TODistanceFade2 = 25000
+NewMissileType.TODistanceDisappear2 = 12000
+NewMissileType.TOGroupScale = 1
+NewMissileType.TOGroupMergeSize = 0
+
+--------------------------------------------------	
+--- Overlays	
+--------------------------------------------------	
+
+NewMissileType.mouseOverMinFadeSize = 0.045
+NewMissileType.mouseOverMaxFadeSize = 0.1
+
+NewMissileType.SMRepresentation = "Invisible"
+
+--------------------------------------------------	
+--- Rendering	
+--------------------------------------------------	
+
+NewMissileType.meshRenderLimit = 12000
+NewMissileType.dotRenderLimit = 8000
+
+NewMissileType.minimumZoomFactor = 0.55
+
+--------------------------------------------------
+--- Non linear Scaling
+--------------------------------------------------
+
+NewMissileType.nlips = 0.0015
+NewMissileType.nlipsRange = 1500
+NewMissileType.nlipsFar = 0.0001
+NewMissileType.nlipsFarRange = 12000
+
+--------------------------------------------------
+--- Level of Detail
+--------------------------------------------------
+
+NewMissileType.minLOD = 0.2
+NewMissileType.upLOD=500
+NewMissileType.upLOD=1000
+NewMissileType.downLOD=505
+NewMissileType.downLOD=1005
+
+--------------------------------------------------
+--- Weapons
+--------------------------------------------------
+
+NewMissileType.weaponName = "Miss_empadv"
+
+--------------------------------------------------
+--- Addendum
+--------------------------------------------------
+
+loadShipPatchList(NewMissileType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
                              ,0,"VMissleEng");
+
+--------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewMissileType, 1)
+-- If you want to load the model from another missile
+-- LoadSharedModel(NewMissileType, "miss_rockeye")
+--------------------------------------------------
+
+--------------------------------------------------
+--- Engines
+--------------------------------------------------
+
+setEngineTrail(NewMissileType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
+setEngineBurn(NewMissileType,10,0.5,1,10,0,0.7,0.1,13);
+
+--------------------------------------------------
+--- Custom fields
+--------------------------------------------------

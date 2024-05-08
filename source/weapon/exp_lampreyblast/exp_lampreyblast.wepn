@@ -3,11 +3,12 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "EMP", "Normal", 0, 0, 10, 2, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
+StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "EMP", "Normal", 0, 0, 10, 2, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0.1, "Normal", 1, 0, 0)
 AddWeaponResult(NewWeaponType, "Hit", "Disable", "Target", 0, 35, "")
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 4, 4, "")
 
-setPenetration(NewWeaponType, 5, 0, 
-{ 
-    MoverArmour = 100, 
-} )
+setPenetration(NewWeaponType, 5, 0,
+    {
+        MoverArmour = 100,
+    })

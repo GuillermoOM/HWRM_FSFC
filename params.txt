@@ -18,7 +18,7 @@
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
 
--Spawn_Ship_2=ter_hercules
+-Spawn_Ship_2=ter_loki
 -Spawn_Pos_2=-2000,0,0
 -Spawn_Rot_2=0,90,0
 -Spawn_Team_2=0
@@ -28,7 +28,7 @@
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=shi_azrael
+-Spawn_Ship_4=shi_dragon
 -Spawn_Pos_4=2000,100,0
 -Spawn_Rot_4=0,-90,0
 -Spawn_Team_4=1
