@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 2
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 100, "")
 
-setAngles(NewWeaponType, 45, 0, 0, 0, 0)
+setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 30, 1,
     { Unarmoured = 1, },

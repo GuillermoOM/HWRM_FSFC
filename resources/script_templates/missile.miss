@@ -58,7 +58,7 @@ NewMissileType.shieldRechargeTime = 0
 --- Sensors	
 --------------------------------------------------	
 
-NewMissileType.detectionDistance = 4000
+NewMissileType.detectionDistance = 10
 
 --------------------------------------------------	
 --- Movement	
