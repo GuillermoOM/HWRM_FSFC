@@ -24,7 +24,7 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "SuperCap"
-NewShipType.BuildFamily = "Fighter_Ter"
+NewShipType.BuildFamily = "Fighter_Shi"
 NewShipType.AttackFamily = "Fighter"
 NewShipType.DockFamily = "Fighter"
 NewShipType.AvoidanceFamily = "Strikecraft"
