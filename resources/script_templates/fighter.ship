@@ -168,6 +168,8 @@ NewShipType.SquadronSize = 1
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = "Batch_delta"
 
+NewShipType.canJoinStrikeGroup = 1
+
 NewShipType.canSurround = 0
 
 --------------------------------------------------
