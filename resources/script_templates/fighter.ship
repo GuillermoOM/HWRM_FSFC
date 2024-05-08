@@ -14,13 +14,13 @@ NewShipType.displayedName = "GTF Apollo"
 NewShipType.sobDescription = "Space Superiority"
 
 --------------------------------------------------	
---- Main Ship Data	
+--- Main Ship Data	  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.isTransferable = 1
 
 --------------------------------------------------
---- Families
+--- Families    ONLY MODIFY BUILDFAMILY
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "SuperCap"
@@ -34,14 +34,14 @@ NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
 
 --------------------------------------------------
---- Supply
+--- Supply  DO NOT MODIFY
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Fighter", 4.0)
 setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 
 --------------------------------------------------	
---- Construction	
+--- Construction  DO NOT MODIFY BUILDBATCH
 --------------------------------------------------	
 
 NewShipType.buildBatch = 4
@@ -127,7 +127,7 @@ NewShipType.specialTurnLeftManeuver = "EmergencyLeftTurn, NinetyDegLeftTurn, Non
 NewShipType.specialTurnRightManeuver = "EmergencyRightTurn, NinetyDegRightTurn, None"
 
 --------------------------------------------------	
---- Swaying	
+--- Swaying  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.swayUpdateTime = 2
@@ -138,7 +138,7 @@ NewShipType.swayBobbingFactor = 0.05
 NewShipType.swayRotateFactor = 0.1
 
 --------------------------------------------------	
---- Tactics And Multipliers
+--- Tactics And Multipliers  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.defaultStance = "Agressive" -- Agressive, Neutral or Evasive
@@ -161,11 +161,10 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 
 
 --------------------------------------------------	
---- Formations	
+--- Formations  DO NOT MODIFY
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 1
-NewShipType.formationSpacing = 30
+NewShipType.formationSpacing = 50
 NewShipType.batchFormation = "Batch_delta"
 
 NewShipType.canJoinStrikeGroup = 1
@@ -173,7 +172,7 @@ NewShipType.canJoinStrikeGroup = 1
 NewShipType.canSurround = 0
 
 --------------------------------------------------
---- Launching
+--- Launching  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType.launchTimeBetweenTwoFormations = 0.5
@@ -182,7 +181,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 
 --------------------------------------------------
---- Docking
+--- Docking  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType.holdSlots = 4
@@ -208,7 +207,7 @@ NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
 
 --------------------------------------------------
---- Damage & Death
+--- Damage & Death  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType.dustCloudDamageTime = 160
@@ -241,11 +240,7 @@ NewShipType.tumbleSpecialDynamicY = 800
 NewShipType.tumbleSpecialDynamicZ = 500
 
 --------------------------------------------------	
---- Layout Boundary	
---------------------------------------------------	
-
---------------------------------------------------	
---- Selection	
+--- Selection  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.militaryUnit = 1
@@ -254,7 +249,7 @@ NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
 
 --------------------------------------------------	
---- Tactical Icon	
+--- Tactical Icon  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.TOIcon = "Triangle"
@@ -269,7 +264,7 @@ NewShipType.TOGroupScale = 1.5
 NewShipType.TOGroupMergeSize = 0
 
 --------------------------------------------------	
---- Overlays	
+--- Overlays  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.mouseOverMinFadeSize = 0.045
@@ -282,7 +277,7 @@ NewShipType.SMRepresentation = "HardDot"
 NewShipType.hideNormalAttackUICooldown = 1
 
 --------------------------------------------------	
---- Rendering	
+--- Rendering  DO NOT MODIFY
 --------------------------------------------------	
 
 NewShipType.AlwaysInRenderList = 0
@@ -297,7 +292,7 @@ NewShipType.goblinsOff = 210
 NewShipType.minimumZoomFactor = 0.75
 
 --------------------------------------------------
---- Non linear Scaling
+--- Non linear Scaling  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType.nlips = 0.0005
@@ -306,7 +301,7 @@ NewShipType.nlipsFar = 0.0003
 NewShipType.nlipsFarRange = 10000
 
 --------------------------------------------------
---- Level of Detail
+--- Level of Detail LOD DEPENDS ON HOW MANY LODs A SHIP'S MESH HAS
 --------------------------------------------------
 
 NewShipType.minLOD = 0.25
@@ -314,7 +309,7 @@ NewShipType.upLOD = 3500
 NewShipType.downLOD = 3000
 
 --------------------------------------------------
---- alternative Hyperspace Gate
+--- alternative Hyperspace Gate  DO NOT MODIFY
 --------------------------------------------------
 
 NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
@@ -334,25 +329,25 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
 addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeRepaired")
-addAbility(NewShipType, "CanAttack", 1, 2, 1, 0, 0.35, 2.5,
+addAbility(NewShipType, "CanAttack", 1, 2, 0, 1, 0.35, 2.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,, SmallCapitalShip, BigCapitalShip, Mothership",
-    "Fighter_vs_Frigate",
-    { Fighter = "Fighter_vs_Fighter" },
-    { Fighter_hw1 = "Fighter_vs_Fighter" },
-    { Corvette = "Fighter_vs_Corvette" },
-    { Corvette_hw1 = "Fighter_vs_Corvette" },
-    { Frigate = "Fighter_vs_Frigate" },
+    "FlyBy_Interceptor_vs_Frigate",
+    { Fighter = "Dogfight" },
+    { Fighter_hw1 = "Dogfight" },
+    { Corvette = "Dogfight" },
+    { Corvette_hw1 = "Dogfight" },
     { SubSystem = "TopAttack_Interceptor_vs_Subsystem" },
-    { SmallCapitalShip = "Fighter_vs_CapShip" },
-    { BigCapitalShip = "Fighter_vs_CapShip" },
-    { Mothership = "Fighter_vs_Mothership" },
-    { ResourceLarge = "Fighter_vs_ResourceLarge" })
+    { SmallCapitalShip = "Flyby_Interceptor_vs_CapShip" },
+    { BigCapitalShip = "Flyby_Interceptor_vs_CapShip" },
+    { Mothership = "Flyby_Interceptor_vs_Mothership" },
+    { ResourceLarge = "Flyby_Interceptor_vs_Mothership" })
 
 addAbility(NewShipType, "CustomCommand", 1, "Speed Burst", 1, 0, 38, 0, 1, 0.1, 0,
     "data:scripts/custom_scripts/Afterburner.lua",
     "Start_Afterburner", "Do_Afterburner", "Finish_Afterburner", "ter_apollo", 0.5, 3, 1)
 
 --------------------------------------------------
+--  DO NOT MODIFY
 LoadModel(NewShipType, 1)
 --------------------------------------------------
 
@@ -368,16 +363,9 @@ StartShipWeaponConfig(NewShipType, "gun_avenger", "Weapon_FrontGun2", "")
 StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile", "")
 StartShipWeaponConfig(NewShipType, "miss_fury", "Weapon_Missile2", "")
 
-
 --------------------------------------------------
 --- HardPoints
 --------------------------------------------------
-
-
---------------------------------------------------
---- Latch Points
---------------------------------------------------
-
 
 --------------------------------------------------
 --- Addendum
@@ -386,17 +374,13 @@ StartShipWeaponConfig(NewShipType, "miss_fury", "Weapon_Missile2", "")
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "gtf_old", "", 3, "", "Root")
 
 --------------------------------------------------
---- Da Shader Things
---------------------------------------------------
-
---------------------------------------------------
 --- Engine Burn
 --------------------------------------------------
 
 setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 20)
 
 --------------------------------------------------
---- Custom fields
+--- Custom fields  DO NOT MODIFY
 --------------------------------------------------
 
 addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)

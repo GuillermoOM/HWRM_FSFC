@@ -31,23 +31,24 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
-NewShipType.UnitCapsFamily = "Fighter"
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Fighter", 3.0)
-setSupplyValue(NewShipType, "LayoutFighter", 3.0)
+setSupplyValue(NewShipType, "Fighter", 4.0)
+setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 3
+NewShipType.buildBatch = 4
 NewShipType.buildCost = 670
 NewShipType.buildTime = 39
 NewShipType.buildPriorityOrder = 20
+
+setConcurrentBuildLimit(NewShipType, 0, 2)
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -110,6 +111,10 @@ NewShipType.goalReachEpsilon = 5
 NewShipType.slideMoveRange = 0
 NewShipType.relativeMoveFactor = 6
 
+NewShipType.agileFlight = 1
+
+setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
+
 --------------------------------------------------	
 --- Special Flight Maneuvers	
 --------------------------------------------------	
@@ -155,13 +160,11 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.buildBatch = 3
-NewShipType.formationSpacing = 30
-NewShipType.passiveFormation = "Broad"
-NewShipType.defensiveFormation = "Claw"
-NewShipType.aggressiveFormation = "Delta"
+NewShipType.formationSpacing = 50
 NewShipType.batchFormation = "Batch_delta"
+
 NewShipType.canJoinStrikeGroup = 1
+
 NewShipType.canSurround = 0
 
 --------------------------------------------------
@@ -214,12 +217,6 @@ NewShipType.chanceOfSpecialDeath = 0.25
 NewShipType.deadSobFadeTime = 0
 
 --------------------------------------------------
---- Explosion Damage
---------------------------------------------------
-
-
-
---------------------------------------------------
 --- Death Tumble
 --------------------------------------------------
 
@@ -232,17 +229,6 @@ NewShipType.tumbleDynamicZ = 5
 NewShipType.tumbleSpecialDynamicX = 800
 NewShipType.tumbleSpecialDynamicY = 1000
 NewShipType.tumbleSpecialDynamicZ = 700
-
---------------------------------------------------
---- Debris
---------------------------------------------------
-
-
-
---------------------------------------------------	
---- Layout Boundary	
---------------------------------------------------	
-
 
 --------------------------------------------------	
 --- Selection	
@@ -274,18 +260,26 @@ NewShipType.TOGroupMergeSize = 0
 
 NewShipType.mouseOverMinFadeSize = 0.045
 NewShipType.mouseOverMaxFadeSize = 0.1
+
 NewShipType.healthBarStyle = 0
+
 NewShipType.SMRepresentation = "HardDot"
+
+NewShipType.hideNormalAttackUICooldown = 1
 
 --------------------------------------------------	
 --- Rendering	
 --------------------------------------------------	
 
-NewShipType.meshRenderLimit = 10400000
+NewShipType.AlwaysInRenderList = 0
+NewShipType.meshRenderLimit = 11000
 NewShipType.dotRenderLimit = 10
+
 NewShipType.visibleInSecondary = 0
-NewShipType.goblinsStartFade = 200
-NewShipType.goblinsOff = 200
+
+NewShipType.goblinsStartFade = 210
+NewShipType.goblinsOff = 210
+
 NewShipType.minimumZoomFactor = 0.75
 
 --------------------------------------------------
@@ -318,25 +312,25 @@ NewShipType["alternativeHyperspaceTime"] = 7
 addAbility(NewShipType, "MoveCommand", 1, 0)
 addAbility(NewShipType, "CanDock", 1, 1)
 addAbility(NewShipType, "CanLaunch")
-addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 20, 80, 0, 3)
+addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 25, 100, 0, 3)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
-addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, .15, 0.3)
+addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
 addAbility(NewShipType, "RetireAbility", 1, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
+addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType, "CanAttack", 1, 4, 0, 1, 0.35, 2.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,, SmallCapitalShip, BigCapitalShip, Mothership",
-    "Fighter_vs_Frigate",
-    { Fighter = "Fighter_vs_Fighter" },
-    { Fighter_hw1 = "Fighter_vs_Fighter" },
-    { Corvette = "Fighter_vs_Corvette" },
-    { Corvette_hw1 = "Fighter_vs_Corvette" },
-    { Frigate = "Fighter_vs_Frigate" },
+    "FlyBy_Interceptor_vs_Frigate",
+    { Fighter = "Dogfight" },
+    { Fighter_hw1 = "Dogfight" },
+    { Corvette = "Dogfight" },
+    { Corvette_hw1 = "Dogfight" },
     { SubSystem = "TopAttack_Interceptor_vs_Subsystem" },
-    { SmallCapitalShip = "Fighter_vs_CapShip" },
-    { BigCapitalShip = "Fighter_vs_CapShip" },
-    { Mothership = "Fighter_vs_Mothership" },
-    { ResourceLarge = "Fighter_vs_ResourceLarge" })
+    { SmallCapitalShip = "Flyby_Interceptor_vs_CapShip" },
+    { BigCapitalShip = "Flyby_Interceptor_vs_CapShip" },
+    { Mothership = "Flyby_Interceptor_vs_Mothership" },
+    { ResourceLarge = "Flyby_Interceptor_vs_Mothership" })
 
 addAbility(NewShipType, "CustomCommand", 1, "Speed Burst", 1, 0, 38, 0, 1, 0.1, 0,
     "data:scripts/custom_scripts/Afterburner.lua",
@@ -350,7 +344,6 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 --- Weapons
 --------------------------------------------------
-
 StartShipWeaponConfig(NewShipType, "gun_shivheavylaser", "Weapon_Gun1", "")
 StartShipWeaponConfig(NewShipType, "gun_shivheavylaser", "Weapon_Gun2", "")
 StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile", "")
@@ -390,8 +383,6 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 20)
 --- Custom fields
 --------------------------------------------------
 
-addCustomCode(NewShipType, "data:scripts/custom_scripts/interceptor.lua", "", "", "updateInterceptor", "",
-    "DragonInterceptor", 1.25)
 addCustomCode(NewShipType, "data:scripts/custom_scripts/ABFix.lua", "", "", "AfterburnerFix", "", "AfterburnerFix", 10)
 
 --------------------------------------------------

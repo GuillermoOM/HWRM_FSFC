@@ -15,7 +15,7 @@ NewMissileType.displayedName = "cluster baby missile"
 NewMissileType.sobDescription = "fire&forget Missile"
 
 --------------------------------------------------	
---- Cluster Missile
+--- Cluster Missile OPTIONAL, ONLY ON PIRAHNA AND SYNAPTIC
 --------------------------------------------------	
 
 NewMissileType.clusterDistance = 4000
@@ -48,14 +48,14 @@ NewMissileType.sideArmourDamage = 1
 NewMissileType.rearArmourDamage = 1
 
 --------------------------------------------------	
---- Shields
+--- Shields	  DO NOT MODIFY
 --------------------------------------------------	
 
 NewMissileType.maxShield = 0
 NewMissileType.shieldRechargeTime = 0
 
 --------------------------------------------------	
---- Sensors	
+--- Sensors		  DO NOT MODIFY
 --------------------------------------------------	
 
 NewMissileType.detectionDistance = 10
@@ -117,13 +117,13 @@ NewMissileType.targetRandomPointZMin = -0.1
 NewMissileType.targetRandomPointZMax = 0.1
 
 --------------------------------------------------
---- Launching
+--- Launching	  DO NOT MODIFY
 --------------------------------------------------
 
 NewMissileType.launchTime = 0
 
 --------------------------------------------------
---- Damage & Death
+--- Damage & Death	  DO NOT MODIFY
 --------------------------------------------------
 
 NewMissileType.noCollisionTime = 0
@@ -133,7 +133,7 @@ NewMissileType.proximityDetonationDist = 4000
 NewMissileType.sobDieTime = 0.5
 
 --------------------------------------------------
---- Explosion Damage
+--- Explosion Damage (For heavy bombs only)
 --------------------------------------------------
 
 NewMissileType.minFalloffDamageDist = 1450
@@ -145,7 +145,7 @@ NewMissileType.explosiveDamageOnDeath = 660 * 3
 NewMissileType.radiusDamageEvadeMod = 1.1
 
 --------------------------------------------------
---- Death Tumble
+--- Death Tumble	  DO NOT MODIFY
 --------------------------------------------------
 
 NewMissileType.tumbleStaticX = 0
@@ -157,16 +157,15 @@ NewMissileType.tumbleDynamicZ = 0
 NewMissileType.tumbleSpeed = 0
 
 --------------------------------------------------	
---- Selection	
+--- Selection	  DO NOT MODIFY
 --------------------------------------------------	
 
 NewMissileType.selectionPriority = 30
 
 --------------------------------------------------	
---- Tactical Overlay Icon	
+--- Tactical Overlay Icon	  DO NOT MODIFY
 --------------------------------------------------	
 
-NewMissileType.TOIcon = "InvertedY"
 NewMissileType.TOScale = 1
 NewMissileType.TODistanceFade0 = 7000
 NewMissileType.TODistanceDisappear0 = 5000
@@ -178,7 +177,7 @@ NewMissileType.TOGroupScale = 1
 NewMissileType.TOGroupMergeSize = 0
 
 --------------------------------------------------	
---- Overlays	
+--- Overlays	  DO NOT MODIFY
 --------------------------------------------------	
 
 NewMissileType.mouseOverMinFadeSize = 0.045
@@ -187,7 +186,7 @@ NewMissileType.mouseOverMaxFadeSize = 0.1
 NewMissileType.SMRepresentation = "Invisible"
 
 --------------------------------------------------	
---- Rendering	
+--- Rendering	  DO NOT MODIFY
 --------------------------------------------------	
 
 NewMissileType.meshRenderLimit = 12000
@@ -196,7 +195,7 @@ NewMissileType.dotRenderLimit = 8000
 NewMissileType.minimumZoomFactor = 0.55
 
 --------------------------------------------------
---- Non linear Scaling
+--- Non linear Scaling	  DO NOT MODIFY
 --------------------------------------------------
 
 NewMissileType.nlips = 0.0015
@@ -219,7 +218,7 @@ NewMissileType.downLOD = 350
 NewMissileType.weaponName = "Miss_Pihrana"
 
 --------------------------------------------------
---- Addendum
+--- Addendum	  DO NOT MODIFY
 --------------------------------------------------
 
 loadShipPatchList(NewMissileType, "data:sound/sfx/ship/hiigaran/NonMilitary/Engines/", 0, "HTorpedoEng");

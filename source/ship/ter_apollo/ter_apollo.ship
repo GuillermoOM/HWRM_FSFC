@@ -164,7 +164,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 4
+
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = "Batch_delta"
 

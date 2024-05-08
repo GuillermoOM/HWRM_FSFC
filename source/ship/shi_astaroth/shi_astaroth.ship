@@ -157,7 +157,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --------------------------------------------------	
 
 NewShipType.buildBatch = 3
-NewShipType.SquadronSize = 4
+
 NewShipType.formationSpacing = 40
 NewShipType.passiveFormation = "Delta"
 NewShipType.defensiveFormation = "Broad"
