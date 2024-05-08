@@ -18,7 +18,6 @@ NewShipType.sobDescription = "Adv Heavy Interceptor"
 --------------------------------------------------	
 
 NewShipType.isTransferable = 1
-NewShipType.unavailableWhenCaptured = 1
 
 --------------------------------------------------
 --- Families
@@ -45,7 +44,7 @@ setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.buildBatch = 4
+NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 4)
 NewShipType.buildCost = 925
 NewShipType.buildTime = 45
 NewShipType.buildPriorityOrder = 20
@@ -112,8 +111,12 @@ NewShipType.maxBankingAmount = 85
 NewShipType.descendPitch = 0
 NewShipType.goalReachEpsilon = 5
 NewShipType.slideMoveRange = 0
-
 NewShipType.relativeMoveFactor = 6
+
+NewShipType.agileFlight = 1
+
+NewShipType.homingDistance=1000
+NewShipType.homingDelay=0.5
 
 setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
 
@@ -166,19 +169,20 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
+NewShipType.SquadronSize=getShipNum(NewShipType, "SquadronSize", 1)
 
-NewShipType.formationSpacing = 30
+NewShipType.formationSpacing = 50
 NewShipType.batchFormation = "Batch_delta"
 
 NewShipType.canJoinStrikeGroup = 1
 
-NewShipType.canSurround = 0
-NewShipType.agileFlight = 1
+NewShipType.canSurround = 1
 
 --------------------------------------------------
 --- Launching
 --------------------------------------------------
 
+addAbility(NewShipType, "CanLaunch")
 NewShipType.launchTimeBetweenTwoFormations = 0.5
 NewShipType.launchTimeBeforeStart = 0.5
 NewShipType.launchNrOfShipsInDockFormation = 1
@@ -188,14 +192,16 @@ NewShipType.launchFormation = "n_delta"
 --- Docking
 --------------------------------------------------
 
+addAbility(NewShipType, "CanDock", 1, 1)
 NewShipType.holdSlots = 4
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1
-NewShipType.dontDockWithOtherRaceShips = 1
 NewShipType.ignoreRaceWhenDocking = 0
 NewShipType.queueFormation = "n_delta"
 NewShipType.dockFormation = "dockline"
+
+NewShipType.dontDockWithOtherRaceShips = 1
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -217,25 +223,15 @@ NewShipType.totalValue = 10
 NewShipType.dustCloudDamageTime = 160
 NewShipType.nebulaDamageTime = 80
 
-NewShipType.collisionMultiplier = 0.35
+NewShipType.collisionMultiplier = 3
 
 NewShipType.battleScarCoverage = 0
-NewShipType.battleScarBudgetLow = 0
-NewShipType.battleScarBudgetNext = 0
-NewShipType.battleScarMaxTriBase = 0
-NewShipType.battleScarMaxTriInc = 0
 
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0.25
 NewShipType.deadSobFadeTime = 0
-
-NewShipType.allowScuttle = 1
-
---------------------------------------------------
---- Explosion Damage
---------------------------------------------------
 
 --------------------------------------------------
 --- Death Tumble
@@ -250,10 +246,6 @@ NewShipType.tumbleDynamicZ = 5
 NewShipType.tumbleSpecialDynamicX = 800
 NewShipType.tumbleSpecialDynamicY = 1000
 NewShipType.tumbleSpecialDynamicZ = 700
-
---------------------------------------------------	
---- Layout Boundary	
---------------------------------------------------	
 
 --------------------------------------------------	
 --- Selection	
@@ -334,8 +326,6 @@ NewShipType["alternativeHyperspaceTime"] = 7
 --- Abilities
 --------------------------------------------------
 addAbility(NewShipType, "MoveCommand", 1, 0)
-addAbility(NewShipType, "CanDock", 1, 1)
-addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 25, 100, 0, 3)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")

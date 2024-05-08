@@ -1,9 +1,9 @@
-StartWeaponConfig(NewWeaponType, "Fixed", "Bullet", "gun_banshee", "Normal", 2600, 1950, 0, 0, 0, 0, 1, 1, 0,
-    0.8, 0, 0, 0, 0, 10, 10, 1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_banshee", "Normal", 2600, 1950, 0, 0, 0, 0, 1, 1, 1,
+    0.8, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 26, 26, "")
 
-setAngles(NewWeaponType, 5, 0, 0, 0, 0)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 0.7, },

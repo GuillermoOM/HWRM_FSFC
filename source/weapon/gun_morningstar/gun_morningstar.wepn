@@ -1,11 +1,9 @@
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_morningstar", "Normal", 4000, 4000, 0, 0, 0, 0, 1, 1, 0,
-    0.3, 0, 0, 0, 0, 260, 240, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_morningstar", "Normal", 4000, 4000, 0, 0, 0, 0, 1, 1, 1,
+    0.3, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 9.1, 9.1, "")
 
-setAngles(NewWeaponType, 0, -12.5, 12.5, -12.5, 12.5)
-
-setMiscValues(NewWeaponType, 0, 0)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 0.25, },
@@ -20,22 +18,4 @@ setPenetration(NewWeaponType, 5, 1,
     { MineArmour = 1, },
     { ChunkArmour = 1, })
 
-setAccuracy(NewWeaponType, 1,
-    { Fighter = 0.25, },
-    { Corvette = 0.5, },
-    { Fighter_hw1 = 0.25, },
-    { Corvette_hw1 = 0.5, },
-    { Frigate = 1, },
-    { Utility = 0.8, },
-    { munition = 0.05, },
-    { HeavyMissile = 1, },
-    { SmallCapitalShip = 1, },
-    { BigCapitalShip = 1, },
-    { Mothership = 1, },
-    { Emplacement = 0.3, },
-    { UnAttackable = 0, },
-    { SubSystem = 1, },
-    { Resource = .6, },
-    { ResourceLarge = 1, },
-    { Capturer = 1, },
-    { Chimera = 1, })
+setAccuracy(NewWeaponType, 1)

@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "Gimble", "Missile", "Miss_tempest", "Normal", 
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 40.5, 71, "")
 
-setAngles(NewWeaponType, 5, 0, 0, 0, 0)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 30, 1,
     { Unarmoured = 1, },

@@ -1,40 +1,21 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","gun_circe","Normal",1800,2700,0,0,0,0,1,1,0,0.8,0,0,0,0,260,240,0.1,"Normal",0,0,0)
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_circe", "Normal", 1800, 2700, 0, 0, 0, 0, 1, 1, 1, 0.8, 0, 0, 0,
+    0, 1, 1, 1, "Normal", 0, 0, 0)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",45,45,"")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 45, 45, "")
 
-setAngles(NewWeaponType,0,-12.5,12.5,-12.5,12.5)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
-setMiscValues(NewWeaponType,0,0)
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 0, },
+    { LightArmour = 0, },
+    { MediumArmour = 0.0, },
+    { HeavyArmour = 0.0, },
+    { SubSystemArmour = 0.0, },
+    { TurretArmour = 0, },
+    { ResArmour = 1, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 1, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
 
-setPenetration(NewWeaponType,5,1,
-{Unarmoured=0,},
-{LightArmour=0,},
-{MediumArmour=0.0,},
-{HeavyArmour=0.0,},
-{SubSystemArmour=0.0,},
-{TurretArmour=0,},
-{ResArmour=1,},
-{MoverArmour=1,},
-{PlanetKillerArmour=1,},
-{MineArmour=1,},
-{ChunkArmour=1,})
-
-setAccuracy(NewWeaponType,1,
-{Fighter=0.3,},
-{Corvette=0.5,},
-{Fighter_hw1=0.3,},
-{Corvette_hw1=0.5,},
-{Frigate=0,},
-{Utility=0,},
-{munition=0.1,},
-{SmallCapitalShip=0,},
-{BigCapitalShip=0,},
-{Mothership=0,},
-{Emplacement=0,},
-{UnAttackable=0,},
-{SubSystem=0,},
-{Resource=0,},
-{ResourceLarge=0,},
-{Capturer=0,},
-{Chimera=1,})
-
+setAccuracy(NewWeaponType, 1)
