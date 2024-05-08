@@ -18,7 +18,6 @@ NewShipType.sobDescription = "Space Superiority"
 --------------------------------------------------	
 
 NewShipType.isTransferable = 1
-NewShipType.unavailableWhenCaptured = 1
 
 --------------------------------------------------
 --- Families
@@ -46,7 +45,7 @@ setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.buildBatch = 4
+NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 4)
 NewShipType.buildCost = 420
 NewShipType.buildTime = 30
 NewShipType.buildPriorityOrder = 20
@@ -115,6 +114,11 @@ NewShipType.goalReachEpsilon = 5
 NewShipType.slideMoveRange = 0
 NewShipType.relativeMoveFactor = 6
 
+NewShipType.agileFlight = 1
+
+NewShipType.homingDistance=1000
+NewShipType.homingDelay=0.5
+
 setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
 
 --------------------------------------------------	
@@ -164,6 +168,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
+NewShipType.SquadronSize=getShipNum(NewShipType, "SquadronSize", 1)
 
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = "Batch_delta"
@@ -172,26 +177,29 @@ NewShipType.canSurround = 0
 NewShipType.agileFlight = 1
 
 --------------------------------------------------
---- Launching
+--- Launching  DO NOT MODIFY
 --------------------------------------------------
 
+addAbility(NewShipType, "CanLaunch")
 NewShipType.launchTimeBetweenTwoFormations = 0.5
 NewShipType.launchTimeBeforeStart = 0.5
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 
 --------------------------------------------------
---- Docking
+--- Docking  DO NOT MODIFY
 --------------------------------------------------
 
+addAbility(NewShipType, "CanDock", 1, 1)
 NewShipType.holdSlots = 4
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1
-NewShipType.dontDockWithOtherRaceShips = 1
 NewShipType.ignoreRaceWhenDocking = 0
 NewShipType.queueFormation = "n_delta"
 NewShipType.dockFormation = "dockline"
+
+NewShipType.dontDockWithOtherRaceShips = 1
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -223,20 +231,6 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0.25
 NewShipType.deadSobFadeTime = 0
 
-NewShipType.allowScuttle = 1
-
---------------------------------------------------
---- Explosion Damage
---------------------------------------------------
-
-NewShipType.minFalloffDamageDist = 15
-NewShipType.maxFalloffDamageDist = 15 * 3
-NewShipType.maxFalloffScuttleDamageDist = 15 * 6
-NewShipType.explosiveScuttleDamageOnDeath = 15
-NewShipType.maxFalloffForce = 15 * 10
-NewShipType.explosiveDamageOnDeath = 3.4
-NewShipType.radiusDamageEvadeMod = 1.1
-
 --------------------------------------------------
 --- Death Tumble
 --------------------------------------------------
@@ -250,10 +244,6 @@ NewShipType.tumbleDynamicZ = 50
 NewShipType.tumbleSpecialDynamicX = 600
 NewShipType.tumbleSpecialDynamicY = 800
 NewShipType.tumbleSpecialDynamicZ = 500
-
---------------------------------------------------	
---- Layout Boundary	
---------------------------------------------------	
 
 --------------------------------------------------	
 --- Selection	
@@ -326,7 +316,6 @@ NewShipType.minLOD = 0.25
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
--- NewShipType["alternativeHyperspaceV"] = "no_hyperspace_gate"
 NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
 NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
@@ -335,8 +324,6 @@ NewShipType["alternativeHyperspaceTime"] = 7
 --- Abilities
 --------------------------------------------------
 addAbility(NewShipType, "MoveCommand", 1, 0)
-addAbility(NewShipType, "CanDock", 1, 1)
-addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 25, 100, 0, 3)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")

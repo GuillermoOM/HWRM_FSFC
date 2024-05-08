@@ -1,11 +1,9 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_kayser", "Normal", 2600, 1950, 0, 0, 0, 0, 1, 1, 0, 0.25, 0, 0,
-    0, 0, 260, 240, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_kayser", "Normal", 2600, 1950, 0, 0, 0, 0, 1, 1, 1, 0.25, 0, 0,
+    0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 28, 28, "")
 
-setAngles(NewWeaponType, 0, -80, 80, -80, 80)
-
-setMiscValues(NewWeaponType, 0, 0)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 1, },
@@ -20,19 +18,4 @@ setPenetration(NewWeaponType, 5, 1,
     { MineArmour = 1, },
     { ChunkArmour = 1, })
 
-    setAccuracy(NewWeaponType, 1,
-    { Swarmer = 0.01 },
-    { SpaceMine = 0.35 },
-    { Torpedo = 0 },
-    { HeavyMissile = 0 },
-    { SmallMissile = 0 },
-    { Fighter = 1.0 },
-    { Fighter_hw1 = 1.0 },
-    { Corvette = 0.75 },
-    { Corvette_hw1 = 0.82 },
-    { munition = 0.13 },
-    { Frigate = 0.80 },
-    { Resource = 0.80 },
-    { SmallCapitalShip = 0.80 },
-    { BigCapitalShip = 0.80 },
-    { ResourceLarge = 0.60 });
+    setAccuracy(NewWeaponType, 1);

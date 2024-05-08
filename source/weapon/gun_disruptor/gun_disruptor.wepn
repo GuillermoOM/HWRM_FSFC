@@ -1,11 +1,9 @@
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_disruptor", "Normal", 2000, 2000, 0, 0, 0, 0, 1, 1, 0,
-    0.35, 0, 0, 0, 0, 260, 240, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_disruptor", "Normal", 2000, 2000, 0, 0, 0, 0, 1, 1, 1,
+    0.35, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 30, 30, "")
 
-setAngles(NewWeaponType, 0, -12.5, 12.5, -12.5, 12.5)
-
-setMiscValues(NewWeaponType, 0, 0)
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 0.1, },
