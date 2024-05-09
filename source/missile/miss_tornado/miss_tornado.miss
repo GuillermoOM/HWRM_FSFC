@@ -63,8 +63,8 @@ NewMissileType.mainEngineAccelTime = 0.8
 NewMissileType.mainEngineBrakeTime = 0.5
 
 NewMissileType.rotationMaxSpeed = 400
-NewMissileType.rotationAccelTime = 0.7
-NewMissileType.rotationBrakeTime = 0.9
+NewMissileType.rotationAccelTime = 0.9
+NewMissileType.rotationBrakeTime = 0.7
 
 --------------------------------------------------	
 --- Advanced Movement	

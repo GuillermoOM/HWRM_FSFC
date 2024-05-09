@@ -84,17 +84,17 @@ NewShipType.detectionStrength = 4
 
 NewShipType.mass = 200
 
-NewShipType.thrusterMaxSpeed = 330
+NewShipType.thrusterMaxSpeed = 360
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 0.75
 
-NewShipType.mainEngineMaxSpeed = 330
+NewShipType.mainEngineMaxSpeed = 360
 NewShipType.mainEngineAccelTime = 2
 NewShipType.mainEngineBrakeTime = 0.75
 
-NewShipType.rotationMaxSpeed = 160
-NewShipType.rotationAccelTime = 0.6
-NewShipType.rotationBrakeTime = 0.3
+NewShipType.rotationMaxSpeed = 220
+NewShipType.rotationAccelTime = 0.4
+NewShipType.rotationBrakeTime = 0.2
 
 --------------------------------------------------	
 --- Advanced Movement	
