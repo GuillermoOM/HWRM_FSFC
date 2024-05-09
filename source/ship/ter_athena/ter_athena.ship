@@ -361,7 +361,7 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 -- Ship Weapons
-StartShipWeaponConfig(NewShipType, "gun_disruptor", "Weapon_FrontGun", "")
+StartShipWeaponConfig(NewShipType, "gun_disruptorfs1", "Weapon_FrontGun", "")
 StartShipWeaponConfig(NewShipType, "gun_prometheusfs1", "Weapon_FrontGun2", "")
 
 -- Ship Missiles
