@@ -98,6 +98,16 @@ build =
         DisplayedName = "SF Aeshma - Strike Fighter <c=12AB06>35s</c>", 
         Description = "<b>Description:</b> The SF Aeshma is a relatively rare, and only recently encountered, class of Shivan fighter. It appears to be a heavy attack fighter, like the Basilisk. With a low known top speed, Aeshmas seem to target slower-moving vessels, such as bombers, freighters, and gas miners. Their powerful lasers make them a danger to all such craft, so they must be engaged and destroyed as quickly as possible. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Missiles. \n\n<b>Armaments:</b> 4x Anti-Cruiser Laser, 2x Swarm Missile (Advanced Upgrade).",
 	},
+	{
+	
+		Type = Ship, 
+		ThingToBuild = "shi_gorgon", 
+		RequiredResearch = "", 
+		RequiredShipSubSystems = "", 
+		DisplayPriority = 8, 
+		DisplayedName = "SF Gorgon - Space Superiority <c=12AB06>45s</c>", 
+		Description = "<b>Description:</b> The first encounter with the SF Gorgon was made by the GTD Saratoga in the Ikeya system.  We are uncertain if this is a new design or if the Shivans have held this particular ship back for the majority of the war. The ship's unusual design not only provides it with exceptional maneuverability, but also allows it to generate an extremely powerful shield.  So far these ships have only been sighted leading wings of lesser fighters, but there have been reports of entire wings of Gorgons in larger forces. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles, Silent Threat. \n\n<b>Armaments:</b> 4x Medium Laser, 3x Heavy Laser, 1x Anti-Fighter Missile, 1x Swarm Missile.",
+	},
 
 	-- Bombers --------------
 
