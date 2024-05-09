@@ -22,7 +22,6 @@ NewMissileType.clusterDistance = 4000
 NewMissileType.numberSubMunitions = 15
 NewMissileType.subMunitionName = "Miss_Cluster_Baby"
 NewMissileType.clusterAngle = 270
-NewMissileType.density = 1
 
 --------------------------------------------------
 --- Families
@@ -131,18 +130,6 @@ NewMissileType.noCollisionTime = 0
 NewMissileType.slowdownFactor = 1.0
 NewMissileType.proximityDetonationDist = 4000
 NewMissileType.sobDieTime = 0.5
-
---------------------------------------------------
---- Explosion Damage (For heavy bombs only)
---------------------------------------------------
-
-NewMissileType.minFalloffDamageDist = 1450
-NewMissileType.maxFalloffDamageDist = 1450 * 1.5
-NewMissileType.maxFalloffScuttleDamageDist = 1450 * 3
-NewMissileType.explosiveScuttleDamageOnDeath = 3302 * 3
-NewMissileType.maxFalloffForce = 500 * 10
-NewMissileType.explosiveDamageOnDeath = 660 * 3
-NewMissileType.radiusDamageEvadeMod = 1.1
 
 --------------------------------------------------
 --- Death Tumble	  DO NOT MODIFY

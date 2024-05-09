@@ -1,86 +1,219 @@
---Freespace: New Age TC mod v0.2
-NewShipType = StartMissileConfig()
-NewShipType.displayedName="cluster missile"
-NewShipType.sobDescription="Cluster missile that explodes into multiple fire and forget missiles"
-NewShipType.TOScale=1
-NewShipType.TODistanceFade0=7000
-NewShipType.TODistanceDisappear0=5000
-NewShipType.TODistanceFade1=350
-NewShipType.TODistanceDisappear1=300
-NewShipType.TODistanceFade2=25000
-NewShipType.TODistanceDisappear2=12000
-NewShipType.TOGroupScale=1
-NewShipType.TOGroupMergeSize=0
-NewShipType.mouseOverMinFadeSize=0.045
-NewShipType.mouseOverMaxFadeSize=0.1
-NewShipType.maxhealth=5
-NewShipType.regentime=0
-NewShipType.sideArmourDamage=1
-NewShipType.rearArmourDamage=1
-NewShipType.maxShield=0
-NewShipType.shieldRechargeTime=0
-NewShipType.nlips=0.001
-NewShipType.nlipsRange=2000
-NewShipType.nlipsFar=0.001
-NewShipType.nlipsFarRange=10000
-NewShipType.SMRepresentation="Invisible"
-NewShipType.meshRenderLimit=10000
-NewShipType.dotRenderLimit=4000
+--------------------------------------------------
+--- Base Template of a missile with all variables and functions organized by type
+--- Reference:
+--- Variables: https://github.com/HWRM/KarosGraveyard/wiki/Variable;-Missile
+--- Functions: https://github.com/HWRM/KarosGraveyard/wiki/Scope;-Missile
+--------------------------------------------------
+
+NewMissileType = StartMissileConfig()
+
+--------------------------------------------------
+--- Shipinfo
+--------------------------------------------------
+
+NewMissileType.displayedName = "Piranha Cluster Bomb"
+NewMissileType.sobDescription = "Cluster Missles Bomb"
+
+--------------------------------------------------	
+--- Cluster Missile OPTIONAL, ONLY ON PIRAHNA AND SYNAPTIC
+--------------------------------------------------	
+
+NewMissileType.clusterDistance = 1800
+NewMissileType.numberSubMunitions = 10
+NewMissileType.subMunitionName = "Miss_Cluster_Baby"
+NewMissileType.clusterAngle = 270
+
+--------------------------------------------------
+--- Families
+--------------------------------------------------
+
+NewMissileType.BuildFamily = "NotBuildable"
+NewMissileType.AttackFamily = "Torpedo"
+NewMissileType.DockFamily = "CantDock"
+NewMissileType.AvoidanceFamily = "DontAvoid"
+NewMissileType.DisplayFamily = "Munition"
+NewMissileType.AutoFormationFamily = "Fighter"
+NewMissileType.ArmourFamily = "TorpedoArmor"
+
+--------------------------------------------------	
+--- Health and Armour	
+--------------------------------------------------	
+
+NewMissileType.lifeTime = 5
+
+NewMissileType.maxhealth = 5
+NewMissileType.regentime = 0
+NewMissileType.sideArmourDamage = 1
+NewMissileType.rearArmourDamage = 1
+
+--------------------------------------------------	
+--- Shields	  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.maxShield = 0
+NewMissileType.shieldRechargeTime = 0
+
+--------------------------------------------------	
+--- Sensors		  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.detectionDistance = 4000
+
+--------------------------------------------------	
+--- Movement	
+--------------------------------------------------	
+
+NewMissileType.thrusterMaxSpeed = 300
+NewMissileType.thrusterAccelTime = 0.1
+NewMissileType.thrusterBrakeTime = 0.1
+
+NewMissileType.mainEngineMaxSpeed = 300
+NewMissileType.mainEngineAccelTime = 0.1
+NewMissileType.mainEngineBrakeTime = 0.1
+
+NewMissileType.rotationMaxSpeed = 0
+NewMissileType.rotationAccelTime = 0.5
+NewMissileType.rotationBrakeTime = 0.5
+
+--------------------------------------------------	
+--- Advanced Movement	
+--------------------------------------------------	
+
+NewMissileType.density = 1
+
+NewMissileType.thrusterUsage = 1
+NewMissileType.accelerationAngle = 60
+NewMissileType.mirrorAngle = 30
+NewMissileType.maxBankingAmount = 85
+NewMissileType.descendPitch = 0
+NewMissileType.goalReachEpsilon = 5
+NewMissileType.controllerType = "Missile"
+
+--------------------------------------------------	
+--- Special Flight Maneuvers (missiles)
+--------------------------------------------------	
+
+NewMissileType.targetAngle = 5
+NewMissileType.spiralsPerSecondMin = 0
+NewMissileType.spiralsPerSecondMax = 0
+
+--------------------------------------------------	
+--- Tactics And Multipliers
+--------------------------------------------------	
+
+setTacticsMults(NewMissileType, "WEAPONDAMAGE", 1.0, 1.0, 1.0)
+
+--------------------------------------------------
+--- Launching	  DO NOT MODIFY
+--------------------------------------------------
+
+NewMissileType.launchTime = 0.1
+
+--------------------------------------------------
+--- Damage & Death	  DO NOT MODIFY
+--------------------------------------------------
+
+NewMissileType.noCollisionTime = 1
+
+NewMissileType.slowdownFactor = 1.0
+NewMissileType.proximityDetonationDist = 10
+NewMissileType.sobDieTime = 0.5
+
+--------------------------------------------------
+--- Death Tumble	  DO NOT MODIFY
+--------------------------------------------------
+
+NewMissileType.tumbleStaticX = 0
+NewMissileType.tumbleStaticY = 0
+NewMissileType.tumbleStaticZ = 0
+NewMissileType.tumbleDynamicX = 0
+NewMissileType.tumbleDynamicY = 0
+NewMissileType.tumbleDynamicZ = 0
+NewMissileType.tumbleSpeed = 0
+
+--------------------------------------------------	
+--- Selection	  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.selectionPriority = 30
+
+--------------------------------------------------	
+--- Tactical Overlay Icon	  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.TOScale = 1
+NewMissileType.TODistanceFade0 = 7000
+NewMissileType.TODistanceDisappear0 = 5000
+NewMissileType.TODistanceFade1 = 350
+NewMissileType.TODistanceDisappear1 = 300
+NewMissileType.TODistanceFade2 = 25000
+NewMissileType.TODistanceDisappear2 = 12000
+NewMissileType.TOGroupScale = 1
+NewMissileType.TOGroupMergeSize = 0
+
+--------------------------------------------------	
+--- Overlays	  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.mouseOverMinFadeSize = 0.045
+NewMissileType.mouseOverMaxFadeSize = 0.1
+
+NewMissileType.SMRepresentation = "Invisible"
+
+--------------------------------------------------	
+--- Rendering	  DO NOT MODIFY
+--------------------------------------------------	
+
+NewMissileType.meshRenderLimit = 12000
+NewMissileType.dotRenderLimit = 8000
+
+NewMissileType.minimumZoomFactor = 0.55
+
+--------------------------------------------------
+--- Non linear Scaling	  DO NOT MODIFY
+--------------------------------------------------
+
+NewMissileType.nlips = 0.0015
+NewMissileType.nlipsRange = 1500
+NewMissileType.nlipsFar = 0.0001
+NewMissileType.nlipsFarRange = 12000
+
+--------------------------------------------------
+--- Level of Detail
+--------------------------------------------------
+
 NewShipType.minLOD=0.2
 NewShipType.upLOD=500
 NewShipType.upLOD=1000
 NewShipType.downLOD=505
 NewShipType.downLOD=1005
-NewShipType.minimumZoomFactor=0.55
-NewShipType.selectionPriority=30
-NewShipType.weaponName="Miss_Pihrana"
-NewShipType.noCollisionTime=0
-NewShipType.lifeTime=3
-NewShipType.launchTime=2
-NewShipType.detectionDistance=4000
-NewShipType.proximityDetonationDist=4000
-NewShipType.clusterDistance=4000
-NewShipType.numberSubMunitions=15
-NewShipType.subMunitionName="Miss_Cluster_Baby"
-NewShipType.clusterAngle=270
-NewShipType.sobDieTime=0.5
-NewShipType.density=1
-NewShipType.thrusterMaxSpeed=100
-NewShipType.mainEngineMaxSpeed=100
-NewShipType.rotationMaxSpeed=0
-NewShipType.thrusterAccelTime=3.2
-NewShipType.thrusterBrakeTime=3.2
-NewShipType.mainEngineAccelTime=3.2
-NewShipType.mainEngineBrakeTime=3.2
-NewShipType.rotationAccelTime=0.5
-NewShipType.rotationBrakeTime=0.5
-NewShipType.thrusterUsage=0
-NewShipType.accelerationAngle=60
-NewShipType.mirrorAngle=0
-NewShipType.maxBankingAmount=85
-NewShipType.descendPitch=0
-NewShipType.goalReachEpsilon=5
-NewShipType.controllerType="Missile"
-NewShipType.slowdownFactor=1.0
-NewShipType.tumbleStaticX=0
-NewShipType.tumbleStaticY=0
-NewShipType.tumbleStaticZ=0
-NewShipType.tumbleDynamicX=0
-NewShipType.tumbleDynamicY=0
-NewShipType.tumbleDynamicZ=0
-NewShipType.tumbleSpeed=0
-NewShipType.targetAngle=2
-NewShipType.spiralsPerSecondMin=2
-NewShipType.spiralsPerSecondMax=2.5
-NewShipType.BuildFamily="NotBuildable"
-NewShipType.AttackFamily="UnAttackable"
-NewShipType.DockFamily="CantDock"
-NewShipType.AvoidanceFamily="DontAvoid"
-NewShipType.DisplayFamily="Munition"
-NewShipType.AutoFormationFamily="Fighter"
-NewShipType.ArmourFamily="Unarmoured"
-LoadHODFile(NewShipType,1);
-setEngineTrail(NewShipType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
-setEngineBurn(NewShipType,10,0.5,1,10,0,0.7,0.1,15);
--- loadShipPatchList(NewShipType,"data:sound/sfx/ship/hiigaran/NonMilitary/Engines/"
---                              ,0,"HTorpedoEng");
+
+--------------------------------------------------
+--- Weapons
+--------------------------------------------------
+
+NewMissileType.weaponName = "Miss_Pihrana"
+
+--------------------------------------------------
+--- Addendum	  DO NOT MODIFY
+--------------------------------------------------
+
+loadShipPatchList(NewMissileType, "data:sound/sfx/ship/hiigaran/NonMilitary/Engines/", 0, "VMissleEng");
+
+--------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewMissileType, 1)
+-- If you want to load the model from another missile
+-- LoadSharedModel(NewMissileType, "miss_rockeye")
+--------------------------------------------------
+
+--------------------------------------------------
+--- Engines
+--------------------------------------------------
+
+setEngineTrail(NewMissileType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
+setEngineBurn(NewMissileType,10,0.5,1,10,0,0.7,0.1,15);
+
+--------------------------------------------------
+--- Custom fields
+--------------------------------------------------

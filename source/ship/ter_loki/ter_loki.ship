@@ -387,7 +387,7 @@ StartShipWeaponConfig(NewShipType, "miss_empadv", "Weapon_Missile", "")
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "gtf_old", "", 3, "", "Root")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "terranfighter", "", 3, "", "Root")
 
 --------------------------------------------------
 --- Da Shader Things
