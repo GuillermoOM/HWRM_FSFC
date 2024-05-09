@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 hitfx = "kayser_hit"
-bulletfx = "kayser"
+bulletfx = "kayser_combo"
 nopenetratefx = "kayser_hit"
 deathtype = "deathBeam"
 firefx = "kayser_fire"
