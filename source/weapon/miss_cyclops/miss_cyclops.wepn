@@ -1,42 +1,40 @@
-StartWeaponConfig(NewWeaponType,"Fixed","Missile","Miss_Cyclops","Normal",240,4750,0,0,0,0,1,0,1,20,0,0,0,0,0,0,0.1,"Normal",0,1,0)
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Cyclops", "Normal", 240, 4750, 0, 0, 0, 0, 1, 0, 1, 20, 0, 0,
+    0, 0, 0, 0, 1, "Normal", 0, 1, 0)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2000,2000,"")
-AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"exp_bombblast")
-AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"exp_bombblast")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 2000, 2000, "")
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
+AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
 
-setAngles(NewWeaponType,20,0,0,0,0)
+setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 
-setMiscValues(NewWeaponType,0,0.65)
+setPenetration(NewWeaponType, 30, 1,
+    { Unarmoured = 1, },
+    { lightarmour = 1, },
+    { MediumArmour = 1, },
+    { HeavyArmour = 1, },
+    { SubSystemArmour = 0.5, },
+    { TurretArmour = 0.25, },
+    { resarmour = 0.2, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
 
-setPenetration(NewWeaponType,30,1,
-{Unarmoured=1,},
-{lightarmour=1,},
-{MediumArmour=1,},
-{HeavyArmour=1,},
-{SubSystemArmour=0.5,},
-{TurretArmour=0.25,},
-{resarmour=0.2,},
-{MoverArmour=1,},
-{PlanetKillerArmour=0,},
-{MineArmour=1,},
-{ChunkArmour=1,})
-
-setAccuracy(NewWeaponType,1,
-{Fighter=0,},
-{Corvette=0,},
-{Fighter_hw1=0,},
-{Corvette_hw1=0,},
-{Frigate=1,},
-{Utility=1,},
-{munition=0,},
-{SmallCapitalShip=1,},
-{BigCapitalShip=1,},
-{Mothership=1,},
-{Emplacement=0,},
-{UnAttackable=0,},
-{SubSystem=1,},
-{Resource=1,},
-{ResourceLarge=1,},
-{Capturer=1,},
-{Chimera=1,})
-
+setAccuracy(NewWeaponType, 1,
+    { Fighter = 0, },
+    { Corvette = 0, },
+    { Fighter_hw1 = 0, },
+    { Corvette_hw1 = 0, },
+    { Frigate = 1, },
+    { Utility = 1, },
+    { munition = 0, },
+    { SmallCapitalShip = 1, },
+    { BigCapitalShip = 1, },
+    { Mothership = 1, },
+    { Emplacement = 0, },
+    { UnAttackable = 0, },
+    { SubSystem = 1, },
+    { Resource = 1, },
+    { ResourceLarge = 1, },
+    { Capturer = 1, },
+    { Chimera = 1, })

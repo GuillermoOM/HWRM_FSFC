@@ -1,10 +1,11 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","gun_avenger","Normal",2100,2000,0,0,0,0,1,1,0,0.5,0,0,0,0,260,40,0.1,"Normal",0,0,0)
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_avenger", "Normal", 2100, 2000, 0, 0, 0, 0, 1, 1, 0,
+    0.5, 0, 0, 0, 0, 1, 1, 1, "Normal", 1, 0, 0)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",16,16,"")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 16, 16, "")
 
-setAngles(NewWeaponType,0,-180,180,-10,60)
+setAngles(NewWeaponType, 0, -180, 180, -5, 89)
 
-setMiscValues(NewWeaponType,0,0)
+setMiscValues(NewWeaponType, 0, 0)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 1.25, },
@@ -19,19 +20,4 @@ setPenetration(NewWeaponType, 5, 1,
     { MineArmour = 1, },
     { ChunkArmour = 1, })
 
-    setAccuracy(NewWeaponType, 1,
-    { Swarmer = 0.01 },
-    { SpaceMine = 0.35 },
-    { Torpedo = 0 },
-    { HeavyMissile = 0 },
-    { SmallMissile = 0 },
-    { Fighter = 1.0 },
-    { Fighter_hw1 = 1.0 },
-    { Corvette = 0.75 },
-    { Corvette_hw1 = 0.82 },
-    { munition = 0.13 },
-    { Frigate = 0.80 },
-    { Resource = 0.80 },
-    { SmallCapitalShip = 0.80 },
-    { BigCapitalShip = 0.80 },
-    { ResourceLarge = 0.60 });
+setAccuracy(NewWeaponType, 1);

@@ -58,7 +58,7 @@ effects =
 			},
 			{
 				"sound",
-				"SPECIAL/SPECIAL_ABILITIES_MISSLE_STEAM",
+				"",
 			},
 			{
 				"fx_scale",
