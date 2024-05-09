@@ -28,12 +28,12 @@
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=ter_herculesmk2
+-Spawn_Ship_4=ter_erinyes
 -Spawn_Pos_4=-50,50,0
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
--Spawn_Ship_5=ter_herculesmk2
+-Spawn_Ship_5=ter_valkyrie
 -Spawn_Pos_5=-50,-50,0
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
