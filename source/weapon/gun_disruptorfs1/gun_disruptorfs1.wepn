@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_disruptor", "Normal", 1900, 1280, 0, 0, 0, 0, 1, 1, 0,
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_disruptorfs1", "Normal", 1900, 1280, 0, 0, 0, 0, 1, 1, 0,
     0.6, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 15, 15, "")

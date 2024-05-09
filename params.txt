@@ -14,12 +14,12 @@
 -Spawn_Team_0=1
 
 -Spawn_Ship_1=shi_azrael
--Spawn_Pos_1=50,50,0
+-Spawn_Pos_1=200,50,0
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
 
 -Spawn_Ship_2=shi_azrael
--Spawn_Pos_2=50,-50,0
+-Spawn_Pos_2=200,-50,0
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=1
 
@@ -29,16 +29,16 @@
 -Spawn_Team_3=0
 
 -Spawn_Ship_4=ter_athena
--Spawn_Pos_4=-50,50,0
+-Spawn_Pos_4=-200,50,0
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
 -Spawn_Ship_5=ter_valkyrie
--Spawn_Pos_5=-50,-50,0
+-Spawn_Pos_5=-200,-50,0
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
 
 -Spawn_Ship_6=shi_azrael
--Spawn_Pos_6=100,0,0
+-Spawn_Pos_6=200,0,0
 -Spawn_Rot_6=0,-90,0
 -Spawn_Team_6=1

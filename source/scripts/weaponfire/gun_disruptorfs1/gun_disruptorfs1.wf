@@ -1,0 +1,18 @@
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:23:53 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "ankheton_hit"
+bulletfx = "ankheton"
+nopenetratefx = "ankheton_hit"
+deathtype = "deathBeam"
+firefx = "mekhu_squirt_small"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+fire_sfx = "WEAPON/disruptorfs1"
+bullet_nlips = 0.0002
+hit_nlips = 0.0002
+hit_sfx = "WEAPON/IMPACT"
+nopenetrate = "WEAPON/IMPACT"
+hit_clamp = 
+    { 1, 1, }
