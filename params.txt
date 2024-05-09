@@ -13,12 +13,12 @@
 -Spawn_Rot_0=0,-90,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=shi_dragon
+-Spawn_Ship_1=shi_azrael
 -Spawn_Pos_1=50,50,0
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
 
--Spawn_Ship_2=shi_dragon
+-Spawn_Ship_2=shi_azrael
 -Spawn_Pos_2=50,-50,0
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=1
@@ -28,7 +28,7 @@
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=ter_erinyes
+-Spawn_Ship_4=ter_athena
 -Spawn_Pos_4=-50,50,0
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0

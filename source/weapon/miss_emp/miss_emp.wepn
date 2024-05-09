@@ -8,8 +8,6 @@ AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "hgn_s
 
 setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 
-setMiscValues(NewWeaponType, 0, 0)
-
 setPenetration(NewWeaponType, 30, 1,
     { Unarmoured = 1, },
     { lightarmour = 1, },
@@ -19,24 +17,24 @@ setPenetration(NewWeaponType, 30, 1,
     { TurretArmour = 1, },
     { resarmour = 1, },
     { MoverArmour = 1, },
-    { PlanetKillerArmour = 0, },
+    { PlanetKillerArmour = 1, },
     { MineArmour = 1, },
     { ChunkArmour = 1, })
 
 setAccuracy(NewWeaponType, 1,
     { Fighter = 0, },
-    { Corvette = 1, },
+    { Corvette = 0, },
     { Fighter_hw1 = 0, },
-    { Corvette_hw1 = 1, },
+    { Corvette_hw1 = 0, },
     { Frigate = 1, },
     { Utility = 1, },
-    { munition = 1, },
+    { munition = 0, },
     { SmallCapitalShip = 1, },
     { BigCapitalShip = 1, },
     { Mothership = 1, },
     { Emplacement = 1, },
     { UnAttackable = 0, },
-    { SubSystem = 0, },
+    { SubSystem = 1, },
     { Resource = 1, },
     { ResourceLarge = 1, },
     { Capturer = 1, },
