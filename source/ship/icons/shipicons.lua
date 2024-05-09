@@ -2562,6 +2562,19 @@ Shi_Aeshma =
 	}, 
 }
 
+Shi_gorgon = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\shi_gorgon.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 700, 350, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
+
 Ter_Hades =
 {
 	LargeIcon =
