@@ -13,7 +13,7 @@
 -Spawn_Rot_0=0,-90,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=shi_lilith
+-Spawn_Ship_1=shi_cain
 -Spawn_Pos_1=2000,50,0
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
@@ -33,7 +33,7 @@
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
--Spawn_Ship_5=ter_ursa
+-Spawn_Ship_5=ter_zeus
 -Spawn_Pos_5=-2000,-100,0
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0

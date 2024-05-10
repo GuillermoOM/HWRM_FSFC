@@ -1,10 +1,10 @@
 = -$S_DIR=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\uncompressed_bigs\freespace_remastered
 = -$T_DIR=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\current_project_processing
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
-= -$IN_CAT=missile
-= -$OUT_CAT=missile
-= -$HOD=vas_tsunami
-= -$NEWHOD=miss_tsunami
+= -$IN_CAT=ship
+= -$OUT_CAT=ship_working_on
+= -$HOD=ter_zeus
+= -$NEWHOD=ter_zeus
 = -setmask=*.hod
 = -dump
 = -log
