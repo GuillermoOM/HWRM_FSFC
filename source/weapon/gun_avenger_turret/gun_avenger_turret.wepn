@@ -1,0 +1,23 @@
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_avenger", "Normal", 2100, 2000, 0, 0, 0, 0, 1, 1, 0,
+    1, 0, 0, 0, 0, 1, 1, 1, "Normal", 1, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 16, 16, "")
+
+setAngles(NewWeaponType, 0, -180, 180, -5, 89)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 1.25, },
+    { LightArmour = 0.8, },
+    { MediumArmour = 0.4, },
+    { HeavyArmour = 0.4, },
+    { SubSystemArmour = 0.35, },
+    { TurretArmour = 0.35, },
+    { ResArmour = 1, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 0.85, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
+setAccuracy(NewWeaponType, 1);
