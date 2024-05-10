@@ -1,11 +1,11 @@
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_pihrana", "Normal", 300, 3000, 0, 0, 0, 0, 1, 1, 0,
-  10, 0, 0, 1, 0, 200, 200, 1, "Normal", 1, 0, 0)
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_pihrana", "Normal", 300, 4000, 0, 0, 0, 0, 1, 1, 0,
+  10, 0, 0, 1, 1, 200, 200, 1, "Normal", 0, 0, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20, 30, "")
-AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
-AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
 
-setAngles(NewWeaponType, 30, 0, 0, 0, 0)
+setAngles(NewWeaponType, 180, 0, 0, 0, 0)
+
+setMiscValues(NewWeaponType,0,0)
 
 setPenetration(NewWeaponType, 5, 1,
   { unarmoured = 1 },
