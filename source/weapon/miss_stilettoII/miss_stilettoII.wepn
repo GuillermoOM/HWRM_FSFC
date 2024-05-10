@@ -1,7 +1,7 @@
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Stiletto", "Normal", 240, 4500, 20, 0, 0, 0, 1, 0,
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Stilettoii", "Normal", 240, 11000, 20, 0, 0, 0, 1, 0,
     1, 20, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 0, 1, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 775, 775, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 1000, 1000, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_stilettoblast")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_stilettoblast")
 

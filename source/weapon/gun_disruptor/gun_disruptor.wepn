@@ -2,6 +2,7 @@ StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_disruptor", "Normal", 
     0.35, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 30, 30, "")
+AddWeaponResult(NewWeaponType, "Hit", "Disable", "Target", 15, 35, "")
 
 setAngles(NewWeaponType, 10, 0, 0, 0, 0)
 
