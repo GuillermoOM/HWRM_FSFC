@@ -1,28 +1,15 @@
 StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Missile", "miss_pihrana", "Normal", 270, 3000, 0, 0, 0, 0, 1, 1, 0,
-  10, 0, 0,
-  1,
-  1, 100, 100, 0.1, "Normal", 0, 0, 0)
+  10, 0, 0, 1, 1, 100, 100, 0.1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
 
 setPenetration(NewWeaponType, 5, 1,
-  {
-    unarmoured = 1,
-  },
-  {
-    lightarmour = 1,
-  },
-  {
-    mediumarmour = 1,
-  },
-  {
-    heavyarmour = 0.75,
-  },
-  {
-    MoverArmour = 1,
-  },
-  {
-    PlanetKillerArmour = 1, })
+  { unarmoured = 1 },
+  { lightarmour = 1 },
+  { mediumarmour = 1 },
+  { heavyarmour = 0.75 },
+  { MoverArmour = 1 },
+  { PlanetKillerArmour = 1 })
 
 setAccuracy(NewWeaponType, 1,
   { Fighter = 1, },

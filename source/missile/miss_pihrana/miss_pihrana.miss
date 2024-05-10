@@ -18,7 +18,7 @@ NewMissileType.sobDescription = "Cluster Missles Bomb"
 --- Cluster Missile OPTIONAL, ONLY ON PIRAHNA AND SYNAPTIC
 --------------------------------------------------	
 
-NewMissileType.clusterDistance = 1800
+NewMissileType.clusterDistance = 4000
 NewMissileType.numberSubMunitions = 10
 NewMissileType.subMunitionName = "Miss_Cluster_Baby"
 NewMissileType.clusterAngle = 270
@@ -39,7 +39,7 @@ NewMissileType.ArmourFamily = "TorpedoArmor"
 --- Health and Armour	
 --------------------------------------------------	
 
-NewMissileType.lifeTime = 5
+NewMissileType.lifeTime = 3.1
 
 NewMissileType.maxhealth = 5
 NewMissileType.regentime = 0
@@ -107,16 +107,16 @@ setTacticsMults(NewMissileType, "WEAPONDAMAGE", 1.0, 1.0, 1.0)
 --- Launching	  DO NOT MODIFY
 --------------------------------------------------
 
-NewMissileType.launchTime = 0.1
+NewMissileType.launchTime = 3
 
 --------------------------------------------------
 --- Damage & Death	  DO NOT MODIFY
 --------------------------------------------------
 
-NewMissileType.noCollisionTime = 1
+NewMissileType.noCollisionTime = 0
 
 NewMissileType.slowdownFactor = 1.0
-NewMissileType.proximityDetonationDist = 10
+NewMissileType.proximityDetonationDist = 4000
 NewMissileType.sobDieTime = 0.5
 
 --------------------------------------------------
@@ -211,7 +211,7 @@ LoadModel(NewMissileType, 1)
 --- Engines
 --------------------------------------------------
 
-setEngineTrail(NewMissileType,0,3,"missiletrail04.tga",0.2,0.5,0.025,8);
+setEngineTrail(NewMissileType,0,0,"missiletrail04.tga",0.2,0.5,0.025,8);
 setEngineBurn(NewMissileType,10,0.5,1,10,0,0.7,0.1,15);
 
 --------------------------------------------------

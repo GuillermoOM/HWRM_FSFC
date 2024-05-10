@@ -30,7 +30,7 @@ NewMissileType.ArmourFamily = "TorpedoArmor"
 --- Health and Armour	
 --------------------------------------------------	
 
-NewMissileType.lifeTime = 7
+NewMissileType.lifeTime = 10
 
 NewMissileType.maxhealth = 5
 NewMissileType.regentime = 0
