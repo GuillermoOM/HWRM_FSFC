@@ -12,7 +12,7 @@ NewMissileType = StartMissileConfig()
 --------------------------------------------------
 
 NewMissileType.displayedName = "GTM-N1 Harbinger Bomb"
-NewMissileType.sobDescription = "Anti-Capital Bomb"
+NewMissileType.sobDescription = "Anti-Capital Torpedo"
 
 --------------------------------------------------
 --- Families
@@ -24,7 +24,7 @@ NewMissileType.DockFamily = "CantDock"
 NewMissileType.AvoidanceFamily = "DontAvoid"
 NewMissileType.DisplayFamily = "Munition"
 NewMissileType.AutoFormationFamily = "Fighter"
-NewMissileType.ArmourFamily = "TorpedoArmor"
+NewMissileType.ArmourFamily = "Unarmoured"
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -133,14 +133,14 @@ NewMissileType.selectionPriority = 30
 --------------------------------------------------	
 
 NewMissileType.TOIcon = "InvertedY"
-NewMissileType.TOScale = 0.1
+NewMissileType.TOScale = 0.05
 NewMissileType.TODistanceFade0 = 7000
 NewMissileType.TODistanceDisappear0 = 5000
 NewMissileType.TODistanceFade1 = 350
 NewMissileType.TODistanceDisappear1 = 300
 NewMissileType.TODistanceFade2 = 25000
 NewMissileType.TODistanceDisappear2 = 12000
-NewMissileType.TOGroupScale = 0.1
+NewMissileType.TOGroupScale = 0.05
 NewMissileType.TOGroupMergeSize = 0
 
 --------------------------------------------------	

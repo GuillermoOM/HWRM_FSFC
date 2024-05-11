@@ -31,7 +31,6 @@ setAccuracy(NewWeaponType, 1,
     { UnAttackable = 0, },
     { SubSystem = 0, },
     { Resource = 0, },
-    { Missile = 1, },
     { ResourceLarge = 1, },
     { Capturer = 1, },
     { Chimera = 1, })
