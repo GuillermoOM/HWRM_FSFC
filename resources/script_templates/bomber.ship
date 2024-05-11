@@ -10,8 +10,8 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "GTB Zeus"
-NewShipType.sobDescription = "Strike Bomber"
+NewShipType.displayedName = "GTB Artemis"
+NewShipType.sobDescription = "Assault Bomber"
 
 --------------------------------------------------	
 --- Main Ship Data	  DO NOT MODIFY
@@ -45,8 +45,8 @@ setSupplyValue(NewShipType, "LayoutCorvette", 4.0)
 --------------------------------------------------	
 
 NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 4)
-NewShipType.buildCost = 450
-NewShipType.buildTime = 31
+NewShipType.buildCost = 600
+NewShipType.buildTime = 37
 NewShipType.buildPriorityOrder = 20
 
 setConcurrentBuildLimit(NewShipType, 0, 2)
@@ -55,7 +55,7 @@ setConcurrentBuildLimit(NewShipType, 0, 2)
 --- Health and Armour	
 --------------------------------------------------	
 
-NewShipType.maxhealth = 200
+NewShipType.maxhealth = 275
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -82,19 +82,19 @@ NewShipType.detectionStrength = 1
 --- Movement	
 --------------------------------------------------	
 
-NewShipType.mass = 900
+NewShipType.mass = 450
 
 NewShipType.thrusterMaxSpeed = 260
-NewShipType.thrusterAccelTime = 1
-NewShipType.thrusterBrakeTime = 0.5
+NewShipType.thrusterAccelTime = 4
+NewShipType.thrusterBrakeTime = 2
 
 NewShipType.mainEngineMaxSpeed = 260
-NewShipType.mainEngineAccelTime = 1
-NewShipType.mainEngineBrakeTime = 0.5
+NewShipType.mainEngineAccelTime = 4
+NewShipType.mainEngineBrakeTime = 2
 
-NewShipType.rotationMaxSpeed = 85
-NewShipType.rotationAccelTime = 0.9
-NewShipType.rotationBrakeTime = 0.45
+NewShipType.rotationMaxSpeed = 76
+NewShipType.rotationAccelTime = 0.6
+NewShipType.rotationBrakeTime = 0.3
 
 --------------------------------------------------	
 --- Advanced Movement	
@@ -123,10 +123,8 @@ setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98
 --- Special Flight Maneuvers	
 --------------------------------------------------	
 
-NewShipType.mirrorAboveManeuver =
-"ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
-NewShipType.mirrorBelowManeuver =
-"Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
+NewShipType.mirrorAboveManeuver = "ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
+NewShipType.mirrorBelowManeuver = "Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
 NewShipType.specialTurnLeftManeuver = "NinetyDegLeftTurn, None, None"
 NewShipType.specialTurnRightManeuver = "NinetyDegRightTurn, None, None"
 
@@ -207,13 +205,13 @@ NewShipType.dontDockWithOtherRaceShips = 1
 --------------------------------------------------
 
 NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 6
+NewShipType.corvetteValue = 8
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 0
+NewShipType.antiFighterValue = 1
 NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 6
-NewShipType.totalValue = 6
+NewShipType.antiFrigateValue = 8
+NewShipType.totalValue = 8
 
 --------------------------------------------------
 --- Damage & Death  DO NOT MODIFY
@@ -362,12 +360,11 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 -- Ship Weapons
-StartShipWeaponConfig(NewShipType, "Gun_Subach", "Weapon_FrontGun", "")
-StartShipWeaponConfig(NewShipType, "Gun_Disruptor", "Weapon_FrontGun2", "")
+StartShipWeaponConfig(NewShipType, "gun_subach", "Weapon_FrontGun", "")
 
 -- Ship Missiles
-StartShipWeaponConfig(NewShipType, "Miss_Cyclops", "Weapon_Bomb1", "")
-StartShipWeaponConfig(NewShipType, "Miss_Stiletto", "Weapon_Bomb2", "")
+StartShipWeaponConfig(NewShipType, "miss_cyclops", "Weapon_Bomb1", "")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Bomb2", "")
 
 --------------------------------------------------
 --- HardPoints
@@ -384,7 +381,7 @@ loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "terranbomb
 --- Engine Burn
 --------------------------------------------------
 
-setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 30)
+setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 32)
 
 --------------------------------------------------
 --- Custom fields  DO NOT MODIFY
