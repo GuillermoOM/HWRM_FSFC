@@ -1,5 +1,5 @@
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 240, 3220, 0, 0, 0, 0, 1, 0, 1, 0.2, 0.8,
- 6, 0, 0, 0, 0, 1, "Normal", 0, 1, 0)
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 240, 3220, 0, 0, 0, 0, 1, 0, 1, 0.02, 0.101,
+ 5, 0, 0, 0, 0, 1, "Normal", 0, 1, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 100, "")
 

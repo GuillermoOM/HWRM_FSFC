@@ -364,8 +364,8 @@ StartShipWeaponConfig(NewShipType, "gun_kayser", "Weapon_FrontGun", "")
 StartShipWeaponConfig(NewShipType, "gun_circe", "Weapon_FrontGun2", "")
 
 -- Ship Missiles
--- StartShipWeaponConfig(NewShipType, "miss_tornado", "Weapon_Missile", "")
--- StartShipWeaponConfig(NewShipType, "miss_harpoon", "Weapon_Missile2", "")
+StartShipWeaponConfig(NewShipType, "miss_tornado", "Weapon_Missile", "")
+StartShipWeaponConfig(NewShipType, "miss_harpoon", "Weapon_Missile2", "")
 
 --------------------------------------------------
 --- HardPoints
