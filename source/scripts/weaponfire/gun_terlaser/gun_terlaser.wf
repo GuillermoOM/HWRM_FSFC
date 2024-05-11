@@ -4,12 +4,12 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 hitfx = "plasma_hit_spray"
-bulletfx = "bullet_plasma_bomb_hd01"
+bulletfx = "ter_pulse"
 nopenetratefx = "plasma_hit_spray"
 deathtype = "deathPlasma"
 scartype = "Plasma_Bomb/Plasma_Bomb"
 firefx = "kayser_fire"
-fire_sfx = "WEAPON/terturret"
+fire_sfx = "WEAPON/terlaser"
 hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
 nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
 hit_clamp =

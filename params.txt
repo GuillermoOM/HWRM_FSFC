@@ -33,7 +33,7 @@
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
--Spawn_Ship_5=ter_valkyrie
+-Spawn_Ship_5=ter_fenris
 -Spawn_Pos_5=-2000,-100,0
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0

@@ -336,10 +336,10 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 -- Ship Weapons
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_01", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_01", "")
 StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_02", "")
 StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_03", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_04", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_04", "")
 StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_05", "")
 
 -- Ship Missiles

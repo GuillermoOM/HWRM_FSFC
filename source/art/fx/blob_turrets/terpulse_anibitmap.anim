@@ -1,0 +1,5 @@
+fps = 2
+startFrame = 1
+loopCount = 1
+texture = 
+        { "data:/ART/FX/blob_turrets/ter_pulse.tga" }

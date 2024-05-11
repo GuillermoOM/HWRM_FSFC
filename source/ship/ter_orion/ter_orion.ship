@@ -390,8 +390,8 @@ StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_AAAf1", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_AAAf2", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_AAAf3", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_AAAf4", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Laser1", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Laser3", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Laser1", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Laser3", "")
 
 --------------------------------------------------
 --- HardPoints
