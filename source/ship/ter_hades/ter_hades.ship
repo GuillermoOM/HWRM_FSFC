@@ -389,10 +389,10 @@ StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret13", "")
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret14", "")
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret15", "")
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret16", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Turret19", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Turret20", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Turret21", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Turret22", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Turret19", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Turret20", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Turret21", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Turret22", "")
 
 --------------------------------------------------
 --- HardPoints

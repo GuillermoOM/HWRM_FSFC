@@ -346,9 +346,9 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Gun1", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Gun3", "")
-StartShipWeaponConfig(NewShipType, "gun_terturretlasergimble", "Weapon_Gun4", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Gun1", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Gun3", "")
+StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Gun4", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_Gun5", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_Gun6", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_Gun7", "")
