@@ -1,5 +1,5 @@
 = -$$ROOT=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\WorkshopTool\current_project_processing
-= -$$IN_SCAN=$[ROOT]\ter_ships
+= -$$IN_SCAN=$[ROOT]\debris_meshes
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
 = -echo=-- Scan Path: $[IN_SCAN]$[CR]
 = -setmask=*.dae
