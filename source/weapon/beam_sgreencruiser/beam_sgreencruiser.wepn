@@ -16,8 +16,6 @@ setPenetration(NewWeaponType, 50, 1,
     { MoverArmour = 1, },
     { PlanetKillerArmour = 0, },
     { MineArmour = 1, },
-    { MissileArmour = 1, },
-    { DroneArmour = 1, },
     { ChunkArmour = 1, })
 
 setAccuracy(NewWeaponType, 1,
@@ -33,7 +31,6 @@ setAccuracy(NewWeaponType, 1,
     { UnAttackable = 0, },
     { SubSystem = 0, },
     { Resource = 0, },
-    { Missile = 0, },
     { ResourceLarge = 0.5, },
     { Capturer = 0.5, },
     { Chimera = 1, })

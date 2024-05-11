@@ -336,8 +336,8 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Bottom", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Top", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Bottom", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Top", "")
 
 --------------------------------------------------
 --- HardPoints
