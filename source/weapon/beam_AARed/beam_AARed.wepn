@@ -1,9 +1,9 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "beam_AARed", "Normal", 0, 3000, 0, 1, 0, 0, 30, 0, 1, 1, 3,
-    5.5, 1, 1, 180, 180, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "beam_AABlue", "Normal", 0, 3000, 0, 0.5, 0, 0, 30, 0, 1, 1, 0.6,
+    5, 1, 1, 1, 1, 0.01, "Normal", 0, 0, 100)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 77, 77, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 55, 55, "")
 
-setAngles(NewWeaponType, 80, -80, 80, -80, 80)
+setAngles(NewWeaponType,90,0,0,0,0)
 
 setMiscValues(NewWeaponType, 0, 0)
 

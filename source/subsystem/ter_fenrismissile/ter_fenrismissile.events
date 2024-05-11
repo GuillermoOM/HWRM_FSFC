@@ -35,7 +35,7 @@ effects =
                 { "animtime", "0", }, 
                 { "marker", "Weapon_IonCan1_Muzzle", }, 
                 { "fx", "torpedo_steam_spray", }, 
-                { "sound", "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH", }, 
+                { "sound", "WEAPON/harpoonlaunch", }, 
                 { "fx_scale", "1", }, 
             }, 
         -- event2 = 

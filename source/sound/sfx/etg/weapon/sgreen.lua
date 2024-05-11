@@ -8,7 +8,7 @@ loopCount = 1
 envelope = {
   {
     distance = 0.000000,
-    volume = 0.370000,
+    volume = 0.20000,
     reverb = 0.000000,
     duration = 0,
     equalizer = {
@@ -24,7 +24,7 @@ envelope = {
   },
   {
     distance = 583.333313,
-    volume = 0.305000,
+    volume = 0.1000,
     reverb = 0.000000,
     duration = 0,
     equalizer = {
@@ -40,7 +40,7 @@ envelope = {
   },
   {
     distance = 1350.000000,
-    volume = 0.220000,
+    volume = 0.050000,
     reverb = 0.000000,
     duration = 0,
     equalizer = {
@@ -56,7 +56,7 @@ envelope = {
   },
   {
     distance = 2866.666748,
-    volume = 0.180000,
+    volume = 0.010000,
     reverb = 0.000000,
     duration = 0,
     equalizer = {

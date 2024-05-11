@@ -114,11 +114,6 @@ NewShipType.slideMoveRange = 100
 NewShipType.relativeMoveFactor = 3
 
 --------------------------------------------------	
---- Swaying  DO NOT MODIFY
---------------------------------------------------	
-
-
---------------------------------------------------	
 --- Tactics And Multipliers
 --------------------------------------------------	
 
@@ -332,11 +327,11 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
     "frontal",
-    { Fighter = "MoveToTargetAndShoot" },
-    { Fighter_hw1 = "MoveToTargetAndShoot" },
-    { Corvette = "MoveToTargetAndShoot" },
-    { Corvette_hw1 = "MoveToTargetAndShoot" },
-    { Munition = "MoveToTargetAndShoot" });
+    { Fighter = "BroadSide" },
+    { Fighter_hw1 = "BroadSide" },
+    { Corvette = "BroadSide" },
+    { Corvette_hw1 = "BroadSide" },
+    { Munition = "BroadSide" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)
 addAbility(NewShipType, "RetireAbility", 1, 0)
