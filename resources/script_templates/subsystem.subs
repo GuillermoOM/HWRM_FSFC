@@ -11,36 +11,36 @@ NewSubSystemType = StartSubSystemConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewSubSystemType.displayedName = "Standard ECM Suite"
-NewSubSystemType.sobDescription = "Level 1 AWACS"
+NewSubSystemType.displayedName = "GTM-12 Pihrana"
+NewSubSystemType.sobDescription = "Anti-Fighter Missile"
 
-NewSubSystemType.type="System"
-NewSubSystemType.typeString="CloakGenerator"
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "Miss_PihranaTurret"
 
 --------------------------------------------------
 --- Families
 --------------------------------------------------
 
-NewSubSystemType.BuildFamily="SubSystem_Hgn"
-NewSubSystemType.AttackFamily="SubSystem"
-NewSubSystemType.DockFamily="CantDock"
-NewSubSystemType.DisplayFamily="SubSystemModule"
-NewSubSystemType.ArmourFamily="SubSystemArmour"
+NewSubSystemType.BuildFamily = "SubSystem_Ter"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "TurretArmour"
 
 --------------------------------------------------	
 --- Health and Armour	
 --------------------------------------------------	
 
-NewSubSystemType.maxhealth = 9000
-NewSubSystemType.regentime = 200
-NewSubSystemType.activateHealthPercentage=0.1
+NewSubSystemType.maxhealth = 2500
+NewSubSystemType.regentime = 400
+NewSubSystemType.activateHealthPercentage=0.5
 
 --------------------------------------------------	
 --- Build
 --------------------------------------------------	
 
-NewSubSystemType.costToBuild=750
-NewSubSystemType.timeToBuild=60
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
 NewSubSystemType.isResearch=0
 
 --------------------------------------------------
