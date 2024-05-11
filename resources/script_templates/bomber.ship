@@ -10,7 +10,7 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "GTB Artemis"
+NewShipType.displayedName = "GTB Artemis D.H."
 NewShipType.sobDescription = "Assault Bomber"
 
 --------------------------------------------------	
@@ -45,8 +45,8 @@ setSupplyValue(NewShipType, "LayoutCorvette", 4.0)
 --------------------------------------------------	
 
 NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 4)
-NewShipType.buildCost = 600
-NewShipType.buildTime = 37
+NewShipType.buildCost = 810
+NewShipType.buildTime = 42
 NewShipType.buildPriorityOrder = 20
 
 setConcurrentBuildLimit(NewShipType, 0, 2)
@@ -84,15 +84,15 @@ NewShipType.detectionStrength = 1
 
 NewShipType.mass = 450
 
-NewShipType.thrusterMaxSpeed = 260
+NewShipType.thrusterMaxSpeed = 300
 NewShipType.thrusterAccelTime = 4
 NewShipType.thrusterBrakeTime = 2
 
-NewShipType.mainEngineMaxSpeed = 260
+NewShipType.mainEngineMaxSpeed = 300
 NewShipType.mainEngineAccelTime = 4
 NewShipType.mainEngineBrakeTime = 2
 
-NewShipType.rotationMaxSpeed = 76
+NewShipType.rotationMaxSpeed = 100
 NewShipType.rotationAccelTime = 0.6
 NewShipType.rotationBrakeTime = 0.3
 
@@ -123,8 +123,10 @@ setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98
 --- Special Flight Maneuvers	
 --------------------------------------------------	
 
-NewShipType.mirrorAboveManeuver = "ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
-NewShipType.mirrorBelowManeuver = "Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
+NewShipType.mirrorAboveManeuver =
+"ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
+NewShipType.mirrorBelowManeuver =
+"Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
 NewShipType.specialTurnLeftManeuver = "NinetyDegLeftTurn, None, None"
 NewShipType.specialTurnRightManeuver = "NinetyDegRightTurn, None, None"
 
@@ -360,7 +362,7 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 -- Ship Weapons
-StartShipWeaponConfig(NewShipType, "gun_subach", "Weapon_FrontGun", "")
+StartShipWeaponConfig(NewShipType, "gun_kayser", "Weapon_FrontGun", "")
 
 -- Ship Missiles
 StartShipWeaponConfig(NewShipType, "miss_cyclops", "Weapon_Bomb1", "")

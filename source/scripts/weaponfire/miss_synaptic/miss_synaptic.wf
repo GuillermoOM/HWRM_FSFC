@@ -7,6 +7,6 @@ scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
 fire_sfx = "WEAPON/clusterlaunch"
 firefx = "TORPEDO_STEAM_SPRAY"
 hit_sfx = "WEAPON/clusterboom"
-nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+nopenetrate_sfx = "WEAPON/clusterboom"
 hit_clamp = 
     { 1, 1, }
