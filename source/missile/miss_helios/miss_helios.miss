@@ -12,7 +12,7 @@ NewMissileType = StartMissileConfig()
 --------------------------------------------------
 
 NewMissileType.displayedName = "GTM-13 Helios"
-NewMissileType.sobDescription = "Anti-Capital Bomb"
+NewMissileType.sobDescription = "Anti-Capital Torpedo"
 
 --------------------------------------------------
 --- Families
@@ -24,7 +24,7 @@ NewMissileType.DockFamily = "CantDock"
 NewMissileType.AvoidanceFamily = "DontAvoid"
 NewMissileType.DisplayFamily = "Munition"
 NewMissileType.AutoFormationFamily = "Fighter"
-NewMissileType.ArmourFamily = "TorpedoArmor"
+NewMissileType.ArmourFamily = "Unarmoured"
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -133,14 +133,14 @@ NewMissileType.selectionPriority = 30
 --------------------------------------------------	
 
 NewMissileType.TOIcon = "InvertedY"
-NewMissileType.TOScale = 0.1
+NewMissileType.TOScale = 0.05
 NewMissileType.TODistanceFade0 = 7000
 NewMissileType.TODistanceDisappear0 = 5000
 NewMissileType.TODistanceFade1 = 350
 NewMissileType.TODistanceDisappear1 = 300
 NewMissileType.TODistanceFade2 = 25000
 NewMissileType.TODistanceDisappear2 = 12000
-NewMissileType.TOGroupScale = 0.1
+NewMissileType.TOGroupScale = 0.05
 NewMissileType.TOGroupMergeSize = 0
 
 --------------------------------------------------	
@@ -174,11 +174,11 @@ NewMissileType.nlipsFarRange = 12000
 --- Level of Detail
 --------------------------------------------------
 
-NewMissileType.minLOD=0.2
-NewMissileType.upLOD=500
-NewMissileType.upLOD=1000
-NewMissileType.downLOD=505
-NewMissileType.downLOD=1005
+NewMissileType.minLOD = 0.2
+NewMissileType.upLOD = 500
+NewMissileType.upLOD = 1000
+NewMissileType.downLOD = 505
+NewMissileType.downLOD = 1005
 
 --------------------------------------------------
 --- Weapons
@@ -203,8 +203,8 @@ LoadModel(NewMissileType, 1)
 --- Engines
 --------------------------------------------------
 
-setEngineTrail(NewMissileType,0,15,"missiletrail02.tga",0.2,0.5,0.025,8);
-setEngineBurn(NewMissileType,15,0.5,1,15,0,0.7,0.1,25);
+setEngineTrail(NewMissileType, 0, 15, "missiletrail02.tga", 0.2, 0.5, 0.025, 8);
+setEngineBurn(NewMissileType, 15, 0.5, 1, 15, 0, 0.7, 0.1, 25);
 
 --------------------------------------------------
 --- Custom fields

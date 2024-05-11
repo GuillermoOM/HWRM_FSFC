@@ -388,5 +388,5 @@ loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "TerranCrui
 --------------------------------------------------
 
 NewShipType.trailLinger = 4
-setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 100)
--- setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, { 0.27, 0.47, .69, 0.25 })
+setEngineBurn(NewShipType, 7, 0.5, 1, 20, 0, 0.7, 0.1, 150)
+setEngineGlow(NewShipType, 0, 1, 1.02, 20, 10, 50, 10, { 0.6, 0.6, 1, 0.8 })
