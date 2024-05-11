@@ -1,0 +1,18 @@
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_synaptic", "Normal", 270, 4000, 0, 0, 0, 0, 1, 1, 0, 20, 0,
+    0, 1, 1, 100, 100, 0.1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 60, 90, "")
+
+setAngles(NewWeaponType, 180, 0, 0, 0, 0)
+
+setMiscValues(NewWeaponType,0,0)
+
+setPenetration(NewWeaponType, 5, 1,
+  { unarmoured = 1 },
+  { lightarmour = 1 },
+  { mediumarmour = 1 },
+  { heavyarmour = 0.75 },
+  { MoverArmour = 1 },
+  { PlanetKillerArmour = 1 })
+
+setAccuracy(NewWeaponType, 1)

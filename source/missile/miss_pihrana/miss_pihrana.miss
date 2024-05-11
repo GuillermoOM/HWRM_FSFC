@@ -11,8 +11,8 @@ NewMissileType = StartMissileConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewMissileType.displayedName = "Piranha Cluster Bomb"
-NewMissileType.sobDescription = "Cluster Missles Bomb"
+NewMissileType.displayedName = "Piranha Cluster Missile"
+NewMissileType.sobDescription = "Cluster Missles"
 
 --------------------------------------------------	
 --- Cluster Missile OPTIONAL, ONLY ON PIRAHNA AND SYNAPTIC
