@@ -340,7 +340,7 @@ StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_01", "")
 StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_02", "")
 StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_03", "")
 StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_04", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_05", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_05", "")
 
 -- Ship Missiles
 

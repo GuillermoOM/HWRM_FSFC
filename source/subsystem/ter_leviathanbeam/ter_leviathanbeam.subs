@@ -12,7 +12,7 @@ NewSubSystemType = StartSubSystemConfig()
 --------------------------------------------------
 
 NewSubSystemType.displayedName = "Emerald Flame - Light Beam Cannon"
-NewSubSystemType.sobDescription = "DPS: 64"
+NewSubSystemType.sobDescription = "Range: 8000m \nDamage per Shot: 10000 \nDPS: 222 (Sustained) \nCycle Time: 45s"
 
 NewSubSystemType.type = "Weapon"
 NewSubSystemType.typeString = "beam_sgreen"

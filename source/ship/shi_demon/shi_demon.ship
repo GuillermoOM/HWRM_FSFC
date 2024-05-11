@@ -385,13 +385,13 @@ StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Turret05", "")
 StartShipWeaponConfig(NewShipType, "gun_shivmegafunkturret", "Weapon_Turret06", "")
 StartShipWeaponConfig(NewShipType, "gun_shivmegafunkturret", "Weapon_Turret07", "")
 
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Turret08", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Turret09", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret08", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret09", "")
 
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret10", "")
 
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Turret11", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_Turret12", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret11", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret12", "")
 
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret13", "")
 StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret14", "")

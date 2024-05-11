@@ -1,21 +1,18 @@
 StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "Exp_ArtilleryBurst", "Normal", 0, 0, 60, 2, 0, 0, 10, 0, 0, 0,
-    0,
-    0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
+    0, 0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 8, 12, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 5, 10, "")
 
-setPenetration(NewWeaponType, 5, 1,
-    { unarmoured = 0.09 * 3.095 },
-    { Unarmoured_hw1 = 0.458 },
-    { lightarmour = 0.16 },
-    { lightarmour_hw1 = 0.38 },
-    { mediumarmour = 2.5 },
-    { heavyarmour = 2.5 },
-    { PlanetKillerArmour = 0 },
-    { SwarmerArmor = 0.10 },
+setPenetration(NewWeaponType, 30, 0,
+    { Unarmoured = 1.0, },
+    { lightarmour = 1.0, },
+    { MediumArmour = 0.5, },
+    { HeavyArmour = .1, },
+    { SubSystemArmour = 0.1, },
+    { TurretArmour = 0.5, },
+    { resarmour = 1, },
+    { MoverArmour = 0, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 0, },
     { TorpedoArmor = 0 },
-    { HeavyMissileArmor = 0 },
-    { SmallMissileArmor = 0 },
-    { SpaceMineArmor = 1 });
-
-setAccuracy(NewWeaponType, 1)
+    { ChunkArmour = 1, })

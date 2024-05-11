@@ -12,7 +12,7 @@ NewSubSystemType = StartSubSystemConfig()
 --------------------------------------------------
 
 NewSubSystemType.displayedName = "Guardian Spear - Light Slashing Beam Cannon"
-NewSubSystemType.sobDescription = "DPS: 220"
+NewSubSystemType.sobDescription = "Range: 6000m \nDamage per Shot: 3850 \nDPS: 385 (Sustained) \nCycle Time: 10s"
 
 NewSubSystemType.type = "Weapon"
 NewSubSystemType.typeString = "beam_sgreencruiser"
