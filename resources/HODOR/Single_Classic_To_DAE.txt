@@ -3,8 +3,8 @@
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
 = -$IN_CAT=ship
 = -$OUT_CAT=ship_working_on
-= -$HOD=ter_fenris
-= -$NEWHOD=ter_fenris
+= -$HOD=ter_leviathan
+= -$NEWHOD=ter_leviathan
 = -setmask=*.hod
 = -dump
 = -log

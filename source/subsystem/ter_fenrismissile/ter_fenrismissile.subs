@@ -33,14 +33,7 @@ NewSubSystemType.ArmourFamily = "TurretArmour"
 
 NewSubSystemType.maxhealth = 1350
 NewSubSystemType.regentime = 400
-NewSubSystemType.activateHealthPercentage=0.5
-
---------------------------------------------------	
---- Damage
---------------------------------------------------	
-
-NewSubSystemType.collateralDamage = 100
-NewSubSystemType.inactiveTimeAfterDamage = 60
+NewSubSystemType.activateHealthPercentage = 0.5
 
 --------------------------------------------------	
 --- Build
@@ -49,6 +42,18 @@ NewSubSystemType.inactiveTimeAfterDamage = 60
 NewSubSystemType.costToBuild = 500
 NewSubSystemType.timeToBuild = 35
 NewSubSystemType.isResearch = 0
+
+--------------------------------------------------
+--- Damage & Death
+--------------------------------------------------
+
+NewSubSystemType.battleScarMaxTriBase = 40
+NewSubSystemType.battleScarMaxTriInc = 20
+
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 10
+
+NewSubSystemType.sobDieTime = 1
 
 --------------------------------------------------	
 --- Selection	
@@ -71,19 +76,19 @@ NewSubSystemType.tacticalIconMaxFadeSize = 0.008
 --- Overlays	
 --------------------------------------------------	
 
-NewSubSystemType.mouseOverMinFadeSize=0.045
-NewSubSystemType.mouseOverMaxFadeSize=0.1
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
 
 --------------------------------------------------	
 --- Rendering	
 --------------------------------------------------	
 
-NewSubSystemType.visible=1
+NewSubSystemType.visible = 1
 
 NewSubSystemType.groupMergeSize = 0.001
 
-NewSubSystemType.meshRenderLimit=0.004
-NewSubSystemType.minimumZoomFactor=0.68
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.68
 
 --------------------------------------------------
 --- Non linear Scaling
