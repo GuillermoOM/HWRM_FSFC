@@ -5,7 +5,7 @@ AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 150, 300, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_infyrnoblast")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_infyrnoblast")
 
-setAngles(NewWeaponType, 40, 0, 0, 0, 0)
+setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 
 setMiscValues(NewWeaponType, 0, 0)
 
