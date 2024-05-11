@@ -219,7 +219,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "-1", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
@@ -246,7 +246,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "0.16", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
@@ -273,7 +273,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "0.33", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
@@ -300,7 +300,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "0.5", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
@@ -327,7 +327,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "0.66", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
@@ -354,7 +354,7 @@ effects =
 		{
 			{ "anim",     "ABDo", },
 			{ "animtime", "0.83", },
-			{ "marker",   "e3", },
+			{ "marker",   "EngineNozzle3", },
 			{ "fx",       "fighter_AB_combo", },
 			{ "sound",    "", },
 			{ "fx_scale", "1", },
