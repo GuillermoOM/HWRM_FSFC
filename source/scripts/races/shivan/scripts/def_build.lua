@@ -121,6 +121,24 @@ build =
 		Description =
 		"<b>Description:</b> The SB Nephilim is the slowest of the Shivan bomber classes. These craft were first encountered during the Great War and are still found in many Shivan attack formations. Nephilims are heavily armored and shielded, enabling them to deliver their devastating payloads despite their lack of speed. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Anti-Bomber Laser, 2x Anti-Bomber Turret, 2x Shivan Bomb Launcher, 1x Shivan Cluster Bomb (Upgrade).",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_nahema", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 2, 
+        DisplayedName = "SB Nahema - Strike Bomber <c=12AB06>34s</c>", 
+        Description = "<b>Description:</b> Either the SB Nahema class is a new Shivan bomber design, or the Shivans are finally taking the GTVA seriously and bringing in their best ships. The Nahema is considered to be the Shivan's most dangerous bomber. It has demonstrated the ability to outrun virtually every fighter in the GTVA fleet. Its powerful laser banks and high-capacity missile bays make it a threat to combat craft of all types, as well as to capital ships. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Anti-Cruiser Laser, 2x Shivan Disruptor, 1x Anti-Subsystem Missle (Upgrade), 1x Shivan Bomb Launcher.",
+	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_seraphim", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 3, 
+        DisplayedName = "SB Seraphim - Heavy Bomber <c=12AB06>45s</c>", 
+        Description = "<b>Description:</b> The SB Seraphim is a familiar foe to GTVA forces. They appear to be similar to Nephilims in speed, armor, and shield strength, but have demonstrated a larger bomb capacity. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 6x Anti-Bomber Laser, 2x Anti-Bomber Turret, 1x Shivan Megabomb.",
+	},
 
 
 	-- Cruisers ---------------

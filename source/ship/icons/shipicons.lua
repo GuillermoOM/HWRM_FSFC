@@ -2575,6 +2575,32 @@ Shi_gorgon =
 	}, 
 }
 
+Shi_Nahema = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\shi_nahema.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 408, 204, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
+
+Shi_Seraphim = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\shi_seraphim.tga", 
+        textureUV_TL = 
+            { 0, 0, }, 
+        textureUV_WH = 
+            { 350, 175, }, 
+        stretchOnDraw = 1, 
+	}, 
+}
+
 Ter_Hades =
 {
 	LargeIcon =

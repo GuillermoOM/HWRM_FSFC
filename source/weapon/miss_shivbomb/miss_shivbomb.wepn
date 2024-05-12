@@ -5,9 +5,9 @@ AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 2000, 2000, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_bombblast")
 
-setAngles(NewWeaponType, 25, 0, 0, 2, 2)
+setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 
-setMiscValues(NewWeaponType, 0, 3)
+setMiscValues(NewWeaponType, 0, 0)
 
 setPenetration(NewWeaponType, 30, 1,
     { Unarmoured = 1, },

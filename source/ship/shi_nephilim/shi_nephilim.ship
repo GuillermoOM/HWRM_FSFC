@@ -371,8 +371,8 @@ LoadModel(NewShipType, 1)
 
 -- Ship Weapons
 StartShipWeaponConfig(NewShipType, "gun_shivlightlaser", "Weapon_Gun1", "")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret1", "Fire1")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Turret2", "Fire2")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret1", "Fire1")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret2", "Fire2")
 
 -- Ship Missiles
 StartShipWeaponConfig(NewShipType, "miss_shivbomb", "Weapon_Bomb2", "")
