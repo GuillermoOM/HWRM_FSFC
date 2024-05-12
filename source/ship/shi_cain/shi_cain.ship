@@ -347,11 +347,11 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Gun1", "Fire1")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Gun2", "Fire2")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Gun3", "Fire3")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Gun4", "Fire4")
-StartShipWeaponConfig(NewShipType, "gun_shivturretlaser", "Weapon_Gun5", "Fire5")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun1", "Fire1")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun2", "Fire2")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun3", "Fire3")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun4", "Fire4")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun5", "Fire5")
 StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Gun6", "")
 StartShipWeaponConfig(NewShipType, "miss_fighterkiller", "Weapon_Gun7", "")
 StartShipWeaponConfig(NewShipType, "miss_fighterkiller", "Weapon_Gun8", "")

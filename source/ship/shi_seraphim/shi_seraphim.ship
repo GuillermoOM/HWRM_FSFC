@@ -330,7 +330,6 @@ addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500);
 addAbility(NewShipType, "RetireAbility", 1, 0)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
-addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,, SmallCapitalShip, BigCapitalShip, Mothership",
     "FlyBy_Bomber_vs_Frigate",
@@ -361,11 +360,11 @@ LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "gun_shivlightlaser", "Weapon_Gun1", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlightlaser", "Weapon_Gun2", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlightlaser", "Weapon_FrontGun3", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlightlaserturret", "Weapon_Turret1", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlightlaserturret", "Weapon_Turret2", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlightlaser_turret", "Weapon_Turret1", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlightlaser_turret", "Weapon_Turret2", "")
 
 --Ship Missiles
-StartShipWeaponConfig(NewShipType, "miss_shivmegabomblauncher", "Weapon_Bomb1", "")
+StartShipWeaponConfig(NewShipType, "miss_shivbomb", "Weapon_Bomb1", "")
 StartShipWeaponConfig(NewShipType, "miss_shivmegabomb", "Weapon_Bomb2", "")
 
 --------------------------------------------------
