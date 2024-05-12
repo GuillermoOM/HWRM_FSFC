@@ -133,9 +133,9 @@ build =
 	{
 		Type = Ship, 
         ThingToBuild = "shi_seraphim", 
-        RequiredResearch = "BomberDesign & AntiCapitalBombs & FS2", 
-        RequiredShipSubSystems = "Fighterbay", 
-        DisplayPriority = 44, 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 3, 
         DisplayedName = "SB Seraphim - Heavy Bomber <c=12AB06>45s</c>", 
         Description = "<b>Description:</b> The SB Seraphim is a familiar foe to GTVA forces. They appear to be similar to Nephilims in speed, armor, and shield strength, but have demonstrated a larger bomb capacity. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 6x Anti-Bomber Laser, 2x Anti-Bomber Turret, 1x Shivan Megabomb.",
 	},
