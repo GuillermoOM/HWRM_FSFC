@@ -17,6 +17,8 @@ NewSubSystemType.sobDescription = "Anti-Fighter Missile"
 NewSubSystemType.type = "Weapon"
 NewSubSystemType.typeString = "Miss_PihranaTurret"
 
+NewSubSystemType.innate = 1
+
 --------------------------------------------------
 --- Families
 --------------------------------------------------
