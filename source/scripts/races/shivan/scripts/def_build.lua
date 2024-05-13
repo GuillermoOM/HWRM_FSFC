@@ -139,6 +139,24 @@ build =
         DisplayedName = "SB Seraphim - Heavy Bomber <c=12AB06>45s</c>", 
         Description = "<b>Description:</b> The SB Seraphim is a familiar foe to GTVA forces. They appear to be similar to Nephilims in speed, armor, and shield strength, but have demonstrated a larger bomb capacity. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 6x Anti-Bomber Laser, 2x Anti-Bomber Turret, 1x Shivan Megabomb.",
 	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_shaitan", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 4, 
+        DisplayedName = "SB Shaitan - Strike Bomber <c=12AB06>48s</c>", 
+        Description = "<b>Description:</b> The Shaitan bomber is only slightly superior to our own bombers - its shielding is better, but its capacity seems to be far worse.  Perhaps the Shivans were confident that they would only need one payload to destroy a target. \n\n<b>Prerequisites:</b> Bomber Design \n\n<b>Armaments:</b> 2x Shivan Light Laser, 1x Disruptor, 1x Shivan Bomb Launcher, 1x Stiletto (Upgrade).",
+	},
+	{
+		Type = Ship, 
+        ThingToBuild = "shi_taurvi", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 41, 
+        DisplayedName = "SB Taurvi - Medium Bomber <c=12AB06>34s</c>", 
+        Description = "<b>Description:</b> The SB Taurvi is a Shivan vessel that has only recently been encountered. The Taurvi is one of the weaker Shivan bomber classes, but still the equal of every bomber in the GTVA arsenal. Not as maneuverable as a Nahema, nor as tough as a Seraphim or Nephilim, the Taurvi appears to be a Shivan compromise between speed and power. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Anti-Cruiser Laser, 2x Anti-Fighter Laser, 1x Shivan Cluster Swarmer (Upgrade), 1x Shivan Bomb Launcher.",
+	},
 
 
 	-- Cruisers ---------------
