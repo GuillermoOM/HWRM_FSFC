@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_mekhu", "Norma
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 19, 19, "")
 
-setAngles(NewWeaponType, 0, -180, 180, -2.5, 80)
+setAngles(NewWeaponType, 0, -180, 180, 0, 90)
 
 setMiscValues(NewWeaponType, 0, 0)
 

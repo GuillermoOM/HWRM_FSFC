@@ -276,10 +276,6 @@ NewShipType.nlipsFarRange = 0
 --------------------------------------------------
 
 NewShipType.minLOD = 0.2
-NewShipType.upLOD = 1200
-NewShipType.upLOD = 1500
-NewShipType.downLOD = 1200
-NewShipType.downLOD = 1505
 
 --------------------------------------------------
 --- alternative Hyperspace Gate
@@ -316,7 +312,7 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
--- StartShipWeaponConfig(NewShipType, "gun_tercollectorturret", "Weapon_Turret", "")
+-- StartShipWeaponConfig(NewShipType, "gun_tercollector_turret", "Weapon_Turret", "")
 
 --------------------------------------------------
 --- Addendum

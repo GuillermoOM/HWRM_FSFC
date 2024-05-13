@@ -13,12 +13,12 @@
 -Spawn_Rot_0=0,-90,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=shi_nahema
+-Spawn_Ship_1=shi_gorgon
 -Spawn_Pos_1=2000,50,0
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
 
--Spawn_Ship_2=shi_nephilim
+-Spawn_Ship_2=shi_gorgon
 -Spawn_Pos_2=2000,-50,0
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=1
@@ -38,7 +38,7 @@
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
 
--Spawn_Ship_6=shi_seraphim
+-Spawn_Ship_6=shi_gorgon
 -Spawn_Pos_6=2000,0,0
 -Spawn_Rot_6=0,-90,0
 -Spawn_Team_6=1
@@ -48,7 +48,7 @@
 -Spawn_Rot_7=0,90,0
 -Spawn_Team_7=0
 
--Spawn_Ship_8=ter_fenris
+-Spawn_Ship_8=ter_perseus
 -Spawn_Pos_8=-2000,-100,0
 -Spawn_Rot_8=0,90,0
 -Spawn_Team_8=0

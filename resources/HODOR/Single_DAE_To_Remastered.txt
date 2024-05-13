@@ -5,8 +5,8 @@
 = -$HOD_SAVE_OPTS=ForceScars FilterScars=thruster,bay
 = -$IN_CAT=ship_working_on
 = -$OUT_CAT=ship
-= -$HOD=ter_elysium
-= -$NEWHOD=ter_elysium
+= -$HOD=shi_azrael
+= -$NEWHOD=shi_azrael
 = -log
 = -$CONVERT_IN=$[S_DIR]\$[IN_CAT]\$[HOD]\$[HOD].DAE
 = -$CONVERT_OUT=$[T_DIR]\$[OUT_CAT]\$[NEWHOD]\$[NEWHOD].hod

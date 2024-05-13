@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "Turret", "Bullet", "gun_prometheusfs1", "Norma
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20, 20, "")
 
-setAngles(NewWeaponType, 0, -180, 180, -5, 89)
+setAngles(NewWeaponType, 0, -180, 180, 0, 90)
 
 setPenetration(NewWeaponType, 5, 1,
     { Unarmoured = 1.3, },
