@@ -325,12 +325,12 @@ addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
-    "frontal",
-    { Fighter = "MoveToTargetAndShoot" },
-    { Fighter_hw1 = "MoveToTargetAndShoot" },
-    { Corvette = "MoveToTargetAndShoot" },
-    { Corvette_hw1 = "MoveToTargetAndShoot" },
-    { Munition = "MoveToTargetAndShoot" });
+    "frontal_frigate",
+    { Fighter = "movetotargetandshoot_frigate_vs_fighters" },
+    { Fighter_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
+    { Corvette = "movetotargetandshoot_frigate_vs_fighters" },
+    { Corvette_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
+    { Munition = "movetotargetandshoot_frigate_vs_fighters" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)
 addAbility(NewShipType, "RetireAbility", 1, 0)
