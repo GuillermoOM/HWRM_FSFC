@@ -164,7 +164,6 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 --- Docking  DO NOT MODIFY
 --------------------------------------------------
 
-addAbility(NewShipType, "CanDock", 1, 1)
 NewShipType.holdSlots = 1
 NewShipType.ignoreRaceWhenDocking = 0
 NewShipType.queueFormation = "Dockline"
