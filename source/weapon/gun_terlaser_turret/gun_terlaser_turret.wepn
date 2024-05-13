@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_terlaser", "No
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 43.75, 43.75, "")
 
-setAngles(NewWeaponType, 0, -180, 180, -2.5, 80)
+setAngles(NewWeaponType, 0, -180, 180, 0, 90)
 
 setMiscValues(NewWeaponType, 0, 0)
 
