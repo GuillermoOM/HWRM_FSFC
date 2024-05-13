@@ -343,10 +343,10 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_Bottom", "")
-StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_Top", "")
-StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_Left", "")
-StartShipWeaponConfig(NewShipType, "gun_subachturret", "Weapon_Right", "")
+StartShipWeaponConfig(NewShipType, "gun_subach_turret", "Weapon_Bottom", "")
+StartShipWeaponConfig(NewShipType, "gun_subach_turret", "Weapon_Top", "")
+StartShipWeaponConfig(NewShipType, "gun_subach_turret", "Weapon_Left", "")
+StartShipWeaponConfig(NewShipType, "gun_subach_turret", "Weapon_Right", "")
 StartShipWeaponConfig(NewShipType,"Hgn_MineLayer","Weapon_Bottom","");
 
 --------------------------------------------------
