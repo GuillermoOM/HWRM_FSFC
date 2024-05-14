@@ -120,6 +120,8 @@ NewShipType.agileFlight = 1
 NewShipType.homingDistance=1000
 NewShipType.homingDelay=0.5
 
+NewShipType.useEngagementRanges=1
+
 setSpeedvsAccuracyApplied(NewShipType, 100.0, 5.0, 120, 1.0, 250, 1.0, 388, 0.98, 535, 0.70)
 
 --------------------------------------------------	

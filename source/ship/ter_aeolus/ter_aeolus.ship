@@ -113,6 +113,8 @@ NewShipType.goalReachEpsilon = 30
 NewShipType.slideMoveRange = 100
 NewShipType.relativeMoveFactor = 3
 
+NewShipType.useEngagementRanges=1
+
 --------------------------------------------------	
 --- Tactics And Multipliers
 --------------------------------------------------	
@@ -321,14 +323,17 @@ NewShipType["alternativeHyperspaceTime"] = 7
 addAbility(NewShipType, "MoveCommand", 1, 0)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "ParadeCommand", 1)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
-    "Munition, Fighter, Fighter_hw1, Corvette, Corvette_hw1, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility",
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 0.2,
+    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
     "frontal_frigate",
-    { Fighter = "movetotargetandshoot_frigate_vs_fighters" },
-    { Fighter_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
-    { Corvette = "movetotargetandshoot_frigate_vs_fighters" },
-    { Corvette_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
-    { Munition = "movetotargetandshoot_frigate_vs_fighters" });
+    { Fighter = "MoveToTargetAndShoot_Frigate" },
+    { Fighter_hw1 = "MoveToTargetAndShoot_Frigate" },
+    { Corvette = "MoveToTargetAndShoot_Frigate" },
+    { Corvette_hw1 = "MoveToTargetAndShoot_Frigate" },
+    { Munition = "MoveToTargetAndShoot_Frigate" },
+    { SmallCapitalShip = "frontal_frigate" },
+    { BigCapitalShip = "frontal_frigate" },
+    { SubSystem = "FrontalVsSubSystem" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)

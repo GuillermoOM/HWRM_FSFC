@@ -116,20 +116,7 @@ NewShipType.goalReachEpsilon = 30
 NewShipType.slideMoveRange = 100
 NewShipType.relativeMoveFactor = 3
 
---------------------------------------------------	
---- Special Flight Maneuvers	
---------------------------------------------------	
-
---------------------------------------------------	
---- Swaying	
---------------------------------------------------	
-
-NewShipType.swayUpdateTime = 4
-NewShipType.swayOffsetRandomX = 10
-NewShipType.swayOffsetRandomY = 10
-NewShipType.swayOffsetRandomZ = 10
-NewShipType.swayBobbingFactor = 0.05
-NewShipType.swayRotateFactor = 0
+NewShipType.useEngagementRanges=1
 
 --------------------------------------------------	
 --- Tactics And Multipliers
@@ -368,14 +355,17 @@ addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 105, 420, 0, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 0.2,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
     "frontal_frigate",
-    { Fighter = "movetotargetandshoot_frigate_vs_fighters" },
-    { Fighter_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
-    { Corvette = "movetotargetandshoot_frigate_vs_fighters" },
-    { Corvette_hw1 = "movetotargetandshoot_frigate_vs_fighters" },
-    { Munition = "movetotargetandshoot_frigate_vs_fighters" });
+    { Fighter = "MoveToTargetAndShoot_Frigate" },
+    { Fighter_hw1 = "MoveToTargetAndShoot_Frigate" },
+    { Corvette = "MoveToTargetAndShoot_Frigate" },
+    { Corvette_hw1 = "MoveToTargetAndShoot_Frigate" },
+    { Munition = "MoveToTargetAndShoot_Frigate" },
+    { SmallCapitalShip = "frontal_frigate" },
+    { BigCapitalShip = "frontal_frigate" },
+    { SubSystem = "FrontalVsSubSystem" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1.05, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)

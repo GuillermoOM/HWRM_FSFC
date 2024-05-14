@@ -113,6 +113,8 @@ NewShipType.goalReachEpsilon = 30
 NewShipType.slideMoveRange = 100
 NewShipType.relativeMoveFactor = 3
 
+NewShipType.useEngagementRanges=1
+
 --------------------------------------------------	
 --- Tactics And Multipliers
 --------------------------------------------------	
