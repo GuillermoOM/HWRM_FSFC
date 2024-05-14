@@ -302,8 +302,6 @@ NewShipType.nlipsFarRange = 10000
 --------------------------------------------------
 
 NewShipType.minLOD = 0.25
-NewShipType.upLOD = 3500
-NewShipType.downLOD = 3000
 
 --------------------------------------------------
 --- alternative Hyperspace Gate  DO NOT MODIFY
