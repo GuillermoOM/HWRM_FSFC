@@ -3,7 +3,7 @@ StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_terturretHuge"
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 250, 250, "")
 
-setAngles(NewWeaponType, 0, -180, 180, 0, 90)
+setAngles(NewWeaponType, 0, -180, 180, -5, 70)
 
 setMiscValues(NewWeaponType, 0, 0.5)
 
@@ -21,10 +21,10 @@ setPenetration(NewWeaponType, 15, 1,
     { ChunkArmour = 1, })
 
 setAccuracy(NewWeaponType, 1,
-    { Fighter = 0, },
-    { Corvette = 0, },
-    { Fighter_hw1 = 0, },
-    { Corvette_hw1 = 0, },
+    { Fighter = 0 },
+    { Fighter_hw1 = 0 },
+    { Corvette = 0 },
+    { Corvette_hw1 = 0 },
     { Frigate = 0.8, },
     { Utility = 0.7, },
     { munition = 0, },
