@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 version = 4
-maxPolyphony = 3
+maxPolyphony = 8
 envelope = 
     { 
     { 

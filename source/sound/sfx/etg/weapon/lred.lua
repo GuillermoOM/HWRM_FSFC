@@ -6,7 +6,7 @@
 version = 4
 volume = 0.8
 volumeRand = 1
-maxPolyphony = 2
+maxPolyphony = 8
 envelope = 
     { 
     { 

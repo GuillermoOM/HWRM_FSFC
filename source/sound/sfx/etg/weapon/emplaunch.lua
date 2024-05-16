@@ -3,7 +3,7 @@
 version = 4
 volume = 1
 volumeRand = 0.2
-maxPolyphony = 4
+maxPolyphony = 8
 envelope = {
   {
     distance = 0.000000,
