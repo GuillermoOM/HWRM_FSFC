@@ -1,32 +1,38 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "Beam_SlashGreen", "Normal", 0, 8000, 0, 5.0, 3, 0, 30, 0, 1, 10,
-    0, 0, 1, 1, 0, 0, 0.05, "Normal", 0, 0, 5000)
+StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "Beam_SlashGreen", "Normal", 0, 7000, 0, 5.0, 3, 0, 30, 0, 1, 10,
+    0, 0, 1, 0, 1, 1, 0.01, "Normal", 0, 0, 5000)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 13850, 13850, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 8450, 8450, "")
 
 setAngles(NewWeaponType, 80, 0, 0, 0, 0)
 
-setPenetration(NewWeaponType, 100, 1,
-    { PlanetKillerArmour = 0 },
-    { SwarmerArmor = 0.10 },
-    { SpaceMineArmor = 1 },
-    { TorpedoArmor = 0 },
-    { HeavyMissileArmor = 0 },
-    { SmallMissileArmor = 0 },
-    { SubSystemArmour = .3 },
-    { MediumArmour = 0.5 },
-    { HeavyArmour = 1.0 });
-    
+setPenetration(NewWeaponType, 50, 1,
+    { Unarmoured = 1, },
+    { LightArmour = 1, },
+    { MediumArmour = 1.0, },
+    { HeavyArmour = 1.0, },
+    { SubSystemArmour = 1, },
+    { TurretArmour = 1, },
+    { ResArmour = 0.2, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
 setAccuracy(NewWeaponType, 1,
-    { Swarmer = 0.01 },
-    { SpaceMine = 0.01 },
-    { Torpedo = 0 },
-    { HeavyMissile = 0 },
-    { SmallMissile = 0 },
     { Fighter = 0 },
     { Fighter_hw1 = 0 },
     { Corvette = 0 },
     { Corvette_hw1 = 0 },
-    { munition = 0 },
-    { SmallCapitalShip = 1.0 },
-    { BigCapitalShip = 1.0 },
-    { Frigate = 1.0 });
+    { Frigate = 0.5, },
+    { Utility = 0.3, },
+    { munition = 0.0, },
+    { SmallCapitalShip = .65, },
+    { BigCapitalShip = .8, },
+    { Mothership = 1, },
+    { Emplacement = 0, },
+    { UnAttackable = 0, },
+    { SubSystem = 0, },
+    { Resource = 0, },
+    { ResourceLarge = 0.5, },
+    { Capturer = 0.5, },
+    { Chimera = 1, })

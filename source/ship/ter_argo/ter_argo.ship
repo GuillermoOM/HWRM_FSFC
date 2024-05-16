@@ -322,15 +322,13 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
     "JustShoot");
-addAbility(NewShipType, "RepairCommand", 1, 300, 100, { Fighter = "0", }, { Corvette = "0", }, { Fighter_hw1 = "0", },
-    { Corvette_hw1 = "0", })
+addAbility(NewShipType, "RepairCommand", 1, 300, 100, { Fighter = "0", }, { Corvette = "0", })
 
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CaptureCommand", 0, -35)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 70, 350, 0, 3)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, .7, 0.3)
-addAbility(NewShipType, "CanBeRepaired")
 
 --------------------------------------------------
 --- MODEL MUST LOAD AT THIS POINT

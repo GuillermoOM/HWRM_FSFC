@@ -27,7 +27,7 @@ NewShipType.collisionMultiplier = 1
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "SuperCap_Ter"
+NewShipType.BuildFamily = "Shipyard_Ter"
 NewShipType.AttackFamily = "Mothership"
 NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "SuperPriority"

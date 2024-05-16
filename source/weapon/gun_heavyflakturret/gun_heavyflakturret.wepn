@@ -5,7 +5,7 @@ AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 10, 10, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
 
-setAngles(NewWeaponType, 0, -180, 180, 0, 90)
+setAngles(NewWeaponType, 0, -180, 180, 0, 80)
 
 setMiscValues(NewWeaponType, 0, 0)
 
@@ -23,21 +23,20 @@ setPenetration(NewWeaponType, 5, 1,
     { ChunkArmour = 1, })
 
 setAccuracy(NewWeaponType, 1,
-    { Fighter = 0.25, },
-    { Corvette = 0.5, },
-    { Fighter_hw1 = 0.25, },
-    { Corvette_hw1 = 0.5, },
-    { Frigate = 1, },
-    { Utility = 0.8, },
-    { munition = 0.05, },
-    { HeavyMissile = 1, },
-    { SmallCapitalShip = 1, },
-    { BigCapitalShip = 1, },
-    { Mothership = 1, },
-    { Emplacement = 0.3, },
+    { Fighter = 0.01 },
+    { Fighter_hw1 = 0.01 },
+    { Corvette = 0.05 },
+    { Corvette_hw1 = 0.05 },
+    { Frigate = 0, },
+    { Utility = 1, },
+    { munition = 0.01, },
+    { SmallCapitalShip = 0, },
+    { BigCapitalShip = 0, },
+    { Mothership = 0, },
+    { Emplacement = 1, },
     { UnAttackable = 0, },
-    { SubSystem = 1, },
-    { Resource = .6, },
+    { SubSystem = 0, },
+    { Resource = 1, },
     { ResourceLarge = 1, },
     { Capturer = 1, },
     { Chimera = 1, })
