@@ -1,89 +1,48 @@
--- This file is generated automatically by the Relic Audio Tool
-
+-- LuaDC version 0.9.19
+-- 5/23/2004 7:29:12 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
 version = 4
-
-volume = 0.900000
-envelope = {
-  {
-    distance = 0.000000,
-    volume = 0.335000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
+volume = 0.7
+volumeRand = 1
+maxPolyphony = 8
+envelope = 
+    { 
+    { 
+        distance = 0, 
+        volume = 0.8, 
+        reverb = 0, 
+        duration = 0, 
+        equalizer = 
+            { 1, 1, 1, 1, 1, 1, 1, 1, }, }, 
+    { 
+        distance = 666.666656, 
+        volume = 0.6, 
+        reverb = 0, 
+        duration = 0, 
+        equalizer = 
+            { 1, 1, 1, 1, 0.97, 1, 1, 1, }, }, 
+    { 
+        distance = 1966.666687, 
+        volume = 0.4, 
+        reverb = 0, 
+        duration = 0, 
+        equalizer = 
+            { 1, 1, 1, 1, 0.84, 0.87, 0.77, 0.81, }, }, 
+    { 
+        distance = 3200, 
+        volume = 0.1, 
+        reverb = 0, 
+        duration = 0, 
+        equalizer = 
+            { 1, 1, 1, 0.64, 0.42, 0.31, 0.16, 0, }, }, 
+    { 
+        distance = 4500, 
+        volume = 0.05, 
+        reverb = 0, 
+        duration = 0, 
+        equalizer = 
+            { 1, 1, 1, 0, 0, 0, 0, 0, }, }, 
     }
-  },
-  {
-    distance = 883.333313,
-    volume = 0.305000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-    }
-  },
-  {
-    distance = 1683.333374,
-    volume = 0.190000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              0.700000,
-              0.700000,
-              0.650000,
-              0.640000,
-    }
-  },
-  {
-    distance = 2933.333252,
-    volume = 0.105000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              1.000000,
-              0.700000,
-              0.700000,
-              0.650000,
-              0.640000,
-    }
-  },
-  {
-    distance = 4483.333496,
-    volume = 0.000000,
-    reverb = 0.000000,
-    duration = 0,
-    equalizer = {
-              1.000000,
-              1.000000,
-              1.000000,
-              0.760000,
-              0.770000,
-              0.000000,
-              0.000000,
-              0.000000,
-    }
-  },
-}
 randSampContainer = 0
-

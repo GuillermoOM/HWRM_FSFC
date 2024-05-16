@@ -3,7 +3,7 @@
 version = 4
 
 volume = 0.900000
-maxPolyphony = 3
+maxPolyphony = 8
 loopCount = 1
 envelope = {
   {
