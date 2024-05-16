@@ -156,6 +156,12 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 NewShipType.paradeData = "ter_parade"
 
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
+NewShipType.formationSpacing = 400
+
+NewShipType.noCombatGrouping = 0
+NewShipType.canJoinStrikeGroup = 1
+NewShipType.strikeGroupRadius = 350
+NewShipType.strikeGroupSpeed = 5000
 
 --------------------------------------------------
 --- Launching

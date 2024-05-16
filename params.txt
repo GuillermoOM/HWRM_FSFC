@@ -8,7 +8,7 @@
 -Camera_Eye=2000,2000,2000
 -Spawn_Back=ez01
 
--Spawn_Ship_0=shi_demon
+-Spawn_Ship_0=ter_deimos
 -Spawn_Pos_0=8000,0,0
 -Spawn_Rot_0=0,-90,0
 -Spawn_Team_0=1
