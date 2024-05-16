@@ -158,7 +158,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.paradeData = "shi_build_parade"
+NewShipType.paradeData = "shivan_parade"
 NewShipType.SquadronSize = 1
 NewShipType.passiveFormation = "dockline"
 NewShipType.defensiveFormation = "broad"
