@@ -196,7 +196,7 @@ effects =
         {
             { "anim",     "dmg01", },
             { "animtime", "-1", },
-            { "marker",   "marker1,maker2", },
+            { "marker",   "marker1,marker2", },
             { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
             { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
             { "fx_scale", "5", },
@@ -206,7 +206,7 @@ effects =
         {
             { "anim",     "dmg02", },
             { "animtime", "-1", },
-            { "marker",   "marker3,maker4", },
+            { "marker",   "marker3,marker4", },
             { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
             { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY", },
             { "fx_scale", "7.5", },
