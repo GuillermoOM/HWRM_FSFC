@@ -144,7 +144,7 @@ effects =
         {
             { "anim",     "ABStart", },
             { "animtime", "0", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "", },
             { "sound",    "SPECIAL/AB_START", },
             { "fx_scale", "1", },
@@ -153,7 +153,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "-1", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "SPECIAL/AB_DO", },
             { "fx_scale", "1", },
@@ -162,7 +162,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "0.16", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
@@ -171,7 +171,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "0.33", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
@@ -180,7 +180,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "0.5", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
@@ -190,7 +190,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "0.66", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
@@ -199,7 +199,7 @@ effects =
         {
             { "anim",     "ABDo", },
             { "animtime", "0.83", },
-            { "marker",   "e1", },
+            { "marker",   "EngineNozzle1", },
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
