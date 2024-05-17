@@ -10,7 +10,7 @@ kShipYard = TER_ORION
 kDestroyer = TER_DEIMOS
 kBattleCruiser = TER_ORION
 
-function DetermineDemandWithNoCounterInfo_Terran()
+function DetermineDemandWithNoCounterInfo_Shivan()
 	if (sg_randFavorShipType < 55) then
 		ShipDemandAddByClass( eFighter, 1 )
 	elseif (sg_randFavorShipType < 85) then
@@ -22,9 +22,9 @@ function DetermineDemandWithNoCounterInfo_Terran()
 	end
 end
 
-function DetermineSpecialDemand_Terran()
+function DetermineSpecialDemand_Shivan()
 	if (gameTime() < 2*60)  then
-		ShipDemandSet( TER_ORION, 0)
+		ShipDemandSet( TER_HECATE, 0)
 		ShipDemandSet( TER_ORION, 0)		
 	end
 		resourcers = TER_ELYSIUM
@@ -44,17 +44,10 @@ function DetermineSpecialDemand_Terran()
 	end
 	ShipDemandAdd( TER_FENRIS, torpedoDemand )
 
-	local numShipyards = NumSquadrons( kShipYard ) + NumSquadronsQ( kShipYard )
-	if (numShipyards == 0 and UnderAttackThreat() < -75) then
-		local bcDemand = ShipDemandGet( kBattleCruiser )
-		if (bcDemand >= 0.5) then
-			ShipDemandAdd( kShipYard, bcDemand-0.5 )
-		end
-	end
 	if (s_militaryStrength > 25*sg_moreEnemies) then
 		ShipDemandAddByClass( ePlatform, -2 )
 	end
 end
 
-Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Terran
-Proc_DetermineSpecialDemand = DetermineSpecialDemand_Terran
+Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Shivan
+Proc_DetermineSpecialDemand = DetermineSpecialDemand_Shivan

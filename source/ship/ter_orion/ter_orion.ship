@@ -452,4 +452,4 @@ setEngineBurn(NewShipType, 7, 1, 1, 200, 20, 1, 0.1, 800)
 --- Custom fields
 --------------------------------------------------
 
-addCustomCode(NewShipType, "data:scripts/custom_scripts/add_nameplate.lua", "onLoad", "onCreate", "updateNameplate", "onDestroy", "orion", 1)
+addCustomCode(NewShipType, "data:scripts/custom_scripts/add_nameplate.lua", "onLoad", "onCreate", "updateNameplate", "onDestroy", "gta_orion", 1)
