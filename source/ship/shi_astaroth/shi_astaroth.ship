@@ -32,8 +32,6 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
-setSupplyValue(NewShipType, "Fighter", 5.0)
-setSupplyValue(NewShipType, "LayoutFighter", 5.0)
 
 
 --------------------------------------------------
