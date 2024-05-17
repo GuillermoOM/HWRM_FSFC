@@ -18,4 +18,21 @@ setPenetration(NewWeaponType, 5, 1,
     { MineArmour = 1, },
     { ChunkArmour = 1, })
 
-setAccuracy(NewWeaponType, 1)
+setAccuracy(NewWeaponType, 1,
+    { Fighter = 0, },
+    { Corvette = 0, },
+    { Fighter_hw1 = 0, },
+    { Corvette_hw1 = 0, },
+    { Frigate = 1, },
+    { Utility = 1, },
+    { munition = 0.05, },
+    { SmallCapitalShip = 1, },
+    { BigCapitalShip = 1, },
+    { Mothership = 1, },
+    { Emplacement = 0.3, },
+    { UnAttackable = 0, },
+    { SubSystem = 1, },
+    { Resource = .5, },
+    { ResourceLarge = 1, },
+    { Capturer = 1, },
+    { Chimera = 1, })

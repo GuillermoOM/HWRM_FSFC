@@ -192,12 +192,12 @@ NewShipType.ignoreRaceWhenDocking = 0
 
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 8
-NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 0
-NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 8
-NewShipType.totalValue = 8
+NewShipType.frigateValue = 10
+NewShipType.neutralValue = 100
+NewShipType.antiFighterValue = 5
+NewShipType.antiCorvetteValue = 5
+NewShipType.antiFrigateValue = 50
+NewShipType.totalValue = 100
 
 --------------------------------------------------
 --- Damage & Death

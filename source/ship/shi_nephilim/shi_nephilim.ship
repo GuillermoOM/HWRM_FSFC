@@ -40,7 +40,7 @@ NewShipType.ArmourFamily = "LightArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Bomber", 5.0)
-setSupplyValue(NewShipType, "LayoutCorvette", 5.0)
+setSupplyValue(NewShipType, "LayoutBomber", 5.0)
 
 --------------------------------------------------	
 --- Construction	

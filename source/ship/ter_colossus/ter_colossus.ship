@@ -47,9 +47,9 @@ setSupplyValue(NewShipType, "Mothership", 1.0)
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.buildCost = 1
-NewShipType.buildTime = 1
-NewShipType.buildPriorityOrder = 40
+NewShipType.buildCost = 50000
+NewShipType.buildTime = 500
+NewShipType.buildPriorityOrder = 20
 
 --------------------------------------------------	
 --- Health and Armour	

@@ -37,8 +37,8 @@ NewShipType.ArmourFamily = "LightArmour"
 --- Supply  DO NOT MODIFY
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Bomber", 4.0)
-setSupplyValue(NewShipType, "LayoutCorvette", 4.0)
+setSupplyValue(NewShipType, "FSBomber", 4.0)
+setSupplyValue(NewShipType, "LayoutBomber", 4.0)
 
 --------------------------------------------------	
 --- Construction

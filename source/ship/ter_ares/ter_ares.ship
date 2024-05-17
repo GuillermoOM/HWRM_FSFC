@@ -38,6 +38,7 @@ NewShipType.ArmourFamily = "Unarmoured"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Fighter", 4.0)
+setSupplyValue(NewShipType, "Ares", 4.0)
 setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 
 --------------------------------------------------	
