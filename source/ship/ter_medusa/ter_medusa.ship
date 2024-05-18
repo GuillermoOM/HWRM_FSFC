@@ -32,13 +32,14 @@ NewShipType.DisplayFamily = "Bomber"
 NewShipType.AutoFormationFamily = "Corvette"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "LightArmour"
+NewShipType.CombatFamily="Corvette_Pulsar"
 
 --------------------------------------------------
 --- Supply  DO NOT MODIFY
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Bomber", 4.0)
-setSupplyValue(NewShipType, "LayoutCorvette", 4.0)
+setSupplyValue(NewShipType, "FSBomber", 4.0)
+setSupplyValue(NewShipType, "LayoutBomber", 4.0)
 
 --------------------------------------------------	
 --- Construction
@@ -207,12 +208,12 @@ NewShipType.dontDockWithOtherRaceShips = 1
 --------------------------------------------------
 
 NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 10
+NewShipType.corvetteValue = 8
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
 NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 10
+NewShipType.antiFrigateValue = 8
 NewShipType.totalValue = 10
 
 --------------------------------------------------

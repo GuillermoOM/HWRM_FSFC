@@ -34,13 +34,14 @@ NewShipType.DisplayFamily = "Bomber"
 NewShipType.AutoFormationFamily = "Corvette"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "LightArmour"
+NewShipType.CombatFamily="Corvette_Missile"
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Bomber", 5.0)
-setSupplyValue(NewShipType, "LayoutCorvette", 5.0)
+setSupplyValue(NewShipType, "LayoutBomber", 5.0)
 
 --------------------------------------------------	
 --- Construction	

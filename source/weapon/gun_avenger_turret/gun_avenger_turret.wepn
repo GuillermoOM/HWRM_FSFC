@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_avenger", "Normal", 2100, 2000, 0, 0, 0, 0, 1, 1, 0,
-    0.5, 0, 0, 0, 0, 260, 40, 0.1, "Normal", 0, 0, 0)
+    0.5, 0, 0, 1, 1, 260, 40, 0.1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 35, 35, "")
 
