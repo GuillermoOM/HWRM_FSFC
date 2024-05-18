@@ -7,9 +7,6 @@ squadclass[eMotherShip] = {
 	KUS_MOTHERSHIP,
 	TAI_MOTHERSHIP,
 
-	TER_HECATE,
-	TER_ORION,
-	TER_HADES,
 	TER_COLOSSUS,
 }
 squadclass[eCollector] = {
@@ -36,6 +33,7 @@ squadclass[eScout] = {
 
 	TER_PEGASUS,
 	TER_LOKI,
+	TER_PHAROS,
 }
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
@@ -81,6 +79,7 @@ squadclass[eDropOff] = {
 	TER_ORION,
 	TER_HECATE,
 	TER_ZEPHYRUS,
+	TER_COLOSSUS,
 }
 squadclass[eSalvageDropOff] = {
 	HGN_MOTHERSHIP,
@@ -98,6 +97,7 @@ squadclass[eSalvageDropOff] = {
 	TER_ORION,
 	TER_HECATE,
 	TER_ZEPHYRUS,
+	TER_COLOSSUS,
 }
 squadclass[eFighter] = {
 	HGN_INTERCEPTOR,
@@ -119,18 +119,11 @@ squadclass[eFighter] = {
 
 	TER_PEGASUS,
 	TER_PERSEUS,
-	TER_ARES,
-	TER_HERCULESMK2,
 	TER_ULYSSES,
-	TER_HERCULES,
 	TER_LOKI,
-	TER_ERINYES,
 	TER_MYRMIDON,
-
 	TER_APOLLO,
 	TER_VALKYRIE,
-	TER_LOKIFS1,
-
 }
 squadclass[eCorvette] = {
 	HGN_ASSAULTCORVETTE,
@@ -231,13 +224,16 @@ squadclass[eAntiFighter] = {
 	TAI_MULTIGUNCORVETTE,
 	TAI_MISSILEDESTROYER,
 
-	TER_MYRMIDON,
+	TER_AEOLUS,
+	TER_FENRIS,
+
+	TER_DEIMOS,
+
+	TER_PERSEUS,
 	TER_ULYSSES,
 	TER_ERINYES,
-	TER_ARTEMIS,
-	TER_AEOLUS,
-	TER_LEVIATHAN,
-	TER_APOLLO,
+	TER_MYRMIDON,
+	TER_VALKYRIE,
 }
 squadclass[eAntiCorvette] = {
 	HGN_PULSARCORVETTE,
@@ -256,12 +252,22 @@ squadclass[eAntiCorvette] = {
 	TAI_ASSAULTFRIGATE,
 	TAI_DESTROYER,
 	TAI_MISSILEDESTROYER,
+	TER_FENRIS,
+	TER_LEVIATHAN,
+	TER_AEOLUS,
 
-	TER_ERINYES,
-	TER_PERSEUS,
-	TER_VALKYRIE,
 	TER_ALASTOR,
 	TER_CERBERUS,
+
+	TER_PERSEUS,
+	TER_ARES,
+	TER_HERCULESMK2,
+	TER_ULYSSES,
+	TER_HERCULES,
+	TER_ERINYES,
+	TER_MYRMIDON,
+	TER_APOLLO,
+	TER_VALKYRIE,
 }
 squadclass[eAntiFrigate] = {
 	HGN_IONTURRET,
@@ -291,24 +297,29 @@ squadclass[eAntiFrigate] = {
 	TAI_DESTROYER,
 	TAI_HEAVYCRUISER,
 
-
 	TER_HERCULESMK2,
 	TER_HERCULES,
 	TER_ARES,
 	TER_ERINYES,
+
+	TER_ARTEMIS,
+	TER_ARTEMISDH,
+	TER_ZEUS,
+	TER_MEDUSA,
+	TER_ATHENA,
+	TER_URSA,
+	TER_BOANERGES,
+
+	TER_DEIMOS,
 	TER_HECATE,
 	TER_COLOSSUS,
 	TER_FENRIS,
 	TER_LEVIATHAN,
 	TER_AEOLUS,
-	TER_DEIMOS,
 	TER_HADES,
+
 	TER_MJOLNIR,
-	TER_ARTEMIS,
-	TER_ZEUS,
-	TER_URSA,
-	TER_MEDUSA,
-	TER_BOANERGES,
+
 }
 
 squadclass[eCapital] = {
@@ -339,7 +350,7 @@ squadclass[eCapital] = {
 	TER_HECATE,
 	TER_COLOSSUS,
 	TER_HADES,
-	TER_DEIMOS,	
+	TER_DEIMOS,
 }
 squadclass[eNonThreat] = {
 	HGN_RESOURCECOLLECTOR,
@@ -399,6 +410,7 @@ squadclass[eNonThreat] = {
 	TER_ELYSIUM,
 	TER_HYGEIA,
 	TER_CENTAUR,
+	TER_CHARYBDIS,
 }
 squadclass[eHyperspaceGate] =
 {
@@ -455,23 +467,17 @@ squadclass[eGoodRepairAttackers] =
 	TAI_MISSILEDESTROYER,
 	TAI_HEAVYCRUISER,
 
-
+	TER_HERCULES,
 	TER_HERCULESMK2,
 	TER_ARES,
 	TER_ERINYES,
-	TER_HECATE,
-	TER_COLOSSUS,
+
 	TER_FENRIS,
 	TER_LEVIATHAN,
 	TER_AEOLUS,
 	TER_DEIMOS,
-	TER_HADES,
-	TER_MJOLNIR,
-	TER_ARTEMIS,
-	TER_ZEUS,
-	TER_URSA,
-	TER_MEDUSA,
-	TER_BOANERGES,
+
+	TER_ATHENA,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
@@ -490,6 +496,8 @@ squadclass[eUselessShips] =
 	TAI_MINELAYERCORVETTE,
 	TAI_SUPPORTFRIGATE,
 	TAI_SALVAGECORVETTE,
+
+	TER_POSEIDON,
 }
 squadclass[eBattleCruiser] =
 {
@@ -498,9 +506,8 @@ squadclass[eBattleCruiser] =
 	KUS_HEAVYCRUISER,
 	TAI_HEAVYCRUISER,
 
-	TER_ORION,
-	TER_DEIMOS,
-	TER_HECATE,
+	TER_HADES,
+	TER_COLOSSUS,
 }
 squadclass[eDestroyer] = {
 	HGN_DESTROYER,
@@ -511,8 +518,6 @@ squadclass[eDestroyer] = {
 	TAI_MISSILEDESTROYER,
 
 	TER_DEIMOS,
-	TER_ORION,
-	TER_HECATE,
 }
 
 function FastAddToClass(tbl, classid)

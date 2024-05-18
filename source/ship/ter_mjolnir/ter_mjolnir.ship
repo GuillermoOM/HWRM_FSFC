@@ -168,8 +168,8 @@ NewShipType.frigateValue = 0
 NewShipType.neutralValue = 12
 NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 12
-NewShipType.totalValue = 12
+NewShipType.antiFrigateValue = 20
+NewShipType.totalValue = 20
 
 --------------------------------------------------
 --- Damage & Death  DO NOT MODIFY

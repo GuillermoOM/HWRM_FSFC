@@ -32,6 +32,7 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
+NewShipType.CombatFamily="Fighter_Lance"
 
 --------------------------------------------------
 --- Supply  DO NOT MODIFY
@@ -194,14 +195,14 @@ NewShipType.dockFormation = "dockline"
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 10
+NewShipType.fighterValue = 8
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
 NewShipType.antiFighterValue = 8
-NewShipType.antiCorvetteValue = 2
+NewShipType.antiCorvetteValue = 4
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 10
+NewShipType.totalValue = 8
 
 --------------------------------------------------
 --- Damage & Death  DO NOT MODIFY 

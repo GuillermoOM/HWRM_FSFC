@@ -1,7 +1,7 @@
 StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_pihrana", "Normal", 300, 4000, 0, 0, 0, 0, 1, 1, 0,
   20, 0, 0, 1, 1, 200, 200, 1, "Normal", 0, 0, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 70, 80, "")
 
 setAngles(NewWeaponType, 180, 0, 0, 0, 0)
 

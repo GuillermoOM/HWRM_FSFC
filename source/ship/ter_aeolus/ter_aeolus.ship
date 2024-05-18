@@ -38,8 +38,9 @@ NewShipType.ArmourFamily = "MediumArmour"
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Frigate", 1.0)
-setSupplyValue(NewShipType, "LayoutFrigate", 1.0)
+setSupplyValue(NewShipType, "Cruiser", 1.0)
+setSupplyValue(NewShipType, "Aeolus", 1.0)
+setSupplyValue(NewShipType, "LayoutCruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	

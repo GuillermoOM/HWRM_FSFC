@@ -19,7 +19,7 @@ NewMissileType.sobDescription = "Cluster Missles"
 --------------------------------------------------	
 
 NewMissileType.clusterDistance = 4000
-NewMissileType.numberSubMunitions = 10
+NewMissileType.numberSubMunitions = 5
 NewMissileType.subMunitionName = "Miss_Cluster_Baby"
 NewMissileType.clusterAngle = 270
 

@@ -24,7 +24,7 @@ NewMissileType.DockFamily = "CantDock"
 NewMissileType.AvoidanceFamily = "DontAvoid"
 NewMissileType.DisplayFamily = "Munition"
 NewMissileType.AutoFormationFamily = "Fighter"
-NewMissileType.ArmourFamily = "Unarmoured"
+NewMissileType.ArmourFamily = "TorpedoArmor"
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -41,14 +41,14 @@ NewMissileType.rearArmourDamage = 1
 --- Shields	  DO NOT MODIFY
 --------------------------------------------------	
 
-NewMissileType.maxShield = 0
+NewMissileType.maxShield = 5
 NewMissileType.shieldRechargeTime = 0
 
 --------------------------------------------------	
 --- Sensors		  DO NOT MODIFY
 --------------------------------------------------	
 
-NewMissileType.detectionDistance = 10
+NewMissileType.detectionDistance = 1000
 
 --------------------------------------------------	
 --- Movement	
@@ -107,7 +107,7 @@ NewMissileType.launchTime = 0
 NewMissileType.noCollisionTime = 0.5
 
 NewMissileType.slowdownFactor = 1.0
-NewMissileType.proximityDetonationDist = 0
+-- NewMissileType.proximityDetonationDist = 90
 NewMissileType.sobDieTime = 0.5
 
 --------------------------------------------------

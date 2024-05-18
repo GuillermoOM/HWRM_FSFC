@@ -48,7 +48,7 @@ NewMissileType.shieldRechargeTime = 0
 --- Sensors		  DO NOT MODIFY
 --------------------------------------------------	
 
-NewMissileType.detectionDistance = 10
+NewMissileType.detectionDistance = 1000
 
 --------------------------------------------------	
 --- Movement	
@@ -107,7 +107,7 @@ NewMissileType.launchTime = 0
 NewMissileType.noCollisionTime = 1
 
 NewMissileType.slowdownFactor = 1.0
-NewMissileType.proximityDetonationDist = 4000
+-- NewMissileType.proximityDetonationDist = 90
 NewMissileType.sobDieTime = 0.5
 
 --------------------------------------------------

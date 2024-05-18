@@ -28,7 +28,7 @@ NewShipType.collisionMultiplier = 1
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Ter"
-NewShipType.AttackFamily = "Mothership"
+NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "SuperPriority"
 NewShipType.DisplayFamily = "Capital"
@@ -41,7 +41,7 @@ NewShipType.ArmourFamily = "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Mothership", 1.0)
+setSupplyValue(NewShipType, "Battlecruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	
@@ -186,12 +186,12 @@ NewShipType.dockTimeBetweenTwoFormations = 1
 
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 80
-NewShipType.neutralValue = 30
+NewShipType.frigateValue = 160
+NewShipType.neutralValue = 60
 NewShipType.antiFighterValue = 0
-NewShipType.antiCorvetteValue = 5
-NewShipType.antiFrigateValue = 60
-NewShipType.totalValue = 110
+NewShipType.antiCorvetteValue = 10
+NewShipType.antiFrigateValue = 120
+NewShipType.totalValue = 95
 
 --------------------------------------------------
 --- Damage & Death

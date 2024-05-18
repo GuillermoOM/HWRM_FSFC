@@ -288,17 +288,17 @@ displayFamily =
 		name = "Flagship",
 		stringParam = "$2104",
 		numParam = 40,
-	},	
+	},
 	{
 		name = "Platform",
 		stringParam = "$2105",
 		numParam = 50,
-	},	
+	},
 	{
 		name = "Utility",
 		stringParam = "$2106",
 		numParam = 60,
-	},	
+	},
 	{
 		name = "Resource",
 		stringParam = "$4910",
@@ -407,9 +407,9 @@ attackFamily =
 		name = "Chimera",
 		numParam = 1,
 	},
-    --This family added in to work around a potiential bug in the HomeworldClassic campaign
-    --whereby some missions request CLASS_CapitalShips, which does not exist.
-    --This should have resulted in nothing being selected, which is what we are here emulating.
+	--This family added in to work around a potiential bug in the HomeworldClassic campaign
+	--whereby some missions request CLASS_CapitalShips, which does not exist.
+	--This should have resulted in nothing being selected, which is what we are here emulating.
 	{
 		name = "NonsenseFamily",
 		numParam = 1,
@@ -418,7 +418,7 @@ attackFamily =
 		name = "NonCombat",
 		numParam = 1,
 	},
--- Grouping Families
+	-- Grouping Families
 	{
 		name = "Fighter_Scout",
 		numParam = 1,
@@ -471,7 +471,7 @@ attackFamily =
 		name = "Corvette_TuranicStandard",
 		numParam = 1,
 	},
--- Extra Balance Separation
+	-- Extra Balance Separation
 	{
 		name = "Swarmer",
 		numParam = 1,
@@ -490,11 +490,6 @@ attackFamily =
 	},
 	{
 		name = "SmallMissile",
-		numParam = 1,
-	},
-
-	{
-		name = "Bomber",
 		numParam = 1,
 	},
 }
@@ -536,7 +531,7 @@ dockFamily =
 		name = "Shipyard"
 	},
 	{
-        -- motherships n such
+		-- motherships n such
 		name = "Flagship"
 	},
 	{
@@ -545,36 +540,36 @@ dockFamily =
 	{
 		name = "Inhibitor"
 	},
-    {
-        -- big things collectors drag back, like the bentus debris
-        name = "LargeSalvage"
-    },
-    {
-        -- stuff like the dreadnaught
-        name = "UltraCap"
-    },
+	{
+		-- big things collectors drag back, like the bentus debris
+		name = "LargeSalvage"
+	},
+	{
+		-- stuff like the dreadnaught
+		name = "UltraCap"
+	},
 	{
 		name = "CantDock"
 	},
-	{name = "drone"},
-	{name = "drone1"},
-	{name = "drone2"},
-	{name = "drone3"},	
-	{name = "ResearchShip"},
-	{name = "ResearchShip_1"},
-	{name = "ResearchShip_2"},
-	{name = "ResearchShip_3"},
-	{name = "ResearchShip_4"},	
-	{name = "ResearchShip_5"},	
-	{name = "fieldgenerator1"},	
-	{name = "fieldgenerator2"},
-	{name = "fieldgenerator3"},
-	{name = "fieldgenerator4"},
-	{name = "fieldgenerator5"},
-	{name = "fieldgenerator6"},
-	{name = "fieldgenerator7"},
-	{name = "fieldgenerator8"},
-	{name = "Carrier"},
+	{ name = "drone" },
+	{ name = "drone1" },
+	{ name = "drone2" },
+	{ name = "drone3" },
+	{ name = "ResearchShip" },
+	{ name = "ResearchShip_1" },
+	{ name = "ResearchShip_2" },
+	{ name = "ResearchShip_3" },
+	{ name = "ResearchShip_4" },
+	{ name = "ResearchShip_5" },
+	{ name = "fieldgenerator1" },
+	{ name = "fieldgenerator2" },
+	{ name = "fieldgenerator3" },
+	{ name = "fieldgenerator4" },
+	{ name = "fieldgenerator5" },
+	{ name = "fieldgenerator6" },
+	{ name = "fieldgenerator7" },
+	{ name = "fieldgenerator8" },
+	{ name = "Carrier" },
 }
 
 ------------------------------------------------------------------------------------------------
@@ -698,66 +693,66 @@ autoFormationFamily =
 ------------------------------------------------------------------------------------------------
 armourFamily =
 {
-    {
-        name = "Unarmoured",
-    },
-    {
-        name = "Unarmoured_hw1",
-    },
-    {
-        name = "LightArmour",
-    },
-    {
-        name = "LightArmour_hw1",
-    },
-    {
-        name = "MediumArmour",
-    },
-    {
-        name = "HeavyArmour",
-    },
-    {
-        name = "SubSystemArmour",
-    },
-    {
-        name = "TurretArmour",
-    },
-    {
-        name = "ResArmour",
-    },
-    {
-        name = "MoverArmour",
-    },
-    {
-        name = "PlanetKillerArmour",
-    },
-    {
-        name = "MineArmour",
-    },
-    {
-        name = "ChunkArmour",
-    },
-    {
-        name = "ResourceArmour",
-    },
-    {
-        name = "GravityWellArmour",
-    },
-    {
-        name = "SwarmerArmor",
-    },
-    {
-        name = "SpaceMineArmor",
-    },
-    {
-        name = "TorpedoArmor",
-    },
-    {
-        name = "HeavyMissileArmor",
-    },
-    {
-        name = "SmallMissileArmor",
-    },
+	{
+		name = "Unarmoured",
+	},
+	{
+		name = "Unarmoured_hw1",
+	},
+	{
+		name = "LightArmour",
+	},
+	{
+		name = "LightArmour_hw1",
+	},
+	{
+		name = "MediumArmour",
+	},
+	{
+		name = "HeavyArmour",
+	},
+	{
+		name = "SubSystemArmour",
+	},
+	{
+		name = "TurretArmour",
+	},
+	{
+		name = "ResArmour",
+	},
+	{
+		name = "MoverArmour",
+	},
+	{
+		name = "PlanetKillerArmour",
+	},
+	{
+		name = "MineArmour",
+	},
+	{
+		name = "ChunkArmour",
+	},
+	{
+		name = "ResourceArmour",
+	},
+	{
+		name = "GravityWellArmour",
+	},
+	{
+		name = "SwarmerArmor",
+	},
+	{
+		name = "SpaceMineArmor",
+	},
+	{
+		name = "TorpedoArmor",
+	},
+	{
+		name = "HeavyMissileArmor",
+	},
+	{
+		name = "SmallMissileArmor",
+	},
 
 }
 
@@ -788,13 +783,13 @@ unitcapsFamily =
 		numParam = 14,
 		stringParam = "$10008",
 	},
-	-- Hiigaran 
+	-- Hiigaran
 	{
 		name = "Interceptor",
 		numParam = 15,
 		stringParam = "$1502",
 	},
-	-- Vaygr 
+	-- Vaygr
 	{
 		name = "Scout",
 		numParam = 16,
@@ -951,12 +946,12 @@ unitcapsFamily =
 		name = "NonCombat",
 		numParam = 80,
 		stringParam = "$4909",
-	},	
+	},
 	{
 		name = "Probe_hw1",
 		numParam = 87,
 		stringParam = "$2132",
-	},	
+	},
 	{
 		name = "ProximitySensor_hw1",
 		numParam = 88,
@@ -976,7 +971,7 @@ unitcapsFamily =
 		name = "GravWellGenerator",
 		numParam = 91,
 		stringParam = "$10050",
-	},	
+	},
 	{
 		name = "Mothership",
 		numParam = 100,
@@ -1062,6 +1057,49 @@ unitcapsFamily =
 	},
 	{
 		name = "LayoutResource",
+		show = "Never",
+		numParam = 1000,
+	},
+
+	-- Extras
+	{
+		name = "AWACS",
+		numParam = 61,
+		stringParam = "AWACS",
+	},
+	{
+		name = "Aeolus",
+		numParam = 31,
+		stringParam = "Aeolus",
+	},
+	{
+		name = "FSBomber",
+		numParam = 18,
+		stringParam = "Bomber",
+	},
+	{
+		name = "Ares",
+		numParam = 12,
+		stringParam = "GTF Ares",
+	},
+	{
+		name = "ArtemisDH",
+		numParam = 19,
+		stringParam = "GTB Artemis D.H.",
+	},
+	{
+		name = "Cruiser",
+		numParam = 30,
+		stringParam = "Cruiser",
+
+	},
+	{
+		name = "LayoutBomber",
+		show = "Never",
+		numParam = 1000,
+	},
+	{
+		name = "LayoutCruiser",
 		show = "Never",
 		numParam = 1000,
 	},

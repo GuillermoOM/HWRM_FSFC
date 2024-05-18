@@ -32,12 +32,14 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
+NewShipType.CombatFamily="Fighter_Special"
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Fighter", 4.0)
+setSupplyValue(NewShipType, "Ares", 4.0)
 setSupplyValue(NewShipType, "LayoutFighter", 4.0)
 
 --------------------------------------------------	
