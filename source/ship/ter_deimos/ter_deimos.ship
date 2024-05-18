@@ -405,4 +405,3 @@ setEngineBurn(NewShipType, 7, 0.5, 3, 80, 0, 0.7, 0.1, 280)
 --------------------------------------------------
 --- Custom fields
 --------------------------------------------------
--- addCustomCode(NewShipType, "data:scripts/custom_scripts/PDS.lua", "", "", "updatePDS", "", "PDS", 1.25)
