@@ -372,7 +372,6 @@ addAbility(NewShipType, "CanBuildShips", 1,
 LoadModel(NewShipType, 1)
 --------------------------------------------------
 
--- addCustomCode(NewShipType, "data:scripts/custom_scripts/PDS.lua", "", "", "updatePDS", "", "PDS", 1.25)
 
 --------------------------------------------------
 --- Weapons
