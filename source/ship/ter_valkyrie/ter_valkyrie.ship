@@ -32,6 +32,7 @@ NewShipType.DisplayFamily = "Fighter"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "Unarmoured"
+NewShipType.CombatFamily="Fighter_Defender"
 
 --------------------------------------------------
 --- Supply
@@ -210,7 +211,7 @@ NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
 NewShipType.antiFighterValue = 8
-NewShipType.antiCorvetteValue = 0
+NewShipType.antiCorvetteValue = 4
 NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
 

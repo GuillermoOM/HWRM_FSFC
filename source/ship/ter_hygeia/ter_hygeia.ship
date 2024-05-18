@@ -25,7 +25,7 @@ NewShipType.isTransferable = 0
 
 NewShipType.MinimalFamilyToFindPathAround = "SuperCap"
 NewShipType.BuildFamily = "Utility_Ter"
-NewShipType.AttackFamily = "Resource"
+NewShipType.AttackFamily = "Utility"
 NewShipType.DockFamily = "Corvette"
 NewShipType.AvoidanceFamily = "Strikecraft"
 NewShipType.DisplayFamily = "Utility"

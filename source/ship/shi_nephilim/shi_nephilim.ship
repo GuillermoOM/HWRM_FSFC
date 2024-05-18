@@ -34,6 +34,7 @@ NewShipType.DisplayFamily = "Bomber"
 NewShipType.AutoFormationFamily = "Corvette"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "LightArmour"
+NewShipType.CombatFamily="Corvette_Missile"
 
 --------------------------------------------------
 --- Supply

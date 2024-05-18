@@ -1,7 +1,7 @@
 StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "miss_synaptic", "Normal", 270, 4000, 0, 0, 0, 0, 1, 1, 0, 20, 0,
     0, 1, 1, 100, 100, 0.1, "Normal", 0, 0, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 60, 90, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 40, 50, "")
 
 setAngles(NewWeaponType, 180, 0, 0, 0, 0)
 

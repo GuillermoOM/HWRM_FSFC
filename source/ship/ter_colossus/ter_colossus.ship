@@ -28,7 +28,7 @@ NewShipType.collisionMultiplier = 1
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Shipyard_Ter"
-NewShipType.AttackFamily = "Mothership"
+NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "SuperPriority"
 NewShipType.DisplayFamily = "Capital"
@@ -187,12 +187,12 @@ NewShipType.dockTimeBetweenTwoFormations = 1
 
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 15
-NewShipType.neutralValue = 5
-NewShipType.antiFighterValue = 5
-NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 20
+NewShipType.frigateValue = 160
+NewShipType.neutralValue = 60
+NewShipType.antiFighterValue = 0
+NewShipType.antiCorvetteValue = 10
+NewShipType.antiFrigateValue = 120
+NewShipType.totalValue = 95
 
 --------------------------------------------------
 --- Damage & Death
@@ -203,7 +203,7 @@ NewShipType.nebulaDamageTime = 1500
 
 NewShipType.battleScarMaxTriBase = 175
 NewShipType.battleScarMaxTriInc = 250
-NewShipType.battleScarCoverage=4
+NewShipType.battleScarCoverage = 4
 NewShipType.battleScarBudgetLow = 1200
 NewShipType.battleScarBudgetNext = 1800
 NewShipType.sobDieTime = 16
@@ -439,18 +439,25 @@ StartShipWeaponConfig(NewShipType, "beam_slashgreen", "Weapon_Weapon_63", "")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen1", "Weapon_Weapon_53", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen2", "Weapon_Weapon_54", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen3", "Weapon_Weapon_57", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen4", "Weapon_Weapon_58", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen5", "Weapon_Weapon_59", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ter_BFGreen6", "Weapon_Weapon_60", "Weapon", "Innate", "Damageable", "ter_colbeam", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen1", "Weapon_Weapon_53", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen2", "Weapon_Weapon_54", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen3", "Weapon_Weapon_57", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen4", "Weapon_Weapon_58", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen5", "Weapon_Weapon_59", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ter_BFGreen6", "Weapon_Weapon_60", "Weapon", "Innate", "Damageable", "ter_colbeam",
+    "", "", "", "", "", "", "", "")
 
 --------------------------------------------------
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, "CapCap", "CapturePoint0", "CapturePoint1", "CapturePoint2", "CapturePoint3", "CapturePoint4",
+loadLatchPointList(NewShipType, "CapCap", "CapturePoint0", "CapturePoint1", "CapturePoint2", "CapturePoint3",
+    "CapturePoint4",
     "CapturePoint5", "CapturePoint6", "CapturePoint7");
 
 loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2", "RepairPoint3", "RepairPoint4",
@@ -481,4 +488,4 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 1000)
 --- Custom fields
 --------------------------------------------------
 
-setConcurrentBuildLimit(NewShipType,0,2)
+setConcurrentBuildLimit(NewShipType, 0, 2)

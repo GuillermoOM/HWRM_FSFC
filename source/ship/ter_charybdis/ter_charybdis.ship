@@ -39,7 +39,7 @@ NewShipType.ArmourFamily = "MediumArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Utility", 1.0)
--- setSupplyValue(NewShipType, "AWACS", 1.0)
+setSupplyValue(NewShipType, "AWACS", 1.0)
 
 --------------------------------------------------	
 --- Construction	

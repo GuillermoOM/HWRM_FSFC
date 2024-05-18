@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType, "Turret", "Bullet", "gun_prometheusfs1", "Normal", 1800, 1800, 0, 0, 0, 0, 1, 1, 0, 1,
-    0, 0, 0, 0, 200, 200, 1, "Normal", 0, 0, 0)
+    0, 0, 1, 1, 200, 200, 1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20, 20, "")
 

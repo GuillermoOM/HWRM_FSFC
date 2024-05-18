@@ -161,6 +161,18 @@ base_research = {
 		AIOnly = 1,
 	},
 
+	{
+		Name = "HeavyGuns",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		DisplayedName = "",
+		DisplayPriority = 0,
+		Description = "",
+		AIOnly = 1,
+	},
+
 }
 
 -- Add these items to the research tree!

@@ -492,11 +492,6 @@ attackFamily =
 		name = "SmallMissile",
 		numParam = 1,
 	},
-
-	{
-		name = "Bomber",
-		numParam = 1,
-	},
 }
 
 ------------------------------------------------------------------------------------------------
@@ -1067,6 +1062,16 @@ unitcapsFamily =
 	},
 
 	-- Extras
+	{
+		name = "AWACS",
+		numParam = 61,
+		stringParam = "AWACS",
+	},
+	{
+		name = "Aeolus",
+		numParam = 31,
+		stringParam = "Aeolus",
+	},
 	{
 		name = "FSBomber",
 		numParam = 18,

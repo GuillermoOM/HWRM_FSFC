@@ -30,12 +30,13 @@ NewShipType.DisplayFamily = "Utility"
 NewShipType.AutoFormationFamily = "Fighter"
 NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
-setSupplyValue(NewShipType, "Utility", 1.0)
-setSupplyValue(NewShipType, "Probe", 1.0)
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
+
+setSupplyValue(NewShipType, "Utility", 1.0)
+setSupplyValue(NewShipType, "Probe", 1.0)
 
 --------------------------------------------------	
 --- Construction	
@@ -151,14 +152,14 @@ NewShipType.queueFormation = "n_delta"
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 0
-NewShipType.neutralValue = 8
-NewShipType.antiFighterValue = 8
-NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 8
+NewShipType.fighterValue=0
+NewShipType.corvetteValue=0
+NewShipType.frigateValue=0
+NewShipType.neutralValue=0
+NewShipType.antiFighterValue=0
+NewShipType.antiCorvetteValue=0
+NewShipType.antiFrigateValue=0
+NewShipType.totalValue=0
 
 --------------------------------------------------
 --- Damage & Death

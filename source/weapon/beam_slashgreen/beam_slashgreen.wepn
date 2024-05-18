@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "Beam_SlashGreen", "Normal", 0, 7000, 0, 5.0, 3, 0, 30, 0, 1, 10,
-    0, 0, 1, 0, 1, 1, 0.01, "Normal", 0, 0, 5000)
+    0, 0, 1, 1, 1, 1, 0.01, "Normal", 0, 0, 5000)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 8450, 8450, "")
 
