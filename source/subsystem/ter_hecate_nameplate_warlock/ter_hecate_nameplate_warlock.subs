@@ -1,0 +1,43 @@
+-- LuaDC version 0.9.20
+-- 2014-01-20 22:40:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "GTD Warlock"
+--NewShipType.displayedName = "GTD Bastion \nGTD Orion"
+NewSubSystemType.sobDescription = "GTD Warlock"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 9000
+NewSubSystemType.regentime = 200
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.68
+NewSubSystemType.selectionLimit = 0
+NewSubSystemType.preciseATILimit = 0
+NewSubSystemType.selectionPriority = 0
+NewSubSystemType.type = "System"
+NewSubSystemType.typeString = "Nameplate"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 90
+NewSubSystemType.activateHealthPercentage = 0.5
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 90
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+NewSubSystemType.innate = 1
+LoadHODFile(NewSubSystemType, 1)
+NewSubSystemType.BuildFamily = "SubSystem_Ter"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
