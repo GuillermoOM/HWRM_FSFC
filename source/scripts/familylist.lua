@@ -766,6 +766,11 @@ unitcapsFamily =
 		stringParam = "$2405",
 
 	},
+	{
+		name = "Ares",
+		numParam = 11,
+		stringParam = "GTF Ares",
+	},
 
 	-- hw1 fighters
 	{
@@ -834,6 +839,18 @@ unitcapsFamily =
 		numParam = 28,
 		stringParam = "$2121",
 	},
+
+	{
+		name = "FSBomber",
+		numParam = 24,
+		stringParam = "Bombers",
+	},
+	{
+		name = "ArtemisDH",
+		numParam = 25,
+		stringParam = "GTB Artemis D.H.",
+	},
+
 	{
 		name = "Frigate",
 		numParam = 30,
@@ -856,6 +873,21 @@ unitcapsFamily =
 		numParam = 33,
 		stringParam = "$2124",
 	},
+
+
+	{
+		name = "Cruiser",
+		numParam = 34,
+		stringParam = "Cruisers",
+
+	},
+	{
+		name = "Aeolus",
+		numParam = 35,
+		stringParam = "GTC Aeolus",
+	},
+
+
 	{
 		name = "Capital",
 		numParam = 40,
@@ -925,6 +957,15 @@ unitcapsFamily =
 		numParam = 65,
 		stringParam = "$2133",
 	},
+
+
+	{
+		name = "AWACS",
+		numParam = 66,
+		stringParam = "GTC Charybdis",
+	},
+
+
 	-- Resource	
 	{
 		name = "Resource",
@@ -1041,7 +1082,17 @@ unitcapsFamily =
 		numParam = 1000,
 	},
 	{
+		name = "LayoutBomber",
+		show = "Never",
+		numParam = 1000,
+	},
+	{
 		name = "LayoutFrigate",
+		show = "Never",
+		numParam = 1000,
+	},
+	{
+		name = "LayoutCruiser",
 		show = "Never",
 		numParam = 1000,
 	},
@@ -1057,49 +1108,6 @@ unitcapsFamily =
 	},
 	{
 		name = "LayoutResource",
-		show = "Never",
-		numParam = 1000,
-	},
-
-	-- Extras
-	{
-		name = "AWACS",
-		numParam = 61,
-		stringParam = "AWACS",
-	},
-	{
-		name = "Aeolus",
-		numParam = 31,
-		stringParam = "Aeolus",
-	},
-	{
-		name = "FSBomber",
-		numParam = 18,
-		stringParam = "Bomber",
-	},
-	{
-		name = "Ares",
-		numParam = 12,
-		stringParam = "GTF Ares",
-	},
-	{
-		name = "ArtemisDH",
-		numParam = 19,
-		stringParam = "GTB Artemis D.H.",
-	},
-	{
-		name = "Cruiser",
-		numParam = 30,
-		stringParam = "Cruiser",
-
-	},
-	{
-		name = "LayoutBomber",
-		show = "Never",
-		numParam = 1000,
-	},
-	{
-		name = "LayoutCruiser",
 		show = "Never",
 		numParam = 1000,
 	},
