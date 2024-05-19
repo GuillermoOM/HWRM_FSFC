@@ -355,10 +355,10 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "gun_terbigturret", "Weapon_01", "Fire1")
-StartShipWeaponConfig(NewShipType, "gun_terbigturret", "Weapon_02", "Fire2")
-StartShipWeaponConfig(NewShipType, "gun_terbigturret", "Weapon_03", "Fire3")
-StartShipWeaponConfig(NewShipType, "gun_terbigturret", "Weapon_04", "Fire4")
+StartShipWeaponConfig(NewShipType, "gun_terbig_turret", "Weapon_01", "Fire1")
+StartShipWeaponConfig(NewShipType, "gun_terbig_turret", "Weapon_02", "Fire2")
+StartShipWeaponConfig(NewShipType, "gun_terbig_turret", "Weapon_03", "Fire3")
+StartShipWeaponConfig(NewShipType, "gun_terbig_turret", "Weapon_04", "Fire4")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_05", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_06", "")
 StartShipWeaponConfig(NewShipType, "beam_AABlue", "Weapon_07", "")
