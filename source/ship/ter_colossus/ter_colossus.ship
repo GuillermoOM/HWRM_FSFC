@@ -41,7 +41,7 @@ NewShipType.ArmourFamily = "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Mothership", 1.0)
+setSupplyValue(NewShipType, "LayoutBattleCruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	
