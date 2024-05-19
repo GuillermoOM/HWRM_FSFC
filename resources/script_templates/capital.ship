@@ -114,8 +114,6 @@ NewShipType.slideMoveRange = 350
 
 NewShipType.relativeMoveFactor = 1
 
-NewShipType.useEngagementRanges = 1
-
 --------------------------------------------------	
 --- Swaying	
 --------------------------------------------------	

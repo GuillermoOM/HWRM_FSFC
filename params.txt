@@ -48,7 +48,7 @@
 -Spawn_Rot_7=0,90,0
 -Spawn_Team_7=0
 
--Spawn_Ship_8=shi_cain
+-Spawn_Ship_8=ter_deimos
 -Spawn_Pos_8=-2000,-100,0
 -Spawn_Rot_8=0,90,0
 -Spawn_Team_8=0

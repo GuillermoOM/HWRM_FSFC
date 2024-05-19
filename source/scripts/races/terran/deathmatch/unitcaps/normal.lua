@@ -18,6 +18,7 @@ supplyShow("FSBomber", "Always");
 supplyIndent("Ares", 1);
 supplyIndent("ArtemisDH", 1);
 supplyIndent("Aeolus", 1);
+supplyIndent("AWACS", 1);
 
 supplyShow("LayoutBomber", "Never");
 supplyShow("LayoutCruiser", "Never");
