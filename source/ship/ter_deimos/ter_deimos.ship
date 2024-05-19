@@ -46,8 +46,8 @@ setSupplyValue(NewShipType, "Deimos", 1.0)
 --------------------------------------------------	
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
-NewShipType.buildCost = 1
-NewShipType.buildTime = 1
+NewShipType.buildCost = 3000
+NewShipType.buildTime = 110
 NewShipType.buildPriorityOrder = 20
 
 setConcurrentBuildLimit(NewShipType, 0, 1)
