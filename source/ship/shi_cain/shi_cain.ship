@@ -11,7 +11,7 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = "SC Cain"
-NewShipType.sobDescription = "Strike Cruiser"
+NewShipType.sobDescription = "Light Cruiser"
 
 --------------------------------------------------	
 --- Main Ship Data	
