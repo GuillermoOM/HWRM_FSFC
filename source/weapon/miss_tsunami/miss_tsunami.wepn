@@ -18,7 +18,7 @@ setPenetration(NewWeaponType, 30, 1,
     { PlanetKillerArmour = 0, },
     { MineArmour = 1, },
     { ChunkArmour = 1, },
-    { TorpedoArmour = 0, })
+    { TorpedoArmor = 0, })
 
 setAccuracy(NewWeaponType, 1,
     { Fighter = 0, },

@@ -26,28 +26,28 @@ NewShipType.unavailableWhenCaptured = 0
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Ter"
-NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "SuperCap"
+NewShipType.AttackFamily = "SmallCapitalShip"
+NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "Capital"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
-NewShipType.ArmourFamily = "HeavyArmour"
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour")
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Destroyer", 1.0)
+setSupplyValue(NewShipType, "Deimos", 1.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
-NewShipType.buildCost = 3000
-NewShipType.buildTime = 110
+NewShipType.buildCost = 1
+NewShipType.buildTime = 1
 NewShipType.buildPriorityOrder = 20
 
 setConcurrentBuildLimit(NewShipType, 0, 1)
@@ -319,8 +319,8 @@ NewShipType.downLOD = 30015
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
-NewShipType["alternativeHyperspaceV"] = "hyperspace_gate_small"
-NewShipType["alternativeHyperspaceA"] = "etg/misc/small_warp"
+NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
+NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
 
 --------------------------------------------------

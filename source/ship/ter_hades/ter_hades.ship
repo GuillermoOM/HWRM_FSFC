@@ -1,5 +1,7 @@
 --------------------------------------------------
---- Created with Homeworld 2 Ship Editor 1.2.1
+--- Base Template of a ship with all variables and functions organized by type
+--- Variables: https://github.com/HWRM/KarosGraveyard/wiki/Variable;-Ship
+--- Functions: https://github.com/HWRM/KarosGraveyard/wiki/Scope;-Ship
 --------------------------------------------------
 
 NewShipType = StartShipConfig()
@@ -15,12 +17,8 @@ NewShipType.sobDescription = "Super Destroyer"
 --- Main Ship Data	
 --------------------------------------------------	
 
-NewShipType.controllerType = "Ship"
-NewShipType.militaryUnit = 1
 NewShipType.isTransferable = 0
-NewShipType.addedUnitCaps = 101
-NewShipType.mass = 2000000
-NewShipType.collisionMultiplier = 1
+NewShipType.unavailableWhenCaptured = 0
 
 --------------------------------------------------
 --- Families
@@ -29,27 +27,31 @@ NewShipType.collisionMultiplier = 1
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Ter"
 NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "Shipyard"
-NewShipType.AvoidanceFamily = "SuperPriority"
+NewShipType.DockFamily = "BattleCruiser"
+NewShipType.AvoidanceFamily = "MotherShip"
 NewShipType.DisplayFamily = "Capital"
-NewShipType.AutoFormationFamily = "SuperCap"
+NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
-NewShipType.ArmourFamily = "HeavyArmour"
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour")
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Battlecruiser", 1.0)
+setSupplyValue(NewShipType, "Hades", 1.0)
+setSupplyValue(NewShipType, "LayoutBattleCruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 20000
 NewShipType.buildTime = 280
 NewShipType.buildPriorityOrder = 40
+
+setConcurrentBuildLimit(NewShipType, 0, 1)
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -60,7 +62,6 @@ NewShipType.regentime = 1790
 NewShipType.minRegenTime = 1790
 NewShipType.sideArmourDamage = 1.2
 NewShipType.rearArmourDamage = 1.2
-
 
 --------------------------------------------------	
 --- Shields
@@ -83,19 +84,25 @@ NewShipType.detectionStrength = 1
 --- Movement	
 --------------------------------------------------	
 
+NewShipType.mass = 2000000
+
 NewShipType.thrusterMaxSpeed = 20
-NewShipType.mainEngineMaxSpeed = 80
-NewShipType.rotationMaxSpeed = 3.5
 NewShipType.thrusterAccelTime = 20
 NewShipType.thrusterBrakeTime = 10
+
+NewShipType.mainEngineMaxSpeed = 80
 NewShipType.mainEngineAccelTime = 20
 NewShipType.mainEngineBrakeTime = 10
+
+NewShipType.rotationMaxSpeed = 3.5
 NewShipType.rotationAccelTime = 10
 NewShipType.rotationBrakeTime = 5
 
 --------------------------------------------------	
 --- Advanced Movement	
 --------------------------------------------------	
+
+NewShipType.controllerType = "Ship"
 
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 30
@@ -105,17 +112,8 @@ NewShipType.maxBankingAmount = 10
 NewShipType.descendPitch = 50
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
+
 NewShipType.relativeMoveFactor = 1
-NewShipType.useEngagementRanges = 1
-
---------------------------------------------------	
---- Special Flight Maneuvers	
---------------------------------------------------	
-
---no maneuvers--
---no maneuvers--
---no maneuvers--
---no maneuvers--
 
 --------------------------------------------------	
 --- Swaying	
@@ -134,6 +132,7 @@ NewShipType.swayRotateFactor = 0
 
 NewShipType.defaultStance = "Neutral" -- Agressive, Neutral or Evasive
 NewShipType.defaultROE = "Defensive"  -- Offensive, Defensive, Passive
+
 setTacticsMults(NewShipType, "MAXSPEED", 0.85, 1.10, 1.0)
 setTacticsMults(NewShipType, "ENGINEACCEL", 0.85, 1.0, 1.0)
 setTacticsMults(NewShipType, "ENGINEBRAKE", 1.15, 1.0, 1.0)
@@ -154,31 +153,31 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --------------------------------------------------	
 
 NewShipType.paradeData = "ter_parade"
-NewShipType.SquadronSize = 1
-NewShipType.passiveFormation = "dockline"
-NewShipType.defensiveFormation = "broad"
-NewShipType.aggressiveFormation = "delta"
+
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 
 --------------------------------------------------
 --- Launching
 --------------------------------------------------
 
-NewShipType.launchTimeBeforeStart = 2.0
-NewShipType.launchFormation = "Delta"
-NewShipType.launchNrOfShipsInDockFormation = 1
+addAbility(NewShipType, "CanLaunch")
 NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
 
 --------------------------------------------------
 --- Docking
 --------------------------------------------------
 
-NewShipType.ignoreRaceWhenDocking = 0
-NewShipType.dontDockWithOtherRaceShips = 1
-NewShipType.queueFormation = "Dockline"
-NewShipType.dockTimeBeforeStart = 2
-NewShipType.dockFormation = "Delta"
-NewShipType.dockNrOfShipsInDockFormation = 1
+addAbility(NewShipType, "CanDock", 1, 0)
 NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = "delta"
+NewShipType.queueFormation = "dockline"
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -186,12 +185,12 @@ NewShipType.dockTimeBetweenTwoFormations = 1
 
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 160
-NewShipType.neutralValue = 60
+NewShipType.frigateValue = 80
+NewShipType.neutralValue = 30
 NewShipType.antiFighterValue = 0
-NewShipType.antiCorvetteValue = 10
-NewShipType.antiFrigateValue = 120
-NewShipType.totalValue = 95
+NewShipType.antiCorvetteValue = 5
+NewShipType.antiFrigateValue = 60
+NewShipType.totalValue = 110
 
 --------------------------------------------------
 --- Damage & Death
@@ -200,8 +199,8 @@ NewShipType.totalValue = 95
 NewShipType.dustCloudDamageTime = 280
 NewShipType.nebulaDamageTime = 800
 
-NewShipType.battleScarMaxTriBase = 175
-NewShipType.battleScarMaxTriInc = 250
+NewShipType.collisionMultiplier = 1
+
 NewShipType.battleScarCoverage = 4
 NewShipType.battleScarBudgetLow = 1200
 NewShipType.battleScarBudgetNext = 1800
@@ -210,18 +209,17 @@ NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0.1
-NewShipType.trailLinger = 2
 
 --------------------------------------------------
 --- Explosion Damage
 --------------------------------------------------
 
-NewShipType.explosiveDamageOnDeath = 42000
-NewShipType.explosiveScuttleDamageOnDeath = 126000
-NewShipType.maxFalloffForce = 400
-NewShipType.minFalloffDamageDist = 420
-NewShipType.maxFalloffDamageDist = 1400
-NewShipType.maxFalloffScuttleDamageDist = 2100
+NewShipType.minFalloffDamageDist = 1450
+NewShipType.maxFalloffDamageDist = 1450 * 1.5
+NewShipType.maxFalloffScuttleDamageDist = 1450 * 3
+NewShipType.explosiveScuttleDamageOnDeath = 3302 * 3
+NewShipType.maxFalloffForce = 500 * 10
+NewShipType.explosiveDamageOnDeath = 660 * 3
 NewShipType.radiusDamageEvadeMod = 1.1
 
 --------------------------------------------------
@@ -238,35 +236,17 @@ NewShipType.tumbleSpecialDynamicX = 1
 NewShipType.tumbleSpecialDynamicY = 2
 NewShipType.tumbleSpecialDynamicZ = 1
 
---------------------------------------------------
---- Debris
---------------------------------------------------
-
--- SpawnSalvageOnDeath(NewShipType,"fed_TNG_galaxy_chunk1",1, 0.30, 0,0,0, 0,0,0,0, 0,0,0,0.5, -10,-10,-10,10, 0,0,0,0);
-
---------------------------------------------------
---- Random Targets
---------------------------------------------------
-
-NewShipType.useTargetRandom = 1
-NewShipType.targetRandomPointXMin = -0.2
-NewShipType.targetRandomPointXMax = 0.2
-NewShipType.targetRandomPointYMin = -0.1
-NewShipType.targetRandomPointYMax = 0.1
-NewShipType.targetRandomPointZMin = -0.5
-NewShipType.targetRandomPointZMax = 0.9
-
 --------------------------------------------------	
 --- Layout Boundary	
 --------------------------------------------------	
 
--- NewShipType.useLayoutBounds = 0
--- NewShipType.layoutBoundX = 696
--- NewShipType.layoutBoundY = 696
--- NewShipType.layoutBoundZ = 978
--- NewShipType.layoutCenterX = 0
--- NewShipType.layoutCenterY = 0
--- NewShipType.layoutCenterZ = 0
+setTargetBox(NewShipType, 0, -0.4, -0.25, -0.85, 0.4, 0.1, 1);
+setTargetBox(NewShipType, 1, -0.25, -0.6, 0.75, 0.25, -0.25, 0.9);
+setTargetBox(NewShipType, 2, -0.4, 0.8, -0.25, 0.4, 1, 0);
+setTargetBox(NewShipType, 3, 0.6, 0.2, -1, 1, 0.45, -0.75);
+setTargetBox(NewShipType, 4, -1, 0.2, -1, -0.6, 0.45, -0.75);
+setTargetBox(NewShipType, 5, -1, -0.65, -1, -0.6, -0.4, -0.75);
+setTargetBox(NewShipType, 6, 0.6, -0.65, -1, 1, -0.4, -0.75);
 
 --------------------------------------------------	
 --- Selection	
@@ -275,9 +255,10 @@ NewShipType.targetRandomPointZMax = 0.9
 NewShipType.selectionLimit = 150000
 NewShipType.preciseATILimit = 7000
 NewShipType.selectionPriority = 75
+NewShipType.militaryUnit = 1
 
 --------------------------------------------------	
---- Tactical Icon	
+--- Tactical Overlay Icon	
 --------------------------------------------------	
 
 NewShipType.TOIcon = "Arrow"
@@ -295,10 +276,11 @@ NewShipType.TOGroupMergeSize = 0
 --- Overlays	
 --------------------------------------------------	
 
-NewShipType.healthBarStyle = 2
 NewShipType.mouseOverMinFadeSize = 0.045
 NewShipType.mouseOverMaxFadeSize = 0.1
--- NewShipType.SMRepresentation = "HardDot"
+
+NewShipType.healthBarStyle = 2
+
 NewShipType.SMRepresentation = "Mesh"
 NewShipType.SMHighlightDistMin = 15000
 NewShipType.SMHighlightDistMax = 25000
@@ -307,12 +289,16 @@ NewShipType.SMHighlightDistMax = 25000
 --- Rendering	
 --------------------------------------------------	
 
+NewShipType.AlwaysInRenderList = 0
 NewShipType.meshRenderLimit = 195000000
 NewShipType.dotRenderLimit = 10
+
+NewShipType.visibleInSecondary = 1
+
 NewShipType.goblinsStartFade = 10000
 NewShipType.goblinsOff = 15000
-NewShipType.minimumZoomFactor = 0.5
 
+NewShipType.minimumZoomFactor = 0.5
 
 --------------------------------------------------
 --- Non linear Scaling
@@ -343,34 +329,34 @@ NewShipType["alternativeHyperspaceTime"] = 12
 --------------------------------------------------
 --- Abilities
 --------------------------------------------------
+
 addAbility(NewShipType, "MoveCommand", 1, 0)
-addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "ParadeCommand", 1)
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 800, 1600, 0, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2,
-    "Munition, Mothership, BigCapitalShip, SmallCapitalShip, Capturer, Frigate", "BroadSide",
+addAbility(NewShipType, "WaypointMove")
+addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 800, 1600, 0, 0)
+addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 8, 0)
+addAbility(NewShipType, "ShipHold", 1, 1000, 28, "rallypoint", "Fighter, Corvette, Utility", 60)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
+    "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility,,,,, Corvette, Corvette_hw1, Fighter, Fighter_hw1",
+    "BroadSide",
     { Fighter = "JustShoot" },
     { Fighter_hw1 = "JustShoot" },
     { Corvette = "JustShoot" },
     { Corvette_hw1 = "JustShoot" },
-    { Munition = "MoveToTargetAndShoot" },
-    { SubSystem = "MoveToTargetAndShoot" });
+    { Munition = "JustShoot" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "ShipHold", 1, 1000, 28, "rallypoint", "Fighter, Corvette, Utility", 60)
-addAbility(NewShipType, "CanDock", 1, 0)
-addAbility(NewShipType, "CanLaunch")
 addAbility(NewShipType, "CanBeCaptured", 300, 0.1)
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 800, 1600, 0, 0)
-addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 8, 0)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CanBuildShips", 1,
     "Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter",
     "Utility, Fighter, Bomber, Cruiser, Capital, Platform")
 
 --------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
 LoadModel(NewShipType, 1)
+-- If you want to load the model from another ship
+-- LoadSharedModel(NewShipType, "Hgn_AssaultCorvette")
 --------------------------------------------------
-
 
 --------------------------------------------------
 --- Weapons
@@ -413,28 +399,20 @@ StartShipHardPointConfig(NewShipType, "StarboardBeam", "Weapon_Turret18", "Weapo
 --- Latch Points
 --------------------------------------------------
 
-
-
---------------------------------------------------
---- Multiplier
---------------------------------------------------
-
+loadLatchPointList(NewShipType, "CapCap", "CapturePoint0", "CapturePoint1", "CapturePoint2", "CapturePoint3",
+    "CapturePoint5");
+loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2");
 
 --------------------------------------------------
 --- Addendum
 --------------------------------------------------
+
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanSuperCapital", "", 3, "", "Root")
 
---------------------------------------------------
---- Da Shader Things
---------------------------------------------------
 
 --------------------------------------------------
---- Engine Burn
+--- Engines
 --------------------------------------------------
 
+NewShipType.trailLinger = 2
 setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 700)
-
---------------------------------------------------
---- Custom fields
---------------------------------------------------
