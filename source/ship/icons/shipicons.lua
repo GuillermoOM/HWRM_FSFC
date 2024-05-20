@@ -3096,6 +3096,20 @@ Ter_Hecate =
 	},
 }
 
+Ter_faustus =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\ter_faustus.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 680, 340, },
+		stretchOnDraw = 1,
+	},
+}
+
+
 -- Weapons
 Wep_avenger =
 {
@@ -3321,15 +3335,15 @@ shi_lilithlred = shi_cainsred
 shi_cainheavylaser = shi_cainsred
 shi_lilithheavylaser = shi_cainsred
 
-Ter_faustus =
+col_beam =
 {
-	LargeIcon =
-	{
-		texture = "DATA:\\Ship\\Icons\\ter_faustus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 680, 340, },
-		stretchOnDraw = 1,
-	},
+    SmallIcon =
+    {
+        texture = "DATA:\\Ship\\Icons\\ter_colbeam.tga",
+        textureUV_TL =
+        { 0, 0, },
+        textureUV_WH =
+        { 96, 72, },
+        stretchOnDraw = 1,
+    },
 }
