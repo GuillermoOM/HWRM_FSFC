@@ -44,6 +44,7 @@ Platform = 10
 Megalith = 11
 Flagship = 12
 AWACS = 13
+Colossus = 14
 
 -- Number of Actors per Actor type
 NumAllPilots = 5
@@ -72,6 +73,7 @@ NameTerCruiser = "TerCruiser_"
 NameTerAwacs = "TerAwacs_"
 NameTerCapital = "TerCapital_"
 NameTerCommand = "TerCommand_"
+NameTerColossus = "TerColossus_"
 
 NameShiCommand = "Shi_"
 
@@ -87,6 +89,7 @@ Taiidan = 6
 
 Terran = 10
 Shivan = 11
+Vasudan = 12
 
 function raceHelper()
 	if (currentRace == Vaygr) then
@@ -105,13 +108,22 @@ end
 function getType(shipname)
 	--first takes care of these special cases for which we don't want to use the AttackFamily
 
+	familyName = "" .. getFamily(shipname)
+	shipnameU = strupper(shipname)
+
 	-- print("GETTING TYPE for SHIP: "..shipname.. " with FAMILY: "..familyName .. " Of Race: " .. currentRace)
 
 	if (shipname == 'Hgn_MotherShip' or shipname == 'Vgr_MotherShip') then
 		return Flagship
 	end
 
-	shipnameU = strupper(shipname)
+	if (shipname == 'ter_colossus' or shipname == 'vas_colossus') then
+		return Colossus
+	end
+
+	if (shipname == 'ter_charybdis' or shipname == 'vas_colossus') then
+		return AWACS
+	end
 
 	if ((strfind(shipnameU, "PLATFORM") ~= nil) or (strfind(shipnameU, "TURRET") ~= nil)) then
 		return Platform
@@ -132,8 +144,6 @@ function getType(shipname)
 	if (strfind(shipnameU, "AWACS") ~= nil) then
 		return AWACS
 	end
-
-	familyName = "" .. getFamily(shipname)
 
 	if (familyName == "CAPITAL" or familyName == "SUPERCAP" or familyName == "SMALLCAPITALSHIP" or familyName == "BIGCAPITALSHIP") then
 		return Capital
@@ -182,6 +192,8 @@ function GiveFSCommand(commandname, shiptype)
 	if currentRace == Terran then
 		if shiptype == AWACS then
 			playSpeechActor(commandname, NameTerAwacs, NumCapPilots, Frequency_Command)
+		elseif shiptype == Colossus then
+			playSpeechActor(commandname, NameTerColossus, NumCapPilots, Frequency_Command)
 		elseif shiptype == Frigate then
 			playSpeechActor(commandname, NameTerCruiser, NumCapPilots, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
@@ -231,7 +243,7 @@ function CommandWayPointMoveGiven(shipname, targetname)
 		playSpeechActor("Command_MoverSelected", NameAllPilot, 1, Frequency_Command)
 		return
 	end
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Acknowledge", shiptype)
 		return
 	end
@@ -251,7 +263,7 @@ function CommandCancelOrder(shipname, prevOrders)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Acknowledge", shiptype)
 	elseif (prevOrders == AttackOrder) then
 		if (shiptype == Flagship and genericShipName ~= "Dreadnaught") then
@@ -293,13 +305,13 @@ function CommandResourceGiven(shipname, targetname)
 	shiptype = getType(shipname)
 
 	if (targetname == "StaticContainer") then
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			GiveFSCommand("COMMAND_Acknowledge", shiptype)
 		else
 			playSpeechActor("COMMAND_ResourceSalvage", NameSupportPilot, NumSupportPilots, Frequency_Command)
 		end
 	else
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			GiveFSCommand("COMMAND_Acknowledge", shiptype)
 		else
 			playSpeechActor("COMMAND_ResourceCollectorHarvest", NameSupportPilot, NumSupportPilots, Frequency_Command)
@@ -334,7 +346,7 @@ function CommandCaptureGiven(shipname, targetname)
 	if (shipname == "Hgn_MarineFrigate") then
 		playSpeechActor("COMMAND_MarineFrigate_Capture", NameMarinePilot, NumMarinePilots, Frequency_Command)
 	else
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			GiveFSCommand("COMMAND_DockGiven", shiptype)
 		else
 			playSpeechActor("COMMAND_INFILTRATORFRIGATE_CAPTURE", NameInfiltratorPilot, NumInfiltratorPilots,
@@ -374,7 +386,7 @@ function CommandAttackGiven(shipname, targetname, attackType)
 		shiptype .. "," .. targetShipType .. "," .. genericShipName)
 
 	if (attackType == 0 or attackType == 3) then
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			if targetShipType == "SubSystem" and genericTargetName == "SUB" and targetname ~= "SUB_WEAPONS" then
 				GiveFSCommand("Command_Disarm", shiptype)
 			elseif targetShipType == "SubSystem" then
@@ -403,7 +415,7 @@ function CommandAttackGiven(shipname, targetname, attackType)
 			end
 		end
 	elseif (attackType == 1) then
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			GiveFSCommand("COMMAND_ForceAttack", shiptype)
 		else
 			if (shiptype == Flagship and genericShipName ~= "Dreadnaught") then
@@ -413,7 +425,7 @@ function CommandAttackGiven(shipname, targetname, attackType)
 			playSpeechActor("COMMAND_ForceAttackFriendly", NameCapPilot, NumCapPilots, Frequency_Command)
 		end
 	elseif (attackType == 2) then
-		if currentRace > Taiidan then
+		if currentRace >= 10 then
 			GiveFSCommand("COMMAND_ForceAttack", shiptype)
 		else
 			if (targetShipType == Resource) then
@@ -474,7 +486,7 @@ function CommandHyperspaceGiven(shipname, code)
 
 	shiptype = getType(shipname)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Jump", shiptype)
 	else
 		if (shiptype == Flagship) then
@@ -499,7 +511,7 @@ function CommandCombatMan(shipname, targetname)
 		return
 	end
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Attack", shiptype)
 	else
 		if (shiptype == Capital) then
@@ -519,7 +531,7 @@ function CommandMoveAttackGiven(shipname, targetname)
 		return
 	end
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Attack", shiptype)
 	else
 		if (shiptype == Capital) then
@@ -538,7 +550,7 @@ function CommandLaunchGiven(shipname, targetname)
 
 	shipFamily = getFamily(shipname)
 	shiptype = getType(shipname)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Acknowledge", shiptype)
 	else
 		if (shipFamily == "FIGHTER" or shipFamily == "CORVETTE") then
@@ -566,7 +578,7 @@ function CommandGuardGiven(shipname, targetname)
 		return
 	end
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Acknowledge", shiptype)
 	else
 		if (shiptype == Capital) then
@@ -597,7 +609,7 @@ function CommandMoveGiven(shipname, targetnm)
 
 	genericShipName = strsub(shipname, 5)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Acknowledge", shiptype)
 	else
 		if (strfind(strupper(shipname), "PROBE") ~= nil) then
@@ -657,7 +669,7 @@ function CommandDockGiven(shipname, targetname)
 	--	playSpeechActor("COMMAND_StrikeCraftDock", NameFighterPilot, NumFighterPilots, Frequency_Command )
 	--	return
 	--end
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
 	else
 		if (genericShipName == "carrier") then
@@ -681,7 +693,7 @@ end
 
 function CommandParadeGiven(shipname, targetname)
 	shiptype = getType(shipname)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
 	else
 		if (shipname == "STRIKE") then
@@ -699,7 +711,7 @@ end
 
 function CommandRetireGiven(shipname, targetname)
 	local shiptype = getType(shipname)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
 	else
 		if (shiptype == Capital) then
@@ -836,8 +848,8 @@ function CommandShipsSelected(shipname)
 
 	familyName = getFamily(shipname)
 
-	if currentRace > Taiidan then
-		GiveFSCommand("COMMAND_Acknowledge", shiptype)
+	if currentRace >= 10 then
+		GiveFSCommand("COMMAND_Selected", shiptype)
 	else
 		if (familyName == "FRIGATE" or familyName == "CAPITAL" or familyName == "SUPERCAP") then
 			playSpeechActor("COMMAND_CAPITALSELECTED", NameCapPilot, NumCapPilots, Frequency_Command)
@@ -1042,7 +1054,7 @@ stdCMap["ter_orion"] = "STATUS_DestroyerConstructed_1"
 stdCMap["ter_hecate"] = "STATUS_DestroyerConstructed_1"
 stdCMap["ter_hades"] = "STATUS_SuperDestroyerConstructed_1"
 stdCMap["ntf_iceni"] = "STATUS_CorvetteConstructed_1"
-stdCMap["ter_colossus"] = "STATUS_ColossusConstructed_1"
+stdCMap["ter_colossus"] = "colossuscomplete"
 stdCMap["ter_hygeia"] = "STATUS_SupportConstructed_1"
 stdCMap["ter_argo"] = "STATUS_RepairConstructed_1"
 stdCMap["ter_poseidon"] = "STATUS_SentryBuilderConstructed_1"

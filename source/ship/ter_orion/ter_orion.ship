@@ -39,7 +39,7 @@ NewShipType.ArmourFamily = "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Carrier", 1.0)
+setSupplyValue(NewShipType, "Destroyer", 1.0)
 
 --------------------------------------------------	
 --- Construction	
@@ -50,7 +50,7 @@ NewShipType.buildCost = 12500
 NewShipType.buildTime = 215
 NewShipType.buildPriorityOrder = 40
 
-setConcurrentBuildLimit(NewShipType, 0, 1)
+setConcurrentBuildLimit(NewShipType,0,2);
 
 --------------------------------------------------	
 --- Health and Armour	

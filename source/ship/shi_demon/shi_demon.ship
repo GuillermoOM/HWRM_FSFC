@@ -56,6 +56,8 @@ NewShipType.buildCost = 1
 NewShipType.buildTime = 1
 NewShipType.buildPriorityOrder = 40
 
+setConcurrentBuildLimit(NewShipType,0,2);
+
 --------------------------------------------------	
 --- Health and Armour	
 --------------------------------------------------	

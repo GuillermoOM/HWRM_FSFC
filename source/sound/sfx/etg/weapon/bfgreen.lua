@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 version = 4
-volume = 0.8
-volumeRand = 1
+volume = 0.7
+volumeRand = 0.1
 maxPolyphony = 8
 envelope = 
     { 

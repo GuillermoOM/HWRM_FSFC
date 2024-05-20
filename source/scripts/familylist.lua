@@ -936,6 +936,11 @@ unitcapsFamily =
 		stringParam = "GTI Hades",
 	},
 	{
+		name = "Colossus",
+		numParam = 49,
+		stringParam = "GTVA Colossus",
+	},
+	{
 		name = "Platform",
 		numParam = 50,
 		stringParam = "$2117",

@@ -51,7 +51,7 @@ NewShipType.buildCost = 400
 NewShipType.buildTime = 25
 NewShipType.buildPriorityOrder = 10
 
-setConcurrentBuildLimit(NewShipType, 0, 2)
+
 
 --------------------------------------------------	
 --- Health and Armour	
