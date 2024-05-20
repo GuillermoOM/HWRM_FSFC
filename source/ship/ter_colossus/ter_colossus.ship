@@ -444,6 +444,6 @@ loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "TerranSupe
 --- Engines
 --------------------------------------------------
 
-NewShipType.trailLinger = 2
-setEngineBurn(NewShipType, 7, 1, 1, 200, 20, 1, 0.1, 1000)
+NewShipType.trailLinger = 3
+setEngineBurn(NewShipType, 17, 1, 1, 1000, 20, 1, 0, 1000)
 
