@@ -27,18 +27,20 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 - *NEW* Integration with HW ships on the same game
 - Terran Race:
-    - Almost all ships migrated
+    - All ships Migrated
     - Working fleet chatter
+    - AI (still WIP but can be tested)
 - Shivan Race:
-    - Currently available ships: Demon, Cain and some fighters
+    - Some ships available
+    - AI not working
+    - working fleet chatter
   
 ## Current Issues
 
-- AI For Terran Race doesn't work, it only grabs resources and does nothing else
-- Colossus has no fleet chatter
 - Audio Balancing
 - Weapons Balancing
 - Ship health Balancing
+- AI Still needs some improvements
 
 ## What's missing
 
@@ -46,7 +48,21 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 - Vasudan Race
 - Maps
 - Research
-- Some more weapons
 - Gametypes
+- Multiplayer
 - Ship's shield effects (Reaaaaally hard thing to do)
 - Proper subspace animation (also hard to do)
+
+## Current Roadmap
+1. Finish Polishing Terran Ships
+2. Finish Adding Shivan Ships
+3. Add AI to Shivans
+4. Enable Multiplayer
+5. Add Vasudan Race and Ships
+6. Add AI to Vasudans
+7. Work on Research
+8. Add FS Gametypes
+9. Add FS Levels
+10. Add Waves Gametype (From existing mod)
+11. Possibly add BP?
+12. More ideas soon...
