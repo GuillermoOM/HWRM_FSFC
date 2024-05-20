@@ -498,6 +498,7 @@ squadclass[eUselessShips] =
 	TAI_SALVAGECORVETTE,
 
 	TER_POSEIDON,
+	TER_FAUSTUS,
 }
 squadclass[eBattleCruiser] =
 {
