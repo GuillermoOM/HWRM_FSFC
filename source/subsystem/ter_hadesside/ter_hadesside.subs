@@ -25,7 +25,7 @@ NewSubSystemType.selectionLimit = 10000
 NewSubSystemType.preciseATILimit = 5000
 NewSubSystemType.selectionPriority = 37.5
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "beam_bfgreenturret"
+NewSubSystemType.typeString = "beam_bfgreen_turret"
 NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 90
 NewSubSystemType.activateHealthPercentage = 0.01
@@ -39,4 +39,4 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "TurretArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_bfgreenturret", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_bfgreen_turret", "Weapon_IonCan1", "Weapon_IonCan1")

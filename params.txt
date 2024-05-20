@@ -23,7 +23,7 @@
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=1
 
--Spawn_Ship_3=ter_hecate
+-Spawn_Ship_3=ter_colossus
 -Spawn_Pos_3=-8000,0,0
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0

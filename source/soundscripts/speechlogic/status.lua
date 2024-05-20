@@ -54,9 +54,11 @@ function GiveFSStatus(statusname, shiptype)
 			playSpeechActor(statusname, NameTerCruiser, NumCapPilots, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
 			playSpeechActor(statusname, NameTerCapital, NumCapPilots, Frequency_Command)
+		elseif shiptype == Colossus then
+			playSpeechActor(statusname, NameTerColossus, 1, Frequency_Command)
 		end
 	elseif (currentRace == Shivan) then
-		playSpeechActor(commandname, NameShiCommand, NumCapPilots, Frequency_Command)
+		playSpeechActor(statusname, NameShiCommand, NumCapPilots, Frequency_Command)
 	end
 end
 
@@ -67,7 +69,7 @@ function ChatterMisc(shipname, parm2, code)
 
 	genericshipname = strsub(shipname, 5)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_underattack", shiptype)
 	else
 		if (code == CD_MissileIncoming and shiptype == Capital) then -- only if the victim is a Capital ship
@@ -195,7 +197,7 @@ FC_OVERRIDE_DISTSQR = 2000
 
 function StatusUnderAttack(shipname, enemy, attackcode)
 	print("****** StatusUnderAttack: shipname, enemy, attackcode = {" ..
-	shipname .. "," .. enemy .. "," .. attackcode .. "}")
+		shipname .. "," .. enemy .. "," .. attackcode .. "}")
 
 
 	if (attackcode > FC_OVERRIDE_DISTSQR) then
@@ -221,7 +223,7 @@ function StatusUnderAttack(shipname, enemy, attackcode)
 	--check family
 	shiptype = getType(shipname)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_underattack", shiptype)
 	else
 		if (shiptype == Frigate) then
@@ -245,7 +247,7 @@ PassiveTactics = 2
 
 function StatusRetaliating(retaliatingShipName, currentTactics)
 	shiptype = getType(retaliatingShipName)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_arrival", shiptype)
 	else
 		if (currentTactics == AggressiveTactics) then
@@ -263,7 +265,7 @@ end
 
 function StatusUnderFireNeedOrders(underFireShipName, targetShipName, groupNumber)
 	shiptype = getType(underFireShipName)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_underattack", shiptype)
 	else
 		if (groupNumber == -1) then
@@ -332,7 +334,7 @@ function StatusAttackComplete(shipname, groupnum)
 	--	playSpeechActor("STATUS_StrikeCraftAttackComplete", g_default_frequency)
 	--end
 	--playSpeechActor("STATUS_ ATTACKCOMPLETE",NameAllPilot,NumAllPilots)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		shiptype = getType(shipname)
 		GiveFSStatus("Status_allclear", shiptype)
 	else
@@ -366,7 +368,7 @@ WorkingOnRepairs = 1
 FinishedRepairs = 2
 
 function StatusRepairs(shipname, targetName, repairStatus)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		shiptype = getType(shipname)
 		if (repairStatus == StartingRepairs) then
 			-- can't find this event in new speech
@@ -407,7 +409,7 @@ function StatusShipDestroyed(shipname, code)
 	--print("**** StatusShipDestroyed: genericshipname="..genericshipname)
 	--print("**** StatusShipDestroyed: shiptype ="..shiptype)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_death", shiptype)
 	else
 		if (genericshipname == "ResourceController") then
@@ -470,7 +472,7 @@ function StatusTakingLightDamage(shipname, healthpercentage)
 	genericShipName = strsub(shipname, 5)
 	shiptype = getType(shipname)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		if healthpercentage < .75 then
 			GiveFSStatus("status_lghtdmg", shiptype)
 		end
@@ -499,7 +501,7 @@ function StatusTakingHeavyDamage(shipname)
 
 	genericShipName = strsub(shipname, 5)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_critical", shiptype)
 	else
 		-- checking shipname b/c family(Mothership) returns "CAPITAL"
@@ -531,7 +533,7 @@ function StatusDamaged(shipname)
 
 	RAND_SWITCH = 1 - RAND_SWITCH
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_damaged", shiptype)
 	else
 		if (genericShipName == "SupportFrigate") then
@@ -587,7 +589,7 @@ end
 
 function StatusResources(shipname, actionType)
 	shiptype = getType(shipname)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		if actionType == 1 then --This is when the shit is exhausted and they are going to the next pocket.
 			GiveFSStatus("Status_idle", shiptype)
 		elseif actionType == 2 then --This is when the enemies show up at a resource pocket.
@@ -633,7 +635,7 @@ function StatusCriticallyDamaged(shipname)
 
 	--familyName = getFamily(shipname)
 	shiptype = getType(shipname)
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_critical", shiptype)
 	else
 		if (shiptype == Frigate or shiptype == Capital) then
@@ -927,7 +929,7 @@ function StatusHyperspaceExit(shipname)
 	genericshipname = strsub(shipname, 5)
 	shiptype = getType(shipname)
 
-	if currentRace > Taiidan then
+	if currentRace >= 10 then
 		GiveFSStatus("Status_backup", shiptype)
 	else
 		if (genericshipname == "MotherShip") then
