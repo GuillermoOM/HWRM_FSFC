@@ -650,5 +650,15 @@ build =
 		Description =
 		"<b>Description:</b> The GTFr Poseidon is the smaller of the two standard Terran military freighters. Though it carries only half as much cargo as the Triton, the Poseidon is more often chosen for dangerous missions. Its greater speed gives it better survivability on the front lines, as does the fact that it has four weapon turrets, compared to the Triton's two. When Allied Command sends supplies and munitions that have to get through, a Poseidon is usually chosen to transport them. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 4x Turret.",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_faustus",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 9,
+		DisplayedName = "GTSC Faustus - Science Vessel <c=12AB06>35s</c>",
+		Description =
+		"<b>Description:</b> The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research. However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships; hence, you will rarely find many of these anywhere near the front lines of battle. \n\n<b>Prerequisites:</b> Cruiser design \n\n<b>Armaments:</b> 6x Turret.",
+	},
 
 }

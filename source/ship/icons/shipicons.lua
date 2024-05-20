@@ -2510,121 +2510,121 @@ Shi_Demon =
 	},
 }
 
-Shi_Dragon = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_dragon.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 416, 208, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Dragon =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_dragon.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 416, 208, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_Mara = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_mara.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 320, 160, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Mara =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_mara.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 320, 160, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_scorpion = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_scorpion.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 600, 300, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_scorpion =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_scorpion.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 600, 300, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_Aeshma = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_aeshma.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 420, 210, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Aeshma =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_aeshma.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 420, 210, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_gorgon = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_gorgon.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 700, 350, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_gorgon =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_gorgon.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 700, 350, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_Nahema = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_nahema.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 408, 204, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Nahema =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_nahema.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 408, 204, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_Seraphim = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_seraphim.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 350, 175, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Seraphim =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_seraphim.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 350, 175, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_shaitan = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_shaitan.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 440, 220, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_shaitan =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_shaitan.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 440, 220, },
+		stretchOnDraw = 1,
+	},
 }
 
-Shi_Taurvi = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\shi_taurvi.tga", 
-        textureUV_TL = 
-            { 0, 0, }, 
-        textureUV_WH = 
-            { 340, 170, }, 
-        stretchOnDraw = 1, 
-	}, 
+Shi_Taurvi =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\shi_taurvi.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 340, 170, },
+		stretchOnDraw = 1,
+	},
 }
 
 Ter_Hades =
@@ -3320,3 +3320,16 @@ shi_cainsred =
 shi_lilithlred = shi_cainsred
 shi_cainheavylaser = shi_cainsred
 shi_lilithheavylaser = shi_cainsred
+
+Ter_faustus =
+{
+	LargeIcon =
+	{
+		texture = "DATA:\\Ship\\Icons\\ter_faustus.tga",
+		textureUV_TL =
+		{ 0, 0, },
+		textureUV_WH =
+		{ 680, 340, },
+		stretchOnDraw = 1,
+	},
+}

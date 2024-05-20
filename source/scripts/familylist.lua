@@ -979,6 +979,11 @@ unitcapsFamily =
 		numParam = 66,
 		stringParam = "GTC Charybdis",
 	},
+	{
+		name = "Faustus",
+		numParam = 67,
+		stringParam = "GTSc Faustus",
+	},
 
 
 	-- Resource	
