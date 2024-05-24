@@ -1,9 +1,9 @@
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_shivmegafunkturret", "Normal", 960, 2880, 0, 0, 0, 0, 1,
-    1, 1, 3.5, 0, 0, 1, 1, 75, 50, 0.1, "Normal", 1, 0, 0)
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "gun_shivmegafunk_turret", "Normal", 960, 2880, 0, 0, 0, 0,
+    1, 1, 1, 3.5, 0, 0, 1, 1, 75, 50, 0.1, "Normal", 1, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 390, 390, "")
 
-setAngles(NewWeaponType, 0, -180, 180, 0, 90)
+setAngles(NewWeaponType, 0, -180, 180, -7.5, 80)
 
 setMiscValues(NewWeaponType, 0, 1)
 
@@ -16,8 +16,9 @@ setPenetration(NewWeaponType, 15, 1,
     { TurretArmour = 1, },
     { ResArmour = 1, },
     { MoverArmour = 1, },
-    { PlanetKillerArmour = 0, },
+    { PlanetKillerArmour = 1, },
     { MineArmour = 1, },
+    { TorpedoArmor = 1, },
     { ChunkArmour = 1, })
 
 setAccuracy(NewWeaponType, 1,

@@ -1,9 +1,9 @@
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Missile", "Miss_Interceptor", "Normal", 40, 1900, 0, 0, 0, 2, 1, 0, 1,
+StartWeaponConfig(NewWeaponType, "Gimble", "Missile", "Miss_Interceptor", "Normal", 40, 1900, 0, 0, 0, 2, 1, 0, 1,
     4, 0, 0, 0, 0, 225, 225, 0.1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 180, 360, "")
 
-setAngles(NewWeaponType, 0, -80, 80, -80, 80)
+setAngles(NewWeaponType, 80, 0, 0, 0, 0)
 
 setMiscValues(NewWeaponType, 0, 0)
 
