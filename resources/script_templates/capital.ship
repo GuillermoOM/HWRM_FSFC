@@ -10,7 +10,7 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "GTD Orion"
+NewShipType.displayedName = "SD Demon"
 NewShipType.sobDescription = "Destroyer"
 
 --------------------------------------------------	
@@ -25,12 +25,12 @@ NewShipType.unavailableWhenCaptured = 0
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "SuperCap_Ter"
+NewShipType.BuildFamily = "SuperCap_Shi"
 NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "BattleCruiser"
 NewShipType.AvoidanceFamily = "BattleCruiser"
 NewShipType.DisplayFamily = "Capital"
-NewShipType.AutoFormationFamily = "CapShip"
+NewShipType.AutoFormationFamily = "SuperCap"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "HeavyArmour"
 
@@ -39,27 +39,27 @@ NewShipType.ArmourFamily = "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Carrier", 1.0)
+setSupplyValue(NewShipType, "Destroyer", 1.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
-NewShipType.buildCost = 12500
+NewShipType.buildCost = 11500
 NewShipType.buildTime = 215
 NewShipType.buildPriorityOrder = 40
 
-setConcurrentBuildLimit(NewShipType,0,2);
+setConcurrentBuildLimit(NewShipType, 0, 2);
 
 --------------------------------------------------	
 --- Health and Armour	
 --------------------------------------------------	
 
-NewShipType.maxhealth = 400000
+NewShipType.maxhealth = 200000
 NewShipType.regentime = 1265
 NewShipType.minRegenTime = 1265
-NewShipType.sideArmourDamage = 1.0
+NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1.2
 
 --------------------------------------------------	
