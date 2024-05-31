@@ -61,7 +61,7 @@ NewSubSystemType.sobDieTime=1
 --- Selection	
 --------------------------------------------------	
 
-NewSubSystemType.selectionLimit = 0
+NewSubSystemType.selectionLimit = 10000
 NewSubSystemType.preciseATILimit=5000
 NewSubSystemType.selectionPriority=37.5
 

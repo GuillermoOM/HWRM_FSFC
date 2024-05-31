@@ -12,8 +12,6 @@ NewShipType = StartShipConfig()
 
 NewShipType.displayedName = "SC Lilith"
 NewShipType.sobDescription = "Heavy Cruiser"
-NewShipType.blobName = ""        -- ??
-NewShipType.blobNamePriority = 1 -- ??
 
 --------------------------------------------------	
 --- Main Ship Data	
@@ -29,26 +27,25 @@ NewShipType.unavailableWhenCaptured = 1
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Cruiser_Shi"
 NewShipType.AttackFamily = "Frigate"
-NewShipType.DockFamily = "Frigate"
+NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "Frigate"
-NewShipType.DisplayFamily = "Frigate"
+NewShipType.DisplayFamily = "Cruiser"
 NewShipType.AutoFormationFamily = "Frigate"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "MediumArmour"
-NewShipType.CombatFamily = "Frigate"
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Frigate", 2.0)
-setSupplyValue(NewShipType, "LayoutFrigate", 2.0)
+setSupplyValue(NewShipType, "Cruiser", 1.0)
+setSupplyValue(NewShipType, "LayoutCruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
-NewShipType.SquadronSize = 1
+NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 4000
 NewShipType.buildTime = 140
 NewShipType.buildPriorityOrder = 30

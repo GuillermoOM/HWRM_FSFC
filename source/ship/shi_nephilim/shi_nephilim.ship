@@ -40,7 +40,7 @@ NewShipType.CombatFamily="Corvette_Missile"
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Bomber", 5.0)
+setSupplyValue(NewShipType, "FSBomber", 5.0)
 setSupplyValue(NewShipType, "LayoutBomber", 5.0)
 
 --------------------------------------------------	
