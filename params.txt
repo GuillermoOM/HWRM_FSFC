@@ -8,47 +8,22 @@
 -Camera_Eye=2000,2000,2000
 -Spawn_Back=ez01
 
--Spawn_Ship_0=shi_demon
+-Spawn_Ship_0=ter_orion
 -Spawn_Pos_0=8000,0,0
 -Spawn_Rot_0=0,-90,0
 -Spawn_Team_0=1
 
--Spawn_Ship_1=shi_lilith
+-Spawn_Ship_1=ter_medusa
 -Spawn_Pos_1=2000,50,0
 -Spawn_Rot_1=0,-90,0
 -Spawn_Team_1=1
 
--Spawn_Ship_2=shi_lilith
+-Spawn_Ship_2=ter_ursa
 -Spawn_Pos_2=2000,-50,0
 -Spawn_Rot_2=0,-90,0
 -Spawn_Team_2=1
 
--Spawn_Ship_3=ter_colossus
+-Spawn_Ship_3=shi_ravana
 -Spawn_Pos_3=-8000,0,0
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
-
--Spawn_Ship_4=ter_artemis
--Spawn_Pos_4=-2000,50,0
--Spawn_Rot_4=0,90,0
--Spawn_Team_4=0
-
--Spawn_Ship_5=ter_apollo
--Spawn_Pos_5=-2000,-100,0
--Spawn_Rot_5=0,90,0
--Spawn_Team_5=0
-
--Spawn_Ship_6=shi_lilith
--Spawn_Pos_6=2000,0,0
--Spawn_Rot_6=0,-90,0
--Spawn_Team_6=1
-
--Spawn_Ship_7=ter_boanerges
--Spawn_Pos_7=-2000,-100,0
--Spawn_Rot_7=0,90,0
--Spawn_Team_7=0
-
--Spawn_Ship_8=ter_deimos
--Spawn_Pos_8=-2000,-100,0
--Spawn_Rot_8=0,90,0
--Spawn_Team_8=0

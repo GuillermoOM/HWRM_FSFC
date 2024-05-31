@@ -1,4 +1,4 @@
--- Hiigaran
+-- Shivan
 
 Number_Properties_Priority = 1.0
 
@@ -7,53 +7,52 @@ Number_Properties = {
 	cfg_race_index_sort = 11.0,
 	cfg_race_select_weight = 1.0,
 	cfg_race_is_random = 0.0,
-	
+
 	cfg_hyperspace_effect_time = 9.5,
-	cfg_buildable_subsystems = 1.0,
+	cfg_buildable_subsystems = 0.0,
 	cfg_advanced_research = 0.0,
 	cfg_bc_can_upgrade = 0.0,
 
 
 
--- 	cfg_build_by_ships = 0.0,
--- 	persona_build_ships_scalar = 1.0,
--- 	persona_build_ships_befull = 0.0,
--- 	persona_build_open_chan_adjust = 0.0,
--- 	persona_bigspender = 0.0,
+	cfg_build_by_ships = 0.0,
+	persona_build_ships_scalar = 1.0,
+	persona_build_ships_befull = 0.0,
+	persona_build_open_chan_adjust = 0.0,
+	persona_bigspender = 0.0,
 
--- -- Resource
+	-- -- Resource
 
--- 	persona_mil_2_collector_scale = 0.6,
-	
+	persona_mil_2_collector_scale = 0.6,
+
 	persona_class_demand_fighter = 0.5,
 	persona_class_demand_corvette = 0.25,
 	persona_class_demand_frigate = 0.0,
 
--- -- Military
+	-- -- Military
 
--- 	persona_comp_scale0 = 1,
--- 	persona_comp_scale1 = 1,
--- 	persona_comp_scale2 = 1,
--- 	persona_comp_scale3 = 1,
+	persona_comp_scale0 = 1,
+	persona_comp_scale1 = 1,
+	persona_comp_scale2 = 1,
+	persona_comp_scale3 = 1,
 
--- 	persona_group_scale = 1,
+	persona_group_scale = 1,
 
 
--- -- CPU Build Scale
+	-- -- CPU Build Scale
 
--- 	persona_demand_scale_fighters =5,
--- 	persona_demand_scale_corvettes = 3,
--- 	persona_demand_scale_frigates = 1,
+	persona_demand_scale_fighters = 5,
+	persona_demand_scale_corvettes = 3,
+	persona_demand_scale_frigates = 1,
 
--- 	persona_demand_adjusthi_fighters = 0.5,
--- 	persona_demand_adjustlo_fighters = -0.5,
+	persona_demand_adjusthi_fighters = 0.5,
+	persona_demand_adjustlo_fighters = -0.5,
 
--- 	persona_demand_adjusthi_corvettes = 0.5,
--- 	persona_demand_adjustlo_corvettes = -0.5,
+	persona_demand_adjusthi_corvettes = 0.5,
+	persona_demand_adjustlo_corvettes = -0.5,
 
--- 	persona_demand_adjusthi_frigates = 1.5,
--- 	persona_demand_adjustlo_frigates = 0.5,
-
+	persona_demand_adjusthi_frigates = 1.5,
+	persona_demand_adjustlo_frigates = 0.5,
 
 }
 
