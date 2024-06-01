@@ -223,6 +223,16 @@ build =
 		Description =
 		"<b>Description:</b> The SD Lucifer was a massive superdestroyer that led the Shivan armada in the Great War. No weapon in the allied arsenal could penetrate the Lucifer's shields. In the Altair system, Vasudan scientists uncovered ancient artifacts that explained how to track ships into subspace, where the Lucifer's shields would not function. A desperate mission to attack the Lucifer in subspace succeeded. But the explosion of the Lucifer collapsed the Sol jump node, severing all contact with Earth. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams, Bombardment Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Bombardment Beam, 10x Shivan Turret Laser, 3x Cluster Missile Launcher.",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_sathanas",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 119,
+		DisplayedName = "SJ Sathanas <c=12AB06>550s</c>",
+		Description =
+		"<b>Description:</b> Very little is known about the SJ Sathanas class. This juggernaut seems comparable in strength to the GTVA Colossus. All intelligence concerning the Sathanas has been classified level Upsilon. \n\n<b>Prerequisites:</b> Super Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 4x Super Heavy Beam, 1x Heavy Beam, 8x Anti-Fighter Beam, 10x Flak Turret (2x Triple Long Range), 24x Turret Laser, 4x Cluster Missile Launcher.",
+	},
 
 
 	-- Platforms --------------

@@ -358,9 +358,12 @@ StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Gun6", "")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "AWACS0", "Hardpoint_AWACS", "System", "Generic", "Indestructible", "ter_awacs_0", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "AWACS1", "Hardpoint_AWACS2", "System", "Generic", "Indestructible", "", "ter_awacs_1", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "AWACS2", "Hardpoint_AWACS3", "System", "Generic", "Indestructible", "", "ter_awacs_2", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "AWACS0", "Hardpoint_AWACS", "System", "Generic", "Indestructible", "ter_awacs_0",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "AWACS1", "Hardpoint_AWACS2", "System", "Generic", "Indestructible", "ter_awacs_1",
+    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "AWACS2", "Hardpoint_AWACS3", "System", "Generic", "Indestructible", "ter_awacs_2",
+    "", "", "", "", "", "", "", "")
 
 --------------------------------------------------
 --- Latch Points

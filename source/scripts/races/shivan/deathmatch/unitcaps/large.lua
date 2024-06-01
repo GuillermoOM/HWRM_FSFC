@@ -18,3 +18,6 @@ supplyLimit("LayoutBattleCruiser", 1);
 
 supplyLimit("Lucifer", 1);
 supplyIndent("Lucifer", 1);
+
+supplyLimit("Sathanas", 1);
+supplyIndent("Sathanas", 1);

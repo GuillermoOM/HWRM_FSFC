@@ -68,7 +68,7 @@ function DetermineSpecialDemand_Shivan()
 
 	
 	if ((GetNumCollecting() > 9 or GetRU() > 3500) and s_militaryPop > 15 and UnderAttackThreat() < -75) then
-		ShipDemandAdd(SHI_DEMON, 2.5)
+		ShipDemandAdd(SHI_SATHANAS, 2.5)
 	end
 end
 
