@@ -946,6 +946,11 @@ unitcapsFamily =
 		stringParam = "SD Lucifer",
 	},
 	{
+		name = "Sathanas",
+		numParam = 51,
+		stringParam = "SJ Sathanas",
+	},
+	{
 		name = "Platform",
 		numParam = 58,
 		stringParam = "$2117",

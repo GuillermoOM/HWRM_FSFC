@@ -8,6 +8,8 @@ squadclass[eMotherShip] = {
 	TAI_MOTHERSHIP,
 
 	TER_COLOSSUS,
+
+	SHI_SATHANAS,
 }
 squadclass[eCollector] = {
 	HGN_RESOURCECOLLECTOR,
@@ -94,6 +96,7 @@ squadclass[eDropOff] = {
 	SHI_RAHU,
 	SHI_DEMON,
 	SHI_RAVANA,
+	SHI_SATHANAS,
 }
 squadclass[eSalvageDropOff] = {
 	HGN_MOTHERSHIP,
@@ -110,11 +113,9 @@ squadclass[eSalvageDropOff] = {
 
 	TER_ORION,
 	TER_HECATE,
-	TER_COLOSSUS,
 
 	SHI_DEMON,
 	SHI_RAVANA,
-	SHI_LUCIFER,
 }
 squadclass[eFighter] = {
 	HGN_INTERCEPTOR,
@@ -380,6 +381,7 @@ squadclass[eAntiFrigate] = {
 	SHI_DEMON,
 	SHI_RAVANA,
 	SHI_LUCIFER,
+	SHI_SATHANAS,
 }
 
 squadclass[eCapital] = {
@@ -415,6 +417,7 @@ squadclass[eCapital] = {
 	SHI_DEMON,
 	SHI_RAVANA,
 	SHI_LUCIFER,
+	SHI_SATHANAS,
 }
 squadclass[eNonThreat] = {
 	HGN_RESOURCECOLLECTOR,
@@ -593,6 +596,7 @@ squadclass[eBattleCruiser] =
 	TER_COLOSSUS,
 	TER_HADES,
 	
+	SHI_SATHANAS,
 	SHI_LUCIFER,
 }
 squadclass[eDestroyer] = {
