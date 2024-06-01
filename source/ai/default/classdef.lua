@@ -16,6 +16,8 @@ squadclass[eCollector] = {
 	TAI_RESOURCECOLLECTOR,
 
 	TER_ELYSIUM,
+
+	SHI_AZRAEL,
 }
 squadclass[eScout] = {
 	HGN_SCOUT,
@@ -34,6 +36,9 @@ squadclass[eScout] = {
 	TER_PEGASUS,
 	TER_LOKI,
 	TER_PHAROS,
+
+	SHI_ASTAROTH,
+	SHI_DRAGON,
 }
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
@@ -42,6 +47,8 @@ squadclass[eRefinery] = {
 	TAI_RESOURCECONTROLLER,
 
 	TER_ZEPHYRUS,
+
+	SHI_RAHU,
 }
 squadclass[eBuilder] = {
 	HGN_MOTHERSHIP,
@@ -58,6 +65,9 @@ squadclass[eBuilder] = {
 
 	TER_HECATE,
 	TER_ORION,
+
+	SHI_DEMON,
+	SHI_RAVANA,
 }
 squadclass[eDropOff] = {
 	HGN_MOTHERSHIP,
@@ -80,6 +90,10 @@ squadclass[eDropOff] = {
 	TER_HECATE,
 	TER_ZEPHYRUS,
 	TER_COLOSSUS,
+
+	SHI_RAHU,
+	SHI_DEMON,
+	SHI_RAVANA,
 }
 squadclass[eSalvageDropOff] = {
 	HGN_MOTHERSHIP,
@@ -96,8 +110,11 @@ squadclass[eSalvageDropOff] = {
 
 	TER_ORION,
 	TER_HECATE,
-	TER_ZEPHYRUS,
 	TER_COLOSSUS,
+
+	SHI_DEMON,
+	SHI_RAVANA,
+	SHI_LUCIFER,
 }
 squadclass[eFighter] = {
 	HGN_INTERCEPTOR,
@@ -124,6 +141,15 @@ squadclass[eFighter] = {
 	TER_MYRMIDON,
 	TER_APOLLO,
 	TER_VALKYRIE,
+
+	SHI_AESHMA,
+	SHI_ASTAROTH,
+	SHI_BASILIK,
+	SHI_DRAGON,
+	SHI_MANTICORE,
+	SHI_MARA,
+	SHI_SCORPION,
+	SHI_GORGON,
 }
 squadclass[eCorvette] = {
 	HGN_ASSAULTCORVETTE,
@@ -151,6 +177,12 @@ squadclass[eCorvette] = {
 	TER_MEDUSA,
 	TER_BOANERGES,
 	TER_ATHENA,
+
+	SHI_NAHEMA,
+	SHI_NEPHILIM,
+	SHI_SERAPHIM,
+	SHI_SHAITAN,
+	SHI_TAURVI,
 }
 squadclass[eFrigate] = {
 	HGN_ASSAULTFRIGATE,
@@ -176,6 +208,9 @@ squadclass[eFrigate] = {
 	TER_LEVIATHAN,
 	TER_AEOLUS,
 	TER_ARGO,
+
+	SHI_CAIN,
+	SHI_LILITH,
 }
 squadclass[eCapture] = {
 	HGN_MARINEFRIGATE,
@@ -234,6 +269,12 @@ squadclass[eAntiFighter] = {
 	TER_ERINYES,
 	TER_MYRMIDON,
 	TER_VALKYRIE,
+
+	SHI_ASTAROTH,
+	SHI_DRAGON,
+	SHI_MANTICORE,
+	SHI_MARA,
+	SHI_SCORPION,
 }
 squadclass[eAntiCorvette] = {
 	HGN_PULSARCORVETTE,
@@ -268,6 +309,13 @@ squadclass[eAntiCorvette] = {
 	TER_MYRMIDON,
 	TER_APOLLO,
 	TER_VALKYRIE,
+
+	SHI_AESHMA,
+	SHI_BASILIK,
+	SHI_MANTICORE,
+	SHI_MARA,
+	SHI_SCORPION,
+	SHI_GORGON,
 }
 squadclass[eAntiFrigate] = {
 	HGN_IONTURRET,
@@ -320,6 +368,18 @@ squadclass[eAntiFrigate] = {
 
 	TER_MJOLNIR,
 
+	SHI_CAIN,
+	SHI_LILITH,
+	
+	SHI_NAHEMA,
+	SHI_NEPHILIM,
+	SHI_SERAPHIM,
+	SHI_SHAITAN,
+	SHI_TAURVI,
+
+	SHI_DEMON,
+	SHI_RAVANA,
+	SHI_LUCIFER,
 }
 
 squadclass[eCapital] = {
@@ -351,6 +411,10 @@ squadclass[eCapital] = {
 	TER_COLOSSUS,
 	TER_HADES,
 	TER_DEIMOS,
+
+	SHI_DEMON,
+	SHI_RAVANA,
+	SHI_LUCIFER,
 }
 squadclass[eNonThreat] = {
 	HGN_RESOURCECOLLECTOR,
@@ -411,6 +475,9 @@ squadclass[eNonThreat] = {
 	TER_HYGEIA,
 	TER_CENTAUR,
 	TER_CHARYBDIS,
+
+	SHI_AZRAEL,
+	SHI_RAHU,
 }
 squadclass[eHyperspaceGate] =
 {
@@ -430,7 +497,13 @@ squadclass[eSubSystemAttackers] =
 	TER_BEANERGES,
 	TER_MEDUSA,
 	TER_URSA,
-	TER_ZEUS
+	TER_ZEUS,
+
+	SHI_NAHEMA,
+	SHI_NEPHILIM,
+	SHI_SERAPHIM,
+	SHI_SHAITAN,
+	SHI_TAURVI,
 }
 squadclass[eNonCriticalSubSys] =
 {
@@ -478,6 +551,16 @@ squadclass[eGoodRepairAttackers] =
 	TER_DEIMOS,
 
 	TER_ATHENA,
+
+	SHI_AESHMA,
+	SHI_BASILIK,
+	SHI_MANTICORE,
+	SHI_MARA,
+	SHI_SCORPION,
+	SHI_GORGON,
+
+	SHI_CAIN,
+	SHI_LILITH,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
@@ -507,8 +590,10 @@ squadclass[eBattleCruiser] =
 	KUS_HEAVYCRUISER,
 	TAI_HEAVYCRUISER,
 
-	TER_HADES,
 	TER_COLOSSUS,
+	TER_HADES,
+	
+	SHI_LUCIFER,
 }
 squadclass[eDestroyer] = {
 	HGN_DESTROYER,
