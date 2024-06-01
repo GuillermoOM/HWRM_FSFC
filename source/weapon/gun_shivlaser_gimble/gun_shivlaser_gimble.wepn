@@ -1,0 +1,40 @@
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_shivturretlaser", "Normal", 2000, 2500, 0, 0, 0, 0, 1,
+    1, 0, 1.2, 0, 0, 1, 1, 260, 260, 1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 60, 60, "")
+
+setAngles(NewWeaponType, 80, 0, 0, 0, 0)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 0.5, },
+    { LightArmour = 0.5, },
+    { MediumArmour = 1, },
+    { HeavyArmour = 1, },
+    { SubSystemArmour = 0.3, },
+    { TurretArmour = 1, },
+    { ResArmour = 1, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 0.5, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
+setAccuracy(NewWeaponType, 1,
+    { Fighter = 0.15 },
+    { Fighter_hw1 = 0.15 },
+    { Corvette = 0.25 },
+    { Corvette_hw1 = 0.25 },
+    { Frigate = 1, },
+    { Utility = 1, },
+    { munition = 0.15, },
+    { SmallCapitalShip = 1, },
+    { BigCapitalShip = 1, },
+    { Mothership = 1, },
+    { Emplacement = 0.2, },
+    { UnAttackable = 0, },
+    { SubSystem = 0, },
+    { Resource = .5, },
+    { ResourceLarge = 1, },
+    { Capturer = 1, },
+    { Chimera = 1, })

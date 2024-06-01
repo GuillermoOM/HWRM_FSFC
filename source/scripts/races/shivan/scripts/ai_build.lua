@@ -3,9 +3,9 @@ aitrace("LOADING SHIVAN BUILD INFO")
 kCollector = SHI_AZRAEL
 kRefinery  = SHI_DEMON
 kScout     = SHI_ASTAROTH
-kCarrier   = SHI_DEMON
+kCarrier   = SHI_RAVANA
 kDestroyer = SHI_LILITH
-kBattleCruiser = SHI_RAVANA
+kBattleCruiser = SHI_LUCIFER
 
 function DetermineDemandWithNoCounterInfo_Shivan()
 	if (sg_randFavorShipType < 55) then
