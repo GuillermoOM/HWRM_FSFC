@@ -941,14 +941,19 @@ unitcapsFamily =
 		stringParam = "GTVA Colossus",
 	},
 	{
-		name = "Platform",
+		name = "Lucifer",
 		numParam = 50,
+		stringParam = "SD Lucifer",
+	},
+	{
+		name = "Platform",
+		numParam = 58,
 		stringParam = "$2117",
 	},
 	-- Platforms
 	{
 		name = "HyperspacePlatform",
-		numParam = 51,
+		numParam = 59,
 		stringParam = "$2129",
 	},
 	{
