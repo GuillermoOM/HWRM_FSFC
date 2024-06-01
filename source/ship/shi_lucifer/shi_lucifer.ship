@@ -332,8 +332,8 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CanBeCaptured", 250, 0.1)
 addAbility(NewShipType, "CanBuildShips", 1,
-    "Fighter_Hgn, Corvette_Hgn, Frigate_Hgn, SuperCap_Hgn, Battlecruiser_Hgn, Utility_Hgn, Shipyard_Hgn, Probe_Hgn, PlatformShiC_Hgn, Subsystem_Hgn",
-    "Utility, Fighter, Corvette, Frigate, Capital, Platform, SubSystemModule")
+    "Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi",
+    "Utility, Fighter, Bomber, Cruiser, Capital, Platform")
 
 addAbility(NewShipType, "SpecialAttack", 1, "EMP")
 
