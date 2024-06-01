@@ -15,3 +15,6 @@ supplyShow("LayoutCruiser", "Never");
 supplyLimit("LayoutBomber", 180);
 supplyLimit("LayoutCruiser", 180);
 supplyLimit("LayoutBattleCruiser", 1);
+
+supplyLimit("Lucifer", 1);
+supplyIndent("Lucifer", 1);

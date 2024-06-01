@@ -213,6 +213,16 @@ build =
 		Description =
 		"<b>Description:</b> The SD Ravana is a destroyer class GTVA forces have only recently encountered. It appears to be tasked with clearing out smaller foes, a mission for which it is well suited. It eagerly wipes out wings of fighters and bombers and also overwhelms cruisers and corvettes. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Medium Beam, 2x Anti-Fighter Beam, 5x Flak Turret, 17x Turrets, 1x Cluster Missile Launcher, 1x Missile Launcher.",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_lucifer",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 3,
+		DisplayedName = "SD Lucifer - Super Destroyer <c=12AB06>305s</c>",
+		Description =
+		"<b>Description:</b> The SD Lucifer was a massive superdestroyer that led the Shivan armada in the Great War. No weapon in the allied arsenal could penetrate the Lucifer's shields. In the Altair system, Vasudan scientists uncovered ancient artifacts that explained how to track ships into subspace, where the Lucifer's shields would not function. A desperate mission to attack the Lucifer in subspace succeeded. But the explosion of the Lucifer collapsed the Sol jump node, severing all contact with Earth. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams, Bombardment Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Bombardment Beam, 10x Shivan Turret Laser, 3x Cluster Missile Launcher.",
+	},
 
 
 	-- Platforms --------------

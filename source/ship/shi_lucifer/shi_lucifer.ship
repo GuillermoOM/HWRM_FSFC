@@ -10,8 +10,8 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "SD Ravana"
-NewShipType.sobDescription = "Destroyer"
+NewShipType.displayedName = "SD Lucifer"
+NewShipType.sobDescription = "Super Destroyer"
 
 --------------------------------------------------	
 --- Main Ship Data	
@@ -28,26 +28,27 @@ NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Shi"
 NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "BattleCruiser"
-NewShipType.AvoidanceFamily = "BattleCruiser"
+NewShipType.AvoidanceFamily = "MotherShip"
 NewShipType.DisplayFamily = "Capital"
-NewShipType.AutoFormationFamily = "SuperCap"
+NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
-NewShipType.ArmourFamily = "HeavyArmour"
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour")
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Capital", 1.0)
-setSupplyValue(NewShipType, "Destroyer", 1.0)
+setSupplyValue(NewShipType, "Lucifer", 1.0)
+setSupplyValue(NewShipType, "LayoutBattleCruiser", 1.0)
 
 --------------------------------------------------	
 --- Construction	
 --------------------------------------------------	
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
-NewShipType.buildCost = 13000
-NewShipType.buildTime = 225
+NewShipType.buildCost = 21500
+NewShipType.buildTime = 305
 NewShipType.buildPriorityOrder = 40
 
 setConcurrentBuildLimit(NewShipType, 0, 2);
@@ -56,9 +57,9 @@ setConcurrentBuildLimit(NewShipType, 0, 2);
 --- Health and Armour	
 --------------------------------------------------	
 
-NewShipType.maxhealth = 200000
-NewShipType.regentime = 1265
-NewShipType.minRegenTime = 1265
+NewShipType.maxhealth = 500000
+NewShipType.regentime = 2000
+NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = 1.2
 NewShipType.rearArmourDamage = 1.2
 
@@ -66,7 +67,7 @@ NewShipType.rearArmourDamage = 1.2
 --- Shields
 --------------------------------------------------	
 
-addShield(NewShipType, "EMP", 4000, 100)
+addShield(NewShipType, "EMP", 15000, 120)
 
 --------------------------------------------------	
 --- Sensors	
@@ -74,7 +75,7 @@ addShield(NewShipType, "EMP", 4000, 100)
 
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 2000
+NewShipType.visualRange = 2500
 NewShipType.prmSensorRange = 10000
 NewShipType.secSensorRange = 18000
 NewShipType.detectionStrength = 1
@@ -83,15 +84,15 @@ NewShipType.detectionStrength = 1
 --- Movement	
 --------------------------------------------------	
 
-NewShipType.mass = 1600000
+NewShipType.mass = 2000000
 
-NewShipType.thrusterMaxSpeed = 20
+NewShipType.thrusterMaxSpeed = 45
 NewShipType.thrusterAccelTime = 20
-NewShipType.thrusterBrakeTime = 10
+NewShipType.thrusterBrakeTime = 4
 
-NewShipType.mainEngineMaxSpeed = 80
+NewShipType.mainEngineMaxSpeed = 90
 NewShipType.mainEngineAccelTime = 20
-NewShipType.mainEngineBrakeTime = 10
+NewShipType.mainEngineBrakeTime = 4
 
 NewShipType.rotationMaxSpeed = 3.5
 NewShipType.rotationAccelTime = 10
@@ -107,8 +108,8 @@ NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 30
 NewShipType.mirrorAngle = 0
 NewShipType.secondaryTurnAngle = 0
-NewShipType.maxBankingAmount = 15
-NewShipType.descendPitch = 55
+NewShipType.maxBankingAmount = 10
+NewShipType.descendPitch = 50
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
 
@@ -143,12 +144,6 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 NewShipType.paradeData = "shivan_parade"
 
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
-NewShipType.formationSpacing = 400
-
-NewShipType.noCombatGrouping = 0
-NewShipType.canJoinStrikeGroup = 1
-NewShipType.strikeGroupRadius = 350
-NewShipType.strikeGroupSpeed = 5000
 
 --------------------------------------------------
 --- Launching
@@ -179,12 +174,12 @@ NewShipType.ignoreRaceWhenDocking = 0
 
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 10
-NewShipType.neutralValue = 100
-NewShipType.antiFighterValue = 5
+NewShipType.frigateValue = 80
+NewShipType.neutralValue = 30
+NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 5
-NewShipType.antiFrigateValue = 50
-NewShipType.totalValue = 100
+NewShipType.antiFrigateValue = 60
+NewShipType.totalValue = 110
 
 --------------------------------------------------
 --- Damage & Death
@@ -195,7 +190,7 @@ NewShipType.nebulaDamageTime = 800
 
 NewShipType.collisionMultiplier = 1
 
-NewShipType.battleScarCoverage=4
+NewShipType.battleScarCoverage = 4
 NewShipType.battleScarBudgetLow = 1200
 NewShipType.battleScarBudgetNext = 1800
 NewShipType.sobDieTime = 8
@@ -231,27 +226,26 @@ NewShipType.tumbleSpecialDynamicY = 2
 NewShipType.tumbleSpecialDynamicZ = 1
 
 --------------------------------------------------	
---- Layout Boundary	
+--- Target Boxes
 --------------------------------------------------	
 
-setTargetBox(NewShipType, 0, -0.65, -0.05, -0.8, 0.25, 0.5, -0.35);
-setTargetBox(NewShipType, 1, -0.4, -0.05, -0.35, 0.05, 0.25, 0.6);
-setTargetBox(NewShipType, 2, 0.65, -0.3, -0.45, 1, -0.05, -0.15);
+setTargetBox(NewShipType, 0, -0.25, -0.2, 0.2, 0.25, 0.3, 0.9);
+setTargetBox(NewShipType, 1, -0.25, -0.1, -0.75, 0.25, 0.25, 0.2);
 
 --------------------------------------------------	
 --- Selection	
 --------------------------------------------------	
 
-NewShipType.militaryUnit = 1
 NewShipType.selectionLimit = 150000
 NewShipType.preciseATILimit = 7000
 NewShipType.selectionPriority = 75
+NewShipType.militaryUnit = 1
 
 --------------------------------------------------	
 --- Tactical Overlay Icon	
 --------------------------------------------------	
 
-NewShipType.TOIcon = "Rectangle"
+NewShipType.TOIcon = "Arrow"
 NewShipType.TOScale = 1
 NewShipType.TODistanceFade0 = 14000
 NewShipType.TODistanceDisappear0 = 12000
@@ -280,7 +274,7 @@ NewShipType.SMHighlightDistMax = 25000
 --------------------------------------------------	
 
 NewShipType.AlwaysInRenderList = 0
-NewShipType.meshRenderLimit = 500000
+NewShipType.meshRenderLimit = 195000000
 NewShipType.dotRenderLimit = 10
 
 NewShipType.visibleInSecondary = 1
@@ -303,12 +297,10 @@ NewShipType.nlipsFarRange = 0
 --- Level of Detail
 --------------------------------------------------
 
-NewShipType.upLOD = 15000
-NewShipType.upLOD = 27500
-NewShipType.upLOD = 45000
-NewShipType.downLOD = 15150
-NewShipType.downLOD = 27650
-NewShipType.downLOD = 45150
+NewShipType.upLOD = 4000
+NewShipType.upLOD = 15950
+NewShipType.downLOD = 4015
+NewShipType.downLOD = 15965
 
 --------------------------------------------------
 --- alternative Hyperspace Gate
@@ -325,23 +317,25 @@ NewShipType["alternativeHyperspaceTime"] = 12
 addAbility(NewShipType, "MoveCommand", 1, 0)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 700, 1400, 0, 0)
-addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 7, 0.3)
-addAbility(NewShipType, "ShipHold", 1, 1000, 16, "rallypoint", "Fighter, Corvette, Utility", 40)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1,
+addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 800, 1600, 0, 0)
+addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 8, 0)
+addAbility(NewShipType, "ShipHold", 1, 1000, 28, "rallypoint", "Fighter, Corvette, Utility", 60)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2,
     "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility,,,,, Corvette, Corvette_hw1, Fighter, Fighter_hw1",
     "Frontal",
-    { Fighter = "MoveToTargetAndShoot" },
-    { Fighter_hw1 = "MoveToTargetAndShoot" },
-    { Corvette = "MoveToTargetAndShoot" },
-    { Corvette_hw1 = "MoveToTargetAndShoot" },
+    { Fighter = "JustShoot" },
+    { Fighter_hw1 = "JustShoot" },
+    { Corvette = "JustShoot" },
+    { Corvette_hw1 = "JustShoot" },
     { Munition = "MoveToTargetAndShoot" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1,
-    "Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi",
-    "Utility, Fighter, Bomber, Cruiser, Capital, Platform")
-addAbility(NewShipType, "CanBeCaptured", 200, 0)
 addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType, "CanBeCaptured", 250, 0.1)
+addAbility(NewShipType, "CanBuildShips", 1,
+    "Fighter_Hgn, Corvette_Hgn, Frigate_Hgn, SuperCap_Hgn, Battlecruiser_Hgn, Utility_Hgn, Shipyard_Hgn, Probe_Hgn, PlatformShiC_Hgn, Subsystem_Hgn",
+    "Utility, Fighter, Corvette, Frigate, Capital, Platform, SubSystemModule")
+
+addAbility(NewShipType, "SpecialAttack", 1, "EMP")
 
 --------------------------------------------------
 --- MODEL MUST LOAD AT THIS POINT
@@ -354,50 +348,40 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Turret05", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret06", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret07", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret08", "")
-StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret09", "")
-StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Turret10", "")
-StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret11", "")
-StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret12", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret13", "")
-StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret14", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret15", "")
-StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret16", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret17", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret18", "")
-StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Turret19", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret20", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret21", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret22", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret23", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret24", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret25", "")
-StartShipWeaponConfig(NewShipType, "Miss_FighterKiller", "Weapon_Turret26", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret27", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret28", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret29", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret30", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_gimble", "Weapon_Gun1", "Weapon_Gun1")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_gimble", "Weapon_Gun2", "Weapon_Gun2")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_gimble", "Weapon_Gun3", "Weapon_Gun3")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_gimble", "Weapon_Gun4", "Weapon_Gun4")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Gun5", "Weapon_Gun5")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Gun6", "Weapon_Gun6")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Gun7", "Weapon_Gun7")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret1", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret2", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret3", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret4", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret5", "")
+StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_LaserTurret6", "")
 
 --------------------------------------------------
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "Shi_LRedSA1", "Weapon_Beam1", "Weapon", "Innate", "Damageable", "shi_ravanaturret01", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_LRedSA2", "Weapon_Beam2", "Weapon", "Innate", "Damageable", "shi_ravanaturret02", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_SRedSA1", "Weapon_Beam3", "Weapon", "Innate", "Damageable", "shi_ravanaturret03", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_SRedSA2", "Weapon_Beam4", "Weapon", "Innate", "Damageable", "shi_ravanaturret04", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Shi_LRedLucifer1", "Weapon_Beam1", "Weapon", "Innate", "Damageable",
+    "shi_luciferturret01", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Shi_LRedLucifer2", "Weapon_Beam2", "Weapon", "Innate", "Damageable",
+    "shi_luciferturret02", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Shi_bombardmentbeam1", "Weapon_UberBeam1", "Weapon", "Innate", "Damageable",
+    "Shi_BombardmentBeam", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Shi_bombardmentbeam2", "Weapon_UberBeam2", "Weapon", "Innate", "Damageable",
+    "Shi_BombardmentBeam", "", "", "", "", "", "", "", "")
 
 --------------------------------------------------
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, "CapCap", "CapturePoint1", "CapturePoint2", "CapturePoint3", "CapturePoint4",
+loadLatchPointList(NewShipType, "CapCap", "CapturePoint0", "CapturePoint1", "CapturePoint2", "CapturePoint3",
     "CapturePoint5");
-loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2", "RepairPoint3", "RepairPoint4",
-    "RepairPoint5");
+loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2");
 
 --------------------------------------------------
 --- Addendum
@@ -405,10 +389,9 @@ loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "Repai
 
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanCapital", "", 3, "", "Root")
 
-
 --------------------------------------------------
 --- Engines
 --------------------------------------------------
 
 NewShipType.trailLinger = 2
-setEngineBurn(NewShipType, 7, 0.5, 4, 90, 0, 0.7, 0.1, 700)
+setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 700)
