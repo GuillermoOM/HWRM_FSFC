@@ -242,6 +242,16 @@ build =
 		Description =
 		"<b>Description:</b> Encountered on rare occasions since the Shivans first entered the Great War, the ST Azrael is the only known class of Shivan transport. Little is known about it even now, but it is believed to house many Shivans within its thin hulls. Since Azraels might be carrying Shivan pilots or other skilled crew members, it is always worthwhile to eliminate these lightly defended ships. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 3x Light Turret.",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_rahu",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 2,
+		DisplayedName = "SG Rahu - Drop-off <c=12AB06>30s</c>",
+		Description =
+		"<b>Description:</b> Almost nothing is known of the Rahu line of gas miners. It is assumed that they function in much the same way as our Zephyrus miners, funneling nebular gas into internal machinery that fractionates it into its molecular components for further processing. Rahu miners are armed with heavy laser turrets, so care must be taken when attacking them. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 3x Shivan Turret Laser.",
+	},
 
 
 }
