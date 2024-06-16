@@ -27,13 +27,13 @@ NewShipType.unavailableWhenCaptured = 1
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Cruiser_Shi"
 NewShipType.AttackFamily = "Frigate"
-NewShipType.DockFamily = "Frigate"
+NewShipType.DockFamily = "Shipyard"
 NewShipType.AvoidanceFamily = "Frigate"
-NewShipType.DisplayFamily = "Frigate"
+NewShipType.DisplayFamily = "Cruiser"
 NewShipType.AutoFormationFamily = "Frigate"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "MediumArmour"
-NewShipType.CombatFamily = "Frigate"
+NewShipType.CombatFamily = "Cruiser"
 
 --------------------------------------------------
 --- Supply
