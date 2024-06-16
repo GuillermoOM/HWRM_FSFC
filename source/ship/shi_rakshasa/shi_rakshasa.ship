@@ -318,8 +318,8 @@ NewShipType.downLOD = 4015
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
-NewShipType["alternativeHyperspaceV"] = "hyperspace_gate_small"
-NewShipType["alternativeHyperspaceA"] = "etg/misc/small_warp"
+NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
+NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
 
 --------------------------------------------------
@@ -362,8 +362,8 @@ StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun4", "Weapo
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun5", "Weapon_Gun5")
 StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Gun6", "Weapon_Gun6")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun7", "Weapon_Gun7")
-StartShipWeaponConfig(NewShipType, "gun_shivheavylaserturret", "Weapon_Gun8", "Weapon_Gun8")
-StartShipWeaponConfig(NewShipType, "gun_shivheavylaserturret", "Weapon_Gun9", "Weapon_Gun9")
+StartShipWeaponConfig(NewShipType, "gun_shivheavylaser_turret", "Weapon_Gun8", "Weapon_Gun8")
+StartShipWeaponConfig(NewShipType, "gun_shivheavylaser_turret", "Weapon_Gun9", "Weapon_Gun9")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun10", "Weapon_Gun10")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Gun11", "Weapon_Gun11")
 
