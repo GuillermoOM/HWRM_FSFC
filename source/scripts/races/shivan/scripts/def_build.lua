@@ -190,6 +190,18 @@ build =
 		Description =
 		"<b>Description:</b> The SC Lilith class of Shivan cruisers is a far-deadlier foe than the Cain class. Nearly impenetrable armor plating enables it to withstand tremendous punishment, enabling its nine turrets to lash out at warships and combat spacecraft with impunity. \n\n<b>Prerequisites:</b> Cruiser Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 1x Heavy Beam, 1x Anti-Fighter Beam, 5x Turret Laser, 2x Shivan Cluster Missile Launcher.",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_rakshasa",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 63,
+		DisplayedName = "SC Rakshasa - Adv. Cruiser <c=12AB06>60s</c>",
+		Description =
+		"<b>Description:</b> Though not as thickly armored as the Lilith class, the SC Rakshasa class of Shivan cruisers is far deadlier. With over a dozen turrets, the Rakshasa is the most heavily armed Shivan cruiser class. It was a Rakshasa cruiser that destroyed the GTC Vigilant at the Gamma Draconis node in the Capella system. \n\n<b>Prerequisites:</b> Cruiser Design, Medium Photon Beams. \n\n<b>Armaments:</b> 3x Light Beam, 1x Anti-Fighter Beam, 2x Heavy Laser, 8x Turret Laser.",
+	},
+
+
 
 	-- Capital Ships ----------
 

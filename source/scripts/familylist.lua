@@ -886,6 +886,11 @@ unitcapsFamily =
 		numParam = 35,
 		stringParam = "GTC Aeolus",
 	},
+	{
+		name = "Rakshasa",
+		numParam = 36,
+		stringParam = "SC Rakshasa",
+	},
 
 
 	{
