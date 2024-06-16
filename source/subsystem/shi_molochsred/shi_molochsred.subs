@@ -21,7 +21,7 @@ NewSubSystemType.typeString = "SRED"
 --- Families
 --------------------------------------------------
 
-NewSubSystemType.BuildFamily = "SubSystem_Hgn"
+NewSubSystemType.BuildFamily = "SubSystem_Shi"
 NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
@@ -104,7 +104,7 @@ NewSubSystemType.nlipsFarRange = 0
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "shi_sredmoloch", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_sred", "Weapon_IonCan1", "Weapon_IonCan1")
 
 --------------------------------------------------
 --- Multipliers
@@ -116,6 +116,6 @@ StartSubSystemWeaponConfig(NewSubSystemType, "shi_sredmoloch", "Weapon_IonCan1",
 --- Target Box
 --------------------------------------------------
 
-setTargetBox(NewShipType, 0, -0.4,-0.7,-0.7, 0.4,0.7,0.4)
+-- setTargetBox(NewShipType, 0, -0.4,-0.7,-0.7, 0.4,0.7,0.4)
 
 LoadHODFile(NewSubSystemType,1);

@@ -355,37 +355,37 @@ LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_02", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_03", "")
-StartShipWeaponConfig(NewShipType, "miss_fighterkillerturret", "Weapon_04", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_07", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_08", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_09", "")
+StartShipWeaponConfig(NewShipType, "miss_fighterkiller_turret", "Weapon_04", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_07", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_08", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_09", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_10", "")
-StartShipWeaponConfig(NewShipType, "miss_pihranaturret", "Weapon_11", "")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_11", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_12", "")
-StartShipWeaponConfig(NewShipType, "miss_pihranaturret", "Weapon_13", "")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_13", "")
 StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_14", "")
-StartShipWeaponConfig(NewShipType, "gun_flakturret", "Weapon_15", "")
-StartShipWeaponConfig(NewShipType, "miss_fighterkillerturret", "Weapon_16", "")
+StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_15", "")
+StartShipWeaponConfig(NewShipType, "miss_fighterkiller_turret", "Weapon_16", "")
 
 --------------------------------------------------
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Generic", "Damageable", "sub_corvengine", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Sensors", "Hardpoint_Sensors", "System", "Generic", "Damageable", "sub_corvsensors", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Navigation", "Hardpoint_Navigation", "System", "Generic", "Damageable", "sub_corvnavigation", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Weapons", "Hardpoint_Weapons", "System", "Generic", "Damageable", "sub_corvweapons", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Fighterbay", "Hardpoint_Fighterbay", "System", "Generic", "Damageable", "sub_corvfighterbay", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "beam_sred", "Weapon_01", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "beam_sred", "Weapon_05", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "beam_sred", "Weapon_06", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Generic", "Damageable", "sub_corvengine", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Sensors", "Hardpoint_Sensors", "System", "Generic", "Damageable", "sub_corvsensors", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Navigation", "Hardpoint_Navigation", "System", "Generic", "Damageable", "sub_corvnavigation", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Weapons", "Hardpoint_Weapons", "System", "Generic", "Damageable", "sub_corvweapons", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Fighterbay", "Hardpoint_Fighterbay", "System", "Generic", "Damageable", "sub_corvfighterbay", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SRED1", "Weapon_01", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SRED1", "Weapon_05", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SRED1", "Weapon_06", "Weapon", "Innate", "Damageable", "shi_molochsred", "", "", "", "", "", "", "", "")
 
 --------------------------------------------------
 --- Latch Points
 --------------------------------------------------
 
 loadLatchPointList(NewShipType,"CapCap","CapturePoint0");
-loadLatchPointList(NewShipType,"RepCap","RepairPoint0","RepairPoint0Heading");	
+loadLatchPointList(NewShipType,"RepCap","RepairPoint0","RepairPoint0Heading");
 
 --------------------------------------------------
 --- Addendum
