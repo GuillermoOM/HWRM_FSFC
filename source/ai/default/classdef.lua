@@ -212,6 +212,7 @@ squadclass[eFrigate] = {
 
 	SHI_CAIN,
 	SHI_LILITH,
+	SHI_RAKSHASA,
 }
 squadclass[eCapture] = {
 	HGN_MARINEFRIGATE,
@@ -260,11 +261,6 @@ squadclass[eAntiFighter] = {
 	TAI_MULTIGUNCORVETTE,
 	TAI_MISSILEDESTROYER,
 
-	TER_AEOLUS,
-	TER_FENRIS,
-
-	TER_DEIMOS,
-
 	TER_PERSEUS,
 	TER_ULYSSES,
 	TER_ERINYES,
@@ -294,6 +290,7 @@ squadclass[eAntiCorvette] = {
 	TAI_ASSAULTFRIGATE,
 	TAI_DESTROYER,
 	TAI_MISSILEDESTROYER,
+
 	TER_FENRIS,
 	TER_LEVIATHAN,
 	TER_AEOLUS,
@@ -317,6 +314,10 @@ squadclass[eAntiCorvette] = {
 	SHI_MARA,
 	SHI_SCORPION,
 	SHI_GORGON,
+
+	SHI_RAKSHASA,
+	SHI_LILITH,
+	SHI_RAKSHASA,
 }
 squadclass[eAntiFrigate] = {
 	HGN_IONTURRET,
@@ -369,8 +370,9 @@ squadclass[eAntiFrigate] = {
 
 	TER_MJOLNIR,
 
-	SHI_CAIN,
+	SHI_RAKSHASA,
 	SHI_LILITH,
+	SHI_RAKSHASA,
 	
 	SHI_NAHEMA,
 	SHI_NEPHILIM,
@@ -562,8 +564,9 @@ squadclass[eGoodRepairAttackers] =
 	SHI_SCORPION,
 	SHI_GORGON,
 
-	SHI_CAIN,
+	SHI_RAKSHASA,
 	SHI_LILITH,
+	SHI_RAKSHASA,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
