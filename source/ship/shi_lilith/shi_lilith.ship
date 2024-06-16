@@ -33,6 +33,7 @@ NewShipType.DisplayFamily = "Cruiser"
 NewShipType.AutoFormationFamily = "Frigate"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "MediumArmour"
+NewShipType.CombatFamily = "Cruiser"
 
 --------------------------------------------------
 --- Supply
@@ -49,8 +50,6 @@ NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 4000
 NewShipType.buildTime = 140
 NewShipType.buildPriorityOrder = 30
-
-
 
 --------------------------------------------------	
 --- Health and Armour	
@@ -143,7 +142,7 @@ AddShipMultiplier(NewShipType, "MaxSpeed", "ThisShipOnly", "Linear", 1, 0.25, 0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.buildBatch = 1
+NewShipType.SquadronSize=getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 40
 NewShipType.batchFormation = "Batch_delta"
 
@@ -151,29 +150,34 @@ NewShipType.canSurround = 1
 
 NewShipType.noCombatGrouping = 1
 NewShipType.canJoinStrikeGroup = 1
+
 NewShipType.strikeGroupRadius = 350
 NewShipType.strikeGroupSpeed = 5000
 
 --------------------------------------------------
---- Launching
+--- Launching  DO NOT MODIFY
 --------------------------------------------------
 
-NewShipType.launchTimeBetweenTwoFormations = 1
-NewShipType.launchTimeBeforeStart = 2
+addAbility(NewShipType, "CanLaunch")
+NewShipType.launchTimeBeforeStart = 2.0
+NewShipType.launchFormation = "Delta"
 NewShipType.launchNrOfShipsInDockFormation = 1
-NewShipType.launchFormation = "delta"
+NewShipType.launchTimeBetweenTwoFormations = 1
 
 --------------------------------------------------
---- Docking
+--- Docking  DO NOT MODIFY
 --------------------------------------------------
 
-NewShipType.dockTimeBetweenTwoFormations = 1
-NewShipType.dockTimeBeforeStart = 2
-NewShipType.dockNrOfShipsInDockFormation = 1
-NewShipType.dockFormation = "delta"
-NewShipType.queueFormation = "dockline"
-NewShipType.dontDockWithOtherRaceShips = 1
+addAbility(NewShipType, "CanDock", 1, 1)
+NewShipType.holdSlots = 1
 NewShipType.ignoreRaceWhenDocking = 0
+NewShipType.queueFormation = "Dockline"
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockFormation = "Delta"
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockTimeBetweenTwoFormations = 1
+
+NewShipType.dontDockWithOtherRaceShips = 1
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -236,10 +240,6 @@ NewShipType.tumbleDynamicZ = 5
 NewShipType.tumbleSpecialDynamicX = 2
 NewShipType.tumbleSpecialDynamicY = 10
 NewShipType.tumbleSpecialDynamicZ = 5
-
---------------------------------------------------
---- Debris
---------------------------------------------------
 
 --------------------------------------------------	
 --- Layout Boundary	
@@ -410,16 +410,9 @@ StartShipHardPointConfig(NewShipType, "LRED", "Weapon_Beam1", "Weapon", "Innate"
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanCruiser", "", 3, "", "Root")
 
 --------------------------------------------------
---- Da Shader Things
---------------------------------------------------
-
---------------------------------------------------
 --- Engines
 --------------------------------------------------
 
 NewShipType.trailLinger = 1
 setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0, 120)
-
---------------------------------------------------
---- Custom fields
---------------------------------------------------
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, { 0.27, 0.47, .69, 0.25 })
