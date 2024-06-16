@@ -1,0 +1,7 @@
+SHI_MOLOCH_NIS00_OnSet = function(ship)
+	startAnim(ship, "warp_in")
+end
+
+SHI_MOLOCH_NIS01_OnSet = function(ship)
+	startAnim(ship, "warp_out")
+end
