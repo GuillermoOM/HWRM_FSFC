@@ -1,0 +1,108 @@
+--------------------------------------------------
+--- Base Template of a subsystem with all variables and functions organized by type
+--- Reference:
+--- Variables: https://github.com/HWRM/KarosGraveyard/wiki/Variable;-Subsystem
+--- Functions: https://github.com/HWRM/KarosGraveyard/wiki/Scope;-Subsystem
+--------------------------------------------------
+
+NewSubSystemType = StartSubSystemConfig()
+
+--------------------------------------------------
+--- Shipinfo
+--------------------------------------------------
+
+NewSubSystemType.displayedName = "Shivan Light Beam Cannon"
+NewSubSystemType.sobDescription = "Corvette Light Beam Cannon"
+
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "SRED"
+
+--------------------------------------------------
+--- Families
+--------------------------------------------------
+
+NewSubSystemType.BuildFamily = "SubSystem_Shi"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "TurretArmour"
+
+--------------------------------------------------	
+--- Health and Armour	
+--------------------------------------------------	
+
+NewSubSystemType.maxhealth = 2500
+NewSubSystemType.regentime = 400
+NewSubSystemType.activateHealthPercentage = 0.5
+
+--------------------------------------------------	
+--- Build
+--------------------------------------------------	
+
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
+NewSubSystemType.isResearch = 0
+
+--------------------------------------------------
+--- Damage & Death
+--------------------------------------------------
+
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 90
+
+--------------------------------------------------	
+--- Selection	
+--------------------------------------------------	
+
+NewSubSystemType.selectionLimit = 2500
+NewSubSystemType.preciseATILimit = 2500
+NewSubSystemType.selectionPriority = 37.5
+
+--------------------------------------------------	
+--- Tactical Overlay Icon	
+--------------------------------------------------	
+
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+
+--------------------------------------------------	
+--- Overlays	
+--------------------------------------------------	
+
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+
+--------------------------------------------------	
+--- Rendering	
+--------------------------------------------------	
+
+NewSubSystemType.visible = 1
+
+NewSubSystemType.groupMergeSize = 0.001
+
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.68
+
+--------------------------------------------------
+--- Non linear Scaling
+--------------------------------------------------
+
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+
+--------------------------------------------------
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewSubSystemType, 1)
+-- If you want to load the model from another subsystem
+-- LoadSharedModel(NewSubSystemType, "ter_colbeam")
+--------------------------------------------------
+
+--------------------------------------------------
+--- Weapons
+--------------------------------------------------
+
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_sred", "Weapon_IonCan1", "Weapon_IonCan1")

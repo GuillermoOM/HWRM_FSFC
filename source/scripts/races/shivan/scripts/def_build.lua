@@ -207,11 +207,22 @@ build =
 
 	{
 		Type = Ship,
-		ThingToBuild = "shi_demon",
+		ThingToBuild = "shi_moloch",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
-		DisplayedName = "SD Demon - Destroyer",
+		DisplayedName = "SCv Moloch - Corvette <c=12AB06>110s</c>",
+		Description =
+		"<b>Description:</b> Only one class of Shivan ship is classified as a corvette - the SCv Moloch class. Though they're physically as large as the GTCv Deimos class, Molochs do not seem to pack the same punch. They are far more deadly than any Shivan cruisers, however. \n\n<b>Prerequisites:</b> Capital Ship Design, Medium Photon Beams. \n\n<b>Armaments:</b> 3x Medium Beam, 3x Flak, 1x Heavy Flak, 5x Turret, 4x Cluster Missile Launcher, 2x FighterKiller.",
+	},
+
+	{
+		Type = Ship,
+		ThingToBuild = "shi_demon",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 2,
+		DisplayedName = "SD Demon - Destroyer <c=12AB06>215s</c>",
 		Description =
 		"<b>Description:</b> The SD Demon class of Shivan destroyers is much smaller than the Lucifer class but very heavily armed and extremely dangerous. Demons are known to carry numerous wings of fighters and bombers. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 1x Medium Beam, 2x Anti-Fighter Beam, 4x Flak Turret, 10x Turret Laser, 2x Huge Turret, 5x Missile Launcher.",
 	},
@@ -220,7 +231,7 @@ build =
 		ThingToBuild = "shi_ravana",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 2,
+		DisplayPriority = 3,
 		DisplayedName = "SD Ravana - Destroyer <c=12AB06>225s</c>",
 		Description =
 		"<b>Description:</b> The SD Ravana is a destroyer class GTVA forces have only recently encountered. It appears to be tasked with clearing out smaller foes, a mission for which it is well suited. It eagerly wipes out wings of fighters and bombers and also overwhelms cruisers and corvettes. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Medium Beam, 2x Anti-Fighter Beam, 5x Flak Turret, 17x Turrets, 1x Cluster Missile Launcher, 1x Missile Launcher.",
@@ -230,7 +241,7 @@ build =
 		ThingToBuild = "shi_lucifer",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 3,
+		DisplayPriority = 4,
 		DisplayedName = "SD Lucifer - Super Destroyer <c=12AB06>305s</c>",
 		Description =
 		"<b>Description:</b> The SD Lucifer was a massive superdestroyer that led the Shivan armada in the Great War. No weapon in the allied arsenal could penetrate the Lucifer's shields. In the Altair system, Vasudan scientists uncovered ancient artifacts that explained how to track ships into subspace, where the Lucifer's shields would not function. A desperate mission to attack the Lucifer in subspace succeeded. But the explosion of the Lucifer collapsed the Sol jump node, severing all contact with Earth. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams, Bombardment Beams. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Bombardment Beam, 10x Shivan Turret Laser, 3x Cluster Missile Launcher.",
@@ -240,7 +251,7 @@ build =
 		ThingToBuild = "shi_sathanas",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 119,
+		DisplayPriority = 5,
 		DisplayedName = "SJ Sathanas <c=12AB06>550s</c>",
 		Description =
 		"<b>Description:</b> Very little is known about the SJ Sathanas class. This juggernaut seems comparable in strength to the GTVA Colossus. All intelligence concerning the Sathanas has been classified level Upsilon. \n\n<b>Prerequisites:</b> Super Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 4x Super Heavy Beam, 1x Heavy Beam, 8x Anti-Fighter Beam, 10x Flak Turret (2x Triple Long Range), 24x Turret Laser, 4x Cluster Missile Launcher.",

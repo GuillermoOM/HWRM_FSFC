@@ -380,6 +380,7 @@ squadclass[eAntiFrigate] = {
 	SHI_SHAITAN,
 	SHI_TAURVI,
 
+	SHI_MOLOCH,
 	SHI_DEMON,
 	SHI_RAVANA,
 	SHI_LUCIFER,
@@ -420,6 +421,7 @@ squadclass[eCapital] = {
 	SHI_RAVANA,
 	SHI_LUCIFER,
 	SHI_SATHANAS,
+	SHI_MOLOCH,
 }
 squadclass[eNonThreat] = {
 	HGN_RESOURCECOLLECTOR,
@@ -564,9 +566,10 @@ squadclass[eGoodRepairAttackers] =
 	SHI_SCORPION,
 	SHI_GORGON,
 
-	SHI_RAKSHASA,
+	SHI_CAIN,
 	SHI_LILITH,
 	SHI_RAKSHASA,
+	SHI_MOLOCH,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
@@ -611,6 +614,8 @@ squadclass[eDestroyer] = {
 	TAI_MISSILEDESTROYER,
 
 	TER_DEIMOS,
+
+	SHI_MOLOCH,
 }
 
 function FastAddToClass(tbl, classid)

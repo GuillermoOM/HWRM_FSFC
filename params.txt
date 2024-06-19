@@ -28,7 +28,7 @@
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=shi_rakshasa
--Spawn_Pos_4=-6000,0,0
+-Spawn_Ship_4=shi_moloch
+-Spawn_Pos_4=-4000,0,0
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
