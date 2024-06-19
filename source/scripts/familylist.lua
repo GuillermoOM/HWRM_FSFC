@@ -936,23 +936,28 @@ unitcapsFamily =
 		stringParam = "GTCv Deimos",
 	},
 	{
-		name = "Hades",
+		name = "Moloch",
 		numParam = 48,
+		stringParam = "SCv Moloch",
+	},
+	{
+		name = "Hades",
+		numParam = 49,
 		stringParam = "GTI Hades",
 	},
 	{
 		name = "Colossus",
-		numParam = 49,
+		numParam = 50,
 		stringParam = "GTVA Colossus",
 	},
 	{
 		name = "Lucifer",
-		numParam = 50,
+		numParam = 51,
 		stringParam = "SD Lucifer",
 	},
 	{
 		name = "Sathanas",
-		numParam = 51,
+		numParam = 52,
 		stringParam = "SJ Sathanas",
 	},
 	{

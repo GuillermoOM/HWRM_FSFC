@@ -95,27 +95,14 @@ NewSubSystemType.nlipsFar = 0
 NewSubSystemType.nlipsFarRange = 0
 
 --------------------------------------------------
---- Abilities
+--- MODEL MUST LOAD AT THIS POINT
+LoadModel(NewSubSystemType, 1)
+-- If you want to load the model from another subsystem
+-- LoadSharedModel(NewSubSystemType, "ter_colbeam")
 --------------------------------------------------
-
-
 
 --------------------------------------------------
 --- Weapons
 --------------------------------------------------
 
 StartSubSystemWeaponConfig(NewSubSystemType, "beam_sred", "Weapon_IonCan1", "Weapon_IonCan1")
-
---------------------------------------------------
---- Multipliers
---------------------------------------------------
-
-
-
---------------------------------------------------
---- Target Box
---------------------------------------------------
-
--- setTargetBox(NewShipType, 0, -0.4,-0.7,-0.7, 0.4,0.7,0.4)
-
-LoadHODFile(NewSubSystemType,1);

@@ -25,23 +25,21 @@ NewShipType.unavailableWhenCaptured = 1
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "SuperCap_Hgn"
+NewShipType.BuildFamily = "SuperCap_Shi"
 NewShipType.AttackFamily = "SmallCapitalShip"
-NewShipType.DockFamily = "BattleCruiser"
-NewShipType.AvoidanceFamily = "BattleCruiser"
+NewShipType.DockFamily = "Shipyard"
+NewShipType.AvoidanceFamily = "Capital"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
-NewShipType.ArmourFamily = "HeavyArmour"
-NewShipType.UnitCapsFamily = "Capital"
-NewShipType.UnitCapsShipType = "Destroyer"
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour")
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, "Cruiser", 1.0)
-setSupplyValue(NewShipType, "LayoutCruiser", 1.0)
+setSupplyValue(NewShipType, "Capital", 1.0)
+setSupplyValue(NewShipType, "Moloch", 1.0)
 
 --------------------------------------------------	
 --- Construction	
@@ -238,6 +236,15 @@ NewShipType.tumbleSpecialDynamicX = 1
 NewShipType.tumbleSpecialDynamicY = 2
 NewShipType.tumbleSpecialDynamicZ = 1
 
+--------------------------------------------------
+--- Target Boxes
+--------------------------------------------------
+
+setTargetBox(NewShipType, 0, -0.25, 0.05, -0.95, 0.75, 0.55, 0.95);
+setTargetBox(NewShipType, 1, -0.35, 0.55, -0.85, 0.7, 0.95, -0.55);
+setTargetBox(NewShipType, 2, -0.9, -0.8, -0.9, 0.85, 0.05, 0.1);
+setTargetBox(NewShipType, 3, -0.75, -0.7, 0.1, 0.5, -0.35, 0.35);
+
 --------------------------------------------------	
 --- Selection	
 --------------------------------------------------	
@@ -316,8 +323,8 @@ NewShipType.downLOD = 12515
 --- alternative Hyperspace Gate
 --------------------------------------------------
 
-NewShipType["alternativeHyperspaceV"] = "hyperspace_gate_small"
-NewShipType["alternativeHyperspaceA"] = "etg/misc/small_warp"
+NewShipType["alternativeHyperspaceV"] = "subspace_gate_small"
+NewShipType["alternativeHyperspaceA"] = "etg/misc/small_subspace"
 NewShipType["alternativeHyperspaceTime"] = 7
 
 --------------------------------------------------
@@ -330,11 +337,11 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5,
     "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip",
     "frontal",
-    { Fighter = "BroadSide" },
-    { Fighter_hw1 = "BroadSide" },
-    { Corvette = "BroadSide" },
-    { Corvette_hw1 = "BroadSide" },
-    { Munition = "BroadSide" });
+    { Fighter = "MoveToTargetAndShoot" },
+    { Fighter_hw1 = "MoveToTargetAndShoot" },
+    { Corvette = "MoveToTargetAndShoot" },
+    { Corvette_hw1 = "MoveToTargetAndShoot" },
+    { Munition = "MoveToTargetAndShoot" });
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)
 addAbility(NewShipType, "RetireAbility", 1, 0)
@@ -384,14 +391,14 @@ StartShipHardPointConfig(NewShipType, "SRED1", "Weapon_06", "Weapon", "Innate", 
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType,"CapCap","CapturePoint0");
-loadLatchPointList(NewShipType,"RepCap","RepairPoint0","RepairPoint0Heading");
+loadLatchPointList(NewShipType, "CapCap", "CapturePoint1", "CapturePoint2", "CapturePoint3");
+loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2", "RepairPoint3");
 
 --------------------------------------------------
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanCruiser", "", 3, "", "Root")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanCapital", "", 3, "", "Root")
 
 --------------------------------------------------
 --- Engines
@@ -400,12 +407,3 @@ loadShipPatchList(NewShipType, "data:sound/sfx/ship/", 0, "", "", 1, "ShivanCrui
 setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 140)
 setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, { 0.27, 0.47, .69, 0.25 })
 NewShipType.trailLinger = 3
-
---------------------------------------------------
---- Target Boxes
---------------------------------------------------
-
-setTargetBox(NewShipType, 0, -0.25, 0.05, -0.95, 0.75, 0.55, 0.95);
-setTargetBox(NewShipType, 1, -0.35, 0.55, -0.85, 0.7, 0.95, -0.55);
-setTargetBox(NewShipType, 2, -0.9, -0.8, -0.9, 0.85, 0.05, 0.1);
-setTargetBox(NewShipType, 3, -0.75, -0.7, 0.1, 0.5, -0.35, 0.35);

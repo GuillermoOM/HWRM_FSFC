@@ -24,3 +24,6 @@ supplyIndent("Sathanas", 1);
 
 supplyLimit("Rakshasa", 5);
 supplyIndent("Rakshasa", 1);
+
+supplyLimit("Moloch", 5);
+supplyIndent("Moloch", 1);
