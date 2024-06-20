@@ -10,6 +10,8 @@ squadclass[eMotherShip] = {
 	TER_COLOSSUS,
 
 	SHI_SATHANAS,
+
+	VAS_COLOSSUS,
 }
 squadclass[eCollector] = {
 	HGN_RESOURCECOLLECTOR,
@@ -20,6 +22,8 @@ squadclass[eCollector] = {
 	TER_ELYSIUM,
 
 	SHI_AZRAEL,
+
+	VAS_ISIS,
 }
 squadclass[eScout] = {
 	HGN_SCOUT,
@@ -41,6 +45,9 @@ squadclass[eScout] = {
 
 	SHI_ASTAROTH,
 	SHI_DRAGON,
+
+	VAS_SETEKH,
+	VAS_PTAH,
 }
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
@@ -51,6 +58,9 @@ squadclass[eRefinery] = {
 	TER_ZEPHYRUS,
 
 	SHI_RAHU,
+
+	VAS_ANUKET,
+	VAS_MAAT,
 }
 squadclass[eBuilder] = {
 	HGN_MOTHERSHIP,
@@ -70,6 +80,10 @@ squadclass[eBuilder] = {
 
 	SHI_DEMON,
 	SHI_RAVANA,
+
+	VAS_TYPHON,
+	VAS_KARNAK,
+	VAS_HATSHEPSUT,
 }
 squadclass[eDropOff] = {
 	HGN_MOTHERSHIP,
@@ -97,6 +111,11 @@ squadclass[eDropOff] = {
 	SHI_DEMON,
 	SHI_RAVANA,
 	SHI_SATHANAS,
+
+	VAS_TYPHON,
+	VAS_ANUKET,
+	VAS_MAAT,
+	VAS_HATSHEPSUT,
 }
 squadclass[eSalvageDropOff] = {
 	HGN_MOTHERSHIP,
@@ -116,6 +135,9 @@ squadclass[eSalvageDropOff] = {
 
 	SHI_DEMON,
 	SHI_RAVANA,
+
+	VAS_TYPHON,
+	VAS_HATSHEPSUT,
 }
 squadclass[eFighter] = {
 	HGN_INTERCEPTOR,
@@ -151,6 +173,13 @@ squadclass[eFighter] = {
 	SHI_MARA,
 	SHI_SCORPION,
 	SHI_GORGON,
+
+	VAS_PTAH,
+	VAS_SETH,
+	VAS_HORUS,
+	VAS_THOTH,
+	VAS_TAURET,
+	VAS_SERAPIS,
 }
 squadclass[eCorvette] = {
 	HGN_ASSAULTCORVETTE,
@@ -184,6 +213,11 @@ squadclass[eCorvette] = {
 	SHI_SERAPHIM,
 	SHI_SHAITAN,
 	SHI_TAURVI,
+
+	VAS_BAKHA,
+	VAS_SEHKMET,
+	VAS_OSIRIS,
+	VAS_AMUN,
 }
 squadclass[eFrigate] = {
 	HGN_ASSAULTFRIGATE,
@@ -213,6 +247,10 @@ squadclass[eFrigate] = {
 	SHI_CAIN,
 	SHI_LILITH,
 	SHI_RAKSHASA,
+
+	VAS_ATEN,
+	VAS_MENTU,	
+	VAS_SATIS,
 }
 squadclass[eCapture] = {
 	HGN_MARINEFRIGATE,
@@ -222,12 +260,18 @@ squadclass[eCapture] = {
 	--TAI_SALVAGECORVETTE,
 
 	TER_ARGO,
+
+	VAS_SATIS,
 }
 squadclass[eShield] = {
 	HGN_DEFENSEFIELDFRIGATE,
 	TAI_FIELDFRIGATE,
 
 	TER_CHARYBDIS,
+	TER_FAUSTUS,
+
+	VAS_SETEKH,
+	VAS_IMHOTEP,
 }
 squadclass[ePlatform] = {
 	HGN_GUNTURRET,
@@ -239,6 +283,13 @@ squadclass[ePlatform] = {
 	TER_ALASTOR,
 	TER_CERBERUS,
 	TER_MJOLNIR,
+
+	VAS_ANKH,
+	VAS_EDJO,
+
+	SHI_TRIDENT,
+	SHI_BELIAL,
+	SHI_COMMNODE,
 }
 squadclass[eAntiFighter] = {
 	HGN_INTERCEPTOR,
@@ -267,11 +318,20 @@ squadclass[eAntiFighter] = {
 	TER_MYRMIDON,
 	TER_VALKYRIE,
 
-	SHI_ASTAROTH,
 	SHI_DRAGON,
-	SHI_MANTICORE,
 	SHI_MARA,
+	SHI_TAURVI,
+
+	SHI_TRIDENT,
+	SHI_BELIAL,
+
 	SHI_SCORPION,
+	SHI_GORGON,
+
+	VAS_ANKH,
+	VAS_EDJO,
+	VAS_THOTH,
+	VAS_ANUBIS,
 }
 squadclass[eAntiCorvette] = {
 	HGN_PULSARCORVETTE,
@@ -318,6 +378,12 @@ squadclass[eAntiCorvette] = {
 	SHI_RAKSHASA,
 	SHI_LILITH,
 	SHI_RAKSHASA,
+
+	VAS_ANKH,
+	VAS_EDJO,
+
+	VAS_HORUS,
+	VAS_SERAPIS,
 }
 squadclass[eAntiFrigate] = {
 	HGN_IONTURRET,
@@ -385,6 +451,19 @@ squadclass[eAntiFrigate] = {
 	SHI_RAVANA,
 	SHI_LUCIFER,
 	SHI_SATHANAS,
+
+	VAS_SETH,
+	VAS_TAURET,
+	VAS_MENTU,
+	VAS_SOBEK,
+	VAS_BAKHA,
+	VAS_OSIRIS,
+	VAS_SEHKMET,
+	VAS_AMUN,
+	
+	VAS_TYPHON,
+	VAS_HATSHEPSUT,
+	VAS_COLOSSUS,
 }
 
 squadclass[eCapital] = {
@@ -422,6 +501,12 @@ squadclass[eCapital] = {
 	SHI_LUCIFER,
 	SHI_SATHANAS,
 	SHI_MOLOCH,
+
+	VAS_HATSHEPSUT,
+	VAS_TYPHON,
+	VAS_KARNAK,
+	VAS_SOBEK,
+	VAS_COLOSSUS,
 }
 squadclass[eNonThreat] = {
 	HGN_RESOURCECOLLECTOR,
@@ -485,6 +570,10 @@ squadclass[eNonThreat] = {
 
 	SHI_AZRAEL,
 	SHI_RAHU,
+
+	VAS_ISIS,
+	VAS_NEPHTHYS,
+	VAS_IMHOTEP,
 }
 squadclass[eHyperspaceGate] =
 {
@@ -511,6 +600,11 @@ squadclass[eSubSystemAttackers] =
 	SHI_SERAPHIM,
 	SHI_SHAITAN,
 	SHI_TAURVI,
+
+	VAS_BAKHA,
+	VAS_SEHKMET,
+	VAS_OSIRIS,
+	VAS_AMUN,
 }
 squadclass[eNonCriticalSubSys] =
 {
@@ -570,6 +664,14 @@ squadclass[eGoodRepairAttackers] =
 	SHI_LILITH,
 	SHI_RAKSHASA,
 	SHI_MOLOCH,
+
+	VAS_SETH,
+	VAS_TAURET,
+	VAS_MENTU,
+	VAS_SOBEK,
+	VAS_BAKHA,
+	VAS_OSIRIS,
+	VAS_SEHKMET,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
@@ -604,6 +706,8 @@ squadclass[eBattleCruiser] =
 	
 	SHI_SATHANAS,
 	SHI_LUCIFER,
+
+	VAS_COLOSSUS,
 }
 squadclass[eDestroyer] = {
 	HGN_DESTROYER,
@@ -616,6 +720,8 @@ squadclass[eDestroyer] = {
 	TER_DEIMOS,
 
 	SHI_MOLOCH,
+
+	VAS_SOBEK,
 }
 
 function FastAddToClass(tbl, classid)
