@@ -3,13 +3,13 @@
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
 = -$SHADE_OPT_LOADDAE=Force8888
 = -$HOD_SAVE_OPTS=ForceScars FilterScars=thruster,bay
-= -$IN_CAT=debris_meshes
-= -$OUT_CAT=art\fx\debris_meshes
-= -$HOD=lucifer8
-= -$NEWHOD=lucifer8
+= -$IN_CAT=ship_working_on
+= -$OUT_CAT=ship
+= -$HOD=vas_typhon
+= -$NEWHOD=vas_typhon
 = -log
-= -$CONVERT_IN=$[S_DIR]\$[IN_CAT]\$[HOD].DAE
-= -$CONVERT_OUT=$[T_DIR]\$[OUT_CAT]\$[NEWHOD].hod
+= -$CONVERT_IN=$[S_DIR]\$[IN_CAT]\$[HOD]\$[HOD].DAE
+= -$CONVERT_OUT=$[T_DIR]\$[OUT_CAT]\$[NEWHOD]\$[NEWHOD].hod
 = -do=convert
 = -action=null
 = -wait
