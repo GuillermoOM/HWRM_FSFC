@@ -250,6 +250,46 @@ buildFamily =
 	{
 		name = "SubSystemLarge_Shi",
 	},
+
+	{
+		name = "Fighter_Vas",
+	},
+	{
+		name = "Bomber_Vas",
+	},
+	{
+		name = "Cruiser_Vas",
+	},
+	{
+		name = "Mover_Vas",
+	},
+	{
+		name = "SuperCap_Vas",
+	},
+	{
+		name = "Shipyard_Vas",
+	},
+	{
+		name = "Battlecruiser_Vas",
+	},
+	{
+		name = "Flagship_Vas",
+	},
+	{
+		name = "Utility_Vas",
+	},
+	{
+		name = "Probe_Vas",
+	},
+	{
+		name = "Platform_Vas",
+	},
+	{
+		name = "SubSystem_Vas",
+	},
+	{
+		name = "SubSystemLarge_Vas",
+	},
 }
 
 displayFamily =

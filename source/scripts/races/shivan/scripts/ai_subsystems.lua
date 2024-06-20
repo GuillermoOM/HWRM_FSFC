@@ -1,6 +1,6 @@
-aitrace("LOADING TERRAN SUBSYSTEM INFO")
+aitrace("LOADING SHIVAN SUBSYSTEM INFO")
 
-function DoSubSystemDemand_Terran()
+function DoSubSystemDemand_Shivan()
 	-- local FighterDemand = ShipDemandMaxByClass( eCorvette ) + ShipDemandMaxByClass( eFighter )
 	-- local CapitalDemand = ShipDemandMaxByClass( eFrigate ) + ShipDemandMaxByClass( eCapital )
 	-- SubSystemDemandSet(FIGHTERBAY, FighterDemand )
@@ -8,4 +8,4 @@ function DoSubSystemDemand_Terran()
 	-- SubSystemDemandSet(NAVIGATION, 10 )
 end
 
-CpuBuildSS_DefaultSubSystemDemandRules = DoSubSystemDemand_Terran
+CpuBuildSS_DefaultSubSystemDemandRules = DoSubSystemDemand_Shivan

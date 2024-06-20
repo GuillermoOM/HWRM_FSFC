@@ -1,9 +1,9 @@
 crate_Motherships =
 {
-	"Ter_Orion",
+	"Shi_Demon",
 }
 
 crate_Carriers =
 {
-	"Ter_Orion",
+	"Shi_Demon",
 }

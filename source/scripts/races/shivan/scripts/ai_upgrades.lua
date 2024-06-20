@@ -1,12 +1,12 @@
 
-aitrace("LOADING TERRAN UPGRADE INFO")
+aitrace("LOADING SHIVAN UPGRADE INFO")
 
 
 
 
 
 
-function DoUpgradeDemand_Terran()
+function DoUpgradeDemand_Shivan()
 
 	-- ResearchDemandSet( INTERCEPTORMAXSPEEDUPGRADE1, 5 )
 	-- ResearchDemandSet( ATTACKBOMBERMAXSPEEDUPGRADE1, 5 )
@@ -101,7 +101,7 @@ function DoUpgradeDemand_Terran()
 	-- end
 end
 
-function DoResearchTechDemand_Terran()
+function DoResearchTechDemand_Shivan()
 	-- local numShipyards = NumSquadrons(kShipYard) + NumSquadronsQ(kShipYard)
 	-- if (numShipyards > 0 and Util_CheckResearch(BATTLECRUISERIONWEAPONS)) then
 	-- 	local battleCruiserDemand = ShipDemandGet( kBattleCruiser )
@@ -155,5 +155,5 @@ function DoResearchTechDemand_Terran()
 	-- end
 end
 
-DoUpgradeDemand = DoUpgradeDemand_Terran
-DoResearchTechDemand = DoResearchTechDemand_Terran
+DoUpgradeDemand = DoUpgradeDemand_Shivan
+DoResearchTechDemand = DoResearchTechDemand_Shivan

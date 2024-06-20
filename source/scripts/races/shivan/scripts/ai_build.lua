@@ -1,11 +1,11 @@
 aitrace("LOADING SHIVAN BUILD INFO")
 
-kCollector = SHI_AZRAEL
-kRefinery  = SHI_RAHU
-kScout     = SHI_ASTAROTH
-kCarrier   = SHI_RAVANA
-kDestroyer = SHI_MOLOCH
-kBattleCruiser = SHI_LUCIFER
+kCollector = VAS_ISIS
+kRefinery  = VAS_ANUKET
+kScout     = VAS_PTAH
+kCarrier   = VAS_TYPHON
+kDestroyer = VAS_SOBEK
+kBattleCruiser = VAS_HATSHEPSUT
 
 function DetermineDemandWithNoCounterInfo_Shivan()
 	if (sg_randFavorShipType < 55) then
@@ -68,7 +68,7 @@ function DetermineSpecialDemand_Shivan()
 
 	
 	if ((GetNumCollecting() > 9 or GetRU() > 3500) and s_militaryPop > 15 and UnderAttackThreat() < -75) then
-		ShipDemandAdd(SHI_SATHANAS, 2.5)
+		ShipDemandAdd(VAS_COLOSSUS, 2.5)
 	end
 end
 
