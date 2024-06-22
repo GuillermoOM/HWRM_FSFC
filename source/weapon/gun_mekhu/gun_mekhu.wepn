@@ -1,0 +1,21 @@
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_mekhu", "Normal", 1940, 1940, 0, 0, 0, 0, 1, 1, 0, 0.15,
+    0, 0, 0, 0, 260, 240, 0.1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 12, 12, "")
+
+setAngles(NewWeaponType, 10, 0, 0, 0, 0)
+
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 1, },
+    { LightArmour = 1, },
+    { MediumArmour = 0.2, },
+    { HeavyArmour = 0.2, },
+    { SubSystemArmour = 0.25, },
+    { TurretArmour = 0.25, },
+    { ResArmour = 0.7, },
+    { MoverArmour = 1, },
+    { PlanetKillerArmour = 1, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+
+setAccuracy(NewWeaponType, 1)
