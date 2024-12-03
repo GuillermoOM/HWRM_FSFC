@@ -28,12 +28,16 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 - *NEW* Integration with HW ships on the same game
 - Terran Race:
     - All ships Migrated
-    - Working fleet chatter
     - AI (still WIP but can be tested)
-- Shivan Race:
-    - Some ships available
-    - AI not working
     - working fleet chatter
+- Shivan Race:
+    - All ships available
+    - AI
+    - working fleet chatter
+- Vasudan Race:
+    - Some ships available
+    - AI
+    - fleet chatter (WIP)
   
 ## Current Issues
 
@@ -44,19 +48,18 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 ## What's missing
 
-- Shivan Race
 - Vasudan Race
 - Maps
 - Research
 - Gametypes
-- Multiplayer
+- Multiplayer (possible)
 - Ship's shield effects (Reaaaaally hard thing to do)
-- Proper subspace animation (also hard to do)
+- Proper subspace animation (also hard to do, probably wont be a thing)
 
 ## Current Roadmap
-1. Finish Polishing Terran Ships
-2. Finish Adding Shivan Ships
-3. Add AI to Shivans
+1. ~~Finish Polishing Terran Ships~~
+2. ~~Finish Adding Shivan Ships~~
+3. ~~Add AI to Shivans~~
 4. Enable Multiplayer
 5. Add Vasudan Race and Ships
 6. Add AI to Vasudans
@@ -64,5 +67,8 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 8. Add FS Gametypes
 9. Add FS Levels
 10. Add Waves Gametype (From existing mod)
-11. Possibly add BP?
-12. More ideas soon...
+
+## Brainstorming...
+- Possibly add BP?
+- Integrate player's patch
+- ???
