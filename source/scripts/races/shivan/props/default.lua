@@ -74,7 +74,7 @@ String_Properties = {
 	path_crate_locate = [[data:scripts/races/shivan/scripts/crate_locate.lua]],
 	path_crate_ships = [[data:scripts/races/shivan/scripts/crate_ships.lua]],
 	
-	def_type_mothership = "shi_demon",
+	def_type_mothership = "shi_ravana",
 	def_type_carrier = "shi_demon",
 	def_type_scout = "shi_astaroth",
 }

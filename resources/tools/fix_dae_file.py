@@ -1,11 +1,15 @@
+# TODO: remove instances of ns0: of output DAE file
+
+
 from PIL import Image
 import xml.etree.ElementTree as ET
 import os
 import copy
 
 DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_working_on"
-
-SHIP_NAME = "vas_seth"
+SHIP_NAME = "vas_horus"
+LIGHT_NAME = 'nback'
+BURN_NAME =  'EngineBurn'
 
 def fix_image_sizes():
     max_size = {}
@@ -46,8 +50,8 @@ def fix_dae_engine_burns():
 
     # Create JNT from NAVL coords -> rorate Y 180 -> Move BURN to JNT created
 
-    engine_lights_name = 'NAVL[EngineNozzle'
-    engine_burns_name = 'BURN[EngineBurn'
+    engine_lights_name = f'NAVL[{LIGHT_NAME}'
+    engine_burns_name = f'BURN[{BURN_NAME}'
 
     dae_file = os.path.join(DAE_DIRS_PATH, SHIP_NAME, SHIP_NAME+".DAE")
 
@@ -92,7 +96,7 @@ def fix_dae_engine_burns():
 
     tree.write(dae_file, encoding='utf-8', xml_declaration=True)
 
-
-fix_image_sizes()
-fix_dae_engine_burns()
+if __name__ == '__main__':
+    fix_image_sizes()
+    fix_dae_engine_burns()
 

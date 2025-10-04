@@ -207,18 +207,6 @@ NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0
 
 --------------------------------------------------
---- Explosion Damage
---------------------------------------------------
-
-NewShipType.explosiveDamageOnDeath = 27
-NewShipType.explosiveScuttleDamageOnDeath = 125
-NewShipType.maxFalloffForce = 15 * 10
-NewShipType.minFalloffDamageDist = 125
-NewShipType.maxFalloffDamageDist = 125 * 3
-NewShipType.maxFalloffScuttleDamageDist = 125 * 6
-NewShipType.radiusDamageEvadeMod = 1.1
-
---------------------------------------------------
 --- Death Tumble
 --------------------------------------------------
 

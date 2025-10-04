@@ -74,7 +74,7 @@ String_Properties = {
 	path_crate_locate = [[data:scripts/races/terran/scripts/crate_locate.lua]],
 	path_crate_ships = [[data:scripts/races/terran/scripts/crate_ships.lua]],
 
-	def_type_mothership = "ter_orion",
-	def_type_carrier = "ter_hecate",
+	def_type_mothership = "ter_hecate",
+	def_type_carrier = "ter_orion",
 	def_type_scout = "ter_loki",
 }
