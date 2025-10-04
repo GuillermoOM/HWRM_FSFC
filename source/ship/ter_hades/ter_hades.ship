@@ -219,7 +219,7 @@ NewShipType.maxFalloffDamageDist = 1450 * 1.5
 NewShipType.maxFalloffScuttleDamageDist = 1450 * 3
 NewShipType.explosiveScuttleDamageOnDeath = 3302 * 3
 NewShipType.maxFalloffForce = 500 * 10
-NewShipType.explosiveDamageOnDeath = 660 * 3
+NewShipType.explosiveDamageOnDeath = 660
 NewShipType.radiusDamageEvadeMod = 1.1
 
 --------------------------------------------------
