@@ -1,5 +1,3 @@
-# TODO: remove instances of ns0: of output DAE file
-
 
 from PIL import Image
 import xml.etree.ElementTree as ET
@@ -7,8 +5,8 @@ import os
 import copy
 
 DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_working_on"
-SHIP_NAME = "vas_horus"
-LIGHT_NAME = 'nback'
+SHIP_NAME = "vas_tauret"
+LIGHT_NAME = 'g'
 BURN_NAME =  'EngineBurn'
 
 def fix_image_sizes():
@@ -57,6 +55,7 @@ def fix_dae_engine_burns():
 
     ns = {'collada':'http://www.collada.org/2005/11/COLLADASchema'}
 
+    ET.register_namespace("", ns['collada'])
     tree = ET.parse(dae_file)
     root = tree.getroot()
 

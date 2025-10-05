@@ -27,7 +27,7 @@ build = {
 	-- Fighters ---------------
 	{
 		Type = Ship,
-		ThingToBuild = "hol_seth",
+		ThingToBuild = "vas_seth",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
@@ -37,7 +37,7 @@ build = {
 
 	{
 		Type = Ship,
-		ThingToBuild = "hol_thoth",
+		ThingToBuild = "vas_thoth",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
@@ -52,6 +52,15 @@ build = {
 		DisplayPriority = 3,
 		DisplayedName = "GVF Horus - Interceptor <c=12AB06>32s</c>",
 		Description = "<b>Description:</b> The GVF Horus was the fastest fighter class during the Great War and it's still the fastest fighter in the GTVA fleet. Its weapon capacity is average for a fighter, with four primary banks and two missile bays. The Horus pays for its speed and maneuverability with thin armor and relatively weak shields. The Horus shines as a bomber interceptor, a role Allied Command puts it in as often as possible. For offensive operations against well-defended targets, however, the Horus is a poor choice. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles. \n\n<b>Armaments:</b> 2x Prometheus S, 2x GTW ML-70 Morning Star, 1x GTM-55 Trebuchet, 1x GTM-MX64 Rockeye.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_tauret",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 4,
+		DisplayedName = "GVF Tauret - Heavy Assault <c=12AB06>49s</c>",
+		Description = "<b>Description:</b> While integrating cutting-edge technology developed in collaboration with the Terrans, the Tauret boasts a distinctly Vasudan design. Its unusual configuration was inspired by the Apsu-Hek, a creature that once inhabited the deserts of Vasuda Prime. The Apsu-Hek has become an emblem of the Vasudan diaspora, and the Tauret continues the tradition of symbolic design. Armed with six gun mounts and two large missile banks, the Tauret has the speed and firepower to challenge both fighters and warships. \n\n<b>Prerequisites:</b> Fighter Design, Tornado Missiles or Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x GTW-5 Prometheus S, 2x UD-8 Kayser, 2x GTM-MX64 Rockeye, 2x GTM-4a Tornado",
 	},
 
 	-- Bombers --------------
