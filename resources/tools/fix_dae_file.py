@@ -5,7 +5,7 @@ import os
 import copy
 
 DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_working_on"
-SHIP_NAME = "vas_serapis"
+SHIP_NAME = "vas_sehkmet"
 LIGHT_NAME = 'g'
 BURN_NAME =  'EngineBurn'
 
