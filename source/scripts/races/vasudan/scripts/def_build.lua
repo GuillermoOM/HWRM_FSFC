@@ -71,6 +71,15 @@ build = {
 		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>65s</c>",
 		Description = "<b>Description:</b> The stealth prototype GVF Ptah was a top-secret development project assigned to Vasudan conglomerate Akheton Corp. Designed to be invisible to standard detection arrays mounted on combat craft, Ptahs have performed admirably during their OpEval period. The masking materials and blending technologies used across their outer surfaces seem to confuse Shivan detection systems as well. The Ptah is currently available only to select fighter units in the Vasudan navy, with no word on when they will be more widely distributed. \n\n<b>Prerequisites:</b> Fighter Design, Stealth Technology. \n\n<b>Armaments:</b> 2x Mekhu HL-7 (Rapid Fire), 1x GTM-19 Harpoon, 1x GTM 43a Stiletto II (Upgrade)",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_serapis",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 6,
+		DisplayedName = "GVF Serapis - Adv. Interceptor <c=12AB06>40s</c>",
+		Description = "<b>Description:</b> Fast and highly maneuverable, the GVF Serapis is primarily used as a bomber interceptor. Its thin armor and weak shields give it a low survival rate in dogfights against more heavily armored fighters. Despite having only two primary and secondary weapon banks, the Serapis has been retrofitted to accommodate almost any loadout in the GTVA arsenal. Veteran Vasudan pilots love the Serapis for its agility and loadout options. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 2x Mekhu HL-7 , 1x GTM-19 Harpoon, 1x GTM-14 EMP Advanced (Upgrade).",
+	},
 
 	-- Bombers --------------
 
