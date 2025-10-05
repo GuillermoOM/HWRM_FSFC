@@ -62,6 +62,15 @@ build = {
 		DisplayedName = "GVF Tauret - Heavy Assault <c=12AB06>49s</c>",
 		Description = "<b>Description:</b> While integrating cutting-edge technology developed in collaboration with the Terrans, the Tauret boasts a distinctly Vasudan design. Its unusual configuration was inspired by the Apsu-Hek, a creature that once inhabited the deserts of Vasuda Prime. The Apsu-Hek has become an emblem of the Vasudan diaspora, and the Tauret continues the tradition of symbolic design. Armed with six gun mounts and two large missile banks, the Tauret has the speed and firepower to challenge both fighters and warships. \n\n<b>Prerequisites:</b> Fighter Design, Tornado Missiles or Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x GTW-5 Prometheus S, 2x UD-8 Kayser, 2x GTM-MX64 Rockeye, 2x GTM-4a Tornado",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_ptah",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 5,
+		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>65s</c>",
+		Description = "<b>Description:</b> The stealth prototype GVF Ptah was a top-secret development project assigned to Vasudan conglomerate Akheton Corp. Designed to be invisible to standard detection arrays mounted on combat craft, Ptahs have performed admirably during their OpEval period. The masking materials and blending technologies used across their outer surfaces seem to confuse Shivan detection systems as well. The Ptah is currently available only to select fighter units in the Vasudan navy, with no word on when they will be more widely distributed. \n\n<b>Prerequisites:</b> Fighter Design, Stealth Technology. \n\n<b>Armaments:</b> 2x Mekhu HL-7 (Rapid Fire), 1x GTM-19 Harpoon, 1x GTM 43a Stiletto II (Upgrade)",
+	},
 
 	-- Bombers --------------
 

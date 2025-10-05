@@ -34,7 +34,7 @@
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
--Spawn_Ship_5=vas_horus
+-Spawn_Ship_5=vas_ptah
 -Spawn_Pos_5=-8000,0,5000
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
