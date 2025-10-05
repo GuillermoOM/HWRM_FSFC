@@ -15,7 +15,7 @@ params = """
 """
 
 # ships_list = os.listdir(ship_directory)
-ships_list = ['ter_orion','ter_apollo','ter_apollo','vas_typhon','vas_tauret','vas_sehkmet']
+ships_list = ['ter_orion','vas_typhon','vas_osiris','vas_sehkmet']
 # ships_list.remove("icons")
 PLAYER_RACE = 'vas'
 

@@ -10,7 +10,7 @@ NewShipType = StartShipConfig()
 --- Shipinfo
 --------------------------------------------------
 
-NewShipType.displayedName = "GVF Sehkmet"
+NewShipType.displayedName = "GVF Osiris"
 NewShipType.sobDescription = "Interceptor"
 
 --------------------------------------------------
@@ -44,15 +44,15 @@ setSupplyValue(NewShipType, "LayoutCorvette", 4.0)
 --------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 4)
-NewShipType.buildCost = 890
-NewShipType.buildTime = 46
+NewShipType.buildCost = 750
+NewShipType.buildTime = 40
 NewShipType.buildPriorityOrder = 20
 
 --------------------------------------------------
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 500
+NewShipType.maxhealth = 600
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -79,17 +79,17 @@ NewShipType.detectionStrength = 4
 --- Movement
 --------------------------------------------------
 
-NewShipType.mass = 200
+NewShipType.mass = 700
 
-NewShipType.thrusterMaxSpeed = 248
-NewShipType.thrusterAccelTime = 5
+NewShipType.thrusterMaxSpeed = 228
+NewShipType.thrusterAccelTime = 4
 NewShipType.thrusterBrakeTime = 2
 
-NewShipType.mainEngineMaxSpeed = 248
-NewShipType.mainEngineAccelTime = 5
+NewShipType.mainEngineMaxSpeed = 228
+NewShipType.mainEngineAccelTime = 4
 NewShipType.mainEngineBrakeTime = 2
 
-NewShipType.rotationMaxSpeed = 90
+NewShipType.rotationMaxSpeed = 72
 NewShipType.rotationAccelTime = 1.1
 NewShipType.rotationBrakeTime = 0.55
 
@@ -203,13 +203,13 @@ NewShipType.dontDockWithOtherRaceShips = 1
 --------------------------------------------------
 
 NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 10
+NewShipType.corvetteValue = 8
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 0
+NewShipType.antiFighterValue = 1
 NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 14
-NewShipType.totalValue = 10
+NewShipType.antiFrigateValue = 8
+NewShipType.totalValue = 8
 
 --------------------------------------------------
 --- Damage & Death  DO NOT MODIFY
@@ -367,7 +367,7 @@ addAbility(
 	"Start_Afterburner",
 	"Do_Afterburner",
 	"Finish_Afterburner",
-	"vas_sehkmet",
+	"vas_osiris",
 	0.5,
 	3,
 	1
@@ -383,11 +383,13 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 -- Ship Weapons
-StartShipWeaponConfig(NewShipType, "Gun_PrometheusS", "Weapon_FrontGun", "")
+StartShipWeaponConfig(NewShipType, "Gun_PrometheusR", "Weapon_FrontGun", "")
+StartShipWeaponConfig(NewShipType, "Gun_Subach_Turret", "Weapon_Turret1", "Fire1")
+StartShipWeaponConfig(NewShipType, "Gun_Subach_Turret", "Weapon_Turret2", "Fire2")
 
 -- Ship Missiles
-StartShipWeaponConfig(NewShipType, "miss_helios", "Weapon_Bomb1", "")
-StartShipWeaponConfig(NewShipType, "miss_infyrno", "Weapon_Bomb2", "")
+StartShipWeaponConfig(NewShipType, "miss_cyclops", "Weapon_Bomb1", "")
+StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Bomb2", "")
 
 --------------------------------------------------
 --- HardPoints

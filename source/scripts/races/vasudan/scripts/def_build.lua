@@ -89,17 +89,16 @@ build = {
 		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>46s</c>",
 		Description = "<b>Description:</b> The GVB Sekhmet is a Shivan design that was initially adapted to Vasudan needs by Hammer of Light engineers. The version currently in use was further modified by technicians at Mekhu Enterprises. Sporting four primary weapon banks and three missile/bomb bays, the Sekhmet packs a massive punch. Add in a top speed that surpasses that of some fighters and an ultra-dense molybdenum armor plating, and it's easy to see why the Sekhmet is the favorite bomber among Vasudan pilots. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 4x Prometheus S, 1x GTM-13 Helios, 1x GTM-11 Infyrno (Upgrade).",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_osiris",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 8,
+		DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>40s</c>",
+		Description = "<b>Description:</b> The GVB Osiris was the primary bomber of the PVN during the Great War. It is showing its age during the current conflict, as the more advanced Bakha and Sekhmet bombers have replaced it on the front lines in most theatres of conflict. Osiris bombers still in service have been retrofitted to make them compatible with most GTVA missiles and bombs. If well-protected by fighter escorts, a wing of Osiris bombers can still wreak havoc on enemy cruisers and corvettes. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser bombs. \n\n<b>Armaments:</b> 2x Prometheus R (2x Prometheus S turret), 1x GTM-12 Cyclops, 1x GTM-10 Pihrana (Upgrade)",
+	},
 	-- todo
-	-- {
-	-- 	Type = Ship,
-	-- 	ThingToBuild = "vas_osiris",
-	-- 	RequiredResearch = "",
-	-- 	RequiredShipSubSystems = "",
-	-- 	DisplayPriority = 8,
-	-- 	DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>40s</c>",
-	-- 	Description = "<b>Description:</b> The GVB Osiris was the primary bomber of the PVN during the Great War. It is showing its age during the current conflict, as the more advanced Bakha and Sekhmet bombers have replaced it on the front lines in most theatres of conflict. Osiris bombers still in service have been retrofitted to make them compatible with most GTVA missiles and bombs. If well-protected by fighter escorts, a wing of Osiris bombers can still wreak havoc on enemy cruisers and corvettes. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser bombs. \n\n<b>Armaments:</b> 2x Prometheus R (2x Prometheus S turret), 1x GTM-12 Cyclops, 1x GTM-10 Pihrana (Upgrade)",
-	-- },
-	--
 	-- {
 	-- 	Type = Ship,
 	-- 	ThingToBuild = "vas_bakha",
