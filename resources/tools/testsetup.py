@@ -32,13 +32,15 @@ h_ships = [
 ]
 
 p_ships = [
-    "shi_trident",
-    "shi_trident",
-    "shi_mephisto",
-    "shi_ravana",
-    "shi_mephisto",
-    "shi_trident",
-    "shi_trident",
+    "vas_ankh",
+    "vas_ankh",
+    "vas_edjo",
+    "vas_edjo",
+    "vas_typhon",
+    "vas_edjo",
+    "vas_edjo",
+    "vas_ankh",
+    "vas_ankh",
 ]
 
 # ships_list.remove("icons")

@@ -9,102 +9,112 @@
 -Camera_Eye=8000,0,0
 -Spawn_Back=ez01
 
--Spawn_Ship_0=shi_trident
+-Spawn_Ship_0=vas_ankh
 -Spawn_Pos_0=-3000,0,0
 -Spawn_Rot_0=0,90,0
 -Spawn_Team_0=0
 
--Spawn_Ship_1=shi_trident
+-Spawn_Ship_1=vas_ankh
 -Spawn_Pos_1=-3000,0,1000
 -Spawn_Rot_1=0,90,0
 -Spawn_Team_1=0
 
--Spawn_Ship_2=shi_mephisto
+-Spawn_Ship_2=vas_edjo
 -Spawn_Pos_2=-3000,0,2000
 -Spawn_Rot_2=0,90,0
 -Spawn_Team_2=0
 
--Spawn_Ship_3=shi_ravana
+-Spawn_Ship_3=vas_edjo
 -Spawn_Pos_3=-3000,0,3000
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
--Spawn_Ship_4=shi_mephisto
+-Spawn_Ship_4=vas_typhon
 -Spawn_Pos_4=-3000,0,4000
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
--Spawn_Ship_5=shi_trident
+-Spawn_Ship_5=vas_edjo
 -Spawn_Pos_5=-3000,0,5000
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
 
--Spawn_Ship_6=shi_trident
+-Spawn_Ship_6=vas_edjo
 -Spawn_Pos_6=-3000,0,6000
 -Spawn_Rot_6=0,90,0
 -Spawn_Team_6=0
 
--Spawn_Ship_7=ter_perseus
--Spawn_Pos_7=3000,0,0
--Spawn_Rot_7=0,-90,0
--Spawn_Team_7=1
+-Spawn_Ship_7=vas_ankh
+-Spawn_Pos_7=-3000,0,7000
+-Spawn_Rot_7=0,90,0
+-Spawn_Team_7=0
 
--Spawn_Ship_8=ter_perseus
--Spawn_Pos_8=3000,0,1000
--Spawn_Rot_8=0,-90,0
--Spawn_Team_8=1
+-Spawn_Ship_8=vas_ankh
+-Spawn_Pos_8=-3000,0,8000
+-Spawn_Rot_8=0,90,0
+-Spawn_Team_8=0
 
 -Spawn_Ship_9=ter_perseus
--Spawn_Pos_9=3000,0,2000
+-Spawn_Pos_9=3000,0,0
 -Spawn_Rot_9=0,-90,0
 -Spawn_Team_9=1
 
 -Spawn_Ship_10=ter_perseus
--Spawn_Pos_10=3000,0,3000
+-Spawn_Pos_10=3000,0,1000
 -Spawn_Rot_10=0,-90,0
 -Spawn_Team_10=1
 
 -Spawn_Ship_11=ter_perseus
--Spawn_Pos_11=3000,0,4000
+-Spawn_Pos_11=3000,0,2000
 -Spawn_Rot_11=0,-90,0
 -Spawn_Team_11=1
 
 -Spawn_Ship_12=ter_perseus
--Spawn_Pos_12=3000,0,5000
+-Spawn_Pos_12=3000,0,3000
 -Spawn_Rot_12=0,-90,0
 -Spawn_Team_12=1
 
--Spawn_Ship_13=ter_orion
--Spawn_Pos_13=3000,0,6000
+-Spawn_Ship_13=ter_perseus
+-Spawn_Pos_13=3000,0,4000
 -Spawn_Rot_13=0,-90,0
 -Spawn_Team_13=1
 
 -Spawn_Ship_14=ter_perseus
--Spawn_Pos_14=3000,0,7000
+-Spawn_Pos_14=3000,0,5000
 -Spawn_Rot_14=0,-90,0
 -Spawn_Team_14=1
 
--Spawn_Ship_15=ter_perseus
--Spawn_Pos_15=3000,0,8000
+-Spawn_Ship_15=ter_orion
+-Spawn_Pos_15=3000,0,6000
 -Spawn_Rot_15=0,-90,0
 -Spawn_Team_15=1
 
 -Spawn_Ship_16=ter_perseus
--Spawn_Pos_16=3000,0,9000
+-Spawn_Pos_16=3000,0,7000
 -Spawn_Rot_16=0,-90,0
 -Spawn_Team_16=1
 
 -Spawn_Ship_17=ter_perseus
--Spawn_Pos_17=3000,0,10000
+-Spawn_Pos_17=3000,0,8000
 -Spawn_Rot_17=0,-90,0
 -Spawn_Team_17=1
 
 -Spawn_Ship_18=ter_perseus
--Spawn_Pos_18=3000,0,11000
+-Spawn_Pos_18=3000,0,9000
 -Spawn_Rot_18=0,-90,0
 -Spawn_Team_18=1
 
 -Spawn_Ship_19=ter_perseus
--Spawn_Pos_19=3000,0,12000
+-Spawn_Pos_19=3000,0,10000
 -Spawn_Rot_19=0,-90,0
 -Spawn_Team_19=1
+
+-Spawn_Ship_20=ter_perseus
+-Spawn_Pos_20=3000,0,11000
+-Spawn_Rot_20=0,-90,0
+-Spawn_Team_20=1
+
+-Spawn_Ship_21=ter_perseus
+-Spawn_Pos_21=3000,0,12000
+-Spawn_Rot_21=0,-90,0
+-Spawn_Team_21=1
