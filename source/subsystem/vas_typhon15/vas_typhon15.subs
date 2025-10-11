@@ -39,4 +39,4 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "TurretArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_bcgold", "Weapon_Beam", "Weapon_Beam")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_bgold", "Weapon_Beam", "Weapon_Beam")

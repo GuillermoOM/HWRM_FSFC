@@ -12,5 +12,4 @@ firefx = "kayser_fire"
 fire_sfx = "WEAPON/terlaser"
 hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
 nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
-hit_clamp =
-{ 1, 1, }
+hit_clamp = { 1, 1 }

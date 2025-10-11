@@ -71,12 +71,14 @@ build = {
 		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>65s</c>",
 		Description = "<b>Description:</b> The stealth prototype GVF Ptah was a top-secret development project assigned to Vasudan conglomerate Akheton Corp. Designed to be invisible to standard detection arrays mounted on combat craft, Ptahs have performed admirably during their OpEval period. The masking materials and blending technologies used across their outer surfaces seem to confuse Shivan detection systems as well. The Ptah is currently available only to select fighter units in the Vasudan navy, with no word on when they will be more widely distributed. \n\n<b>Prerequisites:</b> Fighter Design, Stealth Technology. \n\n<b>Armaments:</b> 2x Mekhu HL-7 (Rapid Fire), 1x GTM-19 Harpoon, 1x GTM 43a Stiletto II (Upgrade)",
 	},
+
+	-- Bombers --------------
 	{
 		Type = Ship,
 		ThingToBuild = "vas_serapis",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 6,
+		DisplayPriority = 1,
 		DisplayedName = "GVF Serapis - Adv. Interceptor <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> Fast and highly maneuverable, the GVF Serapis is primarily used as a bomber interceptor. Its thin armor and weak shields give it a low survival rate in dogfights against more heavily armored fighters. Despite having only two primary and secondary weapon banks, the Serapis has been retrofitted to accommodate almost any loadout in the GTVA arsenal. Veteran Vasudan pilots love the Serapis for its agility and loadout options. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 2x Mekhu HL-7 , 1x GTM-19 Harpoon, 1x GTM-14 EMP Advanced (Upgrade).",
 	},
@@ -85,7 +87,7 @@ build = {
 		ThingToBuild = "vas_sehkmet",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 7,
+		DisplayPriority = 2,
 		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>46s</c>",
 		Description = "<b>Description:</b> The GVB Sekhmet is a Shivan design that was initially adapted to Vasudan needs by Hammer of Light engineers. The version currently in use was further modified by technicians at Mekhu Enterprises. Sporting four primary weapon banks and three missile/bomb bays, the Sekhmet packs a massive punch. Add in a top speed that surpasses that of some fighters and an ultra-dense molybdenum armor plating, and it's easy to see why the Sekhmet is the favorite bomber among Vasudan pilots. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 4x Prometheus S, 1x GTM-13 Helios, 1x GTM-11 Infyrno (Upgrade).",
 	},
@@ -94,24 +96,30 @@ build = {
 		ThingToBuild = "vas_osiris",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 8,
+		DisplayPriority = 3,
 		DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> The GVB Osiris was the primary bomber of the PVN during the Great War. It is showing its age during the current conflict, as the more advanced Bakha and Sekhmet bombers have replaced it on the front lines in most theatres of conflict. Osiris bombers still in service have been retrofitted to make them compatible with most GTVA missiles and bombs. If well-protected by fighter escorts, a wing of Osiris bombers can still wreak havoc on enemy cruisers and corvettes. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser bombs. \n\n<b>Armaments:</b> 2x Prometheus R (2x Prometheus S turret), 1x GTM-12 Cyclops, 1x GTM-10 Pihrana (Upgrade)",
 	},
-	-- todo
-	-- {
-	-- 	Type = Ship,
-	-- 	ThingToBuild = "vas_bakha",
-	-- 	RequiredResearch = "",
-	-- 	RequiredShipSubSystems = "",
-	-- 	DisplayPriority = 9,
-	-- 	DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
-	-- 	Description = "<b>Description:</b> Learning a lesson from the bomber losses of the Great War, Vasudan defense contractor Akheton designed the GVB Bakha, a fast, agile bomber that could still deliver a warship-shattering payload. The Bakha's dual Akh-12 engines are baffled and masked, giving it a small profile for heat-seeking missiles. The bomber's speed and maneuverability make it the craft of choice for taking out destroyers and corvettes with multiple flak, AAA, and anti-ship beam turrets. Over 6,000 Bakhas have been produced in the orbiting shipyards around Vasuda Prime. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Mekhu HL-7, 2x GTW Akheton SDG, 1x GTM-12 Cyclops, 1x GTM 43a Stiletto II (Upgrade)",
-	-- },
-
-	-- Bombers --------------
+	{
+		Type = Ship,
+		ThingToBuild = "vas_bakha",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 4,
+		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
+		Description = "<b>Description:</b> Learning a lesson from the bomber losses of the Great War, Vasudan defense contractor Akheton designed the GVB Bakha, a fast, agile bomber that could still deliver a warship-shattering payload. The Bakha's dual Akh-12 engines are baffled and masked, giving it a small profile for heat-seeking missiles. The bomber's speed and maneuverability make it the craft of choice for taking out destroyers and corvettes with multiple flak, AAA, and anti-ship beam turrets. Over 6,000 Bakhas have been produced in the orbiting shipyards around Vasuda Prime. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Mekhu HL-7, 2x GTW Akheton SDG, 1x GTM-12 Cyclops, 1x GTM 43a Stiletto II (Upgrade)",
+	},
 
 	-- Cruisers ---------------
+	{
+		Type = Ship,
+		ThingToBuild = "vas_aten",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 1,
+		DisplayedName = "GVC Aten - Reserve Cruiser <c=12AB06>30s</c>",
+		Description = "<b>Description:</b> The GVC Aten is among the smallest and weakest of the GTVA's cruiser classes, with thin armor and only a few, relatively weak turrets. Terran fighters and bombers exploited these weaknesses during the early years of the Great War, when the Terran and Vasudans were still enemies. The Aten is most often seen in the current conflict as a rear guard defense for convoys or installations, backing up wings of fighters and bombers. \n\n<b>Prerequisites:</b> Cruiser Design \n\n<b>Armaments:</b> 4x Turret, 2x Mekhu HL-7 Turret, 2x Anti-Fighter Beam (Upgrade)",
+	},
 
 	-- Capital Ships ----------
 

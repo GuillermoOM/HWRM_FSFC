@@ -11,7 +11,7 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = "GVF Sehkmet"
-NewShipType.sobDescription = "Interceptor"
+NewShipType.sobDescription = "Heavy Bomber"
 
 --------------------------------------------------
 --- Main Ship Data	  DO NOT MODIFY
