@@ -1000,6 +1000,11 @@ unitcapsFamily = {
 		numParam = 60,
 		stringParam = "$2118",
 	},
+	{
+		name = "Installation",
+		numParam = 68,
+		stringParam = "Installation",
+	},
 	-- Utility ships
 	{
 		name = "Probe",

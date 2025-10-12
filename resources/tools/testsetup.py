@@ -20,11 +20,9 @@ h_ships = [
     "ter_perseus",
     "ter_perseus",
     "ter_perseus",
-    "ter_perseus",
-    "ter_perseus",
+    "ter_fenris",
     "ter_orion",
-    "ter_perseus",
-    "ter_perseus",
+    "ter_fenris",
     "ter_perseus",
     "ter_perseus",
     "ter_perseus",
@@ -32,15 +30,15 @@ h_ships = [
 ]
 
 p_ships = [
-    "vas_ankh",
-    "vas_ankh",
-    "vas_edjo",
-    "vas_edjo",
+    "vas_karnak",
+    "vas_sehkmet",
+    "vas_tauret",
+    "vas_tauret",
     "vas_typhon",
-    "vas_edjo",
-    "vas_edjo",
-    "vas_ankh",
-    "vas_ankh",
+    "vas_tauret",
+    "vas_tauret",
+    "vas_sehkmet",
+    "vas_sehkmet",
 ]
 
 # ships_list.remove("icons")
