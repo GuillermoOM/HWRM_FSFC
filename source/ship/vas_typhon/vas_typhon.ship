@@ -301,6 +301,13 @@ NewShipType.nlipsFarRange = 0
 --- Level of Detail
 --------------------------------------------------
 
+NewShipType.upLOD = 7500
+NewShipType.upLOD = 19750
+NewShipType.upLOD = 35500
+NewShipType.downLOD = 7515
+NewShipType.downLOD = 19765
+NewShipType.downLOD = 35515
+
 --------------------------------------------------
 --- alternative Hyperspace Gate
 --------------------------------------------------

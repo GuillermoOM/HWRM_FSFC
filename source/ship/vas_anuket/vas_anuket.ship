@@ -11,7 +11,7 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = "GVG Anuket"
-NewShipType.sobDescription = "Resource Controller"
+NewShipType.sobDescription = "Resource Dropoff"
 
 --------------------------------------------------
 --- Main Ship Data

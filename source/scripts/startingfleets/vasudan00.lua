@@ -7,6 +7,7 @@ PersistantData = {
 			shiphold = {},
 			name = "",
 			size = 1,
+			number = 1,
 		},
 		{
 			type = "vas_isis",
@@ -14,7 +15,7 @@ PersistantData = {
 			shiphold = {},
 			name = "",
 			size = 1,
-			number = 5,
+			number = 6,
 		},
 		{
 			type = "vas_anuket",

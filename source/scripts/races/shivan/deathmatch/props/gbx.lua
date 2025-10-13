@@ -26,5 +26,5 @@ String_Properties = {
 	generic_mp_health_capitals_research_grant = "",
 	generic_mp_buildspeed_research_grant = "",
 	generic_mp_build_restrict = "",
-	generic_mp_research_restrict = "",	
+	generic_mp_research_restrict = "",
 }

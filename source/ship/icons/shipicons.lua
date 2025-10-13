@@ -2591,7 +2591,7 @@ Shi_Asmodeusfs1 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_belial = {
+Shi_belial = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\belial.tga",
 		textureUV_TL = { 0, 0 },
@@ -2615,7 +2615,7 @@ Shi_moloch = {
 		stretchOnDraw = 1,
 	},
 }
-vas_pvntyphon = {
+Vas_pvntyphon = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhon.tga",
 		textureUV_TL = { 0, 0 },
@@ -2623,7 +2623,7 @@ vas_pvntyphon = {
 		stretchOnDraw = 1,
 	},
 }
-vas_karnak = {
+Vas_karnak = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\karnak.tga",
 		textureUV_TL = { 0, 0 },
@@ -2631,7 +2631,7 @@ vas_karnak = {
 		stretchOnDraw = 1,
 	},
 }
-vas_typhon = {
+Vas_typhon = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhon.tga",
 		textureUV_TL = { 0, 0 },
@@ -2647,7 +2647,7 @@ Vas_typhonwreck = {
 		stretchOnDraw = 1,
 	},
 }
-vas_hatshepsut = {
+Vas_hatshepsut = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hatshepsut.tga",
 		textureUV_TL = { 0, 0 },
@@ -2655,7 +2655,7 @@ vas_hatshepsut = {
 		stretchOnDraw = 1,
 	},
 }
-vas_cleopatera = {
+Vas_cleopatera = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hatshepsut.tga",
 		textureUV_TL = { 0, 0 },
@@ -2663,7 +2663,7 @@ vas_cleopatera = {
 		stretchOnDraw = 1,
 	},
 }
-ntf_iceni = {
+Ter_iceni = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\iceni.tga",
 		textureUV_TL = { 0, 0 },
@@ -2671,7 +2671,7 @@ ntf_iceni = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Sobek = {
+Vas_Sobek = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sobek.tga",
 		textureUV_TL = { 0, 0 },
@@ -2679,7 +2679,7 @@ vas_Sobek = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Mentu = {
+Vas_Mentu = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mentu.tga",
 		textureUV_TL = { 0, 0 },
@@ -2687,7 +2687,7 @@ vas_Mentu = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Aten = {
+Vas_Aten = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\aten.tga",
 		textureUV_TL = { 0, 0 },
@@ -2695,7 +2695,7 @@ vas_Aten = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Isis = {
+Vas_Isis = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\isis.tga",
 		textureUV_TL = { 0, 0 },
@@ -2703,7 +2703,7 @@ vas_Isis = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Isisfs1 = {
+Vas_Isisfs1 = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\isis.tga",
 		textureUV_TL = { 0, 0 },
@@ -2711,7 +2711,7 @@ vas_Isisfs1 = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Anuket = {
+Vas_Anuket = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\anuket.tga",
 		textureUV_TL = { 0, 0 },
@@ -2719,7 +2719,7 @@ vas_Anuket = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Bes = {
+Vas_Bes = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bes.tga",
 		textureUV_TL = { 0, 0 },
@@ -2727,7 +2727,7 @@ vas_Bes = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Maat = {
+Vas_Maat = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\maat.tga",
 		textureUV_TL = { 0, 0 },
@@ -2735,7 +2735,7 @@ vas_Maat = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Setekh = {
+Vas_Setekh = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\setekh.tga",
 		textureUV_TL = { 0, 0 },
@@ -2743,7 +2743,7 @@ vas_Setekh = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Edjo = {
+Vas_Edjo = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\edjo.tga",
 		textureUV_TL = { 0, 0 },
@@ -2751,7 +2751,7 @@ vas_Edjo = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Ankh = {
+Vas_Ankh = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ankh.tga",
 		textureUV_TL = { 0, 0 },
@@ -2783,7 +2783,7 @@ Vas_geb = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Satis = {
+Vas_Satis = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\satis.tga",
 		textureUV_TL = { 0, 0 },
@@ -2791,7 +2791,7 @@ vas_Satis = {
 		stretchOnDraw = 1,
 	},
 }
-vas_bast = {
+Vas_bast = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bast.tga",
 		textureUV_TL = { 0, 0 },
@@ -2799,7 +2799,7 @@ vas_bast = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Satisfs1 = {
+Vas_Satisfs1 = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\satis.tga",
 		textureUV_TL = { 0, 0 },
@@ -2807,7 +2807,7 @@ vas_Satisfs1 = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Osiris = {
+Vas_Osiris = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\osiris.tga",
 		textureUV_TL = { 0, 0 },
@@ -2815,7 +2815,7 @@ vas_Osiris = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Bakha = {
+Vas_Bakha = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bakha.tga",
 		textureUV_TL = { 0, 0 },
@@ -2823,7 +2823,7 @@ vas_Bakha = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Sehkmet = {
+Vas_Sehkmet = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sehkmet.tga",
 		textureUV_TL = { 0, 0 },
@@ -2831,7 +2831,7 @@ vas_Sehkmet = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Sehkmetfs1 = {
+Vas_Sehkmetfs1 = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sehkmet.tga",
 		textureUV_TL = { 0, 0 },
@@ -2839,7 +2839,7 @@ vas_Sehkmetfs1 = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Tauret = {
+Vas_Tauret = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\tauret.tga",
 		textureUV_TL = { 0, 0 },
@@ -2847,7 +2847,7 @@ vas_Tauret = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Seth = {
+Vas_Seth = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\seth.tga",
 		textureUV_TL = { 0, 0 },
@@ -2855,7 +2855,7 @@ vas_Seth = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Thoth = {
+Vas_Thoth = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\thoth.tga",
 		textureUV_TL = { 0, 0 },
@@ -2863,7 +2863,7 @@ vas_Thoth = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Horus = {
+Vas_Horus = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\horus.tga",
 		textureUV_TL = { 0, 0 },
@@ -2871,7 +2871,7 @@ vas_Horus = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Ptah = {
+Vas_Ptah = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ptah.tga",
 		textureUV_TL = { 0, 0 },
@@ -2879,11 +2879,27 @@ vas_Ptah = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Serapis = {
+Vas_Serapis = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\serapis.tga",
 		textureUV_TL = { 0, 0 },
 		textureUV_WH = { 320, 160 },
+		stretchOnDraw = 1,
+	},
+}
+Vas_Anubis = {
+	LargeIcon = {
+		texture = "DATA:\\Ship\\Icons\\anubis.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
+		stretchOnDraw = 1,
+	},
+}
+Vas_Amun = {
+	LargeIcon = {
+		texture = "DATA:\\Ship\\Icons\\amun.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
@@ -2949,7 +2965,7 @@ Ter_Ulysses = {
 }
 Vas_Ulyssesfs1 = {
 	LargeIcon = {
-		texture = "DATA:\\Ship\\Icons\\ulyssesvas.tga",
+		texture = "DATA:\\Ship\\Icons\\ulyssesVas.tga",
 		textureUV_TL = { 0, 0 },
 		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
@@ -3133,14 +3149,8 @@ Ter_Colossus = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Colossus = {
-	LargeIcon = {
-		texture = "DATA:\\Ship\\Icons\\Colossus.tga",
-		textureUV_TL = { 0, 0 },
-		textureUV_WH = { 1371, 650 },
-		stretchOnDraw = 1,
-	},
-}
+Vas_Colossus = Ter_Colossus
+
 Ter_Charybdis = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\charybdis.tga",
@@ -3221,7 +3231,7 @@ Ter_Mjolnir = {
 		stretchOnDraw = 1,
 	},
 }
-vas_Mjolnir = {
+Vas_Mjolnir = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mjolnir.tga",
 		textureUV_TL = { 0, 0 },
@@ -3261,7 +3271,7 @@ Ter_Arcadia = {
 		stretchOnDraw = 1,
 	},
 }
-ter_hygeia = {
+Ter_hygeia = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hygeia.tga",
 		textureUV_TL = { 0, 0 },
@@ -3285,7 +3295,7 @@ subspacenodefs1 = {
 		stretchOnDraw = 1,
 	},
 }
-ter_apollo = {
+Ter_apollo = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\apollo.tga",
 		textureUV_TL = { 0, 0 },
@@ -3293,7 +3303,7 @@ ter_apollo = {
 		stretchOnDraw = 1,
 	},
 }
-ter_valkyrie = {
+Ter_valkyrie = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\valkyrie.tga",
 		textureUV_TL = { 0, 0 },
@@ -3301,7 +3311,7 @@ ter_valkyrie = {
 		stretchOnDraw = 1,
 	},
 }
-ter_athena = {
+Ter_athena = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\athena.tga",
 		textureUV_TL = { 0, 0 },
@@ -3341,7 +3351,7 @@ Shi_trident = {
 		stretchOnDraw = 1,
 	},
 }
-vas_nephthys = {
+Vas_nephthys = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\neptheyssgsderyweg.tga",
 		textureUV_TL = { 0, 0 },
@@ -3352,7 +3362,7 @@ vas_nephthys = {
 
 -- Subsystems
 
-ter_fenrisbeam = {
+Ter_fenrisbeam = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\Tsmallbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3360,9 +3370,9 @@ ter_fenrisbeam = {
 		stretchOnDraw = 1,
 	},
 }
-ter_leviathanbeam = ter_fenrisbeam
-ter_deimosbeam = ter_fenrisbeam
-ter_aeolusbeam1 = {
+Ter_leviathanbeam = Ter_fenrisbeam
+Ter_deimosbeam = Ter_fenrisbeam
+Ter_aeolusbeam1 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\aeolusbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3370,8 +3380,8 @@ ter_aeolusbeam1 = {
 		stretchOnDraw = 1,
 	},
 }
-ter_aeolusbeam2 = ter_aeolusbeam1
-ter_fenrismissile = {
+Ter_aeolusbeam2 = Ter_aeolusbeam1
+Ter_fenrismissile = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\TMissilelauncher.tga",
 		textureUV_TL = { 0, 0 },
@@ -3379,9 +3389,9 @@ ter_fenrismissile = {
 		stretchOnDraw = 1,
 	},
 }
-ter_leviathanmissile = ter_fenrismissile
-ter_leviathanfighterkiller = ter_fenrismissile
-shi_cainsred = {
+Ter_leviathanmissile = Ter_fenrismissile
+Ter_leviathanfighterkiller = Ter_fenrismissile
+Shi_cainsred = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\cainlilithcannon.tga",
 		textureUV_TL = { 0, 0 },
@@ -3389,10 +3399,10 @@ shi_cainsred = {
 		stretchOnDraw = 1,
 	},
 }
-shi_lilithlred = shi_cainsred
-shi_cainheavylaser = shi_cainsred
-shi_lilithheavylaser = shi_cainsred
-vas_sobekbeam = {
+Shi_lilithlred = Shi_cainsred
+Shi_cainheavylaser = Shi_cainsred
+Shi_lilithheavylaser = Shi_cainsred
+Vas_sobekbeam = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sobekbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3400,8 +3410,8 @@ vas_sobekbeam = {
 		stretchOnDraw = 1,
 	},
 }
-vas_sobekbeam2 = vas_sobekbeam
-vas_mentubeam = {
+Vas_sobekbeam2 = vas_sobekbeam
+Vas_mentubeam = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\mentubeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3410,7 +3420,7 @@ vas_mentubeam = {
 	},
 }
 
-shi_molochsred = {
+Shi_molochsred = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\molochbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3418,10 +3428,10 @@ shi_molochsred = {
 		stretchOnDraw = 1,
 	},
 }
-shi_rakshasabeam1 = shi_ravanaturret03
-shi_rakshasabeam2 = shi_ravanaturret03
-shi_rakshasabeam3 = shi_ravanaturret03
-ter_hecate_nameplate_aquitaine = {
+Shi_rakshasabeam1 = Shi_ravanaturret03
+Shi_rakshasabeam2 = Shi_ravanaturret03
+Shi_rakshasabeam3 = Shi_ravanaturret03
+Ter_hecate_nameplate_aquitaine = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecate.tga",
 		textureUV_TL = { 0, 0 },
@@ -3429,22 +3439,22 @@ ter_hecate_nameplate_aquitaine = {
 		stretchOnDraw = 1,
 	},
 }
-ter_hecate_nameplate_hood = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_meridian = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_morgain = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_phonecia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_requiem = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_tempest = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_warlock = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_cordeune = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_corsica = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_habsburg = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_laertis = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_provincia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_rhodes = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_thracia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_titus = ter_hecate_nameplate_aquitaine
-ter_orion_nameplate_amadeus = {
+Ter_hecate_nameplate_hood = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_meridian = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_morgain = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_phonecia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_requiem = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_tempest = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_warlock = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_cordeune = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_corsica = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_habsburg = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_laertis = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_provincia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_rhodes = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_thracia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_titus = Ter_hecate_nameplate_aquitaine
+Ter_orion_nameplate_amadeus = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\orion.tga",
 		textureUV_TL = { 0, 0 },
@@ -3452,27 +3462,27 @@ ter_orion_nameplate_amadeus = {
 		stretchOnDraw = 1,
 	},
 }
-ter_orion_nameplate_bastion = ter_orion_nameplate_amadeus
-ter_orion_nameplate_carthage = ter_orion_nameplate_amadeus
-ter_orion_nameplate_delacroix = ter_orion_nameplate_amadeus
-ter_orion_nameplate_eisenhower = ter_orion_nameplate_amadeus
-ter_orion_nameplate_galatea = ter_orion_nameplate_amadeus
-ter_orion_nameplate_goliath = ter_orion_nameplate_amadeus
-ter_orion_nameplate_intrepid = ter_orion_nameplate_amadeus
-ter_orion_nameplate_messana = ter_orion_nameplate_amadeus
-ter_orion_nameplate_minnow = ter_orion_nameplate_amadeus
-ter_orion_nameplate_myrmidon = ter_orion_nameplate_amadeus
-ter_orion_nameplate_nereid = ter_orion_nameplate_amadeus
-ter_orion_nameplate_orion = ter_orion_nameplate_amadeus
-ter_orion_nameplate_soyakaze = ter_orion_nameplate_amadeus
-ter_orion_nameplate_alsace = ter_orion_nameplate_amadeus
-ter_orion_nameplate_andronicus = ter_orion_nameplate_amadeus
-ter_orion_nameplate_cyrene = ter_orion_nameplate_amadeus
-ter_orion_nameplate_jacobus = ter_orion_nameplate_amadeus
-ter_orion_nameplate_repulse = ter_orion_nameplate_amadeus
-ter_orion_nameplate_uhuru = ter_orion_nameplate_amadeus
-ter_orion_nameplate_vasa = ter_orion_nameplate_amadeus
-ter_orion_nameplate_vindicator = ter_orion_nameplate_amadeus
+Ter_orion_nameplate_bastion = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_carthage = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_delacroix = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_eisenhower = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_galatea = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_goliath = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_intrepid = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_messana = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_minnow = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_myrmidon = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_nereid = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_orion = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_soyakaze = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_alsace = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_andronicus = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_cyrene = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_jacobus = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_repulse = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_uhuru = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_Vasa = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_vindicator = Ter_orion_nameplate_amadeus
 
 sub_weapons = {
 	SmallIcon = {
@@ -3515,8 +3525,8 @@ sub_engine = {
 	},
 }
 sub_corvengine = sub_engine
-ter_orionengine = sub_engine
-shi_luciferturret01 = {
+Ter_orionengine = sub_engine
+Shi_luciferturret01 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\luciferlred.tga",
 		textureUV_TL = { 0, 0 },
@@ -3524,10 +3534,10 @@ shi_luciferturret01 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_luciferturret02 = shi_luciferturret01
-shi_luciferturretfs101 = shi_luciferturret01
-shi_luciferturretfs102 = shi_luciferturret01
-shi_bombardmentbeam = {
+Shi_luciferturret02 = Shi_luciferturret01
+Shi_luciferturretfs101 = Shi_luciferturret01
+Shi_luciferturretfs102 = Shi_luciferturret01
+Shi_bombardmentbeam = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\bombardment.tga",
 		textureUV_TL = { 0, 0 },
@@ -3535,7 +3545,7 @@ shi_bombardmentbeam = {
 		stretchOnDraw = 1,
 	},
 }
-shi_sath1 = {
+Shi_sath1 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sathbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3543,10 +3553,10 @@ shi_sath1 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_sath2 = shi_sath1
-shi_sath3 = shi_sath1
-shi_sath4 = shi_sath1
-shi_sathbutt = {
+Shi_sath2 = Shi_sath1
+Shi_sath3 = Shi_sath1
+Shi_sath4 = Shi_sath1
+Shi_sathbutt = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sathbutt.tga",
 		textureUV_TL = { 0, 0 },
@@ -3554,8 +3564,8 @@ shi_sathbutt = {
 		stretchOnDraw = 1,
 	},
 }
-ter_bcgreen = Icon_Subsystem_IonTurret
-shi_bfred = Icon_Subsystem_TorpedoLauncher
+Ter_bcgreen = Icon_Subsystem_IonTurret
+Shi_bfred = Icon_Subsystem_TorpedoLauncher
 sub_cweapons = sub_weapons
 sub_corvweapons = sub_weapons
 sub_cengine = sub_engine
@@ -3625,7 +3635,7 @@ col_beam = {
 		stretchOnDraw = 1,
 	},
 }
-ntf_icenibeam = {
+Ter_icenibeam = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\icenibeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3633,7 +3643,7 @@ ntf_icenibeam = {
 		stretchOnDraw = 1,
 	},
 }
-ter_bgreenorion = {
+Ter_bgreenorion = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\orionbgreencannon.tga",
 		textureUV_TL = { 0, 0 },
@@ -3641,14 +3651,14 @@ ter_bgreenorion = {
 		stretchOnDraw = 1,
 	},
 }
-ter_bgreenorion_gimble = ter_bgreenorion
-ter_bgreenorion_turret = ter_bgreenorion
-ter_orionhugeflak = ter_bgreenorion
-ter_orionhugeflak1 = ter_bgreenorion
-ter_orionhugeflak2 = ter_bgreenorion
-ter_orionhugeflak3 = ter_bgreenorion
-ter_orionhugeturret = ter_bgreenorion
-ter_hecatebgreen = {
+Ter_bgreenorion_gimble = Ter_bgreenorion
+Ter_bgreenorion_turret = Ter_bgreenorion
+Ter_orionhugeflak = Ter_bgreenorion
+Ter_orionhugeflak1 = Ter_bgreenorion
+Ter_orionhugeflak2 = Ter_bgreenorion
+Ter_orionhugeflak3 = Ter_bgreenorion
+Ter_orionhugeturret = Ter_bgreenorion
+Ter_hecatebgreen = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecatebeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3656,7 +3666,7 @@ ter_hecatebgreen = {
 		stretchOnDraw = 1,
 	},
 }
-ter_hecateterslash = {
+Ter_hecateterslash = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecatebeamsmall.tga",
 		textureUV_TL = { 0, 0 },
@@ -3664,7 +3674,7 @@ ter_hecateterslash = {
 		stretchOnDraw = 1,
 	},
 }
-vas_typhon15 = {
+Vas_typhon15 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhonbeam.tga",
 		textureUV_TL = { 0, 0 },
@@ -3672,25 +3682,25 @@ vas_typhon15 = {
 		stretchOnDraw = 1,
 	},
 }
-vas_hatbvas = {
+Vas_hatbvas = {
 	SmallIcon = {
-		texture = "DATA:\\Ship\\Icons\\hatbvas.tga",
+		texture = "DATA:\\Ship\\Icons\\hatbVas.tga",
 		textureUV_TL = { 0, 0 },
 		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-vas_hatbfred = vas_hatbvas
+Vas_hatbfred = vas_hatbvas
 
-vas_hatsvas = {
+Vas_hatsvas = {
 	SmallIcon = {
-		texture = "DATA:\\Ship\\Icons\\hatsvas.tga",
+		texture = "DATA:\\Ship\\Icons\\hatsVas.tga",
 		textureUV_TL = { 0, 0 },
 		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_demonturret01 = {
+Shi_demonturret01 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\demonlred.tga",
 		textureUV_TL = { 0, 0 },
@@ -3698,8 +3708,8 @@ shi_demonturret01 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_demonturret02 = shi_demonturret01
-shi_demonturret03 = {
+Shi_demonturret02 = Shi_demonturret01
+Shi_demonturret03 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\demonsred.tga",
 		textureUV_TL = { 0, 0 },
@@ -3707,7 +3717,7 @@ shi_demonturret03 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret01 = {
+Shi_ravanaturret01 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\ravanalred.tga",
 		textureUV_TL = { 0, 0 },
@@ -3715,8 +3725,8 @@ shi_ravanaturret01 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret02 = shi_ravanaturret01
-shi_ravanaturret03 = {
+Shi_ravanaturret02 = Shi_ravanaturret01
+Shi_ravanaturret03 = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\ravanasred.tga",
 		textureUV_TL = { 0, 0 },
@@ -3724,8 +3734,8 @@ shi_ravanaturret03 = {
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret04 = shi_ravanaturret03
-ter_bgreenoriongimble = {
+Shi_ravanaturret04 = Shi_ravanaturret03
+Ter_bgreenoriongimble = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\oriongimble.tga",
 		textureUV_TL = { 0, 0 },
@@ -3733,7 +3743,7 @@ ter_bgreenoriongimble = {
 		stretchOnDraw = 1,
 	},
 }
-ter_slashorion = {
+Ter_slashorion = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\oriongimble.tga",
 		textureUV_TL = { 0, 0 },
@@ -3741,7 +3751,7 @@ ter_slashorion = {
 		stretchOnDraw = 1,
 	},
 }
-ter_hadestop = {
+Ter_hadestop = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hadestop.tga",
 		textureUV_TL = { 0, 0 },
@@ -3749,7 +3759,7 @@ ter_hadestop = {
 		stretchOnDraw = 1,
 	},
 }
-ter_hadesside = {
+Ter_hadesside = {
 	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hadesside.tga",
 		textureUV_TL = { 0, 0 },

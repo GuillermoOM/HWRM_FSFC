@@ -118,6 +118,15 @@ build = {
 		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
 		Description = "<b>Description:</b> Learning a lesson from the bomber losses of the Great War, Vasudan defense contractor Akheton designed the GVB Bakha, a fast, agile bomber that could still deliver a warship-shattering payload. The Bakha's dual Akh-12 engines are baffled and masked, giving it a small profile for heat-seeking missiles. The bomber's speed and maneuverability make it the craft of choice for taking out destroyers and corvettes with multiple flak, AAA, and anti-ship beam turrets. Over 6,000 Bakhas have been produced in the orbiting shipyards around Vasuda Prime. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Mekhu HL-7, 2x GTW Akheton SDG, 1x GTM-12 Cyclops, 1x GTM 43a Stiletto II (Upgrade)",
 	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_amun",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 4,
+		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>70s</c>",
+		Description = "<b>Description:</b> The Amun is the Vasudans' heaviest bomber class ship. It carries a massive payload and has been responsible for the destruction of at least 3 Orion-class destroyers in the past 2 years. Fortunately, it is slow and has low maneuverability, making it an easy target for our fighters. Fighter pilots should be wary of the two turrets on this ship: they are not to be ignored. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 4x GTW-5 Prometheus, 2x Banshee Turret, 1x GTM-N1 Harbinger, 1x GTM-86 Cluster Bomb (Silent Threat Upgrade).",
+	},
 
 	-- Cruisers ---------------
 	{

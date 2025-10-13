@@ -2,14 +2,15 @@ PersistantData = {
 	StrikeGroups = {},
 	Squadrons = {
 		{
-			type = "vas_hatshepsut",
+			type = "Vas_hatshepsut",
 			subsystems = {},
 			shiphold = {},
 			name = "",
 			size = 1,
+			number = 1,
 		},
 		{
-			type = "vas_isis",
+			type = "Vas_isis",
 			subsystems = {},
 			shiphold = {},
 			name = "",
@@ -17,7 +18,7 @@ PersistantData = {
 			number = 5,
 		},
 		{
-			type = "vas_anuket",
+			type = "Vas_anuket",
 			subsystems = {},
 			shiphold = {},
 			name = "",

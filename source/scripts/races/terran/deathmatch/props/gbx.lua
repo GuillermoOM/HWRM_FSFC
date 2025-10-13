@@ -7,7 +7,7 @@ Number_Properties = {
 String_Properties_Priority = 2.0
 
 String_Properties = {
-	dm_carriersonly_build_restrict = "ter_orion,ter_hades,ter_colossus",
+	dm_carriersonly_build_restrict = "ter_orion,ter_hades,ter_colossus,ter_arcadia",
 	dm_carriersonly_research_restrict = "",
 	dm_carriersonly_research_grant = "",
 	dm_nocruisers_build_restrict = "ter_hades,ter_colossus",

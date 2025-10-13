@@ -17,7 +17,7 @@ NewShipType.sobDescription = "Reserve Cruiser"
 --- Main Ship Data
 --------------------------------------------------
 
-NewShipType.isTransferable = 0
+NewShipType.isTransferable = 1
 NewShipType.unavailableWhenCaptured = 1
 
 --------------------------------------------------

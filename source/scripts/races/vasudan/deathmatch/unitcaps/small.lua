@@ -8,6 +8,7 @@ supplyLimit("AWACS", 2)
 supplyLimit("Imhotep", 1)
 supplyLimit("Sobek", 5)
 supplyLimit("Colossus", 1)
+supplyLimit("Installation", 1)
 
 supplyShow("Corvette", "Never")
 supplyShow("Frigate", "Never")

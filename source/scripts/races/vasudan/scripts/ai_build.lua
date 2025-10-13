@@ -7,7 +7,7 @@ kCarrier = VAS_TYPHON
 kDestroyer = VAS_SOBEK
 kBattleCruiser = VAS_HATSHEPSUT
 
-function DetermineDemandWithNoCounterInfo_Shivan()
+function DetermineDemandWithNoCounterInfo_Vasudan()
 	if sg_randFavorShipType < 55 then
 		ShipDemandAddByClass(eFighter, 1)
 	elseif sg_randFavorShipType < 85 then
@@ -19,7 +19,7 @@ function DetermineDemandWithNoCounterInfo_Shivan()
 	end
 end
 
-function DetermineSpecialDemand_Shivan()
+function DetermineSpecialDemand_Vasudan()
 	local numEnemyCarriers = numActiveOfClass(s_enemyIndex, eBuilder)
 	local numActiveCarriers = numActiveOfClass(s_playerIndex, eBuilder)
 
@@ -75,5 +75,5 @@ function DetermineSpecialDemand_Shivan()
 	end
 end
 
-Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Shivan
-Proc_DetermineSpecialDemand = DetermineSpecialDemand_Shivan
+Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Vasudan
+Proc_DetermineSpecialDemand = DetermineSpecialDemand_Vasudan
