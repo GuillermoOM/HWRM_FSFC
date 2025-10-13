@@ -29,17 +29,17 @@ NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "TurretArmour"
 
---------------------------------------------------	
---- Health and Armour	
---------------------------------------------------	
+--------------------------------------------------
+--- Health and Armour
+--------------------------------------------------
 
 NewSubSystemType.maxhealth = 2500
 NewSubSystemType.regentime = 400
 NewSubSystemType.activateHealthPercentage = 0.5
 
---------------------------------------------------	
+--------------------------------------------------
 --- Build
---------------------------------------------------	
+--------------------------------------------------
 
 NewSubSystemType.costToBuild = 500
 NewSubSystemType.timeToBuild = 35
@@ -49,41 +49,41 @@ NewSubSystemType.isResearch = 0
 --- Damage & Death
 --------------------------------------------------
 
-NewSubSystemType.battleScarMaxTriBase=40
-NewSubSystemType.battleScarMaxTriInc=20
+NewSubSystemType.battleScarMaxTriBase = 40
+NewSubSystemType.battleScarMaxTriInc = 20
 
 NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 60
 
-NewSubSystemType.sobDieTime=1
+NewSubSystemType.sobDieTime = 1
 
---------------------------------------------------	
---- Selection	
---------------------------------------------------	
+--------------------------------------------------
+--- Selection
+--------------------------------------------------
 
 NewSubSystemType.selectionLimit = 2500
 NewSubSystemType.preciseATILimit = 2500
 NewSubSystemType.selectionPriority = 37.5
 
---------------------------------------------------	
---- Tactical Overlay Icon	
---------------------------------------------------	
+--------------------------------------------------
+--- Tactical Overlay Icon
+--------------------------------------------------
 
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
 NewSubSystemType.tacticalIconMaxFadeSize = 0.008
 
---------------------------------------------------	
---- Overlays	
---------------------------------------------------	
+--------------------------------------------------
+--- Overlays
+--------------------------------------------------
 
 NewSubSystemType.mouseOverMinFadeSize = 0.045
 NewSubSystemType.mouseOverMaxFadeSize = 0.1
 
---------------------------------------------------	
---- Rendering	
---------------------------------------------------	
+--------------------------------------------------
+--- Rendering
+--------------------------------------------------
 
 NewSubSystemType.visible = 1
 
@@ -130,4 +130,5 @@ AddSubSystemMultiplier(NewSubSystemType, "SecondarySensorsRange", "OwnShipsWithi
 --- Target Box
 --------------------------------------------------
 
-setTargetBox(NewShipType, 0, -0.4,-0.7,-0.7, 0.4,0.7,0.4)
+setTargetBox(NewShipType, 0, -0.4, -0.7, -0.7, 0.4, 0.7, 0.4)
+

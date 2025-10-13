@@ -1,9 +1,7 @@
-crate_Motherships =
-{
-	"Vas_typhon",
+crate_Motherships = {
+	"Vas_hatshepsut",
 }
 
-crate_Carriers =
-{
+crate_Carriers = {
 	"Vas_typhon",
 }

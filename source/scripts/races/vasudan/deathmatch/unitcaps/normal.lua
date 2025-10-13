@@ -1,29 +1,30 @@
---Shivan
-supplyLimit("Fighter", 135);
-supplyLimit("FSBomber", 135);
-supplyLimit("Destroyer", 2);
-supplyLimit("Cruiser", 25);
+--Vasudan
+supplyLimit("Fighter", 135)
+supplyLimit("FSBomber", 135)
+supplyLimit("Destroyer", 2)
+supplyLimit("Cruiser", 25)
 
-supplyShow("Corvette", "Never");
-supplyShow("Frigate", "Never");
-supplyShow("Cruiser", "Always");
-supplyShow("FSBomber", "Always");
+supplyLimit("AWACS", 2)
+supplyLimit("Imhotep", 1)
+supplyLimit("Sobek", 5)
+supplyLimit("Colossus", 1)
+supplyLimit("Installation", 1)
 
-supplyShow("LayoutBomber", "Never");
-supplyShow("LayoutCruiser", "Never");
+supplyShow("Corvette", "Never")
+supplyShow("Frigate", "Never")
+supplyShow("Cruiser", "Always")
+supplyShow("FSBomber", "Always")
+supplyShow("Installation", "Always")
 
-supplyLimit("LayoutBomber", 180);
-supplyLimit("LayoutCruiser", 180);
-supplyLimit("LayoutBattleCruiser", 1);
+supplyIndent("AWACS", 1)
+supplyIndent("Imhotep", 1)
+supplyIndent("Sobek", 1)
+supplyIndent("Colossus", 1)
+supplyIndent("Installation", 1)
 
-supplyLimit("Lucifer", 1);
-supplyIndent("Lucifer", 1);
+supplyShow("LayoutBomber", "Never")
+supplyShow("LayoutCruiser", "Never")
 
-supplyLimit("Sathanas", 1);
-supplyIndent("Sathanas", 1);
-
-supplyLimit("Rakshasa", 5);
-supplyIndent("Rakshasa", 1);
-
-supplyLimit("Moloch", 5);
-supplyIndent("Moloch", 1);
+supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutCruiser", 180)
+supplyLimit("LayoutBattleCruiser", 1)

@@ -17,7 +17,7 @@ dofilepath("data:leveldata/multiplayer/lib/nocruisers.lua")
 dofilepath("data:leveldata/multiplayer/lib/strikecraftgamemode.lua")
 
 function OnInit()
-	Volume_AddSphere("centre", { -11111, 11111, 11111, }, 10)
+	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
 	MPRestrict()
 	nocruisers = GetGameSettingAsNumber("nocruisers")
 	strikecraftgamemode = GetGameSettingAsNumber("strikecraftgamemode")
@@ -49,7 +49,7 @@ function OnInit()
 		UI_TimerStop("NewTaskbar", "GameTimer")
 	end
 
-	Rule_AddInterval("timer_updating", 1.02) --timed with doai	
+	Rule_AddInterval("timer_updating", 1.02) --timed with doai
 end
 
 timer_timing = 1
@@ -69,8 +69,7 @@ function timer_updating()
 		Rule_AddInterval("UI_init", 0.1)
 		--Rule_AddInterval("UI_updating",0.5)
 		Rule_AddInterval("cpuplayers_updating", 0.1)
-		--Rule_AddInterval("balancing_updating",0.25) --dev. to remove		
-
+		--Rule_AddInterval("balancing_updating",0.25) --dev. to remove
 
 		if nocruisers == 1 then
 			Rule_AddInterval("nocruisers_init", timer_interval)
@@ -123,50 +122,45 @@ function timer_updating()
 	end
 end
 
-Events                             = {}
-Events.endGame                     =
-{
+Events = {}
+Events.endGame = {
 	{
 		{ "wID = Wait_Start(5)", "Wait_End(wID)" },
 	},
 }
-Events.startcinematic              =
-{
-	{ HW2_Letterbox(1), },
+Events.startcinematic = {
+	{ HW2_Letterbox(1) },
 	{
-		{ "Camera_AllowControl(0)",        "", },
-		{ "Universe_EnableSkip(0)",        "", },
-		{ "Universe_AllowPlayerOrders(0)", "", },
-		{ "SobGroup_DeSelectAll()",        "", },
-		{ "Sensors_Toggle(0)",             "", },
+		{ "Camera_AllowControl(0)", "" },
+		{ "Universe_EnableSkip(0)", "" },
+		{ "Universe_AllowPlayerOrders(0)", "" },
+		{ "SobGroup_DeSelectAll()", "" },
+		{ "Sensors_Toggle(0)", "" },
 	},
 }
-Events.startcinematic_focusrestore =
-{
-	{ HW2_Letterbox(1), },
+Events.startcinematic_focusrestore = {
+	{ HW2_Letterbox(1) },
 	{
-		{ "Camera_AllowControl(0)",        "", },
-		{ "Universe_EnableSkip(0)",        "", },
-		{ "Universe_AllowPlayerOrders(0)", "", },
-		{ "SobGroup_DeSelectAll()",        "", },
-		{ "Camera_FocusSave()",            "", },
-		{ "Sensors_Toggle(0)",             "", },
+		{ "Camera_AllowControl(0)", "" },
+		{ "Universe_EnableSkip(0)", "" },
+		{ "Universe_AllowPlayerOrders(0)", "" },
+		{ "SobGroup_DeSelectAll()", "" },
+		{ "Camera_FocusSave()", "" },
+		{ "Sensors_Toggle(0)", "" },
 	},
 }
-Events.stopcinematic               =
-{
-	{ HW2_Letterbox(0), },
+Events.stopcinematic = {
+	{ HW2_Letterbox(0) },
 	{
-		{ "Universe_AllowPlayerOrders(1)", "", },
-		{ "Camera_AllowControl(1)",        "", },
+		{ "Universe_AllowPlayerOrders(1)", "" },
+		{ "Camera_AllowControl(1)", "" },
 	},
 }
-Events.stopcinematic_focusrestore  =
-{
-	{ HW2_Letterbox(0), },
+Events.stopcinematic_focusrestore = {
+	{ HW2_Letterbox(0) },
 	{
-		{ "Universe_AllowPlayerOrders(1)", "", },
-		{ "Camera_FocusRestore()",         "", },
-		{ "Camera_AllowControl(1)",        "", },
+		{ "Universe_AllowPlayerOrders(1)", "" },
+		{ "Camera_FocusRestore()", "" },
+		{ "Camera_AllowControl(1)", "" },
 	},
 }

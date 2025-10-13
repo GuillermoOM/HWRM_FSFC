@@ -13,9 +13,9 @@ NewShipType = StartShipConfig()
 NewShipType.displayedName = "GTSG Alastor"
 NewShipType.sobDescription = "Sentry Gun"
 
---------------------------------------------------	
+--------------------------------------------------
 --- Main Ship Data	  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.isTransferable = 1
 
@@ -25,9 +25,9 @@ NewShipType.isTransferable = 1
 
 NewShipType.MinimalFamilyToFindPathAround = "SuperCap"
 NewShipType.BuildFamily = "Platform_Ter"
-NewShipType.AttackFamily = "Frigate"
+NewShipType.AttackFamily = "Emplacement"
 NewShipType.DockFamily = "Platform"
-NewShipType.AvoidanceFamily = "Frigate"
+NewShipType.AvoidanceFamily = "SuperPriority"
 NewShipType.DisplayFamily = "Platform"
 NewShipType.AutoFormationFamily = "Frigate"
 NewShipType.CollisionFamily = "Small"
@@ -39,20 +39,18 @@ NewShipType.ArmourFamily = "TurretArmour"
 
 setSupplyValue(NewShipType, "Platform", 1.0)
 
---------------------------------------------------	
+--------------------------------------------------
 --- Construction
---------------------------------------------------	
+--------------------------------------------------
 
-NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 1)
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 100
 NewShipType.buildTime = 15
 NewShipType.buildPriorityOrder = 10
 
-
-
---------------------------------------------------	
---- Health and Armour	
---------------------------------------------------	
+--------------------------------------------------
+--- Health and Armour
+--------------------------------------------------
 
 NewShipType.maxhealth = 500
 NewShipType.regentime = 120
@@ -60,15 +58,15 @@ NewShipType.minRegenTime = 120
 NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
 
---------------------------------------------------	
+--------------------------------------------------
 --- Shields
---------------------------------------------------	
+--------------------------------------------------
 
 addShield(NewShipType, "EMP", 40, 20)
 
---------------------------------------------------	
---- Sensors	
---------------------------------------------------	
+--------------------------------------------------
+--- Sensors
+--------------------------------------------------
 
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
@@ -77,9 +75,9 @@ NewShipType.prmSensorRange = 2000
 NewShipType.secSensorRange = 2000
 NewShipType.detectionStrength = 1
 
---------------------------------------------------	
---- Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Movement
+--------------------------------------------------
 
 NewShipType.mass = 20
 
@@ -95,9 +93,9 @@ NewShipType.rotationMaxSpeed = 120
 NewShipType.rotationAccelTime = 0.6
 NewShipType.rotationBrakeTime = 0.3
 
---------------------------------------------------	
---- Advanced Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Advanced Movement
+--------------------------------------------------
 
 NewShipType.controllerType = "Ship"
 
@@ -112,9 +110,9 @@ NewShipType.slideMoveRange = 0
 
 NewShipType.relativeMoveFactor = 6
 
---------------------------------------------------	
+--------------------------------------------------
 --- Swaying  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.swayUpdateTime = 2
 NewShipType.swayOffsetRandomX = 10
@@ -123,12 +121,12 @@ NewShipType.swayOffsetRandomZ = 10
 NewShipType.swayBobbingFactor = 0
 NewShipType.swayRotateFactor = 0
 
---------------------------------------------------	
+--------------------------------------------------
 --- Tactics And Multipliers  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
-NewShipType.defaultROE = "Defensive"
-NewShipType.defaultStance = "Neutral"
+NewShipType.defaultROE = "Aggresive"
+NewShipType.defaultStance = "Offensive"
 
 setTacticsMults(NewShipType, "ENGINEACCEL", 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, "THRUSTERACCEL", 1.10, 0.90, 1.0)
@@ -137,11 +135,11 @@ setTacticsMults(NewShipType, "ROTATIONACCEL", 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, "FIRERATE", 0.98, 1.02, 1.0)
 setTacticsMults(NewShipType, "TURRETSPEED", 1.02, 0.98, 1.0)
 
---------------------------------------------------	
+--------------------------------------------------
 --- Formations  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
-NewShipType.SquadronSize=getShipNum(NewShipType, "SquadronSize", 1)
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 
 NewShipType.formationSpacing = 45
 NewShipType.batchFormation = "Sentry"
@@ -204,18 +202,18 @@ NewShipType.tumbleSpecialDynamicX = 2
 NewShipType.tumbleSpecialDynamicY = 10
 NewShipType.tumbleSpecialDynamicZ = 5
 
---------------------------------------------------	
+--------------------------------------------------
 --- Selection  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.militaryUnit = 1
 NewShipType.selectionLimit = 150000
 NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
 
---------------------------------------------------	
+--------------------------------------------------
 --- Tactical Icon  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.TOIcon = "Hexagon"
 NewShipType.TOScale = 1
@@ -228,9 +226,9 @@ NewShipType.TODistanceDisappear2 = 35000
 NewShipType.TOGroupScale = 1
 NewShipType.TOGroupMergeSize = 0
 
---------------------------------------------------	
+--------------------------------------------------
 --- Overlays  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.mouseOverMinFadeSize = 0.045
 NewShipType.mouseOverMaxFadeSize = 0.1
@@ -239,9 +237,9 @@ NewShipType.healthBarStyle = 1
 
 NewShipType.SMRepresentation = "HardDot"
 
---------------------------------------------------	
+--------------------------------------------------
 --- Rendering  DO NOT MODIFY
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.AlwaysInRenderList = 0
 NewShipType.meshRenderLimit = 11000
@@ -273,16 +271,24 @@ NewShipType.upLOD = 1300
 NewShipType.downLOD = 815
 NewShipType.downLOD = 1315
 
-
 --------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
-addAbility(NewShipType, "MoveCommand", 1, 1);
-addAbility(NewShipType, "ParadeCommand", 1);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
-    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip",
-    "JustShoot");
+addAbility(NewShipType, "MoveCommand", 1, 1)
+addAbility(NewShipType, "ParadeCommand", 1)
+addAbility(
+	NewShipType,
+	"CanAttack",
+	1,
+	1,
+	0,
+	0,
+	0.35,
+	1,
+	"Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip",
+	"JustShoot"
+)
 
 --------------------------------------------------
 --  DO NOT MODIFY
@@ -301,5 +307,13 @@ StartShipWeaponConfig(NewShipType, "gun_sentrylaser_turret", "Weapon_Bottom", ""
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/NonMilitary/", 0, "Engines/HWeaponPlatformEng", "", 1,
-    "Ambience/HWeaponPlatformAmb", "");
+loadShipPatchList(
+	NewShipType,
+	"data:sound/sfx/ship/Hiigaran/NonMilitary/",
+	0,
+	"Engines/HWeaponPlatformEng",
+	"",
+	1,
+	"Ambience/HWeaponPlatformAmb",
+	""
+)

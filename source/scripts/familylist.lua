@@ -1,6 +1,5 @@
 ------------------------------------------------------------------------------------------------
-buildFamily =
-{
+buildFamily = {
 	{
 		name = "Fighter_Hgn",
 	},
@@ -170,7 +169,6 @@ buildFamily =
 		name = "Command",
 	},
 
-
 	{
 		name = "Fighter_Ter",
 	},
@@ -290,10 +288,12 @@ buildFamily =
 	{
 		name = "SubSystemLarge_Vas",
 	},
+	{
+		name = "SubSystem_All",
+	},
 }
 
-displayFamily =
-{
+displayFamily = {
 	{
 		name = "Fighter",
 		stringParam = "$2100",
@@ -373,8 +373,7 @@ displayFamily =
 
 ------------------------------------------------------------------------------------------------
 -- the number parameter indicates that the family can be attacked, 0 means un-attackable
-attackFamily =
-{
+attackFamily = {
 	{
 		name = "Fighter",
 		numParam = 1,
@@ -535,61 +534,60 @@ attackFamily =
 }
 
 ------------------------------------------------------------------------------------------------
-dockFamily =
-{
+dockFamily = {
 	{
-		name = "Mover"
+		name = "Mover",
 	},
 	{
-		name = "Fighter"
+		name = "Fighter",
 	},
 	{
-		name = "Corvette"
+		name = "Corvette",
 	},
 	{
-		name = "Frigate"
+		name = "Frigate",
 	},
 	{
-		name = "Utility"
+		name = "Utility",
 	},
 	{
-		name = "Controller"
+		name = "Controller",
 	},
 	{
-		name = "Platform"
+		name = "Platform",
 	},
 	{
-		name = "SuperCap"
+		name = "SuperCap",
 	},
 	{
-		name = "BattleCruiser"
+		name = "BattleCruiser",
 	},
 	{
-		name = "Transport"
+		name = "Transport",
 	},
 	{
-		name = "Shipyard"
+		name = "Shipyard",
 	},
 	{
 		-- motherships n such
-		name = "Flagship"
+		name = "Flagship",
 	},
 	{
-		name = "Resource"
+		name = "Resource",
 	},
 	{
-		name = "Inhibitor"
+		name = "Inhibitor",
 	},
 	{
 		-- big things collectors drag back, like the bentus debris
-		name = "LargeSalvage"
+		name = "LargeSalvage",
 	},
 	{
 		-- stuff like the dreadnaught
-		name = "UltraCap"
+		name = "UltraCap",
 	},
 	{
-		name = "CantDock"
+		name = "CantDock",
 	},
 	{ name = "drone" },
 	{ name = "drone1" },
@@ -613,8 +611,7 @@ dockFamily =
 }
 
 ------------------------------------------------------------------------------------------------
-avoidanceFamily =
-{
+avoidanceFamily = {
 	{
 		name = "None",
 		numParam = 0,
@@ -662,13 +659,11 @@ avoidanceFamily =
 	{
 		name = "SuperPriority",
 		numParam = 11,
-	}
+	},
 }
 
-
 ------------------------------------------------------------------------------------------------
-collisionFamily =
-{
+collisionFamily = {
 	{
 		name = "Small",
 		numParam = 0,
@@ -684,8 +679,7 @@ collisionFamily =
 }
 
 ------------------------------------------------------------------------------------------------
-collisionDamageFamily =
-{
+collisionDamageFamily = {
 	{
 		name = "SmallShip",
 		numParam = 0,
@@ -704,10 +698,8 @@ collisionDamageFamily =
 	},
 }
 
-
 ------------------------------------------------------------------------------------------------
-autoFormationFamily =
-{
+autoFormationFamily = {
 	{
 		name = "Fighter",
 		numParam = 0,
@@ -731,8 +723,7 @@ autoFormationFamily =
 }
 
 ------------------------------------------------------------------------------------------------
-armourFamily =
-{
+armourFamily = {
 	{
 		name = "Unarmoured",
 	},
@@ -793,18 +784,15 @@ armourFamily =
 	{
 		name = "SmallMissileArmor",
 	},
-
 }
 
 -- numParam -> display priority -> order undefined if priority not unique
 -- stringPara -> localized display name
-unitcapsFamily =
-{
+unitcapsFamily = {
 	{
 		name = "Fighter",
 		numParam = 10,
 		stringParam = "$2405",
-
 	},
 	{
 		name = "Ares",
@@ -855,7 +843,6 @@ unitcapsFamily =
 		name = "Corvette",
 		numParam = 20,
 		stringParam = "$2406",
-
 	},
 
 	-- Corvettes
@@ -895,7 +882,6 @@ unitcapsFamily =
 		name = "Frigate",
 		numParam = 30,
 		stringParam = "$2115",
-
 	},
 	-- Frigates
 	{
@@ -914,12 +900,10 @@ unitcapsFamily =
 		stringParam = "$2124",
 	},
 
-
 	{
 		name = "Cruiser",
 		numParam = 34,
 		stringParam = "Cruisers",
-
 	},
 	{
 		name = "Aeolus",
@@ -932,14 +916,12 @@ unitcapsFamily =
 		stringParam = "SC Rakshasa",
 	},
 
-
 	{
 		name = "Capital",
 		numParam = 40,
 		stringParam = "$2116",
-
 	},
-	-- Capital ships	
+	-- Capital ships
 	{
 		name = "Carrier",
 		numParam = 41,
@@ -981,6 +963,16 @@ unitcapsFamily =
 		stringParam = "SCv Moloch",
 	},
 	{
+		name = "Sobek",
+		numParam = 186,
+		stringParam = "GVCv Sobek",
+	},
+	{
+		name = "Iceni",
+		numParam = 187,
+		stringParam = "NTF Iceni",
+	},
+	{
 		name = "Hades",
 		numParam = 49,
 		stringParam = "GTI Hades",
@@ -1016,6 +1008,11 @@ unitcapsFamily =
 		numParam = 60,
 		stringParam = "$2118",
 	},
+	{
+		name = "Installation",
+		numParam = 68,
+		stringParam = "Installation",
+	},
 	-- Utility ships
 	{
 		name = "Probe",
@@ -1033,7 +1030,6 @@ unitcapsFamily =
 		stringParam = "$2133",
 	},
 
-
 	{
 		name = "AWACS",
 		numParam = 66,
@@ -1044,9 +1040,12 @@ unitcapsFamily =
 		numParam = 67,
 		stringParam = "GTSc Faustus",
 	},
-
-
-	-- Resource	
+	{
+		name = "Imhotep",
+		numParam = 68,
+		stringParam = "PVSC Imhotep",
+	},
+	-- Resource
 	{
 		name = "Resource",
 		numParam = 70,

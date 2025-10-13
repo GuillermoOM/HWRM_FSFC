@@ -16,9 +16,9 @@ NewShipType.sobDescription = "Juggernaut"
 NewShipType.blobName = "SJ Sathanas"
 NewShipType.blobNamePriority = 75
 
---------------------------------------------------	
---- Main Ship Data	
---------------------------------------------------	
+--------------------------------------------------
+--- Main Ship Data
+--------------------------------------------------
 
 NewShipType.isTransferable = 0
 NewShipType.unavailableWhenCaptured = 1
@@ -45,20 +45,20 @@ setSupplyValue(NewShipType, "Capital", 1.0)
 setSupplyValue(NewShipType, "Sathanas", 1.0)
 setSupplyValue(NewShipType, "LayoutBattleCruiser", 1.0)
 
---------------------------------------------------	
---- Construction	
---------------------------------------------------	
+--------------------------------------------------
+--- Construction
+--------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 55000
 NewShipType.buildTime = 550
 NewShipType.buildPriorityOrder = 20
 
-setConcurrentBuildLimit(NewShipType, 0, 2);
+setConcurrentBuildLimit(NewShipType, 0, 2)
 
---------------------------------------------------	
---- Health and Armour	
---------------------------------------------------	
+--------------------------------------------------
+--- Health and Armour
+--------------------------------------------------
 
 NewShipType.maxhealth = 1000000
 NewShipType.regentime = 2450
@@ -66,15 +66,15 @@ NewShipType.minRegenTime = 2450
 NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
 
---------------------------------------------------	
+--------------------------------------------------
 --- Shields
---------------------------------------------------	
+--------------------------------------------------
 
 addShield(NewShipType, "EMP", 50000, 500)
 
---------------------------------------------------	
---- Sensors	
---------------------------------------------------	
+--------------------------------------------------
+--- Sensors
+--------------------------------------------------
 
 NewShipType.retaliationRange = 4800
 NewShipType.retaliationDistanceFromGoal = 160
@@ -83,9 +83,9 @@ NewShipType.prmSensorRange = 12500
 NewShipType.secSensorRange = 20000
 NewShipType.detectionStrength = 4
 
---------------------------------------------------	
---- Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Movement
+--------------------------------------------------
 
 NewShipType.mass = 10000000
 
@@ -101,9 +101,9 @@ NewShipType.rotationMaxSpeed = 3
 NewShipType.rotationAccelTime = 10
 NewShipType.rotationBrakeTime = 5
 
---------------------------------------------------	
---- Advanced Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Advanced Movement
+--------------------------------------------------
 
 NewShipType.controllerType = "Ship"
 
@@ -120,12 +120,12 @@ NewShipType.relativeMoveFactor = 1
 
 NewShipType.useEngagementRanges = 1
 
---------------------------------------------------	
+--------------------------------------------------
 --- Tactics And Multipliers
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.defaultStance = "Neutral" -- Agressive, Neutral or Evasive
-NewShipType.defaultROE = "Defensive"  -- Offensive, Defensive, Passive
+NewShipType.defaultROE = "Defensive" -- Offensive, Defensive, Passive
 
 setTacticsMults(NewShipType, "MAXSPEED", 0.85, 1.10, 1.0)
 setTacticsMults(NewShipType, "ENGINEACCEL", 0.85, 1.0, 1.0)
@@ -142,9 +142,9 @@ setTacticsMults(NewShipType, "BULLETSPEED", 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, "DAMAGEAPPLIED", 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 
---------------------------------------------------	
---- Formations	
---------------------------------------------------	
+--------------------------------------------------
+--- Formations
+--------------------------------------------------
 
 NewShipType.paradeData = "shivan_parade"
 
@@ -230,33 +230,33 @@ NewShipType.tumbleSpecialDynamicX = 0
 NewShipType.tumbleSpecialDynamicY = 0
 NewShipType.tumbleSpecialDynamicZ = 0
 
---------------------------------------------------	
+--------------------------------------------------
 --- Target Boxes
---------------------------------------------------	
+--------------------------------------------------
 
-setTargetBox(NewShipType, 0, -0.55, -0.4, -0.65, 0.55, 0.45, 0.05);
-setTargetBox(NewShipType, 1, -0.15, -0.45, 0.3, 0.15, -0.05, 0.45);
+setTargetBox(NewShipType, 0, -0.55, -0.4, -0.65, 0.55, 0.45, 0.05)
+setTargetBox(NewShipType, 1, -0.15, -0.45, 0.3, 0.15, -0.05, 0.45)
 
---------------------------------------------------	
---- Selection	
---------------------------------------------------	
+--------------------------------------------------
+--- Selection
+--------------------------------------------------
 
 NewShipType.selectionLimit = 150000
 NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 1
 
---------------------------------------------------	
---- Tactical Overlay Icon	
---------------------------------------------------	
+--------------------------------------------------
+--- Tactical Overlay Icon
+--------------------------------------------------
 
 NewShipType.TOScale = 1
 NewShipType.TOGroupScale = 1
 NewShipType.TOGroupMergeSize = 0
 
---------------------------------------------------	
---- Overlays	
---------------------------------------------------	
+--------------------------------------------------
+--- Overlays
+--------------------------------------------------
 
 NewShipType.mouseOverMinFadeSize = 0.085
 NewShipType.mouseOverMaxFadeSize = 0.15
@@ -267,9 +267,9 @@ NewShipType.SMRepresentation = "Mesh"
 NewShipType.SMHighlightDistMin = 20000
 NewShipType.SMHighlightDistMax = 50000
 
---------------------------------------------------	
---- Rendering	
---------------------------------------------------	
+--------------------------------------------------
+--- Rendering
+--------------------------------------------------
 
 NewShipType.AlwaysInRenderList = 0
 NewShipType.meshRenderLimit = 32500000000
@@ -314,33 +314,44 @@ NewShipType["alternativeHyperspaceTime"] = 12
 --------------------------------------------------
 
 addAbility(NewShipType, "MoveCommand", 1, 0)
-addAbility(NewShipType, "ShipHold", 1, 1000, 60, "rallypoint", "Fighter,Corvette,Utility", 60,
-    {
-        SuperCap = "2000",
-    },
-    {
-        Frigate = "800",
-    },
-    {
-        Fighter = "100",
-    },
-    {
-        Corvette = "300", })
+addAbility(NewShipType, "ShipHold", 1, 1000, 60, "rallypoint", "Fighter,Corvette,Utility", 60, {
+	SuperCap = "2000",
+}, {
+	Frigate = "800",
+}, {
+	Fighter = "100",
+}, {
+	Corvette = "300",
+})
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 2000, 3000, 0, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2,
-    "Munition, Mothership, BigCapitalShip, SmallCapitalShip, Capturer, Frigate", "Frontal",
-    { Fighter = "JustShoot" },
-    { Fighter_hw1 = "JustShoot" },
-    { Corvette = "JustShoot" },
-    { Corvette_hw1 = "JustShoot" },
-    { Munition = "MoveToTargetAndShoot" },
-    { SubSystem = "MoveToTargetAndShoot" });
+addAbility(
+	NewShipType,
+	"CanAttack",
+	1,
+	1,
+	0,
+	0,
+	0.35,
+	1.2,
+	"Munition, Mothership, BigCapitalShip, SmallCapitalShip, Capturer, Frigate",
+	"Frontal",
+	{ Fighter = "JustShoot" },
+	{ Fighter_hw1 = "JustShoot" },
+	{ Corvette = "JustShoot" },
+	{ Corvette_hw1 = "JustShoot" },
+	{ Munition = "MoveToTargetAndShoot" },
+	{ SubSystem = "MoveToTargetAndShoot" }
+)
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1,
-    "Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi",
-    "Utility, Fighter, Bomber, Cruiser, Capital, Platform")
+addAbility(
+	NewShipType,
+	"CanBuildShips",
+	1,
+	"Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi",
+	"Utility, Fighter, Bomber, Cruiser, Capital, Platform"
+)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 20, 0.3)
 addAbility(NewShipType, "CanBeRepaired")
 
@@ -409,20 +420,125 @@ StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_53", "")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "Shi_BFRed1", "Weapon_1", "Weapon", "Innate", "Damageable", "Shi_sath1", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_BFRed2", "Weapon_2", "Weapon", "Innate", "Damageable", "Shi_sath2", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_BFRed3", "Weapon_3", "Weapon", "Innate", "Damageable", "Shi_sath3", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Shi_BFRed4", "Weapon_4", "Weapon", "Innate", "Damageable", "Shi_sath4", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(
+	NewShipType,
+	"Shi_BFRed1",
+	"Weapon_1",
+	"Weapon",
+	"Innate",
+	"Damageable",
+	"Shi_sath1",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"Shi_BFRed2",
+	"Weapon_2",
+	"Weapon",
+	"Innate",
+	"Damageable",
+	"Shi_sath2",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"Shi_BFRed3",
+	"Weapon_3",
+	"Weapon",
+	"Innate",
+	"Damageable",
+	"Shi_sath3",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"Shi_BFRed4",
+	"Weapon_4",
+	"Weapon",
+	"Innate",
+	"Damageable",
+	"Shi_sath4",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
 
-StartShipHardPointConfig(NewShipType, "Shi_Butt", "Weapon_51", "Weapon", "Innate", "Damageable", "Shi_sathbutt", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "AWACS", "Hardpoint_Sensors", "System", "Innate", "Indestructible", "ter_awacs_0", "ter_awacs_0", "", "", "", "", "", "", "")
+StartShipHardPointConfig(
+	NewShipType,
+	"Shi_Butt",
+	"Weapon_51",
+	"Weapon",
+	"Innate",
+	"Damageable",
+	"Shi_sathbutt",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"AWACS",
+	"Hardpoint_Sensors",
+	"System",
+	"Innate",
+	"Indestructible",
+	"awacs_0",
+	"awacs_0",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
 
 --------------------------------------------------
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, "RepCap", "RepairPoint0", "RepairPoint1", "RepairPoint2", "RepairPoint3", "RepairPoint4",
-    "RepairPoint5", "RepairPoint6");
+loadLatchPointList(
+	NewShipType,
+	"RepCap",
+	"RepairPoint0",
+	"RepairPoint1",
+	"RepairPoint2",
+	"RepairPoint3",
+	"RepairPoint4",
+	"RepairPoint5",
+	"RepairPoint6"
+)
 
 --------------------------------------------------
 --- Addendum

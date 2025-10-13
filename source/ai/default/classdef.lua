@@ -247,9 +247,10 @@ squadclass[eFrigate] = {
 	SHI_CAIN,
 	SHI_LILITH,
 	SHI_RAKSHASA,
+	SHI_ASMODEUS,
 
 	VAS_ATEN,
-	VAS_MENTU,	
+	VAS_MENTU,
 	VAS_SATIS,
 }
 squadclass[eCapture] = {
@@ -260,6 +261,7 @@ squadclass[eCapture] = {
 	--TAI_SALVAGECORVETTE,
 
 	TER_ARGO,
+	SHI_ASMODEUS,
 
 	VAS_SATIS,
 }
@@ -272,6 +274,8 @@ squadclass[eShield] = {
 
 	VAS_SETEKH,
 	VAS_IMHOTEP,
+
+	SHI_COMMNODE,
 }
 squadclass[ePlatform] = {
 	HGN_GUNTURRET,
@@ -289,7 +293,6 @@ squadclass[ePlatform] = {
 
 	SHI_TRIDENT,
 	SHI_BELIAL,
-	SHI_COMMNODE,
 }
 squadclass[eAntiFighter] = {
 	HGN_INTERCEPTOR,
@@ -427,6 +430,7 @@ squadclass[eAntiFrigate] = {
 	TER_BOANERGES,
 
 	TER_DEIMOS,
+	TER_ICENI,
 	TER_HECATE,
 	TER_COLOSSUS,
 	TER_FENRIS,
@@ -439,7 +443,7 @@ squadclass[eAntiFrigate] = {
 	SHI_RAKSHASA,
 	SHI_LILITH,
 	SHI_RAKSHASA,
-	
+
 	SHI_NAHEMA,
 	SHI_NEPHILIM,
 	SHI_SERAPHIM,
@@ -460,7 +464,7 @@ squadclass[eAntiFrigate] = {
 	VAS_OSIRIS,
 	VAS_SEHKMET,
 	VAS_AMUN,
-	
+
 	VAS_TYPHON,
 	VAS_HATSHEPSUT,
 	VAS_COLOSSUS,
@@ -495,6 +499,7 @@ squadclass[eCapital] = {
 	TER_COLOSSUS,
 	TER_HADES,
 	TER_DEIMOS,
+	TER_ICENI,
 
 	SHI_DEMON,
 	SHI_RAVANA,
@@ -570,17 +575,16 @@ squadclass[eNonThreat] = {
 
 	SHI_AZRAEL,
 	SHI_RAHU,
+	SHI_COMMNODE,
 
 	VAS_ISIS,
 	VAS_NEPHTHYS,
 	VAS_IMHOTEP,
 }
-squadclass[eHyperspaceGate] =
-{
-	VGR_HYPERSPACE_PLATFORM
+squadclass[eHyperspaceGate] = {
+	VGR_HYPERSPACE_PLATFORM,
 }
-squadclass[eSubSystemAttackers] =
-{
+squadclass[eSubSystemAttackers] = {
 	HGN_ATTACKBOMBER,
 	HGN_IONCANNONFRIGATE,
 	VGR_BOMBER,
@@ -606,16 +610,14 @@ squadclass[eSubSystemAttackers] =
 	VAS_OSIRIS,
 	VAS_AMUN,
 }
-squadclass[eNonCriticalSubSys] =
-{
+squadclass[eNonCriticalSubSys] = {
 	CLOAKGENERATOR,
 	FIRECONTROLTOWER,
 	HYPERSPACEINHIBITOR,
 	ADVANCEDARRAY,
 	CLOAKSENSOR,
 }
-squadclass[eGoodRepairAttackers] =
-{
+squadclass[eGoodRepairAttackers] = {
 	HGN_INTERCEPTOR,
 	HGN_ASSAULTFRIGATE,
 	HGN_IONCANNONFRIGATE,
@@ -650,6 +652,7 @@ squadclass[eGoodRepairAttackers] =
 	TER_LEVIATHAN,
 	TER_AEOLUS,
 	TER_DEIMOS,
+	TER_ICENI,
 
 	TER_ATHENA,
 
@@ -678,8 +681,7 @@ eBattleCruiser = eMaxCount + 1
 sg_maxClasses = eBattleCruiser + 1
 eDestroyer = eMaxCount + 2
 sg_maxClasses = eDestroyer + 1
-squadclass[eUselessShips] =
-{
+squadclass[eUselessShips] = {
 	HGN_MINELAYERCORVETTE,
 	VGR_MINELAYERCORVETTE,
 	VGR_COMMANDCORVETTE,
@@ -693,9 +695,10 @@ squadclass[eUselessShips] =
 
 	TER_POSEIDON,
 	TER_FAUSTUS,
+
+	SHI_MEPHISTO,
 }
-squadclass[eBattleCruiser] =
-{
+squadclass[eBattleCruiser] = {
 	HGN_BATTLECRUISER,
 	VGR_BATTLECRUISER,
 	KUS_HEAVYCRUISER,
@@ -703,7 +706,7 @@ squadclass[eBattleCruiser] =
 
 	TER_COLOSSUS,
 	TER_HADES,
-	
+
 	SHI_SATHANAS,
 	SHI_LUCIFER,
 
@@ -718,6 +721,7 @@ squadclass[eDestroyer] = {
 	TAI_MISSILEDESTROYER,
 
 	TER_DEIMOS,
+	TER_ICENI,
 
 	SHI_MOLOCH,
 
@@ -732,7 +736,7 @@ end
 
 function ClassInitialize()
 	for i = 0, sg_maxClasses do
-		if (squadclass[i]) then
+		if squadclass[i] then
 			FastAddToClass(squadclass[i], i)
 		end
 	end

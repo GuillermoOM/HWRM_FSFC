@@ -13,8 +13,6 @@ Number_Properties = {
 	cfg_advanced_research = 0.0,
 	cfg_bc_can_upgrade = 0.0,
 
-
-
 	cfg_build_by_ships = 0.0,
 	persona_build_ships_scalar = 1.0,
 	persona_build_ships_befull = 0.0,
@@ -38,7 +36,6 @@ Number_Properties = {
 
 	persona_group_scale = 1,
 
-
 	-- -- CPU Build Scale
 
 	persona_demand_scale_fighters = 5,
@@ -53,7 +50,6 @@ Number_Properties = {
 
 	persona_demand_adjusthi_frigates = 1.5,
 	persona_demand_adjustlo_frigates = 0.5,
-
 }
 
 String_Properties_Priority = 1.0
@@ -61,20 +57,20 @@ String_Properties_Priority = 1.0
 String_Properties = {
 	cfg_hyperspace_effect_fx = "subspace_gate",
 	cfg_hyperspace_effect_audio = [[etg/special/large_subspace]],
-	
+
 	path_build = [[data:scripts/races/vasudan/scripts/def_build.lua]],
 	path_research = [[data:scripts/races/vasudan/scripts/def_research.lua]],
 	path_ai = [[data:scripts/races/vasudan/scripts/def_ai.lua]],
-	
+
 	path_ai_special = [[data:scripts/races/vasudan/scripts/ai_special.lua]],
 	path_ai_research = [[data:scripts/races/vasudan/scripts/ai_upgrades.lua]],
 	path_ai_subsystems = [[data:scripts/races/vasudan/scripts/ai_subsystems.lua]],
 	path_ai_build = [[data:scripts/races/vasudan/scripts/ai_build.lua]],
-	
+
 	path_crate_locate = [[data:scripts/races/vasudan/scripts/crate_locate.lua]],
 	path_crate_ships = [[data:scripts/races/vasudan/scripts/crate_ships.lua]],
-	
-	def_type_mothership = "vas_typhon",
+
+	def_type_mothership = "vas_hatshepsut",
 	def_type_carrier = "vas_typhon",
 	def_type_scout = "vas_seth",
 }

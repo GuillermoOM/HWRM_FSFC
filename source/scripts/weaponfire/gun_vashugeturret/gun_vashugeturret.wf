@@ -7,9 +7,9 @@ hitfx = "dmg_wave_explosion_combo_purple"
 bulletfx = "laser_purple"
 nopenetratefx = "dmg_flare_spray_wave_purple"
 deathtype = "deathBeam"
+firefx = "sunfire_squirt_purple"
 fire_sfx = "WEAPON/vashugeturret"
 scartype = "Plasma_Bomb/Plasma_Bomb"
 hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
 nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
-hit_clamp = 
-    { 1, 1, }
+hit_clamp = { 1, 1 }

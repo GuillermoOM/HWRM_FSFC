@@ -500,7 +500,6 @@ Meg_VeilChunk2 = {
 	},
 }
 
-
 Meg_FoundryDebris_Chunk1 = Meg_VeilChunk1
 Meg_FoundryDebris_Chunk2 = Meg_VeilChunk1
 Meg_FoundryDebris_Chunk3 = Meg_VeilChunk1
@@ -532,7 +531,6 @@ Sp_Tanker3 = Sp_Tanker
 Sp_Tanker4 = Sp_Tanker
 Sp_Tanker5 = Sp_Tanker
 Sp_Tanker6 = Sp_Tanker
-
 
 Vgr_AssaultFrigate = {
 	LargeIcon = {
@@ -759,7 +757,6 @@ Vgr_WeaponPlatform_missile = {
 }
 
 -------------------------------------------------------------------------------------------------
-
 
 kus_assaultfrigate = {
 	LargeIcon = {
@@ -1033,7 +1030,6 @@ kus_resourcecollector = {
 	},
 }
 
-
 kus_resourcecontroller = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1072,7 +1068,6 @@ kus_probe = {
 	},
 }
 
-
 kus_supportfrigate = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1081,7 +1076,6 @@ kus_supportfrigate = {
 		stretchOnDraw = 1,
 	},
 }
-
 
 --Kus_Mothership
 --Kus_Scout
@@ -1107,7 +1101,6 @@ kus_supportfrigate = {
 --kus_IoncannonFrigate
 --kus_HeavyCruiser
 
-
 --
 kus_researchship_1 = kus_researchship
 kus_researchship_2 = kus_researchship
@@ -1130,13 +1123,7 @@ kus_drone12 = kus_Drone
 kus_drone13 = kus_Drone
 --taiidan
 
-
-
-
-
-
-
-tai_assaultfrigate    = {
+tai_assaultfrigate = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1145,7 +1132,7 @@ tai_assaultfrigate    = {
 	},
 }
 
-tai_attackbomber      = {
+tai_attackbomber = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1154,7 +1141,7 @@ tai_attackbomber      = {
 	},
 }
 
-tai_carrier           = {
+tai_carrier = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1163,7 +1150,7 @@ tai_carrier           = {
 	},
 }
 
-tai_defender          = {
+tai_defender = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1172,7 +1159,7 @@ tai_defender          = {
 	},
 }
 -----------------
-tai_defensefighter    = {
+tai_defensefighter = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1181,7 +1168,7 @@ tai_defensefighter    = {
 	},
 }
 
-tai_destroyer         = {
+tai_destroyer = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1190,7 +1177,7 @@ tai_destroyer         = {
 	},
 }
 
-tai_fieldfrigate      = {
+tai_fieldfrigate = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1199,7 +1186,7 @@ tai_fieldfrigate      = {
 	},
 }
 
-tai_mothership        = {
+tai_mothership = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1221,7 +1208,7 @@ tai_gravWellGenerator = {
 	},
 }
 
-tai_researchstation   = {
+tai_researchstation = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1230,7 +1217,7 @@ tai_researchstation   = {
 	},
 }
 
-tai_cloakgenerator    = {
+tai_cloakgenerator = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1239,7 +1226,7 @@ tai_cloakgenerator    = {
 	},
 }
 
-tai_heavycorvette     = {
+tai_heavycorvette = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1250,7 +1237,7 @@ tai_heavycorvette     = {
 
 -----------------
 
-tai_heavycruiser      = {
+tai_heavycruiser = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1259,7 +1246,7 @@ tai_heavycruiser      = {
 	},
 }
 
-tai_interceptor       = {
+tai_interceptor = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1268,7 +1255,7 @@ tai_interceptor       = {
 	},
 }
 
-tai_ioncannonfrigate  = {
+tai_ioncannonfrigate = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1277,7 +1264,7 @@ tai_ioncannonfrigate  = {
 	},
 }
 
-tai_lightcorvette     = {
+tai_lightcorvette = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1289,7 +1276,7 @@ tai_lightcorvette     = {
 -----------------------
 -- tai light defender goes here OR EMPTY SLOT
 
-tai_sensorarray       = {
+tai_sensorarray = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
 		texture = "DATA:\\Ship\\Icons\\HW1_icon_Tai_ships.dds",
@@ -1306,7 +1293,6 @@ tai_minelayercorvette = {
 		stretchOnDraw = 1,
 	},
 }
-
 
 tai_missiledestroyer = {
 	LargeIcon = {
@@ -1412,7 +1398,6 @@ tai_researchship_5 = {
 }
 -----------------------------
 
-
 tai_resourcecollector = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1440,7 +1425,6 @@ tai_salvagecorvette = {
 	},
 }
 
-
 tai_scout = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1450,9 +1434,7 @@ tai_scout = {
 	},
 }
 
-
 --------------------------------
-
 
 tai_supportfrigate = {
 	LargeIcon = {
@@ -1746,7 +1728,6 @@ junk_junkyardoffice = {
 	},
 }
 
-
 junk_graveyardHammerhead = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1755,7 +1736,6 @@ junk_graveyardHammerhead = {
 		stretchOnDraw = 1,
 	},
 }
-
 
 kar_heavycorvette = {
 	LargeIcon = {
@@ -1813,11 +1793,7 @@ kad_multibeamfrigate = {
 	},
 }
 
-
-
-
 -----------------------------
-
 
 kad_p2mothership = {
 	LargeIcon = {
@@ -1846,7 +1822,6 @@ tur_fighter = {
 	},
 }
 
-
 tur_ionarrayfrigate = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1858,7 +1833,6 @@ tur_ionarrayfrigate = {
 
 -----------------------------
 
-
 tai_Headshot = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1867,7 +1841,6 @@ tai_Headshot = {
 		stretchOnDraw = 1,
 	},
 }
-
 
 tur_smallmissile = {
 	LargeIcon = {
@@ -1896,7 +1869,6 @@ tur_p1mothership = {
 	},
 }
 
-
 tur_standardcorvette = {
 	LargeIcon = {
 		--pixelUVCoords = 1,
@@ -1906,21 +1878,9 @@ tur_standardcorvette = {
 	},
 }
 
-
-
 --common
 special_splitter = Default
 special_unittestmap = Default
-
-
-
-
-
-
-
-
-
-
 
 -- SUBSYSTEM ICONS (THERE ARE NOT VERY MANY, SO WE WILL JUST PUT THEM IN HERE)
 
@@ -2019,8 +1979,6 @@ Icon_Subsystem_DetectHyperspace = {
 
 -- TODO: Engine
 
-
-
 -- COLUMN 2
 Icon_Subsystem_Frigate = {
 	LargeIcon = {
@@ -2094,7 +2052,6 @@ Icon_Subsystem_TorpedoLauncher = {
 		textureUV_WH = { 32, 24 },
 		stretchOnDraw = 1,
 	},
-
 }
 
 Icon_Subsystem_IonTurret = {
@@ -2110,7 +2067,6 @@ Icon_Subsystem_IonTurret = {
 		textureUV_WH = { 32, 24 },
 		stretchOnDraw = 1,
 	},
-
 }
 
 Icon_Subsystem_FireControl = {
@@ -2159,7 +2115,6 @@ Icon_Subsystem_ResearchAdvanced = {
 		stretchOnDraw = 1,
 	},
 }
-
 
 -- COLUMN 3
 Icon_Subsystem_HyperspaceInhibitor = {
@@ -2239,8 +2194,7 @@ Icon_Subsystem_DetectCloaked = {
 
 -- Todo Torpedo launcher {300,640}
 
-
-Icon_Subsystem_Engine             = {
+Icon_Subsystem_Engine = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\icon_subsystem.mres",
 		textureUV_TL = { 192, 0 },
@@ -2255,7 +2209,7 @@ Icon_Subsystem_Engine             = {
 	},
 }
 
-Icon_Subsystem_Resource           = {
+Icon_Subsystem_Resource = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\icon_subsystem.mres",
 		textureUV_TL = { 128, 192 },
@@ -2270,7 +2224,7 @@ Icon_Subsystem_Resource           = {
 	},
 }
 
-Icon_Subsystem_Fake               = {
+Icon_Subsystem_Fake = {
 	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\icon_subsystem.mres",
 		textureUV_TL = { 0, 0 },
@@ -2284,1914 +2238,1334 @@ Icon_Subsystem_Fake               = {
 		stretchOnDraw = 0,
 	},
 }
-HW1_ResearchModule                = Icon_Subsystem_Research
-HW1_CloakGenerator                = Icon_Subsystem_Fake
+HW1_ResearchModule = Icon_Subsystem_Research
+HW1_CloakGenerator = Icon_Subsystem_Fake
 
-Hgn_C_Production_Fighter          = Icon_Subsystem_Fighter
-Hgn_MS_Production_Fighter         = Icon_Subsystem_Fighter
-Hgn_C_Production_Corvette         = Icon_Subsystem_Corvette
-Hgn_MS_Production_Corvette        = Icon_Subsystem_Corvette
-Hgn_C_Production_Frigate          = Icon_Subsystem_Frigate
-Hgn_MS_Production_Frigate         = Icon_Subsystem_Frigate
-Hgn_C_Production_FrigateAdvanced  = Icon_Subsystem_FrigateAdvanced
+Hgn_C_Production_Fighter = Icon_Subsystem_Fighter
+Hgn_MS_Production_Fighter = Icon_Subsystem_Fighter
+Hgn_C_Production_Corvette = Icon_Subsystem_Corvette
+Hgn_MS_Production_Corvette = Icon_Subsystem_Corvette
+Hgn_C_Production_Frigate = Icon_Subsystem_Frigate
+Hgn_MS_Production_Frigate = Icon_Subsystem_Frigate
+Hgn_C_Production_FrigateAdvanced = Icon_Subsystem_FrigateAdvanced
 Hgn_MS_Production_FrigateAdvanced = Icon_Subsystem_FrigateAdvanced
-Hgn_MS_Production_CapShip         = Icon_Subsystem_CapShip
-Hgn_SY_Production_CapShip         = Icon_Subsystem_CapShip
+Hgn_MS_Production_CapShip = Icon_Subsystem_CapShip
+Hgn_SY_Production_CapShip = Icon_Subsystem_CapShip
 Hgn_MS_Production_CapShipAdvanced = Icon_Subsystem_CapShipAdvanced
-Hgn_C_Module_PlatformControl      = Icon_Subsystem_PlatformControl
-Hgn_MS_Module_PlatformControl     = Icon_Subsystem_PlatformControl
-Hgn_C_Module_Research             = Icon_Subsystem_Research
-Hgn_MS_Module_Research            = Icon_Subsystem_Research
-Hgn_C_Module_ResearchAdvanced     = Icon_Subsystem_ResearchAdvanced
-Hgn_MS_Module_ResearchAdvanced    = Icon_Subsystem_ResearchAdvanced
-Hgn_C_Module_Hyperspace           = Icon_Subsystem_Hyperspace
-Hgn_MS_Module_Hyperspace          = Icon_Subsystem_Hyperspace
-Hgn_C_Module_HyperspaceInhibitor  = Icon_Subsystem_HyperspaceInhibitor
+Hgn_C_Module_PlatformControl = Icon_Subsystem_PlatformControl
+Hgn_MS_Module_PlatformControl = Icon_Subsystem_PlatformControl
+Hgn_C_Module_Research = Icon_Subsystem_Research
+Hgn_MS_Module_Research = Icon_Subsystem_Research
+Hgn_C_Module_ResearchAdvanced = Icon_Subsystem_ResearchAdvanced
+Hgn_MS_Module_ResearchAdvanced = Icon_Subsystem_ResearchAdvanced
+Hgn_C_Module_Hyperspace = Icon_Subsystem_Hyperspace
+Hgn_MS_Module_Hyperspace = Icon_Subsystem_Hyperspace
+Hgn_C_Module_HyperspaceInhibitor = Icon_Subsystem_HyperspaceInhibitor
 Hgn_MS_Module_HyperspaceInhibitor = Icon_Subsystem_HyperspaceInhibitor
-Hgn_C_Module_CloakGenerator       = Icon_Subsystem_CloakGenerator
-Hgn_MS_Module_CloakGenerator      = Icon_Subsystem_CloakGenerator
-Hgn_C_Module_FireControl          = Icon_Subsystem_FireControl
-Hgn_MS_Module_FireControl         = Icon_Subsystem_FireControl
-Hgn_C_Sensors_DetectHyperspace    = Icon_Subsystem_DetectHyperspace
-Hgn_MS_Sensors_DetectHyperspace   = Icon_Subsystem_DetectHyperspace
-Hgn_C_Sensors_AdvancedArray       = Icon_Subsystem_AdvancedArray
-Hgn_MS_Sensors_AdvancedArray      = Icon_Subsystem_AdvancedArray
-Hgn_C_Sensors_DetectCloaked       = Icon_Subsystem_DetectCloaked
-Hgn_MS_Sensors_DetectCloaked      = Icon_Subsystem_DetectCloaked
-Hgn_MS_Production_CorvetteMover   = Icon_Subsystem_CorvetteMover
-Hgn_C_Engine                      = Icon_Subsystem_Engine
-Hgn_MS_Innate_Engine              = Icon_Subsystem_Engine
-Hgn_SY_Innate_Engine              = Icon_Subsystem_Engine
-Hgn_Des_Engine                    = Icon_Subsystem_Engine
-Hgn_C_Innate_Resource             = Icon_Subsystem_Resource
-Hgn_MS_Innate_Resource            = Icon_Subsystem_Resource
-Hgn_SY_Innate_Resource            = Icon_Subsystem_Resource
+Hgn_C_Module_CloakGenerator = Icon_Subsystem_CloakGenerator
+Hgn_MS_Module_CloakGenerator = Icon_Subsystem_CloakGenerator
+Hgn_C_Module_FireControl = Icon_Subsystem_FireControl
+Hgn_MS_Module_FireControl = Icon_Subsystem_FireControl
+Hgn_C_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
+Hgn_MS_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
+Hgn_C_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
+Hgn_MS_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
+Hgn_C_Sensors_DetectCloaked = Icon_Subsystem_DetectCloaked
+Hgn_MS_Sensors_DetectCloaked = Icon_Subsystem_DetectCloaked
+Hgn_MS_Production_CorvetteMover = Icon_Subsystem_CorvetteMover
+Hgn_C_Engine = Icon_Subsystem_Engine
+Hgn_MS_Innate_Engine = Icon_Subsystem_Engine
+Hgn_SY_Innate_Engine = Icon_Subsystem_Engine
+Hgn_Des_Engine = Icon_Subsystem_Engine
+Hgn_C_Innate_Resource = Icon_Subsystem_Resource
+Hgn_MS_Innate_Resource = Icon_Subsystem_Resource
+Hgn_SY_Innate_Resource = Icon_Subsystem_Resource
 
-
-Vgr_C_Production_Fighter          = Icon_Subsystem_Fighter
-Vgr_MS_Production_Fighter         = Icon_Subsystem_Fighter
-Vgr_C_Production_Corvette         = Icon_Subsystem_Corvette
-Vgr_MS_Production_Corvette        = Icon_Subsystem_Corvette
-Vgr_C_Production_Frigate          = Icon_Subsystem_Frigate
-Vgr_MS_Production_Frigate         = Icon_Subsystem_Frigate
-Vgr_C_Module_PlatformControl      = Icon_Subsystem_PlatformControl
-Vgr_MS_Module_PlatformControl     = Icon_Subsystem_PlatformControl
-Vgr_MS_Production_CapShip         = Icon_Subsystem_CapShip
-Vgr_SY_Production_CapShip         = Icon_Subsystem_CapShip
-Vgr_C_Module_Research             = Icon_Subsystem_Research
-Vgr_MS_Module_Research            = Icon_Subsystem_Research
-Vgr_C_Module_CloakGenerator       = Icon_Subsystem_CloakGenerator
-Vgr_MS_Module_CloakGenerator      = Icon_Subsystem_CloakGenerator
-Vgr_C_Module_HyperspaceInhibitor  = Icon_Subsystem_HyperspaceInhibitor
+Vgr_C_Production_Fighter = Icon_Subsystem_Fighter
+Vgr_MS_Production_Fighter = Icon_Subsystem_Fighter
+Vgr_C_Production_Corvette = Icon_Subsystem_Corvette
+Vgr_MS_Production_Corvette = Icon_Subsystem_Corvette
+Vgr_C_Production_Frigate = Icon_Subsystem_Frigate
+Vgr_MS_Production_Frigate = Icon_Subsystem_Frigate
+Vgr_C_Module_PlatformControl = Icon_Subsystem_PlatformControl
+Vgr_MS_Module_PlatformControl = Icon_Subsystem_PlatformControl
+Vgr_MS_Production_CapShip = Icon_Subsystem_CapShip
+Vgr_SY_Production_CapShip = Icon_Subsystem_CapShip
+Vgr_C_Module_Research = Icon_Subsystem_Research
+Vgr_MS_Module_Research = Icon_Subsystem_Research
+Vgr_C_Module_CloakGenerator = Icon_Subsystem_CloakGenerator
+Vgr_MS_Module_CloakGenerator = Icon_Subsystem_CloakGenerator
+Vgr_C_Module_HyperspaceInhibitor = Icon_Subsystem_HyperspaceInhibitor
 Vgr_MS_Module_HyperspaceInhibitor = Icon_Subsystem_HyperspaceInhibitor
-Vgr_C_Module_FireControl          = Icon_Subsystem_FireControl
-Vgr_MS_Module_FireControl         = Icon_Subsystem_FireControl
-Vgr_C_Module_Hyperspace           = Icon_Subsystem_Hyperspace
-Vgr_MS_Module_Hyperspace          = Icon_Subsystem_Hyperspace
-Vgr_C_Sensors_AdvancedArray       = Icon_Subsystem_AdvancedArray
-Vgr_MS_Sensors_AdvancedArray      = Icon_Subsystem_AdvancedArray
-Vgr_C_Sensors_DetectHyperspace    = Icon_Subsystem_DetectHyperspace
-Vgr_MS_Sensors_DetectHyperspace   = Icon_Subsystem_DetectHyperspace
-Vgr_C_Engine                      = Icon_Subsystem_Engine
-Vgr_MS_Innate_Engine              = Icon_Subsystem_Engine
-Vgr_SY_Innate_Engine              = Icon_Subsystem_Engine
-Vgr_Des_Engine                    = Icon_Subsystem_Engine
-Vgr_C_Innate_Resource             = Icon_Subsystem_Resource
-Vgr_MS_Innate_Resource            = Icon_Subsystem_Resource
-Vgr_SY_Innate_Resource            = Icon_Subsystem_Resource
+Vgr_C_Module_FireControl = Icon_Subsystem_FireControl
+Vgr_MS_Module_FireControl = Icon_Subsystem_FireControl
+Vgr_C_Module_Hyperspace = Icon_Subsystem_Hyperspace
+Vgr_MS_Module_Hyperspace = Icon_Subsystem_Hyperspace
+Vgr_C_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
+Vgr_MS_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
+Vgr_C_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
+Vgr_MS_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
+Vgr_C_Engine = Icon_Subsystem_Engine
+Vgr_MS_Innate_Engine = Icon_Subsystem_Engine
+Vgr_SY_Innate_Engine = Icon_Subsystem_Engine
+Vgr_Des_Engine = Icon_Subsystem_Engine
+Vgr_C_Innate_Resource = Icon_Subsystem_Resource
+Vgr_MS_Innate_Resource = Icon_Subsystem_Resource
+Vgr_SY_Innate_Resource = Icon_Subsystem_Resource
 
 -- other
-HGN_SHIPYARD_SPG                  = Hgn_Shipyard
-HGN_BATTLECRUISERENGINE           = Icon_Subsystem_Engine
-HGN_BATTLECRUISERIONBEAMTURRET    = Icon_Subsystem_IonTurret
-VGR_BATTLECRUISERENGINE           = Icon_Subsystem_Engine
-VGR_HEAVYFUSIONMISSILELAUNCHERBC  = Icon_Subsystem_TorpedoLauncher
-VGR_HYPERSPACEINHIBITOR           = Icon_Subsystem_HyperspaceInhibitor
-MEG_ASTEROID_NOSUBS               = Meg_Asteroid
-MEG_ASTEROIDMP                    = Meg_Asteroid
-VGR_COMMSTATION_SUBSTATION        = Icon_Subsystem_CommStation_bottom
-VGR_COMMSTATION_SUBSTATION_M10    = Icon_Subsystem_CommStation_bottom
-KPR_DESTROYERM10                  = Kpr_Destroyer
-Meg_BalcoraGatePowerGen           = Meg_ProgenitorPowerTrigger
-Meg_Gehenna_1                     = Meg_Gehenna
-Meg_Gehenna_2                     = Meg_Gehenna
-Meg_Gehenna_3                     = Meg_Gehenna
-Meg_Gehenna_4                     = Meg_Gehenna
-Meg_Gehenna_5                     = Meg_Gehenna
-Meg_Gehenna_6                     = Meg_Gehenna
-Meg_Gehenna_7                     = Meg_Gehenna
-Hgn_drone_frigate                 = Hgn_Torpedofrigate
-Hgn_drone_frigate_2               = Hgn_Assaultfrigate
-Hgn_drone_frigate_3               = Hgn_Marinefrigate
-Kpr_Mover_Capture                 = Kpr_Mover_Capture
-Meg_Bentus_Ruined                 = Meg_Bentus_Ruin_1
-KUS_DestroyerEngine               = Icon_Subsystem_Engine
-KUS_MissileDestroyerEngine        = Icon_Subsystem_Engine
-KUS_HeavyCruiserEngine            = Icon_Subsystem_Engine
-KUS_CarrierEngine                 = Icon_Subsystem_Engine
-KUS_CarrierResource               = Icon_Subsystem_Resource
-KUS_MothershipEngine              = Icon_Subsystem_Engine
-KUS_MothershipResource            = Icon_Subsystem_Resource
-TAI_DestroyerEngine               = Icon_Subsystem_Engine
-TAI_MissileDestroyerEngine        = Icon_Subsystem_Engine
-TAI_HeavyCruiserEngine            = Icon_Subsystem_Engine
-TAI_CarrierEngine                 = Icon_Subsystem_Engine
-TAI_CarrierResource               = Icon_Subsystem_Resource
-TAI_MothershipEngine              = Icon_Subsystem_Engine
-TAI_MothershipResource            = Icon_Subsystem_Resource
-Tur_CarrierEngine                 = Icon_Subsystem_Engine
-HW1_FighterTank                   = Icon_Subsystem_Engine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+HGN_SHIPYARD_SPG = Hgn_Shipyard
+HGN_BATTLECRUISERENGINE = Icon_Subsystem_Engine
+HGN_BATTLECRUISERIONBEAMTURRET = Icon_Subsystem_IonTurret
+VGR_BATTLECRUISERENGINE = Icon_Subsystem_Engine
+VGR_HEAVYFUSIONMISSILELAUNCHERBC = Icon_Subsystem_TorpedoLauncher
+VGR_HYPERSPACEINHIBITOR = Icon_Subsystem_HyperspaceInhibitor
+MEG_ASTEROID_NOSUBS = Meg_Asteroid
+MEG_ASTEROIDMP = Meg_Asteroid
+VGR_COMMSTATION_SUBSTATION = Icon_Subsystem_CommStation_bottom
+VGR_COMMSTATION_SUBSTATION_M10 = Icon_Subsystem_CommStation_bottom
+KPR_DESTROYERM10 = Kpr_Destroyer
+Meg_BalcoraGatePowerGen = Meg_ProgenitorPowerTrigger
+Meg_Gehenna_1 = Meg_Gehenna
+Meg_Gehenna_2 = Meg_Gehenna
+Meg_Gehenna_3 = Meg_Gehenna
+Meg_Gehenna_4 = Meg_Gehenna
+Meg_Gehenna_5 = Meg_Gehenna
+Meg_Gehenna_6 = Meg_Gehenna
+Meg_Gehenna_7 = Meg_Gehenna
+Hgn_drone_frigate = Hgn_Torpedofrigate
+Hgn_drone_frigate_2 = Hgn_Assaultfrigate
+Hgn_drone_frigate_3 = Hgn_Marinefrigate
+Kpr_Mover_Capture = Kpr_Mover_Capture
+Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
+KUS_DestroyerEngine = Icon_Subsystem_Engine
+KUS_MissileDestroyerEngine = Icon_Subsystem_Engine
+KUS_HeavyCruiserEngine = Icon_Subsystem_Engine
+KUS_CarrierEngine = Icon_Subsystem_Engine
+KUS_CarrierResource = Icon_Subsystem_Resource
+KUS_MothershipEngine = Icon_Subsystem_Engine
+KUS_MothershipResource = Icon_Subsystem_Resource
+TAI_DestroyerEngine = Icon_Subsystem_Engine
+TAI_MissileDestroyerEngine = Icon_Subsystem_Engine
+TAI_HeavyCruiserEngine = Icon_Subsystem_Engine
+TAI_CarrierEngine = Icon_Subsystem_Engine
+TAI_CarrierResource = Icon_Subsystem_Resource
+TAI_MothershipEngine = Icon_Subsystem_Engine
+TAI_MothershipResource = Icon_Subsystem_Resource
+Tur_CarrierEngine = Icon_Subsystem_Engine
+HW1_FighterTank = Icon_Subsystem_Engine
 
 -- Freespace Icons
 
 -- Ships
 
-Shi_Lucifer =
-{
-	LargeIcon =
-	{
+Shi_Lucifer = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\lucifer.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1300, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1300, 650 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Luciferfs1 =
-{
-	LargeIcon =
-	{
+Shi_Luciferfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\lucifer.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1300, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1300, 650 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Ravana =
-{
-	LargeIcon =
-	{
+Shi_Ravana = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ravana.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1400, 700, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1400, 700 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Sathanas =
-{
-	LargeIcon =
-	{
+Shi_Sathanas = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sathanas.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1372, 657, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1372, 657 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Demon =
-{
-	LargeIcon =
-	{
+Shi_Demon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\demon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 833, 450, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 833, 450 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Aeshma =
-{
-	LargeIcon =
-	{
+Shi_Aeshma = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\aeshma.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Astaroth =
-{
-	LargeIcon =
-	{
+Shi_Astaroth = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\astaroth.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 300, 150, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 300, 150 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Basilisk =
-{
-	LargeIcon =
-	{
+Shi_Basilisk = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\basilisk.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 490, 245, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 490, 245 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Dragon =
-{
-	LargeIcon =
-	{
+Shi_Dragon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\dragon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 416, 208, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 416, 208 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Dragonfs1 =
-{
-	LargeIcon =
-	{
+Ter_Dragonfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\terdragon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Manticore =
-{
-	LargeIcon =
-	{
+Shi_Manticore = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\manticore.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Mara =
-{
-	LargeIcon =
-	{
+Shi_Mara = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mara.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Mara =
-{
-	LargeIcon =
-	{
+Ter_Mara = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\termara.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Amazon =
-{
-	LargeIcon =
-	{
+Ter_Amazon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\amazon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 500, 250, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 500, 250 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Nahema =
-{
-	LargeIcon =
-	{
+Shi_Nahema = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\nahema.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 408, 204, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 408, 204 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Taurvi =
-{
-	LargeIcon =
-	{
+Shi_Taurvi = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\taurvi.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Nephilim =
-{
-	LargeIcon =
-	{
+Shi_Nephilim = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\nephilim.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 480, 240, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 480, 240 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Seraphim =
-{
-	LargeIcon =
-	{
+Shi_Seraphim = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\seraphim.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 350, 175, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Cain =
-{
-	LargeIcon =
-	{
+Shi_Cain = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\cain.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Lilith =
-{
-	LargeIcon =
-	{
+Shi_Lilith = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\lilith.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Rakshasa =
-{
-	LargeIcon =
-	{
+Shi_Rakshasa = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\rakshasa.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Rahu =
-{
-	LargeIcon =
-	{
+Shi_Rahu = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\rahu.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 131, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 131 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Rahufs1 =
-{
-	LargeIcon =
-	{
+Shi_Rahufs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\rahu.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 131, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 131 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Azrael =
-{
-	LargeIcon =
-	{
+Shi_Azrael = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\azrael.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 350, 175, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Azraelfs1 =
-{
-	LargeIcon =
-	{
+Shi_Azraelfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\azrael.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 350, 175, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Mephisto =
-{
-	LargeIcon =
-	{
+Shi_Mephisto = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mephisto.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Mephistofs1 =
-{
-	LargeIcon =
-	{
+Shi_Mephistofs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mephisto.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Asmodeus =
-{
-	LargeIcon =
-	{
+Shi_Asmodeus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\asmodeus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 322, 161, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 322, 161 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_Asmodeusfs1 =
-{
-	LargeIcon =
-	{
+Shi_Asmodeusfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\asmodeus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 322, 161, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 322, 161 },
 		stretchOnDraw = 1,
 	},
 }
-shi_belial =
-{
-	LargeIcon =
-	{
+Shi_belial = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\belial.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 680, 340, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 680, 340 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_commNode =
-{
-	LargeIcon =
-	{
+Shi_commNode = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\shicommnode.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_moloch =
-{
-	LargeIcon =
-	{
+Shi_moloch = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\moloch.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1100, 550, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1100, 550 },
 		stretchOnDraw = 1,
 	},
 }
-vas_pvntyphon =
-{
-	LargeIcon =
-	{
+Vas_pvntyphon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1250, 600, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1250, 600 },
 		stretchOnDraw = 1,
 	},
 }
-vas_karnak =
-{
-	LargeIcon =
-	{
+Vas_karnak = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\karnak.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 500, 250, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 500, 250 },
 		stretchOnDraw = 1,
 	},
 }
-vas_typhon =
-{
-	LargeIcon =
-	{
+Vas_typhon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1250, 600, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1250, 600 },
 		stretchOnDraw = 1,
 	},
 }
-Vas_typhonwreck =
-{
-	LargeIcon =
-	{
+Vas_typhonwreck = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1250, 600, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1250, 600 },
 		stretchOnDraw = 1,
 	},
 }
-vas_hatshepsut =
-{
-	LargeIcon =
-	{
+Vas_hatshepsut = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hatshepsut.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1311, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1311, 650 },
 		stretchOnDraw = 1,
 	},
 }
-vas_cleopatera =
-{
-	LargeIcon =
-	{
+Vas_cleopatera = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hatshepsut.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1311, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1311, 650 },
 		stretchOnDraw = 1,
 	},
 }
-ntf_iceni =
-{
-	LargeIcon =
-	{
+Ter_iceni = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\iceni.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 840, 420, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 840, 420 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Sobek =
-{
-	LargeIcon =
-	{
+Vas_Sobek = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sobek.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1000, 523, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1000, 523 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Mentu =
-{
-	LargeIcon =
-	{
+Vas_Mentu = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mentu.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Aten =
-{
-	LargeIcon =
-	{
+Vas_Aten = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\aten.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Isis =
-{
-	LargeIcon =
-	{
+Vas_Isis = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\isis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Isisfs1 =
-{
-	LargeIcon =
-	{
+Vas_Isisfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\isis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Anuket =
-{
-	LargeIcon =
-	{
+Vas_Anuket = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\anuket.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 550, 275, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 550, 275 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Bes =
-{
-	LargeIcon =
-	{
+Vas_Bes = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bes.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 300, 150, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 300, 150 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Maat =
-{
-	LargeIcon =
-	{
+Vas_Maat = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\maat.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Setekh =
-{
-	LargeIcon =
-	{
+Vas_Setekh = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\setekh.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Edjo =
-{
-	LargeIcon =
-	{
+Vas_Edjo = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\edjo.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Ankh =
-{
-	LargeIcon =
-	{
+Vas_Ankh = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ankh.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-Vas_imhotep =
-{
-	LargeIcon =
-	{
+Vas_imhotep = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\imhotep.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Vas_scarab =
-{
-	LargeIcon =
-	{
+Vas_scarab = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\scarab.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-Vas_geb =
-{
-	LargeIcon =
-	{
+Vas_geb = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\geb.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Satis =
-{
-	LargeIcon =
-	{
+Vas_Satis = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\satis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-vas_bast =
-{
-	LargeIcon =
-	{
+Vas_bast = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bast.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Satisfs1 =
-{
-	LargeIcon =
-	{
+Vas_Satisfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\satis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Osiris =
-{
-	LargeIcon =
-	{
+Vas_Osiris = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\osiris.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Bakha =
-{
-	LargeIcon =
-	{
+Vas_Bakha = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\bakha.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 740, 370, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 740, 370 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Sehkmet =
-{
-	LargeIcon =
-	{
+Vas_Sehkmet = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sehkmet.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Sehkmetfs1 =
-{
-	LargeIcon =
-	{
+Vas_Sehkmetfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\sehkmet.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Tauret =
-{
-	LargeIcon =
-	{
+Vas_Tauret = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\tauret.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 300, 150, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 300, 150 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Seth =
-{
-	LargeIcon =
-	{
+Vas_Seth = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\seth.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Thoth =
-{
-	LargeIcon =
-	{
+Vas_Thoth = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\thoth.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Horus =
-{
-	LargeIcon =
-	{
+Vas_Horus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\horus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Ptah =
-{
-	LargeIcon =
-	{
+Vas_Ptah = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ptah.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Serapis =
-{
-	LargeIcon =
-	{
+Vas_Serapis = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\serapis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Myrmidon =
-{
-	LargeIcon =
-	{
+Vas_Anubis = {
+	LargeIcon = {
+		texture = "DATA:\\Ship\\Icons\\anubis.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
+		stretchOnDraw = 1,
+	},
+}
+Vas_Amun = {
+	LargeIcon = {
+		texture = "DATA:\\Ship\\Icons\\amun.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
+		stretchOnDraw = 1,
+	},
+}
+Ter_Myrmidon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\myrmidon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_faustus =
-{
-	LargeIcon =
-	{
+Ter_faustus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\faustus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 680, 340, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 680, 340 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Pegasus =
-{
-	LargeIcon =
-	{
+Ter_Pegasus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\pegasus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Perseus =
-{
-	LargeIcon =
-	{
+Ter_Perseus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\perseus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 360, 180, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 360, 180 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Erinyes =
-{
-	LargeIcon =
-	{
+Ter_Erinyes = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\erinyes.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Loki =
-{
-	LargeIcon =
-	{
+Ter_Loki = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\loki.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 360, 180, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 360, 180 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Ulysses =
-{
-	LargeIcon =
-	{
+Ter_Ulysses = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ulysses.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 350, 175, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
 	},
 }
-Vas_Ulyssesfs1 =
-{
-	LargeIcon =
-	{
-		texture = "DATA:\\Ship\\Icons\\ulyssesvas.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 350, 175, },
+Vas_Ulyssesfs1 = {
+	LargeIcon = {
+		texture = "DATA:\\Ship\\Icons\\ulyssesVas.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 350, 175 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Hercules =
-{
-	LargeIcon =
-	{
+Ter_Hercules = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hercules.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 360, 180, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 360, 180 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_HerculesMk2 =
-{
-	LargeIcon =
-	{
+Ter_HerculesMk2 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\herculesmk2.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 480, 240, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 480, 240 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Ares =
-{
-	LargeIcon =
-	{
+Ter_Ares = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ares.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Boanerges =
-{
-	LargeIcon =
-	{
+Ter_Boanerges = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\boanerges.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Artemis =
-{
-	LargeIcon =
-	{
+Ter_Artemis = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\artemis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 320, 160, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 320, 160 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_ArtemisDH =
-{
-	LargeIcon =
-	{
+Ter_ArtemisDH = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\artemisDH.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 340, 170, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 340, 170 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Zeus =
-{
-	LargeIcon =
-	{
+Ter_Zeus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\zeus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Medusa =
-{
-	LargeIcon =
-	{
+Ter_Medusa = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\medusa.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Ursa =
-{
-	LargeIcon =
-	{
+Ter_Ursa = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\ursa.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Fenris =
-{
-	LargeIcon =
-	{
+Ter_Fenris = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\fenrisandleviathan.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 660, 330, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 660, 330 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Leviathan =
-{
-	LargeIcon =
-	{
+Ter_Leviathan = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\fenrisandleviathan.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 660, 330, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 660, 330 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Aeolus =
-{
-	LargeIcon =
-	{
+Ter_Aeolus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\aeolus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Chronos =
-{
-	LargeIcon =
-	{
+Ter_Chronos = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\chronos.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Centaur =
-{
-	LargeIcon =
-	{
+Ter_Centaur = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\centaur.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 500, 250, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 500, 250 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Cerberus =
-{
-	LargeIcon =
-	{
+Ter_Cerberus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\cerberus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 640, 320, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 640, 320 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Deimos =
-{
-	LargeIcon =
-	{
+Ter_Deimos = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\deimos.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1000, 500, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1000, 500 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Orion =
-{
-	LargeIcon =
-	{
+Ter_Orion = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\orion.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1265, 528, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1265, 528 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Hecate =
-{
-	LargeIcon =
-	{
+Ter_Hecate = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecate.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1300, 635, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1300, 635 },
 		stretchOnDraw = 1,
 	},
 }
 
-Ter_Hades =
-{
-	LargeIcon =
-	{
+Ter_Hades = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hades.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1268, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1268, 650 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Hadesfs1 =
-{
-	LargeIcon =
-	{
+Ter_Hadesfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hades.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1268, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1268, 650 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Colossus =
-{
-	LargeIcon =
-	{
+Ter_Colossus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\Colossus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1371, 650, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1371, 650 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Colossus =
-{
-	LargeIcon =
-	{
-		texture = "DATA:\\Ship\\Icons\\Colossus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1371, 650, },
-		stretchOnDraw = 1,
-	},
-}
-Ter_Charybdis =
-{
-	LargeIcon =
-	{
+Vas_Colossus = Ter_Colossus
+
+Ter_Charybdis = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\charybdis.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Elysium =
-{
-	LargeIcon =
-	{
+Ter_Elysium = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\elysium.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 520, 260, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 520, 260 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Elysiumfs1 =
-{
-	LargeIcon =
-	{
+Ter_Elysiumfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\elysium.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 520, 260, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 520, 260 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Zephyrus =
-{
-	LargeIcon =
-	{
+Ter_Zephyrus = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\zephyrus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 300, 150, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 300, 150 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Zephyrusfs1 =
-{
-	LargeIcon =
-	{
+Ter_Zephyrusfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\zephyrus.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 300, 150, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 300, 150 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Poseidon =
-{
-	LargeIcon =
-	{
+Ter_Poseidon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\poseidon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 580, 290, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 580, 290 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Poseidonfs1 =
-{
-	LargeIcon =
-	{
+Ter_Poseidonfs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\poseidon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 580, 290, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 580, 290 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Argo =
-{
-	LargeIcon =
-	{
+Ter_Argo = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\argo.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 378, 164, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 378, 164 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Pharos =
-{
-	LargeIcon =
-	{
+Ter_Pharos = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\pharos.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 460, 230, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 460, 230 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Mjolnir =
-{
-	LargeIcon =
-	{
+Ter_Mjolnir = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mjolnir.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-vas_Mjolnir =
-{
-	LargeIcon =
-	{
+Vas_Mjolnir = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\mjolnir.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 384, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 384, 300 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Alastor =
-{
-	LargeIcon =
-	{
+Ter_Alastor = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\alastor.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 620, 310, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 620, 310 },
 		stretchOnDraw = 1,
 	},
 }
-Knossos =
-{
-	LargeIcon =
-	{
+Knossos = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\knossos.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 540, 270, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 540, 270 },
 		stretchOnDraw = 1,
 	},
 }
-Knossosdummy =
-{
-	LargeIcon =
-	{
+Knossosdummy = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\knossos.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 540, 270, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 540, 270 },
 		stretchOnDraw = 1,
 	},
 }
-Ter_Arcadia =
-{
-	LargeIcon =
-	{
+Ter_Arcadia = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\arcadia.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-ter_hygeia =
-{
-	LargeIcon =
-	{
+Ter_hygeia = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\hygeia.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-subspacenode =
-{
-	LargeIcon =
-	{
+subspacenode = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\subspacenode.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 312, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 312 },
 		stretchOnDraw = 1,
 	},
 }
-subspacenodefs1 =
-{
-	LargeIcon =
-	{
+subspacenodefs1 = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\subspacenodefs1.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 548, 274, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 548, 274 },
 		stretchOnDraw = 1,
 	},
 }
-ter_apollo =
-{
-	LargeIcon =
-	{
+Ter_apollo = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\apollo.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-ter_valkyrie =
-{
-	LargeIcon =
-	{
+Ter_valkyrie = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\valkyrie.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-ter_athena =
-{
-	LargeIcon =
-	{
+Ter_athena = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\athena.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 400, 200, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 400, 200 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_scorpion =
-{
-	LargeIcon =
-	{
+Shi_scorpion = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\scorpion.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 600, 300, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 600, 300 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_shaitan =
-{
-	LargeIcon =
-	{
+Shi_shaitan = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\shaitan.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 440, 220, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 440, 220 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_gorgon =
-{
-	LargeIcon =
-	{
+Shi_gorgon = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\gorgon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 700, 350, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 700, 350 },
 		stretchOnDraw = 1,
 	},
 }
-Shi_trident =
-{
-	LargeIcon =
-	{
+Shi_trident = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\trident.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 678, 339, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 678, 339 },
 		stretchOnDraw = 1,
 	},
 }
-vas_nephthys =
-{
-	LargeIcon =
-	{
+Vas_nephthys = {
+	LargeIcon = {
 		texture = "DATA:\\Ship\\Icons\\neptheyssgsderyweg.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 420, 210, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 420, 210 },
 		stretchOnDraw = 1,
 	},
 }
-
-
-
 
 -- Subsystems
 
-ter_fenrisbeam =
-{
-	SmallIcon =
-	{
+Ter_fenrisbeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\Tsmallbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_leviathanbeam = ter_fenrisbeam
-ter_deimosbeam = ter_fenrisbeam
-ter_aeolusbeam1 =
-{
-	SmallIcon =
-	{
+Ter_leviathanbeam = Ter_fenrisbeam
+Ter_deimosbeam = Ter_fenrisbeam
+Ter_aeolusbeam1 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\aeolusbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_aeolusbeam2 = ter_aeolusbeam1
-ter_fenrismissile =
-{
-	SmallIcon =
-	{
+Ter_aeolusbeam2 = Ter_aeolusbeam1
+Ter_fenrismissile = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\TMissilelauncher.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_leviathanmissile = ter_fenrismissile
-ter_leviathanfighterkiller = ter_fenrismissile
-shi_cainsred =
-{
-	SmallIcon =
-	{
+Ter_leviathanmissile = Ter_fenrismissile
+Ter_leviathanfighterkiller = Ter_fenrismissile
+Shi_cainsred = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\cainlilithcannon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_lilithlred = shi_cainsred
-shi_cainheavylaser = shi_cainsred
-shi_lilithheavylaser = shi_cainsred
-vas_sobekbeam =
-{
-	SmallIcon =
-	{
+Shi_lilithlred = Shi_cainsred
+Shi_cainheavylaser = Shi_cainsred
+Shi_lilithheavylaser = Shi_cainsred
+Vas_sobekbeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sobekbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-vas_sobekbeam2 = vas_sobekbeam
-vas_mentubeam =
-{
-	SmallIcon =
-	{
+Vas_sobekbeam2 = vas_sobekbeam
+Vas_mentubeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\mentubeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
 
-shi_molochsred =
-{
-	SmallIcon =
-	{
+Shi_molochsred = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\molochbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_rakshasabeam1 = shi_ravanaturret03
-shi_rakshasabeam2 = shi_ravanaturret03
-shi_rakshasabeam3 = shi_ravanaturret03
-ter_hecate_nameplate_aquitaine =
-{
-	SmallIcon =
-	{
+Shi_rakshasabeam1 = Shi_ravanaturret03
+Shi_rakshasabeam2 = Shi_ravanaturret03
+Shi_rakshasabeam3 = Shi_ravanaturret03
+Ter_hecate_nameplate_aquitaine = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecate.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1300, 635, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1300, 635 },
 		stretchOnDraw = 1,
 	},
 }
-ter_hecate_nameplate_hood = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_meridian = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_morgain = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_phonecia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_requiem = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_tempest = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_warlock = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_cordeune = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_corsica = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_habsburg = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_laertis = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_provincia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_rhodes = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_thracia = ter_hecate_nameplate_aquitaine
-ter_hecate_nameplate_titus = ter_hecate_nameplate_aquitaine
-ter_orion_nameplate_amadeus =
-{
-	SmallIcon =
-	{
+Ter_hecate_nameplate_hood = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_meridian = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_morgain = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_phonecia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_requiem = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_tempest = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_warlock = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_cordeune = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_corsica = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_habsburg = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_laertis = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_provincia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_rhodes = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_thracia = Ter_hecate_nameplate_aquitaine
+Ter_hecate_nameplate_titus = Ter_hecate_nameplate_aquitaine
+Ter_orion_nameplate_amadeus = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\orion.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 1265, 528, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 1265, 528 },
 		stretchOnDraw = 1,
 	},
 }
-ter_orion_nameplate_bastion = ter_orion_nameplate_amadeus
-ter_orion_nameplate_carthage = ter_orion_nameplate_amadeus
-ter_orion_nameplate_delacroix = ter_orion_nameplate_amadeus
-ter_orion_nameplate_eisenhower = ter_orion_nameplate_amadeus
-ter_orion_nameplate_galatea = ter_orion_nameplate_amadeus
-ter_orion_nameplate_goliath = ter_orion_nameplate_amadeus
-ter_orion_nameplate_intrepid = ter_orion_nameplate_amadeus
-ter_orion_nameplate_messana = ter_orion_nameplate_amadeus
-ter_orion_nameplate_minnow = ter_orion_nameplate_amadeus
-ter_orion_nameplate_myrmidon = ter_orion_nameplate_amadeus
-ter_orion_nameplate_nereid = ter_orion_nameplate_amadeus
-ter_orion_nameplate_orion = ter_orion_nameplate_amadeus
-ter_orion_nameplate_soyakaze = ter_orion_nameplate_amadeus
-ter_orion_nameplate_alsace = ter_orion_nameplate_amadeus
-ter_orion_nameplate_andronicus = ter_orion_nameplate_amadeus
-ter_orion_nameplate_cyrene = ter_orion_nameplate_amadeus
-ter_orion_nameplate_jacobus = ter_orion_nameplate_amadeus
-ter_orion_nameplate_repulse = ter_orion_nameplate_amadeus
-ter_orion_nameplate_uhuru = ter_orion_nameplate_amadeus
-ter_orion_nameplate_vasa = ter_orion_nameplate_amadeus
-ter_orion_nameplate_vindicator = ter_orion_nameplate_amadeus
+Ter_orion_nameplate_bastion = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_carthage = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_delacroix = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_eisenhower = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_galatea = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_goliath = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_intrepid = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_messana = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_minnow = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_myrmidon = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_nereid = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_orion = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_soyakaze = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_alsace = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_andronicus = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_cyrene = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_jacobus = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_repulse = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_uhuru = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_Vasa = Ter_orion_nameplate_amadeus
+Ter_orion_nameplate_vindicator = Ter_orion_nameplate_amadeus
 
-sub_weapons =
-{
-	SmallIcon =
-	{
+sub_weapons = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\weapons.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-sub_sensors =
-{
-	SmallIcon =
-	{
+sub_sensors = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sensors.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-sub_navigation =
-{
-	SmallIcon =
-	{
+sub_navigation = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\navigation.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-sub_communication =
-{
-	SmallIcon =
-	{
+sub_communication = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\communication.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-sub_engine =
-{
-	SmallIcon =
-	{
+sub_engine = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\engines.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
 sub_corvengine = sub_engine
-ter_orionengine = sub_engine
-shi_luciferturret01 =
-{
-	SmallIcon =
-	{
+Ter_orionengine = sub_engine
+Shi_luciferturret01 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\luciferlred.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_luciferturret02 = shi_luciferturret01
-shi_luciferturretfs101 = shi_luciferturret01
-shi_luciferturretfs102 = shi_luciferturret01
-shi_bombardmentbeam =
-{
-	SmallIcon =
-	{
+Shi_luciferturret02 = Shi_luciferturret01
+Shi_luciferturretfs101 = Shi_luciferturret01
+Shi_luciferturretfs102 = Shi_luciferturret01
+Shi_bombardmentbeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\bombardment.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_sath1 =
-{
-	SmallIcon =
-	{
+Shi_sath1 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sathbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_sath2 = shi_sath1
-shi_sath3 = shi_sath1
-shi_sath4 = shi_sath1
-shi_sathbutt =
-{
-	SmallIcon =
-	{
+Shi_sath2 = Shi_sath1
+Shi_sath3 = Shi_sath1
+Shi_sath4 = Shi_sath1
+Shi_sathbutt = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\sathbutt.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_bcgreen = Icon_Subsystem_IonTurret
-shi_bfred = Icon_Subsystem_TorpedoLauncher
+Ter_bcgreen = Icon_Subsystem_IonTurret
+Shi_bfred = Icon_Subsystem_TorpedoLauncher
 sub_cweapons = sub_weapons
 sub_corvweapons = sub_weapons
 sub_cengine = sub_engine
@@ -4199,74 +3573,51 @@ sub_csensors = sub_sensors
 sub_corvsensors = sub_sensors
 sub_cnavigation = sub_navigation
 sub_corvnavigation = sub_navigation
-sub_research =
-{
-	SmallIcon =
-	{
+sub_research = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\research.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_awacs_0 =
-{
-	SmallIcon =
-	{
+awacs_0 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\awacsI.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_awacs_1 =
-{
-	SmallIcon =
-	{
+awacs_1 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\awacsII.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_awacs_2 =
-{
-	SmallIcon =
-	{
+awacs_2 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\awacsIII.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-mjolnirbeam =
-{
-	SmallIcon =
-	{
+mjolnirbeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\mjolnirbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
 Icon_Subsystem_Fighter = {
-	SmallIcon =
-	{
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\fighterbay.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
@@ -4276,207 +3627,143 @@ sub_corvfighterbay = Icon_Subsystem_Fighter
 sub_fighterbay = Icon_Subsystem_Fighter
 sub_fighterbay01 = Icon_Subsystem_Fighter
 sub_reactor = Icon_Subsystem_Resource
-col_beam =
-{
-	SmallIcon =
-	{
+col_beam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\colbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ntf_icenibeam =
-{
-	SmallIcon =
-	{
+Ter_icenibeam = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\icenibeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_bgreenorion =
-{
-	SmallIcon =
-	{
+Ter_bgreenorion = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\orionbgreencannon.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_bgreenorion_gimble = ter_bgreenorion
-ter_bgreenorion_turret = ter_bgreenorion
-ter_orionhugeflak = ter_bgreenorion
-ter_orionhugeflak1 = ter_bgreenorion
-ter_orionhugeflak2 = ter_bgreenorion
-ter_orionhugeflak3 = ter_bgreenorion
-ter_orionhugeturret = ter_bgreenorion
-ter_hecatebgreen =
-{
-	SmallIcon =
-	{
+Ter_bgreenorion_gimble = Ter_bgreenorion
+Ter_bgreenorion_turret = Ter_bgreenorion
+Ter_orionhugeflak = Ter_bgreenorion
+Ter_orionhugeflak1 = Ter_bgreenorion
+Ter_orionhugeflak2 = Ter_bgreenorion
+Ter_orionhugeflak3 = Ter_bgreenorion
+Ter_orionhugeturret = Ter_bgreenorion
+Ter_hecatebgreen = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecatebeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_hecateterslash =
-{
-	SmallIcon =
-	{
+Ter_hecateterslash = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hecatebeamsmall.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-vas_typhon15 =
-{
-	SmallIcon =
-	{
+Vas_typhon15 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\typhonbeam.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-vas_hatbvas =
-{
-	SmallIcon =
-	{
-		texture = "DATA:\\Ship\\Icons\\hatbvas.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+Vas_hatbvas = {
+	SmallIcon = {
+		texture = "DATA:\\Ship\\Icons\\hatbVas.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-vas_hatbfred = vas_hatbvas
+Vas_hatbfred = vas_hatbvas
 
-vas_hatsvas =
-{
-	SmallIcon =
-	{
-		texture = "DATA:\\Ship\\Icons\\hatsvas.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+Vas_hatsvas = {
+	SmallIcon = {
+		texture = "DATA:\\Ship\\Icons\\hatsVas.tga",
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_demonturret01 =
-{
-	SmallIcon =
-	{
+Shi_demonturret01 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\demonlred.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_demonturret02 = shi_demonturret01
-shi_demonturret03 =
-{
-	SmallIcon =
-	{
+Shi_demonturret02 = Shi_demonturret01
+Shi_demonturret03 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\demonsred.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret01 =
-{
-	SmallIcon =
-	{
+Shi_ravanaturret01 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\ravanalred.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret02 = shi_ravanaturret01
-shi_ravanaturret03 =
-{
-	SmallIcon =
-	{
+Shi_ravanaturret02 = Shi_ravanaturret01
+Shi_ravanaturret03 = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\ravanasred.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-shi_ravanaturret04 = shi_ravanaturret03
-ter_bgreenoriongimble =
-{
-	SmallIcon =
-	{
+Shi_ravanaturret04 = Shi_ravanaturret03
+Ter_bgreenoriongimble = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\oriongimble.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_slashorion =
-{
-	SmallIcon =
-	{
+Ter_slashorion = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\oriongimble.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_hadestop =
-{
-	SmallIcon =
-	{
+Ter_hadestop = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hadestop.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
-ter_hadesside =
-{
-	SmallIcon =
-	{
+Ter_hadesside = {
+	SmallIcon = {
 		texture = "DATA:\\Ship\\Icons\\hadesside.tga",
-		textureUV_TL =
-		{ 0, 0, },
-		textureUV_WH =
-		{ 96, 72, },
+		textureUV_TL = { 0, 0 },
+		textureUV_WH = { 96, 72 },
 		stretchOnDraw = 1,
 	},
 }
