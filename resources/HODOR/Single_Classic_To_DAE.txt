@@ -3,8 +3,8 @@
 = -$SHADER_MAP=D:\SteamLibrary\steamapps\common\Homeworld\GBXTools\HODOR\SHADERS.MAP
 = -$IN_CAT=ship
 = -$OUT_CAT=ship_working_on
-= -$HOD=vas_anuket
-= -$NEWHOD=vas_anuket
+= -$HOD=hol_anubis
+= -$NEWHOD=vas_anubis
 = -setmask=*.hod
 = -dump
 = -log

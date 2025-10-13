@@ -430,6 +430,7 @@ squadclass[eAntiFrigate] = {
 	TER_BOANERGES,
 
 	TER_DEIMOS,
+	TER_ICENI,
 	TER_HECATE,
 	TER_COLOSSUS,
 	TER_FENRIS,
@@ -498,6 +499,7 @@ squadclass[eCapital] = {
 	TER_COLOSSUS,
 	TER_HADES,
 	TER_DEIMOS,
+	TER_ICENI,
 
 	SHI_DEMON,
 	SHI_RAVANA,
@@ -650,6 +652,7 @@ squadclass[eGoodRepairAttackers] = {
 	TER_LEVIATHAN,
 	TER_AEOLUS,
 	TER_DEIMOS,
+	TER_ICENI,
 
 	TER_ATHENA,
 
@@ -718,6 +721,7 @@ squadclass[eDestroyer] = {
 	TAI_MISSILEDESTROYER,
 
 	TER_DEIMOS,
+	TER_ICENI,
 
 	SHI_MOLOCH,
 

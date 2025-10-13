@@ -14,5 +14,3 @@ research = {}
 res_index = 1
 
 doscanpath("data:Scripts/Races/vasudan/Scripts/Research", "*.lua")
-
-

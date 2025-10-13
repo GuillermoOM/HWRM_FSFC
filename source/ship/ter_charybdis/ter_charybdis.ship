@@ -13,9 +13,9 @@ NewShipType = StartShipConfig()
 NewShipType.displayedName = "GTC Charybdis"
 NewShipType.sobDescription = "AWACS"
 
---------------------------------------------------	
---- Main Ship Data	
---------------------------------------------------	
+--------------------------------------------------
+--- Main Ship Data
+--------------------------------------------------
 
 NewShipType.isTransferable = 0
 NewShipType.unavailableWhenCaptured = 1
@@ -41,20 +41,18 @@ NewShipType.ArmourFamily = "MediumArmour"
 setSupplyValue(NewShipType, "Utility", 1.0)
 setSupplyValue(NewShipType, "AWACS", 1.0)
 
---------------------------------------------------	
---- Construction	
---------------------------------------------------	
+--------------------------------------------------
+--- Construction
+--------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 1)
 NewShipType.buildCost = 2000
 NewShipType.buildTime = 90
 NewShipType.buildPriorityOrder = 30
 
-
-
---------------------------------------------------	
---- Health and Armour	
---------------------------------------------------	
+--------------------------------------------------
+--- Health and Armour
+--------------------------------------------------
 
 NewShipType.maxhealth = 10000
 NewShipType.regentime = 315
@@ -62,15 +60,15 @@ NewShipType.minRegenTime = 315
 NewShipType.sideArmourDamage = 1.2
 NewShipType.rearArmourDamage = 1.2
 
---------------------------------------------------	
+--------------------------------------------------
 --- Shields
---------------------------------------------------	
+--------------------------------------------------
 
 addShield(NewShipType, "EMP", 310, 17)
 
---------------------------------------------------	
---- Sensors	
---------------------------------------------------	
+--------------------------------------------------
+--- Sensors
+--------------------------------------------------
 
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
@@ -79,9 +77,9 @@ NewShipType.prmSensorRange = 15000
 NewShipType.secSensorRange = 20000
 NewShipType.detectionStrength = 4
 
---------------------------------------------------	
---- Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Movement
+--------------------------------------------------
 
 NewShipType.mass = 20000
 
@@ -97,9 +95,9 @@ NewShipType.rotationMaxSpeed = 20
 NewShipType.rotationAccelTime = 0.4
 NewShipType.rotationBrakeTime = 0.2
 
---------------------------------------------------	
---- Advanced Movement	
---------------------------------------------------	
+--------------------------------------------------
+--- Advanced Movement
+--------------------------------------------------
 
 NewShipType.controllerType = "Ship"
 
@@ -113,12 +111,12 @@ NewShipType.goalReachEpsilon = 30
 NewShipType.slideMoveRange = 100
 NewShipType.relativeMoveFactor = 3
 
---------------------------------------------------	
+--------------------------------------------------
 --- Tactics And Multipliers
---------------------------------------------------	
+--------------------------------------------------
 
 NewShipType.defaultStance = "Neutral" -- Agressive, Neutral or Evasive
-NewShipType.defaultROE = "Defensive"  -- Offensive, Defensive, Passive
+NewShipType.defaultROE = "Defensive" -- Offensive, Defensive, Passive
 
 setTacticsMults(NewShipType, "MAXSPEED", 0.85, 1.10, 1.0)
 setTacticsMults(NewShipType, "ENGINEACCEL", 0.85, 1.0, 1.0)
@@ -136,10 +134,11 @@ setTacticsMults(NewShipType, "DAMAGEAPPLIED", 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 
 AddShipMultiplier(NewShipType, "MaxSpeed", "ThisShipOnly", "Linear", 1, 0.25, 0)
+AddShipMultiplier(NewShipType, "DefenseFieldTime", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1, 1, 10000)
 
---------------------------------------------------	
---- Formations	
---------------------------------------------------	
+--------------------------------------------------
+--- Formations
+--------------------------------------------------
 
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 250
@@ -223,9 +222,9 @@ NewShipType.tumbleSpecialDynamicX = 2
 NewShipType.tumbleSpecialDynamicY = 10
 NewShipType.tumbleSpecialDynamicZ = 5
 
---------------------------------------------------	
---- Selection	
---------------------------------------------------	
+--------------------------------------------------
+--- Selection
+--------------------------------------------------
 
 NewShipType.militaryUnit = 1
 NewShipType.selectionLimit = 150000
@@ -233,9 +232,9 @@ NewShipType.preciseSelectionLimit = 14000
 NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
 
---------------------------------------------------	
---- Tactical Overlay Icon	
---------------------------------------------------	
+--------------------------------------------------
+--- Tactical Overlay Icon
+--------------------------------------------------
 
 NewShipType.TOIcon = "Circle"
 NewShipType.TOScale = 1
@@ -248,9 +247,9 @@ NewShipType.TODistanceDisappear2 = 35000
 NewShipType.TOGroupScale = 1
 NewShipType.TOGroupMergeSize = 0
 
---------------------------------------------------	
---- Overlays	
---------------------------------------------------	
+--------------------------------------------------
+--- Overlays
+--------------------------------------------------
 
 NewShipType.mouseOverMinFadeSize = 0.045
 NewShipType.mouseOverMaxFadeSize = 0.1
@@ -264,9 +263,9 @@ NewShipType.SMHighlightDistMax = 25000
 
 NewShipType.hideNormalAttackUICooldown = 1
 
---------------------------------------------------	
---- Rendering	
---------------------------------------------------	
+--------------------------------------------------
+--- Rendering
+--------------------------------------------------
 
 NewShipType.AlwaysInRenderList = 0
 NewShipType.meshRenderLimit = 10400000
@@ -313,9 +312,18 @@ NewShipType["alternativeHyperspaceTime"] = 7
 addAbility(NewShipType, "MoveCommand", 1, 0)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "ParadeCommand", 1)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1,
-    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip",
-    "JustShoot");
+addAbility(
+	NewShipType,
+	"CanAttack",
+	1,
+	1,
+	0,
+	0,
+	0.35,
+	1,
+	"Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip",
+	"JustShoot"
+)
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "CanBeCaptured", 40, 0.1)
 addAbility(NewShipType, "RetireAbility", 1, 0)
@@ -346,12 +354,57 @@ StartShipWeaponConfig(NewShipType, "gun_terlaser_gimble", "Weapon_Gun6", "")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, "AWACS0", "Hardpoint_AWACS", "System", "Generic", "Indestructible", "ter_awacs_0",
-    "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "AWACS1", "Hardpoint_AWACS2", "System", "Generic", "Indestructible", "ter_awacs_1",
-    "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "AWACS2", "Hardpoint_AWACS3", "System", "Generic", "Indestructible", "ter_awacs_2",
-    "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(
+	NewShipType,
+	"AWACS0",
+	"Hardpoint_AWACS",
+	"System",
+	"Generic",
+	"Indestructible",
+	"awacs_0",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"AWACS1",
+	"Hardpoint_AWACS2",
+	"System",
+	"Generic",
+	"Indestructible",
+	"awacs_1",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
+StartShipHardPointConfig(
+	NewShipType,
+	"AWACS2",
+	"Hardpoint_AWACS3",
+	"System",
+	"Generic",
+	"Indestructible",
+	"awacs_2",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+)
 
 --------------------------------------------------
 --- Latch Points

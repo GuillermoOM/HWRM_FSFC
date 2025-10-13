@@ -7,7 +7,7 @@ Number_Properties = {
 String_Properties_Priority = 2.0
 
 String_Properties = {
-	dm_carriersonly_build_restrict = "ter_hecate,ter_hades,ter_colossus",
+	dm_carriersonly_build_restrict = "ter_orion,ter_hades,ter_colossus",
 	dm_carriersonly_research_restrict = "",
 	dm_carriersonly_research_grant = "",
 	dm_nocruisers_build_restrict = "ter_hades,ter_colossus",
@@ -26,5 +26,5 @@ String_Properties = {
 	generic_mp_health_capitals_research_grant = "",
 	generic_mp_buildspeed_research_grant = "",
 	generic_mp_build_restrict = "",
-	generic_mp_research_restrict = "",	
+	generic_mp_research_restrict = "",
 }

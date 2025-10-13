@@ -338,8 +338,8 @@ LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Bottom", "")
 StartShipWeaponConfig(NewShipType, "miss_fighterkiller", "Weapon_Top", "")
-StartShipWeaponConfig(NewShipType, "gun_avengerturretgimble", "Weapon_Back", "")
-StartShipWeaponConfig(NewShipType, "gun_avengerturretgimble", "Weapon_Left", "")
+StartShipWeaponConfig(NewShipType, "gun_avenger_gimble", "Weapon_Back", "")
+StartShipWeaponConfig(NewShipType, "gun_avenger_gimble", "Weapon_Left", "")
 StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Right", "")
 
 --------------------------------------------------

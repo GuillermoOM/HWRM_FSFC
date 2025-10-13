@@ -13,8 +13,6 @@ Number_Properties = {
 	cfg_advanced_research = 0.0,
 	cfg_bc_can_upgrade = 0.0,
 
-
-
 	cfg_build_by_ships = 0.0,
 	persona_build_ships_scalar = 1.0,
 	persona_build_ships_befull = 0.0,
@@ -38,7 +36,6 @@ Number_Properties = {
 
 	persona_group_scale = 1,
 
-
 	-- -- CPU Build Scale
 
 	persona_demand_scale_fighters = 5,
@@ -53,7 +50,6 @@ Number_Properties = {
 
 	persona_demand_adjusthi_frigates = 1.5,
 	persona_demand_adjustlo_frigates = 0.5,
-
 }
 
 String_Properties_Priority = 1.0
@@ -74,7 +70,7 @@ String_Properties = {
 	path_crate_locate = [[data:scripts/races/terran/scripts/crate_locate.lua]],
 	path_crate_ships = [[data:scripts/races/terran/scripts/crate_ships.lua]],
 
-	def_type_mothership = "ter_hecate",
-	def_type_carrier = "ter_orion",
+	def_type_mothership = "ter_orion",
+	def_type_carrier = "ter_hecate",
 	def_type_scout = "ter_loki",
 }

@@ -30,13 +30,13 @@ h_ships = [
 ]
 
 p_ships = [
-    "vas_karnak",
+    "vas_anubis",
     "vas_sehkmet",
-    "vas_tauret",
-    "vas_tauret",
+    "vas_setekh",
+    "vas_setekh",
     "vas_typhon",
-    "vas_tauret",
-    "vas_tauret",
+    "ter_faustus",
+    "vas_setekh",
     "vas_sehkmet",
     "vas_sehkmet",
 ]

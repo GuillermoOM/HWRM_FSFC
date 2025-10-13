@@ -1,10 +1,4 @@
-
 aitrace("LOADING VASUDAN UPGRADE INFO")
-
-
-
-
-
 
 function DoUpgradeDemand_Vasudan()
 
@@ -13,14 +7,13 @@ function DoUpgradeDemand_Vasudan()
 	-- ResearchDemandSet( ASSAULTCORVETTEHEALTHUPGRADE1, 5 )
 	-- ResearchDemandSet( ASSAULTCORVETTEMAXSPEEDUPGRADE1, 5 )
 	-- ResearchDemandSet( PULSARCORVETTEHEALTHUPGRADE1, 2 )
-	-- ResearchDemandSet( TORPEDOFRIGATEHEALTHUPGRADE1, 2 )	
-	-- ResearchDemandSet( TORPEDOFRIGATEMAXSPEEDUPGRADE1, 2 )	
-	-- ResearchDemandSet( IONCANNONFRIGATEHEALTHUPGRADE1, 2 )	
+	-- ResearchDemandSet( TORPEDOFRIGATEHEALTHUPGRADE1, 2 )
+	-- ResearchDemandSet( TORPEDOFRIGATEMAXSPEEDUPGRADE1, 2 )
+	-- ResearchDemandSet( IONCANNONFRIGATEHEALTHUPGRADE1, 2 )
 	-- ResearchDemandSet( IONCANNONFRIGATEMAXSPEEDUPGRADE1, 2 )
 	-- ResearchDemandSet( ASSAULTFRIGATEHEALTHUPGRADE1, 2 )
 	-- ResearchDemandSet( MOTHERSHIPBUILDSPEEDUPGRADE1, 2 )
 
-	
 	-- if (s_militaryStrength > 10 or g_LOD == 0) then
 	-- 	inc_upgrade_demand( rt_mothership, 0.5  )
 	-- 	ResearchDemandAdd( MOTHERSHIPBUILDSPEEDUPGRADE1, 0.5 )
@@ -101,7 +94,7 @@ function DoUpgradeDemand_Vasudan()
 	-- end
 end
 
-function DoResearchTechDemand_Terran()
+function DoResearchTechDemand_Vasudan()
 	-- local numShipyards = NumSquadrons(kShipYard) + NumSquadronsQ(kShipYard)
 	-- if (numShipyards > 0 and Util_CheckResearch(BATTLECRUISERIONWEAPONS)) then
 	-- 	local battleCruiserDemand = ShipDemandGet( kBattleCruiser )
@@ -115,7 +108,7 @@ function DoResearchTechDemand_Terran()
 	-- 		ResearchDemandSet( PLATFORMIONWEAPONS, ionTurretDemand )
 	-- 	end
 	-- end
-	-- if (Util_CheckResearch(DESTROYERTECH) ) then		
+	-- if (Util_CheckResearch(DESTROYERTECH) ) then
 	-- 	local destroyerDemand = ShipDemandGet(HGN_DESTROYER)
 	-- 	if (destroyerDemand > 0) then
 	-- 		ResearchDemandSet( DESTROYERTECH, destroyerDemand )
