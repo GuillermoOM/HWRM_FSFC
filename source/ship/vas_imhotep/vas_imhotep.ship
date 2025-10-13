@@ -39,7 +39,7 @@ NewShipType.ArmourFamily = "MediumArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, "Utility", 1.0)
-setSupplyValue(NewShipType, "Faustus", 1.0)
+setSupplyValue(NewShipType, "Imhotep", 1.0)
 
 --------------------------------------------------
 --- Construction
@@ -321,7 +321,6 @@ addAbility(
 	"JustShoot"
 )
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
-addAbility(NewShipType, "CanBeCaptured", 30, 0.1)
 addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 130, 520, 0, 0)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1.3, 0.3)
 
@@ -367,8 +366,6 @@ StartShipHardPointConfig(
 --------------------------------------------------
 --- Latch Points
 --------------------------------------------------
-
-loadLatchPointList(NewShipType, "CapCap", "CapturePoint0")
 
 --------------------------------------------------
 --- Addendum

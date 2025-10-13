@@ -407,9 +407,9 @@ StartShipHardPointConfig(
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, "CapCap", "CapturePoint0")
+loadLatchPointList(NewShipType, "CapCap", "CapturePoint1")
 
-loadLatchPointList(NewShipType, "RepCap", "RepairPoint0")
+loadLatchPointList(NewShipType, "RepCap", "RepairPoint1")
 
 --------------------------------------------------
 --- Addendum

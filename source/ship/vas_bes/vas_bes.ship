@@ -334,8 +334,6 @@ LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Bottom", "")
 StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Top", "")
-StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Left", "")
-StartShipWeaponConfig(NewShipType, "gun_vaslaser_gimble", "Weapon_Right", "")
 StartShipWeaponConfig(NewShipType, "Hgn_MineLayer", "Weapon_Bottom", "")
 
 --------------------------------------------------

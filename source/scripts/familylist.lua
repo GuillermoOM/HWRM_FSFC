@@ -1040,7 +1040,11 @@ unitcapsFamily = {
 		numParam = 67,
 		stringParam = "GTSc Faustus",
 	},
-
+	{
+		name = "Imhotep",
+		numParam = 68,
+		stringParam = "PVSC Imhotep",
+	},
 	-- Resource
 	{
 		name = "Resource",

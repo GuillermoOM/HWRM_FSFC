@@ -390,7 +390,7 @@ LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "Gun_Mekhu", "Weapon_FrontGun", "")
 
 -- Ship Missiles
-StartShipWeaponConfig(NewShipType, "miss_mx50", "Weapon_Missile", "")
+StartShipWeaponConfig(NewShipType, "miss_rockeye", "Weapon_Missile", "")
 
 --------------------------------------------------
 --- HardPoints
