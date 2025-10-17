@@ -10,15 +10,6 @@ effects = {
 			markers = { "" },
 		},
 		animation2 = {
-			name = "Weapon_Top",
-			length = 1,
-			loop = 0,
-			parent = "",
-			minimum = 0,
-			maximum = 0,
-			markers = { "" },
-		},
-		animation3 = {
 			name = "Damage",
 			length = 1,
 			loop = 1,
@@ -27,7 +18,7 @@ effects = {
 			maximum = 0,
 			markers = { "" },
 		},
-		animation4 = {
+		animation3 = {
 			name = "dmg01",
 			length = 1,
 			loop = 1,
@@ -36,7 +27,7 @@ effects = {
 			maximum = 1,
 			markers = { "" },
 		},
-		animation5 = {
+		animation4 = {
 			name = "dmg02",
 			length = 1,
 			loop = 1,
@@ -45,16 +36,7 @@ effects = {
 			maximum = 1,
 			markers = { "" },
 		},
-		animation6 = {
-			name = "Weapon_Bottom",
-			length = 1,
-			loop = 0,
-			parent = "",
-			minimum = 0,
-			maximum = 0,
-			markers = { "" },
-		},
-		animation7 = {
+		animation5 = {
 			name = "dmg03",
 			length = 1,
 			loop = 1,
@@ -65,31 +47,7 @@ effects = {
 		},
 	},
 	events = {
-		event1 = {
-			{ "anim", "death1" },
-			{ "animtime", "0" },
-			{ "marker", "root" },
-			{ "fx", "death_generic" },
-			{ "sound", "Explosion/Large/ETG_Explode_Large_Firey" },
-			{ "fx_scale", "entity" },
-		},
-		event2 = {
-			{ "anim", "Weapon_Top" },
-			{ "animtime", "0" },
-			{ "marker", "weapon_back_position" },
-			{ "fx", "sunfire_squirt_yellow" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
-		},
-		event3 = {
-			{ "anim", "Weapon_Top" },
-			{ "animtime", "1" },
-			{ "marker", "weapon_top_position" },
-			{ "fx", "sunfire_squirt_yellow" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
-		},
-		event4 = {
+		death1 = {
 			{ "anim", "death" },
 			{ "animtime", "0" },
 			{ "marker", "marker1" },
@@ -97,7 +55,7 @@ effects = {
 			{ "sound", "Explosion/Small/ETG_Explode_Small_Firey" },
 			{ "fx_scale", "1.5" },
 		},
-		event5 = {
+		death2 = {
 			{ "anim", "death" },
 			{ "animtime", "0.1" },
 			{ "marker", "marker2" },
@@ -105,7 +63,7 @@ effects = {
 			{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA" },
 			{ "fx_scale", "2" },
 		},
-		event6 = {
+		death3 = {
 			{ "anim", "death" },
 			{ "animtime", "0.2" },
 			{ "marker", "marker3" },
@@ -113,7 +71,7 @@ effects = {
 			{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA" },
 			{ "fx_scale", "2" },
 		},
-		event7 = {
+		death4 = {
 			{ "anim", "death" },
 			{ "animtime", "0.4" },
 			{ "marker", "marker4" },
@@ -121,14 +79,14 @@ effects = {
 			{ "sound", "Explosion/Small/ETG_Explode_Small_Firey" },
 			{ "fx_scale", "3" },
 		},
-		event8 = {
+		death5 = {
 			{ "anim", "death" },
 			{ "animtime", "0.4" },
 			{ "marker", "marker5" },
 			{ "fx", "dmg_cloud_explosion_large" },
 			{ "fx_scale", "4" },
 		},
-		event9 = {
+		death6 = {
 			{ "anim", "Death" },
 			{ "animtime", "0.4" },
 			{ "marker", "Root" },
@@ -136,7 +94,7 @@ effects = {
 			{ "sound", "Explosion/boom_1" },
 			{ "fx_scale", "15" },
 		},
-		event10 = {
+		dmg1 = {
 			{ "anim", "dmg01" },
 			{ "animtime", "-1" },
 			{ "marker", "marker1,maker2" },
@@ -145,7 +103,7 @@ effects = {
 			{ "fx_scale", "3" },
 			{ "fx_nlips", "on" },
 		},
-		event11 = {
+		dmg2 = {
 			{ "anim", "dmg02" },
 			{ "animtime", "-1" },
 			{ "marker", "marker3,maker4" },
@@ -154,23 +112,7 @@ effects = {
 			{ "fx_scale", "2" },
 			{ "fx_nlips", "on" },
 		},
-		event12 = {
-			{ "anim", "Weapon_Bottom" },
-			{ "animtime", "0" },
-			{ "marker", "weapon_right_position" },
-			{ "fx", "sunfire_squirt_yellow" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
-		},
-		event13 = {
-			{ "anim", "Weapon_Bottom" },
-			{ "animtime", "1" },
-			{ "marker", "weapon_left_position" },
-			{ "fx", "sunfire_squirt_yellow" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
-		},
-		event14 = {
+		dmg3 = {
 			{ "anim", "dmg03" },
 			{ "animtime", "-1" },
 			{ "marker", "marker5" },

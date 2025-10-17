@@ -4,9 +4,9 @@ import xml.etree.ElementTree as ET
 import os
 from copy import deepcopy
 
-DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_working_on"
-SHIP_NAME = "vas_amun"
-LIGHT_NAME = "g"
+DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_converted"
+SHIP_NAME = "shi_basilisk"
+LIGHT_NAME = "e"
 BURN_NAME = "EngineBurn"
 
 

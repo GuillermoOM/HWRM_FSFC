@@ -3,3 +3,23 @@
 -luatrace
 -traceHODs
 -moddatapath GBXTools\WorkshopTool\HWRM_FSFC\source
+-lvlPassTags=test
+-load parkinglot_cmdline
+-Camera_Target=0,0,0
+-Camera_Eye=8000,0,0
+-Spawn_Back=ez01
+
+-Spawn_Ship_0=ter_orion
+-Spawn_Pos_0=-3000,0,-1000
+-Spawn_Rot_0=0,90,0
+-Spawn_Team_0=0
+
+-Spawn_Ship_1=shi_basilisk
+-Spawn_Pos_1=-3000,0,0
+-Spawn_Rot_1=0,90,0
+-Spawn_Team_1=0
+
+-Spawn_Ship_2=shi_demon
+-Spawn_Pos_2=3000,0,0
+-Spawn_Rot_2=0,-90,0
+-Spawn_Team_2=1

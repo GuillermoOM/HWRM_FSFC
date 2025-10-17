@@ -313,6 +313,7 @@ addAbility(
 	"Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership",
 	"JustShoot"
 )
+-- addAbility(NewShipType,"CanBeSalvageCaptured",0,0.75,0,1,1,"SalCap");
 
 --------------------------------------------------
 --- MODEL MUST LOAD AT THIS POINT
@@ -326,6 +327,12 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 StartShipWeaponConfig(NewShipType, "gun_shivlightlaser_turret", "Weapon_1", "")
+
+--------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+-- loadLatchPointList(NewShipType,"SalCap","SalvagePoint1");
 
 --------------------------------------------------
 --- Addendum

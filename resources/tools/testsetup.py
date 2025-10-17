@@ -13,30 +13,13 @@ params = """
 -Spawn_Back=ez01
 """
 
-h_ships = [
-    "ter_perseus",
-    "ter_perseus",
-    "ter_perseus",
-    "ter_perseus",
-    "ter_fenris",
+p_ships = [
     "ter_orion",
-    "ter_fenris",
-    "ter_perseus",
-    "ter_perseus",
-    "ter_perseus",
-    "ter_perseus",
+    "shi_basilisk",
 ]
 
-p_ships = [
-    "ter_arcadia",
-    "vas_sehkmet",
-    "vas_setekh",
-    "vas_setekh",
-    "vas_typhon",
-    "ter_faustus",
-    "vas_setekh",
-    "vas_sehkmet",
-    "vas_sehkmet",
+h_ships = [
+    "shi_demon",
 ]
 
 ships_list = []
@@ -49,7 +32,7 @@ vas_ships = [s for s in ships_list if "vas" in s]
 shi_ships = [s for s in ships_list if "shi" in s]
 ter_ships = [s for s in ships_list if "ter" in s]
 
-player_ships = shi_ships
+player_ships = p_ships
 player_half = int(len(player_ships) / 2)
 for n, d in enumerate(player_ships):
     params = params + f"\n-Spawn_Ship_{ship_number}={d}\n"
@@ -61,7 +44,7 @@ for n, d in enumerate(player_ships):
     )
     ship_number += 1
 
-hostile_ships = ter_ships
+hostile_ships = h_ships
 hostile_half: int = int(len(hostile_ships) / 2)
 for n, d in enumerate(hostile_ships):
     params = params + f"\n-Spawn_Ship_{ship_number}={d}\n"

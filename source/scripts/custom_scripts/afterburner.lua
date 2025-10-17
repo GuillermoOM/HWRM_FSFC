@@ -139,4 +139,3 @@ function Finish_Afterburner(CustomGroup, playerIndex, shipID)
 	end
 	Afterburner[shipID] = { 0 }
 end
-

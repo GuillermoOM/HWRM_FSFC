@@ -202,7 +202,7 @@ NewShipType.battleScarCoverage = 2
 NewShipType.battleScarBudgetLow = 400
 NewShipType.battleScarBudgetNext = 600
 
-NewShipType.sobDieTime = 2
+NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
