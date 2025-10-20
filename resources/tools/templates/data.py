@@ -6,8 +6,9 @@ SUP_FIGHTER: list[str] = [
     "vas_anubis",
     "vas_thoth",
     "shi_dragon",
+    "ter_myrmidon",
+    "shi_mara",
 ]
-ADV_SUP_FIGHTER: list[str] = ["ter_myrmidon", "shi_mara"]
 INT_FIGHTER: list[str] = [
     "ter_perseus",
     "ter_valkyrie",
@@ -35,7 +36,7 @@ MEDIUM_BOMBER: list[str] = [
     "vas_osiris",
     "shi_taurvi",
 ]
-HEAVY_BOMBER: list[str] = ["ter_boanerges", "ter_medusa", "vas_amun", "vas_sekhmet"]
+HEAVY_BOMBER: list[str] = ["ter_boanerges", "ter_medusa", "vas_amun", "vas_sehkmet"]
 ASSAULT_BOMBER: list[str] = ["ter_ursa", "shi_nephilim", "shi_seraphim"]
 CRUISER: list[str] = ["ter_fenris", "vas_aten", "shi_cain"]
 HEAVY_CRUISER: list[str] = ["ter_leviathan", "shi_lilith"]
@@ -97,6 +98,7 @@ SECTION_ASSIGNMENT = {
     # Main Ship Data
     "isTransferable": "Main Ship Data",
     "unavailableWhenCaptured": "Main Ship Data",
+    "disableOnRaceChange": "Main Ship Data",
     # Families
     "MinimalFamilyToFindPathAround": "Families",
     "BuildFamily": "Families",
@@ -119,6 +121,7 @@ SECTION_ASSIGNMENT = {
     "maxhealth": "Health and Armour",
     "regentime": "Health and Armour",
     "minRegenTime": "Health and Armour",
+    "frontArmourDamage": "Health and Armour",
     "sideArmourDamage": "Health and Armour",
     "rearArmourDamage": "Health and Armour",
     # Shields
@@ -338,4 +341,14 @@ SECTION_ASSIGNMENT = {
     "testManeuver2": "Deprecated",
     "testManeuver3": "Deprecated",
     "UnitCapsFamily": "Deprecated",
+    "UnitCapsShipType": "Deprecated",
+    "density": "Deprecated",
+    "useTargetRandom": "Deprecated",
+    "targetRandomPointXMin": "Deprecated",
+    "targetRandomPointXMax": "Deprecated",
+    "targetRandomPointYMin": "Deprecated",
+    "targetRandomPointYMax": "Deprecated",
+    "targetRandomPointZMin": "Deprecated",
+    "targetRandomPointZMax": "Deprecated",
+    "addedUnitCaps": "Deprecated"
 }

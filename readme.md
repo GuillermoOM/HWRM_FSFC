@@ -12,7 +12,9 @@ The main issue was with one of the updates for Homeworld Remastered that modifie
 
 ## How do you play this mod?
 
-Releases are not there yet, but for now you can do the following:
+Either install the current version in the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3586658386)
+
+Or run from the sourcecode:
 
 1. Download the repository Zip file (click on the greed code button above and click on "download .zip")
 2. Extract the main directory and change its name to "HWRM_FSFC"

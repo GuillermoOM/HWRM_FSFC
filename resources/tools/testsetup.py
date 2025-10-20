@@ -1,6 +1,10 @@
 import os
 
 
+OUTPUT_DIR = (
+    "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\HWRM_FSFC"
+)
+
 params = """
 -nomovies
 -luatrace
@@ -15,15 +19,20 @@ params = """
 
 p_ships = [
     "ter_orion",
-    "shi_basilisk",
+    "ter_hecate",
 ]
 
 h_ships = [
     "shi_demon",
+    "shi_manticore",
+    "shi_manticore",
+    "shi_manticore",
+    "shi_manticore",
+    "shi_manticore",
 ]
 
 ships_list = []
-ship_directory = os.path.join(os.curdir, "./../../source", "ship")
+ship_directory = os.path.join(OUTPUT_DIR, "source", "ship")
 ships_list = os.listdir(ship_directory)
 
 ship_number = 0
@@ -59,5 +68,5 @@ for n, d in enumerate(hostile_ships):
 
 print(params)
 
-with open(".\\..\\..\\params.txt", "w") as params_file:
+with open(os.path.join(OUTPUT_DIR, "params.txt"), "w") as params_file:
     _ = params_file.write(params)

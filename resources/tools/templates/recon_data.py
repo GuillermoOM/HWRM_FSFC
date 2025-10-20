@@ -24,19 +24,22 @@ NON_NEGOTIABLES = {
         "Scuttle",
     ],
     "variables" : [
+        "sobDescription",
         "maxhealth",
         "sideArmourDamage",
         "rearArmourDamage",
         "buildBatch",
 
     ],
-    "functions": [],
-    "addAbilityFunction": []
+    "functions": ["loadShipPatchList"],
+    "addAbilityFunction": [
+        "CanAttack"
+    ]
 }
 
 TEMPLATE = {
     "Ship info": {
-        "variables": {"displayedName": '"Ship Name"', "sobDescription": '"Ship Description"'},
+        "variables": {"displayedName": '"Ship Name"', "sobDescription": '"Recon"'},
         "functions": [],
     },
     "Health and Armour": {
@@ -355,8 +358,8 @@ TEMPLATE = {
     },
     "Alternative Hyperspace Gate": {
         "variables": {
-            "alternativeHyperspaceV": '"hyperspace_gate_small"',
-            "alternativeHyperspaceA": '"etg/misc/small_warp"',
+            "alternativeHyperspaceV": '"subspace_gate_small"',
+            "alternativeHyperspaceA": '"etg/misc/small_subspace"',
             "alternativeHyperspaceTime": "7",
         },
         "functions": [],
@@ -384,7 +387,7 @@ TEMPLATE = {
         "functions": [
             {
                 "name": "loadShipPatchList",
-                "args": ["data:sound/sfx/ship/Hiigaran/Fighter/", "0", "HScoutEng", ""],
+                "args": ["data:sound/sfx/ship/", "0", "", "", "1", "sf_old", "", "3", "", "Root"],
             }
         ],
     },

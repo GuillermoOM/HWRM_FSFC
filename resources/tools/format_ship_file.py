@@ -75,23 +75,23 @@ def parse_ship_file(ship_file_path: str) -> dict:
             elif get_more_function:
                 parsed_subline = line.strip().strip(",")
                 if parsed_subline != ship_var_name:
-                    if parsed_subline == ")":
+                    if "{" in parsed_subline and "}" not in parsed_subline:
+                        key_open = True
+                        function["args"].append(parsed_subline)
+                        continue
+                    elif key_open and "}" in parsed_subline:
+                        function["args"][-1] += parsed_subline
+                        key_open = False
+                    elif key_open and "}" not in parsed_subline:
+                        function["args"][-1] += parsed_subline
+                    else:
+                        function["args"].append(parsed_subline)
+                    if ")" in parsed_subline:
                         get_more_function = False
                         function["args"][-1].strip(")")
                         store_ship_data(ship_data, function, "function")
                         function = {"name": "", "args": []}
                         continue
-                    if parsed_subline == "{":
-                        key_open = True
-                        function["args"].append(parsed_subline)
-                        continue
-                    elif key_open and parsed_subline == "}":
-                        function["args"][-1] += parsed_subline
-                        key_open = False
-                    elif key_open and parsed_subline != "}":
-                        function["args"][-1] += parsed_subline
-                    else:
-                        function["args"].append(parsed_subline)
                 else:
                     continue
             else:
@@ -125,7 +125,7 @@ def parse_ship_file(ship_file_path: str) -> dict:
                         print("\tFound left open function, reading next line...")
                         get_more_function = True
                         continue
-                    if function["args"][-1][-1] != ")":
+                    if ")" not in function["args"][-1]:
                         print("\tFound left open function, reading next line...")
                         get_more_function = True
                         continue
@@ -138,9 +138,7 @@ def parse_ship_file(ship_file_path: str) -> dict:
     return ship_data
 
 
-def format_existing_ship_config(
-    ship_config: dict, template_config: dict, non_negotiables: dict
-):
+def format_ship_config(ship_config: dict, template_config: dict, non_negotiables: dict):
     """
     This should create a new ship_config dict in accordance to the template, based off an existing config dict
     """
@@ -189,43 +187,54 @@ def get_dict_variable(var_name: str, module: ModuleType) -> dict:
         variable: dict = getattr(module, var_name)
         return variable
     except ImportError:
-        print(f"Error: Module '{module.__str__()}_data' not found.")
+        raise Exception(
+            f"get_dict_variable Error: Module '{module.__str__()}_data' not found."
+        )
     except AttributeError:
-        print(f"Variable '{var_name}' not found in module '{module.__str__()}'.")
-        return {}
-    return {}
+        raise Exception(
+            f"get_dict_variable Error: Variable '{var_name}' not found in module '{module.__str__()}'."
+        )
 
 
-def create_ship_config(
-    ship_name: str,
-    ship_type: str,
-    use_existing_config: bool,
-) -> dict:
-    ship_config: dict = {}
+def format_parsed_ship_data(parsed_ship_data: dict, ship_type: str) -> dict:
     try:
-        ship_type_data = import_module(f"ship_configs.{ship_type}_configs")
         ship_type_template = import_module(f"templates.{ship_type}_data")
         template_config: dict = get_dict_variable("TEMPLATE", ship_type_template)
         non_negotiables: dict = get_dict_variable("NON_NEGOTIABLES", ship_type_template)
-        if use_existing_config:
-            ship_config = get_dict_variable(ship_name.upper(), ship_type_data)
-            ship_config = format_existing_ship_config(
-                ship_config, template_config, non_negotiables
-            )
-        else:
-            ship_config = template_config
+        ship_config: dict = format_ship_config(
+            parsed_ship_data, template_config, non_negotiables
+        )
+        return ship_config
     except ModuleNotFoundError as e:
-        print("Error: Template or Config not found!")
-        print(e)
+        raise Exception("format_parsed_ship_data Error: Template or Config not found!")
 
-    return ship_config
+
+def get_ship_config(
+    ship_name: str,
+    ship_type: str,
+) -> dict:
+    try:
+        ship_type_configs = import_module(f"templates.{ship_type}_configs")
+        existing_config: dict = get_dict_variable(ship_name, ship_type_configs)
+        return existing_config
+    except ModuleNotFoundError as e:
+        raise Exception("get_ship_config Error: Template or Config not found!")
 
 
 def save_ship_config(
-    ship_config: dict, ship_name: str, ship_type: str, config_dir: str
+    ship_config: dict,
+    ship_name: str,
+    ship_type: str,
+    config_dir: str,
+    overwrite: bool = False,
 ):
-    out_file = open(os.path.join(config_dir, ship_type + "_configs.py"), "a")
-    out_file.write(f"{ship_name.upper()} = {ship_config.__str__()}\n")
+    """
+    Save Created Ship Config File
+    """
+    out_file = open(
+        os.path.join(config_dir, ship_type + "_configs.py"), "w" if overwrite else "a"
+    )
+    out_file.write(f"{ship_name.upper()} = {ship_config}\n")
     out_file.close()
 
 
@@ -235,17 +244,30 @@ def load_ship_config(ship_name: str, ship_type: str) -> dict:
         ship_config = get_dict_variable(ship_name.upper(), ship_config_module)
         return ship_config
     except ModuleNotFoundError as e:
-        print("Error: Config not found!")
-        print(e)
+        raise Exception("load_ship_config Error: Config not found!")
 
-    return {}
+
+def save_ship_type_template(ship_config: dict, ship_type: str, template_dir: str):
+    """
+    Save Created Ship Config File
+    """
+    NON_NEGOTIABLES = {
+        "sections": [],
+        "variables": [],
+        "functions": [],
+        "addAbilityFunction": [],
+    }
+    out_file = open(os.path.join(template_dir, ship_type + "_data.py"), "w")
+    out_file.write(f"NON_NEGOTIABLES = {NON_NEGOTIABLES}\n\n")
+    out_file.write(f"TEMPLATE = {ship_config}\n")
+    out_file.close()
 
 
 def create_ship_file(ship_config: dict, output_dir: str):
     ship_file: TextIOWrapper = open(output_dir, "w")
     ship_variable: str = "NewShipType"
 
-    ship_file.write(f"{ship_variable}.StartShipConfig()\n\n")
+    ship_file.write(f"{ship_variable} = StartShipConfig()\n\n")
 
     def fix_value(value: str):
         output = value.strip('"')
@@ -255,21 +277,25 @@ def create_ship_file(ship_config: dict, output_dir: str):
             float(output)
             return output
         except ValueError:
-            return f'"{output}"'
+            if (
+                "getShipNum" in output
+                or "getShipStr" in output
+                or len(output.split("*")) > 1
+            ):
+                return output
+            else:
+                return f"'{output}'"
 
     for section in ship_config.keys():
         section_title: list[str] = [
             "--------------------------------------------------\n",
             f"--- {section}\n",
-            "--------------------------------------------------\n",
+            "--------------------------------------------------\n\n",
         ]
         ship_file.writelines(section_title)
-        ship_file.write("\n\n")
         for name, value in ship_config[section]["variables"].items():
             ship_file.write(f"{ship_variable}.{name} = {fix_value(value)}\n")
         for function in ship_config[section]["functions"]:
-            for a in function["args"]:
-                a = a.strip('"')
             ship_file.write(
                 f"{function['name']}({ship_variable}, {', '.join([fix_value(a) for a in function['args']])})\n"
             )
@@ -286,16 +312,59 @@ def main() -> None:
     CONFIG_DIR = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\HWRM_FSFC\\resources\\tools\\ship_configs"
     OUTPUT_DIR = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\HWRM_FSFC\\source\\ship"
 
-    SHIP = "shi_scorpion"
-    SHIP_TYPE = "recon"
+    SHIP = "ter_orion"
+    SHIP_TYPE = "destroyer"
 
-    # migrated_ship_data = parse_ship_file(os.path.join(FSFC_DIR,SHIP,f'{SHIP}.ship'))
-    formatted_ship_config = load_ship_config(SHIP, SHIP_TYPE)
-    # save_ship_config(formatted_ship_config, SHIP, SHIP_TYPE, CONFIG_DIR)
-    pprint.pprint(formatted_ship_config)
-    create_ship_file(
-        formatted_ship_config, os.path.join(OUTPUT_DIR, SHIP, f"{SHIP}.ship")
-    )
+    PROCESSED_SHIPS: dict = {}
+
+    PROCESSED_SHIPS['recon'] = data.RECON
+    PROCESSED_SHIPS['srecon'] = data.STEALTH_RECON
+    PROCESSED_SHIPS['sup'] = data.SUP_FIGHTER
+    PROCESSED_SHIPS['int'] = data.INT_FIGHTER
+    PROCESSED_SHIPS['ass'] = data.ASSAULT_FIGHTER
+    PROCESSED_SHIPS['lbomb'] = data.LIGHT_BOMBER
+    PROCESSED_SHIPS['mbomb'] = data.MEDIUM_BOMBER
+    PROCESSED_SHIPS['hbomb'] = data.HEAVY_BOMBER
+    PROCESSED_SHIPS['assbomb'] = data.ASSAULT_BOMBER
+    PROCESSED_SHIPS['cruiser'] = data.CRUISER
+    PROCESSED_SHIPS['hcruiser'] = data.HEAVY_CRUISER
+    PROCESSED_SHIPS['acruiser'] = data.ADVANCED_CRUISER
+    PROCESSED_SHIPS['corvette'] = data.CORVETTE
+    PROCESSED_SHIPS['destroyer'] = data.DESTROYER
+
+    def create_template():
+        ship_data: dict = parse_ship_file(os.path.join(HWRM_DIR, SHIP, f"{SHIP}.ship"))
+        pprint.pprint(ship_data)
+        save_ship_type_template(ship_data, SHIP_TYPE, TEMPLATE_DIR)
+
+    def create_config():
+        migrated_ship_data = parse_ship_file(
+            os.path.join(FSFC_DIR, SHIP, f"{SHIP}.ship")
+        )
+        pprint.pprint(migrated_ship_data)
+        formatted_ship_config = format_parsed_ship_data(migrated_ship_data, SHIP_TYPE)
+        save_ship_config(formatted_ship_config, SHIP, SHIP_TYPE, CONFIG_DIR, False)
+        pprint.pprint(formatted_ship_config)
+
+    def create_ship():
+        formatted_ship_config = load_ship_config(SHIP, SHIP_TYPE)
+        create_ship_file(
+            formatted_ship_config, os.path.join(OUTPUT_DIR, SHIP, f"{SHIP}.ship")
+        )
+    
+    def recreate_ships():
+        for k, v in PROCESSED_SHIPS.items():
+            for s in v:
+                print(f"Recreating {k} {s}")
+                formatted_ship_config = load_ship_config(s, k)
+                create_ship_file(
+                    formatted_ship_config, os.path.join(OUTPUT_DIR, s, f"{s}.ship")
+                )
+
+    # create_template()
+    # create_config()
+    create_ship()
+    # recreate_ships()
 
 
 if __name__ == "__main__":
