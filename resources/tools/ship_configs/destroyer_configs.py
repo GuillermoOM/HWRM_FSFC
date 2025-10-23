@@ -1719,7 +1719,7 @@ VAS_HATSHEPSUT = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_heavyflakturret", "Weapon_Turret10", ""],
+                "args": ["gun_heavyflak_turret", "Weapon_Turret10", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

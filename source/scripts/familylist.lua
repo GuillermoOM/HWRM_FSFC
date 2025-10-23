@@ -399,10 +399,6 @@ attackFamily = {
 		numParam = 1,
 	},
 	{
-		name = "Awacs",
-		numParam = 1,
-	},
-	{
 		name = "Munition",
 		numParam = 1,
 	},

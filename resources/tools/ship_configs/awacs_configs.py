@@ -14,7 +14,7 @@ TER_CHARYBDIS = {
         "functions": [],
     },
     "Tactics And Multipliers": {
-        "variables": {"defaultROE": '"Defensive"', "defaultStance": '"Neutral"'},
+        "variables": {"defaultROE": '"Passive"', "defaultStance": '"Neutral"'},
         "functions": [
             {"name": "setTacticsMults", "args": ["ENGINEACCEL", "1.10", "0.90", "1.0"]},
             {
@@ -410,7 +410,7 @@ VAS_SETEKH = {
         "functions": [],
     },
     "Tactics And Multipliers": {
-        "variables": {"defaultROE": '"Defensive"', "defaultStance": '"Neutral"'},
+        "variables": {"defaultROE": '"Passive"', "defaultStance": '"Neutral"'},
         "functions": [
             {"name": "setTacticsMults", "args": ["ENGINEACCEL", "1.10", "0.90", "1.0"]},
             {

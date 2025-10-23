@@ -282,14 +282,14 @@ loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'TerranCruis
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_turret', 'Weapon_Top', 'Weapon_Top')
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_turret', 'Weapon_Bottom', 'Weapon_Bottom')
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_B1', '')
-StartShipWeaponConfig(NewShipType, 'beam_aablue', 'Weapon_B1', '')
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_B2', '')
-StartShipWeaponConfig(NewShipType, 'beam_aablue', 'Weapon_B2', '')
-StartShipWeaponConfig(NewShipType, 'gun_mekhu_turret', 'Weapon_Left', '')
-StartShipWeaponConfig(NewShipType, 'gun_mekhu_turret', 'Weapon_Right', '')
+StartShipWeaponConfig(NewShipType, 'gun_heavyflak_turret', 'Weapon_Top', '')
+-- StartShipWeaponConfig(NewShipType, 'gun_flak_turret', 'Weapon_Bottom', '')
+-- StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_B1', '')
+-- StartShipWeaponConfig(NewShipType, 'beam_aablue', 'Weapon_B1', '')
+-- StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_B2', '')
+-- StartShipWeaponConfig(NewShipType, 'beam_aablue', 'Weapon_B2', '')
+-- StartShipWeaponConfig(NewShipType, 'gun_mekhu_turret', 'Weapon_Left', '')
+-- StartShipWeaponConfig(NewShipType, 'gun_mekhu_turret', 'Weapon_Right', '')
 
 --------------------------------------------------
 --- Latch Points

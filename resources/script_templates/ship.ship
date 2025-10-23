@@ -401,7 +401,7 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "CaptureCommand", 1, 0)
 addAbility(NewShipType, "SalvageCommand", 1)
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 700, 1400, 0, 0)
+addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 700, 1400, 0, 0)
 addAbility(
 	NewShipType,
 	"CanAttack",

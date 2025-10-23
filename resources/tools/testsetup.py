@@ -18,14 +18,39 @@ params = """
 """
 
 p_ships = [
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
     "ter_orion",
-    "ter_deimos"
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_charybdis",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_perseus"
 ]
 
 h_ships = [
-    "shi_lucifer",
-    "shi_manticore",
-    "shi_manticore",
+    "shi_demon",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "ter_elysium",
+    "vas_aten"
 ]
 
 ships_list = []
@@ -38,8 +63,8 @@ vas_ships = [s for s in ships_list if "vas" in s]
 shi_ships = [s for s in ships_list if "shi" in s]
 ter_ships = [s for s in ships_list if "ter" in s]
 
-player_ships = ter_ships
-hostile_ships = shi_ships
+player_ships = p_ships
+hostile_ships = h_ships
 
 player_half = int(len(player_ships) / 2)
 for n, d in enumerate(player_ships):

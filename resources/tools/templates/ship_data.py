@@ -509,7 +509,7 @@ SHIP_DEFINITION = {
             {"name": "addAbility", "args": ["SalvageCommand", 1]},
             {
                 "name": "addAbility",
-                "args": ["HyperSpaceCommand", 0, 1, 700, 1400, 0, 0],
+                "args": ["HyperSpaceCommand", 1, 1, 700, 1400, 0, 0],
             },
             {
                 "name": "addAbility",
