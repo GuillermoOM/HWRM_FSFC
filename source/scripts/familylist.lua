@@ -868,7 +868,7 @@ unitcapsFamily = {
 	},
 
 	{
-		name = "FSBomber",
+		name = "Bomber",
 		numParam = 24,
 		stringParam = "Bombers",
 	},
@@ -905,9 +905,9 @@ unitcapsFamily = {
 		stringParam = "Cruisers",
 	},
 	{
-		name = "Advanced Cruiser",
+		name = "AdvancedCruiser",
 		numParam = 35,
-		stringParam = "Cruisers",
+		stringParam = "Advanced Cruisers",
 	},
 
 	{

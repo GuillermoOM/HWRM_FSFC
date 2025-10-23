@@ -263,6 +263,14 @@ NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 1
 
 --------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
+NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
+NewShipType.alternativeHyperspaceTime = 7
+
+--------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
@@ -289,14 +297,6 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = 'n_delta'
 
 --------------------------------------------------
---- Alternative Hyperspace Gate
---------------------------------------------------
-
-NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
-NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
-NewShipType.alternativeHyperspaceTime = 7
-
---------------------------------------------------
 --- Load Model
 --------------------------------------------------
 
@@ -315,6 +315,12 @@ StartShipWeaponConfig(NewShipType, 'miss_phoenixv', 'Weapon_Missile', '')
 --------------------------------------------------
 
 setEngineBurn(NewShipType, 15, 0.5, 1, 15, 0, 0.7, 0.1, 25)
+
+--------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0')
 
 --------------------------------------------------
 --- Addendum

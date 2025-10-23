@@ -66,9 +66,7 @@ def parse_ship_file(ship_file_path: str) -> dict:
             if get_more_variable:
                 variable["value"] += line
                 get_more_variable = False
-                print(
-                    f"\tObtained variable {variable['name']} data: {variable['value']}"
-                )
+                print(f"\tObtained variable {variable['name']} data: {variable['value']}")
                 store_ship_data(ship_data, variable, "variable")
                 variable = {}
                 continue
@@ -103,14 +101,10 @@ def parse_ship_file(ship_file_path: str) -> dict:
                     print(f"\tObtained variable {variable["name"]}")
                     variable["value"] = parsed_line[1].strip()
                     if len(parsed_line[1]) == 0:
-                        print(
-                            "\tNot enough data on line to store variable, reading next line..."
-                        )
+                        print("\tNot enough data on line to store variable, reading next line...")
                         get_more_variable = True
                     else:
-                        print(
-                            f"\tObtained variable {variable['name']} value: {variable['value']}"
-                        )
+                        print(f"\tObtained variable {variable['name']} value: {variable['value']}")
                         store_ship_data(ship_data, variable, "variable")
                         variable = {}
                 # Function check
@@ -155,15 +149,17 @@ def format_ship_config(ship_config: dict, template_config: dict, non_negotiables
                         and variable not in non_negotiables["variables"]
                     ):
                         section_value["variables"][variable] = data
-                if section_name == "Weapons" or section_name == "HardPoints":
+                if len(section_value["functions"]) == 0:
                     section_value["functions"] = ship_config_section["functions"]
                 else:
                     for ship_function in ship_config_section["functions"]:
-                        for format_function in section_value["functions"]:
+                        print(f"Ship Function: {ship_function}")
+                        for i, format_function in enumerate(section_value["functions"]):
+                            print(f"Format Function: {format_function}")
                             if (
                                 ship_function["name"]
                                 == format_function["name"]
-                                == "addAbility"
+                                and ship_function["name"] == "addAbility"
                             ):
                                 if (
                                     ship_function["args"][0]
@@ -171,13 +167,15 @@ def format_ship_config(ship_config: dict, template_config: dict, non_negotiables
                                     and ship_function["args"][0]
                                     not in non_negotiables["addAbilityFunction"]
                                 ):
-                                    format_function = ship_function
+                                    section_value["functions"][i] = ship_function
+                                    print(f"Resulting Function: {section_value["functions"][i]}")
                             elif (
                                 ship_function["name"] == format_function["name"]
                                 and ship_function["name"]
                                 not in non_negotiables["functions"]
                             ):
-                                format_function = ship_function
+                                section_value["functions"][i] = ship_function
+                                print(f"Resulting Function: {section_value["functions"][i]}")
 
     return formatted_config
 
@@ -312,8 +310,8 @@ def main() -> None:
     CONFIG_DIR = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\HWRM_FSFC\\resources\\tools\\ship_configs"
     OUTPUT_DIR = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\HWRM_FSFC\\source\\ship"
 
-    SHIP = "ter_orion"
-    SHIP_TYPE = "destroyer"
+    SHIP = "vas_imhotep"
+    SHIP_TYPE = "research"
 
     PROCESSED_SHIPS: dict = {}
 
@@ -331,6 +329,18 @@ def main() -> None:
     PROCESSED_SHIPS['acruiser'] = data.ADVANCED_CRUISER
     PROCESSED_SHIPS['corvette'] = data.CORVETTE
     PROCESSED_SHIPS['destroyer'] = data.DESTROYER
+    PROCESSED_SHIPS['sdestroyer'] = data.SUPER_DESTROYER
+    PROCESSED_SHIPS['juggernaut'] = data.JUGGERNAUT
+    PROCESSED_SHIPS['platform'] = data.PLATFORM
+    PROCESSED_SHIPS['probe'] = data.PROBE
+    PROCESSED_SHIPS['installation'] = data.INSTALLATION
+    PROCESSED_SHIPS['rcontroller'] = data.RESOURCE_CONTROLLER
+    PROCESSED_SHIPS['rcollector'] = data.RESOURCE_COLLECTOR
+    PROCESSED_SHIPS['deployer'] = data.DEPLOYER
+    PROCESSED_SHIPS['repairfrigate'] = data.REPAIR_FRIGATE
+    PROCESSED_SHIPS['support'] = data.SUPPORT_SHIP
+    PROCESSED_SHIPS['awacs'] = data.AWACS
+    PROCESSED_SHIPS['research'] = data.RESEARCH
 
     def create_template():
         ship_data: dict = parse_ship_file(os.path.join(HWRM_DIR, SHIP, f"{SHIP}.ship"))
@@ -341,10 +351,10 @@ def main() -> None:
         migrated_ship_data = parse_ship_file(
             os.path.join(FSFC_DIR, SHIP, f"{SHIP}.ship")
         )
-        pprint.pprint(migrated_ship_data)
+        # pprint.pprint(migrated_ship_data)
         formatted_ship_config = format_parsed_ship_data(migrated_ship_data, SHIP_TYPE)
         save_ship_config(formatted_ship_config, SHIP, SHIP_TYPE, CONFIG_DIR, False)
-        pprint.pprint(formatted_ship_config)
+        # pprint.pprint(formatted_ship_config)
 
     def create_ship():
         formatted_ship_config = load_ship_config(SHIP, SHIP_TYPE)
@@ -363,8 +373,8 @@ def main() -> None:
 
     # create_template()
     # create_config()
-    create_ship()
-    # recreate_ships()
+    # create_ship()
+    recreate_ships()
 
 
 if __name__ == "__main__":

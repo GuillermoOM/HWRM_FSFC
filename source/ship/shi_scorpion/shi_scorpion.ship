@@ -267,6 +267,14 @@ NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 1
 
 --------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
+NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
+NewShipType.alternativeHyperspaceTime = 7
+
+--------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
@@ -290,14 +298,6 @@ NewShipType.launchTimeBetweenTwoFormations = 0.5
 NewShipType.launchTimeBeforeStart = 1.5
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = 'n_delta'
-
---------------------------------------------------
---- Alternative Hyperspace Gate
---------------------------------------------------
-
-NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
-NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
-NewShipType.alternativeHyperspaceTime = 7
 
 --------------------------------------------------
 --- Load Model

@@ -318,6 +318,12 @@ StartShipWeaponConfig(NewShipType, 'miss_rockeye', 'Weapon_Missile2', '')
 setEngineBurn(NewShipType, 15, 0.5, 1, 15, 0, 0.7, 0.1, 25)
 
 --------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0')
+
+--------------------------------------------------
 --- Addendum
 --------------------------------------------------
 

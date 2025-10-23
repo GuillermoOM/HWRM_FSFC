@@ -1,0 +1,277 @@
+NON_NEGOTIABLES = {
+    "sections": [
+        "Tactics and Multipliers",
+        "Main Ship Data",
+        "Formations",
+        "Docking",
+        "Death Tumble",
+        "Swaying",
+        "Families",
+        "Special Flight Maneuvers",
+        "Supply",
+        "Ship Counter Rating",
+        "Tactical Overlay Icon",
+        "Overlays",
+        "Non linear Scaling",
+        "Selection",
+        "Abilities",
+        "Launching",
+        "Load Model",
+        "Scuttle",
+    ],
+    "variables": [
+        "sobDescription",
+        "sideArmourDamage",
+        "rearArmourDamage",
+        "buildBatch",
+    ],
+    "functions": ["loadShipPatchList"],
+    "addAbilityFunction": [],
+}
+
+TEMPLATE = {
+    "Ship info": {
+        "variables": {"displayedName": '"$1546"', "sobDescription": '"Probe"'},
+        "functions": [],
+    },
+    "Health and Armour": {
+        "variables": {
+            "maxhealth": 'getShipNum(NewShipType, "maxhealth", 800)',
+            "regentime": "0",
+            "minRegenTime": "0",
+            "sideArmourDamage": 'getShipNum(NewShipType, "sideArmourDamage", 1.0)',
+            "rearArmourDamage": 'getShipNum(NewShipType, "rearArmourDamage", 1.0)',
+        },
+        "functions": [],
+    },
+    "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
+    "Movement": {
+        "variables": {
+            "mass": "10",
+            "thrusterMaxSpeed": "600",
+            "mainEngineMaxSpeed": "600",
+            "rotationMaxSpeed": "171",
+            "thrusterAccelTime": "2",
+            "thrusterBrakeTime": "1",
+            "mainEngineAccelTime": "2",
+            "mainEngineBrakeTime": "1",
+            "rotationAccelTime": "0.6",
+            "rotationBrakeTime": "0.3",
+        },
+        "functions": [],
+    },
+    "Damage & Death": {
+        "variables": {
+            "collisionMultiplier": "0.4",
+            "dustCloudDamageTime": "60",
+            "nebulaDamageTime": "20",
+            "battleScarCoverage": "0",
+            "sobDieTime": "1",
+            "sobSpecialDieTime": "1",
+            "specialDeathSpeed": "40",
+            "chanceOfSpecialDeath": "0",
+            "deadSobFadeTime": "1",
+        },
+        "functions": [],
+    },
+    "Advanced Movement": {
+        "variables": {
+            "thrusterUsage": "1",
+            "accelerationAngle": "90",
+            "mirrorAngle": "0",
+            "secondaryTurnAngle": "0",
+            "maxBankingAmount": "85",
+            "descendPitch": "0",
+            "goalReachEpsilon": "5",
+            "slideMoveRange": "100",
+            "controllerType": '"Ship"',
+            "relativeMoveFactor": "6",
+        },
+        "functions": [],
+    },
+    "Death Tumble": {
+        "variables": {
+            "tumbleStaticX": "10",
+            "tumbleStaticY": "20",
+            "tumbleStaticZ": "5",
+            "tumbleDynamicX": "2",
+            "tumbleDynamicY": "10",
+            "tumbleDynamicZ": "5",
+            "tumbleSpecialDynamicX": "2",
+            "tumbleSpecialDynamicY": "10",
+            "tumbleSpecialDynamicZ": "5",
+        },
+        "functions": [],
+    },
+    "Swaying": {
+        "variables": {
+            "swayUpdateTime": "3",
+            "swayOffsetRandomX": "10",
+            "swayOffsetRandomY": "10",
+            "swayOffsetRandomZ": "10",
+            "swayBobbingFactor": "0.15",
+            "swayRotateFactor": "0",
+        },
+        "functions": [],
+    },
+    "Families": {
+        "variables": {
+            "MinimalFamilyToFindPathAround": '"SuperPriority"',
+            "BuildFamily": '"Probe_Ter"',
+            "AttackFamily": '"Utility"',
+            "DockFamily": '"Utility"',
+            "AvoidanceFamily": '"Utility"',
+            "DisplayFamily": '"Utility"',
+            "AutoFormationFamily": '"Fighter"',
+            "CollisionFamily": '"Small"',
+            "ArmourFamily": 'getShipStr(NewShipType, "ArmourFamily", "Unarmoured")',
+        },
+        "functions": [],
+    },
+    "Supply": {
+        "variables": {},
+        "functions": [
+            {"name": "setSupplyValue", "args": ["Utility", "1.0"]},
+            {"name": "setSupplyValue", "args": ["Probe", "1.0"]},
+        ],
+    },
+    "Ship Counter Rating": {
+        "variables": {
+            "fighterValue": "0",
+            "corvetteValue": "0",
+            "frigateValue": "0",
+            "neutralValue": "0",
+            "antiFighterValue": "0",
+            "antiCorvetteValue": "0",
+            "antiFrigateValue": "0",
+            "totalValue": "0",
+        },
+        "functions": [],
+    },
+    "Construction": {
+        "variables": {"buildCost": "70", "buildTime": "10", "buildPriorityOrder": "20"},
+        "functions": [],
+    },
+    "Sensors": {
+        "variables": {
+            "retaliationRange": "4800",
+            "retaliationDistanceFromGoal": "160",
+            "visualRange": "5000",
+            "prmSensorRange": "12000",
+            "secSensorRange": "12000",
+            "detectionStrength": "1",
+        },
+        "functions": [],
+    },
+    "Tactical Overlay Icon": {
+        "variables": {
+            "TOIcon": '"InvertedPentagon"',
+            "TOScale": "1",
+            "TODistanceFade0": "7000",
+            "TODistanceDisappear0": "5000",
+            "TODistanceFade1": "350",
+            "TODistanceDisappear1": "300",
+            "TODistanceFade2": "12000",
+            "TODistanceDisappear2": "25000",
+            "TOGroupScale": "1",
+            "TOGroupMergeSize": "0",
+        },
+        "functions": [],
+    },
+    "Overlays": {
+        "variables": {
+            "mouseOverMinFadeSize": "0.045",
+            "mouseOverMaxFadeSize": "0.1",
+            "healthBarStyle": "1",
+            "SMRepresentation": '"HardDot"',
+        },
+        "functions": [],
+    },
+    "Non linear Scaling": {
+        "variables": {
+            "nlips": "0.001",
+            "nlipsRange": "10000",
+            "nlipsFar": "0.0005",
+            "nlipsFarRange": "20000",
+        },
+        "functions": [],
+    },
+    "Rendering": {
+        "variables": {
+            "meshRenderLimit": "11000",
+            "dotRenderLimit": "10",
+            "visibleInSecondary": "0",
+            "goblinsStartFade": "50",
+            "goblinsOff": "50",
+            "minimumZoomFactor": "1.3",
+        },
+        "functions": [],
+    },
+    "Level of Detail": {
+        "variables": {"minLOD": "0.2", "upLOD": "700", "downLOD": "500"},
+        "functions": [],
+    },
+    "Selection": {
+        "variables": {
+            "selectionLimit": "150000",
+            "preciseSelectionLimit": "2000",
+            "preciseATILimit": "5000",
+            "selectionPriority": "75",
+            "militaryUnit": "0",
+        },
+        "functions": [],
+    },
+    "Abilities": {
+        "variables": {},
+        "functions": [
+            {"name": "addAbility", "args": ["MoveCommand", "1", "1"]},
+            {"name": "addAbility", "args": ['CanLaunch"']},
+            {"name": "addAbility", "args": ["ParadeCommand", "1"]},
+        ],
+    },
+    "Docking": {"variables": {"ignoreRaceWhenDocking": "0"}, "functions": []},
+    "Launching": {
+        "variables": {
+            "launchTimeBetweenTwoFormations": "1",
+            "launchTimeBeforeStart": "2",
+            "launchNrOfShipsInDockFormation": "1",
+            "launchFormation": '"delta"',
+        },
+        "functions": [],
+    },
+    "Formations": {"variables": {"canJoinStrikeGroup": "0"}, "functions": []},
+    "Load Model": {
+        "variables": {},
+        "functions": [{"name": "LoadModel", "args": ["1"]}],
+    },
+    "Engines": {
+        "variables": {},
+        "functions": [
+        ],
+    },
+    "Addendum": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "loadShipPatchList",
+                "args": [
+                    "data:sound/sfx/ship/Hiigaran/NonMilitary/",
+                    "0",
+                    "Engines/HProbeEng",
+                    "",
+                ],
+            }
+        ],
+    },
+    "Scuttle": {
+        "variables": {
+            "minFalloffDamageDist": "25",
+            "maxFalloffDamageDist": "25*3",
+            "maxFalloffScuttleDamageDist": "25*6",
+            "explosiveScuttleDamageOnDeath": "125",
+            "maxFalloffForce": "15*10",
+            "explosiveDamageOnDeath": "27",
+        },
+        "functions": [],
+    },
+}

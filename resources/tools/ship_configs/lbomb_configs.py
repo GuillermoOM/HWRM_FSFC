@@ -243,6 +243,14 @@ TER_ATHENA = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -666,6 +674,14 @@ SHI_NAHEMA = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -1069,6 +1085,22 @@ SHI_SHAITAN = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

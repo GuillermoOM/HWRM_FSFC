@@ -86,7 +86,7 @@ effects = {
 		event1 = {
 			{ "anim", "Deathtrail" },
 			{ "animtime", "0" },
-			{ "marker", "marker_death" },
+			{ "marker", "root" },
 			{ "fx", "FIERY_EXPLOSION_WAVE" },
 			{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY" },
 			{ "fx_scale", "0.5" },
@@ -103,14 +103,6 @@ effects = {
 			{ "anim", "Trail" },
 			{ "animtime", "0" },
 			{ "marker", "trail2" },
-			{ "fx", "fighter_trail_spray" },
-			{ "sound", "" },
-			{ "fx_scale", "1" },
-		},
-		trail3 = {
-			{ "anim", "Trail" },
-			{ "animtime", "0" },
-			{ "marker", "trail3" },
 			{ "fx", "fighter_trail_spray" },
 			{ "sound", "" },
 			{ "fx_scale", "1" },

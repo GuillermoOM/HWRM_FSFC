@@ -243,6 +243,14 @@ TER_ARTEMIS = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -663,6 +671,14 @@ TER_ARTEMISDH = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -1079,6 +1095,14 @@ TER_ZEUS = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },
@@ -1505,6 +1529,14 @@ VAS_BAKHA = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -1921,6 +1953,14 @@ VAS_OSIRIS = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },
@@ -2348,6 +2388,14 @@ SHI_TAURVI = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

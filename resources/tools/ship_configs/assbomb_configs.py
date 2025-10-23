@@ -243,6 +243,14 @@ TER_URSA = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -674,6 +682,14 @@ SHI_NEPHILIM = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -1087,6 +1103,14 @@ SHI_SERAPHIM = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

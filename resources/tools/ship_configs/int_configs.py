@@ -265,6 +265,14 @@ TER_PERSEUS = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "functions": [
             {"args": ["MoveCommand", "1", "0"], "name": "addAbility"},
@@ -700,6 +708,14 @@ TER_VALKYRIE = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "functions": [
             {"args": ["MoveCommand", "1", "0"], "name": "addAbility"},
@@ -1128,6 +1144,14 @@ VAS_SERAPIS = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },
@@ -1566,6 +1590,14 @@ VAS_HORUS = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "functions": [
             {"args": ["MoveCommand", "1", "0"], "name": "addAbility"},
@@ -2001,6 +2033,14 @@ SHI_ASTAROTH = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "functions": [
             {"args": ["MoveCommand", "1", "0"], "name": "addAbility"},
@@ -2416,6 +2456,14 @@ SHI_MANTICORE = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

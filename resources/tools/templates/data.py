@@ -8,6 +8,7 @@ SUP_FIGHTER: list[str] = [
     "shi_dragon",
     "ter_myrmidon",
     "shi_mara",
+    "shi_gorgon"
 ]
 INT_FIGHTER: list[str] = [
     "ter_perseus",
@@ -59,14 +60,15 @@ PLATFORM: list[str] = [
     "vas_ankh",
     "shi_belial",
     "shi_trident",
+    "ter_mjolnir"
 ]
-HEAVY_PLATFORM: list[str] = ["ter_mjolnir"]
-PROBE: list[str] = ["ter_pharos"]
+PROBE: list[str] = ["ter_pharos", "vas_geb"]
 INSTALLATION: list[str] = ["ter_arcadia", "vas_karnak", "shi_commnode"]
 RESOURCE_CONTROLLER: list[str] = [
     "ter_chronos",
     "ter_zephyrus",
     "vas_anuket",
+    "vas_maat",
     "shi_rahu",
 ]
 RESOURCE_COLLECTOR: list[str] = [
@@ -83,7 +85,7 @@ SUPPORT_SHIP: list[str] = [
     "vas_nephthys",
 ]
 AWACS: list[str] = ["ter_charybdis", "vas_setekh"]
-RESEARCH: list[str] = ["ter_faustus"]
+RESEARCH: list[str] = ["ter_faustus", "vas_imhotep"]
 
 TERRAN: str = "Ter"
 SHIVAN: str = "Shi"
@@ -117,6 +119,7 @@ SECTION_ASSIGNMENT = {
     "buildCost": "Construction",
     "buildTime": "Construction",
     "buildPriorityOrder": "Construction",
+    "setConcurrentBuildLimit": "Construction",
     # Health and Armour
     "maxhealth": "Health and Armour",
     "regentime": "Health and Armour",
@@ -261,6 +264,7 @@ SECTION_ASSIGNMENT = {
     "preciseATILimit": "Selection",
     "selectionPriority": "Selection",
     # Tactical Overlay Icon
+    "canblink": "Tactical Overlay Icon",
     "TOIcon": "Tactical Overlay Icon",
     "TOScale": "Tactical Overlay Icon",
     "TODistanceFade0": "Tactical Overlay Icon",
@@ -350,5 +354,7 @@ SECTION_ASSIGNMENT = {
     "targetRandomPointYMax": "Deprecated",
     "targetRandomPointZMin": "Deprecated",
     "targetRandomPointZMax": "Deprecated",
-    "addedUnitCaps": "Deprecated"
+    "addedUnitCaps": "Deprecated",
+    "battleScarMaxTriBase": "Deprecated",
+    "battleScarMaxTriInc": "Deprecated",
 }

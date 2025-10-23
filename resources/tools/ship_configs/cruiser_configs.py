@@ -129,7 +129,6 @@ TER_FENRIS = {
         "variables": {},
         "functions": [
             {"name": "setSupplyValue", "args": ["Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -270,7 +269,7 @@ TER_FENRIS = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {
@@ -532,7 +531,6 @@ VAS_ATEN = {
         "variables": {},
         "functions": [
             {"name": "setSupplyValue", "args": ["Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -673,7 +671,7 @@ VAS_ATEN = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {
@@ -891,7 +889,6 @@ SHI_CAIN = {
         "variables": {},
         "functions": [
             {"name": "setSupplyValue", "args": ["Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -1053,7 +1050,7 @@ SHI_CAIN = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {

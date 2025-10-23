@@ -2,7 +2,7 @@ TER_AEOLUS = {
     "Ship info": {
         "variables": {
             "displayedName": '"GTC Aeolus"',
-            "sobDescription": '"Advanced Cruiser"',
+            "sobDescription": '"AdvancedCruiser"',
         },
         "functions": [],
     },
@@ -128,8 +128,7 @@ TER_AEOLUS = {
     "Supply": {
         "variables": {},
         "functions": [
-            {"name": "setSupplyValue", "args": ["Advanced Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
+            {"name": "setSupplyValue", "args": ["AdvancedCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -270,7 +269,7 @@ TER_AEOLUS = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {
@@ -417,7 +416,7 @@ SHI_RAKSHASA = {
     "Ship info": {
         "variables": {
             "displayedName": '"SC Rakshasa"',
-            "sobDescription": '"Advanced Cruiser"',
+            "sobDescription": '"AdvancedCruiser"',
         },
         "functions": [],
     },
@@ -543,8 +542,7 @@ SHI_RAKSHASA = {
     "Supply": {
         "variables": {},
         "functions": [
-            {"name": "setSupplyValue", "args": ["Advanced Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
+            {"name": "setSupplyValue", "args": ["AdvancedCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -685,7 +683,7 @@ SHI_RAKSHASA = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {
@@ -849,7 +847,7 @@ VAS_MENTU = {
     "Ship info": {
         "variables": {
             "displayedName": '"GVC Mentu"',
-            "sobDescription": '"Advanced Cruiser"',
+            "sobDescription": '"AdvancedCruiser"',
         },
         "functions": [],
     },
@@ -975,8 +973,7 @@ VAS_MENTU = {
     "Supply": {
         "variables": {},
         "functions": [
-            {"name": "setSupplyValue", "args": ["Advanced Cruiser", "1.0"]},
-            {"name": "setSupplyValue", "args": ["LayoutCruiser", "1.0"]},
+            {"name": "setSupplyValue", "args": ["AdvancedCruiser", "1.0"]},
         ],
     },
     "Ship Counter Rating": {
@@ -1117,7 +1114,7 @@ VAS_MENTU = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {

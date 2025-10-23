@@ -304,18 +304,24 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, 'fs1_ml16', 'Weapon_FrontGun', '')
-StartShipWeaponConfig(NewShipType, 'fs1_ml16', 'Weapon_FrontGun2', '')
-StartShipWeaponConfig(NewShipType, 'fs1_avengersa', 'Weapon_FrontGun', '')
-StartShipWeaponConfig(NewShipType, 'fs1_avengersa', 'Weapon_FrontGun2', '')
-StartShipWeaponConfig(NewShipType, 'fs1_mx50', 'Weapon_Missile', '')
-StartShipWeaponConfig(NewShipType, 'fs1_fury', 'Weapon_Missile2', '')
+StartShipWeaponConfig(NewShipType, 'gun_ml16', 'Weapon_FrontGun', '')
+StartShipWeaponConfig(NewShipType, 'gun_ml16', 'Weapon_FrontGun2', '')
+StartShipWeaponConfig(NewShipType, 'gun_avenger', 'Weapon_FrontGun', '')
+StartShipWeaponConfig(NewShipType, 'gun_avenger', 'Weapon_FrontGun2', '')
+StartShipWeaponConfig(NewShipType, 'miss_rockeye', 'Weapon_Missile', '')
+StartShipWeaponConfig(NewShipType, 'miss_fury', 'Weapon_Missile2', '')
 
 --------------------------------------------------
 --- Engines
 --------------------------------------------------
 
 setEngineBurn(NewShipType, 15, 0.5, 1, 15, 0, 0.7, 0.1, 25)
+
+--------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0')
 
 --------------------------------------------------
 --- Addendum

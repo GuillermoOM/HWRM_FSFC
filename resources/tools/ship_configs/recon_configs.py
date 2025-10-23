@@ -267,6 +267,14 @@ TER_LOKI = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -341,14 +349,7 @@ TER_LOKI = {
         },
         "functions": [],
     },
-    "Alternative Hyperspace Gate": {
-        "variables": {
-            "alternativeHyperspaceV": '"subspace_gate_small"',
-            "alternativeHyperspaceA": '"etg/misc/small_subspace"',
-            "alternativeHyperspaceTime": "7",
-        },
-        "functions": [],
-    },
+
     "Load Model": {
         "variables": {},
         "functions": [{"name": "LoadModel", "args": ["1"]}],
@@ -702,6 +703,14 @@ SHI_SCORPION = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -772,14 +781,6 @@ SHI_SCORPION = {
             "launchTimeBeforeStart": "1.5",
             "launchNrOfShipsInDockFormation": "1",
             "launchFormation": '"n_delta"',
-        },
-        "functions": [],
-    },
-    "Alternative Hyperspace Gate": {
-        "variables": {
-            "alternativeHyperspaceV": '"subspace_gate_small"',
-            "alternativeHyperspaceA": '"etg/misc/small_subspace"',
-            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

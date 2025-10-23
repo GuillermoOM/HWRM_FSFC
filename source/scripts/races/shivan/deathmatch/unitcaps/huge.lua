@@ -3,12 +3,12 @@ supplyLimit("Fighter", 135);
 supplyLimit("Bomber", 135);
 supplyLimit("Destroyer", 2);
 supplyLimit("Cruiser", 25);
-supplyLimit("Advanced Cruiser", 5);
+supplyLimit("AdvancedCruiser", 4);
 
 supplyShow("Corvette", "Never");
 supplyShow("Frigate", "Never");
 supplyShow("Cruiser", "Always");
-supplyShow("Advanced Cruiser", "Always");
+supplyShow("AdvancedCruiser", "Always");
 supplyShow("Bomber", "Always");
 
 supplyShow("LayoutBomber", "Never");

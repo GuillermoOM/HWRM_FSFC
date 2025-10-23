@@ -252,13 +252,21 @@ NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 0
 
 --------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate'
+NewShipType.alternativeHyperspaceA = 'etg/misc/large_subspace'
+NewShipType.alternativeHyperspaceTime = 12
+
+--------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
 addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'CanDock', 1, 0)
 addAbility(NewShipType, 'CanLaunch')
-addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Bomber, Utility', 200)
+addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Utility', 200)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 875, 1750, 0, 3)
@@ -267,7 +275,6 @@ addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
 addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 180, 0.5, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
-addAbility(NewShipType, 'RetireAbility', 1, 1)
 
 --------------------------------------------------
 --- Docking

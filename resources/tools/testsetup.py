@@ -19,14 +19,11 @@ params = """
 
 p_ships = [
     "ter_orion",
-    "ter_hecate",
+    "ter_deimos"
 ]
 
 h_ships = [
-    "shi_demon",
-    "shi_manticore",
-    "shi_manticore",
-    "shi_manticore",
+    "shi_lucifer",
     "shi_manticore",
     "shi_manticore",
 ]
@@ -42,6 +39,8 @@ shi_ships = [s for s in ships_list if "shi" in s]
 ter_ships = [s for s in ships_list if "ter" in s]
 
 player_ships = p_ships
+hostile_ships = h_ships
+
 player_half = int(len(player_ships) / 2)
 for n, d in enumerate(player_ships):
     params = params + f"\n-Spawn_Ship_{ship_number}={d}\n"
@@ -53,7 +52,6 @@ for n, d in enumerate(player_ships):
     )
     ship_number += 1
 
-hostile_ships = h_ships
 hostile_half: int = int(len(hostile_ships) / 2)
 for n, d in enumerate(hostile_ships):
     params = params + f"\n-Spawn_Ship_{ship_number}={d}\n"

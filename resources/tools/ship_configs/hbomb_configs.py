@@ -243,6 +243,14 @@ TER_BOANERGES = {
         },
         "functions": [],
     },
+        "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -659,6 +667,14 @@ TER_MEDUSA = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },
@@ -1082,6 +1098,14 @@ VAS_AMUN = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },
@@ -1513,6 +1537,14 @@ VAS_SEHKMET = {
             "preciseATILimit": "0",
             "selectionPriority": "75",
             "militaryUnit": "1",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
         },
         "functions": [],
     },

@@ -3,7 +3,7 @@ supplyLimit("Fighter", 135)
 supplyLimit("Bomber", 135)
 supplyLimit("Destroyer", 2)
 supplyLimit("Cruiser", 25)
-supplyLimit("Advanced Cruiser", 5)
+supplyLimit("AdvancedCruiser", 5)
 
 supplyLimit("Ares", 20)
 supplyLimit("ArtemisDH", 20)
@@ -18,7 +18,8 @@ supplyLimit("Iceni", 1)
 supplyShow("Corvette", "Never")
 supplyShow("Frigate", "Never")
 supplyShow("Cruiser", "Always")
-supplyLimit("Advanced Cruiser")
+supplyShow("AdvancedCruiser", "Always")
+
 supplyShow("Bomber", "Always")
 supplyShow("Installation", "Always")
 

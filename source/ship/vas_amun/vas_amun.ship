@@ -245,6 +245,14 @@ NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 1
 
 --------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
+NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
+NewShipType.alternativeHyperspaceTime = 7
+
+--------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
@@ -321,6 +329,12 @@ addShield(NewShipType, 'EMP', 100, 10)
 --------------------------------------------------
 
 setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 30)
+
+--------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0')
 
 --------------------------------------------------
 --- Addendum

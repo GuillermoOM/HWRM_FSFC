@@ -183,7 +183,7 @@ TER_ARES = {
         "variables": {},
         "functions": [
             {"name": "setSupplyValue", "args": ["Fighter", "4.0"]},
-            {"name": "setSupplyValue", "args": ["GTF Ares", "4.0"]},
+            {"name": "setSupplyValue", "args": ["Ares", "4.0"]},
             {"name": "setSupplyValue", "args": ["LayoutFighter", "4.0"]},
         ],
     },

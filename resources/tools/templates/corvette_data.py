@@ -296,7 +296,7 @@ TEMPLATE = {
             },
             {"name": "addAbility", "args": ["CanBeCaptured", "90", "0.5", 'CapCap"']},
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Formations": {

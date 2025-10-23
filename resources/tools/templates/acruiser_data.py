@@ -26,7 +26,6 @@ NON_NEGOTIABLES = {
     ],
     "variables": [
         "sobDescription",
-        "maxhealth",
         "sideArmourDamage",
         "rearArmourDamage",
         "buildBatch",
@@ -308,7 +307,7 @@ TEMPLATE = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {

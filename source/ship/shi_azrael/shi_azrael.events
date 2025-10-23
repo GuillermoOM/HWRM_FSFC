@@ -103,7 +103,7 @@ effects = {
 		event2 = {
 			{ "anim", "Repairing" },
 			{ "animtime", "-1" },
-			{ "marker", "repair" },
+			{ "marker", "Root" },
 			{ "fx", "repair_spark_combo" },
 			{ "sound", "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_REPAIRING" },
 			{ "fx_scale", "entity" },

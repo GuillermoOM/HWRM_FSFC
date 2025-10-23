@@ -245,6 +245,14 @@ NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 1
 
 --------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate_small'
+NewShipType.alternativeHyperspaceA = 'etg/misc/small_subspace'
+NewShipType.alternativeHyperspaceTime = 7
+
+--------------------------------------------------
 --- Abilities
 --------------------------------------------------
 
@@ -256,7 +264,6 @@ addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1.5, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Bomber_vs_Frigate', {Fighter="Bomber_vs_Fighter"}, {Fighter_hw1="Bomber_vs_Fighter"}, {Mothership="Bomber_vs_Mothership"}, {Frigate="Bomber_vs_Frigate"}, {SmallCapitalShip="Bomber_vs_Corvette"}, {BigCapitalShip="Bomber_vs_CapShip"}, {SubSystem="TopAttack_Bomber_vs_Subsystem"}, {Corvette="Bomber_vs_Corvette"}, {Corvette_hw1="Bomber_vs_Corvette"}, {ResourceLarge="Flyby_Bomber_vs_ResourceLarge"})
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
-addAbility(NewShipType, 'CanBeRepaired')
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
 addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0, 'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner', 'shi_taurvi', 0.5, 3, 1)

@@ -23,7 +23,6 @@ NON_NEGOTIABLES = {
     ],
     "variables": [
         "sobDescription",
-        "maxhealth",
         "sideArmourDamage",
         "rearArmourDamage",
         "buildBatch",
@@ -273,6 +272,14 @@ TEMPLATE = {
         },
         "functions": [],
     },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate",
+            "alternativeHyperspaceA": "etg/misc/large_subspace",
+            "alternativeHyperspaceTime": "12",
+        },
+        "functions": [],
+    },
     "Abilities": {
         "variables": {},
         "functions": [
@@ -287,7 +294,7 @@ TEMPLATE = {
                     "1000",
                     "20",
                     "rallypoint",
-                    "Fighter, Corvette, Utility",
+                    "Fighter, Utility",
                     "200",
                 ],
             },
@@ -314,6 +321,7 @@ TEMPLATE = {
                     '{ Corvette = "MoveToTargetAndShoot" }',
                     '{ Corvette_hw1 = "MoveToTargetAndShoot" }',
                     '{ Munition = "MoveToTargetAndShoot" }',
+                    '{ Subsystem = "MoveToTargetAndShoot" }',
                 ],
             },
             {"name": "addAbility", "args": ["GuardCommand", "1", "3000", "1000"]},
@@ -331,7 +339,7 @@ TEMPLATE = {
                 "args": ["CanBeCaptured", "180", "0.5", 'CapCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Docking": {
@@ -357,8 +365,7 @@ TEMPLATE = {
     },
     "Custom Code": {
         "variables": {},
-        "functions": [
-        ],
+        "functions": [],
     },
     "Load Model": {
         "variables": {},
@@ -366,8 +373,7 @@ TEMPLATE = {
     },
     "Weapons": {
         "variables": {},
-        "functions": [
-        ],
+        "functions": [],
     },
     "Shields": {
         "variables": {},
@@ -375,13 +381,11 @@ TEMPLATE = {
     },
     "HardPoints": {
         "variables": {},
-        "functions": [
-        ],
+        "functions": [],
     },
     "Debris": {
         "variables": {},
-        "functions": [
-        ],
+        "functions": [],
     },
     "Engines": {
         "variables": {"trailLinger": "6"},
@@ -390,19 +394,6 @@ TEMPLATE = {
                 "name": "setEngineBurn",
                 "args": ["9", "0.2", "0.5", "300", "1.02", "0.1", "0.25", "380"],
             },
-            {
-                "name": "setEngineGlow",
-                "args": [
-                    "1",
-                    "1",
-                    "1.02",
-                    "20",
-                    "300",
-                    "50",
-                    "1.5",
-                    "0.47",
-                ],
-            },
         ],
     },
     "Addendum": {
@@ -410,15 +401,7 @@ TEMPLATE = {
         "functions": [
             {
                 "name": "loadShipPatchList",
-                "args": [
-                    "data:sound/sfx/ship/",
-                    "0",
-                    "",
-                    "",
-                    "1",
-                    "TerranCapital",
-                    "",
-                ],
+                "args": ['data:sound/sfx/ship/', '0', '', '', '1', 'ShivanCapital', '', '3', '', 'Root'],
             }
         ],
     },

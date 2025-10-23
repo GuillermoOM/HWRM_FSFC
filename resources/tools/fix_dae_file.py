@@ -5,8 +5,8 @@ import os
 from copy import deepcopy
 
 DAE_DIRS_PATH = "D:\\SteamLibrary\\steamapps\\common\\Homeworld\\GBXTools\\WorkshopTool\\current_project_processing\\ship_converted"
-SHIP_NAME = "shi_basilisk"
-LIGHT_NAME = "e"
+SHIP_NAME = "ter_deimos"
+LIGHT_NAME = "engine"
 BURN_NAME = "EngineBurn"
 
 

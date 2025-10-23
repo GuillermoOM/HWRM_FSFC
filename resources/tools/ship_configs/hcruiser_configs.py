@@ -291,7 +291,7 @@ SHI_LILITH = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {
@@ -679,7 +679,7 @@ TER_LEVIATHAN = {
                 "args": ["CanBeSalvageCaptured", "0", "1", "0", "0", "1", 'SalCap"'],
             },
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Load Model": {

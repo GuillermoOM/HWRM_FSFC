@@ -260,7 +260,7 @@ TER_DEIMOS = {
             },
             {"name": "addAbility", "args": ["CanBeCaptured", "90", "0.5", 'CapCap"']},
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Formations": {
@@ -766,7 +766,7 @@ VAS_SOBEK = {
             },
             {"name": "addAbility", "args": ["CanBeCaptured", "90", "0.5", 'CapCap"']},
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Formations": {
@@ -1238,7 +1238,7 @@ SHI_MOLOCH = {
             },
             {"name": "addAbility", "args": ["CanBeCaptured", "90", "0.5", 'CapCap"']},
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Formations": {
@@ -1704,7 +1704,7 @@ TER_ICENI = {
             },
             {"name": "addAbility", "args": ["CanBeCaptured", "90", "0.5", 'CapCap"']},
             {"name": "addAbility", "args": ["CanBeRepaired", 'RepCap"']},
-            {"name": "addAbility", "args": ["RetireAbility", "1", "1"]},
+            
         ],
     },
     "Formations": {

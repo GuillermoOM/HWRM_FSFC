@@ -245,7 +245,6 @@ addAbility(NewShipType, 'GuardCommand', 1, 3000, 800)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 0.7, 0.3)
 addAbility(NewShipType, 'CanBeCaptured', 90, 0.5, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
-addAbility(NewShipType, 'RetireAbility', 1, 1)
 
 --------------------------------------------------
 --- Formations
