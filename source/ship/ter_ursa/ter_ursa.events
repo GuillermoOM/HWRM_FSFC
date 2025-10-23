@@ -475,23 +475,5 @@ effects =
 			{ "sound",    "SPECIAL/AB_End", },
 			{ "fx_scale", "0.25", },
 		},
-		Fire1fx  =
-		{
-			{ "anim",     "Fire1", },
-			{ "animtime", "0", },
-			{ "marker",   "Turret1", },
-			{ "fx",       "kayser_fire", },
-			{ "sound",    "", },
-			{ "fx_scale", "1", },
-		},
-		Fire2fx  =
-		{
-			{ "anim",     "Fire1", },
-			{ "animtime", "0", },
-			{ "marker",   "Turret2", },
-			{ "fx",       "kayser_fire", },
-			{ "sound",    "", },
-			{ "fx_scale", "1", },
-		},
 	},
 }

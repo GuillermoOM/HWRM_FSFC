@@ -325,23 +325,5 @@ effects =
             { "sound",    "SPECIAL/AB_End", },
             { "fx_scale", "0.25", },
         },
-        Fire1fx =
-        {
-            { "anim",     "Fire1", },
-            { "animtime", "0", },
-            { "marker",   "Turret1", },
-            { "fx",       "prometheus_squirt_small", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire2fx =
-        {
-            { "anim",     "Fire1", },
-            { "animtime", "0", },
-            { "marker",   "Turret2", },
-            { "fx",       "prometheus_squirt_small", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
     },
 }

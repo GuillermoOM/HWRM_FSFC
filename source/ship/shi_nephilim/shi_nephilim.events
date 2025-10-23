@@ -136,7 +136,7 @@ effects =
         event3 =
         {
             { "anim",     "Deathtrail", },
-            { "animtime", "0", },
+            { "animtime", "0" },
             { "marker",   "root", },
             { "fx",       "FIERY_TRAIL_SPRAY", },
             { "sound",    "EXPLOSION/DEATHTRAIL", },

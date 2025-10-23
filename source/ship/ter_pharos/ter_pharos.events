@@ -100,7 +100,7 @@ effects =
         {
             { "anim",     "dmg02", },
             { "animtime", "-1", },
-            { "marker",   "root", },
+            { "marker",   "Root", },
             { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
             { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_LIGHT", },
             { "fx_scale", "3", },

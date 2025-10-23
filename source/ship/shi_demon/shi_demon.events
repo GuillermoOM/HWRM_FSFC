@@ -468,7 +468,7 @@ effects =
             { "animtime", "0.85", },
             { "marker",   "debris5", },
             { "fx",       "debris_demon5_combo", },
-            { "sound",    "", },
+            { "sound",    "" },
             { "fx_scale", "1", },
         },
         event49 =

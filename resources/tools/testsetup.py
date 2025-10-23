@@ -38,8 +38,8 @@ vas_ships = [s for s in ships_list if "vas" in s]
 shi_ships = [s for s in ships_list if "shi" in s]
 ter_ships = [s for s in ships_list if "ter" in s]
 
-player_ships = p_ships
-hostile_ships = h_ships
+player_ships = ter_ships
+hostile_ships = shi_ships
 
 player_half = int(len(player_ships) / 2)
 for n, d in enumerate(player_ships):
