@@ -46,7 +46,7 @@ squadclass[eScout] = {
 	SHI_ASTAROTH,
 	SHI_SCORPION,
 
-	VAS_SETEKH,
+	VAS_AMUN,
 	VAS_PTAH,
 }
 squadclass[eRefinery] = {
@@ -174,6 +174,7 @@ squadclass[eFighter] = {
 	SHI_SCORPION,
 	SHI_GORGON,
 
+	VAS_AMUM,
 	VAS_PTAH,
 	VAS_SETH,
 	VAS_HORUS,

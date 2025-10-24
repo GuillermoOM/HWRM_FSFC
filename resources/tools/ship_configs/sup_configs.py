@@ -302,6 +302,7 @@ TER_APOLLO = {
                 "name": "addAbility",
                 "args": ["HyperspaceViaGateCommand", "1", "3", "1", "0.3"],
             },
+            {"args": ["CanBeRepaired"], "name": "addAbility"},
             {"name": "addAbility", "args": ["SensorPing", "0", "1", "10", "2.5"]},
             {"name": "addAbility", "args": ["RetireAbility", "1", "0"]},
         ],
@@ -3289,7 +3290,6 @@ SHI_GORGON = {
                 "name": "addAbility",
             },
             {"args": ["GuardCommand", "1", "3000", "500"], "name": "addAbility"},
-            {"args": ["CanBeRepaired"], "name": "addAbility"},
             {
                 "args": ["HyperspaceViaGateCommand", "0", "3", ".25", "0"],
                 "name": "addAbility",
