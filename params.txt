@@ -79,7 +79,7 @@
 -Spawn_Rot_13=0,90,0
 -Spawn_Team_13=0
 
--Spawn_Ship_14=ter_leviathan
+-Spawn_Ship_14=ter_aeolus
 -Spawn_Pos_14=-3000,0,7000
 -Spawn_Rot_14=0,90,0
 -Spawn_Team_14=0

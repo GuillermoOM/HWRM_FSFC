@@ -451,43 +451,43 @@ TER_COLOSSUS = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_1", ""],
+                "args": ["gun_terhuge_turret", "Weapon_1", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_2", ""],
+                "args": ["gun_terhuge_turret", "Weapon_2", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_3", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_3", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_4", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_4", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_5", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_5", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_6", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_6", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_7", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_7", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_8", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_8", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_9", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_9", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_10", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_10", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1211,43 +1211,43 @@ VAS_COLOSSUS = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_1", ""],
+                "args": ["gun_terhuge_turret", "Weapon_1", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_2", ""],
+                "args": ["gun_terhuge_turret", "Weapon_2", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_3", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_3", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_4", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_4", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_5", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_5", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_6", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_6", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_7", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_7", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_8", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_8", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_9", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_9", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_Weapon_10", ""],
+                "args": ["gun_terhuge_turret", "Weapon_Weapon_10", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

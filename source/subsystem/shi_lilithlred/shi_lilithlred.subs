@@ -15,7 +15,7 @@ NewSubSystemType.displayedName = "Shivan Heavy Beam Cannon"
 NewSubSystemType.sobDescription = "DPS: 2310"
 
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "beam_lredcruiserturret"
+NewSubSystemType.typeString = "beam_lredcruiser_turret"
 
 --------------------------------------------------
 --- Families
@@ -112,7 +112,7 @@ LoadModel(NewSubSystemType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_lredcruiserturret", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_lredcruiser_turret", "Weapon_IonCan1", "Weapon_IonCan1")
 
 --------------------------------------------------
 --- Multipliers

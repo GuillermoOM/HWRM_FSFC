@@ -1,35 +1,35 @@
 StartWeaponConfig(
 	NewWeaponType,
-	"Gimble",
+	"AnimatedTurret",
 	"InstantHit",
-	"Beam_SGreen",
+	"Beam_BGreen",
 	"Normal",
 	0,
-	5000,
+	8000,
 	0,
-	4.0,
-	1.5,
+	7.6,
+	3.5,
 	0,
-	45,
+	30,
+	0,
 	1,
-	1,
-	45,
+	30,
 	0,
 	0,
 	0,
 	0,
-	0,
-	0,
+	60,
+	60,
 	1,
 	"Normal",
-	0,
+	1,
 	0,
 	5000
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20000, 20000, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 26400, 26400, "")
 
-setAngles(NewWeaponType, 80, 0, 0, 0, 0)
+setAngles(NewWeaponType, 0, -80, 80, -5, 50)
 
 setPenetration(
 	NewWeaponType,
@@ -42,7 +42,7 @@ setPenetration(
 )
 
 setAccuracy(
-NewWeaponType,
+	NewWeaponType,
 	1,
 	{ Swarmer = 0 },
 	{ SpaceMine = 0 },

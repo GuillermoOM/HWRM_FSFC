@@ -32,7 +32,7 @@ p_ships = [
     "ter_elysium",
     "ter_elysium",
     "ter_elysium",
-    "ter_leviathan"
+    "ter_aeolus"
 ]
 
 h_ships = [

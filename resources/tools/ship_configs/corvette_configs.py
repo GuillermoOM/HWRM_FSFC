@@ -1857,11 +1857,11 @@ TER_ICENI = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_21", ""],
+                "args": ["gun_terhuge_turret", "Weapon_21", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_22", ""],
+                "args": ["gun_terhuge_turret", "Weapon_22", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

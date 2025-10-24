@@ -1,35 +1,35 @@
 StartWeaponConfig(
 	NewWeaponType,
-	"Gimble",
+	"AnimatedTurret",
 	"InstantHit",
-	"Beam_SGreen",
+	"Beam_lred",
 	"Normal",
 	0,
 	5000,
 	0,
-	4.0,
-	1.5,
+	5,
+	2.9,
 	0,
-	45,
+	30,
+	0,
 	1,
-	1,
-	45,
+	11,
 	0,
 	0,
 	0,
 	0,
-	0,
-	0,
+	50,
+	50,
 	1,
 	"Normal",
-	0,
+	1,
 	0,
 	5000
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20000, 20000, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 15000, 15000, "")
 
-setAngles(NewWeaponType, 80, 0, 0, 0, 0)
+setAngles(NewWeaponType, 0, -80, 80, -5, 60)
 
 setPenetration(
 	NewWeaponType,

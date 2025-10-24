@@ -109,3 +109,38 @@ setAccuracy(
 	{ ResourceLarge = 1 },
 	{ Capturer = 1 },
 	{ Chimera = 1 })
+
+
+    -- Beams
+
+setAngles(NewWeaponType, 45, 0, 0, 0, 0)
+
+setPenetration(
+	NewWeaponType,
+	100,
+	1,
+	{ Unarmoured = 1 },
+	{ LightArmour = 1 },
+	{ MediumArmour = 0.8 },
+	{ HeavyArmour = 0.5 }
+)
+
+setAccuracy(
+NewWeaponType,
+	1,
+	{ Swarmer = 0 },
+	{ SpaceMine = 0 },
+	{ Torpedo = 0 },
+	{ HeavyMissile = 0 },
+	{ SmallMissile = 0 },
+	{ Fighter = 0 },
+	{ Fighter_hw1 = 0 },
+	{ Corvette = 0 },
+	{ Corvette_hw1 = 0 },
+	{ munition = 0 },
+	{ Frigate = 0.80 },
+	{ Resource = 0 },
+	{ SmallCapitalShip = 0.80 },
+	{ BigCapitalShip = 0.80 },
+	{ ResourceLarge = 0.60 }
+)

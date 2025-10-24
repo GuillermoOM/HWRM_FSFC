@@ -24,7 +24,7 @@ NewMissileType.DockFamily="CantDock"
 NewMissileType.AvoidanceFamily="DontAvoid"
 NewMissileType.DisplayFamily="Munition"
 NewMissileType.AutoFormationFamily="Fighter"
-NewMissileType.ArmourFamily="Unarmoured"
+NewMissileType.ArmourFamily="TorpedoArmor"
 
 --------------------------------------------------	
 --- Health and Armour	

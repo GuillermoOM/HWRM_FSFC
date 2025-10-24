@@ -362,7 +362,7 @@ TER_AEOLUS = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_TurretLaser1", ""],
+                "args": ["gun_terhuge_turret", "Weapon_TurretLaser1", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -370,7 +370,7 @@ TER_AEOLUS = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhuge_turret2", "Weapon_TurretLaser3", ""],
+                "args": ["gun_terhuge_turret", "Weapon_TurretLaser3", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

@@ -15,7 +15,7 @@ NewSubSystemType.displayedName = "Shivan Light Beam Cannon"
 NewSubSystemType.sobDescription = "Cruiser Main Weapon"
 
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "beam_sredcruiserturret"
+NewSubSystemType.typeString = "beam_sredcruiser_turret"
 
 NewSubSystemType.innate = 1
 
@@ -116,7 +116,7 @@ LoadModel(NewSubSystemType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_sredcruiserturret", "Weapon_IonCan1", "")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_sredcruiser_turret", "Weapon_IonCan1", "")
 
 --------------------------------------------------
 --- Multipliers
