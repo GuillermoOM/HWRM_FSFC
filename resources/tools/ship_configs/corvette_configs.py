@@ -1316,11 +1316,11 @@ SHI_MOLOCH = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_02", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_02", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_03", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_03", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1340,7 +1340,7 @@ SHI_MOLOCH = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_10", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_10", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1348,7 +1348,7 @@ SHI_MOLOCH = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_12", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_12", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1356,7 +1356,7 @@ SHI_MOLOCH = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_14", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_14", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1819,7 +1819,7 @@ TER_ICENI = {
             {"name": "StartShipWeaponConfig", "args": ["beam_AABlue", "Weapon_05", ""]},
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhugeturretlasergimble", "Weapon_08", ""],
+                "args": ["gun_terhugeturretlaser_gimble", "Weapon_08", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -1836,15 +1836,15 @@ TER_ICENI = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhugeturretlasergimble", "Weapon_15", ""],
+                "args": ["gun_terhugeturretlaser_gimble", "Weapon_15", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhugeturretlasergimble", "Weapon_16", ""],
+                "args": ["gun_terhugeturretlaser_gimble", "Weapon_16", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_terhugeturretlasergimble", "Weapon_17", ""],
+                "args": ["gun_terhugeturretlaser_gimble", "Weapon_17", ""],
             },
             {"name": "StartShipWeaponConfig", "args": ["beam_AABlue", "Weapon_18", ""]},
             {

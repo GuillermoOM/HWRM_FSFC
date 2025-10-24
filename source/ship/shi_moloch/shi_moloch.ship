@@ -271,17 +271,17 @@ StartShipHardPointConfig(NewShipType, 'SRED1', 'Weapon_06', 'Weapon', 'Innate', 
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, 'gun_shivlaser_turret', 'Weapon_02', '')
-StartShipWeaponConfig(NewShipType, 'gun_shivlaser_turret', 'Weapon_03', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivsuperlaser_turret', 'Weapon_02', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivsuperlaser_turret', 'Weapon_03', '')
 StartShipWeaponConfig(NewShipType, 'miss_fighterkiller_turret', 'Weapon_04', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_turret', 'Weapon_07', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_turret', 'Weapon_08', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_turret', 'Weapon_09', '')
-StartShipWeaponConfig(NewShipType, 'gun_shivlaser_turret', 'Weapon_10', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivsuperlaser_turret', 'Weapon_10', '')
 StartShipWeaponConfig(NewShipType, 'miss_pihrana', 'Weapon_11', '')
-StartShipWeaponConfig(NewShipType, 'gun_shivlaser_turret', 'Weapon_12', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivsuperlaser_turret', 'Weapon_12', '')
 StartShipWeaponConfig(NewShipType, 'miss_pihrana', 'Weapon_13', '')
-StartShipWeaponConfig(NewShipType, 'gun_shivlaser_turret', 'Weapon_14', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivsuperlaser_turret', 'Weapon_14', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_turret', 'Weapon_15', '')
 StartShipWeaponConfig(NewShipType, 'miss_fighterkiller_turret', 'Weapon_16', '')
 

@@ -1206,7 +1206,7 @@ VAS_ANUBIS = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_mekhu", "Weapon_FrontGun", ""],
+                "args": ["gun_vll9", "Weapon_FrontGun", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

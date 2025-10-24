@@ -2855,7 +2855,7 @@ SHI_DEMON = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret10", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret10", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -2867,39 +2867,39 @@ SHI_DEMON = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret13", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret13", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret14", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret14", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret15", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret15", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret16", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret16", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret17", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret17", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret18", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret18", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret19", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret19", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret20", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret20", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret21", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret21", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3402,15 +3402,15 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret06", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret06", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret07", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret07", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret08", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret08", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3430,7 +3430,7 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret13", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret13", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3438,7 +3438,7 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret15", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret15", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3446,11 +3446,11 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret17", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret17", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret18", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret18", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3458,27 +3458,27 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret20", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret20", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret21", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret21", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret22", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret22", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret23", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret23", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret24", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret24", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret25", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret25", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
@@ -3486,19 +3486,19 @@ SHI_RAVANA = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret27", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret27", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret28", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret28", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret29", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret29", ""],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Turret30", ""],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Turret30", ""],
             },
         ],
     },

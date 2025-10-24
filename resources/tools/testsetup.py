@@ -28,11 +28,11 @@ p_ships = [
     "ter_elysium",
     "ter_elysium",
     "ter_elysium",
-    "ter_charybdis",
     "ter_elysium",
     "ter_elysium",
     "ter_elysium",
-    "ter_perseus"
+    "ter_elysium",
+    "ter_leviathan"
 ]
 
 h_ships = [
@@ -50,7 +50,7 @@ h_ships = [
     "ter_elysium",
     "ter_elysium",
     "ter_elysium",
-    "vas_aten"
+    "ter_leviathan"
 ]
 
 ships_list = []

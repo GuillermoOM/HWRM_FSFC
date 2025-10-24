@@ -1108,23 +1108,23 @@ SHI_CAIN = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun1", "Fire1"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun1", "Fire1"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun2", "Fire2"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun2", "Fire2"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun3", "Fire3"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun3", "Fire3"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun4", "Fire4"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun4", "Fire4"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun5", "Fire5"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun5", "Fire5"],
             },
             {
                 "name": "StartShipWeaponConfig",

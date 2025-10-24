@@ -41,22 +41,21 @@ setAngles(NewWeaponType,
     0,
     0)
 
-setPenetration(
-	NewWeaponType,
-	5,
-	1,
-	{ Unarmoured = 1.25 },
-	{ LightArmour = 0.8 },
-	{ MediumArmour = 0.4 },
-	{ HeavyArmour = 0.4 },
-	{ SubSystemArmour = 0.35 },
-	{ TurretArmour = 0.35 },
-	{ ResArmour = 1 },
-	{ MoverArmour = 1 },
-	{ PlanetKillerArmour = 0.85 },
-	{ MineArmour = 1 },
-	{ ChunkArmour = 1 }
-)
+setPenetration(NewWeaponType,
+    5,
+    1,
+    { Unarmoured = 1,
+    },
+    { LightArmour = 0.8,
+    },
+    { MediumArmour = 0.4,
+    },
+    { HeavyArmour = 0.1,
+    },
+    { SubSystemArmour = 0.8,
+    },
+    { TurretArmour = .8,
+    })
 
 setAccuracy(NewWeaponType,
     1)

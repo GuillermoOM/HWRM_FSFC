@@ -10,131 +10,151 @@
 -Spawn_Back=ez01
 
 -Spawn_Ship_0=ter_elysium
--Spawn_Pos_0=-3000,0,-6000
+-Spawn_Pos_0=-3000,0,-7000
 -Spawn_Rot_0=0,90,0
 -Spawn_Team_0=0
 
 -Spawn_Ship_1=ter_elysium
--Spawn_Pos_1=-3000,0,-5000
+-Spawn_Pos_1=-3000,0,-6000
 -Spawn_Rot_1=0,90,0
 -Spawn_Team_1=0
 
 -Spawn_Ship_2=ter_elysium
--Spawn_Pos_2=-3000,0,-4000
+-Spawn_Pos_2=-3000,0,-5000
 -Spawn_Rot_2=0,90,0
 -Spawn_Team_2=0
 
 -Spawn_Ship_3=ter_elysium
--Spawn_Pos_3=-3000,0,-3000
+-Spawn_Pos_3=-3000,0,-4000
 -Spawn_Rot_3=0,90,0
 -Spawn_Team_3=0
 
 -Spawn_Ship_4=ter_elysium
--Spawn_Pos_4=-3000,0,-2000
+-Spawn_Pos_4=-3000,0,-3000
 -Spawn_Rot_4=0,90,0
 -Spawn_Team_4=0
 
 -Spawn_Ship_5=ter_elysium
--Spawn_Pos_5=-3000,0,-1000
+-Spawn_Pos_5=-3000,0,-2000
 -Spawn_Rot_5=0,90,0
 -Spawn_Team_5=0
 
 -Spawn_Ship_6=ter_orion
--Spawn_Pos_6=-3000,0,0
+-Spawn_Pos_6=-3000,0,-1000
 -Spawn_Rot_6=0,90,0
 -Spawn_Team_6=0
 
 -Spawn_Ship_7=ter_elysium
--Spawn_Pos_7=-3000,0,1000
+-Spawn_Pos_7=-3000,0,0
 -Spawn_Rot_7=0,90,0
 -Spawn_Team_7=0
 
--Spawn_Ship_8=ter_charybdis
--Spawn_Pos_8=-3000,0,2000
+-Spawn_Ship_8=ter_elysium
+-Spawn_Pos_8=-3000,0,1000
 -Spawn_Rot_8=0,90,0
 -Spawn_Team_8=0
 
 -Spawn_Ship_9=ter_elysium
--Spawn_Pos_9=-3000,0,3000
+-Spawn_Pos_9=-3000,0,2000
 -Spawn_Rot_9=0,90,0
 -Spawn_Team_9=0
 
 -Spawn_Ship_10=ter_elysium
--Spawn_Pos_10=-3000,0,4000
+-Spawn_Pos_10=-3000,0,3000
 -Spawn_Rot_10=0,90,0
 -Spawn_Team_10=0
 
 -Spawn_Ship_11=ter_elysium
--Spawn_Pos_11=-3000,0,5000
+-Spawn_Pos_11=-3000,0,4000
 -Spawn_Rot_11=0,90,0
 -Spawn_Team_11=0
 
--Spawn_Ship_12=ter_perseus
--Spawn_Pos_12=-3000,0,6000
+-Spawn_Ship_12=ter_elysium
+-Spawn_Pos_12=-3000,0,5000
 -Spawn_Rot_12=0,90,0
 -Spawn_Team_12=0
 
--Spawn_Ship_13=shi_demon
--Spawn_Pos_13=3000,0,-6000
--Spawn_Rot_13=0,-90,0
--Spawn_Team_13=1
+-Spawn_Ship_13=ter_elysium
+-Spawn_Pos_13=-3000,0,6000
+-Spawn_Rot_13=0,90,0
+-Spawn_Team_13=0
 
--Spawn_Ship_14=ter_elysium
--Spawn_Pos_14=3000,0,-5000
--Spawn_Rot_14=0,-90,0
--Spawn_Team_14=1
+-Spawn_Ship_14=ter_leviathan
+-Spawn_Pos_14=-3000,0,7000
+-Spawn_Rot_14=0,90,0
+-Spawn_Team_14=0
 
--Spawn_Ship_15=ter_elysium
--Spawn_Pos_15=3000,0,-4000
+-Spawn_Ship_15=shi_demon
+-Spawn_Pos_15=3000,0,-7000
 -Spawn_Rot_15=0,-90,0
 -Spawn_Team_15=1
 
 -Spawn_Ship_16=ter_elysium
--Spawn_Pos_16=3000,0,-3000
+-Spawn_Pos_16=3000,0,-6000
 -Spawn_Rot_16=0,-90,0
 -Spawn_Team_16=1
 
 -Spawn_Ship_17=ter_elysium
--Spawn_Pos_17=3000,0,-2000
+-Spawn_Pos_17=3000,0,-5000
 -Spawn_Rot_17=0,-90,0
 -Spawn_Team_17=1
 
 -Spawn_Ship_18=ter_elysium
--Spawn_Pos_18=3000,0,-1000
+-Spawn_Pos_18=3000,0,-4000
 -Spawn_Rot_18=0,-90,0
 -Spawn_Team_18=1
 
 -Spawn_Ship_19=ter_elysium
--Spawn_Pos_19=3000,0,0
+-Spawn_Pos_19=3000,0,-3000
 -Spawn_Rot_19=0,-90,0
 -Spawn_Team_19=1
 
 -Spawn_Ship_20=ter_elysium
--Spawn_Pos_20=3000,0,1000
+-Spawn_Pos_20=3000,0,-2000
 -Spawn_Rot_20=0,-90,0
 -Spawn_Team_20=1
 
 -Spawn_Ship_21=ter_elysium
--Spawn_Pos_21=3000,0,2000
+-Spawn_Pos_21=3000,0,-1000
 -Spawn_Rot_21=0,-90,0
 -Spawn_Team_21=1
 
 -Spawn_Ship_22=ter_elysium
--Spawn_Pos_22=3000,0,3000
+-Spawn_Pos_22=3000,0,0
 -Spawn_Rot_22=0,-90,0
 -Spawn_Team_22=1
 
 -Spawn_Ship_23=ter_elysium
--Spawn_Pos_23=3000,0,4000
+-Spawn_Pos_23=3000,0,1000
 -Spawn_Rot_23=0,-90,0
 -Spawn_Team_23=1
 
 -Spawn_Ship_24=ter_elysium
--Spawn_Pos_24=3000,0,5000
+-Spawn_Pos_24=3000,0,2000
 -Spawn_Rot_24=0,-90,0
 -Spawn_Team_24=1
 
--Spawn_Ship_25=vas_aten
--Spawn_Pos_25=3000,0,6000
+-Spawn_Ship_25=ter_elysium
+-Spawn_Pos_25=3000,0,3000
 -Spawn_Rot_25=0,-90,0
 -Spawn_Team_25=1
+
+-Spawn_Ship_26=ter_elysium
+-Spawn_Pos_26=3000,0,4000
+-Spawn_Rot_26=0,-90,0
+-Spawn_Team_26=1
+
+-Spawn_Ship_27=ter_elysium
+-Spawn_Pos_27=3000,0,5000
+-Spawn_Rot_27=0,-90,0
+-Spawn_Team_27=1
+
+-Spawn_Ship_28=ter_elysium
+-Spawn_Pos_28=3000,0,6000
+-Spawn_Rot_28=0,-90,0
+-Spawn_Team_28=1
+
+-Spawn_Ship_29=ter_leviathan
+-Spawn_Pos_29=3000,0,7000
+-Spawn_Rot_29=0,-90,0
+-Spawn_Team_29=1

@@ -349,23 +349,23 @@ SHI_LILITH = {
         "functions": [
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun1", "Weapon_Gun1"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun1", "Weapon_Gun1"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun2", "Weapon_Gun2"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun2", "Weapon_Gun2"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun3", "Weapon_Gun3"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun3", "Weapon_Gun3"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun4", "Weapon_Gun4"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun4", "Weapon_Gun4"],
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_shivlaser_turret", "Weapon_Gun5", "Weapon_Gun5"],
+                "args": ["gun_shivsuperlaser_turret", "Weapon_Gun5", "Weapon_Gun5"],
             },
             {
                 "name": "StartShipWeaponConfig",
