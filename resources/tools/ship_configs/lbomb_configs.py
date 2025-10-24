@@ -1231,7 +1231,7 @@ SHI_SHAITAN = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["miss_stiletto", "Weapon_Bomb2", ""],
+                "args": ["miss_stiletto", "Weapon_Bomb1", ""],
             },
         ],
     },

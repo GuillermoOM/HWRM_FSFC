@@ -29,7 +29,7 @@ BigFilename: FSFCv5.big
 // This should be 0 by default before you create your Workshop item and the Workshop Tool will
 // set it to the Workshop Item number.  DO NOT modify this number once you have created a Workshop
 // item.  It will be used to update the workshop item when you make changes to your MOD later on.  
-WorkshopID: 0
+WorkshopID: 3586658386
 
 // description that will appear on the Steam Workshop for this item
 Description:
@@ -53,14 +53,13 @@ This is still a long way to go, please follow up closer development on the githu
   - All ships available
   - AI
   - working fleet chatter
+- Multiplayer
+- Music
+- Menu and Loading Screen
 
 ## Current Issues
 
 - Audio Balancing
-- Weapons Balancing
-- Minor Effects improvements
-- Ship health Balancing
-- AI Still needs some improvements
 
 ## What's missing
 
@@ -73,11 +72,8 @@ This is still a long way to go, please follow up closer development on the githu
 
 ## Current Roadmap
 
-1. Add Vasudan Race and Ships
-2. Add AI to Vasudans
-3. Enable Multiplayer (for testing purposes)
-4. Add capital ships subsystems (missing on many ships, needed before implementing research)
-5. Reintegrate Research
-6. Add FS Gametypes
-7. Add FS Maps
-8. Add Gauntlet Gametype (From existing mod)
+1. Add capital ships subsystems (missing on many ships, needed before implementing research)
+2. Reintegrate Research
+3. Add FS Gametypes
+4. Add FS Maps
+5. Add Gauntlet Gametype (From existing mod)

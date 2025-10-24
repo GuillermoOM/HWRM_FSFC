@@ -314,7 +314,6 @@ TER_PEGASUS = {
                 "args": [
                     "CloakAbility",
                     "1",
-                    "0",
                     "2",
                     "100",
                     "3500",
@@ -726,7 +725,6 @@ VAS_PTAH = {
                 "args": [
                     "CloakAbility",
                     "1",
-                    "0",
                     "2",
                     "100",
                     "3500",

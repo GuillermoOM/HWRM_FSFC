@@ -9,7 +9,7 @@ ExtFilter = "rules_dm"
 Race_Paths = "Deathmatch,Extras"
 
 Level_Pass_Tags = "dm"
-Race_Pass_Tags = "race_dm,race_ter,race_shi,race_vas,race_random,race_obs"
+Race_Pass_Tags = "race_dm,race_ter,race_shi,race_vas,race_random_fs,race_obs"
 
 GameSetupOptions = {
 	{

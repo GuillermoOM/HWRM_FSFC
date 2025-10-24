@@ -143,7 +143,7 @@ NewMainMenu = {
 				-- CampainButton(),
 				-- NewMenuButton("btnExtra",			"$2606",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	nil, 1, nil, nil, nil, nil, nil),
 				NewMenuButton("btnPlayerVsCPU",		"$2604",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	nil),
-				MPButton(),
+				NewMenuButton("btnMultiplayer",		"$2614",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	"UI_ShowScreen(\"ConnectionType\", eTransition)"),
 				NewMenuButton("btnProfile",		"$2616",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	[[UI_SetNextScreen("UserProfile", "NewMainMenu");UI_SetPreviousScreen("UserProfile", "NewMainMenu");UI_ShowScreen("UserProfile", eTransition);]]),
 				NewMenuButton("btnOptions",		"$2607",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	"UI_ShowScreen(\"FEGameOptions\", eTransition)"),
 				-- NewMenuButton("btnMovies",		"$2608",	nil,	0,	LAYOUT_MENU_BUTTONS,	"FEButtonStyle1",	"UI_ShowScreen(\"PlayMoviesScreen\", eTransition)"),

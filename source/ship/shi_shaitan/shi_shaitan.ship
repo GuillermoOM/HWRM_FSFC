@@ -147,8 +147,10 @@ NewShipType.CombatFamily = 'Fighter_Bomber'
 --- Special Flight Maneuvers
 --------------------------------------------------
 
-NewShipType.mirrorAboveManeuver = 'ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy'
-NewShipType.mirrorBelowManeuver = 'Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy'
+NewShipType.mirrorAboveManeuver =
+'ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy'
+NewShipType.mirrorBelowManeuver =
+'Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy'
 NewShipType.specialTurnLeftManeuver = 'NinetyDegLeftTurn, None, None'
 NewShipType.specialTurnRightManeuver = 'NinetyDegRightTurn, None, None'
 
@@ -262,11 +264,19 @@ addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 30, 120, 0, 3)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1.5, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Bomber_vs_Frigate', {Fighter="Bomber_vs_Fighter"}, {Fighter_hw1="Bomber_vs_Fighter"}, {Mothership="Bomber_vs_Mothership"}, {Frigate="Bomber_vs_Frigate"}, {SmallCapitalShip="Bomber_vs_Corvette"}, {BigCapitalShip="Bomber_vs_CapShip"}, {SubSystem="TopAttack_Bomber_vs_Subsystem"}, {Corvette="Bomber_vs_Corvette"}, {Corvette_hw1="Bomber_vs_Corvette"}, {ResourceLarge="Flyby_Bomber_vs_ResourceLarge"})
+addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1.5,
+    'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership',
+    'FlyBy_Bomber_vs_Frigate', { Fighter = "Bomber_vs_Fighter" }, { Fighter_hw1 = "Bomber_vs_Fighter" },
+    { Mothership = "Bomber_vs_Mothership" }, { Frigate = "Bomber_vs_Frigate" }, { SmallCapitalShip = "Bomber_vs_Corvette" },
+    { BigCapitalShip = "Bomber_vs_CapShip" }, { SubSystem = "TopAttack_Bomber_vs_Subsystem" },
+    { Corvette = "Bomber_vs_Corvette" }, { Corvette_hw1 = "Bomber_vs_Corvette" },
+    { ResourceLarge = "Flyby_Bomber_vs_ResourceLarge" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
-addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 80, 0, 1, 0.25, 0, 'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner', 'shi_shaitan', 0.5, 3, 1)
+addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 80, 0, 1, 0.25, 0,
+    'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner',
+    'shi_shaitan', 0.5, 3, 1)
 
 --------------------------------------------------
 --- Docking
@@ -313,7 +323,7 @@ LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, 'gun_shivheavylaser', 'Weapon_Gun1', '')
 StartShipWeaponConfig(NewShipType, 'gun_disruptorfs1', 'Weapon_Gun2', '')
 StartShipWeaponConfig(NewShipType, 'miss_shivbomb', 'Weapon_Bomb1', '')
-StartShipWeaponConfig(NewShipType, 'miss_stiletto', 'Weapon_Bomb2', '')
+StartShipWeaponConfig(NewShipType, 'miss_stiletto', 'Weapon_Bomb1', '')
 
 --------------------------------------------------
 --- Shields
@@ -332,4 +342,3 @@ setEngineBurn(NewShipType, 7, 0.5, 1, 15, 0, 0.7, 0.1, 30)
 --------------------------------------------------
 
 loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'sb_old', '', 3, '', 'Root')
-
