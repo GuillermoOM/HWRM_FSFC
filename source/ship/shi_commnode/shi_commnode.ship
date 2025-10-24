@@ -103,7 +103,7 @@ NewShipType.layoutCenterZ = 50
 
 NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Utility_Shi'
-NewShipType.AttackFamily = 'Awacs'
+NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
 NewShipType.AvoidanceFamily = 'MotherShip'
 NewShipType.DisplayFamily = 'Platform'

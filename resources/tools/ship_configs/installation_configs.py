@@ -1043,7 +1043,7 @@ SHI_COMMNODE = {
         "variables": {
             "MinimalFamilyToFindPathAround": '"MotherShip"',
             "BuildFamily": '"Utility_Shi"',
-            "AttackFamily": '"Awacs"',
+            "AttackFamily": '"BigCapitalShip"',
             "DockFamily": '"Shipyard"',
             "AvoidanceFamily": '"MotherShip"',
             "DisplayFamily": '"Platform"',

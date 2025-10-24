@@ -1,0 +1,83 @@
+levelDesc = "<c=64FF22>Randomly Generated Map</c>"
+maxPlayers = 8
+
+player = {}
+
+player[0] = {
+  id = 0,
+  name = "StartPos0",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[1] = {
+  id = 1,
+  name = "StartPos1",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[2] = {
+  id = 2,
+  name = "StartPos2",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[3] = {
+  id = 3,
+  name = "StartPos3",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[4] = {
+  id = 4,
+  name = "StartPos4",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[5] = {
+  id = 5,
+  name = "StartPos5",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+player[6] = {
+  id = 6,
+  name = "StartPos6",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+player[7] = {
+  id = 7,
+  name = "StartPos7",
+  resources = 1500,
+  raceID = 1,
+  startPos = 1,
+}
+
+
+dofilepath("data:leveldata/multiplayer/deathmatch/randomMapGenerator.lua")
+
+function DetermChunk()
+	
+	STC_DetermChunk()
+	
+end
+
+-- is processed before NonDetermChunk
+function NonDetermChunk()
+	
+	STC_NonDetermChunk()
+	
+end

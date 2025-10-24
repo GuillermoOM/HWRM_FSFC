@@ -3,7 +3,7 @@ Symbolic_Name = "Terran"
 Display_Name = "Terran"
 Prefix = "TER_"
 
-ExtFilter = "races_fs2,rules_dm,races_dm"
+ExtFilter = "races_fs2,rules_dm,races_dm,races_random_fs"
 Tags = "race_ter"
 
 SG_Pass_Tags = "sgf_common,sgf_ter"
