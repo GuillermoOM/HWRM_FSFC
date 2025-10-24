@@ -1,0 +1,1016 @@
+TER_ELYSIUM = {
+    "Ship info": {
+        "variables": {
+            "displayedName": '"GTT Elysium"',
+            "sobDescription": '"Resource Collector"',
+        },
+        "functions": [],
+    },
+    "Health and Armour": {
+        "variables": {
+            "maxhealth": "3500",
+            "regentime": "200",
+            "minRegenTime": "150",
+            "sideArmourDamage": 'getShipNum(NewShipType, "sideArmourDamage", 1.0)',
+            "rearArmourDamage": 'getShipNum(NewShipType, "rearArmourDamage", 1.0)',
+        },
+        "functions": [],
+    },
+    "Tactics And Multipliers": {
+        "variables": {"defaultROE": '"Defensive"', "defaultStance": '"Neutral"'},
+        "functions": [
+            {"name": "setTacticsMults", "args": ["ENGINEACCEL", "1.05", "0.95", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["THRUSTERACCEL", "1.05", "0.95", "1.0"],
+            },
+            {"name": "setTacticsMults", "args": ["ROTATION", "0.95", "1.05", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["ROTATIONACCEL", "1.05", "0.95", "1.0"],
+            },
+        ],
+    },
+    "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
+    "Docking": {
+        "variables": {
+            "holdSlots": "1",
+            "dockTimeBetweenTwoFormations": "1",
+            "dockTimeBeforeStart": "1",
+            "dockNrOfShipsInDockFormation": "1",
+            "dockFormation": '"delta"',
+            "queueFormation": '"dockline"',
+            "dontDockWithOtherRaceShips": "1",
+            "ignoreRaceWhenDocking": "0",
+        },
+        "functions": [],
+    },
+    "Movement": {
+        "variables": {
+            "mass": "450",
+            "thrusterMaxSpeed": "160",
+            "mainEngineMaxSpeed": "160",
+            "rotationMaxSpeed": "60",
+            "thrusterAccelTime": "3",
+            "thrusterBrakeTime": "1",
+            "mainEngineAccelTime": "3",
+            "mainEngineBrakeTime": "1",
+            "rotationAccelTime": "0.2",
+            "rotationBrakeTime": "0.15",
+        },
+        "functions": [],
+    },
+    "Damage & Death": {
+        "variables": {
+            "collisionMultiplier": "1",
+            "dustCloudDamageTime": "160",
+            "nebulaDamageTime": "100",
+            "battleScarCoverage": "1",
+            "sobDieTime": "1.8",
+            "sobSpecialDieTime": "2",
+            "specialDeathSpeed": "40",
+            "chanceOfSpecialDeath": "0",
+            "deadSobFadeTime": "1",
+        },
+        "functions": [],
+    },
+    "Advanced Movement": {
+        "variables": {
+            "thrusterUsage": "1",
+            "accelerationAngle": "35",
+            "mirrorAngle": "0",
+            "secondaryTurnAngle": "0",
+            "maxBankingAmount": "30",
+            "descendPitch": "89",
+            "goalReachEpsilon": "25",
+            "slideMoveRange": "0",
+            "controllerType": '"Ship"',
+            "relativeMoveFactor": "3",
+        },
+        "functions": [],
+    },
+    "Death Tumble": {
+        "variables": {
+            "tumbleStaticX": "10",
+            "tumbleStaticY": "20",
+            "tumbleStaticZ": "5",
+            "tumbleDynamicX": "2",
+            "tumbleDynamicY": "10",
+            "tumbleDynamicZ": "5",
+            "tumbleSpecialDynamicX": "2",
+            "tumbleSpecialDynamicY": "10",
+            "tumbleSpecialDynamicZ": "5",
+        },
+        "functions": [],
+    },
+    "Swaying": {
+        "variables": {
+            "swayUpdateTime": "5",
+            "swayOffsetRandomX": "10",
+            "swayOffsetRandomY": "10",
+            "swayOffsetRandomZ": "10",
+            "swayBobbingFactor": "0.35",
+            "swayRotateFactor": "0",
+        },
+        "functions": [],
+    },
+    "Families": {
+        "variables": {
+            "MinimalFamilyToFindPathAround": '"SuperCap"',
+            "BuildFamily": '"Utility_Ter"',
+            "AttackFamily": '"Resource"',
+            "DockFamily": '"Utility"',
+            "AvoidanceFamily": '"Utility"',
+            "DisplayFamily": '"Utility"',
+            "AutoFormationFamily": '"Frigate"',
+            "CollisionFamily": '"Small"',
+            "ArmourFamily": 'getShipStr(NewShipType, "ArmourFamily", "ResArmour")',
+        },
+        "functions": [],
+    },
+    "Supply": {
+        "variables": {},
+        "functions": [
+            {"name": "setSupplyValue", "args": ["Resource", "1.0"]},
+            {"name": "setSupplyValue", "args": ["Utility", "1.0"]},
+            {"name": "setSupplyValue", "args": ["ResourceCollector", "1.0"]},
+            {"name": "setSupplyValue", "args": ["LayoutResource", "1.0"]},
+        ],
+    },
+    "Ship Counter Rating": {
+        "variables": {
+            "AttackPriorityMultiplier": "0.92",
+            "fighterValue": "0",
+            "corvetteValue": "0",
+            "frigateValue": "0",
+            "neutralValue": "0",
+            "antiFighterValue": "0",
+            "antiCorvetteValue": "0",
+            "antiFrigateValue": "0",
+            "totalValue": "0",
+        },
+        "functions": [],
+    },
+    "Construction": {
+        "variables": {
+            "buildCost": "400",
+            "buildTime": "25",
+            "buildPriorityOrder": "10",
+        },
+        "functions": [],
+    },
+    "Sensors": {
+        "variables": {
+            "retaliationRange": "4800",
+            "retaliationDistanceFromGoal": "160",
+            "visualRange": "1000",
+            "prmSensorRange": "3500",
+            "secSensorRange": "4500",
+            "detectionStrength": "1",
+        },
+        "functions": [],
+    },
+    "Tactical Overlay Icon": {
+        "variables": {
+            "TOIcon": '"InvertedDiamond"',
+            "TOScale": "1",
+            "TODistanceFade0": "9000",
+            "TODistanceDisappear0": "7000",
+            "TODistanceFade1": "4500",
+            "TODistanceDisappear1": "3500",
+            "TODistanceFade2": "12000",
+            "TODistanceDisappear2": "35000",
+            "TOGroupScale": "1",
+            "TOGroupMergeSize": "0",
+        },
+        "functions": [],
+    },
+    "Overlays": {
+        "variables": {
+            "mouseOverMinFadeSize": "0.045",
+            "mouseOverMaxFadeSize": "0.1",
+            "healthBarStyle": "1",
+            "SMRepresentation": '"HardDot"',
+            "hideNormalAttackUICooldown": "1",
+        },
+        "functions": [],
+    },
+    "Non linear Scaling": {
+        "variables": {
+            "nlips": "0.00045",
+            "nlipsRange": "6000",
+            "nlipsFar": "0.0002",
+            "nlipsFarRange": "10000",
+        },
+        "functions": [],
+    },
+    "Rendering": {
+        "variables": {
+            "meshRenderLimit": "13000",
+            "dotRenderLimit": "10",
+            "visibleInSecondary": "1",
+            "goblinsStartFade": "660",
+            "goblinsOff": "660",
+            "minimumZoomFactor": "0.75",
+        },
+        "functions": [],
+    },
+    "Level of Detail": {
+        "variables": {"minLOD": "0.25"},
+        "functions": [],
+    },
+    "Selection": {
+        "variables": {
+            "selectionLimit": "150000",
+            "preciseATILimit": "0",
+            "selectionPriority": "75",
+            "militaryUnit": "0",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
+    "Abilities": {
+        "variables": {},
+        "functions": [
+            {"name": "addAbility", "args": ["MoveCommand", "1", "0"]},
+            {"name": "addAbility", "args": ["CanDock", "1", "1"]},
+            {"name": "addAbility", "args": ['CanLaunch"']},
+            {"name": "addAbility", "args": ["ParadeCommand", "1"]},
+            {"name": "addAbility", "args": ['WaypointMove"']},
+            {
+                "args": ["HyperSpaceCommand", "0", "1", "30", "120", "0", "3"],
+                "name": "addAbility",
+            },
+            {
+                "name": "addAbility",
+                "args": [
+                    "CanAttack",
+                    "1",
+                    "5",
+                    "2",
+                    "0",
+                    "0.35",
+                    "1",
+                    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership",
+                    "JustShoot",
+                ],
+            },
+            {"name": "addAbility", "args": ["SalvageCommand", "1", "200"]},
+            {"name": "addAbility", "args": ["GuardCommand", "1", "3000", "500"]},
+            {"name": "addAbility", "args": ["Harvest", "1", "200", "8", "300"]},
+            {
+                "name": "addAbility",
+                "args": ["HyperspaceViaGateCommand", "1", "3", "1", "0.3"],
+            },
+            {"name": "addAbility", "args": ["RetireAbility", "1", "0"]},
+        ],
+    },
+    "Launching": {
+        "variables": {
+            "launchTimeBetweenTwoFormations": "1",
+            "launchTimeBeforeStart": "1.5",
+            "launchNrOfShipsInDockFormation": "1",
+            "launchFormation": '"delta"',
+        },
+        "functions": [],
+    },
+    "Load Model": {
+        "variables": {},
+        "functions": [{"name": "LoadModel", "args": ["1"]}],
+    },
+    "Weapons": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_tercollector_turret", "Weapon_Turret", ""],
+            }
+        ],
+    },
+    "Shields": {
+        "variables": {},
+        "functions": [{"name": "addShield", "args": ["EMP", "75", "20"]}],
+    },
+    "Engines": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "setEngineBurn",
+                "args": ["6", "3", "3", "4", "0.1", "0.1", "0.1", "25"],
+            }
+        ],
+    },
+    "Addendum": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "loadShipPatchList",
+                "args": ["data:sound/sfx/ship/", "0", "", "", "1", "terranfighter", ""],
+            }
+        ],
+    },
+    "Scuttle": {
+        "variables": {
+            "minFalloffDamageDist": "15",
+            "maxFalloffDamageDist": "15*3",
+            "maxFalloffScuttleDamageDist": "15*6",
+            "explosiveScuttleDamageOnDeath": "500",
+            "maxFalloffForce": "15*10",
+            "explosiveDamageOnDeath": "100",
+            "radiusDamageEvadeMod": "1.1",
+        },
+        "functions": [],
+    },
+    "Formations": {"variables": {"strikeGroupSpeed": "5000"}, "functions": []},
+}
+VAS_ISIS = {
+    "Ship info": {
+        "variables": {
+            "displayedName": '"PVT Isis"',
+            "sobDescription": '"Resource Collector"',
+        },
+        "functions": [],
+    },
+    "Health and Armour": {
+        "variables": {
+            "maxhealth": "5000",
+            "regentime": "200",
+            "minRegenTime": "150",
+            "sideArmourDamage": 'getShipNum(NewShipType, "sideArmourDamage", 1.0)',
+            "rearArmourDamage": 'getShipNum(NewShipType, "rearArmourDamage", 1.0)',
+        },
+        "functions": [],
+    },
+    "Tactics And Multipliers": {
+        "variables": {"defaultROE": '"Defensive"', "defaultStance": '"Neutral"'},
+        "functions": [
+            {"name": "setTacticsMults", "args": ["ENGINEACCEL", "1.05", "0.95", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["THRUSTERACCEL", "1.05", "0.95", "1.0"],
+            },
+            {"name": "setTacticsMults", "args": ["ROTATION", "0.95", "1.05", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["ROTATIONACCEL", "1.05", "0.95", "1.0"],
+            },
+        ],
+    },
+    "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
+    "Docking": {
+        "variables": {
+            "holdSlots": "1",
+            "dockTimeBetweenTwoFormations": "1",
+            "dockTimeBeforeStart": "1",
+            "dockNrOfShipsInDockFormation": "1",
+            "dockFormation": '"delta"',
+            "queueFormation": '"dockline"',
+            "dontDockWithOtherRaceShips": "1",
+            "ignoreRaceWhenDocking": "0",
+        },
+        "functions": [],
+    },
+    "Movement": {
+        "variables": {
+            "mass": "450",
+            "thrusterMaxSpeed": "140",
+            "mainEngineMaxSpeed": "140",
+            "rotationMaxSpeed": "60",
+            "thrusterAccelTime": "3",
+            "thrusterBrakeTime": "1",
+            "mainEngineAccelTime": "3",
+            "mainEngineBrakeTime": "1",
+            "rotationAccelTime": "0.2",
+            "rotationBrakeTime": "0.15",
+        },
+        "functions": [],
+    },
+    "Damage & Death": {
+        "variables": {
+            "collisionMultiplier": "1",
+            "dustCloudDamageTime": "160",
+            "nebulaDamageTime": "80",
+            "battleScarCoverage": "1",
+            "sobDieTime": "1.8",
+            "sobSpecialDieTime": "2",
+            "specialDeathSpeed": "40",
+            "chanceOfSpecialDeath": "0",
+            "deadSobFadeTime": "1",
+        },
+        "functions": [],
+    },
+    "Advanced Movement": {
+        "variables": {
+            "thrusterUsage": "1",
+            "accelerationAngle": "35",
+            "mirrorAngle": "0",
+            "secondaryTurnAngle": "0",
+            "maxBankingAmount": "30",
+            "descendPitch": "89",
+            "goalReachEpsilon": "25",
+            "slideMoveRange": "0",
+            "controllerType": '"Ship"',
+            "relativeMoveFactor": "3",
+        },
+        "functions": [],
+    },
+    "Death Tumble": {
+        "variables": {
+            "tumbleStaticX": "10",
+            "tumbleStaticY": "20",
+            "tumbleStaticZ": "5",
+            "tumbleDynamicX": "2",
+            "tumbleDynamicY": "10",
+            "tumbleDynamicZ": "5",
+            "tumbleSpecialDynamicX": "2",
+            "tumbleSpecialDynamicY": "10",
+            "tumbleSpecialDynamicZ": "5",
+        },
+        "functions": [],
+    },
+    "Swaying": {
+        "variables": {
+            "swayUpdateTime": "5",
+            "swayOffsetRandomX": "10",
+            "swayOffsetRandomY": "10",
+            "swayOffsetRandomZ": "10",
+            "swayBobbingFactor": "0.35",
+            "swayRotateFactor": "0",
+        },
+        "functions": [],
+    },
+    "Families": {
+        "variables": {
+            "MinimalFamilyToFindPathAround": '"SuperCap"',
+            "BuildFamily": '"Utility_Vas"',
+            "AttackFamily": '"Resource"',
+            "DockFamily": '"Utility"',
+            "AvoidanceFamily": '"Utility"',
+            "DisplayFamily": '"Utility"',
+            "AutoFormationFamily": '"Frigate"',
+            "CollisionFamily": '"Small"',
+            "ArmourFamily": 'getShipStr(NewShipType, "ArmourFamily", "ResArmour")',
+        },
+        "functions": [],
+    },
+    "Supply": {
+        "variables": {},
+        "functions": [
+            {"name": "setSupplyValue", "args": ["Resource", "1.0"]},
+            {"name": "setSupplyValue", "args": ["Utility", "1.0"]},
+            {"name": "setSupplyValue", "args": ["ResourceCollector", "1.0"]},
+            {"name": "setSupplyValue", "args": ["LayoutResource", "1.0"]},
+        ],
+    },
+    "Ship Counter Rating": {
+        "variables": {
+            "AttackPriorityMultiplier": "0.92",
+            "fighterValue": "0",
+            "corvetteValue": "0",
+            "frigateValue": "0",
+            "neutralValue": "0",
+            "antiFighterValue": "0",
+            "antiCorvetteValue": "0",
+            "antiFrigateValue": "0",
+            "totalValue": "0",
+        },
+        "functions": [],
+    },
+    "Construction": {
+        "variables": {
+            "buildCost": "400",
+            "buildTime": "25",
+            "buildPriorityOrder": "10",
+        },
+        "functions": [],
+    },
+    "Sensors": {
+        "variables": {
+            "retaliationRange": "4800",
+            "retaliationDistanceFromGoal": "160",
+            "visualRange": "1000",
+            "prmSensorRange": "3500",
+            "secSensorRange": "4500",
+            "detectionStrength": "1",
+        },
+        "functions": [],
+    },
+    "Tactical Overlay Icon": {
+        "variables": {
+            "TOIcon": '"InvertedDiamond"',
+            "TOScale": "1",
+            "TODistanceFade0": "9000",
+            "TODistanceDisappear0": "7000",
+            "TODistanceFade1": "4500",
+            "TODistanceDisappear1": "3500",
+            "TODistanceFade2": "12000",
+            "TODistanceDisappear2": "35000",
+            "TOGroupScale": "1",
+            "TOGroupMergeSize": "0",
+        },
+        "functions": [],
+    },
+    "Overlays": {
+        "variables": {
+            "mouseOverMinFadeSize": "0.045",
+            "mouseOverMaxFadeSize": "0.1",
+            "healthBarStyle": "1",
+            "SMRepresentation": '"HardDot"',
+            "hideNormalAttackUICooldown": "1",
+        },
+        "functions": [],
+    },
+    "Non linear Scaling": {
+        "variables": {
+            "nlips": "0.00045",
+            "nlipsRange": "6000",
+            "nlipsFar": "0.0002",
+            "nlipsFarRange": "10000",
+        },
+        "functions": [],
+    },
+    "Rendering": {
+        "variables": {
+            "meshRenderLimit": "13000",
+            "dotRenderLimit": "10",
+            "visibleInSecondary": "1",
+            "goblinsStartFade": "660",
+            "goblinsOff": "660",
+            "minimumZoomFactor": "0.75",
+        },
+        "functions": [],
+    },
+    "Level of Detail": {
+        "variables": {"minLOD": "0.2", "upLOD": "1500", "downLOD": "1505"},
+        "functions": [],
+    },
+    "Selection": {
+        "variables": {
+            "selectionLimit": "150000",
+            "preciseATILimit": "0",
+            "selectionPriority": "75",
+            "militaryUnit": "0",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
+    "Abilities": {
+        "variables": {},
+        "functions": [
+            {"name": "addAbility", "args": ["MoveCommand", "1", "0"]},
+            {"name": "addAbility", "args": ["CanDock", "1", "1"]},
+            {"name": "addAbility", "args": ['CanLaunch"']},
+            {"name": "addAbility", "args": ["ParadeCommand", "1"]},
+            {"name": "addAbility", "args": ['WaypointMove"']},
+            {
+                "args": ["HyperSpaceCommand", "0", "1", "30", "120", "0", "3"],
+                "name": "addAbility",
+            },
+            {
+                "name": "addAbility",
+                "args": [
+                    "CanAttack",
+                    "1",
+                    "5",
+                    "2",
+                    "0",
+                    "0.35",
+                    "1",
+                    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership",
+                    "JustShoot",
+                ],
+            },
+            {"name": "addAbility", "args": ["SalvageCommand", "1", "200"]},
+            {"name": "addAbility", "args": ["GuardCommand", "1", "3000", "500"]},
+            {"name": "addAbility", "args": ["Harvest", "1", "200", "8", "300"]},
+            {
+                "name": "addAbility",
+                "args": ["HyperspaceViaGateCommand", "1", "3", "1", "0.3"],
+            },
+            {"name": "addAbility", "args": ["RetireAbility", "1", "0"]},
+        ],
+    },
+    "Launching": {
+        "variables": {
+            "launchTimeBetweenTwoFormations": "1",
+            "launchTimeBeforeStart": "1.5",
+            "launchNrOfShipsInDockFormation": "1",
+            "launchFormation": '"delta"',
+        },
+        "functions": [],
+    },
+    "Load Model": {
+        "variables": {},
+        "functions": [{"name": "LoadModel", "args": ["1"]}],
+    },
+    "Weapons": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_tercollector_turret", "Weapon_1", ""],
+            },
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_tercollector_turret", "Weapon_2", ""],
+            },
+        ],
+    },
+    "Shields": {
+        "variables": {},
+        "functions": [{"name": "addShield", "args": ["EMP", "75", "20"]}],
+    },
+    "Engines": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "setEngineBurn",
+                "args": ["6", "3", "3", "4", "0.1", "0.1", "0.1", "15"],
+            }
+        ],
+    },
+    "Addendum": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "loadShipPatchList",
+                "args": [
+                    "data:sound/sfx/ship/",
+                    "0",
+                    "",
+                    "",
+                    "1",
+                    "vasudanfighter",
+                    "",
+                ],
+            }
+        ],
+    },
+    "Scuttle": {
+        "variables": {
+            "minFalloffDamageDist": "15",
+            "maxFalloffDamageDist": "15*3",
+            "maxFalloffScuttleDamageDist": "15*6",
+            "explosiveScuttleDamageOnDeath": "500",
+            "maxFalloffForce": "15*10",
+            "explosiveDamageOnDeath": "100",
+            "radiusDamageEvadeMod": "1.1",
+        },
+        "functions": [],
+    },
+    "Formations": {"variables": {"strikeGroupSpeed": "5000"}, "functions": []},
+}
+SHI_AZRAEL = {
+    "Ship info": {
+        "variables": {
+            "displayedName": '"ST Azrael"',
+            "sobDescription": '"Resource Collector"',
+        },
+        "functions": [],
+    },
+    "Health and Armour": {
+        "variables": {
+            "maxhealth": "2000",
+            "regentime": "200",
+            "minRegenTime": "150",
+            "sideArmourDamage": 'getShipNum(NewShipType, "sideArmourDamage", 1.0)',
+            "rearArmourDamage": 'getShipNum(NewShipType, "rearArmourDamage", 1.0)',
+        },
+        "functions": [],
+    },
+    "Tactics And Multipliers": {
+        "variables": {"defaultROE": '"Defensive"', "defaultStance": '"Neutral"'},
+        "functions": [
+            {"name": "setTacticsMults", "args": ["ENGINEACCEL", "1.05", "0.95", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["THRUSTERACCEL", "1.05", "0.95", "1.0"],
+            },
+            {"name": "setTacticsMults", "args": ["ROTATION", "0.95", "1.05", "1.0"]},
+            {
+                "name": "setTacticsMults",
+                "args": ["ROTATIONACCEL", "1.05", "0.95", "1.0"],
+            },
+        ],
+    },
+    "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
+    "Docking": {
+        "variables": {
+            "holdSlots": "1",
+            "dockTimeBetweenTwoFormations": "1",
+            "dockTimeBeforeStart": "1",
+            "dockNrOfShipsInDockFormation": "1",
+            "dockFormation": '"delta"',
+            "queueFormation": '"dockline"',
+            "dontDockWithOtherRaceShips": "1",
+            "ignoreRaceWhenDocking": "0",
+        },
+        "functions": [],
+    },
+    "Movement": {
+        "variables": {
+            "mass": "450",
+            "thrusterMaxSpeed": "220",
+            "mainEngineMaxSpeed": "220",
+            "rotationMaxSpeed": "60",
+            "thrusterAccelTime": "3",
+            "thrusterBrakeTime": "1",
+            "mainEngineAccelTime": "3",
+            "mainEngineBrakeTime": "1",
+            "rotationAccelTime": "0.2",
+            "rotationBrakeTime": "0.15",
+        },
+        "functions": [],
+    },
+    "Damage & Death": {
+        "variables": {
+            "collisionMultiplier": "1",
+            "dustCloudDamageTime": "160",
+            "nebulaDamageTime": "100",
+            "battleScarCoverage": "1",
+            "sobDieTime": "1.8",
+            "sobSpecialDieTime": "2",
+            "specialDeathSpeed": "40",
+            "chanceOfSpecialDeath": "0",
+            "deadSobFadeTime": "1",
+        },
+        "functions": [],
+    },
+    "Advanced Movement": {
+        "variables": {
+            "thrusterUsage": "1",
+            "accelerationAngle": "35",
+            "mirrorAngle": "0",
+            "secondaryTurnAngle": "0",
+            "maxBankingAmount": "30",
+            "descendPitch": "89",
+            "goalReachEpsilon": "25",
+            "slideMoveRange": "0",
+            "controllerType": '"Ship"',
+            "relativeMoveFactor": "3",
+        },
+        "functions": [],
+    },
+    "Death Tumble": {
+        "variables": {
+            "tumbleStaticX": "10",
+            "tumbleStaticY": "20",
+            "tumbleStaticZ": "5",
+            "tumbleDynamicX": "2",
+            "tumbleDynamicY": "10",
+            "tumbleDynamicZ": "5",
+            "tumbleSpecialDynamicX": "2",
+            "tumbleSpecialDynamicY": "10",
+            "tumbleSpecialDynamicZ": "5",
+        },
+        "functions": [],
+    },
+    "Swaying": {
+        "variables": {
+            "swayUpdateTime": "5",
+            "swayOffsetRandomX": "10",
+            "swayOffsetRandomY": "10",
+            "swayOffsetRandomZ": "10",
+            "swayBobbingFactor": "0.35",
+            "swayRotateFactor": "0",
+        },
+        "functions": [],
+    },
+    "Families": {
+        "variables": {
+            "MinimalFamilyToFindPathAround": '"SuperCap"',
+            "BuildFamily": '"Utility_Shi"',
+            "AttackFamily": '"Resource"',
+            "DockFamily": '"Utility"',
+            "AvoidanceFamily": '"Utility"',
+            "DisplayFamily": '"Utility"',
+            "AutoFormationFamily": '"Frigate"',
+            "CollisionFamily": '"Small"',
+            "ArmourFamily": 'getShipStr(NewShipType, "ArmourFamily", "ResArmour")',
+        },
+        "functions": [],
+    },
+    "Supply": {
+        "variables": {},
+        "functions": [
+            {"name": "setSupplyValue", "args": ["Resource", "1.0"]},
+            {"name": "setSupplyValue", "args": ["Utility", "1.0"]},
+            {"name": "setSupplyValue", "args": ["ResourceCollector", "1.0"]},
+            {"name": "setSupplyValue", "args": ["LayoutResource", "1.0"]},
+        ],
+    },
+    "Ship Counter Rating": {
+        "variables": {
+            "AttackPriorityMultiplier": "0.92",
+            "fighterValue": "0",
+            "corvetteValue": "0",
+            "frigateValue": "0",
+            "neutralValue": "0",
+            "antiFighterValue": "0",
+            "antiCorvetteValue": "0",
+            "antiFrigateValue": "0",
+            "totalValue": "0",
+        },
+        "functions": [],
+    },
+    "Construction": {
+        "variables": {
+            "buildCost": "400",
+            "buildTime": "25",
+            "buildPriorityOrder": "10",
+        },
+        "functions": [],
+    },
+    "Sensors": {
+        "variables": {
+            "retaliationRange": "4800",
+            "retaliationDistanceFromGoal": "160",
+            "visualRange": "1000",
+            "prmSensorRange": "3500",
+            "secSensorRange": "4500",
+            "detectionStrength": "1",
+        },
+        "functions": [],
+    },
+    "Tactical Overlay Icon": {
+        "variables": {
+            "TOIcon": '"InvertedDiamond"',
+            "TOScale": "1",
+            "TODistanceFade0": "9000",
+            "TODistanceDisappear0": "7000",
+            "TODistanceFade1": "4500",
+            "TODistanceDisappear1": "3500",
+            "TODistanceFade2": "12000",
+            "TODistanceDisappear2": "35000",
+            "TOGroupScale": "1",
+            "TOGroupMergeSize": "0",
+        },
+        "functions": [],
+    },
+    "Overlays": {
+        "variables": {
+            "mouseOverMinFadeSize": "0.045",
+            "mouseOverMaxFadeSize": "0.1",
+            "healthBarStyle": "1",
+            "SMRepresentation": '"HardDot"',
+            "hideNormalAttackUICooldown": "1",
+        },
+        "functions": [],
+    },
+    "Non linear Scaling": {
+        "variables": {
+            "nlips": "0.00045",
+            "nlipsRange": "6000",
+            "nlipsFar": "0.0002",
+            "nlipsFarRange": "10000",
+        },
+        "functions": [],
+    },
+    "Rendering": {
+        "variables": {
+            "meshRenderLimit": "13000",
+            "dotRenderLimit": "10",
+            "visibleInSecondary": "1",
+            "goblinsStartFade": "660",
+            "goblinsOff": "660",
+            "minimumZoomFactor": "0.75",
+        },
+        "functions": [],
+    },
+    "Level of Detail": {
+        "variables": {"minLOD": "0.2", "upLOD": "1500", "downLOD": "1505"},
+        "functions": [],
+    },
+    "Selection": {
+        "variables": {
+            "selectionLimit": "150000",
+            "preciseATILimit": "0",
+            "selectionPriority": "75",
+            "militaryUnit": "0",
+        },
+        "functions": [],
+    },
+    "Alternative Hyperspace Gate": {
+        "variables": {
+            "alternativeHyperspaceV": "subspace_gate_small",
+            "alternativeHyperspaceA": "etg/misc/small_subspace",
+            "alternativeHyperspaceTime": "7",
+        },
+        "functions": [],
+    },
+    "Abilities": {
+        "variables": {},
+        "functions": [
+            {"name": "addAbility", "args": ["MoveCommand", "1", "0"]},
+            {"name": "addAbility", "args": ["CanDock", "1", "1"]},
+            {"name": "addAbility", "args": ['CanLaunch"']},
+            {"name": "addAbility", "args": ["ParadeCommand", "1"]},
+            {"name": "addAbility", "args": ['WaypointMove"']},
+            {
+                "args": ["HyperSpaceCommand", "0", "1", "30", "120", "0", "3"],
+                "name": "addAbility",
+            },
+            {
+                "name": "addAbility",
+                "args": [
+                    "CanAttack",
+                    "1",
+                    "5",
+                    "2",
+                    "0",
+                    "0.35",
+                    "1",
+                    "Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership",
+                    "JustShoot",
+                ],
+            },
+            {"name": "addAbility", "args": ["SalvageCommand", "1", "200"]},
+            {"name": "addAbility", "args": ["GuardCommand", "1", "3000", "500"]},
+            {"name": "addAbility", "args": ["Harvest", "1", "200", "8", "300"]},
+            {
+                "name": "addAbility",
+                "args": ["HyperspaceViaGateCommand", "1", "3", "1", "0.3"],
+            },
+            {"name": "addAbility", "args": ["RetireAbility", "1", "0"]},
+        ],
+    },
+    "Launching": {
+        "variables": {
+            "launchTimeBetweenTwoFormations": "1",
+            "launchTimeBeforeStart": "1.5",
+            "launchNrOfShipsInDockFormation": "1",
+            "launchFormation": '"delta"',
+        },
+        "functions": [],
+    },
+    "Load Model": {
+        "variables": {},
+        "functions": [{"name": "LoadModel", "args": ["1"]}],
+    },
+    "Weapons": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_shivlightlaser_turret", "Weapon_1", ""],
+            },
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_shivlightlaser_turret", "Weapon_2", ""],
+            },
+            {
+                "name": "StartShipWeaponConfig",
+                "args": ["gun_shivlightlaser_turret", "Weapon_3", ""],
+            },
+        ],
+    },
+    "Shields": {
+        "variables": {},
+        "functions": [{"name": "addShield", "args": ["EMP", "75", "20"]}],
+    },
+    "Engines": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "setEngineBurn",
+                "args": ["6", "3", "3", "4", "0.1", "0.1", "0.1", "20"],
+            }
+        ],
+    },
+    "Addendum": {
+        "variables": {},
+        "functions": [
+            {
+                "name": "loadShipPatchList",
+                "args": ["data:sound/sfx/ship/", "0", "", "", "1", "shivanutility", ""],
+            }
+        ],
+    },
+    "Scuttle": {
+        "variables": {
+            "minFalloffDamageDist": "15",
+            "maxFalloffDamageDist": "15*3",
+            "maxFalloffScuttleDamageDist": "15*6",
+            "explosiveScuttleDamageOnDeath": "500",
+            "maxFalloffForce": "15*10",
+            "explosiveDamageOnDeath": "100",
+            "radiusDamageEvadeMod": "1.1",
+        },
+        "functions": [],
+    },
+    "Formations": {"variables": {"strikeGroupSpeed": "5000"}, "functions": []},
+}

@@ -17,7 +17,7 @@ StartWeaponConfig(
 	0,
 	0,
 	1,
-	0,
+	1,
 	75,
 	50,
 	0.1,
@@ -29,27 +29,40 @@ StartWeaponConfig(
 
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 19, 19, "")
 
-setAngles(NewWeaponType, 0, -180, 180, 0, 90)
+setAngles(NewWeaponType, 0, -180, 180, -5, 90)
 
 setMiscValues(NewWeaponType, 0, 0)
 
 setPenetration(
 	NewWeaponType,
-	5,
+	30,
 	1,
-	{ Unarmoured = 1.0 },
-	{ LightArmour = 1 },
-	{ MediumArmour = 0.2 },
-	{ HeavyArmour = 0.2 },
-	{ SubSystemArmour = 0.25 },
-	{ TurretArmour = 1 },
-	{ ResArmour = 1 },
-	{ MoverArmour = 1 },
-	{ PlanetKillerArmour = 0 },
-	{ MineArmour = 1 },
-	{ ChunkArmour = 1 }
+	{ Unarmoured = 1 },
+	{ LightArmour = 0.8 },
+	{ MediumArmour = 0.4 },
+	{ HeavyArmour = 0.2 }
 )
 
-setAccuracy(NewWeaponType, 1)
+setAccuracy(
+	NewWeaponType,
+	1,
+	{ Swarmer = 0.01 },
+	{ SpaceMine = 0.35 },
+	{ Torpedo = 0.5 },
+	{ HeavyMissile = 0.5 },
+	{ SmallMissile = 0.5 },
+	{ Fighter = 0.7 },
+	{ Fighter_hw1 = 0.7 },
+	{ Corvette = 0.8 },
+	{ Corvette_hw1 = 0.8 },
+	{ munition = 0.13 },
+	{ Frigate = 0.80 },
+	{ Resource = 0.80 },
+	{ SmallCapitalShip = 0.80 },
+	{ BigCapitalShip = 0.80 },
+	{ ResourceLarge = 0.60 }
+)
+
+
 
 addAnimTurretSound(NewWeaponType, "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

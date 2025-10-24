@@ -1,13 +1,15 @@
 --Shivan
 supplyLimit("Fighter", 135);
-supplyLimit("FSBomber", 135);
+supplyLimit("Bomber", 135);
 supplyLimit("Destroyer", 2);
 supplyLimit("Cruiser", 25);
+supplyLimit("AdvancedCruiser", 4);
 
 supplyShow("Corvette", "Never");
 supplyShow("Frigate", "Never");
 supplyShow("Cruiser", "Always");
-supplyShow("FSBomber", "Always");
+supplyShow("AdvancedCruiser", "Always");
+supplyShow("Bomber", "Always");
 
 supplyShow("LayoutBomber", "Never");
 supplyShow("LayoutCruiser", "Never");
@@ -21,9 +23,6 @@ supplyIndent("Lucifer", 1);
 
 supplyLimit("Sathanas", 1);
 supplyIndent("Sathanas", 1);
-
-supplyLimit("Rakshasa", 5);
-supplyIndent("Rakshasa", 1);
 
 supplyLimit("Moloch", 5);
 supplyIndent("Moloch", 1);

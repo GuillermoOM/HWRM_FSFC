@@ -96,23 +96,32 @@ effects =
             { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
             { "fx_scale", "3", },
         },
-        event2 =
+        event6 =
         {
-            { "anim",     "Weapon_Top", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Top_Muzzle", },
-            { "fx",       "muzzle_flash_combo_small_frigate", },
-            { "sound",    "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_PULASAR_CANNON_BEAM", },
-            { "fx_nlips", "on", },
+            { "anim",     "dmg02", },
+            { "animtime", "-1", },
+            { "marker",   "root", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_LIGHT", },
+            { "fx_scale", "3", },
         },
-        event4 =
+        event7 =
         {
-            { "anim",     "Weapon_Top", },
-            { "animtime", "1", },
-            { "marker",   "Weapon_TopSlave_Muzzle", },
-            { "fx",       "muzzle_flash_combo_small_frigate", },
-            { "sound",    "", },
-            { "fx_nlips", "on", },
-        }
+            { "anim",     "dmg03", },
+            { "animtime", "-1", },
+            { "marker",   "root", },
+            { "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+            { "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_LIGHT", },
+            { "fx_scale", "3", },
+        },
+        event8 =
+        {
+            { "anim",     "death", },
+            { "animtime", "0.15", },
+            { "marker",   "root", },
+            { "fx",       "dmg_cloud_explosion_large", },
+            { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+            { "fx_scale", "2", },
+        },
     },
 }

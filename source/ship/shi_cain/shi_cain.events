@@ -142,69 +142,6 @@ effects =
     },
     events =
     {
-        Firefx =
-        {
-            { "anim",     "Fire", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Beam1_Muzzle", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire1fx =
-        {
-            { "anim",     "Fire1", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun1_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire2fx =
-        {
-            { "anim",     "Fire2", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun2_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire3fx =
-        {
-            { "anim",     "Fire3", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun3_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire4fx =
-        {
-            { "anim",     "Fire4", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun4_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire5fx =
-        {
-            { "anim",     "Fire5", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun5_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
-        Fire6fx =
-        {
-            { "anim",     "Fire6", },
-            { "animtime", "0", },
-            { "marker",   "Weapon_Gun6_Position", },
-            { "fx",       "sunfire_squirt_small2", },
-            { "sound",    "", },
-            { "fx_scale", "1", },
-        },
         event3 =
         {
             { "anim",     "Death", },

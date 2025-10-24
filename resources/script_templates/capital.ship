@@ -140,7 +140,7 @@ setTacticsMults(NewShipType, "FIRERATE", 1.0, 1.25, 1.0)
 --- Formations	
 --------------------------------------------------	
 
-NewShipType.paradeData = "shivan_parade"
+NewShipType.paradeData = "shi_build_parade"
 
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 400
@@ -355,31 +355,31 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Turret05", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret06", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret07", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret08", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret06", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret07", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret08", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret09", "")
 StartShipWeaponConfig(NewShipType, "beam_AARed", "Weapon_Turret10", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret11", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret12", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret13", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret13", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret14", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret15", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret15", "")
 StartShipWeaponConfig(NewShipType, "gun_flak_turret", "Weapon_Turret16", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret17", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret18", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret17", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret18", "")
 StartShipWeaponConfig(NewShipType, "miss_pihrana", "Weapon_Turret19", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret20", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret21", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret22", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret23", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret24", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret25", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret20", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret21", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret22", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret23", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret24", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret25", "")
 StartShipWeaponConfig(NewShipType, "Miss_FighterKiller", "Weapon_Turret26", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret27", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret28", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret29", "")
-StartShipWeaponConfig(NewShipType, "gun_shivlaser_turret", "Weapon_Turret30", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret27", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret28", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret29", "")
+StartShipWeaponConfig(NewShipType, "gun_shivsuperlaser_turret", "Weapon_Turret30", "")
 
 --------------------------------------------------
 --- HardPoints

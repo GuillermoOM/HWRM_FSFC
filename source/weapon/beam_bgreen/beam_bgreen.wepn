@@ -27,43 +27,36 @@ StartWeaponConfig(
 	5000
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20000, 20000, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 26400, 26400, "")
 
-setAngles(NewWeaponType, 80, 0, 0, 0, 0)
+setAngles(NewWeaponType, 45, 0, 0, 0, 0)
 
 setPenetration(
 	NewWeaponType,
-	50,
+	100,
 	1,
-	{ PlanetKillerArmour = 0 },
-	{ SwarmerArmor = 0.10 },
-	{ SpaceMineArmor = 1 },
-	{ TorpedoArmor = 0 },
-	{ HeavyMissileArmor = 0 },
-	{ SmallMissileArmor = 0 },
-	{ SubSystemArmour = 0.3 },
-	{ MediumArmour = 0.5 },
-	{ HeavyArmour = 1.0 }
+	{ Unarmoured = 1 },
+	{ LightArmour = 1 },
+	{ MediumArmour = 0.8 },
+	{ HeavyArmour = 0.5 }
 )
 
 setAccuracy(
 	NewWeaponType,
 	1,
+	{ Swarmer = 0 },
+	{ SpaceMine = 0 },
+	{ Torpedo = 0 },
+	{ HeavyMissile = 0 },
+	{ SmallMissile = 0 },
 	{ Fighter = 0 },
 	{ Fighter_hw1 = 0 },
 	{ Corvette = 0 },
 	{ Corvette_hw1 = 0 },
-	{ Frigate = 0.5 },
-	{ Utility = 0.3 },
-	{ munition = 0.0 },
-	{ SmallCapitalShip = 0.65 },
-	{ BigCapitalShip = 0.8 },
-	{ Mothership = 1 },
-	{ Emplacement = 0 },
-	{ UnAttackable = 0 },
-	{ SubSystem = 0 },
+	{ munition = 0 },
+	{ Frigate = 0.80 },
 	{ Resource = 0 },
-	{ ResourceLarge = 0.5 },
-	{ Capturer = 0.5 },
-	{ Chimera = 1 }
+	{ SmallCapitalShip = 0.80 },
+	{ BigCapitalShip = 0.80 },
+	{ ResourceLarge = 0.60 }
 )

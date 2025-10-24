@@ -18,17 +18,6 @@ effects =
             markers =
             { "", },
         },
-        animation2 =
-        {
-            name = "Fire1",
-            length = 1,
-            loop = 0,
-            parent = "",
-            minimum = 0,
-            maximum = 0,
-            markers =
-            { "", },
-        },
         animation3 =
         {
             name = "Damage",

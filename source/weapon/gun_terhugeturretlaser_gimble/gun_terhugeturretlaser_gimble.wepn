@@ -1,0 +1,79 @@
+StartWeaponConfig(
+    NewWeaponType,
+    "Gimble",
+    "Bullet",
+    "gun_terturretHuge",
+    "Normal",
+    1400,
+    4200,
+    0,
+    0,
+    0,
+    0,
+    6,
+    1,
+    1,
+    4,
+    0,
+    0,
+    1,
+    1,
+    75,
+    75,
+    0.1,
+    "Normal",
+    0,
+    0,
+    0)
+
+AddWeaponResult(NewWeaponType,
+    "Hit",
+    "DamageHealth",
+    "Target",
+    250,
+    250,
+    "")
+
+setAngles(NewWeaponType,
+    90,
+    0,
+    0,
+    0,
+    0)
+
+setMiscValues(NewWeaponType,
+    0,
+    0.5)
+
+setPenetration(
+    NewWeaponType,
+    30,
+    1,
+    { Unarmoured = 1 },
+    { LightArmour = 1 },
+    { MediumArmour = 0.8 },
+    { HeavyArmour = 0.5 }
+)
+
+setAccuracy(
+    NewWeaponType,
+    1,
+    { Swarmer = 0 },
+    { SpaceMine = 0 },
+    { Torpedo = 0 },
+    { HeavyMissile = 0 },
+    { SmallMissile = 0 },
+    { Fighter = 0 },
+    { Fighter_hw1 = 0 },
+    { Corvette = 0 },
+    { Corvette_hw1 = 0 },
+    { munition = 0 },
+    { Frigate = 0.80 },
+    { Resource = 0 },
+    { SmallCapitalShip = 0.80 },
+    { BigCapitalShip = 0.80 },
+    { ResourceLarge = 0.60 }
+)
+
+addAnimTurretSound(NewWeaponType,
+    "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

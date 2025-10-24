@@ -15,7 +15,7 @@ NewSubSystemType.displayedName = "Crypt Hammer - Heavy Beam Cannon"
 NewSubSystemType.sobDescription = "Range: 8000m \nDamage per Shot: 46000 \nDPS: 1533 (sustained) \nCycle Time: 30s"
 
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "beam_bgreensa_turret"
+NewSubSystemType.typeString = "beam_bgreen_turret"
 
 NewSubSystemType.innate = 1
 
@@ -112,4 +112,4 @@ LoadModel(NewSubSystemType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_bgreensa_turret", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_bgreen_turret", "Weapon_IonCan1", "Weapon_IonCan1")

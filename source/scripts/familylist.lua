@@ -399,10 +399,6 @@ attackFamily = {
 		numParam = 1,
 	},
 	{
-		name = "Awacs",
-		numParam = 1,
-	},
-	{
 		name = "Munition",
 		numParam = 1,
 	},
@@ -868,7 +864,7 @@ unitcapsFamily = {
 	},
 
 	{
-		name = "FSBomber",
+		name = "Bomber",
 		numParam = 24,
 		stringParam = "Bombers",
 	},
@@ -899,21 +895,15 @@ unitcapsFamily = {
 		numParam = 33,
 		stringParam = "$2124",
 	},
-
 	{
 		name = "Cruiser",
 		numParam = 34,
 		stringParam = "Cruisers",
 	},
 	{
-		name = "Aeolus",
+		name = "AdvancedCruiser",
 		numParam = 35,
-		stringParam = "GTC Aeolus",
-	},
-	{
-		name = "Rakshasa",
-		numParam = 36,
-		stringParam = "SC Rakshasa",
+		stringParam = "Advanced Cruisers",
 	},
 
 	{

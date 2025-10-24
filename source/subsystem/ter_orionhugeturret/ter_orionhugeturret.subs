@@ -15,7 +15,7 @@ NewSubSystemType.displayedName = "Terran Huge Turret"
 NewSubSystemType.sobDescription = "Range: 4200m \nDamage per Shot: 500 \nDPS: 375 (sustained) \nCycle Time: 4s"
 
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "gun_terhugeturret"
+NewSubSystemType.typeString = "gun_terhuge_turret"
 
 NewSubSystemType.innate = 1
 
@@ -110,4 +110,4 @@ LoadModel(NewSubSystemType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "gun_terhugeturret", "Weapon_IonCan1", "")
+StartSubSystemWeaponConfig(NewSubSystemType, "gun_terhuge_turret", "Weapon_IonCan1", "")

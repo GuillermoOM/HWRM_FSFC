@@ -12,17 +12,17 @@ StartWeaponConfig(
 	0,
 	1,
 	1,
-	0,
+	1,
 	0.15,
 	0,
 	0,
 	1,
-	0,
+	1,
 	180,
 	180,
 	0.1,
 	"Normal",
-	1,
+	0,
 	0,
 	0
 )
@@ -31,7 +31,7 @@ AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 5, 5, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
 
-setAngles(NewWeaponType, 0, -180, 180, -2.5, 80)
+setAngles(NewWeaponType, 0, -180, 180, -5, 80)
 
 setMiscValues(NewWeaponType, 0, 0)
 
@@ -40,37 +40,29 @@ setPenetration(
 	5,
 	1,
 	{ Unarmoured = 1 },
-	{ LightArmour = 1 },
-	{ MediumArmour = 1 },
-	{ HeavyArmour = 1 },
-	{ SubSystemArmour = 1 },
-	{ TurretArmour = 1 },
-	{ ResArmour = 1 },
-	{ MoverArmour = 1 },
-	{ PlanetKillerArmour = 0 },
-	{ MineArmour = 1 },
-	{ ChunkArmour = 1 }
+	{ LightArmour = 0.8 },
+	{ MediumArmour = 0.4 },
+	{ HeavyArmour = 0.2 }
 )
 
 setAccuracy(
 	NewWeaponType,
 	1,
-	{ Fighter = 0.1 },
-	{ Corvette = 0.5 },
-	{ Frigate = 0 },
-	{ Utility = 1 },
-	{ munition = 0.01 },
-	{ Torpedo = 1 },
-	{ SmallCapitalShip = 0.5 },
-	{ BigCapitalShip = 0.5 },
-	{ Mothership = 0.5 },
-	{ Emplacement = 1 },
-	{ UnAttackable = 0 },
-	{ SubSystem = 0 },
-	{ Resource = 1 },
-	{ ResourceLarge = 1 },
-	{ Capturer = 1 },
-	{ Chimera = 1 }
+	{ Swarmer = 0.01 },
+	{ SpaceMine = 0.35 },
+	{ Torpedo = 0.5 },
+	{ HeavyMissile = 0.5 },
+	{ SmallMissile = 0.5 },
+	{ Fighter = 0.7 },
+	{ Fighter_hw1 = 0.7 },
+	{ Corvette = 0.8 },
+	{ Corvette_hw1 = 0.8 },
+	{ munition = 0.13 },
+	{ Frigate = 0.80 },
+	{ Resource = 0.80 },
+	{ SmallCapitalShip = 0.80 },
+	{ BigCapitalShip = 0.80 },
+	{ ResourceLarge = 0.60 }
 )
 
 addAnimTurretSound(NewWeaponType, "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

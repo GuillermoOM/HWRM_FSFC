@@ -3,104 +3,125 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-effects = {
-	animations = {
-		animation1 = {
+effects =
+{
+	animations =
+	{
+		animation1 =
+		{
 			name = "Weapon_Top",
 			length = 0.7,
 			loop = 0,
 			parent = "",
 			minimum = 0,
 			maximum = 0,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation2 = {
+		animation2 =
+		{
 			name = "Death",
 			length = 1,
 			loop = 0,
 			parent = "",
 			minimum = 0,
 			maximum = 0,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation3 = {
+		animation3 =
+		{
 			name = "Weapon_Bottom",
 			length = 1,
 			loop = 0,
 			parent = "",
 			minimum = 0,
 			maximum = 0,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation4 = {
+		animation4 =
+		{
 			name = "dmg01",
 			length = 1,
 			loop = 1,
 			parent = "Damage",
 			minimum = 0.25,
 			maximum = 1,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation5 = {
+		animation5 =
+		{
 			name = "dmg02",
 			length = 1,
 			loop = 1,
 			parent = "Damage",
 			minimum = 0.5,
 			maximum = 1,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation6 = {
+		animation6 =
+		{
 			name = "dmg03",
 			length = 1,
 			loop = 1,
 			parent = "Damage",
 			minimum = 0.75,
 			maximum = 1,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
-		animation7 = {
+		animation7 =
+		{
 			name = "Damage",
 			length = 1,
 			loop = 1,
 			parent = "",
 			minimum = 0,
 			maximum = 0,
-			markers = { "" },
+			markers =
+			{ "", },
 		},
 	},
-	events = {
-		event1 = {
-			{ "anim", "Death" },
-			{ "animtime", "0.4" },
-			{ "marker", "Root" },
-			{ "fx", "dmg_cloud_main_explosion_combo" },
-			{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY" },
-			{ "fx_scale", "3" },
+	events =
+	{
+		event1 =
+		{
+			{ "anim",     "Death", },
+			{ "animtime", "0.4", },
+			{ "marker",   "Root", },
+			{ "fx",       "dmg_cloud_main_explosion_combo", },
+			{ "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+			{ "fx_scale", "3", },
 		},
-		event2 = {
-			{ "anim", "Weapon_Top" },
-			{ "animtime", "0" },
-			{ "marker", "Weapon_Top_Muzzle" },
-			{ "fx", "muzzle_flash_combo_small_frigate" },
-			{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_PULASAR_CANNON_BEAM" },
-			{ "fx_nlips", "on" },
+		event6 =
+		{
+			{ "anim",     "dmg02", },
+			{ "animtime", "-1", },
+			{ "marker",   "root", },
+			{ "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+			{ "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_LIGHT", },
+			{ "fx_scale", "3", },
 		},
-		event3 = {
-			{ "anim", "Weapon_Bottom" },
-			{ "animtime", "0" },
-			{ "marker", "Root" },
-			{ "fx", "sunfire_squirt_yellow" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
+		event7 =
+		{
+			{ "anim",     "dmg03", },
+			{ "animtime", "-1", },
+			{ "marker",   "root", },
+			{ "fx",       "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray", },
+			{ "sound",    "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_LIGHT", },
+			{ "fx_scale", "3", },
 		},
-		event4 = {
-			{ "anim", "Weapon_Top" },
-			{ "animtime", "1" },
-			{ "marker", "Weapon_TopSlave_Muzzle" },
-			{ "fx", "muzzle_flash_combo_small_frigate" },
-			{ "sound", "" },
-			{ "fx_nlips", "on" },
+		event8 =
+		{
+			{ "anim",     "death", },
+			{ "animtime", "0.15", },
+			{ "marker",   "root", },
+			{ "fx",       "dmg_cloud_explosion_large", },
+			{ "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+			{ "fx_scale", "2", },
 		},
 	},
 }

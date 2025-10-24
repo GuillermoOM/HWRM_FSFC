@@ -1,0 +1,65 @@
+StartWeaponConfig(
+	NewWeaponType,
+	"AnimatedTurret",
+	"Bullet",
+	"gun_FlakShell",
+	"Normal",
+	3000,
+	2500,
+	0,
+	0,
+	0,
+	0,
+	1,
+	1,
+	1,
+	0.67,
+	0,
+	0,
+	1,
+	1,
+	90,
+	90,
+	0.5,
+	"Normal",
+	1,
+	0,
+	0
+)
+
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 10, 10, "")
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
+AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "Exp_FlakBurst")
+
+setAngles(NewWeaponType, 0, -180, 180, -5, 80)
+
+setMiscValues(NewWeaponType, 0, 0)
+
+setPenetration(
+	NewWeaponType,
+	5,
+	1,
+	{ Unarmoured = 2 }
+)
+
+setAccuracy(
+	NewWeaponType,
+	1,
+	{ Swarmer = 0.01 },
+	{ SpaceMine = 0.35 },
+	{ Torpedo = 0.5 },
+	{ HeavyMissile = 0.5 },
+	{ SmallMissile = 0.5 },
+	{ Fighter = 0.3 },
+	{ Fighter_hw1 = 0.3 },
+	{ Corvette = 0.5 },
+	{ Corvette_hw1 = 0.5 },
+	{ munition = 0.13 },
+	{ Frigate = 0.80 },
+	{ Resource = 0.80 },
+	{ SmallCapitalShip = 0.80 },
+	{ BigCapitalShip = 0.80 },
+	{ ResourceLarge = 0.60 }
+)
+
+addAnimTurretSound(NewWeaponType, "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

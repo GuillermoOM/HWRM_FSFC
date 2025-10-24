@@ -1,8 +1,9 @@
 --Vasudan
 supplyLimit("Fighter", 135)
-supplyLimit("FSBomber", 135)
+supplyLimit("Bomber", 135)
 supplyLimit("Destroyer", 2)
 supplyLimit("Cruiser", 25)
+supplyLimit("AdvancedCruiser", 5)
 
 supplyLimit("AWACS", 2)
 supplyLimit("Imhotep", 1)
@@ -13,7 +14,8 @@ supplyLimit("Installation", 1)
 supplyShow("Corvette", "Never")
 supplyShow("Frigate", "Never")
 supplyShow("Cruiser", "Always")
-supplyShow("FSBomber", "Always")
+supplyShow("AdvancedCruiser", "Always")
+supplyShow("Bomber", "Always")
 supplyShow("Installation", "Always")
 
 supplyIndent("AWACS", 1)

@@ -1,24 +1,81 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_lamprey", "Normal", 1800, 1800, 0, 0, 0, 0, 1, 1, 1,
-    0.6, 0, 0, 0, 0, 1, 1, 1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType,
+    "Gimble",
+    "Bullet",
+    "gun_lamprey",
+    "Normal",
+    1800,
+    1800,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0.6,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    "Normal",
+    0,
+    0,
+    0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 20, 20, "")
-AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "exp_lampreyblast")
-AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "exp_lampreyblast")
-AddWeaponResult(NewWeaponType, "Hit", "Disable", "Target", 10, 25, "")
+AddWeaponResult(NewWeaponType,
+    "Hit",
+    "DamageHealth",
+    "Target",
+    20,
+    20,
+    "")
+AddWeaponResult(NewWeaponType,
+    "Hit",
+    "SpawnWeaponFire",
+    "Target",
+    0,
+    0,
+    "exp_lampreyblast")
+AddWeaponResult(NewWeaponType,
+    "Miss",
+    "SpawnWeaponFire",
+    "Target",
+    0,
+    0,
+    "exp_lampreyblast")
+AddWeaponResult(NewWeaponType,
+    "Hit",
+    "Disable",
+    "Target",
+    10,
+    25,
+    "")
 
-setAngles(NewWeaponType, 10, 0, 0, 0, 0)
+setAngles(NewWeaponType,
+    10,
+    0,
+    0,
+    0,
+    0)
 
-setPenetration(NewWeaponType, 5, 1,
-    { Unarmoured = 0, },
-    { LightArmour = 0, },
-    { MediumArmour = 0.1, },
-    { HeavyArmour = 0.1, },
-    { SubSystemArmour = 0.0, },
-    { TurretArmour = .1, },
-    { ResArmour = .1, },
-    { MoverArmour = 1, },
-    { PlanetKillerArmour = 1, },
-    { MineArmour = 1, },
-    { ChunkArmour = 1, })
+setPenetration(NewWeaponType,
+    5,
+    1,
+    { Unarmoured = 0.5,
+    },
+    { LightArmour = 0.1,
+    },
+    { MediumArmour = 0.1,
+    },
+    { HeavyArmour = 0.1,
+    },
+    { SubSystemArmour = 0.5,
+    },
+    { TurretArmour = .5,
+    })
 
-setAccuracy(NewWeaponType, 1)
+setAccuracy(NewWeaponType,
+    1)

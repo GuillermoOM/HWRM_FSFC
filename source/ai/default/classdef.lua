@@ -44,7 +44,7 @@ squadclass[eScout] = {
 	TER_PHAROS,
 
 	SHI_ASTAROTH,
-	SHI_DRAGON,
+	SHI_SCORPION,
 
 	VAS_SETEKH,
 	VAS_PTAH,

@@ -1,21 +1,62 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "gun_kayser", "Normal", 2600, 1950, 0, 0, 0, 0, 1, 1, 1, 0.25, 0, 0,
-    0, 0, 1, 1, 1, "Normal", 0, 0, 0)
+StartWeaponConfig(
+    NewWeaponType,
+    "Gimble",
+    "Bullet",
+    "gun_kayser",
+    "Normal",
+    2600,
+    1950,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0.25,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    "Normal",
+    0,
+    0,
+    0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 28, 28, "")
+AddWeaponResult(NewWeaponType,
+    "Hit",
+    "DamageHealth",
+    "Target",
+    28,
+    28,
+    "")
 
-setAngles(NewWeaponType, 10, 0, 0, 0, 0)
+setAngles(NewWeaponType,
+    10,
+    0,
+    0,
+    0,
+    0)
 
-setPenetration(NewWeaponType, 5, 1,
-    { Unarmoured = 1, },
-    { LightArmour = 1, },
-    { MediumArmour = 0.8, },
-    { HeavyArmour = 0.4, },
-    { SubSystemArmour = 0.25, },
-    { TurretArmour = 0.25, },
-    { ResArmour = 1, },
-    { MoverArmour = 1, },
-    { PlanetKillerArmour = 1, },
-    { MineArmour = 1, },
-    { ChunkArmour = 1, })
+setPenetration(
+	NewWeaponType,
+	5,
+	1,
+	{ Unarmoured = 1.25 },
+	{ LightArmour = 0.8 },
+	{ MediumArmour = 0.4 },
+	{ HeavyArmour = 0.4 },
+	{ SubSystemArmour = 0.35 },
+	{ TurretArmour = 0.35 },
+	{ ResArmour = 1 },
+	{ MoverArmour = 1 },
+	{ PlanetKillerArmour = 0.85 },
+	{ MineArmour = 1 },
+	{ ChunkArmour = 1 }
+)
 
-    setAccuracy(NewWeaponType, 1);
+setAccuracy(NewWeaponType,
+    1);

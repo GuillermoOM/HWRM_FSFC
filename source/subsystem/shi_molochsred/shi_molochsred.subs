@@ -105,4 +105,4 @@ LoadModel(NewSubSystemType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartSubSystemWeaponConfig(NewSubSystemType, "beam_sred", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "beam_sredmoloch", "Weapon_IonCan1", "Weapon_IonCan1")

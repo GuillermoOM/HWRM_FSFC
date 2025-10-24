@@ -106,6 +106,58 @@ effects =
     },
     events =
     {
+        event1 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "FIERY_EXPLOSION_WAVE", },
+            { "sound",    "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+            { "fx_scale", "0.5", },
+        },
+        trail1 =
+        {
+            { "anim",     "Trail", },
+            { "animtime", "0", },
+            { "marker",   "EngineNozzle1", },
+            { "fx",       "fighter_trail_spray", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        trail2 =
+        {
+            { "anim",     "Trail", },
+            { "animtime", "0", },
+            { "marker",   "EngineNozzle2", },
+            { "fx",       "fighter_trail_spray", },
+            { "sound",    "", },
+            { "fx_scale", "1", },
+        },
+        event3 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "FIERY_TRAIL_SPRAY", },
+            { "sound",    "EXPLOSION/DEATHTRAIL", },
+            { "fx_scale", "5", },
+        },
+        event4 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "fiery_trail_spray_small", },
+            { "fx_scale", "5", },
+        },
+        event5 =
+        {
+            { "anim",     "Deathtrail", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "fiery_flash_ring_long", },
+            { "fx_scale", "30", },
+        },
         event6 =
         {
             { "anim",     "Death", },
@@ -286,6 +338,15 @@ effects =
             { "fx",       "fighter_AB_combo", },
             { "sound",    "", },
             { "fx_scale", "1", },
+        },
+        ABStop =
+        {
+            { "anim",     "ABStop", },
+            { "animtime", "0", },
+            { "marker",   "EngineNozzle1, EngineNozzle2", },
+            { "fx",       "", },
+            { "sound",    "SPECIAL/AB_End", },
+            { "fx_scale", "0.25", },
         },
     },
 }
