@@ -285,13 +285,13 @@ loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'TerranCruis
 --- Weapons
 --------------------------------------------------
 
--- StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun1', '')
--- StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun3', '')
--- StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun4', '')
--- StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun5', '')
--- StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun6', '')
--- StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun7', '')
--- StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun8', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun1', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun3', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Gun4', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun5', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun6', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun7', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Gun8', '')
 
 --------------------------------------------------
 --- Latch Points

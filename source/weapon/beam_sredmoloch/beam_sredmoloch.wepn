@@ -35,7 +35,7 @@ AddWeaponResult(NewWeaponType,
     "")
 
 setAngles(NewWeaponType,
-    45,
+    80,
     0,
     0,
     0,
