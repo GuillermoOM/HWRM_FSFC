@@ -1253,7 +1253,7 @@ VAS_SERAPIS = {
             },
             {
                 "name": "StartShipWeaponConfig",
-                "args": ["gun_maxim", "Weapon_FrontGun2", ""],
+                "args": ["gun_prometheuss", "Weapon_FrontGun2", ""],
             },
             {
                 "name": "StartShipWeaponConfig",

@@ -18,39 +18,14 @@ params = """
 """
 
 p_ships = [
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
     "ter_orion",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_colossus",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "shi_moloch"
+    "ter_ursa",
+    "ter_hygiea",
 ]
 
 h_ships = [
     "shi_demon",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_elysium",
-    "ter_leviathan"
+    "shi_scorpion"
 ]
 
 ships_list = []

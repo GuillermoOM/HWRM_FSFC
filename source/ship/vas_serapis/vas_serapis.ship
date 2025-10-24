@@ -307,7 +307,7 @@ LoadModel(NewShipType, 1)
 --------------------------------------------------
 
 StartShipWeaponConfig(NewShipType, 'gun_mekhu', 'Weapon_FrontGun', '')
-StartShipWeaponConfig(NewShipType, 'gun_maxim', 'Weapon_FrontGun2', '')
+StartShipWeaponConfig(NewShipType, 'gun_prometheuss', 'Weapon_FrontGun2', '')
 StartShipWeaponConfig(NewShipType, 'miss_harpoon', 'Weapon_Missile', '')
 StartShipWeaponConfig(NewShipType, 'miss_empadv', 'Weapon_Missile2', '')
 

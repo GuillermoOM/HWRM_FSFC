@@ -609,7 +609,6 @@ VAS_IMHOTEP = {
                 "name": "addAbility",
                 "args": ["HyperspaceViaGateCommand", "1", "3", ".7", "0.3"],
             },
-            {"name": "addAbility", "args": ["CanBeCaptured", "30", "0.1", 'CapCap"']},
             {"name": "addAbility", "args": ["SensorPing", "1", "0", "15", "4"]},
             {
                 "name": "addAbility",
