@@ -53,6 +53,9 @@ This is still a long way to go, please follow up closer development on the githu
   - All ships available
   - AI
   - working fleet chatter
+- Multiplayer
+- Music
+- Menu and Loading Screen
 
 ## Current Issues
 
@@ -69,9 +72,8 @@ This is still a long way to go, please follow up closer development on the githu
 
 ## Current Roadmap
 
-1. Enable Multiplayer (for testing purposes)
-2. Add capital ships subsystems (missing on many ships, needed before implementing research)
-3. Reintegrate Research
-4. Add FS Gametypes
-5. Add FS Maps
-6. Add Gauntlet Gametype (From existing mod)
+1. Add capital ships subsystems (missing on many ships, needed before implementing research)
+2. Reintegrate Research
+3. Add FS Gametypes
+4. Add FS Maps
+5. Add Gauntlet Gametype (From existing mod)
