@@ -210,15 +210,6 @@ build = {
 		Description = "GTD Hecate",
 	},
 	-------------------------------------------------------------------------------
-	-- PRODUCTION MODULE SUBSYSTEMS
-
-	-------------------------------------------------------------------------------
-	-- ABILITY MODULES
-
-	-------------------------------------------------------------------------------
-	-- SENSOR MODULES
-
-	-------------------------------------------------------------------------------
 	-- SHIPS
 
 	-- Fighters ---------------
@@ -226,7 +217,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_loki",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "GTF Loki - Recon",
@@ -236,7 +227,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_perseus",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "GTF Perseus - Interceptor",
@@ -246,7 +237,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_apollo",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
 		DisplayedName = "GTF Apollo - Space Superiority",
@@ -256,7 +247,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_myrmidon",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
 		DisplayedName = "GTF Myrmidon - Adv. Superiority",
@@ -266,7 +257,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ares",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 5,
 		DisplayedName = "GTF Ares - Strategic Assault",
@@ -276,7 +267,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_erinyes",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 6,
 		DisplayedName = "GTF Erinyes - Heavy Assault",
@@ -286,7 +277,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_hercules",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 7,
 		DisplayedName = "GTF Hercules - Assault",
@@ -296,7 +287,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_herculesmk2",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 8,
 		DisplayedName = "GTF Hercules Mk. II - Assault",
@@ -306,7 +297,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_pegasus",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 9,
 		DisplayedName = "GTF Pegasus - Stealth Recon",
@@ -316,7 +307,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_valkyrie",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
 		DisplayedName = "GTF Valkyrie - Interceptor",
@@ -326,7 +317,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ulysses",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 11,
 		DisplayedName = "GTF Ulysses - Adv. Space Superiority",
