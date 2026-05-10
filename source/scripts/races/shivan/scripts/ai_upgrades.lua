@@ -1,158 +1,158 @@
+-- Shivan AI Upgrades and Research Progression
 
-aitrace("LOADING SHIVAN UPGRADE INFO")
+-- Legacy Compatibility Layer
+if (CPUPLAYERS_NORUSHTIME5 == nil) then CPUPLAYERS_NORUSHTIME5 = -1 end
+if (CPUPLAYERS_NORUSHTIME10 == nil) then CPUPLAYERS_NORUSHTIME10 = -1 end
+if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
 
+function Util_CheckResearch_Shivan(id)
+	if (id == nil) then
+		return nil
+	end
+	if (type(id) == "number") then
+		if (IsResearchDone(id) == 0 and IsResearchAvailable(id) == 1) then
+			return 1
+		end
+	end
+	return nil
+end
 
-
-
-
-
-function DoUpgradeDemand_Shivan()
-
-	-- ResearchDemandSet( INTERCEPTORMAXSPEEDUPGRADE1, 5 )
-	-- ResearchDemandSet( ATTACKBOMBERMAXSPEEDUPGRADE1, 5 )
-	-- ResearchDemandSet( ASSAULTCORVETTEHEALTHUPGRADE1, 5 )
-	-- ResearchDemandSet( ASSAULTCORVETTEMAXSPEEDUPGRADE1, 5 )
-	-- ResearchDemandSet( PULSARCORVETTEHEALTHUPGRADE1, 2 )
-	-- ResearchDemandSet( TORPEDOFRIGATEHEALTHUPGRADE1, 2 )	
-	-- ResearchDemandSet( TORPEDOFRIGATEMAXSPEEDUPGRADE1, 2 )	
-	-- ResearchDemandSet( IONCANNONFRIGATEHEALTHUPGRADE1, 2 )	
-	-- ResearchDemandSet( IONCANNONFRIGATEMAXSPEEDUPGRADE1, 2 )
-	-- ResearchDemandSet( ASSAULTFRIGATEHEALTHUPGRADE1, 2 )
-	-- ResearchDemandSet( MOTHERSHIPBUILDSPEEDUPGRADE1, 2 )
-
-	
-	-- if (s_militaryStrength > 10 or g_LOD == 0) then
-	-- 	inc_upgrade_demand( rt_mothership, 0.5  )
-	-- 	ResearchDemandAdd( MOTHERSHIPBUILDSPEEDUPGRADE1, 0.5 )
-	-- 	local numPlatforms = numActiveOfClass( s_playerIndex, ePlatform )
-	-- 	if (numPlatforms > 1) then
-	-- 		local numGunTurret = NumSquadrons( HGN_GUNTURRET )
-	-- 		if (numGunTurret > 1) then
-	-- 			inc_upgrade_demand( rt_platform.gunturret, numGunTurret*1 )
-	-- 		end
-	-- 		local numIonTurret = NumSquadrons( HGN_IONTURRET )
-	-- 		if (numIonTurret > 1) then
-	-- 			inc_upgrade_demand( rt_platform.ionturret, numIonTurret*1 )
-	-- 		end
-	-- 	end
-	-- 	local numCollectors = NumSquadrons( kCollector )
-	-- 	if (numCollectors > 0) then
-	-- 		inc_upgrade_demand( rt_collector, numCollectors*.5 )
-	-- 	end
-	-- 	local numRefinery = NumSquadrons( kRefinery )
-	-- 	if (numRefinery > 0) then
-	-- 		inc_upgrade_demand( rt_refinery, numRefinery*1.5 )
-	-- 	end
-	-- 	local numCarrier = NumSquadrons( kCarrier )
-	-- 	if (numCarrier > 0) then
-	-- 		inc_upgrade_demand( rt_carrier, numCarrier*1 )
-	-- 		ResearchDemandAdd( CARRIERBUILDSPEEDUPGRADE1, numCarrier*1.25 )
-	-- 	end
-	-- 	local numShipYards = NumSquadrons( kShipYard )
-	-- 	if (numShipYards > 0) then
-	-- 		inc_upgrade_demand( rt_shipyard, numShipYards*1.5  )
-	-- 		ResearchDemandAdd( SHIPYARDBUILDSPEEDUPGRADE1, numShipYards*1.75 )
-	-- 	end
-	-- end
-	-- local numFighter = numActiveOfClass( s_playerIndex, eFighter )
-	-- if (numFighter > 1) then
-	-- 	local numInterceptors = NumSquadrons( kInterceptor )
-	-- 	if (numInterceptors > 1) then
-	-- 		inc_upgrade_demand( rt_fighter.interceptor, numInterceptors*1 )
-	-- 	end
-	-- 	local numBombers = NumSquadrons( kBomber )
-	-- 	if (numBombers > 1) then
-	-- 		inc_upgrade_demand( rt_fighter.bomber, numBombers*1.5 )
-	-- 	end
-	-- end
-	-- local numBattleCruiser = NumSquadrons( kBattleCruiser )
-	-- if (numBattleCruiser > 0) then
-	-- 	inc_upgrade_demand( rt_battlecruiser, numBattleCruiser*2.5  )
-	-- end
-	-- local numDestroyers = NumSquadrons( kDestroyer )
-	-- if (numDestroyers > 0) then
-	-- 	inc_upgrade_demand( rt_destroyer, numDestroyers*2  )
-	-- end
-	-- local numCorvette = numActiveOfClass( s_playerIndex, eCorvette )
-	-- if (numCorvette > 1) then
-	-- 	local numAssaultCorvette = NumSquadrons( HGN_ASSAULTCORVETTE )
-	-- 	if (numAssaultCorvette>2) then
-	-- 		inc_upgrade_demand( rt_corvette.assault, numAssaultCorvette*1.25 )
-	-- 	end
-	-- 	local numPulsarCorvette = NumSquadrons( HGN_PULSARCORVETTE )
-	-- 	if (numPulsarCorvette>2) then
-	-- 		inc_upgrade_demand( rt_corvette.pulsar, numPulsarCorvette*1.25 )
-	-- 	end
-	-- end
-	-- local numFrigate = numActiveOfClass( s_playerIndex, eFrigate )
-	-- if (numFrigate > 2) then
-	-- 	local numTorpedoFrigate = NumSquadrons( HGN_TORPEDOFRIGATE )
-	-- 	if (numTorpedoFrigate>2) then
-	-- 		inc_upgrade_demand( rt_frigate.torpedo, numTorpedoFrigate*1.5 )
-	-- 	end
-	-- 	local numIonFrigate = NumSquadrons( HGN_IONCANNONFRIGATE )
-	-- 	if (numIonFrigate>2) then
-	-- 		inc_upgrade_demand( rt_frigate.ioncannon, numIonFrigate*1.5 )
-	-- 	end
-	-- 	local numAssaultFrigate = NumSquadrons( HGN_ASSAULTFRIGATE )
-	-- 	if (numAssaultFrigate>2) then
-	-- 		inc_upgrade_demand( rt_frigate.assault, numAssaultFrigate*1.5 )
-	-- 	end
-	-- end
+function ResearchDemandSet_Shivan(id, demand)
+	if (id ~= nil and type(id) == "number" and id ~= -1) then
+		ResearchDemandSet(id, demand)
+	end
 end
 
 function DoResearchTechDemand_Shivan()
-	-- local numShipyards = NumSquadrons(kShipYard) + NumSquadronsQ(kShipYard)
-	-- if (numShipyards > 0 and Util_CheckResearch(BATTLECRUISERIONWEAPONS)) then
-	-- 	local battleCruiserDemand = ShipDemandGet( kBattleCruiser )
-	-- 	if (battleCruiserDemand > 0) then
-	-- 		ResearchDemandSet( BATTLECRUISERIONWEAPONS, battleCruiserDemand )
-	-- 	end
-	-- end
-	-- if (Util_CheckResearch(PLATFORMIONWEAPONS)) then
-	-- 	local ionTurretDemand = ShipDemandGet(HGN_IONTURRET)
-	-- 	if (ionTurretDemand > 0) then
-	-- 		ResearchDemandSet( PLATFORMIONWEAPONS, ionTurretDemand )
-	-- 	end
-	-- end
-	-- if (Util_CheckResearch(DESTROYERTECH) ) then		
-	-- 	local destroyerDemand = ShipDemandGet(HGN_DESTROYER)
-	-- 	if (destroyerDemand > 0) then
-	-- 		ResearchDemandSet( DESTROYERTECH, destroyerDemand )
-	-- 	end
-	-- end
-	-- if (Util_CheckResearch(ATTACKBOMBERIMPROVEDBOMBS) ) then
-	-- 	local numBombers = NumSquadrons( kBomber )
-	-- 	if (numBombers > 2) then
-	-- 		ResearchDemandSet( ATTACKBOMBERIMPROVEDBOMBS, numBombers )
-	-- 	end
-	-- end
-	-- if (Util_CheckResearch(IMPROVEDTORPEDO) ) then
-	-- 	local numTorpedoFrigs = NumSquadrons( HGN_TORPEDOFRIGATE )
-	-- 	if (numTorpedoFrigs > 2) then
-	-- 		ResearchDemandSet( IMPROVEDTORPEDO, numTorpedoFrigs )
-	-- 	end
-	-- end
-	-- if (s_militaryPop > 15 and GetRU() > 750) then
-	-- 	if (Util_CheckResearch(DEFENSEFIELDFRIGATESHIELD) ) then
-	-- 		local DFFDemand = ShipDemandGet(HGN_DEFENSEFIELDFRIGATE)
-	-- 		if (DFFDemand > 0) then
-	-- 			ResearchDemandSet( DEFENSEFIELDFRIGATESHIELD, DFFDemand )
-	-- 		end
-	-- 	end
-	-- 	if (Util_CheckResearch(ECMPROBE) ) then
-	-- 		local ecmProbeDemand = ShipDemandGet(HGN_ECMPROBE)
-	-- 		if (ecmProbeDemand>0) then
-	-- 			ResearchDemandSet( ECMPROBE, ecmProbeDemand )
-	-- 		end
-	-- 	end
-	-- 	if (Util_CheckResearch(GRAVITICATTRACTIONMINES) ) then
-	-- 		local mineLayerDemand = ShipDemandGet(HGN_MINELAYERCORVETTE)
-	-- 		if (mineLayerDemand > 0) then
-	-- 			ResearchDemandSet( GRAVITICATTRACTIONMINES, mineLayerDemand )
-	-- 		end
-	-- 	end
-	-- end
+	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
+	if fighterdemand > 0 then
+		if Util_CheckResearch_Shivan(FIGHTERDESIGN) then
+			ResearchDemandSet_Shivan(FIGHTERDESIGN, fighterdemand + 1.0)
+		end
+
+		-- Tier 2
+		if NumSquadrons(SHI_SCORPION) > 0 then
+			if Util_CheckResearch_Shivan(MANTICORE) then
+				ResearchDemandSet_Shivan(MANTICORE, fighterdemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(ASTAROTH) then
+				ResearchDemandSet_Shivan(ASTAROTH, fighterdemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(DRAGON) then
+				ResearchDemandSet_Shivan(DRAGON, fighterdemand + 1.0)
+			end
+		end
+
+		-- Tier 3
+		if NumSquadrons(SHI_DRAGON) > 0 or NumSquadrons(SHI_ASTAROTH) > 0 then
+			if Util_CheckResearch_Shivan(BASILISK) then
+				ResearchDemandSet_Shivan(BASILISK, fighterdemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(AESHMA) then
+				ResearchDemandSet_Shivan(AESHMA, fighterdemand + 1.0)
+			end
+		end
+
+		-- Tier 4
+		if NumSquadrons(SHI_BASILISK) > 0 or NumSquadrons(SHI_AESHMA) > 0 then
+			if Util_CheckResearch_Shivan(MARA) then
+				ResearchDemandSet_Shivan(MARA, fighterdemand + 1.0)
+			end
+		end
+	end
+
+	local bomberdemand = ShipDemandMaxByClass(eCorvette) * 2
+	if bomberdemand > 0 then
+		if Util_CheckResearch_Shivan(BOMBERDESIGN) then
+			ResearchDemandSet_Shivan(BOMBERDESIGN, bomberdemand + 1.0)
+		end
+
+		-- Tier 2
+		if NumSquadrons(SHI_SHAITAN) > 0 then
+			if Util_CheckResearch_Shivan(NAHEMA) then
+				ResearchDemandSet_Shivan(NAHEMA, bomberdemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(TAURVI) then
+				ResearchDemandSet_Shivan(TAURVI, bomberdemand + 1.0)
+			end
+		end
+
+		-- Tier 3
+		if NumSquadrons(SHI_NAHEMA) > 0 or NumSquadrons(SHI_TAURVI) > 0 then
+			if Util_CheckResearch_Shivan(NEPHILIM) then
+				ResearchDemandSet_Shivan(NEPHILIM, bomberdemand + 1.0)
+			end
+		end
+
+		-- Tier 4
+		if NumSquadrons(SHI_NEPHILIM) > 0 then
+			if Util_CheckResearch_Shivan(SERAPHIM) then
+				ResearchDemandSet_Shivan(SERAPHIM, bomberdemand + 1.0)
+			end
+		end
+	end
+
+	local cruiserdemand = ShipDemandMaxByClass(eFrigate) * 2
+	if cruiserdemand > 0 then
+		if Util_CheckResearch_Shivan(CRUISERDESIGN) then
+			ResearchDemandSet_Shivan(CRUISERDESIGN, cruiserdemand + 1.0)
+		end
+
+		if NumSquadrons(SHI_CAIN) > 0 then
+			if Util_CheckResearch_Shivan(RAKSHASA) then
+				ResearchDemandSet_Shivan(RAKSHASA, cruiserdemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(LILITH) then
+				ResearchDemandSet_Shivan(LILITH, cruiserdemand + 1.0)
+			end
+		end
+	end
+
+	local capitaldemand = ShipDemandMaxByClass(eCapital)
+	if capitaldemand > 0 then
+		if Util_CheckResearch_Shivan(CAPITALSHIPDESIGN) then
+			ResearchDemandSet_Shivan(CAPITALSHIPDESIGN, capitaldemand + 1.0)
+		end
+
+		if Util_CheckResearch_Shivan(MOLOCH) then
+			ResearchDemandSet_Shivan(MOLOCH, capitaldemand + 1.0)
+		end
+
+		if NumSquadrons(SHI_MOLOCH) > 0 then
+			if Util_CheckResearch_Shivan(DEMON) then
+				ResearchDemandSet_Shivan(DEMON, capitaldemand + 1.0)
+			end
+			if Util_CheckResearch_Shivan(RAVANA) then
+				ResearchDemandSet_Shivan(RAVANA, capitaldemand + 1.0)
+			end
+		end
+
+		if NumSquadrons(SHI_DEMON) > 0 or NumSquadrons(SHI_RAVANA) > 0 then
+			if Util_CheckResearch_Shivan(LUCIFER) then
+				ResearchDemandSet_Shivan(LUCIFER, capitaldemand + 2.0)
+			end
+			if Util_CheckResearch_Shivan(SUPERCAPITALSHIPDESIGN) then
+				ResearchDemandSet_Shivan(SUPERCAPITALSHIPDESIGN, capitaldemand + 3.0)
+			end
+		end
+
+		if IsResearchDone(SUPERCAPITALSHIPDESIGN) == 1 then
+			if Util_CheckResearch_Shivan(SATHANAS) then
+				ResearchDemandSet_Shivan(SATHANAS, capitaldemand + 5.0)
+			end
+		end
+	end
+end
+
+function DoUpgradeDemand_Shivan()
+	if NumSquadrons(SHI_MOLOCH) > 0 then
+		if Util_CheckResearch_Shivan(MOLOCHARMOR) then
+			ResearchDemandSet_Shivan(MOLOCHARMOR, 1.5)
+		end
+		if Util_CheckResearch_Shivan(MOLOCHSPRINT) then
+			ResearchDemandSet_Shivan(MOLOCHSPRINT, 1.5)
+		end
+	end
 end
 
 DoUpgradeDemand = DoUpgradeDemand_Shivan

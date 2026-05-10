@@ -1,10 +1,10 @@
-aitrace("LOADING SHIVAN BUILD INFO")
+aitrace("LOADING VASUDAN BUILD INFO")
 
 kCollector = VAS_ISIS
 kRefinery = VAS_ANUKET
 kScout = VAS_HORUS
 kCarrier = VAS_TYPHON
-kDestroyer = VAS_SOBEK
+kDestroyer = VAS_TYPHON
 kBattleCruiser = VAS_HATSHEPSUT
 
 function DetermineDemandWithNoCounterInfo_Vasudan()

@@ -28,7 +28,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_dragon",
-		RequiredResearch = "",
+		RequiredResearch = "Dragon",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
 		DisplayedName = "SF Dragon - Superiority <c=12AB06>39s</c>",
@@ -38,7 +38,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_manticore",
-		RequiredResearch = "",
+		RequiredResearch = "Manticore",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "SF Manticore - Interceptor <c=12AB06>31s</c>",
@@ -48,7 +48,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_astaroth",
-		RequiredResearch = "",
+		RequiredResearch = "Astaroth",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "SF Astaroth - Interceptor <c=12AB06>30s</c>",
@@ -58,7 +58,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_basilisk",
-		RequiredResearch = "",
+		RequiredResearch = "Basilisk",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 7,
 		DisplayedName = "SF Basilisk - Assault <c=12AB06>37s</c>",
@@ -68,7 +68,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_aeshma",
-		RequiredResearch = "",
+		RequiredResearch = "Aeshma",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 8,
 		DisplayedName = "SF Aeshma - Assault <c=12AB06>35s</c>",
@@ -78,7 +78,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_mara",
-		RequiredResearch = "",
+		RequiredResearch = "Mara",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 5,
 		DisplayedName = "SF Mara - Adv. Superiority <c=12AB06>47s</c>",
@@ -88,7 +88,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_nahema",
-		RequiredResearch = "",
+		RequiredResearch = "Nahema",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 40,
 		DisplayedName = "SB Nahema - Strike Bomber <c=12AB06>34s</c>",
@@ -98,7 +98,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_taurvi",
-		RequiredResearch = "",
+		RequiredResearch = "Taurvi",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 41,
 		DisplayedName = "SB Taurvi - Medium Bomber <c=12AB06>34s</c>",
@@ -108,7 +108,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_nephilim",
-		RequiredResearch = "",
+		RequiredResearch = "Nephilim",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 43,
 		DisplayedName = "SB Nephilim - Heavy Bomber <c=12AB06>44s</c>",
@@ -118,7 +118,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_seraphim",
-		RequiredResearch = "",
+		RequiredResearch = "Seraphim",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 44,
 		DisplayedName = "SB Seraphim - Heavy Bomber <c=12AB06>45s</c>",
@@ -128,7 +128,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_rakshasa",
-		RequiredResearch = "",
+		RequiredResearch = "Rakshasa",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 63,
 		DisplayedName = "SC Rakshasa - Adv. Cruiser <c=12AB06>60s</c>",
@@ -138,7 +138,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain",
-		RequiredResearch = "",
+		RequiredResearch = "Cain",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain - Strike Cruiser <c=12AB06>34s</c>",
@@ -148,7 +148,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith",
-		RequiredResearch = "",
+		RequiredResearch = "Lilith",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith - Heavy Cruiser <c=12AB06>140s</c>",
@@ -158,7 +158,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_moloch",
-		RequiredResearch = "",
+		RequiredResearch = "Moloch",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 75,
 		DisplayedName = "SCv Moloch - Corvette <c=12AB06>110s</c>",
@@ -168,7 +168,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_demon",
-		RequiredResearch = "",
+		RequiredResearch = "Demon",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 110,
 		DisplayedName = "SD Demon - Destroyer <c=12AB06>215s</c>",
@@ -178,7 +178,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_ravana",
-		RequiredResearch = "",
+		RequiredResearch = "Ravana",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 116,
 		DisplayedName = "SD Ravana - Destroyer <c=12AB06>225s</c>",
@@ -188,7 +188,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_sathanas",
-		RequiredResearch = "",
+		RequiredResearch = "Sathanas",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 119,
 		DisplayedName = "SJ Sathanas <c=12AB06>550s</c>",
@@ -198,7 +198,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lucifer",
-		RequiredResearch = "",
+		RequiredResearch = "Lucifer",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 118,
 		DisplayedName = "SD Lucifer - Super Destroyer <c=12AB06>305s</c>",
@@ -239,7 +239,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_belial",
-		RequiredResearch = "",
+		RequiredResearch = "SentryGun",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 132,
 		DisplayedName = "SSG Belial - Sentry Gun <c=12AB06>8s</c>",
@@ -259,7 +259,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_commnode",
-		RequiredResearch = "",
+		RequiredResearch = "AdvancedSensors",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 134,
 		DisplayedName = "Shivan Comm Node - AWACS <c=12AB06>70s</c>",
@@ -269,26 +269,27 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_scorpion",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 9,
 		DisplayedName = "SF Scorpion - Recon <c=12AB06>28s</c>",
 		Description =
 		"<b>Description:</b> We originally thought the Scorpion was the Shivans' best fighter.  However, we now believe that the Scorpion is nothing more than a Shivan scout ship.  Their vast numbers and seeming unimportance to the Shivan war effort leads us to this belief.  Regardless of its purpose, the Scorpion is highly maneuverable, fast, and difficult to destroy.  It can also do damage equivalent to our space superiority fighters. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> 4x Shivan Medium Laser, 1x Shivan Heatseeker.",
 	},
-	-- {
-	--        Type = Ship,
-	--        ThingToBuild = "shi_gorgon",
-	--        RequiredResearch = "",
-	--        RequiredShipSubSystems = "",
-	--        DisplayPriority = 13,
-	--        DisplayedName = "SF Gorgon - Heavy Assault <c=12AB06>45s</c>",
-	--        Description = "<b>Description:</b> The first encounter with the SF Gorgon was made by the GTD Saratoga in the Ikeya system.  We are uncertain if this is a new design or if the Shivans have held this particular ship back for the majority of the war. The ship's unusual design not only provides it with exceptional maneuverability, but also allows it to generate an extremely powerful shield.  So far these ships have only been sighted leading wings of lesser fighters, but there have been reports of entire wings of Gorgons in larger forces. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles, Silent Threat. \n\n<b>Armaments:</b> 4x Medium Laser, 3x Heavy Laser, 1x Anti-Fighter Missile, 1x Swarm Missile.",
-	-- },
+	{
+		Type = Ship,
+		ThingToBuild = "shi_gorgon",
+		RequiredResearch = "Gorgon",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 13,
+		DisplayedName = "SF Gorgon - Heavy Assault <c=12AB06>45s</c>",
+		Description =
+		"<b>Description:</b> The first encounter with the SF Gorgon was made by the GTD Saratoga in the Ikeya system.  We are uncertain if this is a new design or if the Shivans have held this particular ship back for the majority of the war. The ship's unusual design not only provides it with exceptional maneuverability, but also allows it to generate an extremely powerful shield.  So far these ships have only been sighted leading wings of lesser fighters, but there have been reports of entire wings of Gorgons in larger forces. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles, Silent Threat. \n\n<b>Armaments:</b> 4x Medium Laser, 3x Heavy Laser, 1x Anti-Fighter Missile, 1x Swarm Missile.",
+	},
 	{
 		Type = Ship,
 		ThingToBuild = "shi_shaitan",
-		RequiredResearch = "",
+		RequiredResearch = "Shaitan",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 42,
 		DisplayedName = "SB Shaitan - Strike Bomber <c=12AB06>48s</c>",
@@ -298,7 +299,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_trident",
-		RequiredResearch = "",
+		RequiredResearch = "SentryGun",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 132,
 		DisplayedName = "SSG Trident - Sentry Gun <c=12AB06>6s</c>",

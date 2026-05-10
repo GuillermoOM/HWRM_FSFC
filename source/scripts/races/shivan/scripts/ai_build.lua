@@ -2,9 +2,9 @@ aitrace("LOADING SHIVAN BUILD INFO")
 
 kCollector = SHI_AZRAEL
 kRefinery  = SHI_RAHU
-kScout     = SHI_ASTAROTH
+kScout     = SHI_SCORPION
 kCarrier   = SHI_RAVANA
-kDestroyer = SHI_MOLOCH
+kDestroyer = SHI_DEMON
 kBattleCruiser = SHI_LUCIFER
 
 function DetermineDemandWithNoCounterInfo_Shivan()

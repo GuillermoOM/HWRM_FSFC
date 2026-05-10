@@ -39,6 +39,17 @@ You can use logical operators `&` (AND) and `|` (OR) to create complex unlock co
 ```lua
 RequiredResearch = "EnergySystems & (BasicLasers | PlasmaTech)"
 ```
+### Era-Gating with `DoNotGrant`
+To prevent research items from appearing in the UI by default (e.g., era-specific ships), use `DoNotGrant = 1`. These nodes are then manually granted via SCAR rules (like `Player_GrantResearchOption(player, "FS1")`).
+
+```lua
+{
+    Name = "FS1",
+    DoNotGrant = 1, -- Hidden from player until granted by rule
+    Cost = 10,
+    Time = 1,
+}
+```
 
 ## 2. Integrating with the AI Engine
 
@@ -81,6 +92,17 @@ To make the AI research your custom technology, use `ResearchDemandAdd`:
 -- If we have enough RU, prioritize the Heavy Lasers upgrade
 if (GetRU() > 1500) then
     ResearchDemandAdd(HEAVYLASERS, 75)
+end
+```
+
+### AI Research Demand Logic
+For ship-by-ship tech trees, the AI needs conditional demand logic in `ai_upgrades.lua`. A common pattern is checking for the existence of a ship class before demanding its upgrades:
+
+```lua
+if (NumSquadrons(TER_ORION) > 0) then
+    if (IsResearchAvailable(ORIONARMOR) == 1) then
+        ResearchDemandSet(ORIONARMOR, 1.5)
+    end
 end
 ```
 

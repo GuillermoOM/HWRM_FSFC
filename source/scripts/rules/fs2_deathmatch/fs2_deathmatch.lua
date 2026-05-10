@@ -45,7 +45,8 @@ function timer_updating_fs2()
 			if Player_IsAlive(playerIndex) == 1 then
 				if Player_HasShipWithBuildQueue(playerIndex) == 1 then
 					local fs1_ships_to_hide = {
-						"ter_apollo", "ter_valkyrie"
+						"ter_apollo", "ter_valkyrie",
+						"vas_seth", "vas_horus", "vas_thoth", "shi_shaitan",
 					}
 					for i, ship in fs1_ships_to_hide do
 						Player_RestrictBuildOption(playerIndex, ship)

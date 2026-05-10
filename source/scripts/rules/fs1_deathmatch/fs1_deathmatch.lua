@@ -45,14 +45,19 @@ function timer_updating_fs1()
 			if Player_IsAlive(playerIndex) == 1 then
 				if Player_HasShipWithBuildQueue(playerIndex) == 1 then
 					local fs2_ships_to_hide = {
-						"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes", 
-						"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos", 
-						"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus", "ter_loki"
+						"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
+						"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
+						"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus", "ter_loki",
+						"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
+						"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh",
+						"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
+						"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
+						"shi_gorgon", "shi_astaroth"
 					}
 					for i, ship in fs2_ships_to_hide do
 						Player_RestrictBuildOption(playerIndex, ship)
 					end
-					
+
 					local restrictString = PlayerRace_GetString(playerIndex, "dm_build_restrict", "")
 					if restrictString ~= "" then
 						Player_RestrictBuildOption(playerIndex, restrictString)
