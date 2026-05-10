@@ -16,6 +16,7 @@ dofilepath("data:leveldata/multiplayer/lib/carriersonly.lua")
 dofilepath("data:leveldata/multiplayer/lib/nocruisers.lua")
 dofilepath("data:leveldata/multiplayer/lib/strikecraftgamemode.lua")
 dofilepath("data:leveldata/multiplayer/lib/music.lua")
+dofilepath("data:scripts/scar/fsfc_ui.lua")
 
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
@@ -121,6 +122,7 @@ function timer_updating()
 			UI_SetElementEnabled("NewTaskbar", "btnResearch", 1)
 		end
 		UI_SetElementEnabled("NewTaskbar", "btnLaunch", 1)
+		FSFC_UpdateUIForRace()
 	end
 	timer_timing = timer_timing + 1
 	if timer_timing > 6 then

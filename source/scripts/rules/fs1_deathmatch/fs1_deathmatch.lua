@@ -3,6 +3,7 @@ dofilepath("data:scripts/scar/restrict.lua")
 dofilepath("data:leveldata/multiplayer/lib/lib.lua")
 dofilepath("data:leveldata/multiplayer/lib/research.lua")
 dofilepath("data:leveldata/multiplayer/lib/main.lua")
+dofilepath("data:scripts/scar/fsfc_ui.lua")
 
 function OnInit()
 	FREESPACE_ERA = 1
@@ -102,6 +103,7 @@ function UI_init_fs1()
 		UI_SetElementEnabled("NewTaskbar", "btnResearch", 1)
 	end
 	UI_SetElementEnabled("NewTaskbar", "btnLaunch", 1)
+	FSFC_UpdateUIForRace()
 	Rule_Remove("UI_init_fs1")
 end
 

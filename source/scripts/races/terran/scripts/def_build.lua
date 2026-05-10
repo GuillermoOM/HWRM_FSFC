@@ -213,7 +213,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_loki",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 20,
 		DisplayedName = "GTF Loki - Recon <c=12AB06>29s</c>",
@@ -524,7 +524,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_apollo",
-		RequiredResearch = "FighterDesign & FS1",
+		RequiredResearch = "Apollo & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
 		DisplayedName = "GTF Apollo - Space Superiority <c=12AB06>30s</c>",
