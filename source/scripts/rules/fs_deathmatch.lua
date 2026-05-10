@@ -6,7 +6,7 @@ SinglePlayer = 0
 
 ExtFilter = "rules_dm"
 
-Race_Paths = "Deathmatch,Extras"
+Race_Paths = "Deathmatch,Extras,terran,vasudan,shivan,observer"
 
 Level_Pass_Tags = "dm"
 Race_Pass_Tags = "race_dm,race_ter,race_shi,race_vas,race_random_fs,race_obs"

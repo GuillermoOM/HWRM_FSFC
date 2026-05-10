@@ -8,18 +8,18 @@ function OnInit()
 	FREESPACE_ERA = 2
 	MPRestrict()
 	research = GetGameSettingAsNumber("research")
-	
+
 	SetStartFleetSuffix("fs2")
-	
+
 	-- Era Activation
 	Rule_Add("Rule_GrantFS2Era")
-	
+
 	UI_SetElementEnabled("NewTaskbar", "btnObjectives", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnRecall", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnBuild", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnResearch", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnLaunch", 0)
-	
+
 	Rule_AddInterval("timer_updating_fs2", 1.02)
 end
 
@@ -29,10 +29,11 @@ timer_interval = 5.1
 function Rule_GrantFS2Era()
 	for i = 0, Universe_PlayerCount() - 1 do
 		if (Player_IsAlive(i) == 1) then
-			Player_UnrestrictResearchOption(i, "FS2")
-			Player_GrantResearchOption(i, "FS2")
-			-- Explicitly restrict the other era to be sure
-			Player_RestrictResearchOption(i, "FS1")
+			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				Player_GrantResearchOption(i, "FS2")
+				Player_RestrictResearchOption(i, "FS1")
+			end
 		end
 	end
 	Rule_Remove("Rule_GrantFS2Era")
@@ -47,13 +48,12 @@ function timer_updating_fs2()
 				end
 			end
 		end
-		
+
 		if research == 0 then
 			Rule_AddInterval("research_init", timer_interval)
 		end
-		
+
 		Rule_AddInterval("UI_init_fs2", 0.1)
-		
 	elseif timer_timing == 2 then
 		-- After research_init has run, we MUST re-restrict the unwanted era
 		for i = 0, Universe_PlayerCount() - 1 do
@@ -70,7 +70,7 @@ function timer_updating_fs2()
 		end
 		UI_SetElementEnabled("NewTaskbar", "btnLaunch", 1)
 	end
-	
+
 	timer_timing = timer_timing + 1
 	if timer_timing > 6 then
 		Rule_Remove("timer_updating_fs2")

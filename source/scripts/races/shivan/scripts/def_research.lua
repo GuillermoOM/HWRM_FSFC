@@ -11,41 +11,45 @@ Family = 1
 Ship = 2
 
 research = {
-	-- Era Switches (Hidden) ---
 	{
-		Name = "FS1",
-		DoNotGrant = (FREESPACE_ERA == 2),
+		Name = "Freespace1",
 		RequiredResearch = "",
 		RequiredSubSystems = "",
-		Cost = 0,
-		Time = 0,
+		DoNotGrant = 1,
+		Cost = 10,
+		Time = 1,
 		DisplayedName = "FreeSpace 1 Era",
 		DisplayPriority = 0,
 		Description = "Activates FreeSpace 1 ships and technology.",
 		Icon = Icon_Tech,
 		ShortDisplayedName = "FS1 Era",
 		UpgradeType = Modifier,
-		TargetType = AllShips,
-		UpgradeName = "BUILDSPEED",
+		TargetType = Ship,
+		TargetName = "shi_manticore",
+		UpgradeName = "MAXHEALTH",
 		UpgradeValue = 1.0,
 	},
 	{
-		Name = "FS2",
-		DoNotGrant = (FREESPACE_ERA == 1),
+		Name = "Freespace2",
 		RequiredResearch = "",
 		RequiredSubSystems = "",
-		Cost = 0,
-		Time = 0,
+		DoNotGrant = 1,
+		Cost = 10,
+		Time = 1,
 		DisplayedName = "FreeSpace 2 Era",
 		DisplayPriority = 0,
 		Description = "Activates FreeSpace 2 ships and technology.",
 		Icon = Icon_Tech,
 		ShortDisplayedName = "FS2 Era",
 		UpgradeType = Modifier,
-		TargetType = AllShips,
-		UpgradeName = "BUILDSPEED",
+		TargetType = Ship,
+		TargetName = "shi_astaroth",
+		UpgradeName = "MAXHEALTH",
 		UpgradeValue = 1.0,
 	},
+	-- Era Switches (Hidden) ---
+	
+	
 }
 res_index = 1
 

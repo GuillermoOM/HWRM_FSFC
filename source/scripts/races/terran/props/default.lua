@@ -57,6 +57,7 @@ String_Properties_Priority = 1.0
 String_Properties = {
 	cfg_hyperspace_effect_fx = "subspace_gate",
 	cfg_hyperspace_effect_audio = [[etg/special/large_subspace]],
+	Prefix = "TER_",
 
 	path_build = [[data:scripts/races/terran/scripts/def_build.lua]],
 	path_research = [[data:scripts/races/terran/scripts/def_research.lua]],

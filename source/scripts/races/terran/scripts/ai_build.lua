@@ -7,7 +7,7 @@ kCarrier   = TER_HECATE
 kDestroyer = TER_DEIMOS
 kBattleCruiser = TER_HADES
 
-function NumSquadrons_Terran(id)
+function NumSquadrons_Terran_Build(id)
 	if (id ~= nil and type(id) == "number") then
 		return NumSquadrons(id)
 	end
@@ -39,13 +39,13 @@ function DetermineSpecialDemand_Terran()
 	end
 
 	controller = kRefinery
-	local numControllers = NumSquadrons_Terran(controller) + NumSquadronsQ(kRefinery)
+	local numControllers = NumSquadrons_Terran_Build(controller) + NumSquadronsQ(kRefinery)
 	if (numControllers > 5) then
 		ShipDemandSet(kRefinery, 0)
 	end
 
 	resourcers = kCollector
-	local numResourcers = NumSquadrons_Terran(kCollector) + NumSquadronsQ(kCollector)
+	local numResourcers = NumSquadrons_Terran_Build(kCollector) + NumSquadronsQ(kCollector)
 	if (numResourcers > 9) then
 		ShipDemandAdd(kRefinery, 0.5)
 	end

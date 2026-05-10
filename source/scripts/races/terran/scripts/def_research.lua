@@ -10,48 +10,42 @@ Family = 1
 Ship = 2
 
 research = {
-	-- Era Switches (Hidden) ---
 	{
 		Name = "FS1",
-		DoNotGrant = (FREESPACE_ERA == 2),
 		RequiredResearch = "",
 		RequiredSubSystems = "",
-		Cost = 0,
-		Time = 0,
+		Cost = 10,
+		Time = 1,
 		DisplayedName = "FreeSpace 1 Era",
 		DisplayPriority = 0,
 		Description = "Activates FreeSpace 1 ships and technology.",
 		Icon = Icon_Tech,
 		ShortDisplayedName = "FS1 Era",
-		UpgradeType = Modifier,
 		TargetType = Ship,
 		TargetName = "ter_apollo",
-		UpgradeName = "Health",
-		UpgradeValue = 1.0,
 	},
 	{
 		Name = "FS2",
-		DoNotGrant = (FREESPACE_ERA == 1),
 		RequiredResearch = "",
 		RequiredSubSystems = "",
-		Cost = 0,
-		Time = 0,
+		Cost = 10,
+		Time = 1,
 		DisplayedName = "FreeSpace 2 Era",
 		DisplayPriority = 0,
 		Description = "Activates FreeSpace 2 ships and technology.",
 		Icon = Icon_Tech,
 		ShortDisplayedName = "FS2 Era",
-		UpgradeType = Modifier,
 		TargetType = Ship,
 		TargetName = "ter_perseus",
-		UpgradeName = "Health",
-		UpgradeValue = 1.0,
 	},
+	-- Era Switches (Hidden) ---
+
+
 
 	-- Fighters --------------
 	{
 		Name = "FighterDesign",
-		RequiredResearch = "FS1 | FS2",
+		RequiredResearch = "Freespace1 | Freespace2",
 		RequiredSubSystems = "",
 		Cost = 1200,
 		Time = 40,
@@ -193,7 +187,7 @@ research = {
 	-- Bombers ---------------
 	{
 		Name = "BomberDesign",
-		RequiredResearch = "FS1 | FS2",
+		RequiredResearch = "Freespace1 | Freespace2",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -293,7 +287,7 @@ research = {
 	-- Frigates --------------
 	{
 		Name = "CruiserDesign",
-		RequiredResearch = "FS1 | FS2",
+		RequiredResearch = "Freespace1 | Freespace2",
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,
@@ -369,7 +363,7 @@ research = {
 	-- Capital Ships ---------
 	{
 		Name = "CapitalShipDesign",
-		RequiredResearch = "FS1 | FS2",
+		RequiredResearch = "Freespace1 | Freespace2",
 		RequiredSubSystems = "",
 		Cost = 3000,
 		Time = 75,
@@ -506,7 +500,7 @@ research = {
 	-- Platforms -------------
 	{
 		Name = "SentryGun",
-		RequiredResearch = "FS1 | FS2",
+		RequiredResearch = "Freespace1 | Freespace2",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -576,4 +570,7 @@ research = {
 		Icon = Icon_Build,
 		ShortDisplayedName = "AWACS",
 	}
+
+
+
 }
