@@ -14,6 +14,7 @@ research = {
 		Name = "FS1",
 		RequiredResearch = "",
 		RequiredSubSystems = "",
+		DoNotGrant = 1,
 		Cost = 10,
 		Time = 1,
 		DisplayedName = "FreeSpace 1 Era",
@@ -28,6 +29,7 @@ research = {
 		Name = "FS2",
 		RequiredResearch = "",
 		RequiredSubSystems = "",
+		DoNotGrant = 1,
 		Cost = 10,
 		Time = 1,
 		DisplayedName = "FreeSpace 2 Era",
@@ -45,7 +47,7 @@ research = {
 	-- Fighters --------------
 	{
 		Name = "FighterDesign",
-		RequiredResearch = "Freespace1 | Freespace2",
+		RequiredResearch = "",
 		RequiredSubSystems = "",
 		Cost = 1200,
 		Time = 40,
@@ -73,7 +75,7 @@ research = {
 	},
 	{
 		Name = "Hercules",
-		RequiredResearch = "FighterDesign & FS1",
+		RequiredResearch = "FighterDesign",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 45,
@@ -87,7 +89,7 @@ research = {
 	},
 	{
 		Name = "Ulysses",
-		RequiredResearch = "FighterDesign & (FS1 | FS2)",
+		RequiredResearch = "FighterDesign",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 45,
@@ -187,7 +189,7 @@ research = {
 	-- Bombers ---------------
 	{
 		Name = "BomberDesign",
-		RequiredResearch = "Freespace1 | Freespace2",
+		RequiredResearch = "",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -201,7 +203,7 @@ research = {
 	},
 	{
 		Name = "Zeus",
-		RequiredResearch = "BomberDesign & (FS1 | FS2)",
+		RequiredResearch = "BomberDesign",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 40,
@@ -243,7 +245,7 @@ research = {
 	},
 	{
 		Name = "Medusa",
-		RequiredResearch = "BomberDesign & (FS1 | FS2)",
+		RequiredResearch = "BomberDesign",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -271,7 +273,7 @@ research = {
 	},
 	{
 		Name = "Ursa",
-		RequiredResearch = "Boanerges & (FS1 | FS2)",
+		RequiredResearch = "Boanerges",
 		RequiredSubSystems = "",
 		Cost = 2000,
 		Time = 50,
@@ -287,7 +289,7 @@ research = {
 	-- Frigates --------------
 	{
 		Name = "CruiserDesign",
-		RequiredResearch = "Freespace1 | Freespace2",
+		RequiredResearch = "",
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,
@@ -301,7 +303,7 @@ research = {
 	},
 	{
 		Name = "RepairFrigate",
-		RequiredResearch = "CruiserDesign & (FS1 | FS2)",
+		RequiredResearch = "CruiserDesign",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 50,
@@ -363,7 +365,7 @@ research = {
 	-- Capital Ships ---------
 	{
 		Name = "CapitalShipDesign",
-		RequiredResearch = "Freespace1 | Freespace2",
+		RequiredResearch = "",
 		RequiredSubSystems = "",
 		Cost = 3000,
 		Time = 75,
@@ -439,7 +441,7 @@ research = {
 	},
 	{
 		Name = "HecateBuildSpeed",
-		RequiredResearch = "CapitalShipDesign",
+		RequiredResearch = "CapitalShipDesign & FS2",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -470,7 +472,7 @@ research = {
 	},
 	{
 		Name = "Installation",
-		RequiredResearch = "CapitalShipDesign & (FS1 | FS2)",
+		RequiredResearch = "CapitalShipDesign",
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 75,
@@ -484,7 +486,7 @@ research = {
 	},
 	{
 		Name = "Juggernaut",
-		RequiredResearch = "SuperDestroyer & Installation",
+		RequiredResearch = "SuperDestroyer & Installation & FS2",
 		RequiredSubSystems = "",
 		Cost = 10000,
 		Time = 150,
@@ -500,7 +502,7 @@ research = {
 	-- Platforms -------------
 	{
 		Name = "SentryGun",
-		RequiredResearch = "Freespace1 | Freespace2",
+		RequiredResearch = "",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -544,7 +546,7 @@ research = {
 	-- Utility ---------------
 	{
 		Name = "ScienceVessel",
-		RequiredResearch = "CruiserDesign & (FS1 | FS2)",
+		RequiredResearch = "CruiserDesign",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,

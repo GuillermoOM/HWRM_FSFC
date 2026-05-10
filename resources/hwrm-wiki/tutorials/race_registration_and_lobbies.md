@@ -33,14 +33,36 @@ String_Properties = {
 
 **Symptom:** `luaplayer 300: Player_GrantResearchOption: unable to grant (EraNode)`
 **Cause:** If a player starts a game with the lobby setting "Research: Off", the vanilla `lib/research.lua` script runs `research_init` at `t=5.1s`. This script loops through the entire `def_research.lua` file and attempts to grant **every** node that has no prerequisites (`RequiredResearch = ""`).
-If your mod uses custom "Era" nodes (like `Freespace1` and `Freespace2`) that have no prerequisites but are manually `Restricted` by your game rule, the vanilla `research_init` script will crash when it tries to force-grant them.
+If your mod uses custom "Era" nodes (like `FS1` and `FS2`) that have no prerequisites but are manually `Restricted` by your game rule, the vanilla `research_init` script will crash when it tries to force-grant them, or it will override your restrictions and grant both eras!
 
 **The Fix:**
-Add `DoNotGrant = 1` to any dummy/era research nodes in your `def_research.lua`. This flags the node so the vanilla script ignores it, preventing the crash while still allowing your custom game rules to manually unrestrict/grant them.
+You must implement a delayed re-restriction timer in your game rule logic. Allow `research_init` to execute, and then use an interval timer to explicitly re-restrict the unwanted era shortly after.
 ```lua
-	{
-		Name = "Freespace2",
-		RequiredResearch = "",
-		DoNotGrant = 1, -- CRITICAL: Prevents "Research Off" crashes
-	}
+	elseif timer_timing == 2 then
+		-- After research_init has run, we MUST re-restrict the unwanted era
+		for i = 0, Universe_PlayerCount() - 1 do
+			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				Player_RestrictResearchOption(i, "FS2") -- Restrict the unused era
+			end
+		end
+```
+
+## 4. Empty String API Lockouts
+
+**Symptom:** All build or research options are permanently greyed out and the menu is completely frozen.
+**Cause:** Calling engine restriction APIs like `Player_RestrictBuildOption` or `Player_RestrictResearchOption` with an empty string (`""`) triggers a silent engine fault that completely locks the UI queue.
+**The Fix:**
+Always check that your custom restriction string is not empty before passing it to the engine. Additionally, remember that `Player_RestrictBuildOption` **only accepts a single string argument** (one ship or subsystem). It does not parse comma-separated lists. If you need to hide multiple ships (like an entire era's roster), you must iterate over a Lua table and restrict them individually:
+```lua
+local ships_to_hide = {"ter_ares", "ter_erinyes"}
+for i, ship in ships_to_hide do
+	Player_RestrictBuildOption(playerIndex, ship)
+end
+
+-- Safely process a dynamic restriction variable
+local restrictString = PlayerRace_GetString(playerIndex, "dm_build_restrict", "")
+if restrictString ~= "" then
+	Player_RestrictBuildOption(playerIndex, restrictString)
+end
 ```
