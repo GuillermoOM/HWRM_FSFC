@@ -368,7 +368,7 @@ build = {
 		DisplayPriority = 51,
 		DisplayedName = "GTC Leviathan - Heavy Cruiser <c=12AB06>43s</c>",
 		Description =
-		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, Heavy Cruiser. \n\n<b>Armaments:</b> 1x Light Beam, 1x Pihrana Turret, 4x Anti-Fighter Beam, 3x Turret.",
+		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, GTC Leviathan. \n\n<b>Armaments:</b> 1x Light Beam, 1x Pihrana Turret, 4x Anti-Fighter Beam, 3x Turret.",
 	},
 	{
 		Type = Ship,
@@ -378,7 +378,7 @@ build = {
 		DisplayPriority = 52,
 		DisplayedName = "GTC Aeolus - Adv. Cruiser <c=12AB06>47s</c>",
 		Description =
-		"<b>Description:</b> The GTC Aeolus is the first cruiser class ever produced by the RNI shipyards orbiting Laramis II. Only two dozen of these cruisers were put into service in GTVA fleets, with production ending in 2365. Allied Command assigns Aeolus-class ships primarily to guard slow-moving convoys against fighter and bomber wings, as these cruisers are severely out-gunned by most capital ships in service today. Their flak and AAA turrets serve as marvelous deterrents to smaller craft, however. \n\n<b>Prerequisites:</b> Cruiser Design, Advanced Cruiser. \n\n<b>Armaments:</b> 2x Light Beam, 2x Anti-Fighter Beam, 6x Flak Turret, 2x Huge Turret.",
+		"<b>Description:</b> The GTC Aeolus is the first cruiser class ever produced by the RNI shipyards orbiting Laramis II. Only two dozen of these cruisers were put into service in GTVA fleets, with production ending in 2365. Allied Command assigns Aeolus-class ships primarily to guard slow-moving convoys against fighter and bomber wings, as these cruisers are severely out-gunned by most capital ships in service today. Their flak and AAA turrets serve as marvelous deterrents to smaller craft, however. \n\n<b>Prerequisites:</b> Cruiser Design, GTC Aeolus. \n\n<b>Armaments:</b> 2x Light Beam, 2x Anti-Fighter Beam, 6x Flak Turret, 2x Huge Turret.",
 	},
 	{
 		Type = Ship,
@@ -484,7 +484,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_mjolnir",
-		RequiredResearch = "BeamSentry & FS2",
+		RequiredResearch = "BeamSentry",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 122,
 		DisplayedName = "GTSG Mjolnir - Beam Sentry <c=12AB06>120s</c>",
@@ -514,12 +514,12 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_hygeia",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 104,
 		DisplayedName = "GTS Hygeia - Support Ship <c=12AB06>9s</c>",
 		Description =
-		"<b>Description:</b> The GTS Hygeia is the fleet's newest Terran support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Triton Dynamics designed the Hygeia class with huge cargo bays for munitions storage, plus the latest magnetic-stasis delivery system for quickly re-supplying combat craft with missiles and bombs. The Hygeia's repair facilities are driven by neural-net AI, for ultra-fast system diagnostics and repair. The high number of warheads carried by the Hygeia makes it a dangerous ship to be near when it blows up. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> The GTS Hygeia is the fleet's newest Terran support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Triton Dynamics designed the Hygeia class with huge cargo bays for munitions storage, plus the latest magnetic-stasis delivery system for quickly re-supplying combat craft with missiles and bombs. The Hygeia's repair facilities are driven by neural-net AI, for ultra-fast system diagnostics and repair. The high number of warheads carried by the Hygeia makes it a dangerous ship to be near when it blows up. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> None.",
 	},
 	{
 		Type = Ship,
@@ -564,22 +564,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_cerberus",
-		RequiredResearch = "",
+		RequiredResearch = "SentryGun",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 121,
 		DisplayedName = "GTSG Cerberus - Sentry Gun <c=12AB06>5s</c>",
 		Description =
-		"<b>Description:</b> The Cerberus is an advanced version of the Watchdog, with stronger weaponry and the ability to withstand more damage. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x GTW-15 Avenger.",
+		"<b>Description:</b> The Cerberus is an advanced version of the Watchdog, with stronger weaponry and the ability to withstand more damage. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 2x GTW-15 Avenger.",
 	},
 	{
 		Type = Ship,
 		ThingToBuild = "ter_centaur",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 105,
 		DisplayedName = "GTS Centuar - Support Ship <c=12AB06>9s</c>",
 		Description =
-		"<b>Description:</b> The Centaur support ship is designed to get in and out of battle as quick as possible. It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time. Most notable about the Centaur, however, is its extremely large explosion radius. The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> The Centaur support ship is designed to get in and out of battle as quick as possible. It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time. Most notable about the Centaur, however, is its extremely large explosion radius. The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> None.",
 	},
 
 	{

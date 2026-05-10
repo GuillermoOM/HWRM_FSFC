@@ -97,7 +97,7 @@ function timer_updating_fsfc()
 							"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
 							"ter_hygeia", "ter_argo",
 							"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
-							"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys",
+							"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
 							"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
 							"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
 							"shi_gorgon", "shi_astaroth"
@@ -108,7 +108,7 @@ function timer_updating_fsfc()
 					elseif (era_setting == 1) then -- FS2 Only, hide FS1
 						local fs1_ships_to_hide = {
 							"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
-							"vas_seth", "vas_horus", "vas_thoth", "vas_scarab", "shi_shaitan",
+							"vas_seth", "vas_horus", "vas_thoth", "vas_scarab", "vas_bes", "shi_shaitan",
 						}
 						for i, ship in fs1_ships_to_hide do
 							Player_RestrictBuildOption(playerIndex, ship)

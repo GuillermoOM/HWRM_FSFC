@@ -244,7 +244,7 @@ build = {
 		DisplayPriority = 132,
 		DisplayedName = "SSG Belial - Sentry Gun <c=12AB06>8s</c>",
 		Description =
-		"<b>Description:</b> The SSG Belial sentry gun platform appears to be a radical redesign of the Trident platform that was first encountered during the Great War. Pilots who have encountered both report that the Belial is harder to kill. It is reliably known that the Belial has twice as many laser turrets as the Trident sentry gun. Both types are used to guard storage depots, gas miners, and other Shivan installations. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 4x Shivan Heavy Laser.",
+		"<b>Description:</b> The SSG Belial sentry gun platform appears to be a radical redesign of the Trident platform that was first encountered during the Great War. Pilots who have encountered both report that the Belial is harder to kill. It is reliably known that the Belial has twice as many laser turrets as the Trident sentry gun. Both types are used to guard storage depots, gas miners, and other Shivan installations. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 4x Shivan Heavy Laser.",
 	},
 	{
 		Type = Ship,
@@ -304,6 +304,6 @@ build = {
 		DisplayPriority = 132,
 		DisplayedName = "SSG Trident - Sentry Gun <c=12AB06>6s</c>",
 		Description =
-		"<b>Description:</b> We believe that the sole purpose of the Trident is to guard Shivan repair and supply depots. It is not too strong, but in mass quantities, can be dangerous. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Shivan Heavy Laser.",
+		"<b>Description:</b> We believe that the sole purpose of the Trident is to guard Shivan repair and supply depots. It is not too strong, but in mass quantities, can be dangerous. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 2x Shivan Heavy Laser.",
 	}
 }

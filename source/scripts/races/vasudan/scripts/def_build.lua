@@ -199,22 +199,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_satis",
-		RequiredResearch = "",
+		RequiredResearch = "RepairSatis",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 511,
 		DisplayedName = "GVFr Satis - Repair <c=12AB06>35s</c>",
 		Description =
-		"<b>Description:</b> When the first Satis-class freighter was encountered by Terran forces during the Terran-Vasudan War, its firepower led Terran Command to classify it as a light cruiser. Only after a disabled Satis was captured did its true nature become known. Now designated the GVFr Satis class, these freighters still serve as an iron fist within the velvet glove of a freighter convoy. Few enemy fighters who mistake a Satis for a Ma'at or Bes live to regret their error. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 5x Turret, Capture ability (Upgrade)",
+		"<b>Description:</b> When the first Satis-class freighter was encountered by Terran forces during the Terran-Vasudan War, its firepower led Terran Command to classify it as a light cruiser. Only after a disabled Satis was captured did its true nature become known. Now designated the GVFr Satis class, these freighters still serve as an iron fist within the velvet glove of a freighter convoy. Few enemy fighters who mistake a Satis for a Ma'at or Bes live to regret their error. \n\n<b>Prerequisites:</b> Repair Satis. \n\n<b>Armaments:</b> 5x Turret, Capture ability (Upgrade)",
 	},
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bes",
-		RequiredResearch = "",
+		RequiredResearch = "SentryAndMineDeployer",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 512,
 		DisplayedName = "GVFr Bes - Sentry Builder <c=12AB06>25s</c>",
 		Description =
-		"<b>Description:</b> For the past 20 years, the GVFr Bes has been the mainstay of Vasudan shipping fleets. While some Terran systems languished in the post-war era, the Vasudans experienced an economic recovery that was miraculous, given the annihilation of their home planet. Experts credit the policies of the restored Imperial government that emerged following Khonsu II's dissolution of the Vasudan parliament. As commerce among the Vasudan systems resumed and expanded into Terran worlds, a new generation of space-faring cargo vessels was required to meet the needs of this burgeoning economy. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Turret.",
+		"<b>Description:</b> For the past 20 years, the GVFr Bes has been the mainstay of Vasudan shipping fleets. While some Terran systems languished in the post-war era, the Vasudans experienced an economic recovery that was miraculous, given the annihilation of their home planet. Experts credit the policies of the restored Imperial government that emerged following Khonsu II's dissolution of the Vasudan parliament. As commerce among the Vasudan systems resumed and expanded into Terran worlds, a new generation of space-faring cargo vessels was required to meet the needs of this burgeoning economy. \n\n<b>Prerequisites:</b> Sentry and Mine Deployer. \n\n<b>Armaments:</b> 2x Turret.",
 	},
 	{
 		Type = Ship,
@@ -224,12 +224,12 @@ build = {
 		DisplayPriority = 513,
 		DisplayedName = "GVSG Edjo - Sentry Gun <c=12AB06>6s</c>",
 		Description =
-		"<b>Description:</b> When the GTVA asked the Vasudan navy to upgrade the Great War-era Ankh sentry gun platform, the GVSG Edjo was the Vasudans' answer. The Edjo has significantly more armor plating than the Ankh, improving its survivability, but the Vasudans placed only one small cannon turret on the new platform, giving it half the punch of the Ankh. After seeing the Edjo, the Terrans quietly began developing their own advanced sentry gun platforms. The Vasudan navy seems content to leave this aspect of military technology to the Terrans. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Mekhu.",
+		"<b>Description:</b> When the GTVA asked the Vasudan navy to upgrade the Great War-era Ankh sentry gun platform, the GVSG Edjo was the Vasudans' answer. The Edjo has significantly more armor plating than the Ankh, improving its survivability, but the Vasudans placed only one small cannon turret on the new platform, giving it half the punch of the Ankh. After seeing the Edjo, the Terrans quietly began developing their own advanced sentry gun platforms. The Vasudan navy seems content to leave this aspect of military technology to the Terrans. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 2x Mekhu.",
 	},
 	{
 		Type = Ship,
 		ThingToBuild = "ter_mjolnir",
-		RequiredResearch = "",
+		RequiredResearch = "BeamSentry",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 515,
 		DisplayedName = "GTSG Mjolnir - Beam Cannon <c=12AB06>120s</c>",
@@ -280,12 +280,12 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bast",
-		RequiredResearch = "",
+		RequiredResearch = "RepairBast",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 311,
-		DisplayedName = "PVFr Bast - Sentry Builder <c=12AB06>22s</c>",
+		DisplayedName = "PVFr Bast - Repair Frigate <c=12AB06>22s</c>",
 		Description =
-		"<b>Description:</b> The Bast freighter is unarmed, and considered a non threat. We believe that it is mainly used by Vasudan civilians, but we have seen some in front line operations. It has very low target value, but should be destroyed, as any kind of resupply ship is a danger to the GTA. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> The Bast is a support frigate. It is primarily used for repairing allied vessels, but can be used for other support roles. \n\n<b>Prerequisites:</b> Repair Bast. \n\n<b>Armaments:</b> None.",
 	},
 	{
 		Type = Ship,
@@ -295,7 +295,7 @@ build = {
 		DisplayPriority = 513,
 		DisplayedName = "PVSG Ankh - Sentry  Gun <c=12AB06>4s</c>",
 		Description =
-		"<b>Description:</b> The Ankh is the standard Vasudan sentry gun. Its most common usage is guarding supply depots. However, since the development of the Anubis, its usage has dropped off significantly. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Turret.",
+		"<b>Description:</b> The Ankh is the standard Vasudan sentry gun. Its most common usage is guarding supply depots. However, since the development of the Anubis, its usage has dropped off significantly. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 2x Turret.",
 	},
 	{
 		Type = Ship,

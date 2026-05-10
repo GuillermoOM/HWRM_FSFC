@@ -407,6 +407,20 @@ research = {
 		Icon = Icon_Build,
 		ShortDisplayedName = "Sentry Gun",
 	},
+	{
+		Name = "SentryAndMineDeployer",
+		RequiredResearch = "SentryGun",
+		RequiredSubSystems = "",
+		Cost = 1500,
+		Time = 50,
+		DisplayedName = "Sentry And Mine Deployer <c=0e0160>(50s)</c>",
+		DisplayPriority = 29,
+		Description = "Unlocks Sentry and Mine Deployers: Vasudan Bes.",
+		TargetType = Ship,
+		TargetName = "vas_bes",
+		Icon = Icon_Build,
+		ShortDisplayedName = "Sentry And Mine Deployer",
+	},
 
 	-- Utility ---------------
 	{
@@ -422,6 +436,35 @@ research = {
 		TargetName = "vas_setekh",
 		Icon = Icon_Build,
 		ShortDisplayedName = "AWACS",
+	},
+
+	{
+		Name = "RepairSatis",
+		RequiredResearch = "CruiserDesign & FS1",
+		RequiredSubSystems = "",
+		Cost = 1500,
+		Time = 50,
+		DisplayedName = "Repair Satis <c=0e0160>(50s)</c>",
+		DisplayPriority = 30,
+		Description = "Unlocks Repair Frigate Satis.",
+		TargetType = Ship,
+		TargetName = "vas_satis",
+		Icon = Icon_Build,
+		ShortDisplayedName = "Repair Satis",
+	},
+	{
+		Name = "RepairBast",
+		RequiredResearch = "CruiserDesign & FS2",
+		RequiredSubSystems = "",
+		Cost = 1500,
+		Time = 50,
+		DisplayedName = "Repair Bast <c=0e0160>(50s)</c>",
+		DisplayPriority = 30,
+		Description = "Unlocks Repair Frigate Bast.",
+		TargetType = Ship,
+		TargetName = "vas_bast",
+		Icon = Icon_Build,
+		ShortDisplayedName = "Repair Bast",
 	},
 
 	-- AI Only Nodes ---------
