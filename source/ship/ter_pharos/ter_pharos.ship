@@ -28,9 +28,9 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.mass = 100
-NewShipType.thrusterMaxSpeed = 0
-NewShipType.mainEngineMaxSpeed = 0
-NewShipType.rotationMaxSpeed = 0
+NewShipType.thrusterMaxSpeed = 500
+NewShipType.mainEngineMaxSpeed = 500
+NewShipType.rotationMaxSpeed = 170
 NewShipType.thrusterAccelTime = 0.11
 NewShipType.thrusterBrakeTime = 0.1
 NewShipType.mainEngineAccelTime = 0.11

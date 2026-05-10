@@ -21,7 +21,7 @@ dofilepath("data:scripts/scar/fsfc_ui.lua")
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
 	Rule_Add("RandomMusicRuleFS2")
-	Rule_Add("Rule_GrantAllEras")
+	Rule_Add("Rule_GrantEraBySetting")
 	MPRestrict()
 	nocruisers = GetGameSettingAsNumber("nocruisers")
 	strikecraftgamemode = GetGameSettingAsNumber("strikecraftgamemode")
@@ -34,15 +34,26 @@ function OnInit()
 	crates = GetGameSettingAsNumber("crates")
 	carriersonly = GetGameSettingAsNumber("carriersonly")
 	norushtime = GetGameSettingAsNumber("norushtime")
-	if carriersonly == 0 then
-		SetStartFleetSuffix("")
-	elseif carriersonly == 1 then
-		SetStartFleetSuffix("carriersonly")
-		Rule_AddInterval("carriersonly_init", 2)
-	elseif carriersonly == 2 then
-		SetStartFleetSuffix("carriersonly1")
+	era_setting = GetGameSettingAsNumber("era") -- 0: FS1, 1: FS2, 2: Both
+	carriersonly = GetGameSettingAsNumber("carriersonly")
+
+	-- Suffix priority
+	local suffix = ""
+	if (carriersonly == 1) then
+		suffix = "carriersonly"
+	elseif (carriersonly == 2) then
+		suffix = "carriersonly1"
+	elseif (era_setting == 0) then
+		suffix = "fs1"
+	elseif (era_setting == 1) then
+		suffix = "fs2"
+	end
+	SetStartFleetSuffix(suffix)
+
+	if (carriersonly > 0) then
 		Rule_AddInterval("carriersonly_init", 2)
 	end
+
 	UI_SetElementEnabled("NewTaskbar", "btnObjectives", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnRecall", 0)
 	UI_SetElementEnabled("NewTaskbar", "btnBuild", 0)
@@ -67,6 +78,49 @@ function timer_updating()
 					local restrictString = PlayerRace_GetString(playerIndex, "dm_build_restrict", "")
 					if restrictString ~= "" then
 						Player_RestrictBuildOption(playerIndex, restrictString)
+					end
+
+					-- Era-based ship hiding for FS races
+					local racePrefix = strsub(PlayerRace_GetString(playerIndex, "Prefix", ""), 1, 3)
+					if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+						if (era_setting == 0) then -- FS1 Only
+							local fs2_ships_to_hide = {
+								"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
+								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
+								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
+								"ter_hygeia", "ter_argo",
+								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
+								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys",
+								"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
+								"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
+								"shi_gorgon", "shi_astaroth"
+							}
+							for i, ship in fs2_ships_to_hide do
+								Player_RestrictBuildOption(playerIndex, ship)
+							end
+						elseif (era_setting == 1) then -- FS2 Only
+							local fs1_ships_to_hide = {
+								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
+								"vas_seth", "vas_horus", "vas_thoth", "vas_scarab", "shi_shaitan",
+							}
+							for i, ship in fs1_ships_to_hide do
+								Player_RestrictBuildOption(playerIndex, ship)
+							end
+						end
+					end
+
+					-- Carriers Only restrictions for FS races
+					if (carriersonly > 0) then
+						if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+							local super_ships_to_hide = {
+								"ter_hades", "ter_colossus",
+								"vas_colossus",
+								"shi_lucifer", "shi_sathanas"
+							}
+							for i, ship in super_ships_to_hide do
+								Player_RestrictBuildOption(playerIndex, ship)
+							end
+						end
 					end
 				end
 			end
@@ -130,16 +184,26 @@ function timer_updating()
 	end
 end
 
-function Rule_GrantAllEras()
+function Rule_GrantEraBySetting()
+	local era = GetGameSettingAsNumber("era")
 	for i = 0, Universe_PlayerCount() - 1 do
 		if (Player_IsAlive(i) == 1) then
-			Player_UnrestrictResearchOption(i, "FS1")
-			Player_GrantResearchOption(i, "FS1")
-			Player_UnrestrictResearchOption(i, "FS2")
-			Player_GrantResearchOption(i, "FS2")
+			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				if (era == 0) then
+					Player_GrantResearchOption(i, "FS1")
+					Player_RestrictResearchOption(i, "FS2")
+				elseif (era == 1) then
+					Player_GrantResearchOption(i, "FS2")
+					Player_RestrictResearchOption(i, "FS1")
+				else
+					Player_GrantResearchOption(i, "FS1")
+					Player_GrantResearchOption(i, "FS2")
+				end
+			end
 		end
 	end
-	Rule_Remove("Rule_GrantAllEras")
+	Rule_Remove("Rule_GrantEraBySetting")
 end
 
 Events = {}
@@ -151,36 +215,36 @@ Events.endGame = {
 Events.startcinematic = {
 	{ HW2_Letterbox(1) },
 	{
-		{ "Camera_AllowControl(0)", "" },
-		{ "Universe_EnableSkip(0)", "" },
+		{ "Camera_AllowControl(0)",        "" },
+		{ "Universe_EnableSkip(0)",        "" },
 		{ "Universe_AllowPlayerOrders(0)", "" },
-		{ "SobGroup_DeSelectAll()", "" },
-		{ "Sensors_Toggle(0)", "" },
+		{ "SobGroup_DeSelectAll()",        "" },
+		{ "Sensors_Toggle(0)",             "" },
 	},
 }
 Events.startcinematic_focusrestore = {
 	{ HW2_Letterbox(1) },
 	{
-		{ "Camera_AllowControl(0)", "" },
-		{ "Universe_EnableSkip(0)", "" },
+		{ "Camera_AllowControl(0)",        "" },
+		{ "Universe_EnableSkip(0)",        "" },
 		{ "Universe_AllowPlayerOrders(0)", "" },
-		{ "SobGroup_DeSelectAll()", "" },
-		{ "Camera_FocusSave()", "" },
-		{ "Sensors_Toggle(0)", "" },
+		{ "SobGroup_DeSelectAll()",        "" },
+		{ "Camera_FocusSave()",            "" },
+		{ "Sensors_Toggle(0)",             "" },
 	},
 }
 Events.stopcinematic = {
 	{ HW2_Letterbox(0) },
 	{
 		{ "Universe_AllowPlayerOrders(1)", "" },
-		{ "Camera_AllowControl(1)", "" },
+		{ "Camera_AllowControl(1)",        "" },
 	},
 }
 Events.stopcinematic_focusrestore = {
 	{ HW2_Letterbox(0) },
 	{
 		{ "Universe_AllowPlayerOrders(1)", "" },
-		{ "Camera_FocusRestore()", "" },
-		{ "Camera_AllowControl(1)", "" },
+		{ "Camera_FocusRestore()",         "" },
+		{ "Camera_AllowControl(1)",        "" },
 	},
 }

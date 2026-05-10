@@ -218,7 +218,7 @@ build = {
 		DisplayPriority = 20,
 		DisplayedName = "GTF Loki - Recon <c=12AB06>29s</c>",
 		Description =
-		"<b>Description:</b> The GTF Loki is designated as a fighter, but it's more of a heavy reconnaissance craft. The Loki's micro-roughened hull and shielded exhaust chamber give it an extremely reduced profile to detection sensors. This makes it ideal for reconnaissance and infiltration missions that rely on stealth rather than firepower. Lacking the weaponry and armor to survive prolonged battles, the Loki can usually stay alive long enough for its high maneuverability and speed to discourage pursuers. Lokis are widely used by NTF forces. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber missiles. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW-83 Lamprey, 1x GTM-19 Harpoon, 1x GTM-41 EMP Adv (Upgrade)",
+		"<b>Description:</b> The GTF Loki is designated as a fighter, but it's more of a heavy reconnaissance craft. The Loki's micro-roughened hull and shielded exhaust chamber give it an extremely reduced profile to detection sensors. This makes it ideal for reconnaissance and infiltration missions that rely on stealth rather than firepower. Lacking the weaponry and armor to survive prolonged battles, the Loki can usually stay alive long enough for its high maneuverability and speed to discourage pursuers. Lokis are widely used by NTF forces. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW-83 Lamprey, 1x GTM-19 Harpoon, 1x GTM-41 EMP Adv (Upgrade)",
 	},
 	{
 		Type = Ship,
@@ -228,7 +228,7 @@ build = {
 		DisplayPriority = 13,
 		DisplayedName = "GTF Hercules - Assault <c=12AB06>39s</c>",
 		Description =
-		"<b>Description:</b> The old workhorse of the Terran fleet, the Hercules is a beloved but aging design. It was the mainstay of the Terran forces during the Great War, but it is slowly being phased out of the modern fleet. As they are replaced by Herc IIs, Myrmidons, and other recent designs, Hercules fighters are increasingly relegated to training and guard duties far from the front lines. Pilots who've flown Hercs for years love the ship's heavy armor and firepower and have learned to compensate for its low speed and poor maneuverability. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Swarm Missiles. \n\n<b>Armaments:</b> 4x GTW-5a Prometheus R, 2x GTW Subach HL-7, 2x GTM-4 Hornet, 2x GTM-MX6 Tempest.",
+		"<b>Description:</b> The old workhorse of the Terran fleet, the Hercules is a beloved but aging design. It was the mainstay of the Terran forces during the Great War, but it is slowly being phased out of the modern fleet. As they are replaced by Herc IIs, Myrmidons, and other recent designs, Hercules fighters are increasingly relegated to training and guard duties far from the front lines. Pilots who've flown Hercs for years love the ship's heavy armor and firepower and have learned to compensate for its low speed and poor maneuverability. \n\n<b>Prerequisites:</b> Fighter Design, Hercules. \n\n<b>Armaments:</b> 4x GTW-5a Prometheus R, 2x GTW Subach HL-7, 2x GTM-4 Hornet, 2x GTM-MX6 Tempest.",
 	},
 	{
 		Type = Ship,
@@ -238,7 +238,7 @@ build = {
 		DisplayPriority = 23,
 		DisplayedName = "GTF Hercules Mk. II - Assault <c=12AB06>37s</c>",
 		Description =
-		"<b>Description:</b> The GTF Hercules Mark II is the next generation of Terran heavy assault fighter. Introduced during the Great War, the original Herc's balance of firepower and maneuverability made it the most versatile strike fighter in the fleet. Some military historians have claimed the Hercules won the Great War, citing its deployment in key battles near the end of the Shivan conflict. Implementing recent advances in fusion drive technology, the Mark II improves the assault fighter's speed and maneuverability without sacrificing loadout capacity. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Swarm Missiles. \n\n<b>Armaments:</b> 2x GTW-5a Prometheus R, 2x GTW Subach HL-7, 2x GTM-4 Hornet (Tornado Upgrade), 2x GTM-MX6 Tempest.",
+		"<b>Description:</b> The GTF Hercules Mark II is the next generation of Terran heavy assault fighter. Introduced during the Great War, the original Herc's balance of firepower and maneuverability made it the most versatile strike fighter in the fleet. Some military historians have claimed the Hercules won the Great War, citing its deployment in key battles near the end of the Shivan conflict. Implementing recent advances in fusion drive technology, the Mark II improves the assault fighter's speed and maneuverability without sacrificing loadout capacity. \n\n<b>Prerequisites:</b> Fighter Design, Hercules Mark II. \n\n<b>Armaments:</b> 2x GTW-5a Prometheus R, 2x GTW Subach HL-7, 2x GTM-4 Hornet (Tornado Upgrade), 2x GTM-MX6 Tempest.",
 	},
 	{
 		Type = Ship,
@@ -248,7 +248,7 @@ build = {
 		DisplayPriority = 21,
 		DisplayedName = "GTF Perseus - Interceptor <c=12AB06>35s</c>",
 		Description =
-		"<b>Description:</b> The GTF Perseus is the newest fighter in the GTVA's arsenal. Slated to replace the aging Valkyrie as the Alliance's primary interceptor, the Perseus's high max speed and maneuverability make it ideal to hunt and destroy enemy bombers. Perseus fighters have been assigned to the 3rd Battle Group on a trial basis, with wide deployment expected after the OpEval period. Primary weapons include the Subach HL-7 and Prometheus cannon, with secondary loads of Harpoon and Hornet missiles. Preliminary results have shown the Perseus to be a superb fighter. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles. \n\n<b>Armaments:</b> 2x GTW-5 Prometheus S, 2x GTW Subach HL-7, 1x GTM-55 Trebuchet, 1x GTM-19 Harpoon.",
+		"<b>Description:</b> The GTF Perseus is the newest fighter in the GTVA's arsenal. Slated to replace the aging Valkyrie as the Alliance's primary interceptor, the Perseus's high max speed and maneuverability make it ideal to hunt and destroy enemy bombers. Perseus fighters have been assigned to the 3rd Battle Group on a trial basis, with wide deployment expected after the OpEval period. Primary weapons include the Subach HL-7 and Prometheus cannon, with secondary loads of Harpoon and Hornet missiles. Preliminary results have shown the Perseus to be a superb fighter. \n\n<b>Prerequisites:</b> Fighter Design, Perseus. \n\n<b>Armaments:</b> 2x GTW-5 Prometheus S, 2x GTW Subach HL-7, 1x GTM-55 Trebuchet, 1x GTM-19 Harpoon.",
 	},
 	{
 		Type = Ship,
@@ -258,7 +258,7 @@ build = {
 		DisplayPriority = 12,
 		DisplayedName = "GTF Ulysses - Superiority <c=12AB06>26s</c>",
 		Description =
-		"<b>Description:</b> Affectionately nicknamed The Bat by its pilots, the GTF Ulysses is a well-designed craft that has had a far longer useful life than its engineers ever imagined. Developed jointly by Terran and Vasudan contractors, the Ulysses was first deployed near the end of the Great War. Its excellent maneuverability and high top speed give it an agility that pilots love, but at a cost of thin armor and a small secondary weapon loadout. The Ulysses is a better choice for offensive missions than defensive ones. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW ML-70 Morning Star, 1x GTM-19 Harpoon.",
+		"<b>Description:</b> Affectionately nicknamed The Bat by its pilots, the GTF Ulysses is a well-designed craft that has had a far longer useful life than its engineers ever imagined. Developed jointly by Terran and Vasudan contractors, the Ulysses was first deployed near the end of the Great War. Its excellent maneuverability and high top speed give it an agility that pilots love, but at a cost of thin armor and a small secondary weapon loadout. The Ulysses is a better choice for offensive missions than defensive ones. \n\n<b>Prerequisites:</b> Fighter Design, Ulysses. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW ML-70 Morning Star, 1x GTM-19 Harpoon.",
 	},
 	{
 		Type = Ship,
@@ -268,7 +268,7 @@ build = {
 		DisplayPriority = 22,
 		DisplayedName = "GTF Myrmidon - Adv. Superiority <c=12AB06>36s</c>",
 		Description =
-		"<b>Description:</b> RNI Systems' GTF Myrmidon replaces the Ulysses as the Alliance's primary space superiority fighter. The Myrmidon has received high marks for speed, maneuverability, armor, and loadout. An ultra-efficient hull configuration provides space for three secondary weapon systems, a first for Terran-Vasudan fighters. This versatility enables Myrmidon squadrons to fulfill a range of combat roles, from light assault to heavy reconnaissance. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x GTW Subach HL-7, 2x GTW-5a Prometheus R, 2x GTM-MX64 Rockeye, 1x GTM-MX6 Tempest.",
+		"<b>Description:</b> RNI Systems' GTF Myrmidon replaces the Ulysses as the Alliance's primary space superiority fighter. The Myrmidon has received high marks for speed, maneuverability, armor, and loadout. An ultra-efficient hull configuration provides space for three secondary weapon systems, a first for Terran-Vasudan fighters. This versatility enables Myrmidon squadrons to fulfill a range of combat roles, from light assault to heavy reconnaissance. \n\n<b>Prerequisites:</b> Fighter Design, Myrmidon. \n\n<b>Armaments:</b> 4x GTW Subach HL-7, 2x GTW-5a Prometheus R, 2x GTM-MX64 Rockeye, 1x GTM-MX6 Tempest.",
 	},
 	{
 		Type = Ship,
@@ -278,7 +278,7 @@ build = {
 		DisplayPriority = 24,
 		DisplayedName = "GTF Ares - Strategic Assault <c=12AB06>45s</c>",
 		Description =
-		"<b>Description:</b> The GTF Ares class of fighters is a radical upgrade of the Hercules II fighter. The power plant has been completely replaced with the newer, more powerful Nankam NA-27f model. Depleted uranium shielding has been added atop critical subsystems, making the Ares harder to incapacitate. Two primary weapon banks have been added, for greater firepower than the Herc II. This greater punch and protection come at a cost, however, as the Ares handles like a potato. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles, Tornado missiles. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 4x Prometheus S, 2x GTM-55 Trebuchet, 2x GTM-4a Tornado.",
+		"<b>Description:</b> The GTF Ares class of fighters is a radical upgrade of the Hercules II fighter. The power plant has been completely replaced with the newer, more powerful Nankam NA-27f model. Depleted uranium shielding has been added atop critical subsystems, making the Ares harder to incapacitate. Two primary weapon banks have been added, for greater firepower than the Herc II. This greater punch and protection come at a cost, however, as the Ares handles like a potato. \n\n<b>Prerequisites:</b> Fighter Design, Ares. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 4x Prometheus S, 2x GTM-55 Trebuchet, 2x GTM-4a Tornado.",
 	},
 	{
 		Type = Ship,
@@ -288,7 +288,7 @@ build = {
 		DisplayPriority = 25,
 		DisplayedName = "GTF Erinyes - Heavy Assault <c=12AB06>45s</c>",
 		Description =
-		"<b>Description:</b> GTF Erinyes craft are fresh off the drawing boards of Triton Dynamics. Though fast and heavily armored, their main attraction is firepower. With eight primary banks and two secondary weapon bays, Erinyes are at the top of the combat craft food chain. Both sets of weapon banks have been designed to maximize compatibility with the greatest possible number of weapon system. Erinyes-class ships are being evenly distributed through the GTVA fleet, but only elite pilots are currently authorized to fly them. \n\n<b>Prerequisites:</b> Fighter Design, Multi-Role Missiles, Anti-Fighter Missiles. \n\n<b>Armaments:</b> 4x UD-8 Kayser, 4x GTW-19 Circe, 1x GTM-19 Harpoon, 1x GTM-4a Tornado.",
+		"<b>Description:</b> GTF Erinyes craft are fresh off the drawing boards of Triton Dynamics. Though fast and heavily armored, their main attraction is firepower. With eight primary banks and two secondary weapon bays, Erinyes are at the top of the combat craft food chain. Both sets of weapon banks have been designed to maximize compatibility with the greatest possible number of weapon system. Erinyes-class ships are being evenly distributed through the GTVA fleet, but only elite pilots are currently authorized to fly them. \n\n<b>Prerequisites:</b> Fighter Design, Erinyes. \n\n<b>Armaments:</b> 4x UD-8 Kayser, 4x GTW-19 Circe, 1x GTM-19 Harpoon, 1x GTM-4a Tornado.",
 	},
 	{
 		Type = Ship,
@@ -318,7 +318,7 @@ build = {
 		DisplayPriority = 41,
 		DisplayedName = "GTB Artemis D.H. - Adv. Bomber <c=12AB06>42s</c>",
 		Description =
-		"<b>Description:</b> The Artemis D.H. is an experimental variant of the standard Artemis. The most notable change is the Artemis's factory-issued Han-Ronald engines have been replaced by the Nankam NA-27f powerplant found in GTF Ares fightercraft. The D.H. is faster and more maneuverable than the standard Artemis bomber, at no cost to armor or armament. During the OpEval period, Artemis D.H. bombers are being deployed in only select squadrons in different theatres of the war. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs, Anti-Fighter upgrade, Artemis D.H. Upgrade. \n\n<b>Armaments:</b> 4x UD-8 Kayser (Rapid Fire), 1x GTM-10 Pihrana, 1x GTM-12 Cyclops.",
+		"<b>Description:</b> The Artemis D.H. is an experimental variant of the standard Artemis. The most notable change is the Artemis's factory-issued Han-Ronald engines have been replaced by the Nankam NA-27f powerplant found in GTF Ares fightercraft. The D.H. is faster and more maneuverable than the standard Artemis bomber, at no cost to armor or armament. During the OpEval period, Artemis D.H. bombers are being deployed in only select squadrons in different theatres of the war. \n\n<b>Prerequisites:</b> Bomber Design, Artemis D.H. Upgrade. \n\n<b>Armaments:</b> 4x UD-8 Kayser (Rapid Fire), 1x GTM-10 Pihrana, 1x GTM-12 Cyclops.",
 	},
 	{
 		Type = Ship,
@@ -328,7 +328,7 @@ build = {
 		DisplayPriority = 32,
 		DisplayedName = "GTB Medusa - Medium Bomber <c=12AB06>35s</c>",
 		Description =
-		"<b>Description:</b> The GTB Medusa is the workhorse of the GTVA's bomber fleet. Its large bomb capacity enables it to take out cruiser-class warships, while its strong shielding ensures it can get close enough to deliver the punch. The first bomber to carry the potent Cyclops bomb, the Medusa is sure to be one of the highlights of a bomber pilot's career. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Cruiser Bombs. \n\n<b>Armaments:</b> 2x Prometheus R, 1x Prometheus R turret, 2x GTM-12 Cyclops.",
+		"<b>Description:</b> The GTB Medusa is the workhorse of the GTVA's bomber fleet. Its large bomb capacity enables it to take out cruiser-class warships, while its strong shielding ensures it can get close enough to deliver the punch. The first bomber to carry the potent Cyclops bomb, the Medusa is sure to be one of the highlights of a bomber pilot's career. \n\n<b>Prerequisites:</b> Bomber Design, Medusa. \n\n<b>Armaments:</b> 2x Prometheus R, 1x Prometheus R turret, 2x GTM-12 Cyclops.",
 	},
 	{
 		Type = Ship,
@@ -338,7 +338,7 @@ build = {
 		DisplayPriority = 33,
 		DisplayedName = "GTB Ursa - Heavy Bomber <c=12AB06>45s</c>",
 		Description =
-		"<b>Description:</b> The GTB Ursa is the slowest bomber in the GTVA fleet. What it lacks in speed, however, it more than makes up with its massive payload. The Ursa was the first GTVA bomber designed specifically to destroy capital ships. With a rack of Helios bombs, in addition to a standard complement of Hornet missiles and Prometheus cannon, a squadron of Ursas can take out a destroyer. Ursas have the highest shielding of any bomber, along with a GTVI-designed hyper-dense hull. These help ensure that the Ursa gets close enough to deliver its payload and possibly even survive the escape. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 5x Prometheus S, 1x Kayser turret, 1x GTM-13 Helios.",
+		"<b>Description:</b> The GTB Ursa is the slowest bomber in the GTVA fleet. What it lacks in speed, however, it more than makes up with its massive payload. The Ursa was the first GTVA bomber designed specifically to destroy capital ships. With a rack of Helios bombs, in addition to a standard complement of Hornet missiles and Prometheus cannon, a squadron of Ursas can take out a destroyer. Ursas have the highest shielding of any bomber, along with a GTVI-designed hyper-dense hull. These help ensure that the Ursa gets close enough to deliver its payload and possibly even survive the escape. \n\n<b>Prerequisites:</b> Bomber Design, Ursa. \n\n<b>Armaments:</b> 5x Prometheus S, 1x Kayser turret, 1x GTM-13 Helios.",
 	},
 	{
 		Type = Ship,
@@ -348,7 +348,7 @@ build = {
 		DisplayPriority = 42,
 		DisplayedName = "GTB Boanerges - Heavy Bomber <c=12AB06>44s</c>",
 		Description =
-		"<b>Description:</b> The new GTB Boanerges has been assigned to elite bomber squadrons in the 3rd, 4th, and 5th Terran battle groups. The challenge of maintaining an aging fleet has motivated the GTVA to develop a new generation of ships able to withstand long-term abuse in the field. By maximizing shielding and payload (while offering enough maneuverability to make it a viable tactical unit), the Boanerges promises to remain in service for decades to come. One test pilot observed that the Boanerges handles better than any other bomber and has enough firepower to make it a formidable anti-capship weapon. \n\n<b>Prerequisites:</b> Bomber Design, Anti-Capital Bombs. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 1x GTM-13 Helios, 1x GTM-11 Infyrno (Upgrade).",
+		"<b>Description:</b> The new GTB Boanerges has been assigned to elite bomber squadrons in the 3rd, 4th, and 5th Terran battle groups. The challenge of maintaining an aging fleet has motivated the GTVA to develop a new generation of ships able to withstand long-term abuse in the field. By maximizing shielding and payload (while offering enough maneuverability to make it a viable tactical unit), the Boanerges promises to remain in service for decades to come. One test pilot observed that the Boanerges handles better than any other bomber and has enough firepower to make it a formidable anti-capship weapon. \n\n<b>Prerequisites:</b> Bomber Design, Boanerges. \n\n<b>Armaments:</b> 2x GTW-66 Maxim, 1x GTM-13 Helios, 1x GTM-11 Infyrno (Upgrade).",
 	},
 	{
 		Type = Ship,
@@ -368,7 +368,7 @@ build = {
 		DisplayPriority = 51,
 		DisplayedName = "GTC Leviathan - Heavy Cruiser <c=12AB06>43s</c>",
 		Description =
-		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, Cruiser Armor, Light Photon Beams. \n\n<b>Armaments:</b> 1x Light Beam, 1x Pihrana Turret, 4x Anti-Fighter Beam, 3x Turret.",
+		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, Heavy Cruiser. \n\n<b>Armaments:</b> 1x Light Beam, 1x Pihrana Turret, 4x Anti-Fighter Beam, 3x Turret.",
 	},
 	{
 		Type = Ship,
@@ -378,7 +378,7 @@ build = {
 		DisplayPriority = 52,
 		DisplayedName = "GTC Aeolus - Adv. Cruiser <c=12AB06>47s</c>",
 		Description =
-		"<b>Description:</b> The GTC Aeolus is the first cruiser class ever produced by the RNI shipyards orbiting Laramis II. Only two dozen of these cruisers were put into service in GTVA fleets, with production ending in 2365. Allied Command assigns Aeolus-class ships primarily to guard slow-moving convoys against fighter and bomber wings, as these cruisers are severely out-gunned by most capital ships in service today. Their flak and AAA turrets serve as marvelous deterrents to smaller craft, however. \n\n<b>Prerequisites:</b> Cruiser Design, Medium Photon Beams. \n\n<b>Armaments:</b> 2x Light Beam, 2x Anti-Fighter Beam, 6x Flak Turret, 2x Huge Turret.",
+		"<b>Description:</b> The GTC Aeolus is the first cruiser class ever produced by the RNI shipyards orbiting Laramis II. Only two dozen of these cruisers were put into service in GTVA fleets, with production ending in 2365. Allied Command assigns Aeolus-class ships primarily to guard slow-moving convoys against fighter and bomber wings, as these cruisers are severely out-gunned by most capital ships in service today. Their flak and AAA turrets serve as marvelous deterrents to smaller craft, however. \n\n<b>Prerequisites:</b> Cruiser Design, Advanced Cruiser. \n\n<b>Armaments:</b> 2x Light Beam, 2x Anti-Fighter Beam, 6x Flak Turret, 2x Huge Turret.",
 	},
 	{
 		Type = Ship,
@@ -388,7 +388,7 @@ build = {
 		DisplayPriority = 70,
 		DisplayedName = "GTCv Deimos - Corvette <c=12AB06>110s</c>",
 		Description =
-		"<b>Description:</b> Deimos-class corvettes, such as the GTCv Actium and the GTCv Lysander, are the newest addition to the Terran fleet. These sleek, ultra-modern warships are the products of a new era of ship design, maximizing maneuverability and firepower. Their hulls are strengthened with collapsed-core molybdenum sheathing for better protection against beam fire, and their Vasudan-designed reactor core provides more energy per ton than any other allied ship class. \n\n<b>Prerequisites:</b> Capital Ship Design, Medium Photon Beams. \n\n<b>Armaments:</b> 4x Slashing Beam, 4x Anti-Fighter Beam, 6x Flak Turret, 2x Piranha Missile Launcher, 4x Huge Turret, 6x Turret.",
+		"<b>Description:</b> Deimos-class corvettes, such as the GTCv Actium and the GTCv Lysander, are the newest addition to the Terran fleet. These sleek, ultra-modern warships are the products of a new era of ship design, maximizing maneuverability and firepower. Their hulls are strengthened with collapsed-core molybdenum sheathing for better protection against beam fire, and their Vasudan-designed reactor core provides more energy per ton than any other allied ship class. \n\n<b>Prerequisites:</b> Capital Ship Design, Corvette. \n\n<b>Armaments:</b> 4x Slashing Beam, 4x Anti-Fighter Beam, 6x Flak Turret, 2x Piranha Missile Launcher, 4x Huge Turret, 6x Turret.",
 	},
 	{
 		Type = Ship,
@@ -418,7 +418,7 @@ build = {
 		DisplayPriority = 82,
 		DisplayedName = "GTD Hades - Super Destroyer <c=12AB06>280s</c>",
 		Description =
-		"<b>Description:</b> The GTD Hades was a fusion of Terran and Shivan military technologies. It was constructed by Galactic Terran Intelligence (GTI), a rogue branch of the GTA. After the defeat of the GTI and the destruction of the Hades, the GTA classified the details of this research at level Omega. There are rumors that the Alliance has attempted to reconstruct the Hades to learn more about the GTI's activities. These reports have yet to be confirmed by government sources. \n\n<b>Prerequisites:</b> Capital Ship Design, Shivan Hybrid Beams. \n\n<b>Armaments:</b> 2x Super Heavy Beam, 2x Heavy Beam, 4x Piranha Missile Launcher, 5x Huge Turret, 7x Turret.",
+		"<b>Description:</b> The GTD Hades was a fusion of Terran and Shivan military technologies. It was constructed by Galactic Terran Intelligence (GTI), a rogue branch of the GTA. After the defeat of the GTI and the destruction of the Hades, the GTA classified the details of this research at level Omega. There are rumors that the Alliance has attempted to reconstruct the Hades to learn more about the GTI's activities. These reports have yet to be confirmed by government sources. \n\n<b>Prerequisites:</b> Capital Ship Design, Super Destroyer. \n\n<b>Armaments:</b> 2x Super Heavy Beam, 2x Heavy Beam, 4x Piranha Missile Launcher, 5x Huge Turret, 7x Turret.",
 	},
 
 	{
@@ -429,7 +429,7 @@ build = {
 		DisplayPriority = 84,
 		DisplayedName = "GTVA Colossus <c=12AB06>500s</c>",
 		Description =
-		"<b>Description:</b> The GTVA Colossus resulted from an endeavor unprecedented in Terran or Vasudan history. This 6-kilometer-long behemoth is the result of 20 years of joint effort from dozens of contractors of both races. The Colossus is the most powerful space-faring warship ever made, bristling with over 60 weapon turrets. It also houses 60 fighter and bomber wings and requires a crew of over 30,000. The firepower of the Colossus is greater than that of most GTVA battle groups. \n\n<b>Prerequisites:</b> Super Capital Ship Design \n\n<b>Armaments:</b> 6x Heavy Beams, 7x Slashing Beams, 10x Anti-Fighter Beams, 12x Flak Turret, 2x Piranha, 8x FighterKiller, 10x Huge Turret, 8x Turret.",
+		"<b>Description:</b> The GTVA Colossus resulted from an endeavor unprecedented in Terran or Vasudan history. This 6-kilometer-long behemoth is the result of 20 years of joint effort from dozens of contractors of both races. The Colossus is the most powerful space-faring warship ever made, bristling with over 60 weapon turrets. It also houses 60 fighter and bomber wings and requires a crew of over 30,000. The firepower of the Colossus is greater than that of most GTVA battle groups. \n\n<b>Prerequisites:</b> Super Capital Ship Design, Juggernaut. \n\n<b>Armaments:</b> 6x Heavy Beams, 7x Slashing Beams, 10x Anti-Fighter Beams, 12x Flak Turret, 2x Piranha, 8x FighterKiller, 10x Huge Turret, 8x Turret.",
 	},
 	{
 		Type = Ship,
@@ -454,12 +454,12 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_argo",
-		RequiredResearch = "RepairFrigate",
+		RequiredResearch = "RepairArgo",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 101,
 		DisplayedName = "GTT Argo - Repair <c=12AB06>37s</c>",
 		Description =
-		"<b>Description:</b> The GTT Argo has become the standard military transport vehicle for the Terran fleet. Argos sometimes carry new weapon and combat craft prototypes to and from testing grounds or to front-line deployment positions. Military VIPs occasionally commandeer Argos to travel from star system to star system in some semblance of comfort. Argos are most often used as assault transports, carrying squads of Marines through heavy flak to board enemy vessels that Command has decided to capture rather than destroy. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Flak, Capture ability (Upgrade)",
+		"<b>Description:</b> The GTT Argo has become the standard military transport vehicle for the Terran fleet. Argos sometimes carry new weapon and combat craft prototypes to and from testing grounds or to front-line deployment positions. Military VIPs occasionally commandeer Argos to travel from star system to star system in some semblance of comfort. Argos are most often used as assault transports, carrying squads of Marines through heavy flak to board enemy vessels that Command has decided to capture rather than destroy. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 2x Flak, Capture ability (Upgrade)",
 	},
 	{
 		Type = Ship,
@@ -469,7 +469,7 @@ build = {
 		DisplayPriority = 102,
 		DisplayedName = "GTFr Poseidon - Sentry Builder <c=12AB06>25s</c>",
 		Description =
-		"<b>Description:</b> The GTFr Poseidon is the smaller of the two standard Terran military freighters. Though it carries only half as much cargo as the Triton, the Poseidon is more often chosen for dangerous missions. Its greater speed gives it better survivability on the front lines, as does the fact that it has four weapon turrets, compared to the Triton's two. When Allied Command sends supplies and munitions that have to get through, a Poseidon is usually chosen to transport them. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 4x Turret.",
+		"<b>Description:</b> The GTFr Poseidon is the smaller of the two standard Terran military freighters. Though it carries only half as much cargo as the Triton, the Poseidon is more often chosen for dangerous missions. Its greater speed gives it better survivability on the front lines, as does the fact that it has four weapon turrets, compared to the Triton's two. When Allied Command sends supplies and munitions that have to get through, a Poseidon is usually chosen to transport them. \n\n<b>Prerequisites:</b> Sentry & Mine Deployer. \n\n<b>Armaments:</b> 4x Turret.",
 	},
 	{
 		Type = Ship,
@@ -479,7 +479,7 @@ build = {
 		DisplayPriority = 120,
 		DisplayedName = "GTSG Alastor - Sentry Gun <c=12AB06>7s</c>",
 		Description =
-		"<b>Description:</b> GTSG Alastor sentry gun platforms can be dropped by warships to cover a retreat, or they can be used to strengthen firepower around strategic locations. While Alastors alone cannot hold a position against more than a few fighters, complementing them with a warship and several wings of fighters presents an exemplary defense against all but the most determined foes. Two Bessmer-Kohn cannon turrets on opposing sides of the platform give the Alastor a full field of fire. The turrets are controlled by the latest neural-net cyber-AI to track multiple targets simultaneously. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Subach.",
+		"<b>Description:</b> GTSG Alastor sentry gun platforms can be dropped by warships to cover a retreat, or they can be used to strengthen firepower around strategic locations. While Alastors alone cannot hold a position against more than a few fighters, complementing them with a warship and several wings of fighters presents an exemplary defense against all but the most determined foes. Two Bessmer-Kohn cannon turrets on opposing sides of the platform give the Alastor a full field of fire. The turrets are controlled by the latest neural-net cyber-AI to track multiple targets simultaneously. \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 2x Subach.",
 	},
 	{
 		Type = Ship,
@@ -489,7 +489,7 @@ build = {
 		DisplayPriority = 122,
 		DisplayedName = "GTSG Mjolnir - Beam Sentry <c=12AB06>120s</c>",
 		Description =
-		"<b>Description:</b> The GTSG Mjolnir is the most advanced sentry gun device known. The Mjolnir mounts a single, powerful beam cannon and can do heavy damage to enemy warships before they come in range. Mjolnirs are also referred to as RBCs (remote beam cannons). They are used to help protect the most vital front-line Alliance installations. \n\n<b>Prerequisites:</b> Heavy Photon Beams. \n\n<b>Armaments:</b> 1x Mjolnir Beam.",
+		"<b>Description:</b> The GTSG Mjolnir is the most advanced sentry gun device known. The Mjolnir mounts a single, powerful beam cannon and can do heavy damage to enemy warships before they come in range. Mjolnirs are also referred to as RBCs (remote beam cannons). They are used to help protect the most vital front-line Alliance installations. \n\n<b>Prerequisites:</b> Beam Sentry. \n\n<b>Armaments:</b> 1x Mjolnir Beam.",
 	},
 	{
 		Type = Ship,
@@ -499,7 +499,7 @@ build = {
 		DisplayPriority = 109,
 		DisplayedName = "GTNB Pharos - Sensor Bouy <c=12AB06>20s</c>",
 		Description =
-		"<b>Description:</b> Long range sensor device. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> Long range sensor device. Can be deployed to a specific location once after construction. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
 	},
 	{
 		Type = Ship,
@@ -509,7 +509,7 @@ build = {
 		DisplayPriority = 108,
 		DisplayedName = "GTA Charybdis - AWACS <c=12AB06>90s</c>",
 		Description =
-		"<b>Description:</b> Ships of the GTA Charybdis class have been packed with the latest tachyon-enabled AWACS equipment from GTVI labs. Each GTVA battle group has a squadron of Charybdis-class ships assigned to it. These ships double the range of the group's standard detection arrays. Charybdis ships' thin armor and weak defenses make them easy victims for enemy bombers. They have proven indispensable, however, in forays into the nebula beyond the Knossos portal. Charybdis-class ships are very vulnerable in this environment, as witnessed by the recent loss of the GTA Panopticon from the 3rd Battle Group. \n\n<b>Prerequisites:</b> AWACS Level I \n\n<b>Armaments:</b> 6x Turret.",
+		"<b>Description:</b> Ships of the GTA Charybdis class have been packed with the latest tachyon-enabled AWACS equipment from GTVI labs. Each GTVA battle group has a squadron of Charybdis-class ships assigned to it. These ships double the range of the group's standard detection arrays. Charybdis ships' thin armor and weak defenses make them easy victims for enemy bombers. They have proven indispensable, however, in forays into the nebula beyond the Knossos portal. Charybdis-class ships are very vulnerable in this environment, as witnessed by the recent loss of the GTA Panopticon from the 3rd Battle Group. \n\n<b>Prerequisites:</b> AWACS. \n\n<b>Armaments:</b> 6x Turret.",
 	},
 	{
 		Type = Ship,
@@ -519,7 +519,7 @@ build = {
 		DisplayPriority = 104,
 		DisplayedName = "GTS Hygeia - Support Ship <c=12AB06>9s</c>",
 		Description =
-		"<b>Description:</b> The GTS Hygeia is the fleet's newest Terran support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Triton Dynamics designed the Hygeia class with huge cargo bays for munitions storage, plus the latest magnetic-stasis delivery system for quickly re-supplying combat craft with missiles and bombs. The Hygeia's repair facilities are driven by neural-net AI, for ultra-fast system diagnostics and repair. The high number of warheads carried by the Hygeia makes it a dangerous ship to be near when it blows up. \n\n<b>Prerequisites:</b> Fighter Design or Bomber design \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> The GTS Hygeia is the fleet's newest Terran support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Triton Dynamics designed the Hygeia class with huge cargo bays for munitions storage, plus the latest magnetic-stasis delivery system for quickly re-supplying combat craft with missiles and bombs. The Hygeia's repair facilities are driven by neural-net AI, for ultra-fast system diagnostics and repair. The high number of warheads carried by the Hygeia makes it a dangerous ship to be near when it blows up. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
 	},
 	{
 		Type = Ship,
@@ -529,7 +529,7 @@ build = {
 		DisplayPriority = 10,
 		DisplayedName = "GTF Apollo - Space Superiority <c=12AB06>30s</c>",
 		Description =
-		"<b>Description:</b> The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault. \n\n<b>Prerequisites:</b> Fighter Design \n\n<b>Armaments:</b> 4x ML-16 Laser, 4x GTW-15 Avenger (Upgrade), 1x GTM-MX50, 1x GTM-2 Fury.",
+		"<b>Description:</b> The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault. \n\n<b>Prerequisites:</b> Fighter Design, Apollo. \n\n<b>Armaments:</b> 4x ML-16 Laser, 4x GTW-15 Avenger (Upgrade), 1x GTM-MX50, 1x GTM-2 Fury.",
 	},
 	{
 		Type = Ship,
@@ -539,7 +539,7 @@ build = {
 		DisplayPriority = 11,
 		DisplayedName = "GTF Valkyrie - Interceptor <c=12AB06>30s</c>",
 		Description =
-		"<b>Description:</b> Using the old GTF Angel scout fighter as a template, the GTA created the Valkyrie interceptor fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and a weak hull. \n\n<b>Prerequisites:</b> Fighter Design, Anti-Bomber Missiles \n\n<b>Armaments:</b> 4x GTW-7 Banshee, 2x GTW-65 Railgun (Silent Threat Upgrade), 2x GTM Phoenix-V.",
+		"<b>Description:</b> Using the old GTF Angel scout fighter as a template, the GTA created the Valkyrie interceptor fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and a weak hull. \n\n<b>Prerequisites:</b> Fighter Design, Valkyrie. \n\n<b>Armaments:</b> 4x GTW-7 Banshee, 2x GTW-65 Railgun (Silent Threat Upgrade), 2x GTM Phoenix-V.",
 	},
 	{
 		Type = Ship,
@@ -554,12 +554,12 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_chronos",
-		RequiredResearch = "",
+		RequiredResearch = "RepairChronos",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 106,
 		DisplayedName = "GTFr Chronos - Repair Ship <c=12AB06>37s</c>",
 		Description =
-		"<b>Description:</b> The Chronos is a freighter of civilian design. As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations. These vessels are slow but strong. \n\n<b>Prerequisites:</b> Cruiser Design. \n\n<b>Armaments:</b> 1x Avenger Turret, Capture ability (Upgrade)",
+		"<b>Description:</b> The Chronos is a freighter of civilian design. As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations. These vessels are slow but strong. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 1x Avenger Turret, Capture ability (Upgrade)",
 	},
 	{
 		Type = Ship,
@@ -579,7 +579,7 @@ build = {
 		DisplayPriority = 105,
 		DisplayedName = "GTS Centuar - Support Ship <c=12AB06>9s</c>",
 		Description =
-		"<b>Description:</b> The Centaur support ship is designed to get in and out of battle as quick as possible. It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time. Most notable about the Centaur, however, is its extremely large explosion radius. The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur. \n\n<b>Prerequisites:</b> Fighter Design or Bomber design \n\n<b>Armaments:</b> None.",
+		"<b>Description:</b> The Centaur support ship is designed to get in and out of battle as quick as possible. It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time. Most notable about the Centaur, however, is its extremely large explosion radius. The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
 	},
 
 	{
@@ -590,7 +590,7 @@ build = {
 		DisplayPriority = 107,
 		DisplayedName = "GTSC Faustus - Science Vessel <c=12AB06>35s</c>",
 		Description =
-		"<b>Description:</b> The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research. However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships; hence, you will rarely find many of these anywhere near the front lines of battle. \n\n<b>Prerequisites:</b> Cruiser design \n\n<b>Armaments:</b> 6x Turret.",
+		"<b>Description:</b> The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research. However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships; hence, you will rarely find many of these anywhere near the front lines of battle. \n\n<b>Prerequisites:</b> Science Vessel. \n\n<b>Armaments:</b> 6x Turret.",
 	},
 	{
 		Type = Ship,
@@ -600,7 +600,7 @@ build = {
 		DisplayPriority = 83,
 		DisplayedName = "GTI Arcadia - Installation <c=12AB06>100s</c>",
 		Description =
-		"<b>Description:</b> The GTI Arcadia is a multi-purpose installation that has served the Terran fleet since the days of the Great War. Almost every major star system is host to at least one Arcadia, which is often used as a center for trade and communications. Home to scores of small ships, including repair vessels, fighters, and transports, an Arcadia installation is always a hub of intrasystem and interstellar traffic. An Arcadia is not an easy target for hostile forces, as it combines the firepower of over 20 weapon turrets with the ability to launch up to ten wings of fighters from its fighterbay. \n\n<b>Prerequisites:</b> Installation Design \n\n<b>Armaments:</b> 19x Turret, 5x FighterKiller.",
+		"<b>Description:</b> The GTI Arcadia is a multi-purpose installation that has served the Terran fleet since the days of the Great War. Almost every major star system is host to at least one Arcadia, which is often used as a center for trade and communications. Home to scores of small ships, including repair vessels, fighters, and transports, an Arcadia installation is always a hub of intrasystem and interstellar traffic. An Arcadia is not an easy target for hostile forces, as it combines the firepower of over 20 weapon turrets with the ability to launch up to ten wings of fighters from its fighterbay. \n\n<b>Prerequisites:</b> Installation. \n\n<b>Armaments:</b> 19x Turret, 5x FighterKiller.",
 	},
 	{
 		Type = Ship,
@@ -610,6 +610,6 @@ build = {
 		DisplayPriority = 26,
 		DisplayedName = "GTF Pegasus - Stealth Recon <c=12AB06>65s</c>",
 		Description =
-		"<b>Description:</b> The Pegasus is used almost exclusively for reconnaissance missions. It's the fastest, most maneuverable ship in the Terran arsenal. The craft's contours and hull materials were carefully designed to minimize its profile to detection sensors. It is woefully armored and packs only minimal weaponry, making it a death box in a firefight. Pegasus pilots are a special breed of daredevils who pride themselves on getting into and out of situations that would be the death of other pilots, all without firing a shot. \n\n<b>Prerequisites:</b> Fighter Design, Stealth Technology. \n\n<b>Armaments:</b> 2x Subach HL-7 (Rapid Fire), GTM-19 Harpoon, 1x GTM 43a Stiletto II (Upgrade).",
+		"<b>Description:</b> The Pegasus is used almost exclusively for reconnaissance missions. It's the fastest, most maneuverable ship in the Terran arsenal. The craft's contours and hull materials were carefully designed to minimize its profile to detection sensors. It is woefully armored and packs only minimal weaponry, making it a death box in a firefight. Pegasus pilots are a special breed of daredevils who pride themselves on getting into and out of situations that would be the death of other pilots, all without firing a shot. \n\n<b>Prerequisites:</b> Fighter Design, Pegasus. \n\n<b>Armaments:</b> 2x Subach HL-7 (Rapid Fire), GTM-19 Harpoon, 1x GTM 43a Stiletto II (Upgrade).",
 	},
 }

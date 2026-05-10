@@ -56,11 +56,34 @@ PersistantData = {
 
 ---
 
-## 3. Implementing Era-Gated Availability
+When creating era-specific game modes, it is recommended to use a single game mode with a **GameSetupOption** for the era, rather than separate `.lua` rule files. This reduces maintenance and allows for "Both Eras" play.
 
-When creating era-specific game modes (like FreeSpace 1 vs FreeSpace 2), you must ensure three systems are synchronized:
+### A. Game Setup Option
+Define the era choice in the Gamerule's `GameSetupOptions` table:
+```lua
+GameSetupOptions = {
+    {
+        name = "era",
+        locName = "Era",
+        choices = { "FS1", "0", "FS2", "1", "Both", "2" },
+    },
+}
+```
 
-### A. Starting Fleets
+### B. Dynamic Initialization
+In the SCAR `OnInit` function, read the setting and apply restrictions:
+```lua
+local era = GetGameSettingAsNumber("era")
+if (era == 0) then
+    SetStartFleetSuffix("fs1")
+    Player_GrantResearchOption(player, "FS1")
+elseif (era == 1) then
+    SetStartFleetSuffix("fs2")
+    Player_GrantResearchOption(player, "FS2")
+end
+```
+
+### C. Starting Fleets
 Create a `<race>00fs1.lua` and `<race>00fs2.lua` for every playable race in the `startingfleets/` directory.
 
 ### B. Build Restrictions

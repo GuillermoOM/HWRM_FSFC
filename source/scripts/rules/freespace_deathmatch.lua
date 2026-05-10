@@ -1,6 +1,6 @@
-GUID = { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 13 }
-GameRulesName = "Freespace 1 Era Only"
-Description = "Freespace Mod: Only FS1 era ships are available. HWRM races are disabled."
+GUID = { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 15 }
+GameRulesName = "FreeSpace Deathmatch"
+Description = "Freespace Mod: Customize the era and settings. HWRM races are disabled."
 SaveGameVersion = 1.0
 SinglePlayer = 0
 
@@ -12,6 +12,18 @@ Level_Pass_Tags = "dm"
 Race_Pass_Tags = "race_ter,race_shi,race_vas,race_random_fs,race_obs"
 
 GameSetupOptions = {
+	{
+		name = "era",
+		locName = "Era",
+		tooltip = "Select the FreeSpace era",
+		default = 1, -- FS2
+		visible = 1,
+		choices = {
+			"FreeSpace 1", "0",
+			"FreeSpace 2", "1",
+			"Both Eras", "2",
+		},
+	},
 	{
 		name = "resources",
 		locName = "$3240",
@@ -64,6 +76,38 @@ GameSetupOptions = {
 		},
 	},
 	{
+		name = "carriersonly",
+		locName = "Destroyers Only",
+		tooltip = "Only allow destroyers as Capital Ships.",
+		default = 0,
+		visible = 1,
+		choices = {
+			"$3183",
+			"0",
+			"$3184",
+			"1",
+			"$4802",
+			"2",
+		},
+	},
+	{
+		name = "bounties",
+		locName = "$2987",
+		tooltip = "$2988",
+		default = 0,
+		visible = 1,
+		choices = {
+			"$5455",
+			"0",
+			"$3215",
+			"0.04",
+			"$2989",
+			"0.07",
+			"$3217",
+			"0.1",
+		},
+	},
+	{
 		name = "research",
 		locName = "$2961",
 		tooltip = "$2962",
@@ -78,4 +122,4 @@ GameSetupOptions = {
 	},
 }
 
-dofilepath("data:scripts/rules/fs1_deathmatch/fs1_deathmatch.lua")
+dofilepath("data:scripts/rules/freespace_deathmatch/freespace_deathmatch.lua")
