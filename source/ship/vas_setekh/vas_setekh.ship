@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'AWACS'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 10000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 10000)
 NewShipType.regentime = 280
 NewShipType.minRegenTime = 280
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)

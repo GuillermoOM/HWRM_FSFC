@@ -7,6 +7,13 @@ kCarrier   = TER_HECATE
 kDestroyer = TER_DEIMOS
 kBattleCruiser = TER_HADES
 
+function NumSquadrons_Terran(id)
+	if (id ~= nil and type(id) == "number") then
+		return NumSquadrons(id)
+	end
+	return 0
+end
+
 function DetermineDemandWithNoCounterInfo_Terran()
 	if (sg_randFavorShipType < 55) then
 		ShipDemandAddByClass(eFighter, 1)
@@ -32,13 +39,13 @@ function DetermineSpecialDemand_Terran()
 	end
 
 	controller = kRefinery
-	local numControllers = NumSquadrons(controller) + NumSquadronsQ(kRefinery)
+	local numControllers = NumSquadrons_Terran(controller) + NumSquadronsQ(kRefinery)
 	if (numControllers > 5) then
 		ShipDemandSet(kRefinery, 0)
 	end
 
 	resourcers = kCollector
-	local numResourcers = NumSquadrons(kCollector) + NumSquadronsQ(kCollector)
+	local numResourcers = NumSquadrons_Terran(kCollector) + NumSquadronsQ(kCollector)
 	if (numResourcers > 9) then
 		ShipDemandAdd(kRefinery, 0.5)
 	end

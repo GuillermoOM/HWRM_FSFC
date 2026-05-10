@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Sentry Gun'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 70
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 70)
 NewShipType.regentime = 120
 NewShipType.minRegenTime = 120
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)

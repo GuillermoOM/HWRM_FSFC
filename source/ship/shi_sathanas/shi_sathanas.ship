@@ -13,7 +13,7 @@ NewShipType.blobNamePriority = 75
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 1000000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 1000000)
 NewShipType.regentime = 2450
 NewShipType.minRegenTime = 2450
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)

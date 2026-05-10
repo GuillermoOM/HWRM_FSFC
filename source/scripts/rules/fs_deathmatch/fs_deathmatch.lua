@@ -20,6 +20,7 @@ dofilepath("data:leveldata/multiplayer/lib/music.lua")
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
 	Rule_Add("RandomMusicRuleFS2")
+	Rule_Add("Rule_GrantAllEras")
 	MPRestrict()
 	nocruisers = GetGameSettingAsNumber("nocruisers")
 	strikecraftgamemode = GetGameSettingAsNumber("strikecraftgamemode")
@@ -122,6 +123,18 @@ function timer_updating()
 	if timer_timing > 6 then
 		Rule_Remove("timer_updating")
 	end
+end
+
+function Rule_GrantAllEras()
+	for i = 0, Universe_PlayerCount() - 1 do
+		if (Player_IsAlive(i) == 1) then
+			Player_UnrestrictResearchOption(i, "FS1")
+			Player_GrantResearchOption(i, "FS1")
+			Player_UnrestrictResearchOption(i, "FS2")
+			Player_GrantResearchOption(i, "FS2")
+		end
+	end
+	Rule_Remove("Rule_GrantAllEras")
 end
 
 Events = {}

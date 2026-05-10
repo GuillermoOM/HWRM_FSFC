@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Interceptor'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 200
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 200)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -285,7 +285,7 @@ addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'CanBeRepaired')
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
-addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0, 'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner', 'ter_apollo', 0.5, 3, 1)
+addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0, 'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner', 'ter_valkyrie', 0.5, 3, 1)
 
 --------------------------------------------------
 --- Launching
