@@ -120,6 +120,24 @@ GameSetupOptions = {
 			"1",
 		},
 	},
+	{
+		name = "ruinjections",
+		locName = "$2990",
+		tooltip = "$2991",
+		default = 0,
+		visible = 1,
+		choices = {
+			"$5455",
+			"0",
+			"1000",
+			"1000",
+			"2000",
+			"2000",
+			"3000",
+			"3000",
+			"50000",
+		},
+	},
 }
 
 dofilepath("data:scripts/rules/freespace_deathmatch/freespace_deathmatch.lua")

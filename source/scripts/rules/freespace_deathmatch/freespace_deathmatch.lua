@@ -4,12 +4,14 @@ dofilepath("data:leveldata/multiplayer/lib/lib.lua")
 dofilepath("data:leveldata/multiplayer/lib/research.lua")
 dofilepath("data:leveldata/multiplayer/lib/main.lua")
 dofilepath("data:scripts/scar/fsfc_ui.lua")
+dofilepath("data:leveldata/multiplayer/lib/ruinjections.lua")
 
 function OnInit()
 	MPRestrict()
 	research = GetGameSettingAsNumber("research")
 	era_setting = GetGameSettingAsNumber("era") -- 0: FS1, 1: FS2, 2: Both
 	carriersonly = GetGameSettingAsNumber("carriersonly")
+	ruinjections = GetGameSettingAsNumber("ruinjections")
 
 	-- Starting fleet suffix priority
 	local suffix = ""
@@ -149,6 +151,10 @@ function timer_updating_fsfc()
 					Player_RestrictResearchOption(i, "FS1")
 				end
 			end
+		end
+	elseif timer_timing == 5 then
+		if ruinjections > 0 then
+			Rule_AddInterval("ruinjections_updating", timer_interval * 48)
 		end
 	elseif timer_timing == 6 then
 		UI_SetElementEnabled("NewTaskbar", "btnObjectives", 1)
