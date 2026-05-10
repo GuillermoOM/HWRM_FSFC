@@ -66,3 +66,27 @@ if restrictString ~= "" then
 	Player_RestrictBuildOption(playerIndex, restrictString)
 end
 ```
+
+## 5. Unit Capacity & Build Lockouts
+
+**Symptom:** A ship appears in the build menu, but the build button is greyed out or shows "0/0" capacity, even if you haven't built anything.
+**Cause:** Homeworld Remastered uses a hierarchical unit cap system defined in `familylist.lua` (see `unitcapsFamily`) and configured in `scripts/rules/[mode]/unitcaps/*.lua`.
+- Every family assigned to a ship via `setSupplyValue(NewShipType, 'FamilyName', 1.0)` must have a corresponding `supplyLimit("FamilyName", X)` entry in the active unit cap file.
+- If a ship uses multiple families (e.g., GTF Loki uses both `Fighter` and `Scout`), **both** families must have a limit > 0 defined. If even one family has a limit of 0 (or is undefined), the ship cannot be built.
+
+**The Fix:**
+Ensure all families used by your mod's ships are declared in the game mode's `unitcaps/` folder (`small.lua`, `normal.lua`, `large.lua`, `huge.lua`, and `default.lua`).
+```lua
+-- Generic families
+supplyLimit("Fighter", 135)
+supplyLimit("Scout", 135) -- Missing Scout will lock out Loki/Pegasus!
+
+-- Custom Freespace families
+supplyLimit("Cruiser", 25)
+supplyLimit("AdvancedCruiser", 5)
+
+-- Indents for UI organization
+supplyIndent("Scout", 1) -- Indents Scout under Fighter in the cap menu
+```
+**Note on Race-Specific Caps:**
+Individual race folders also contain `unitcaps/` definitions (e.g., `scripts/races/terran/deathmatch/unitcaps/`). If your game mode relies on these race-specific files, they must also be updated to include all custom families used by that race's roster.
