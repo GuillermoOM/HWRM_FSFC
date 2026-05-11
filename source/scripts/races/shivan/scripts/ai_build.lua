@@ -1,6 +1,7 @@
 aitrace("LOADING SHIVAN BUILD INFO")
 
 kCollector = SHI_AZRAEL
+kCollectorFS1 = SHI_AZRAEL
 kRefinery = SHI_RAHU
 kScout = SHI_SCORPION
 kInterceptor = SHI_ASTAROTH

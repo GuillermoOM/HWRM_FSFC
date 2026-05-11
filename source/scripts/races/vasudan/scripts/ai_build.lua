@@ -1,6 +1,7 @@
 aitrace("LOADING VASUDAN BUILD INFO")
 
 kCollector = VAS_ISIS
+kCollectorFS1 = VAS_ISIS
 kRefinery  = VAS_ANUKET
 kScout = VAS_HORUS
 kInterceptor = VAS_SERAPIS

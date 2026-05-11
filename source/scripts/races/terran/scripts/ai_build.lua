@@ -1,6 +1,7 @@
 aitrace("LOADING TERRAN BUILD INFO")
 
 kCollector = TER_ELYSIUM
+kCollectorFS1 = TER_ELYSIUM
 kRefinery = TER_ZEPHYRUS
 kScout = TER_LOKI
 kInterceptor = TER_VALKYRIE

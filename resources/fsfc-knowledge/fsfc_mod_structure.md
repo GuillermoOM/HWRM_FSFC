@@ -12,7 +12,7 @@ All assets created for this mod MUST adhere to the strict prefixing schema to pr
 | --------------------- | ------- | ------------------------------------------------------------------------ |
 | **Terran (GTA/GTVA)** | `ter_`  | Standard human ships. Heavily relies on sequential tech upgrades.        |
 | **Vasudan (PVE)**     | `vas_`  | Alien allies/enemies. Ships generally feature energy-based loadouts.     |
-| **Shivan**            | `shiv_` | Primary antagonists. Ships feature overwhelming firepower and shielding. |
+| **Shivan**            | `shi_`  | Primary antagonists. Ships feature overwhelming firepower and shielding. |
 
 ### Component Prefixes
 
@@ -43,7 +43,33 @@ source/
 └── missile/                       (Contains .miss definitions)
 ```
 
-## 3. General Rules for FSFC
+## 3. FreeSpace → Homeworld Class Mapping
+
+FreeSpace and Homeworld use different terminology for ship classes. The HWRM engine requires all ships to be mapped to its built-in class system. This mapping is defined in `source/ai/default/classdef.lua` and drives ALL AI behavior.
+
+| FreeSpace Class | HW Engine Class | Engine Enum | AI Role |
+|---|---|---|---|
+| **Fighters** (interceptors, space superiority) | Interceptors / Strike Craft | `eFighter` | Fast anti-fighter combat |
+| **Bombers** (anti-capital strike craft) | Corvettes | `eCorvette` | Anti-capital strike runs |
+| **Cruisers** (mid-tier warships) | Frigates | `eFrigate` | Line combat, fleet backbone |
+| **Destroyers** (heavy warships, carriers) | Destroyers / Carriers | `eCapital`, `eDestroyer`, `eBuilder` | Heavy combat, fleet anchors |
+| **Super Destroyers / Juggernauts** | Battlecruisers | `eBattleCruiser` | Endgame superweapons |
+
+### Counter-Class Mapping
+The AI uses counter-classes to decide what to build against enemy compositions:
+
+| Enemy Has... | AI Builds From... | FS Equivalent |
+|---|---|---|
+| Fighters (`eFighter`) | `eAntiFighter` ships | Anti-fighter interceptors |
+| Bombers (`eCorvette`) | `eAntiCorvette` ships | Anti-bomber fighters/cruisers |
+| Cruisers (`eFrigate`) | `eAntiFrigate` ships | Bombers, destroyers |
+
+### Key Implications
+- FS Bombers demand uses `ShipDemandMaxByClass(eCorvette)` — not `eFighter`
+- FS Cruiser demand uses `ShipDemandMaxByClass(eFrigate)` — not `eCapital`
+- All ships in `classdef.lua` counter-classes must include FS ships for the AI to properly counter enemy fleets
+
+## 4. General Rules for FSFC
 
 - **Ship Classes**: If you create a new ship class for FreeSpace (e.g., "Destroyer"), it must be registered in `source/scripts/familylist.lua` before it is used.
 - **Paths**: All cross-references must use the `data:` prefix (e.g., `data:scripts/custom_scripts/afterburner.lua`).
