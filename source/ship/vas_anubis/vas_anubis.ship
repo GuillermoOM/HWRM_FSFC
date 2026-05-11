@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Space Superiority'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 240)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 300)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -101,7 +101,7 @@ NewShipType.ignoreRaceWhenDocking = 0
 NewShipType.mass = 200
 NewShipType.thrusterMaxSpeed = 330
 NewShipType.mainEngineMaxSpeed = 330
-NewShipType.rotationMaxSpeed = 125
+NewShipType.rotationMaxSpeed = 140
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1.5
 NewShipType.mainEngineAccelTime = 3

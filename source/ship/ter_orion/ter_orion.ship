@@ -270,9 +270,15 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 875, 1750, 0, 3)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5,
+    'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1',
+    'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" },
+    { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" },
+    { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
-addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
+addAbility(NewShipType, 'CanBuildShips', 1,
+    'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter',
+    'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 180, 0.5, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
 
@@ -301,7 +307,8 @@ NewShipType.launchFormation = 'delta'
 --- Custom Code
 --------------------------------------------------
 
-addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate', 'onDestroy', 'gta_orion', 1)
+addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate',
+    'onDestroy', 'gta_orion', 1)
 
 --------------------------------------------------
 --- Load Model
@@ -330,21 +337,38 @@ addShield(NewShipType, 'EMP', 10000, 20)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Ter_slash1', 'Weapon_B1', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_slash2', 'Weapon_B3', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_slash3', 'Weapon_B4', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_bgreensa', 'Weapon_B2', 'Weapon', 'Innate', 'Damageable', 'ter_bgreenorion_gimble', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_bgreensa1', 'Weapon_Laser2', 'Weapon', 'Innate', 'Damageable', 'ter_bgreenorion_gimble', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_bgreenturret', 'Weapon_BGreen', 'Weapon', 'Innate', 'Damageable', 'ter_bgreenorion_turret', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret1', 'Weapon_LaserTurret1', 'Weapon', 'Innate', 'Destroyable', 'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret2', 'Weapon_LaserTurret2', 'Weapon', 'Innate', 'Destroyable', 'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret3', 'Weapon_LaserTurret3', 'Weapon', 'Innate', 'Destroyable', 'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret4', 'Weapon_LaserTurret4', 'Weapon', 'Innate', 'Destroyable', 'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak1', 'Weapon_LaserTurret1', 'Weapon', 'Innate', 'Destroyable', '', 'ter_orionhugeflak', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak2', 'Weapon_LaserTurret2', 'Weapon', 'Innate', 'Destroyable', '', 'ter_orionhugeflak', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak3', 'Weapon_LaserTurret3', 'Weapon', 'Innate', 'Destroyable', '', 'ter_orionhugeflak', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak4', 'Weapon_LaserTurret4', 'Weapon', 'Innate', 'Destroyable', '', 'ter_orionhugeflak', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '', 'ter_orion_nameplate_bastion', 'ter_orion_nameplate_carthage', 'ter_orion_nameplate_delacroix', 'ter_orion_nameplate_intrepid', 'ter_orion_nameplate_messana', 'ter_orion_nameplate_minnow', 'ter_orion_nameplate_nereid', 'ter_orion_nameplate_soyakaze')
+StartShipHardPointConfig(NewShipType, 'Ter_slash1', 'Weapon_B1', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '',
+    '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_slash2', 'Weapon_B3', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '',
+    '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_slash3', 'Weapon_B4', 'Weapon', 'Innate', 'Damageable', 'ter_slashorion', '',
+    '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreensa', 'Weapon_B2', 'Weapon', 'Innate', 'Damageable',
+    'ter_bgreenorion_gimble', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreensa1', 'Weapon_Laser2', 'Weapon', 'Innate', 'Damageable',
+    'ter_bgreenorion_gimble', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreenturret', 'Weapon_BGreen', 'Weapon', 'Innate', 'Damageable',
+    'ter_bgreenorion_turret', '', '', '', '', '', '', '', '')
+-- StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret1', 'Weapon_LaserTurret1', 'Weapon', 'Innate', 'Destroyable',
+--     'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+-- StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret2', 'Weapon_LaserTurret2', 'Weapon', 'Innate', 'Destroyable',
+--     'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+-- StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret3', 'Weapon_LaserTurret3', 'Weapon', 'Innate', 'Destroyable',
+--     'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+-- StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret4', 'Weapon_LaserTurret4', 'Weapon', 'Innate', 'Destroyable',
+--     'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak1', 'Weapon_LaserTurret1', 'Weapon', 'Innate', 'Destroyable', '',
+    'ter_orionhugeflak', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak2', 'Weapon_LaserTurret2', 'Weapon', 'Innate', 'Destroyable', '',
+    'ter_orionhugeflak', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak3', 'Weapon_LaserTurret3', 'Weapon', 'Innate', 'Destroyable', '',
+    'ter_orionhugeflak', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionFlak4', 'Weapon_LaserTurret4', 'Weapon', 'Innate', 'Destroyable', '',
+    'ter_orionhugeflak', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '',
+    'ter_orion_nameplate_bastion', 'ter_orion_nameplate_carthage', 'ter_orion_nameplate_delacroix',
+    'ter_orion_nameplate_intrepid', 'ter_orion_nameplate_messana', 'ter_orion_nameplate_minnow',
+    'ter_orion_nameplate_nereid', 'ter_orion_nameplate_soyakaze')
 
 --------------------------------------------------
 --- Debris
@@ -368,18 +392,19 @@ loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'TerranCapi
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4', 'CapturePoint5')
-loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2', 'RepairPoint3', 'RepairPoint4', 'RepairPoint5')
+loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4',
+    'CapturePoint5')
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2', 'RepairPoint3', 'RepairPoint4',
+    'RepairPoint5')
 
 --------------------------------------------------
 --- Scuttle
 --------------------------------------------------
 
 NewShipType.minFalloffDamageDist = 450
-NewShipType.maxFalloffDamageDist = 450*1.5
-NewShipType.maxFalloffScuttleDamageDist = 450*3
+NewShipType.maxFalloffDamageDist = 450 * 1.5
+NewShipType.maxFalloffScuttleDamageDist = 450 * 3
 NewShipType.explosiveScuttleDamageOnDeath = 1960
-NewShipType.maxFalloffForce = 500*10
+NewShipType.maxFalloffForce = 500 * 10
 NewShipType.explosiveDamageOnDeath = 275
 NewShipType.radiusDamageEvadeMod = 1.1
-

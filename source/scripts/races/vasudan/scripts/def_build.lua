@@ -119,12 +119,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_aten",
-		RequiredResearch = "Aten",
+		RequiredResearch = "Aten & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 220,
 		DisplayedName = "GVC Aten - Reserve Cruiser <c=12AB06>30s</c>",
 		Description =
 		"<b>Description:</b> The GVC Aten is among the smallest and weakest of the GTVA's cruiser classes, with thin armor and only a few, relatively weak turrets. Terran fighters and bombers exploited these weaknesses during the early years of the Great War, when the Terran and Vasudans were still enemies. The Aten is most often seen in the current conflict as a rear guard defense for convoys or installations, backing up wings of fighters and bombers. \n\n<b>Prerequisites:</b> Cruiser Design \n\n<b>Armaments:</b> 4x Turret, 2x Mekhu HL-7 Turret, 2x Anti-Fighter Beam (Upgrade)",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_aten_fs1",
+		RequiredResearch = "Aten & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 220,
+		DisplayedName = "GVC Aten (FS1) - Reserve Cruiser <c=12AB06>30s</c>",
+		Description =
+		"<b>Description:</b> The GVC Aten is among the smallest and weakest of the GTVA's cruiser classes, with thin armor and only a few, relatively weak turrets. Terran fighters and bombers exploited these weaknesses during the early years of the Great War, when the Terran and Vasudans were still enemies. The Aten is most often seen in the current conflict as a rear guard defense for convoys or installations, backing up wings of fighters and bombers. \n\n<b>Prerequisites:</b> Cruiser Design \n\n<b>Armaments:</b> 4x Turret, 2x Mekhu HL-7 Turret, 2x Vasudan Laser.",
 	},
 	{
 		Type = Ship,
@@ -149,12 +159,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_typhon",
-		RequiredResearch = "Typhon",
+		RequiredResearch = "Typhon & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 310,
 		DisplayedName = "GVD Typhon - Destroyer <c=12AB06>175s</c>",
 		Description =
 		"<b>Description:</b> The GVD Typhon was the height of Vasudan military technology when it appeared to face Terran forces during the early days of the Terran-Vasudan War. The first Typhon was sighted at the Vega Engagement and quickly destroyed the GTD Eisenhower and much of the 4th fleet. The more recent Hatshepsut class of destroyers is larger and wields a deadlier array of armaments, but the Typhon is still a match for almost any foe. Up to 30 wings of fighters or bombers can be housed within its docking bays, ready to engage at a moment's notice. \n\n<b>Prerequisites:</b> Capital Ship Design, Typhon. \n\n<b>Armaments:</b> 2x Heavy Beam, 2x Anti-Fighter Beam, 5x Flak Turret, 4x Harpoon Missile Launcher, 5x Huge Turret, 9x Turret.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_typhon_fs1",
+		RequiredResearch = "Typhon & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 310,
+		DisplayedName = "GVD Typhon (FS1) - Destroyer <c=12AB06>175s</c>",
+		Description =
+		"<b>Description:</b> The GVD Typhon was the height of Vasudan military technology when it appeared to face Terran forces during the early days of the Terran-Vasudan War. The first Typhon was sighted at the Vega Engagement and quickly destroyed the GTD Eisenhower and much of the 4th fleet. The more recent Hatshepsut class of destroyers is larger and wields a deadlier array of armaments, but the Typhon is still a match for almost any foe. Up to 30 wings of fighters or bombers can be housed within its docking bays, ready to engage at a moment's notice. \n\n<b>Prerequisites:</b> Capital Ship Design, Typhon. \n\n<b>Armaments:</b> 2x Heavy Turret, 5x Flak Turret, 4x Harpoon Missile Launcher, 5x Huge Turret, 11x Turret.",
 	},
 	{
 		Type = Ship,

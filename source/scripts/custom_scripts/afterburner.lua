@@ -42,6 +42,9 @@ AfterburnerTable["ter_medusa"] = { 1.3043478261 }
 AfterburnerTable["ter_ursa"] = { 1.2857142857 }
 AfterburnerTable["ter_boanerges"] = { 1.0625 }
 AfterburnerTable["ter_mara"] = { 1.1911764706 }
+AfterburnerTable["ter_ulysses_fs1"] = { 1.3719512195 }
+AfterburnerTable["ter_medusa_fs1"] = { 1.3043478261 }
+AfterburnerTable["ter_ursa_fs1"] = { 1.2857142857 }
 
 AfterburnerTable["ntf_loki"] = { 1.4117647059 }
 AfterburnerTable["ntf_hercules"] = { 1.5789473684 }
@@ -88,8 +91,11 @@ end
 function Do_Afterburner(CustomGroup, playerIndex, shipID)
 	SobGroup_SetMaxSpeedMultiplier(CustomGroup, 1)
 
-	--if AfterburnerTable[CustomGroup][1] ~= nil then
-	ABspeed = AfterburnerTable[CustomGroup][1]
+	if AfterburnerTable[CustomGroup] == nil then
+		ABspeed = 1
+	else
+		ABspeed = AfterburnerTable[CustomGroup][1]
+	end
 	if
 		Player_HasResearch(playerIndex, "StrikeBomberAfterburner") == 1 and CustomGroup == "vas_bakha"
 		or CustomGroup == "ter_zeus"

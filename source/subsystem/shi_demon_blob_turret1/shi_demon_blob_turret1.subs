@@ -1,0 +1,52 @@
+--------------------------------------------------
+--- Shivan Demon FS1 Variant of Turret 01
+--- Uses blob weapon instead of beam
+--------------------------------------------------
+
+NewSubSystemType = StartSubSystemConfig()
+
+NewSubSystemType.displayedName = "Shivan Blob Turret (FS1)"
+NewSubSystemType.sobDescription = "Assault Weaponry"
+
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "gun_shivsuperlaser_turret"
+
+NewSubSystemType.innate = 1
+
+NewSubSystemType.BuildFamily = "SubSystem_Shi"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "TurretArmour"
+
+NewSubSystemType.maxhealth = 10000
+NewSubSystemType.regentime = 400
+NewSubSystemType.activateHealthPercentage = 0.5
+
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
+NewSubSystemType.isResearch = 0
+
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 120
+
+NewSubSystemType.selectionLimit = 10000
+NewSubSystemType.preciseATILimit = 5000
+NewSubSystemType.selectionPriority = 37.5
+
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+
+NewSubSystemType.visible = 1
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.68
+
+LoadSharedModel(NewSubSystemType, "shi_demonturret01")
+
+StartSubSystemWeaponConfig(NewSubSystemType, "gun_shivsuperlaser_turret", "Weapon_IonCan1", "")

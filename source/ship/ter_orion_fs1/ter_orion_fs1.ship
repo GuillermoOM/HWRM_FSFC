@@ -1,0 +1,402 @@
+NewShipType = StartShipConfig()
+
+--------------------------------------------------
+--- Ship info
+--------------------------------------------------
+
+NewShipType.displayedName = 'GTD Orion (FS1)'
+NewShipType.sobDescription = 'Destroyer'
+
+--------------------------------------------------
+--- Health and Armour
+--------------------------------------------------
+
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 80000)
+NewShipType.regentime = 1265
+NewShipType.minRegenTime = 1265
+NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
+NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
+
+--------------------------------------------------
+--- Tactics And Multipliers
+--------------------------------------------------
+
+NewShipType.defaultROE = 'Defensive'
+NewShipType.defaultStance = 'Neutral'
+setTacticsMults(NewShipType, 'ENGINEACCEL', 1.10, 0.90, 1.0)
+setTacticsMults(NewShipType, 'THRUSTERACCEL', 1.10, 0.90, 1.0)
+setTacticsMults(NewShipType, 'ROTATION', 0.95, 1.05, 1.0)
+setTacticsMults(NewShipType, 'ROTATIONACCEL', 1.10, 0.90, 1.0)
+setTacticsMults(NewShipType, 'FIRERATE', 0.98, 1.02, 1.0)
+
+--------------------------------------------------
+--- Main Ship Data
+--------------------------------------------------
+
+NewShipType.isTransferable = 0
+
+--------------------------------------------------
+--- Deprecated
+--------------------------------------------------
+
+NewShipType.addedUnitCaps = 101
+
+--------------------------------------------------
+--- Formations
+--------------------------------------------------
+
+NewShipType.paradeData = 'terran_parade'
+NewShipType.strikeGroupRadius = 150
+NewShipType.noCombatGrouping = 1
+NewShipType.canSurround = 1
+
+--------------------------------------------------
+--- Movement
+--------------------------------------------------
+
+NewShipType.mass = 1600000
+NewShipType.thrusterMaxSpeed = 20
+NewShipType.mainEngineMaxSpeed = 60
+NewShipType.rotationMaxSpeed = 4.5
+NewShipType.thrusterAccelTime = 20
+NewShipType.thrusterBrakeTime = 10
+NewShipType.mainEngineAccelTime = 20
+NewShipType.mainEngineBrakeTime = 10
+NewShipType.rotationAccelTime = 10
+NewShipType.rotationBrakeTime = 5
+
+--------------------------------------------------
+--- Damage & Death
+--------------------------------------------------
+
+NewShipType.collisionMultiplier = 1600000
+NewShipType.dustCloudDamageTime = 280
+NewShipType.nebulaDamageTime = 800
+NewShipType.battleScarCoverage = 4
+NewShipType.battleScarBudgetLow = 1200
+NewShipType.battleScarBudgetNext = 1800
+NewShipType.sobDieTime = 8
+NewShipType.sobSpecialDieTime = 1
+NewShipType.specialDeathSpeed = 40
+NewShipType.chanceOfSpecialDeath = 0
+NewShipType.deadSobFadeTime = 0.1
+
+--------------------------------------------------
+--- Advanced Movement
+--------------------------------------------------
+
+NewShipType.thrusterUsage = 1
+NewShipType.accelerationAngle = 60
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 10
+NewShipType.descendPitch = 40
+NewShipType.goalReachEpsilon = 50
+NewShipType.slideMoveRange = 350
+NewShipType.controllerType = 'Ship'
+NewShipType.relativeMoveFactor = 1
+
+--------------------------------------------------
+--- Death Tumble
+--------------------------------------------------
+
+NewShipType.tumbleStaticX = 2
+NewShipType.tumbleStaticY = 4
+NewShipType.tumbleStaticZ = 3
+NewShipType.tumbleDynamicX = 1
+NewShipType.tumbleDynamicY = 2
+NewShipType.tumbleDynamicZ = 2
+NewShipType.tumbleSpecialDynamicX = 1
+NewShipType.tumbleSpecialDynamicY = 2
+NewShipType.tumbleSpecialDynamicZ = 2
+
+--------------------------------------------------
+--- Swaying
+--------------------------------------------------
+
+NewShipType.swayUpdateTime = 10
+NewShipType.swayOffsetRandomX = 10
+NewShipType.swayOffsetRandomY = 10
+NewShipType.swayOffsetRandomZ = 10
+NewShipType.swayBobbingFactor = 0
+NewShipType.swayRotateFactor = 0
+
+--------------------------------------------------
+--- Layout Boundary
+--------------------------------------------------
+
+NewShipType.useLayoutBounds = 1
+NewShipType.layoutBoundX = 130
+NewShipType.layoutBoundY = 60
+NewShipType.layoutBoundZ = 350
+NewShipType.layoutCenterX = -20
+NewShipType.layoutCenterY = 0
+NewShipType.layoutCenterZ = 50
+
+--------------------------------------------------
+--- Families
+--------------------------------------------------
+
+NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.BuildFamily = 'SuperCap_Ter'
+NewShipType.AttackFamily = 'BigCapitalShip'
+NewShipType.DockFamily = 'Shipyard'
+NewShipType.AvoidanceFamily = 'SuperCap'
+NewShipType.DisplayFamily = 'Capital'
+NewShipType.AutoFormationFamily = 'CapShip'
+NewShipType.CollisionFamily = 'Big'
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour")
+
+--------------------------------------------------
+--- Supply
+--------------------------------------------------
+
+setSupplyValue(NewShipType, 'Capital', 1.0)
+setSupplyValue(NewShipType, 'Destroyer', 1.0)
+
+--------------------------------------------------
+--- Ship Counter Rating
+--------------------------------------------------
+
+NewShipType.AttackPriorityMultiplier = 0.96
+NewShipType.fighterValue = 0
+NewShipType.corvetteValue = 0
+NewShipType.frigateValue = 10
+NewShipType.neutralValue = 5
+NewShipType.antiFighterValue = 5
+NewShipType.antiCorvetteValue = 0
+NewShipType.antiFrigateValue = 0
+NewShipType.totalValue = 15
+
+--------------------------------------------------
+--- Construction
+--------------------------------------------------
+
+NewShipType.buildCost = 12500
+NewShipType.buildTime = 215
+NewShipType.buildPriorityOrder = 40
+
+--------------------------------------------------
+--- Sensors
+--------------------------------------------------
+
+NewShipType.retaliationRange = 6500
+NewShipType.retaliationDistanceFromGoal = 160
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 5000
+NewShipType.secSensorRange = 6000
+NewShipType.detectionStrength = 1
+
+--------------------------------------------------
+--- Tactical Overlay Icon
+--------------------------------------------------
+
+NewShipType.TOIcon = 'Rectangle'
+NewShipType.TOScale = 1
+NewShipType.TODistanceFade0 = 14000
+NewShipType.TODistanceDisappear0 = 12000
+NewShipType.TODistanceFade1 = 5500
+NewShipType.TODistanceDisappear1 = 5000
+NewShipType.TODistanceFade2 = 12000
+NewShipType.TODistanceDisappear2 = 35000
+NewShipType.TOGroupScale = 1
+NewShipType.TOGroupMergeSize = 0
+
+--------------------------------------------------
+--- Overlays
+--------------------------------------------------
+
+NewShipType.mouseOverMinFadeSize = 0.085
+NewShipType.mouseOverMaxFadeSize = 0.15
+NewShipType.healthBarStyle = 2
+NewShipType.SMRepresentation = 'Mesh'
+NewShipType.SMHighlightDistMin = 20000
+NewShipType.SMHighlightDistMax = 25000
+NewShipType.hideNormalAttackUICooldown = 1
+
+--------------------------------------------------
+--- Non linear Scaling
+--------------------------------------------------
+
+NewShipType.nlips = 0
+NewShipType.nlipsRange = 10000
+NewShipType.nlipsFar = 0
+NewShipType.nlipsFarRange = 0
+
+--------------------------------------------------
+--- Rendering
+--------------------------------------------------
+
+NewShipType.meshRenderLimit = 21000
+NewShipType.dotRenderLimit = 10
+NewShipType.visibleInSecondary = 1
+NewShipType.goblinsStartFade = 3200
+NewShipType.goblinsOff = 3200
+NewShipType.minimumZoomFactor = 0.5
+
+--------------------------------------------------
+--- Level of Detail
+--------------------------------------------------
+
+NewShipType.upLOD = 32500
+NewShipType.downLOD = 32515
+
+--------------------------------------------------
+--- Selection
+--------------------------------------------------
+
+NewShipType.selectionLimit = 150000
+NewShipType.preciseSelectionLimit = 7500
+NewShipType.preciseATILimit = 0
+NewShipType.selectionPriority = 75
+NewShipType.militaryUnit = 0
+
+--------------------------------------------------
+--- Alternative Hyperspace Gate
+--------------------------------------------------
+
+NewShipType.alternativeHyperspaceV = 'subspace_gate'
+NewShipType.alternativeHyperspaceA = 'etg/misc/large_subspace'
+NewShipType.alternativeHyperspaceTime = 12
+
+--------------------------------------------------
+--- Abilities
+--------------------------------------------------
+
+addAbility(NewShipType, 'MoveCommand', 1, 0)
+addAbility(NewShipType, 'CanDock', 1, 0)
+addAbility(NewShipType, 'CanLaunch')
+addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Utility', 200)
+addAbility(NewShipType, 'ParadeCommand', 1)
+addAbility(NewShipType, 'WaypointMove')
+addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 875, 1750, 0, 3)
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5,
+    'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1',
+    'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" },
+    { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" },
+    { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
+addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
+addAbility(NewShipType, 'CanBuildShips', 1,
+    'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter',
+    'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
+addAbility(NewShipType, 'CanBeCaptured', 180, 0.5, 'CapCap')
+addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
+
+--------------------------------------------------
+--- Docking
+--------------------------------------------------
+
+NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = 'delta'
+NewShipType.queueFormation = 'dockline'
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
+
+--------------------------------------------------
+--- Launching
+--------------------------------------------------
+
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = 'delta'
+
+--------------------------------------------------
+--- Custom Code
+--------------------------------------------------
+
+addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate',
+    'onDestroy', 'gta_orion', 1)
+
+--------------------------------------------------
+--- Load Model
+--------------------------------------------------
+
+LoadSharedModel(NewShipType, "ter_orion")
+
+--------------------------------------------------
+--- Weapons
+--------------------------------------------------
+
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_AAAf1', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_AAAf2', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_AAAf3', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_AAAf4', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Laser1', '')
+StartShipWeaponConfig(NewShipType, 'gun_terlaser_gimble', 'Weapon_Laser3', '')
+
+--------------------------------------------------
+--- Shields
+--------------------------------------------------
+
+addShield(NewShipType, 'EMP', 10000, 20)
+
+--------------------------------------------------
+--- HardPoints
+--------------------------------------------------
+
+StartShipHardPointConfig(NewShipType, 'Ter_slash1', 'Weapon_B1', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_mediumturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_slash2', 'Weapon_B3', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_mediumturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_slash3', 'Weapon_B4', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_mediumturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreensa', 'Weapon_B2', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_gimbleturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreensa1', 'Weapon_Laser2', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_gimbleturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_bgreenturret', 'Weapon_BGreen', 'Weapon', 'Innate', 'Damageable',
+    'ter_orion_largeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret1', 'Weapon_LaserTurret1', 'Weapon', 'Innate', 'Destroyable',
+    'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret2', 'Weapon_LaserTurret2', 'Weapon', 'Innate', 'Destroyable',
+    'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret3', 'Weapon_LaserTurret3', 'Weapon', 'Innate', 'Destroyable',
+    'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret4', 'Weapon_LaserTurret4', 'Weapon', 'Innate', 'Destroyable',
+    'Ter_orionhugeturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '',
+    'ter_orion_nameplate_bastion', 'ter_orion_nameplate_carthage', 'ter_orion_nameplate_delacroix',
+    'ter_orion_nameplate_intrepid', 'ter_orion_nameplate_messana', 'ter_orion_nameplate_minnow',
+    'ter_orion_nameplate_nereid', 'ter_orion_nameplate_soyakaze')
+
+--------------------------------------------------
+--- Debris
+--------------------------------------------------
+
+
+--------------------------------------------------
+--- Engines
+--------------------------------------------------
+
+NewShipType.trailLinger = 2
+setEngineBurn(NewShipType, 7, 1, 1, 200, 20, 1, 0.1, 800)
+
+--------------------------------------------------
+--- Addendum
+--------------------------------------------------
+
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'TerranCapital', '')
+
+--------------------------------------------------
+--- Latch Points
+--------------------------------------------------
+
+loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4',
+    'CapturePoint5')
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2', 'RepairPoint3', 'RepairPoint4',
+    'RepairPoint5')
+
+--------------------------------------------------
+--- Scuttle
+--------------------------------------------------
+
+NewShipType.minFalloffDamageDist = 450
+NewShipType.maxFalloffDamageDist = 450 * 1.5
+NewShipType.maxFalloffScuttleDamageDist = 450 * 3
+NewShipType.explosiveScuttleDamageOnDeath = 1960
+NewShipType.maxFalloffForce = 500 * 10
+NewShipType.explosiveDamageOnDeath = 275
+NewShipType.radiusDamageEvadeMod = 1.1

@@ -138,7 +138,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain",
-		RequiredResearch = "Cain",
+		RequiredResearch = "Cain & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain - Strike Cruiser <c=12AB06>34s</c>",
@@ -147,13 +147,33 @@ build = {
 	},
 	{
 		Type = Ship,
+		ThingToBuild = "shi_cain_fs1",
+		RequiredResearch = "Cain & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 60,
+		DisplayedName = "SC Cain (FS1) - Strike Cruiser <c=12AB06>34s</c>",
+		Description =
+		"<b>Description:</b> The weakest of the Shivan cruiser classes is designated SC Cain. These vessels were commonly encountered during Great War battles. Cains are considered to be slightly stronger than the GTC Fenris cruiser class. \n\n<b>Prerequisites:</b> Cruiser Design, Cain. \n\n<b>Armaments:</b> 7x Turret Laser, 2x Missile Launcher.",
+	},
+	{
+		Type = Ship,
 		ThingToBuild = "shi_lilith",
-		RequiredResearch = "Lilith",
+		RequiredResearch = "Lilith & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith - Heavy Cruiser <c=12AB06>140s</c>",
 		Description =
 		"<b>Description:</b> The SC Lilith class of Shivan cruisers is a far-deadlier foe than the Cain class. Nearly impenetrable armor plating enables it to withstand tremendous punishment, enabling its nine turrets to lash out at warships and combat spacecraft with impunity. \n\n<b>Prerequisites:</b> Cruiser Design, Lilith. \n\n<b>Armaments:</b> 1x Heavy Beam, 1x Anti-Fighter Beam, 5x Turret Laser, 2x Shivan Cluster Missile Launcher.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_lilith_fs1",
+		RequiredResearch = "Lilith & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 65,
+		DisplayedName = "SC Lilith (FS1) - Heavy Cruiser <c=12AB06>140s</c>",
+		Description =
+		"<b>Description:</b> The SC Lilith class of Shivan cruisers is a far-deadlier foe than the Cain class. Nearly impenetrable armor plating enables it to withstand tremendous punishment, enabling its nine turrets to lash out at warships and combat spacecraft with impunity. \n\n<b>Prerequisites:</b> Cruiser Design, Lilith. \n\n<b>Armaments:</b> 7x Turret Laser, 2x Shivan Cluster Missile Launcher.",
 	},
 	{
 		Type = Ship,
@@ -168,12 +188,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_demon",
-		RequiredResearch = "Demon",
+		RequiredResearch = "Demon & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 110,
 		DisplayedName = "SD Demon - Destroyer <c=12AB06>215s</c>",
 		Description =
 		"<b>Description:</b> The SD Demon class of Shivan destroyers is much smaller than the Lucifer class but very heavily armed and extremely dangerous. Demons are known to carry numerous wings of fighters and bombers. \n\n<b>Prerequisites:</b> Capital Ship Design, Demon. \n\n<b>Armaments:</b> 2x Heavy Beam, 1x Medium Beam, 2x Anti-Fighter Beam, 4x Flak Turret, 10x Turret Laser, 2x Huge Turret, 5x Missile Launcher.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "shi_demon_fs1",
+		RequiredResearch = "Demon & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 110,
+		DisplayedName = "SD Demon (FS1) - Destroyer <c=12AB06>215s</c>",
+		Description =
+		"<b>Description:</b> The SD Demon class of Shivan destroyers is much smaller than the Lucifer class but very heavily armed and extremely dangerous. Demons are known to carry numerous wings of fighters and bombers. \n\n<b>Prerequisites:</b> Capital Ship Design, Demon. \n\n<b>Armaments:</b> 5x Huge Turret, 4x Flak Turret, 10x Turret Laser, 5x Missile Launcher.",
 	},
 	{
 		Type = Ship,

@@ -171,13 +171,13 @@ function DoResearchTechDemand_Terran()
 			ResearchDemandSet_Terran(REPAIRCHRONOS, cruiserdemand + 0.5)
 		end
 
-		local numFenris = NumSquadrons_Terran(TER_FENRIS)
+		local numFenris = NumSquadrons_Terran(TER_FENRIS) + NumSquadrons_Terran(TER_FENRIS_FS1)
 		if numFenris > 0 then
 			if Util_CheckResearch_Terran(HEAVYCRUISER) then
 				ResearchDemandSet_Terran(HEAVYCRUISER, cruiserdemand + 1.0)
 			end
 		end
-		local numLeviathan = NumSquadrons_Terran(TER_LEVIATHAN)
+		local numLeviathan = NumSquadrons_Terran(TER_LEVIATHAN) + NumSquadrons_Terran(TER_LEVIATHAN_FS1)
 		if numLeviathan > 0 then
 			if Util_CheckResearch_Terran(ADVANCEDCRUISER) then
 				ResearchDemandSet_Terran(ADVANCEDCRUISER, cruiserdemand + 1.0)
@@ -205,7 +205,7 @@ function DoResearchTechDemand_Terran()
 			end
 		end
 
-		local numOrion = NumSquadrons_Terran(TER_ORION)
+		local numOrion = NumSquadrons_Terran(TER_ORION) + NumSquadrons_Terran(TER_ORION_FS1)
 		if numOrion > 0 then
 			if Util_CheckResearch_Terran(JUGGERNAUT) then
 				ResearchDemandSet_Terran(JUGGERNAUT, capitaldemand + 1.0)
@@ -269,11 +269,11 @@ function DoUpgradeDemand_Terran()
 		if numClusterBombers > 2 then
 			ResearchDemandAdd_Terran(INFYRNO, numClusterBombers * 1.25)
 		end
-		local numSynaptic = NumSquadrons_Terran(TER_MEDUSAFS1)
+		local numSynaptic = NumSquadrons_Terran(TER_MEDUSA_FS1)
 		if numSynaptic > 2 then
 			ResearchDemandAdd_Terran(SYNAPTIC, numSynaptic * 1.25)
 		end
-		local numClusterBombers = NumSquadrons_Terran(TER_URSAFS1)
+		local numClusterBombers = NumSquadrons_Terran(TER_URSA_FS1)
 		if numClusterBombers > 2 then
 			ResearchDemandAdd_Terran(CLUSTERBOMB, numClusterBombers * 1.25)
 		end
@@ -284,9 +284,9 @@ function DoUpgradeDemand_Terran()
 	end
 	local numFrigate = numActiveOfClass(s_playerIndex, eFrigate)
 	if numFrigate > 1 then
-		local numFrigate = NumSquadrons_Terran(TER_FENRIS)
-		if numFrigate > 1 then
-			ResearchDemandAdd_Terran(CRUISERHEALTHUPGRADE, numFrigate * 5)
+		local numFrigateCount = NumSquadrons_Terran(TER_FENRIS) + NumSquadrons_Terran(TER_FENRIS_FS1)
+		if numFrigateCount > 1 then
+			ResearchDemandAdd_Terran(CRUISERHEALTHUPGRADE, numFrigateCount * 5)
 		end
 		local numCapture = NumSquadrons_Terran(TER_ARGO)
 		if numCapture > 1 then

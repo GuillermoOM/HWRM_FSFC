@@ -3767,3 +3767,33 @@ Ter_hadesside = {
 		stretchOnDraw = 1,
 	},
 }
+
+--------------------------------------------------
+--- FS1 Era Variant Icons
+--------------------------------------------------
+Shi_demon_fs1 = Shi_Demon
+Shi_cain_fs1 = Shi_Cain
+Shi_lilith_fs1 = Shi_Lilith
+Vas_typhon_fs1 = Vas_typhon
+Vas_aten_fs1 = Vas_Aten
+Ter_ulysses_fs1 = Ter_Ulysses
+Ter_medusa_fs1 = Ter_Medusa
+Ter_ursa_fs1 = Ter_Ursa
+Ter_fenris_fs1 = Ter_Fenris
+Ter_leviathan_fs1 = Ter_Leviathan
+Ter_orion_fs1 = Ter_Orion
+
+--------------------------------------------------
+--- FS1 Subsystem Icons
+--------------------------------------------------
+Vas_typhonturret = Vas_typhon15
+Shi_demon_blob_turret1 = Shi_demonturret01
+Shi_demon_blob_turret2 = Shi_demonturret02
+Shi_demon_blob_turret3 = Shi_demonturret03
+Ter_orion_mediumturret = Ter_slashorion
+Ter_orion_gimbleturret = Ter_bgreenorion_gimble
+Ter_orion_largeturret = Ter_bgreenorion_turret
+Shi_cain_blob_turret = Shi_cainsred
+Shi_lilith_blob_turret = Shi_lilithlred
+Ter_fenris_blob_turret = Ter_fenrisbeam
+Ter_leviathan_blob_turret = Ter_leviathanbeam

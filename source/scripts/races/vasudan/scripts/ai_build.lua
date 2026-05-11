@@ -12,13 +12,13 @@ kInterceptorFS1 = VAS_HORUS
 kHeavyFighterFS2 = VAS_TAURET
 kHeavyFighterFS1 = VAS_THOTH
 kBomberFS2 = VAS_SEHKMET
-kBomberFS1 = VAS_SETH
+kBomberFS1 = VAS_OSIRIS
 kDestroyerFS2 = VAS_SOBEK
-kDestroyerFS1 = VAS_ATEN
+kDestroyerFS1 = VAS_ATEN_FS1
 kMissileDestroyerFS2 = VAS_ATEN
-kMissileDestroyerFS1 = VAS_ATEN
+kMissileDestroyerFS1 = VAS_ATEN_FS1
 kBattleCruiserFS2 = VAS_HATSHEPSUT
-kBattleCruiserFS1 = VAS_TYPHON
+kBattleCruiserFS1 = VAS_TYPHON_FS1
 
 function CpuBuild_UpdateRaceVariables()
 	kScout = Util_PickBestShip(kScoutFS2, kScoutFS1)
@@ -32,15 +32,28 @@ function CpuBuild_UpdateRaceVariables()
 	kAWACS = VAS_SETEKH
 end
 
-
-
 function DetermineDemandWithNoCounterInfo_Vasudan()
-	if (sg_randFavorShipType < 45) then
-		ShipDemandAddByClass( eFighter, 1 )
-	elseif (sg_randFavorShipType < 75) then
-		ShipDemandAddByClass( eCorvette, 1 )
+	local fighterDemand = 0.4
+	local corvetteDemand = 0.3
+	local frigateDemand = 0.3
+	
+	if (sg_randFavorShipType < 40) then
+		fighterDemand = fighterDemand + 0.5
+	elseif (sg_randFavorShipType < 70) then
+		corvetteDemand = corvetteDemand + 0.5
 	else
-		ShipDemandAddByClass( eFrigate, 1 )
+		frigateDemand = frigateDemand + 0.5
+	end
+	
+	ShipDemandAddByClass(eFighter, fighterDemand)
+	ShipDemandAddByClass(eCorvette, corvetteDemand)
+	ShipDemandAddByClass(eFrigate, frigateDemand)
+	
+	if (g_LOD >= 1) then
+		ShipDemandAdd(kDestroyer, 0.25)
+	end
+	if (g_LOD >= 2) then
+		ShipDemandAdd(kBattleCruiser, 0.5)
 	end
 end
 

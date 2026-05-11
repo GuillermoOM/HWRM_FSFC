@@ -52,8 +52,8 @@ NewShipType.ignoreRaceWhenDocking = 0
 --------------------------------------------------
 
 NewShipType.mass = 450
-NewShipType.thrusterMaxSpeed = 220
-NewShipType.mainEngineMaxSpeed = 220
+NewShipType.thrusterMaxSpeed = 200
+NewShipType.mainEngineMaxSpeed = 200
 NewShipType.rotationMaxSpeed = 60
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1

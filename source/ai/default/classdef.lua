@@ -10,6 +10,7 @@ squadclass[eMotherShip] = {
 	TER_COLOSSUS,
 
 	SHI_SATHANAS,
+	SHI_LUCIFER,
 
 	VAS_COLOSSUS,
 }
@@ -45,9 +46,11 @@ squadclass[eScout] = {
 
 	SHI_ASTAROTH,
 	SHI_SCORPION,
+	SHI_MANTICORE,
 
 	VAS_AMUN,
 	VAS_PTAH,
+	VAS_HORUS,
 }
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
@@ -61,6 +64,7 @@ squadclass[eRefinery] = {
 
 	VAS_ANUKET,
 	VAS_MAAT,
+	VAS_GEB,
 }
 squadclass[eBuilder] = {
 	HGN_MOTHERSHIP,
@@ -77,11 +81,15 @@ squadclass[eBuilder] = {
 
 	TER_HECATE,
 	TER_ORION,
+	TER_ORION_FS1,
 
 	SHI_DEMON,
+	SHI_DEMON_FS1,
 	SHI_RAVANA,
+	SHI_LUCIFER,
 
 	VAS_TYPHON,
+	VAS_TYPHON_FS1,
 	VAS_KARNAK,
 	VAS_HATSHEPSUT,
 }
@@ -113,6 +121,7 @@ squadclass[eDropOff] = {
 	SHI_SATHANAS,
 
 	VAS_TYPHON,
+	VAS_TYPHON_FS1,
 	VAS_ANUKET,
 	VAS_MAAT,
 	VAS_HATSHEPSUT,
@@ -137,6 +146,7 @@ squadclass[eSalvageDropOff] = {
 	SHI_RAVANA,
 
 	VAS_TYPHON,
+	VAS_TYPHON_FS1,
 	VAS_HATSHEPSUT,
 }
 squadclass[eFighter] = {
@@ -160,6 +170,7 @@ squadclass[eFighter] = {
 	TER_PEGASUS,
 	TER_PERSEUS,
 	TER_ULYSSES,
+	TER_ULYSSES_FS1,
 	TER_LOKI,
 	TER_MYRMIDON,
 	TER_APOLLO,
@@ -178,6 +189,7 @@ squadclass[eFighter] = {
 	VAS_PTAH,
 	VAS_SETH,
 	VAS_HORUS,
+	VAS_ANUBIS,
 	VAS_THOTH,
 	VAS_TAURET,
 	VAS_SERAPIS,
@@ -205,7 +217,9 @@ squadclass[eCorvette] = {
 	TER_ARTEMISDH,
 	TER_ZEUS,
 	TER_URSA,
+	TER_URSA_FS1,
 	TER_MEDUSA,
+	TER_MEDUSA_FS1,
 	TER_BOANERGES,
 	TER_ATHENA,
 
@@ -219,6 +233,7 @@ squadclass[eCorvette] = {
 	VAS_SEHKMET,
 	VAS_OSIRIS,
 	VAS_AMUN,
+	VAS_BES,
 }
 squadclass[eFrigate] = {
 	HGN_ASSAULTFRIGATE,
@@ -241,16 +256,21 @@ squadclass[eFrigate] = {
 	--	TAI_SUPPORTFRIGATE,
 
 	TER_FENRIS,
+	TER_FENRIS_FS1,
 	TER_LEVIATHAN,
+	TER_LEVIATHAN_FS1,
 	TER_AEOLUS,
 	TER_ARGO,
 
 	SHI_CAIN,
+	SHI_CAIN_FS1,
 	SHI_LILITH,
+	SHI_LILITH_FS1,
 	SHI_RAKSHASA,
 	SHI_ASMODEUS,
 
 	VAS_ATEN,
+	VAS_ATEN_FS1,
 	VAS_MENTU,
 	VAS_SATIS,
 }
@@ -318,6 +338,7 @@ squadclass[eAntiFighter] = {
 
 	TER_PERSEUS,
 	TER_ULYSSES,
+	TER_ULYSSES_FS1,
 	TER_ERINYES,
 	TER_MYRMIDON,
 	TER_VALKYRIE,
@@ -336,6 +357,7 @@ squadclass[eAntiFighter] = {
 	VAS_EDJO,
 	VAS_THOTH,
 	VAS_ANUBIS,
+	VAS_HORUS,
 }
 squadclass[eAntiCorvette] = {
 	HGN_PULSARCORVETTE,
@@ -366,6 +388,7 @@ squadclass[eAntiCorvette] = {
 	TER_ARES,
 	TER_HERCULESMK2,
 	TER_ULYSSES,
+	TER_ULYSSES_FS1,
 	TER_HERCULES,
 	TER_ERINYES,
 	TER_MYRMIDON,
@@ -426,8 +449,10 @@ squadclass[eAntiFrigate] = {
 	TER_ARTEMISDH,
 	TER_ZEUS,
 	TER_MEDUSA,
+	TER_MEDUSA_FS1,
 	TER_ATHENA,
 	TER_URSA,
+	TER_URSA_FS1,
 	TER_BOANERGES,
 
 	TER_DEIMOS,
@@ -435,7 +460,9 @@ squadclass[eAntiFrigate] = {
 	TER_HECATE,
 	TER_COLOSSUS,
 	TER_FENRIS,
+	TER_FENRIS_FS1,
 	TER_LEVIATHAN,
+	TER_LEVIATHAN_FS1,
 	TER_AEOLUS,
 	TER_HADES,
 
@@ -453,6 +480,7 @@ squadclass[eAntiFrigate] = {
 
 	SHI_MOLOCH,
 	SHI_DEMON,
+	SHI_DEMON_FS1,
 	SHI_RAVANA,
 	SHI_LUCIFER,
 	SHI_SATHANAS,
@@ -467,7 +495,9 @@ squadclass[eAntiFrigate] = {
 	VAS_AMUN,
 
 	VAS_TYPHON,
+	VAS_TYPHON_FS1,
 	VAS_HATSHEPSUT,
+	VAS_KARNAK,
 	VAS_COLOSSUS,
 }
 
@@ -503,6 +533,7 @@ squadclass[eCapital] = {
 	TER_ICENI,
 
 	SHI_DEMON,
+	SHI_DEMON_FS1,
 	SHI_RAVANA,
 	SHI_LUCIFER,
 	SHI_SATHANAS,
@@ -510,6 +541,7 @@ squadclass[eCapital] = {
 
 	VAS_HATSHEPSUT,
 	VAS_TYPHON,
+	VAS_TYPHON_FS1,
 	VAS_KARNAK,
 	VAS_SOBEK,
 	VAS_COLOSSUS,
@@ -597,7 +629,9 @@ squadclass[eSubSystemAttackers] = {
 	TER_ATHENA,
 	TER_BEANERGES,
 	TER_MEDUSA,
+	TER_MEDUSA_FS1,
 	TER_URSA,
+	TER_URSA_FS1,
 	TER_ZEUS,
 
 	SHI_NAHEMA,
@@ -650,7 +684,9 @@ squadclass[eGoodRepairAttackers] = {
 	TER_ERINYES,
 
 	TER_FENRIS,
+	TER_FENRIS_FS1,
 	TER_LEVIATHAN,
+	TER_LEVIATHAN_FS1,
 	TER_AEOLUS,
 	TER_DEIMOS,
 	TER_ICENI,
@@ -665,7 +701,9 @@ squadclass[eGoodRepairAttackers] = {
 	SHI_GORGON,
 
 	SHI_CAIN,
+	SHI_CAIN_FS1,
 	SHI_LILITH,
+	SHI_LILITH_FS1,
 	SHI_RAKSHASA,
 	SHI_MOLOCH,
 

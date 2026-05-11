@@ -8,15 +8,15 @@ kRefinery = SHI_RAHU
 kScoutFS2 = SHI_SCORPION
 kScoutFS1 = SHI_SCORPION
 kInterceptorFS2 = SHI_ASTAROTH
-kInterceptorFS1 = SHI_SCORPION
+kInterceptorFS1 = SHI_MANTICORE
 kHeavyFighterFS2 = SHI_MARA
-kHeavyFighterFS1 = SHI_SCORPION
+kHeavyFighterFS1 = SHI_DRAGON
 kBomberFS2 = SHI_NAHEMA
 kBomberFS1 = SHI_SHAITAN
 kDestroyerFS2 = SHI_MOLOCH
-kDestroyerFS1 = SHI_DEMON
+kDestroyerFS1 = SHI_DEMON_FS1
 kMissileDestroyerFS2 = SHI_MOLOCH
-kMissileDestroyerFS1 = SHI_DEMON
+kMissileDestroyerFS1 = SHI_DEMON_FS1
 kBattleCruiserFS2 = SHI_RAVANA
 kBattleCruiserFS1 = SHI_LUCIFER
 
@@ -32,15 +32,28 @@ function CpuBuild_UpdateRaceVariables()
 	kAWACS = SHI_COMMNODE
 end
 
-
-
 function DetermineDemandWithNoCounterInfo_Shivan()
-	if (sg_randFavorShipType < 35) then
-		ShipDemandAddByClass( eFighter, 1 )
-	elseif (sg_randFavorShipType < 65) then
-		ShipDemandAddByClass( eCorvette, 1 )
+	local fighterDemand = 0.4
+	local corvetteDemand = 0.3
+	local frigateDemand = 0.3
+	
+	if (sg_randFavorShipType < 40) then
+		fighterDemand = fighterDemand + 0.5
+	elseif (sg_randFavorShipType < 70) then
+		corvetteDemand = corvetteDemand + 0.5
 	else
-		ShipDemandAddByClass( eFrigate, 1 )
+		frigateDemand = frigateDemand + 0.5
+	end
+	
+	ShipDemandAddByClass(eFighter, fighterDemand)
+	ShipDemandAddByClass(eCorvette, corvetteDemand)
+	ShipDemandAddByClass(eFrigate, frigateDemand)
+	
+	if (g_LOD >= 1) then
+		ShipDemandAdd(kDestroyer, 0.25)
+	end
+	if (g_LOD >= 2) then
+		ShipDemandAdd(kBattleCruiser, 0.5)
 	end
 end
 

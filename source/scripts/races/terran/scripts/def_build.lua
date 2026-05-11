@@ -253,12 +253,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ulysses",
-		RequiredResearch = "Ulysses",
+		RequiredResearch = "Ulysses & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 12,
 		DisplayedName = "GTF Ulysses - Superiority <c=12AB06>26s</c>",
 		Description =
 		"<b>Description:</b> Affectionately nicknamed The Bat by its pilots, the GTF Ulysses is a well-designed craft that has had a far longer useful life than its engineers ever imagined. Developed jointly by Terran and Vasudan contractors, the Ulysses was first deployed near the end of the Great War. Its excellent maneuverability and high top speed give it an agility that pilots love, but at a cost of thin armor and a small secondary weapon loadout. The Ulysses is a better choice for offensive missions than defensive ones. \n\n<b>Prerequisites:</b> Fighter Design, Ulysses. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW ML-70 Morning Star, 1x GTM-19 Harpoon.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_ulysses_fs1",
+		RequiredResearch = "Ulysses & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 12,
+		DisplayedName = "GTF Ulysses (FS1) - Superiority <c=12AB06>26s</c>",
+		Description =
+		"<b>Description:</b> Affectionately nicknamed The Bat by its pilots, the GTF Ulysses is a well-designed craft that has had a far longer useful life than its engineers ever imagined. Developed jointly by Terran and Vasudan contractors, the Ulysses was first deployed near the end of the Great War. Its excellent maneuverability and high top speed give it an agility that pilots love, but at a cost of thin armor and a small secondary weapon loadout. The Ulysses is a better choice for offensive missions than defensive ones. \n\n<b>Prerequisites:</b> Fighter Design, Ulysses. \n\n<b>Armaments:</b> 2x GTW ML-16 Laser, 2x GTW-15 Avenger, 1x GTM-19 Harpoon.",
 	},
 	{
 		Type = Ship,
@@ -323,7 +333,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_medusa",
-		RequiredResearch = "Medusa",
+		RequiredResearch = "Medusa & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 32,
 		DisplayedName = "GTB Medusa - Medium Bomber <c=12AB06>35s</c>",
@@ -332,13 +342,33 @@ build = {
 	},
 	{
 		Type = Ship,
+		ThingToBuild = "ter_medusa_fs1",
+		RequiredResearch = "Medusa & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 32,
+		DisplayedName = "GTB Medusa (FS1) - Medium Bomber <c=12AB06>35s</c>",
+		Description =
+		"<b>Description:</b> The GTB Medusa is the workhorse of the GTVA's bomber fleet. Its large bomb capacity enables it to take out cruiser-class warships, while its strong shielding ensures it can get close enough to deliver the punch. The first bomber to carry the potent Cyclops bomb, the Medusa is sure to be one of the highlights of a bomber pilot's career. \n\n<b>Prerequisites:</b> Bomber Design, Medusa. \n\n<b>Armaments:</b> 2x Prometheus R, 1x Prometheus R turret, 2x GTM-MX Tsunami.",
+	},
+	{
+		Type = Ship,
 		ThingToBuild = "ter_ursa",
-		RequiredResearch = "Ursa",
+		RequiredResearch = "Ursa & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 33,
 		DisplayedName = "GTB Ursa - Heavy Bomber <c=12AB06>45s</c>",
 		Description =
 		"<b>Description:</b> The GTB Ursa is the slowest bomber in the GTVA fleet. What it lacks in speed, however, it more than makes up with its massive payload. The Ursa was the first GTVA bomber designed specifically to destroy capital ships. With a rack of Helios bombs, in addition to a standard complement of Hornet missiles and Prometheus cannon, a squadron of Ursas can take out a destroyer. Ursas have the highest shielding of any bomber, along with a GTVI-designed hyper-dense hull. These help ensure that the Ursa gets close enough to deliver its payload and possibly even survive the escape. \n\n<b>Prerequisites:</b> Bomber Design, Ursa. \n\n<b>Armaments:</b> 5x Prometheus S, 1x Kayser turret, 1x GTM-13 Helios.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_ursa_fs1",
+		RequiredResearch = "Ursa & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 33,
+		DisplayedName = "GTB Ursa (FS1) - Heavy Bomber <c=12AB06>45s</c>",
+		Description =
+		"<b>Description:</b> The GTB Ursa is the slowest bomber in the GTVA fleet. What it lacks in speed, however, it more than makes up with its massive payload. The Ursa was the first GTVA bomber designed specifically to destroy capital ships. With a rack of Helios bombs, in addition to a standard complement of Hornet missiles and Prometheus cannon, a squadron of Ursas can take out a destroyer. Ursas have the highest shielding of any bomber, along with a GTVI-designed hyper-dense hull. These help ensure that the Ursa gets close enough to deliver its payload and possibly even survive the escape. \n\n<b>Prerequisites:</b> Bomber Design, Ursa. \n\n<b>Armaments:</b> 5x Prometheus S, 1x Prometheus turret, 2x GTM-MX Tsunami.",
 	},
 	{
 		Type = Ship,
@@ -353,7 +383,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_fenris",
-		RequiredResearch = "CruiserDesign",
+		RequiredResearch = "CruiserDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 50,
 		DisplayedName = "GTC Fenris - Light Cruiser <c=12AB06>30s</c>",
@@ -362,13 +392,33 @@ build = {
 	},
 	{
 		Type = Ship,
+		ThingToBuild = "ter_fenris_fs1",
+		RequiredResearch = "CruiserDesign & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 50,
+		DisplayedName = "GTC Fenris (FS1) - Light Cruiser <c=12AB06>30s</c>",
+		Description =
+		"<b>Description:</b> The Fenris class is the aging stalwart among the Alliance's warships. Before the Great War, the Fenris was the GTA's only class of cruisers. During the war, Terran Command decided to build a second line of cruisers, the Leviathans, to free the Fenris from escort and guard duties. Fenris cruisers have fought in virtually every theatre of operation. These fast, versatile cruisers pack enough punch in their 260-meter-long hulls to go toe-to-toe with any enemy cruiser, and it's speed and maneuverability make it a good choice for strike missions. \n\n<b>Prerequisites:</b> Cruiser Design. \n\n<b>Armaments:</b> 1x Fusion Mortar, 7x Turret.",
+	},
+	{
+		Type = Ship,
 		ThingToBuild = "ter_leviathan",
-		RequiredResearch = "HeavyCruiser",
+		RequiredResearch = "HeavyCruiser & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 51,
 		DisplayedName = "GTC Leviathan - Heavy Cruiser <c=12AB06>43s</c>",
 		Description =
 		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, GTC Leviathan. \n\n<b>Armaments:</b> 1x Light Beam, 1x Pihrana Turret, 4x Anti-Fighter Beam, 3x Turret.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_leviathan_fs1",
+		RequiredResearch = "HeavyCruiser & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 51,
+		DisplayedName = "GTC Leviathan (FS1) - Heavy Cruiser <c=12AB06>43s</c>",
+		Description =
+		"<b>Description:</b> The Leviathan is much heavier armed and armored than the Fenris, but also much slower and less maneuverable. Leviathan cruisers are used to guard critical installations, such as permanent jump nodes, deep-space factories, and gas-mining operations, where firepower is king and speed is of little importance. They're also well-suited to escorting slow-moving freighters or transports. The Fenris is good for fast-moving operations, but when you need some muscle, call in a Leviathan. \n\n<b>Prerequisites:</b> Cruiser Design, GTC Leviathan. \n\n<b>Armaments:</b> 1x Huge Turret, 1x Pihrana Turret, 7x Turret.",
 	},
 	{
 		Type = Ship,
@@ -393,12 +443,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_orion",
-		RequiredResearch = "CapitalShipDesign",
+		RequiredResearch = "CapitalShipDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 80,
 		DisplayedName = "GTD Orion - Destroyer <c=12AB06>215s</c>",
 		Description =
 		"<b>Description:</b> For over 30 years, the GTD Orion class was the largest ship in the Terran-Vasudan armada. Over two kilometers in length, bristling with dozens of death-dealing turrets, the Orion is as awesome in repose as it is in battle. All GTVA Orions have been retrofitted with the latest anti-warship beam weapons, as well as flak and AAA turrets for dealing with fighters and bombers. The Orion's cavernous hangar bays easily accommodate more than two dozen fighter or bomber wings. \n\n<b>Prerequisites:</b> Capital Ship Design, Heavy Photon Beams. \n\n<b>Armaments:</b> 3x Heavy Beam, 3x Slashing Beam, 3x Anti-Fighter Beam, 4x Huge Turret, 3x Turret.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_orion_fs1",
+		RequiredResearch = "CapitalShipDesign & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 80,
+		DisplayedName = "GTD Orion (FS1) - Destroyer <c=12AB06>215s</c>",
+		Description =
+		"<b>Description:</b> For over 30 years, the GTD Orion class was the largest ship in the Terran-Vasudan armada. Over two kilometers in length, bristling with dozens of death-dealing turrets, the Orion is as awesome in repose as it is in battle. All GTVA Orions have been retrofitted with the latest anti-warship beam weapons, as well as flak and AAA turrets for dealing with fighters and bombers. The Orion's cavernous hangar bays easily accommodate more than two dozen fighter or bomber wings. \n\n<b>Prerequisites:</b> Capital Ship Design. \n\n<b>Armaments:</b> 4x Huge Turret, 20x Turret.",
 	},
 	{
 		Type = Ship,
