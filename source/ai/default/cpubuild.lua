@@ -1,4 +1,15 @@
 aitrace("LOADING CPU BUILD")
+
+function Util_PickBestShip(primary, fallback)
+    if (primary ~= nil and CanBuild(primary) == 1) then
+        return primary
+    end
+    if (fallback ~= nil and CanBuild(fallback) == 1) then
+        return fallback
+    end
+    return primary or fallback
+end
+
 dofilepath("data:ai/default/cpuresource.lua")
 dofilepath("data:ai/default/cpubuildsubsystem.lua")
 
@@ -21,7 +32,7 @@ function CpuBuild_Init()
 	Proc_DetermineDemandWithNoCounterInfo = nil
 	Proc_DetermineSpecialDemand = nil
 	
-	dofilespath(SelfRace_GetString("path_ai_build", ""))
+	dofilepath(SelfRace_GetString("path_ai_build", ""))
 
 	CpuBuildSS_Init()
 	CpuResource_Init()
@@ -359,6 +370,9 @@ function CpuBuild_RemoveBuildItems()
 end
 
 function CpuBuild_Process()
+	if (CpuBuild_UpdateRaceVariables) then
+		CpuBuild_UpdateRaceVariables()
+	end
 	ShipDemandClear()
 	CpuBuild_RemoveBuildItems()
 	if (Override_ShipDemand) then

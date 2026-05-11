@@ -3,15 +3,36 @@ aitrace("LOADING VASUDAN BUILD INFO")
 kCollector = VAS_ISIS
 kCollectorFS1 = VAS_ISIS
 kRefinery  = VAS_ANUKET
-kScout = VAS_HORUS
-kInterceptor = VAS_SERAPIS
-kBomber = VAS_SETH
-kCarrier = VAS_TYPHON
-kDestroyer = VAS_SOBEK
-kResearch = VAS_IMHOTEP
-kMissileDestroyer = VAS_ATEN
-kBattleCruiser = VAS_HATSHEPSUT
-kAWACS = VAS_SETEKH
+
+-- Era Counterparts
+kScoutFS2 = VAS_PTAH
+kScoutFS1 = VAS_HORUS
+kInterceptorFS2 = VAS_SERAPIS
+kInterceptorFS1 = VAS_HORUS
+kHeavyFighterFS2 = VAS_TAURET
+kHeavyFighterFS1 = VAS_THOTH
+kBomberFS2 = VAS_SEHKMET
+kBomberFS1 = VAS_SETH
+kDestroyerFS2 = VAS_SOBEK
+kDestroyerFS1 = VAS_ATEN
+kMissileDestroyerFS2 = VAS_ATEN
+kMissileDestroyerFS1 = VAS_ATEN
+kBattleCruiserFS2 = VAS_HATSHEPSUT
+kBattleCruiserFS1 = VAS_TYPHON
+
+function CpuBuild_UpdateRaceVariables()
+	kScout = Util_PickBestShip(kScoutFS2, kScoutFS1)
+	kInterceptor = Util_PickBestShip(kInterceptorFS2, kInterceptorFS1)
+	kBomber = Util_PickBestShip(kBomberFS2, kBomberFS1)
+	kDestroyer = Util_PickBestShip(kDestroyerFS2, kDestroyerFS1)
+	kMissileDestroyer = Util_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
+	kBattleCruiser = Util_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
+	kCarrier = VAS_TYPHON
+	kResearch = VAS_IMHOTEP
+	kAWACS = VAS_SETEKH
+end
+
+
 
 function DetermineDemandWithNoCounterInfo_Vasudan()
 	if (sg_randFavorShipType < 45) then

@@ -10,8 +10,8 @@ This repository condenses that massive knowledge base into ~35 structured, highl
 
 * **`functions/`** - API references for all engine-exposed Lua 4.0 functions, grouped by scope (AI, Player, SobGroup, Level, etc.)
 * **`variables/`** - Lists of engine variables and properties for `.ship`, `.wepn`, `.subs`, `.miss`, and UI/FX systems.
-* **`reference/`** - Structural rules, such as `.ship` file parsing order, error codes, and global enumerations.
-* **`tutorials/`** - Step-by-step guides for basic to advanced modding tasks, updated for the HWRM engine.
+* **`reference/`** - Structural rules, such as `.ship` file parsing order, error codes, and [AI Engine Overrides](reference/ai_engine_overrides.md).
+* **`tutorials/`** - Step-by-step guides for basic to advanced tasks, including [Dynamic AI Ship Selection](tutorials/ai_dynamic_ship_selection.md).
 
 ## Note on Lua 4.0
 
