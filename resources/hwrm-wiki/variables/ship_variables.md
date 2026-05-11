@@ -46,6 +46,17 @@ Defined on the `NewShipType` table created by `StartShipConfig()`.
 - **defaultROE**: `Offensive`, `Defensive`, or `Passive`.
 - **defaultStance**: `Aggressive`, `Evasive`, or `Neutral`.
 
+### Ship Counter Rating (AI Selection)
+> These variables are used by the AI engine to evaluate the relative "value" of a ship. The AI does not look at HP or DPS directly; it uses these weights to decide which unit to build for a given demand class.
+- **fighterValue**: Base value for the Fighter class.
+- **corvetteValue**: Base value for the Corvette class (Bombers are often mapped here).
+- **frigateValue**: Base value for the Frigate class (Cruisers).
+- **neutralValue**: Base value for non-combat units.
+- **antiFighterValue**: Bonus weight when countering Fighters.
+- **antiCorvetteValue**: Bonus weight when countering Corvettes/Bombers.
+- **antiFrigateValue**: Bonus weight when countering Frigates.
+- **totalValue**: The overall weight of the ship for general military demand.
+
 ### Sensors & Visibility
 - **prmSensorRange**: Primary sensor radius (blue sphere in Sensor Manager).
 - **secSensorRange**: Secondary sensor radius (detects but doesn't reveal in SM).

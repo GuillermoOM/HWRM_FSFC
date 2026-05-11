@@ -266,7 +266,7 @@ addAbility(NewShipType, 'CanAttack', 1, 1, 0, 0, 0.35, 1,
     'JustShoot')
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 800)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 1, 0.3)
-addAbility(NewShipType, 'RepairCommand', 1, 0, 25, 1, 'rallypoint', { Fighter = 0 }, { Corvette = 0 })
+addAbility(NewShipType, 'RepairCommand', 1, 0, 25, 1, 'Frontal_SupportFrigate', { Fighter = 0 }, { Corvette = 0 })
 
 --------------------------------------------------
 --- Docking

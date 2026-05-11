@@ -20,12 +20,6 @@ function DoResearchTechDemand_Shivan()
 		if (Util_CheckResearch(FIGHTERDESIGN)) then
 			ResearchDemandSet(FIGHTERDESIGN, fighterdemand + 1.0)
 		end
-		if (Util_CheckResearch(MANTICORE)) then
-			ResearchDemandSet(MANTICORE, fighterdemand + 1.0)
-		end
-		if (Util_CheckResearch(ASTAROTH)) then
-			ResearchDemandSet(ASTAROTH, fighterdemand + 1.0)
-		end
 		if (Util_CheckResearch(DRAGON)) then
 			ResearchDemandSet(DRAGON, fighterdemand + 1.0)
 		end

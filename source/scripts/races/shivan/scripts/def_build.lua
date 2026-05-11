@@ -38,7 +38,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_manticore",
-		RequiredResearch = "Manticore",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "SF Manticore - Interceptor <c=12AB06>31s</c>",
@@ -48,7 +48,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_astaroth",
-		RequiredResearch = "Astaroth",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "SF Astaroth - Interceptor <c=12AB06>30s</c>",

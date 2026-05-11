@@ -258,7 +258,7 @@ NewShipType.alternativeHyperspaceTime = 7
 addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'CanDock', 1, 0)
 addAbility(NewShipType, 'CanLaunch')
-addAbility(NewShipType, 'ShipHold', 1, 200, 0, 'rallypoint', '', 0)
+addAbility(NewShipType, 'ShipHold', 1, 200, 1.0, 'rallypoint', '', 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 60, 360, 0, 3)

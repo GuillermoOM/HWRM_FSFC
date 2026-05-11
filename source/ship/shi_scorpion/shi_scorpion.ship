@@ -184,14 +184,14 @@ setSupplyValue(NewShipType, 'LayoutFighter', 4.0)
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 8
+NewShipType.fighterValue = 3
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
 NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 8
+NewShipType.totalValue = 3
 
 --------------------------------------------------
 --- Sensors
@@ -309,8 +309,8 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, 'gun_shivmegalaser', 'Weapon_Gun1', '')
-StartShipWeaponConfig(NewShipType, 'gun_shivmegalaser', 'Weapon_Gun2', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivlightlaser', 'Weapon_Gun1', '')
+StartShipWeaponConfig(NewShipType, 'gun_shivlightlaser', 'Weapon_Gun2', '')
 StartShipWeaponConfig(NewShipType, 'miss_rockeye', 'Weapon_Missile', '')
 
 --------------------------------------------------
