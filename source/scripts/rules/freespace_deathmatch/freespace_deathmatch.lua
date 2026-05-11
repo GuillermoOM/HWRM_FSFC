@@ -5,13 +5,20 @@ dofilepath("data:leveldata/multiplayer/lib/research.lua")
 dofilepath("data:leveldata/multiplayer/lib/main.lua")
 dofilepath("data:scripts/scar/fsfc_ui.lua")
 dofilepath("data:leveldata/multiplayer/lib/ruinjections.lua")
+dofilepath("data:leveldata/multiplayer/lib/music.lua")
 
 function OnInit()
+	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
+	Rule_Add("RandomMusicRuleFS2")
 	MPRestrict()
 	research = GetGameSettingAsNumber("research")
 	era_setting = GetGameSettingAsNumber("era") -- 0: FS1, 1: FS2, 2: Both
 	carriersonly = GetGameSettingAsNumber("carriersonly")
 	ruinjections = GetGameSettingAsNumber("ruinjections")
+	bounties = GetGameSettingAsNumber("bounties")
+
+	-- RU Injection Stats initialization
+	Stats_RUInjectionRUs = { 0, 0, 0, 0, 0, 0, 0, 0 }
 
 	-- Starting fleet suffix priority
 	local suffix = ""
@@ -142,6 +149,13 @@ function timer_updating_fsfc()
 		end
 
 		Rule_AddInterval("UI_init_fsfc", 0.1)
+		Rule_AddInterval("cpuplayers_updating", 0.1)
+		Rule_AddInterval("sobgroups_init", 1)
+		Rule_AddInterval("mainrule_updating", timer_interval * 3)
+
+		if bounties > 0 then
+			Rule_AddInterval("bounties_updating", timer_interval * 2)
+		end
 	elseif timer_timing == 2 then
 		for i = 0, Universe_PlayerCount() - 1 do
 			if (Player_IsAlive(i) == 1) then

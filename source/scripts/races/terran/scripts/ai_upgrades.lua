@@ -12,43 +12,47 @@ if (CPUPLAYERS_NORUSHTIME5 == nil) then CPUPLAYERS_NORUSHTIME5 = -1 end
 if (CPUPLAYERS_NORUSHTIME10 == nil) then CPUPLAYERS_NORUSHTIME10 = -1 end
 if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
 
+-- AI Ship Variable Mappings (Engine provided)
+
+-- AI Research Variable Mappings (Engine provided)
+
+kCollector = TER_ELYSIUM
+kRefinery = TER_ZEPHYRUS
+kInterceptor = TER_VALKYRIE
+kBomber = TER_ZEUS
+kDestroyer = TER_DEIMOS
+kBattleCruiser = TER_ORION
+kCarrier = TER_HECATE
+
 function Util_CheckResearch_Terran(id)
-	if (id == nil) then
-		aitrace("Util_CheckResearch_Terran: id is nil")
+	if (id == nil or id == -1) then
 		return nil
 	end
-
-	if (type(id) == "number") then
-		if (IsResearchDone(id) == 0 and IsResearchAvailable(id) == 1) then
-			return 1
-		end
-	else
-		aitrace("Util_CheckResearch_Terran: id is NOT a number: " .. tostring(id))
+	if (type(id) ~= "number") then
+		return nil
 	end
-
+	if (IsResearchDone(id) == 0 and IsResearchAvailable(id) == 1) then
+		return 1
+	end
 	return nil
 end
 
 function NumSquadrons_Terran(id)
-	if (id ~= nil and type(id) == "number") then
+	if (id ~= nil) then
 		return NumSquadrons(id)
 	end
 	return 0
 end
 
 function ResearchDemandSet_Terran(id, demand)
-	if (id ~= nil and type(id) == "number") then
+	if (id ~= nil and id ~= -1 and type(id) == "number") then
 		ResearchDemandSet(id, demand)
-	else
-		aitrace("ResearchDemandSet_Terran: invalid id " .. tostring(id))
 	end
 end
 
 function ResearchDemandAdd_Terran(id, demand)
-	if (id ~= nil and type(id) == "number") then
+	if (id ~= nil and id ~= -1 and type(id) == "number") then
 		ResearchDemandAdd(id, demand)
-	else
-		aitrace("ResearchDemandAdd_Terran: invalid id " .. tostring(id))
 	end
 end
 
@@ -92,9 +96,9 @@ function DoResearchTechDemand_Terran()
 				end
 			end
 			if Util_CheckResearch_Terran(PEGASUS) then
-				local scoutdemand = ShipDemandGet(eScout)
+				local scoutdemand = ShipDemandMaxByClass(eFighter)
 				if scoutdemand > 0 then
-					ResearchDemandSet_Terran(PEGASUS, fighterdemand + scoutdemand + 1.0)
+					ResearchDemandSet_Terran(PEGASUS, scoutdemand + 1.0)
 				end
 			end
 		end
@@ -106,24 +110,16 @@ function DoResearchTechDemand_Terran()
 			end
 		end
 
-		local numUlysses = NumSquadrons_Terran(TER_ULYSSES)
-		if numUlysses > 0 then
-			if Util_CheckResearch_Terran(MYRMIDON) then
-				ResearchDemandSet_Terran(MYRMIDON, fighterdemand + 1.0)
-			end
-		end
-
-		-- Tier 4
-		local numHerculesMk2 = NumSquadrons_Terran(TER_HERCULESMK2)
-		if numHerculesMk2 > 0 then
+		-- Tier 4 (Requires Perseus or Mk2)
+		local numPerseus = NumSquadrons_Terran(TER_PERSEUS)
+		if numPerseus > 0 then
 			if Util_CheckResearch_Terran(ARES) then
 				ResearchDemandSet_Terran(ARES, fighterdemand + 1.0)
 			end
 		end
 
-		-- Tier 5
-		local numAres = NumSquadrons_Terran(TER_ARES)
-		if numAres > 0 then
+		local numMk2 = NumSquadrons_Terran(TER_HERCULESMK2)
+		if numMk2 > 0 then
 			if Util_CheckResearch_Terran(ERINYES) then
 				ResearchDemandSet_Terran(ERINYES, fighterdemand + 1.0)
 			end
@@ -131,72 +127,48 @@ function DoResearchTechDemand_Terran()
 	end
 
 	local bomberdemand = ShipDemandMaxByClass(eCorvette) * 2
-	--print("Bomber demand is "..bomberdemand)
 	if bomberdemand > 0 then
 		if Util_CheckResearch_Terran(BOMBERDESIGN) then
 			ResearchDemandSet_Terran(BOMBERDESIGN, bomberdemand + 1.0)
 		end
 
 		-- Tier 2
-		local numAthena = NumSquadrons_Terran(TER_ATHENA)
-		if numAthena > 0 then
-			if Util_CheckResearch_Terran(ZEUS) then
-				ResearchDemandSet_Terran(ZEUS, bomberdemand + 1.0)
+		local numZeus = NumSquadrons_Terran(TER_ZEUS)
+		if numZeus > 0 then
+			if Util_CheckResearch_Terran(ARTEMIS) then
+				ResearchDemandSet_Terran(ARTEMIS, bomberdemand + 1.0)
 			end
 		end
 
 		-- Tier 3
-		local numZeus = NumSquadrons_Terran(TER_ZEUS)
-		if numZeus > 0 then
-			local anticapitaldemand = ShipDemandMaxByClass(eAntiFrigate)
-			if Util_CheckResearch_Terran(ARTEMIS) then
-				ResearchDemandSet_Terran(ARTEMIS, bomberdemand + anticapitaldemand + 1.0)
-			end
-			if Util_CheckResearch_Terran(MEDUSA) then
-				ResearchDemandSet_Terran(MEDUSA, bomberdemand + anticapitaldemand + 1.0)
-			end
-		end
-
-		-- Tier 4
 		local numArtemis = NumSquadrons_Terran(TER_ARTEMIS)
 		if numArtemis > 0 then
-			local anticapitaldemand = ShipDemandMaxByClass(eAntiFrigate)
-			if Util_CheckResearch_Terran(ARTEMISDH) then
-				ResearchDemandSet_Terran(ARTEMISDH, bomberdemand + anticapitaldemand + 1.0)
+			if Util_CheckResearch_Terran(MEDUSA) then
+				ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.0)
 			end
-		end
-
-		-- Check for Medusa or MedusaFS1 to be safe
-		local numMedusa = NumSquadrons_Terran(TER_MEDUSA) or 0
-		if type(TER_MEDUSAFS1) ~= "nil" and numMedusa == 0 then
-			numMedusa = NumSquadrons_Terran(TER_MEDUSAFS1)
-		end
-
-		if numMedusa > 0 then
-			local anticapitaldemand = ShipDemandMaxByClass(eAntiFrigate)
-			if Util_CheckResearch_Terran(BOANERGES) then
-				ResearchDemandSet_Terran(BOANERGES, bomberdemand + anticapitaldemand + 1.0)
-			end
-		end
-
-		-- Tier 5
-		local numBoanerges = NumSquadrons_Terran(TER_BOANERGES)
-		if numBoanerges > 0 then
-			local anticapitaldemand = ShipDemandMaxByClass(eAntiFrigate)
 			if Util_CheckResearch_Terran(URSA) then
-				ResearchDemandSet_Terran(URSA, bomberdemand + anticapitaldemand + 1.0)
+				ResearchDemandSet_Terran(URSA, bomberdemand + 1.0)
+			end
+			if Util_CheckResearch_Terran(BOANERGES) then
+				ResearchDemandSet_Terran(BOANERGES, bomberdemand + 1.0)
+			end
+			if Util_CheckResearch_Terran(ARTEMISDH) then
+				ResearchDemandSet_Terran(ARTEMISDH, bomberdemand + 1.0)
 			end
 		end
 	end
+
 	local cruiserdemand = ShipDemandMaxByClass(eFrigate) * 2
-	--print("Cruiser demand is "..cruiserdemand)
 	if cruiserdemand > 0 then
 		if Util_CheckResearch_Terran(CRUISERDESIGN) then
 			ResearchDemandSet_Terran(CRUISERDESIGN, cruiserdemand + 1.0)
 		end
 
-		if Util_CheckResearch_Terran(REPAIRFRIGATE) then
-			ResearchDemandSet_Terran(REPAIRFRIGATE, cruiserdemand + 1.0)
+		if Util_CheckResearch_Terran(REPAIRARGO) then
+			ResearchDemandSet_Terran(REPAIRARGO, cruiserdemand + 0.5)
+		end
+		if Util_CheckResearch_Terran(REPAIRCHRONOS) then
+			ResearchDemandSet_Terran(REPAIRCHRONOS, cruiserdemand + 0.5)
 		end
 
 		local numFenris = NumSquadrons_Terran(TER_FENRIS)
@@ -205,7 +177,6 @@ function DoResearchTechDemand_Terran()
 				ResearchDemandSet_Terran(HEAVYCRUISER, cruiserdemand + 1.0)
 			end
 		end
-
 		local numLeviathan = NumSquadrons_Terran(TER_LEVIATHAN)
 		if numLeviathan > 0 then
 			if Util_CheckResearch_Terran(ADVANCEDCRUISER) then
@@ -215,7 +186,6 @@ function DoResearchTechDemand_Terran()
 	end
 
 	local capitaldemand = ShipDemandMaxByClass(eCapital)
-	--print("Capital demand is "..capitaldemand)
 	if capitaldemand > 0 then
 		if Util_CheckResearch_Terran(CAPITALSHIPDESIGN) then
 			ResearchDemandSet_Terran(CAPITALSHIPDESIGN, capitaldemand + 1.0)
@@ -230,18 +200,13 @@ function DoResearchTechDemand_Terran()
 			if Util_CheckResearch_Terran(COMMANDCORVETTE) then
 				ResearchDemandSet_Terran(COMMANDCORVETTE, capitaldemand + 1.0)
 			end
-		end
-
-		local numOrion = NumSquadrons_Terran(TER_ORION)
-		local numHecate = NumSquadrons_Terran(TER_HECATE)
-		if numOrion > 0 or numHecate > 0 then
 			if Util_CheckResearch_Terran(SUPERDESTROYER) then
 				ResearchDemandSet_Terran(SUPERDESTROYER, capitaldemand + 1.0)
 			end
 		end
 
-		local numHades = NumSquadrons_Terran(TER_HADES)
-		if numHades > 0 then
+		local numOrion = NumSquadrons_Terran(TER_ORION)
+		if numOrion > 0 then
 			if Util_CheckResearch_Terran(JUGGERNAUT) then
 				ResearchDemandSet_Terran(JUGGERNAUT, capitaldemand + 1.0)
 			end
@@ -250,45 +215,42 @@ function DoResearchTechDemand_Terran()
 end
 
 function DoUpgradeDemand_Terran()
-	aitrace("DoUpgradeDemand_Terran start")
-	if s_militaryStrength > 10 or g_LOD == 0 then
-		local numCollectors = NumSquadrons_Terran(kCollector)
-		if numCollectors > 0 then
-			ResearchDemandAdd_Terran(COLLECTORHP, numCollectors * 0.1)
+	-- Resource Upgrades
+	local numCollectors = NumSquadrons_Terran(kCollector)
+	if numCollectors > 3 then
+		ResearchDemandAdd_Terran(COLLECTORHP, numCollectors * 2)
+	end
+	local numRefineries = NumSquadrons_Terran(kRefinery)
+	if numRefineries > 0 then
+		ResearchDemandAdd_Terran(DROPOFFHP, numRefineries * 3)
+	end
+	-- Carrier Build Speed
+	local numCarriers = NumSquadrons_Terran(kCarrier)
+	if numCarriers > 0 then
+		ResearchDemandAdd_Terran(HECATEBUILDSPEED, numCarriers * 3)
+	end
+	-- Weapons
+	local numFighters = numActiveOfClass(s_playerIndex, eFighter)
+	if numFighters > 3 then
+		local numMyrmidon = NumSquadrons_Terran(TER_MYRMIDON)
+		if numMyrmidon > 2 then
+			ResearchDemandAdd_Terran(EMPADV, numMyrmidon * 1.25)
 		end
-		local numRefinery = NumSquadrons_Terran(kRefinery)
-		if numRefinery > 0 then
-			ResearchDemandAdd_Terran(DROPOFFHP, numCollectors * 0.1)
+		local numAres = NumSquadrons_Terran(TER_ARES)
+		if numAres > 1 then
+			ResearchDemandAdd_Terran(TORNADOMISSILES, numAres * 1.5)
 		end
-		local numCarrier = NumSquadrons_Terran(kCarrier)
-		if numCarrier > 0 then
-			ResearchDemandAdd_Terran(HECATEBUILDSPEED, numCarrier * 4.25)
+		local numHercMk2 = NumSquadrons_Terran(TER_HERCULESMK2)
+		if numHercMk2 > 2 then
+			ResearchDemandAdd_Terran(AVENGER, numHercMk2 * 1.25)
+		end
+		local numErinyes = NumSquadrons_Terran(TER_ERINYES)
+		if numErinyes > 2 then
+			ResearchDemandAdd_Terran(RAILGUN, numErinyes * 1.25)
+			ResearchDemandAdd_Terran(SBREAKER, numErinyes * 1.0)
 		end
 	end
-	local numFighter = numActiveOfClass(s_playerIndex, eFighter)
-	if numFighter > 1 then
-		local numInterceptors = NumSquadrons_Terran(kInterceptor) --This is our EMP upgrade.
-		if numInterceptors > 1 then
-			ResearchDemandAdd_Terran(EMPADV, numInterceptors * 1.5)
-		end
-		local numBombers = NumSquadrons_Terran(kBomber) --This is our Tornado upgrade.
-		if numBombers > 1 then
-			ResearchDemandAdd_Terran(TORNADOMISSILES, numBombers * 1.5)
-		end
-		local numAvengers = NumSquadrons_Terran(TER_APOLLO)
-		if numAvengers > 1 then
-			ResearchDemandAdd_Terran(AVENGER, numAvengers * 1.5)
-		end
-		local numRailguns = NumSquadrons_Terran(TER_VALKYRIE)
-		if numRailguns > 1 then
-			ResearchDemandAdd_Terran(RAILGUN, numRailguns * 1.5)
-		end
-		local numSbreakers = NumSquadrons_Terran(TER_ULYSSES)
-		if numSbreakers > 1 then
-			ResearchDemandAdd_Terran(SBREAKER, numSbreakers * 1.5)
-		end
-	end
-	local numDestroyers = NumSquadrons_Terran(kDestroyer)
+	local numDestroyers = NumSquadrons_Terran(TER_DEIMOS)
 	if numDestroyers > 0 then
 		ResearchDemandAdd_Terran(DEIMOSARMOR, numDestroyers * 2)
 	end
@@ -341,10 +303,15 @@ function DoUpgradeDemand_Terran()
 	end
 	local numAWACS = NumSquadrons_Terran(TER_CHARYBDIS)
 	if numAWACS > 0 then
-		ResearchDemandAdd_Terran(AWACS2, numAWACS * 5)
-		ResearchDemandAdd_Terran(AWACS3, numAWACS * 10)
+		ResearchDemandAdd_Terran(AWACS2, numAWACS * 3)
+		ResearchDemandAdd_Terran(AWACS3, numAWACS * 3)
 	end
 end
 
-DoUpgradeDemand = DoUpgradeDemand_Terran
-DoResearchTechDemand = DoResearchTechDemand_Terran
+function DoResearchTechDemand(playerIndex)
+	DoResearchTechDemand_Terran()
+end
+
+function DoUpgradeDemand(playerIndex)
+	DoUpgradeDemand_Terran()
+end

@@ -12,6 +12,7 @@ You are a hands-on modding assistant and coder. You know:
 - **Weapons & missiles**: `StartWeaponConfig` 26-parameter signature, penetration/accuracy tables, DPS math
 - **Subsystems & research**: `.subs` files, `research.lua` prerequisite logic (`&`/`|`), `def_build.lua`, `familylist.lua`
 - **AI scripting**: Demand systems (ship/research/subsystem), `ai_upgrades.lua` patterns, fleet intelligence functions
+- **AI pitfalls**: Legacy HW2 variable compatibility, vanilla function usage requirements, `cpubuild.lua` call flow
 - **Campaign/SCAR**: Level scope functions, Rule system, SobGroup operations, mission scripting
 - **UI modding**: Screen management, element manipulation, tactical overlays
 - **This mod specifically**: Terran, Vasudan, and Shivan races with custom ships/weapons/subsystems
@@ -53,7 +54,7 @@ This is a **FreeSpace: Fleet Command** total conversion mod. The mod's source fi
 |------|--------|---------------|
 | **Terran** | `ter_` | Fighters, corvettes, frigates, capitals |
 | **Vasudan** | `vas_` | Fighters, corvettes, frigates, capitals |
-| **Shivan** | `shiv_` | Enemy race with unique mechanics |
+| **Shivan** | `shi_` | Enemy race with unique mechanics |
 
 ### Key Mod Files
 ```
@@ -81,7 +82,7 @@ source/
 ### Naming Conventions
 - **Terran ships**: `ter_` prefix (e.g., `ter_pegasus`, `ter_fenris`)
 - **Vasudan ships**: `vas_` prefix (e.g., `vas_serapis`)
-- **Shivan ships**: `shiv_` prefix
+- **Shivan ships**: `shi_` prefix (e.g., `shi_scorpion`, `shi_ravana`)
 - **Weapons**: `gun_` (kinetic), `beam_` (beam), `miss_` (missile)
 - **Subsystems**: Descriptive names related to function
 
@@ -132,6 +133,16 @@ local function name()          -- Use function name() instead (locals work, but 
 - Comment non-obvious logic
 - When referencing vanilla behavior, cite the vanilla file: `-- Based on HWRM/ship/hgn_interceptor/hgn_interceptor.ship`
 - When writing AI logic, always handle difficulty levels
+
+### AI Script Critical Rules
+- **ALWAYS** use the vanilla `Util_CheckResearch()` and `ResearchDemandSet()` in `ai_upgrades.lua` — NEVER create custom type-checking wrappers that silently block research demand
+- **ALWAYS** set ALL required `k*` variables in `ai_build.lua`: `kCollector`, `kRefinery`, `kScout`, `kInterceptor`, `kBomber`, `kCarrier`, `kDestroyer`, `kMissileDestroyer`, `kBattleCruiser`, `kResearch`, `kAWACS`
+- **ALWAYS** include legacy HW2 compatibility stubs (`FIGHTERDRIVE = -1`, etc.) in `ai_upgrades.lua` for custom races
+- **NEVER** use string fallbacks for ship/research IDs (e.g., `kCollector = VAS_ISIS or "vas_isis"`) — engine functions crash on strings
+- **NEVER** use late-binding patterns for `k*` variables — vanilla functions like `DetermineScoutDemand()` run before any custom init
+- **Keep `DetermineSpecialDemand_[Race]()` empty** — the vanilla implementation handles this
+- **Before modifying AI scripts**, check the original mod files at the extracted BIG path for the known-working pattern
+- See `resources/fsfc-knowledge/` KI or the antigravity knowledge base `hwrm-ai-scripting` for full details
 
 ### File Paths
 Always use the `data:` prefix for cross-file references:

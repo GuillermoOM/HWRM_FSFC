@@ -1,78 +1,29 @@
 aitrace("LOADING VASUDAN BUILD INFO")
 
 kCollector = VAS_ISIS
-kRefinery = VAS_ANUKET
+kRefinery  = VAS_ANUKET
 kScout = VAS_HORUS
+kInterceptor = VAS_SERAPIS
+kBomber = VAS_SETH
 kCarrier = VAS_TYPHON
-kDestroyer = VAS_TYPHON
+kDestroyer = VAS_SOBEK
+kResearch = VAS_IMHOTEP
+kMissileDestroyer = VAS_ATEN
 kBattleCruiser = VAS_HATSHEPSUT
+kAWACS = VAS_SETEKH
 
 function DetermineDemandWithNoCounterInfo_Vasudan()
-	if sg_randFavorShipType < 55 then
-		ShipDemandAddByClass(eFighter, 1)
-	elseif sg_randFavorShipType < 85 then
-		ShipDemandAddByClass(eCorvette, 0.6)
-	elseif g_LOD < 2 and sg_randFavorShipType < 95 then
-		ShipDemandAddByClass(eFrigate, 0.4)
+	if (sg_randFavorShipType < 45) then
+		ShipDemandAddByClass( eFighter, 1 )
+	elseif (sg_randFavorShipType < 75) then
+		ShipDemandAddByClass( eCorvette, 1 )
 	else
-		ShipDemandAdd(eDestroyer, 0.2)
+		ShipDemandAddByClass( eFrigate, 1 )
 	end
 end
 
 function DetermineSpecialDemand_Vasudan()
-	local numEnemyCarriers = numActiveOfClass(s_enemyIndex, eBuilder)
-	local numActiveCarriers = numActiveOfClass(s_playerIndex, eBuilder)
 
-	local FrigateDemand = numActiveOfClass(s_enemyIndex, eFrigate)
-
-	local shipId = FindHighDemandShip()
-
-	if gameTime() < 2 * 60 then
-		ShipDemandSetByClass(eBattleCruiser, 0)
-	end
-
-	controller = kRefinery
-	local numControllers = NumSquadrons(controller) + NumSquadronsQ(kRefinery)
-	if numControllers > 5 then
-		ShipDemandSet(kRefinery, 0)
-	end
-
-	resourcers = kCollector
-	local numResourcers = NumSquadrons(kCollector) + NumSquadronsQ(kCollector)
-	if numResourcers > 9 then
-		ShipDemandAdd(kRefinery, 0.5)
-	end
-
-	if (s_selfTotalValue > 75) and (numEnemyCarriers > 1) then
-		ShipDemandAdd(eDestroyer, 4.5)
-	end
-
-	if (s_selfTotalValue > 75) and (numEnemyCarriers > 1) and (GetRU() > 2800) then
-		ShipDemandAddByClass(eBuilder, FrigateDemand + 20.0)
-		shipId = FindHighDemandShip()
-		Build(shipId)
-	end
-
-	if numActiveCarriers == 3 then
-		ShipDemandSetByClass(eBuilder, 0)
-		ShipDemandAdd(eDestroyer, 7.5)
-	end
-
-	if s_militaryStrength > 25 * sg_moreEnemies then
-		ShipDemandAddByClass(ePlatform, -2)
-	end
-
-	if
-		numActiveOfClass(s_enemyIndex, eFighter) > 0
-		and numActiveOfClass(s_playerIndex, eFighter) < 7
-		and s_militaryPop < 22
-	then
-		ShipDemandAddByClass(eFighter, 1)
-	end
-
-	if (GetNumCollecting() > 9 or GetRU() > 3500) and s_militaryPop > 15 and UnderAttackThreat() < -75 then
-		ShipDemandAdd(VAS_COLOSSUS, 2.5)
-	end
 end
 
 Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Vasudan
