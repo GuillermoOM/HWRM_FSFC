@@ -12,7 +12,7 @@ kInterceptorFS2 = TER_PERSEUS
 kInterceptorFS1 = TER_APOLLO
 kHeavyFighterFS2 = TER_MYRMIDON
 kHeavyFighterFS1 = TER_VALKYRIE
-kBomberFS2 = TER_ARTEMIS
+kBomberFS2 = TER_MEDUSA -- Upgraded from Artemis (212 DPS vs 108 DPS)
 kBomberFS1 = TER_ZEUS
 kDestroyerFS2 = TER_DEIMOS
 kDestroyerFS1 = TER_FENRIS_FS1
@@ -61,26 +61,67 @@ end
 
 function DetermineSpecialDemand_Terran()
 	local currentRU = GetRU()
+	
+	-- Dynamic scaling for "True Huge" caps
+	local fighterTarget = 30
+	local bomberTarget = 20
+	local carrierTarget = 4
+	local capDemand = 0.5
+
+	if (currentRU > 10000) then
+		fighterTarget = 100
+		bomberTarget = 80
+		carrierTarget = 6
+		capDemand = 1.0
+	end
+	
+	if (currentRU > 50000) then
+		fighterTarget = 200
+		bomberTarget = 150
+		carrierTarget = 10
+		capDemand = 2.0
+	end
+
+	-- Panic Spending Mode
+	if (currentRU > 150000) then
+		fighterTarget = 300
+		bomberTarget = 250
+		carrierTarget = 15
+		capDemand = 4.0
+	end
+
 	if (currentRU > 2000) then
-		-- Increase fighter/bomber caps for "Expert" feel
-		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 30) then
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < fighterTarget) then
 			ShipDemandAdd(kInterceptor, 1.5)
+			FSFC_Log_Demand("Interceptors", 1.5)
 		end
-		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 20) then
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < bomberTarget) then
 			ShipDemandAdd(kBomber, 1.8)
+			FSFC_Log_Demand("Bombers", 1.8)
 		end
 		
-		-- Alleviate production bottleneck by demanding more carriers
-		if (currentRU > 10000) then
-			if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < 4) then
-				ShipDemandAdd(kCarrier, 1.0)
+		-- Only build scouts if not in panic mode to avoid "standing still" clustering
+		if (currentRU < 100000) then
+			if (NumSquadrons(kScout) + NumSquadronsQ(kScout) < 5) then
+				ShipDemandAdd(kScout, 0.5)
 			end
 		end
 
+		if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
+			ShipDemandAdd(kCarrier, 1.2)
+			FSFC_Log_Demand("Carriers", 1.2)
+		end
+
 		-- Persistent Destroyer/Battlecruiser demand if rich
-		if (currentRU > 50000) then
-			ShipDemandAdd(kDestroyer, 0.5)
-			ShipDemandAdd(kBattleCruiser, 0.5)
+		ShipDemandAdd(kDestroyer, capDemand)
+		ShipDemandAdd(kBattleCruiser, capDemand)
+		if (capDemand > 1.5) then
+			FSFC_Log_Demand("Capitals", capDemand)
+		end
+
+		-- Prevent AWACS spam
+		if (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2) then
+			ShipDemandSet(kAWACS, -10)
 		end
 	end
 end

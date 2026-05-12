@@ -7,27 +7,24 @@ Stats_LastRUs = {0,0,0,0,0,0,0,0}
 Stats_MatchEndLogged = 0
 
 -- Ship Roster for detailed tracking
-SHIPS_TERRAN = {
+-- Universal Master Roster (Extracted from Balance Sheet & Classdef)
+MASTER_ROSTER = {
 	"ter_apollo", "ter_valkyrie", "ter_athena", "ter_medusa", "ter_medusa_fs1", "ter_ursa", "ter_ursa_fs1",
 	"ter_hercules", "ter_herculesmk2", "ter_myrmidon", "ter_perseus", "ter_erinyes", "ter_ares",
-	"ter_loki", "ter_pegasus", "ter_artemis", "ter_artemisdh", "ter_boanerges",
+	"ter_loki", "ter_pegasus", "ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_pharos",
 	"ter_fenris", "ter_fenris_fs1", "ter_leviathan", "ter_leviathan_fs1", "ter_aeolus", "ter_deimos",
-	"ter_orion", "ter_orion_fs1", "ter_hecate", "ter_hades", "ter_colossus",
-	"ter_chronos", "ter_zephyrus", "ter_elysium", "ter_argo", "ter_hygeia", "ter_pharos", "ter_poseidon", "ter_alastor", "ter_faustus"
-}
-SHIPS_VASUDAN = {
+	"ter_orion", "ter_orion_fs1", "ter_hecate", "ter_hades", "ter_colossus", "ter_iceni",
+	"ter_chronos", "ter_zephyrus", "ter_elysium", "ter_argo", "ter_hygeia", "ter_poseidon", "ter_alastor", "ter_faustus", "ter_mjolnir", "ter_charybdis",
 	"vas_seth", "vas_horus", "vas_thoth", "vas_serapis", "vas_tauret", "vas_ptah",
 	"vas_osiris", "vas_bakha", "vas_sehkmet", "vas_amun",
 	"vas_aten", "vas_aten_fs1", "vas_mentu", "vas_sobek", "vas_typhon", "vas_typhon_fs1",
-	"vas_hatshepsut", "vas_colossus",
-	"vas_satis", "vas_bes", "vas_ankh", "vas_scarab", "vas_nephthys", "vas_imhotep", "vas_isis", "vas_maat", "vas_anuket", "vas_geb"
-}
-SHIPS_SHIVAN = {
+	"vas_hatshepsut", "vas_colossus", "vas_karnak",
+	"vas_satis", "vas_bes", "vas_ankh", "vas_scarab", "vas_nephthys", "vas_imhotep", "vas_isis", "vas_maat", "vas_anuket", "vas_geb", "vas_setekh", "vas_edjo",
 	"shi_manticore", "shi_basilisk", "shi_dragon", "shi_astaroth", "shi_mara", "shi_aeshma",
 	"shi_shaitan", "shi_taurvi", "shi_nephilim", "shi_seraphim", "shi_nahema",
 	"shi_cain", "shi_cain_fs1", "shi_lilith", "shi_lilith_fs1", "shi_rakshasa",
 	"shi_moloch", "shi_demon", "shi_demon_fs1", "shi_ravana", "shi_lucifer", "shi_sathanas",
-	"shi_azrael", "shi_mephisto", "shi_asmodeus", "shi_rahu", "shi_commnode"
+	"shi_azrael", "shi_mephisto", "shi_asmodeus", "shi_rahu", "shi_commnode", "shi_scorpion", "shi_belial", "shi_trident"
 }
 
 function Rule_TrackEconomy()
@@ -92,16 +89,11 @@ function Rule_GlobalTelemetry()
 			print("[DIAG] P" .. i .. " (" .. race .. ") | Fleet: " .. totalShips .. " | RUs: " .. rus .. " | TotalRUs: " .. accRus)
 			print("[DIAG] P" .. i .. " CLASSES | F: " .. nF .. " | B: " .. nB .. " | C: " .. nC .. " | Fr: " .. nFr .. " | Cap: " .. nCp .. " | U: " .. nU .. " | P: " .. nP)
 
-			-- Detailed Ship Tracking
-			local shipList = {}
-			if (race == "TER_") then shipList = SHIPS_TERRAN
-			elseif (race == "VAS_") then shipList = SHIPS_VASUDAN
-			elseif (race == "SHI_") then shipList = SHIPS_SHIVAN end
-
+			-- Detailed Ship Tracking (Universal Roster)
 			local shipCounts = ""
-			local shipListCount = getn(shipList)
+			local shipListCount = getn(MASTER_ROSTER)
 			for j = 1, shipListCount do
-				local ship = shipList[j]
+				local ship = MASTER_ROSTER[j]
 				SobGroup_Clear("temp_tele")
 				Player_FillShipsByType("temp_tele", i, ship)
 				local count = SobGroup_Count("temp_tele")

@@ -60,26 +60,67 @@ end
 
 function DetermineSpecialDemand_Vasudan()
 	local currentRU = GetRU()
+	
+	-- Dynamic scaling for "True Huge" caps (Vasudan Bomber flavor)
+	local fighterTarget = 35
+	local bomberTarget = 30
+	local carrierTarget = 4
+	local capDemand = 0.5
+
+	if (currentRU > 10000) then
+		fighterTarget = 100
+		bomberTarget = 120
+		carrierTarget = 6
+		capDemand = 1.0
+	end
+	
+	if (currentRU > 50000) then
+		fighterTarget = 180
+		bomberTarget = 200
+		carrierTarget = 12
+		capDemand = 2.0
+	end
+
+	-- Panic Spending Mode
+	if (currentRU > 150000) then
+		fighterTarget = 280
+		bomberTarget = 300
+		carrierTarget = 18
+		capDemand = 4.0
+	end
+
 	if (currentRU > 2000) then
-		-- Vasudans love their bombers
-		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 35) then
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < fighterTarget) then
 			ShipDemandAdd(kInterceptor, 1.5)
+			FSFC_Log_Demand("Interceptors", 1.5)
 		end
-		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 30) then
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < bomberTarget) then
 			ShipDemandAdd(kBomber, 2.0)
+			FSFC_Log_Demand("Bombers", 2.0)
 		end
 
-		-- Production capacity
-		if (currentRU > 10000) then
-			if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < 4) then
-				ShipDemandAdd(kCarrier, 1.1)
+		-- Vasudans stop scouting and start bombing when rich
+		if (currentRU < 100000) then
+			if (NumSquadrons(kScout) + NumSquadronsQ(kScout) < 5) then
+				ShipDemandAdd(kScout, 0.5)
 			end
 		end
 
+		if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
+			ShipDemandAdd(kCarrier, 1.1)
+			FSFC_Log_Demand("Carriers", 1.1)
+		end
+
 		-- High resource aggression
-		if (currentRU > 50000) then
-			ShipDemandAdd(kDestroyer, 0.5)
-			ShipDemandAdd(kBattleCruiser, 0.5)
+		ShipDemandAdd(kDestroyer, capDemand)
+		ShipDemandAdd(kBattleCruiser, capDemand)
+		if (capDemand > 1.5) then
+			FSFC_Log_Demand("Capitals", capDemand)
+		end
+
+		-- Prevent AWACS spam
+		if (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2) then
+			ShipDemandSet(kAWACS, -10)
 		end
 	end
 end

@@ -19,7 +19,11 @@ def analyze_log(log_path):
             if match:
                 pid, race, squads, rus, total_rus = match.groups()
                 if pid not in player_stats: player_stats[pid] = {"race": race, "history": []}
-                player_stats[pid]["history"].append({"squads": int(squads), "rus": int(rus), "total_rus": int(total_rus)})
+                # Fix: Strip null bytes and non-numeric junk from all values
+                squads_c = int(re.sub(r'[^\d]', '', squads))
+                rus_c = int(re.sub(r'[^\d]', '', rus))
+                total_rus_c = int(re.sub(r'[^\d]', '', total_rus))
+                player_stats[pid]["history"].append({"squads": squads_c, "rus": rus_c, "total_rus": total_rus_c})
             
             # Detailed Ship Counts
             match = re.search(r'\[DIAG\] P(\d+) SHIPS \| (.*)', line)
@@ -31,7 +35,10 @@ def analyze_log(log_path):
                 for entry in ships_str.strip().split():
                     if ":" in entry:
                         s_name, s_count = entry.split(":")
-                        player_stats[pid]["ship_counts"][s_name] = int(s_count)
+                        # Fix: Strip null bytes and non-numeric junk
+                        s_count_clean = re.sub(r'[^\d]', '', s_count)
+                        if s_count_clean:
+                            player_stats[pid]["ship_counts"][s_name] = int(s_count_clean)
             
             # AI Demands & Research
             match = re.search(r'\[AI_DIAG\] P(\d+) \| (RESEARCH|WANT) \| (?:Target: )?(.*?)(?: \| Demand: ([\d\.]+))?$', line)

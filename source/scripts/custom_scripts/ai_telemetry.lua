@@ -9,7 +9,7 @@ if not AI_Telemetry_Loaded then
     
     function FSFC_Log_Demand(label, demand)
         -- Throttled: Only log high-priority build desires
-        if (demand > 2.5) then
+        if (demand > 1.5) then
             print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | " .. label .. " | Demand: " .. demand)
         end
     end
