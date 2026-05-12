@@ -12,12 +12,12 @@ kInterceptorFS2 = VAS_SERAPIS
 kInterceptorFS1 = VAS_HORUS
 kHeavyFighterFS2 = VAS_TAURET
 kHeavyFighterFS1 = VAS_THOTH
-kBomberFS2 = VAS_SEHKMET
+kBomberFS2 = VAS_AMUN   -- Upgraded to heavy bomber (222 DPS vs 168 DPS)
 kBomberFS1 = VAS_OSIRIS
 kDestroyerFS2 = VAS_SOBEK
 kDestroyerFS1 = VAS_ATEN_FS1
-kMissileDestroyerFS2 = VAS_ATEN
-kMissileDestroyerFS1 = VAS_ATEN_FS1
+kMissileDestroyerFS2 = VAS_SOBEK -- Upgraded from Aten (3000 RU vs 600 RU) to match Aeolus weight
+kMissileDestroyerFS1 = VAS_MENTU -- Replaced Aten for better FS1 mid-tier survivability
 kBattleCruiserFS2 = VAS_HATSHEPSUT
 kBattleCruiserFS1 = VAS_TYPHON_FS1
 

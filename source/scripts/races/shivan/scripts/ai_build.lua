@@ -118,6 +118,12 @@ function DetermineSpecialDemand_Shivan()
 		-- High resource aggression
 		ShipDemandAdd(kDestroyer, capDemand)
 		ShipDemandAdd(kBattleCruiser, capDemand)
+		
+		-- Safety gate for the ultra-expensive Lucifer (21,500 RUs)
+		if (kBattleCruiser == SHI_LUCIFER and currentRU < 50000) then
+			ShipDemandSet(SHI_LUCIFER, 0)
+		end
+
 		if (capDemand > 1.5) then
 			FSFC_Log_Demand("Capitals", capDemand)
 		end
