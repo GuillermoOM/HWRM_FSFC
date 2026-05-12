@@ -1,3 +1,4 @@
+dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
 -- Terran AI Upgrades and Research Progression
 
 -- Legacy Compatibility Layer for Vanilla AI Scripts
@@ -66,6 +67,7 @@ function DoResearchTechDemand_Terran()
 		if Util_CheckResearch_Terran(FIGHTERDESIGN) then
 			aitrace("    Setting demand for FighterDesign")
 			ResearchDemandSet_Terran(FIGHTERDESIGN, fighterdemand + 1.0)
+			FSFC_Log_Research("Apollo")
 		end
 		-- Tier 1 is FighterDesign (unblocks Apollo)
 
@@ -76,6 +78,7 @@ function DoResearchTechDemand_Terran()
 				local antifighterdemand = ShipDemandMaxByClass(eAntiFighter)
 				if antifighterdemand > 0 then
 					ResearchDemandSet_Terran(VALKYRIE, fighterdemand + antifighterdemand + 1.0)
+					FSFC_Log_Research("Valkyrie")
 				end
 			end
 			if Util_CheckResearch_Terran(HERCULES) then
@@ -93,6 +96,7 @@ function DoResearchTechDemand_Terran()
 				local antifighterdemand = ShipDemandMaxByClass(eAntiFighter)
 				if antifighterdemand > 0 then
 					ResearchDemandSet_Terran(PERSEUS, fighterdemand + antifighterdemand + 1.0)
+					FSFC_Log_Research("Perseus")
 				end
 			end
 			if Util_CheckResearch_Terran(PEGASUS) then
@@ -137,6 +141,7 @@ function DoResearchTechDemand_Terran()
 		if numZeus > 0 then
 			if Util_CheckResearch_Terran(ARTEMIS) then
 				ResearchDemandSet_Terran(ARTEMIS, bomberdemand + 1.0)
+				FSFC_Log_Research("Artemis")
 			end
 		end
 
@@ -145,9 +150,11 @@ function DoResearchTechDemand_Terran()
 		if numArtemis > 0 then
 			if Util_CheckResearch_Terran(MEDUSA) then
 				ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.0)
+				FSFC_Log_Research("Medusa")
 			end
 			if Util_CheckResearch_Terran(URSA) then
 				ResearchDemandSet_Terran(URSA, bomberdemand + 1.0)
+				FSFC_Log_Research("Ursa")
 			end
 			if Util_CheckResearch_Terran(BOANERGES) then
 				ResearchDemandSet_Terran(BOANERGES, bomberdemand + 1.0)
@@ -189,6 +196,7 @@ function DoResearchTechDemand_Terran()
 	if capitaldemand > 0 then
 		if Util_CheckResearch_Terran(CAPITALSHIPDESIGN) then
 			ResearchDemandSet_Terran(CAPITALSHIPDESIGN, capitaldemand + 1.0)
+			FSFC_Log_Research("Deimos")
 		end
 
 		if Util_CheckResearch_Terran(CORVETTE) then
@@ -209,6 +217,7 @@ function DoResearchTechDemand_Terran()
 		if numOrion > 0 then
 			if Util_CheckResearch_Terran(JUGGERNAUT) then
 				ResearchDemandSet_Terran(JUGGERNAUT, capitaldemand + 1.0)
+				FSFC_Log_Research("Orion")
 			end
 		end
 	end
@@ -229,58 +238,10 @@ function DoUpgradeDemand_Terran()
 	if numCarriers > 0 then
 		ResearchDemandAdd_Terran(HECATEBUILDSPEED, numCarriers * 3)
 	end
-	-- Weapons
-	local numFighters = numActiveOfClass(s_playerIndex, eFighter)
-	if numFighters > 3 then
-		local numMyrmidon = NumSquadrons_Terran(TER_MYRMIDON)
-		if numMyrmidon > 2 then
-			ResearchDemandAdd_Terran(EMPADV, numMyrmidon * 1.25)
-		end
-		local numAres = NumSquadrons_Terran(TER_ARES)
-		if numAres > 1 then
-			ResearchDemandAdd_Terran(TORNADOMISSILES, numAres * 1.5)
-		end
-		local numHercMk2 = NumSquadrons_Terran(TER_HERCULESMK2)
-		if numHercMk2 > 2 then
-			ResearchDemandAdd_Terran(AVENGER, numHercMk2 * 1.25)
-		end
-		local numErinyes = NumSquadrons_Terran(TER_ERINYES)
-		if numErinyes > 2 then
-			ResearchDemandAdd_Terran(RAILGUN, numErinyes * 1.25)
-			ResearchDemandAdd_Terran(SBREAKER, numErinyes * 1.0)
-		end
-	end
+
 	local numDestroyers = NumSquadrons_Terran(TER_DEIMOS)
 	if numDestroyers > 0 then
 		ResearchDemandAdd_Terran(DEIMOSARMOR, numDestroyers * 2)
-	end
-	local numCorvette = numActiveOfClass(s_playerIndex, eCorvette)
-	if numCorvette > 1 then
-		local numStrikeBombers = NumSquadrons_Terran(TER_ZEUS)
-		if numStrikeBombers > 2 then
-			ResearchDemandAdd_Terran(STILETTOII, numStrikeBombers * 1.25)
-		end
-		local numMediumBombers = NumSquadrons_Terran(TER_ARTEMIS)
-		if numMediumBombers > 2 then
-			ResearchDemandAdd_Terran(PIHRANA, numMediumBombers * 1.25)
-			ResearchDemandAdd_Terran(ARTEMISDH, numMediumBombers)
-		end
-		local numClusterBombers = NumSquadrons_Terran(TER_BOANERGES)
-		if numClusterBombers > 2 then
-			ResearchDemandAdd_Terran(INFYRNO, numClusterBombers * 1.25)
-		end
-		local numSynaptic = NumSquadrons_Terran(TER_MEDUSA_FS1)
-		if numSynaptic > 2 then
-			ResearchDemandAdd_Terran(SYNAPTIC, numSynaptic * 1.25)
-		end
-		local numClusterBombers = NumSquadrons_Terran(TER_URSA_FS1)
-		if numClusterBombers > 2 then
-			ResearchDemandAdd_Terran(CLUSTERBOMB, numClusterBombers * 1.25)
-		end
-		local numFlails = NumSquadrons_Terran(TER_ATHENA)
-		if numFlails > 2 then
-			ResearchDemandAdd_Terran(FLAIL, numFlails * 1.25)
-		end
 	end
 	local numFrigate = numActiveOfClass(s_playerIndex, eFrigate)
 	if numFrigate > 1 then

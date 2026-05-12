@@ -1,3 +1,4 @@
+dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
 aitrace("LOADING SHIVAN UPGRADE INFO")
 
 -- Legacy Compatibility Layer for Vanilla AI Scripts
@@ -22,6 +23,7 @@ function DoResearchTechDemand_Shivan()
 		end
 		if (Util_CheckResearch(DRAGON)) then
 			ResearchDemandSet(DRAGON, fighterdemand + 1.0)
+			FSFC_Log_Research("Dragon")
 		end
 		if (Util_CheckResearch(BASILISK)) then
 			ResearchDemandSet(BASILISK, fighterdemand + 1.0)
@@ -66,12 +68,15 @@ function DoResearchTechDemand_Shivan()
 		end
 		if (Util_CheckResearch(CAIN)) then
 			ResearchDemandSet(CAIN, cruiserdemand + 1.0)
+			FSFC_Log_Research("Cain")
 		end
 		if (Util_CheckResearch(RAKSHASA)) then
 			ResearchDemandSet(RAKSHASA, cruiserdemand + 1.0)
+			FSFC_Log_Research("Rakshasa")
 		end
 		if (Util_CheckResearch(LILITH)) then
 			ResearchDemandSet(LILITH, cruiserdemand + 1.0)
+			FSFC_Log_Research("Lilith")
 		end
 	end
 
@@ -82,15 +87,19 @@ function DoResearchTechDemand_Shivan()
 		end
 		if (Util_CheckResearch(MOLOCH)) then
 			ResearchDemandSet(MOLOCH, capitaldemand + 1.0)
+			FSFC_Log_Research("Moloch")
 		end
 		if (Util_CheckResearch(DEMON)) then
 			ResearchDemandSet(DEMON, capitaldemand + 1.0)
+			FSFC_Log_Research("Demon")
 		end
 		if (Util_CheckResearch(RAVANA)) then
 			ResearchDemandSet(RAVANA, capitaldemand + 1.0)
+			FSFC_Log_Research("Ravana")
 		end
 		if (Util_CheckResearch(LUCIFER)) then
 			ResearchDemandSet(LUCIFER, capitaldemand + 2.0)
+			FSFC_Log_Research("Lucifer")
 		end
 		if (Util_CheckResearch(SUPERCAPITALSHIPDESIGN)) then
 			ResearchDemandSet(SUPERCAPITALSHIPDESIGN, capitaldemand + 3.0)

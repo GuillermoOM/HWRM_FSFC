@@ -268,9 +268,15 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 875, 1750, 0, 3)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5,
+    'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1',
+    'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" },
+    { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" },
+    { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
-addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
+addAbility(NewShipType, 'CanBuildShips', 1,
+    'Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi',
+    'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 200, 0.5, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
 
@@ -344,9 +350,14 @@ addShield(NewShipType, 'EMP', 10000, 20)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Shi_LRedSA1', 'Weapon_Turret01', 'Weapon', 'Innate', 'Damageable', 'shi_demonturret01', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Shi_LRedSA2', 'Weapon_Turret02', 'Weapon', 'Innate', 'Damageable', 'shi_demonturret02', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Shi_SRedSA1', 'Weapon_Turret03', 'Weapon', 'Innate', 'Damageable', 'shi_demonturret03', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_LRedSA1', 'Weapon_Turret01', 'Weapon', 'Innate', 'Damageable',
+    'shi_demonturret01', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_LRedSA2', 'Weapon_Turret02', 'Weapon', 'Innate', 'Damageable',
+    'shi_demonturret02', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_SRedSA1', 'Weapon_Turret03', 'Weapon', 'Innate', 'Damageable',
+    'shi_demonturret03', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible',
+    'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris
@@ -370,18 +381,19 @@ loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'ShivanCapi
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4', 'CapturePoint5')
-loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2', 'RepairPoint3', 'RepairPoint4', 'RepairPoint5')
+loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4',
+    'CapturePoint5')
+loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2', 'RepairPoint3', 'RepairPoint4',
+    'RepairPoint5')
 
 --------------------------------------------------
 --- Scuttle
 --------------------------------------------------
 
 NewShipType.minFalloffDamageDist = 450
-NewShipType.maxFalloffDamageDist = 450*1.5
-NewShipType.maxFalloffScuttleDamageDist = 450*3
+NewShipType.maxFalloffDamageDist = 450 * 1.5
+NewShipType.maxFalloffScuttleDamageDist = 450 * 3
 NewShipType.explosiveScuttleDamageOnDeath = 1960
-NewShipType.maxFalloffForce = 500*10
+NewShipType.maxFalloffForce = 500 * 10
 NewShipType.explosiveDamageOnDeath = 275
 NewShipType.radiusDamageEvadeMod = 1.1
-

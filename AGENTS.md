@@ -23,11 +23,13 @@ This is a **Homeworld Remastered** total conversion mod (FreeSpace: Fleet Comman
 
 ## Critical Rules
 
+- **Check Gotchas First**: Read `resources/hwrm-wiki/reference/lua_40_gotchas.md` before writing SCAR or AI code.
 - `.ship` file variable order matters — wrong order = crash (see `resources/hwrm-wiki/reference/ship_order.md`)
 - `LoadModel()` MUST precede weapon/hardpoint configs
 - All family names must exist in `familylist.lua`
 - Use `data:` prefix for file paths (e.g., `data:scripts/custom_scripts/myfile.lua`)
-- This is Lua 4.0: no `#table`, no `string.len()`, no `table.insert()` — use `getn()`, `strlen()`, `tinsert()`
+- **No `format`**: This is Lua 4.0: no `#table`, no `string.len()`, no `table.insert()`, and **NO `format()`** — use `getn()`, `strlen()`, `tinsert()`, and concatenation (`..`).
+- **Ship Counting**: Use `SobGroup_Count("Player_Ships" .. i)` for total fleet counts in rules.
 
 ## Full Agent Instructions
 

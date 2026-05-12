@@ -1,3 +1,4 @@
+dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
 aitrace("LOADING VASUDAN BUILD INFO")
 
 kCollector = VAS_ISIS
@@ -58,7 +59,14 @@ function DetermineDemandWithNoCounterInfo_Vasudan()
 end
 
 function DetermineSpecialDemand_Vasudan()
-
+	if (GetRU() > 2000) then
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 10) then
+			ShipDemandAdd(kInterceptor, 1.5)
+		end
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 5) then
+			ShipDemandAdd(kBomber, 1.2)
+		end
+	end
 end
 
 Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Vasudan

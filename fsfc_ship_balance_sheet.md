@@ -4,20 +4,15 @@
 This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.
 
 ### 1. The Weaponry Matrix
-- **DPS**: Calculated sum of damage over time. Highlighted in **bold**.
-- **Acc: F/C/Fr/Cp**: Accuracy against **F**ighter, **C**orvette, **Fr**igate, **Cp** (Capital). A value of `0` means the weapon cannot target that class.
+- **DPS**: Calculated sum of damage over time.
+- **Acc: F/C/Fr/Cp**: Accuracy against **F**ighter, **C**orvette, **Fr**igate, **Cp** (Capital).
 - **Pen: Un/Lt/Md/Hv**: Damage multiplier against **Un**armoured, **Lt** (Light), **Md** (Medium), **Hv** (Heavy) armor families.
 
-### 2. The Ship Tables
-- **Armor / Attack Fam**: The ship's 'Combat Signature'.
-- **Spd/Rot/Acc/Bnk**: Agility Index. (Max Speed / Rotation / Accel Time / Banking Angle).
-
-### 3. The Ability Matrix
-- **Hangar**: Docking capacity for strikecraft.
-- **Afterburner**: Top speed multiplier during a burn.
-- **Repair**: Repair power (HP/s) provided to docked or nearby ships.
-- **Hyperspace**: Base cost (RU) and cost multiplier.
-- **Special**: Unique engine abilities (e.g. PlanetKiller, EMP).
+### 2. The Detailed Ability Matrix (New)
+- **Hangar**: Hangar capacity and supported weight/families.
+- **Hyperspace**: Min cost, multiplier factor, and recovery time.
+- **Repair**: HP/s repair rate and radius.
+- **Harvest/Cloak**: Detailed capacity/rates for specialized systems.
 
 ---
 
@@ -102,121 +97,121 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 
 ---
 
-## Fleet Ability Matrix (Core Engine Systems)
+## Detailed Ability Breakdown (Stats)
 
-| Ship | Build | Res | Hangar | Afterburner | Repair | Salv | Cap | Hyperspace | Special |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| GTA Charybdis | No | No | No | No | No | No | No | Cost:130 (x1) | No |
-| GTB Artemis | No | No | No | x1.2692307692 | No | No | No | Cost:30 (x1) | No |
-| GTB Artemis D.H. | No | No | No | x1.2 | No | No | No | Cost:30 (x1) | No |
-| GTB Athena | No | No | No | x1.333333333 | No | No | No | Cost:30 (x1) | No |
-| GTB Boanerges | No | No | No | x1.0625 | No | No | No | Cost:30 (x1) | No |
-| GTB Medusa | No | No | No | x1.3043478261 | No | No | No | Cost:30 (x1) | No |
-| GTB Medusa (FS1) | No | No | No | x1.3043478261 | No | No | No | Cost:30 (x1) | No |
-| GTB Ursa | No | No | No | x1.2857142857 | No | No | No | Cost:30 (x1) | No |
-| GTB Ursa (FS1) | No | No | No | x1.2857142857 | No | No | No | Cost:30 (x1) | No |
-| GTB Zeus | No | No | No | x1.2692307692 | No | No | No | Cost:30 (x1) | No |
-| GTC Aeolus | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GTC Fenris | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GTC Fenris (FS1) | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GTC Leviathan | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GTC Leviathan (FS1) | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GTCv Deimos | No | No | No | No | No | No | No | Cost:350 (x1) | No |
-| GTD Hades | Yes | No | Cap:1000 | No | No | No | No | Cost:800 (x1) | No |
-| GTD Hecate | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GTD Orion | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GTD Orion (FS1) | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GTF Apollo | No | No | No | x1.478873239 | No | No | No | No | No |
-| GTF Ares | No | No | No | x1.6071428571 | No | No | No | Cost:30 (x1) | No |
-| GTF Erinyes | No | No | No | x1.4444444444 | No | No | No | Cost:30 (x1) | No |
-| GTF Hercules | No | No | No | x1.5789473684 | No | No | No | Cost:30 (x1) | No |
-| GTF Hercules Mk. II | No | No | No | x1.5 | No | No | No | Cost:30 (x1) | No |
-| GTF Loki | No | No | No | x1.4117647059 | No | No | No | No | No |
-| GTF Myrmidon | No | No | No | x1.1911764706 | No | No | No | Cost:30 (x1) | No |
-| GTF Pegasus | No | No | No | x1.2 | No | No | No | No | No |
-| GTF Perseus | No | No | No | x1.1666666667 | No | No | No | Cost:30 (x1) | No |
-| GTF Ulysses | No | No | No | x1.3719512195 | No | No | No | Cost:30 (x1) | No |
-| GTF Ulysses (FS1) | No | No | No | x1.3719512195 | No | No | No | Cost:30 (x1) | No |
-| GTF Valkyrie | No | No | No | x1.3378378378 | No | No | No | Cost:30 (x1) | No |
-| GTFr Chronos | No | No | No | No | Pow:400 | No | No | Cost:70 (x1) | No |
-| GTFr Poseidon | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| GTG Zephyrus | No | No | Cap:200 | No | No | No | No | Cost:60 (x1) | No |
-| GTI Arcadia | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| GTNB Pharos | No | No | No | No | No | No | No | No | No |
-| GTS Centaur | No | No | No | No | Pow:400 | No | No | Cost:25 (x1) | No |
-| GTS Hygeia | No | No | No | No | Pow:400 | No | No | Cost:25 (x1) | No |
-| GTSC Faustus | No | Yes | No | No | No | No | No | Cost:130 (x1) | No |
-| GTSG Alastor | No | No | No | No | No | No | No | No | No |
-| GTSG Cerberus | No | No | No | No | No | No | No | No | No |
-| GTSG Mjolnir | No | No | No | No | No | No | No | No | No |
-| GTT Argo | No | No | No | No | Pow:400 | No | No | Cost:70 (x1) | No |
-| GTT Elysium | No | No | No | No | No | Yes | No | Cost:30 (x1) | No |
-| GTVA Colossus | Yes | No | Cap:1000 | No | No | No | No | Cost:2500 (x1) | No |
-| GTVA Colossus | Yes | No | Cap:1000 | No | No | No | No | Cost:2500 (x1) | No |
-| GVA Setekh | No | No | No | No | No | No | No | Cost:300 (x1) | No |
-| GVB Bakha | No | No | No | x1.2115384615 | No | No | No | Cost:30 (x1) | No |
-| GVB Osiris | No | No | No | x1.3157894737 | No | No | No | Cost:30 (x1) | No |
-| GVB Sehkmet | No | No | No | x1.2096774194 | No | No | No | Cost:30 (x1) | No |
-| GVC Aten | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GVC Aten (FS1) | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GVC Mentu | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| GVCv Sobek | No | No | No | No | No | No | No | Cost:350 (x1) | No |
-| GVD Hatshepsut | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GVD Typhon | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GVD Typhon (FS1) | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| GVF Horus | No | No | No | x1.275 | No | No | No | Cost:30 (x1) | No |
-| GVF Ptah | No | No | No | x1.2 | No | No | No | No | No |
-| GVF Serapis | No | No | No | x1.3235294118 | No | No | No | Cost:30 (x1) | No |
-| GVF Seth | No | No | No | x1.5354330709 | No | No | No | Cost:30 (x1) | No |
-| GVF Tauret | No | No | No | x1.4464285714 | No | No | No | Cost:30 (x1) | No |
-| GVF Thoth | No | No | No | x1.3636363636 | No | No | No | Cost:30 (x1) | No |
-| GVFr Bes | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| GVFr Satis | No | No | No | No | Pow:400 | No | No | Cost:50 (x1) | No |
-| GVG Anuket | No | No | Cap:200 | No | No | No | No | Cost:70 (x1) | No |
-| GVS Nephthys | No | No | No | No | Pow:400 | No | No | Cost:25 (x1) | No |
-| GVSG Edjo | No | No | No | No | No | No | No | No | No |
-| NTF Iceni | No | No | No | No | No | No | No | Cost:350 (x1) | No |
-| PVB Amun | No | No | No | x1.5 | No | No | No | Cost:30 (x1) | No |
-| PVF Anubis | No | No | No | No | No | No | No | Cost:30 (x1) | No |
-| PVFr Bast | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| PVFr Maat | No | No | Cap:200 | No | No | No | No | Cost:70 (x1) | No |
-| PVI Karnak | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| PVNB Geb | No | No | No | No | No | No | No | No | No |
-| PVS Scarab | No | No | No | No | Pow:400 | No | No | Cost:25 (x1) | No |
-| PVSC Imhotep | No | Yes | No | No | No | No | No | Cost:50 (x1) | No |
-| PVSG Ankh | No | No | No | No | No | No | No | No | No |
-| PVT Isis | No | No | No | No | No | Yes | No | Cost:30 (x1) | No |
-| SB Nahema | No | No | No | x1.3888888889 | No | No | No | Cost:30 (x1) | No |
-| SB Nephilim | No | No | No | No | No | No | No | Cost:30 (x1) | No |
-| SB Seraphim | No | No | No | No | No | No | No | Cost:30 (x1) | No |
-| SB Shaitan | No | No | No | No | No | No | No | Cost:30 (x1) | No |
-| SB Taurvi | No | No | No | No | No | No | No | Cost:30 (x1) | No |
-| SC Cain | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SC Cain (FS1) | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SC Lilith | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SC Lilith (FS1) | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SC Rakshasa | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SCv Moloch | No | No | No | No | No | No | No | Cost:70 (x1) | No |
-| SD Demon | Yes | Yes | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| SD Demon | Yes | No | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| SD Lucifer | Yes | Yes | Cap:1000 | No | No | No | No | Cost:800 (x1) | EMP |
-| SD Ravana | Yes | Yes | Cap:1000 | No | No | No | No | Cost:875 (x1) | No |
-| SF Aeshma | No | No | No | x1.2132352941 | No | No | No | Cost:30 (x1) | No |
-| SF Astaroth | No | No | No | x1.2236842105 | No | No | No | Cost:30 (x1) | No |
-| SF Basilisk | No | No | No | x1.3414634146 | No | No | No | Cost:30 (x1) | No |
-| SF Dragon | No | No | No | x1.3636363636 | No | No | No | Cost:30 (x1) | No |
-| SF Gorgon | No | No | No | x0.0 | No | No | No | Cost:30 (x1) | No |
-| SF Manticore | No | No | No | x1.1231884058 | No | No | No | Cost:30 (x1) | No |
-| SF Mara | No | No | No | x1.2162162162 | No | No | No | Cost:30 (x1) | No |
-| SF Scorpion | No | No | No | x1.4788732394 | No | No | No | No | No |
-| SFr Asmodeus | No | No | No | No | Pow:0 | No | No | Cost:55 (x1) | No |
-| SFr Mephisto | Yes | No | Cap:1000 | No | No | No | No | No | No |
-| SG Rahu | No | No | Cap:200 | No | No | No | No | Cost:55 (x1) | No |
-| SJ Sathanas | Yes | No | Cap:1000 | No | No | No | No | Cost:2000 (x1) | No |
-| SSG Belial | No | No | No | No | No | No | No | No | No |
-| SSG Trident | No | No | No | No | No | No | No | No | No |
-| ST Azrael | No | No | No | No | No | Yes | No | Cost:30 (x1) | No |
-| Shivan Comm Node | No | No | No | No | No | No | No | No | No |
+| Ship | Build | Hangar | Hyperspace | Repair | Harvest | Cloak | Special |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| GTA Charybdis | No | No | Min:130 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Artemis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Artemis D.H. | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Athena | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Boanerges | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Medusa | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Medusa (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Ursa | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Ursa (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTB Zeus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTC Aeolus | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GTC Fenris | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GTC Fenris (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GTC Leviathan | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GTC Leviathan (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GTCv Deimos | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
+| GTD Hades | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:28 | Fams:Fighter, Utility | Rep:60 | Min:800 | Fact:1 | Rec:0s | No | No | No | No |
+| GTD Hecate | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GTD Orion | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GTD Orion (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Apollo | No | No | No | No | No | No | No |
+| GTF Ares | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Erinyes | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Hercules | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Hercules Mk. II | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Loki | No | No | No | No | No | No | No |
+| GTF Myrmidon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Pegasus | No | No | No | No | No | Usage:0 | Cost:0 | Regen:0 | No |
+| GTF Perseus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Ulysses | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Ulysses (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTF Valkyrie | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GTFr Chronos | No | No | Min:70 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
+| GTFr Poseidon | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
+| GTG Zephyrus | No | Size:1.0 | Fams: | Rep:0 | Min:60 | Fact:1 | Rec:0s | No | No | No | No |
+| GTI Arcadia | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:16 | Fams:Fighter, Utility | Rep:100 | No | No | No | No | No |
+| GTNB Pharos | No | No | No | No | No | No | No |
+| GTS Centaur | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
+| GTS Hygeia | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
+| GTSC Faustus | No | No | Min:130 | Fact:1 | Rec:0s | No | No | No | No |
+| GTSG Alastor | No | No | No | No | No | No | No |
+| GTSG Cerberus | No | No | No | No | No | No | No |
+| GTSG Mjolnir | No | No | No | No | No | No | No |
+| GTT Argo | No | No | Min:70 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
+| GTT Elysium | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
+| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:100 | Min:2500 | Fact:1 | Rec:0s | No | No | No | No |
+| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:100 | Min:2500 | Fact:1 | Rec:0s | No | No | No | No |
+| GVA Setekh | No | No | Min:300 | Fact:1 | Rec:0s | No | No | No | No |
+| GVB Bakha | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVB Osiris | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVB Sehkmet | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVC Aten | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GVC Aten (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GVC Mentu | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GVCv Sobek | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
+| GVD Hatshepsut | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GVD Typhon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GVD Typhon (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| GVF Horus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVF Ptah | No | No | No | No | No | Usage:0 | Cost:0 | Regen:0 | No |
+| GVF Serapis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVF Seth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVF Tauret | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVF Thoth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| GVFr Bes | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
+| GVFr Satis | No | No | Min:50 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
+| GVG Anuket | No | Size:1.0 | Fams: | Rep:0 | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| GVS Nephthys | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
+| GVSG Edjo | No | No | No | No | No | No | No |
+| NTF Iceni | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
+| PVB Amun | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| PVF Anubis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| PVFr Bast | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
+| PVFr Maat | No | Size:0 | Fams: | Rep:0 | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| PVI Karnak | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:16 | Fams:Fighter, Utility | Rep:100 | No | No | No | No | No |
+| PVNB Geb | No | No | No | No | No | No | No |
+| PVS Scarab | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
+| PVSC Imhotep | No | No | Min:50 | Fact:1 | Rec:0s | No | No | No | No |
+| PVSG Ankh | No | No | No | No | No | No | No |
+| PVT Isis | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
+| SB Nahema | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SB Nephilim | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SB Seraphim | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SB Shaitan | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SB Taurvi | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SC Cain | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SC Cain (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SC Lilith | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SC Lilith (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SC Rakshasa | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SCv Moloch | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
+| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| SD Lucifer | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:28 | Fams:Fighter, Utility | Rep:60 | Min:800 | Fact:1 | Rec:0s | No | No | No | EMP |
+| SD Ravana | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Aeshma | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Astaroth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Basilisk | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Dragon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Gorgon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Manticore | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Mara | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
+| SF Scorpion | No | No | No | No | No | No | No |
+| SFr Asmodeus | No | No | Min:55 | Fact:1 | Rec:0s | Rate:0 | Rad:25 | No | No | No |
+| SFr Mephisto | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
+| SG Rahu | No | Size:0 | Fams: | Rep:0 | Min:55 | Fact:1 | Rec:0s | No | No | No | No |
+| SJ Sathanas | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:60 | Min:2000 | Fact:1 | Rec:0s | No | No | No | No |
+| SSG Belial | No | No | No | No | No | No | No |
+| SSG Trident | No | No | No | No | No | No | No |
+| ST Azrael | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
+| Shivan Comm Node | No | No | No | No | No | No | No |
 
 ---
 

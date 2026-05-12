@@ -6,10 +6,12 @@ dofilepath("data:leveldata/multiplayer/lib/main.lua")
 dofilepath("data:scripts/scar/fsfc_ui.lua")
 dofilepath("data:leveldata/multiplayer/lib/ruinjections.lua")
 dofilepath("data:leveldata/multiplayer/lib/music.lua")
+dofilepath("data:scripts/rules/telemetry.lua")
 
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
 	Rule_Add("RandomMusicRuleFS2")
+	Rule_AddInterval("Rule_GlobalTelemetry", 30)
 	MPRestrict()
 	research = GetGameSettingAsNumber("research")
 	era_setting = GetGameSettingAsNumber("era") -- 0: FS1, 1: FS2, 2: Both
@@ -53,6 +55,7 @@ function OnInit()
 	timer_timing = 1
 	timer_interval = 5.1
 	Rule_AddInterval("timer_updating_fsfc", 1.02)
+	LogMatchSettings()
 end
 
 function Rule_GrantFS1Era()

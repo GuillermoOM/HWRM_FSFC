@@ -1,3 +1,4 @@
+dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
 aitrace("LOADING VASUDAN UPGRADE INFO")
 
 -- Legacy Compatibility Layer for Vanilla AI Scripts
@@ -22,12 +23,15 @@ function DoResearchTechDemand_Vasudan()
 		end
 		if (Util_CheckResearch(HORUS)) then
 			ResearchDemandSet(HORUS, fighterdemand + 1.0)
+			FSFC_Log_Research("Horus")
 		end
 		if (Util_CheckResearch(SETH)) then
 			ResearchDemandSet(SETH, fighterdemand + 1.0)
+			FSFC_Log_Research("Seth")
 		end
 		if (Util_CheckResearch(THOTH)) then
 			ResearchDemandSet(THOTH, fighterdemand + 1.0)
+			FSFC_Log_Research("Thoth")
 		end
 		if (Util_CheckResearch(PTAH)) then
 			ResearchDemandSet(PTAH, fighterdemand + 1.0)
@@ -37,6 +41,7 @@ function DoResearchTechDemand_Vasudan()
 		end
 		if (Util_CheckResearch(TAURET)) then
 			ResearchDemandSet(TAURET, fighterdemand + 1.0)
+			FSFC_Log_Research("Tauret")
 		end
 	end
 
@@ -47,12 +52,14 @@ function DoResearchTechDemand_Vasudan()
 		end
 		if (Util_CheckResearch(OSIRIS)) then
 			ResearchDemandSet(OSIRIS, bomberdemand + 1.0)
+			FSFC_Log_Research("Osiris")
 		end
 		if (Util_CheckResearch(BAKHA)) then
 			ResearchDemandSet(BAKHA, bomberdemand + 1.0)
 		end
 		if (Util_CheckResearch(SEHKMET)) then
 			ResearchDemandSet(SEHKMET, bomberdemand + 1.0)
+			FSFC_Log_Research("Sehkmet")
 		end
 	end
 
@@ -63,6 +70,7 @@ function DoResearchTechDemand_Vasudan()
 		end
 		if (Util_CheckResearch(ATEN)) then
 			ResearchDemandSet(ATEN, cruiserdemand + 1.0)
+			FSFC_Log_Research("Aten")
 		end
 		if (Util_CheckResearch(MENTU)) then
 			ResearchDemandSet(MENTU, cruiserdemand + 1.0)
@@ -85,21 +93,25 @@ function DoResearchTechDemand_Vasudan()
 		end
 		if (Util_CheckResearch(TYPHON)) then
 			ResearchDemandSet(TYPHON, capitaldemand + 1.0)
+			FSFC_Log_Research("Typhon")
 		end
 		if (Util_CheckResearch(SOBEK)) then
 			ResearchDemandSet(SOBEK, capitaldemand + 1.0)
+			FSFC_Log_Research("Sobek")
 		end
 		if (Util_CheckResearch(INSTALLATION)) then
 			ResearchDemandSet(INSTALLATION, capitaldemand + 0.5)
 		end
 		if (Util_CheckResearch(HATSHEPSUT)) then
 			ResearchDemandSet(HATSHEPSUT, capitaldemand + 1.0)
+			FSFC_Log_Research("Hatshepsut")
 		end
 		if (Util_CheckResearch(SUPERCAPITALSHIPDESIGN)) then
 			ResearchDemandSet(SUPERCAPITALSHIPDESIGN, capitaldemand + 1.0)
 		end
 		if (Util_CheckResearch(COLOSSUS)) then
 			ResearchDemandSet(COLOSSUS, capitaldemand + 1.0)
+			FSFC_Log_Research("Colossus")
 		end
 	end
 
