@@ -13,21 +13,21 @@ SHIPS_TERRAN = {
 	"ter_loki", "ter_pegasus", "ter_artemis", "ter_artemisdh", "ter_boanerges",
 	"ter_fenris", "ter_fenris_fs1", "ter_leviathan", "ter_leviathan_fs1", "ter_aeolus", "ter_deimos",
 	"ter_orion", "ter_orion_fs1", "ter_hecate", "ter_hades", "ter_colossus",
-	"ter_chronos", "ter_zephyrus", "ter_elysium", "ter_argo", "ter_hygeia", "ter_pharos"
+	"ter_chronos", "ter_zephyrus", "ter_elysium", "ter_argo", "ter_hygeia", "ter_pharos", "ter_poseidon", "ter_alastor", "ter_faustus"
 }
 SHIPS_VASUDAN = {
 	"vas_seth", "vas_horus", "vas_thoth", "vas_serapis", "vas_tauret", "vas_ptah",
 	"vas_osiris", "vas_bakha", "vas_sehkmet", "vas_amun",
 	"vas_aten", "vas_aten_fs1", "vas_mentu", "vas_sobek", "vas_typhon", "vas_typhon_fs1",
 	"vas_hatshepsut", "vas_colossus",
-	"vas_satis", "vas_bes", "vas_ankh", "vas_scarab", "vas_nephthys", "vas_imhotep"
+	"vas_satis", "vas_bes", "vas_ankh", "vas_scarab", "vas_nephthys", "vas_imhotep", "vas_isis", "vas_maat", "vas_anuket", "vas_geb"
 }
 SHIPS_SHIVAN = {
 	"shi_manticore", "shi_basilisk", "shi_dragon", "shi_astaroth", "shi_mara", "shi_aeshma",
 	"shi_shaitan", "shi_taurvi", "shi_nephilim", "shi_seraphim", "shi_nahema",
 	"shi_cain", "shi_cain_fs1", "shi_lilith", "shi_lilith_fs1", "shi_rakshasa",
 	"shi_moloch", "shi_demon", "shi_demon_fs1", "shi_ravana", "shi_lucifer", "shi_sathanas",
-	"shi_azrael", "shi_mephisto", "shi_asmodeus"
+	"shi_azrael", "shi_mephisto", "shi_asmodeus", "shi_rahu", "shi_commnode"
 }
 
 function Rule_TrackEconomy()
