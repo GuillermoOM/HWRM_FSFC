@@ -21,8 +21,8 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 --- Tactics And Multipliers
 --------------------------------------------------
 
-NewShipType.defaultROE = 'Defensive'
-NewShipType.defaultStance = 'Neutral'
+NewShipType.defaultROE = 'Aggressive'
+NewShipType.defaultStance = 'Aggressive'
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'THRUSTERACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'ROTATION', 0.95, 1.05, 1.0)
@@ -249,7 +249,7 @@ NewShipType.selectionLimit = 150000
 NewShipType.preciseSelectionLimit = 7500
 NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
-NewShipType.militaryUnit = 0
+NewShipType.militaryUnit = 1
 
 --------------------------------------------------
 --- Alternative Hyperspace Gate

@@ -176,6 +176,7 @@ NewShipType.specialTurnRightManeuver = 'NinetyDegRightTurn, None, None'
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Fighter', 4.0)
+setSupplyValue(NewShipType, 'Erinyes', 4.0)
 setSupplyValue(NewShipType, 'LayoutFighter', 4.0)
 
 --------------------------------------------------

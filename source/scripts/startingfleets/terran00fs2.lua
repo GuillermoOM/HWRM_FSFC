@@ -14,7 +14,7 @@ PersistantData = {
 			shiphold = {},
 			name = "",
 			size = 1,
-			number = 5,
+			number = 6,
 		},
 		{
 			type = "ter_zephyrus",

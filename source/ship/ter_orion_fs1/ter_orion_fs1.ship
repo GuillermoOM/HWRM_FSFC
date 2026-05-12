@@ -360,7 +360,10 @@ StartShipHardPointConfig(NewShipType, 'Ter_OrionTurret4', 'Weapon_LaserTurret4',
 StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '',
     'ter_orion_nameplate_bastion', 'ter_orion_nameplate_carthage', 'ter_orion_nameplate_delacroix',
     'ter_orion_nameplate_intrepid', 'ter_orion_nameplate_messana', 'ter_orion_nameplate_minnow',
-    'ter_orion_nameplate_nereid', 'ter_orion_nameplate_soyakaze')
+    'ter_orion_nameplate_nereid', 'ter_orion_nameplate_soyakaze', 'ter_orion_nameplate_galatea', 
+    'ter_orion_nameplate_myrmidon', 'ter_orion_nameplate_amadeus', 'ter_orion_nameplate_eisenhower', 
+    'ter_orion_nameplate_goliath')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible', 'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

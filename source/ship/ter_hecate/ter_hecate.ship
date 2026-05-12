@@ -352,6 +352,7 @@ StartShipHardPointConfig(NewShipType, 'Sgreen2', 'Weapon_Turret24', 'Weapon', 'I
 StartShipHardPointConfig(NewShipType, 'Sgreen3', 'Weapon_Turret26', 'Weapon', 'Innate', 'Damageable', 'ter_hecateslash', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'Sgreen4', 'Weapon_Turret27', 'Weapon', 'Innate', 'Damageable', 'ter_hecateslash', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '', 'ter_hecate_nameplate_aquitaine', 'ter_hecate_nameplate_hood', 'ter_hecate_nameplate_meridian', 'ter_hecate_nameplate_morgain', 'ter_hecate_nameplate_phonecia', 'ter_hecate_nameplate_requiem', 'ter_hecate_nameplate_tempest', 'ter_hecate_nameplate_warlock')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible', 'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

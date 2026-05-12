@@ -187,7 +187,7 @@ research = {
 	},
 	{
 		Name = "Erinyes",
-		RequiredResearch = "Ares & FS2",
+		RequiredResearch = "HerculesMk2 & FS2",
 		RequiredSubSystems = "",
 		Cost = 1800,
 		Time = 60,

@@ -14,24 +14,24 @@ supplyLimit("CloakedFighters", 50);
 --
 supplyLimit("Corvette", 150);
 
-supplyLimit("MinelayerCorvette",15);
-supplyLimit("CommandCorvette",10);
-supplyLimit("SalvageCorvette",45);
+supplyLimit("MinelayerCorvette", 15);
+supplyLimit("CommandCorvette", 10);
+supplyLimit("SalvageCorvette", 45);
 --
 -- Vaygr FamilyOverride Corvette 100
 --
 supplyLimit("Frigate", 100);
 
-supplyLimit("DefenseFieldFrigate",10);
-supplyLimit("CaptureFrigate",20);
+supplyLimit("DefenseFieldFrigate", 10);
+supplyLimit("CaptureFrigate", 20);
 --
 supplyLimit("Capital", 50);
 
 supplyLimit("Destroyer", 15);
-supplyLimit("MissileDestroyer", 10);	
+supplyLimit("MissileDestroyer", 10);
 supplyLimit("Carrier", 10);
-supplyLimit("Battlecruiser",15);
-supplyLimit("HeavyCruiser",15);
+supplyLimit("Battlecruiser", 15);
+supplyLimit("HeavyCruiser", 15);
 supplyLimit("Shipyard", 2);
 --
 supplyLimit("Utility", 100);
@@ -148,11 +148,13 @@ supplyLimit("Colossus", 2)
 supplyLimit("Installation", 4)
 supplyLimit("Iceni", 2)
 supplyLimit("Ares", 40)
+supplyLimit("Erinyes", 30)
 supplyLimit("ArtemisDH", 40)
 supplyLimit("AWACS", 10)
 supplyLimit("Faustus", 4)
 supplyLimit("Moloch", 15)
 supplyLimit("Sobek", 15)
+supplyLimit("Aeolus", 15)
 supplyLimit("Lucifer", 2)
 supplyLimit("Sathanas", 2)
 supplyLimit("Imhotep", 4)
@@ -161,19 +163,43 @@ supplyLimit("Imhotep", 4)
 supplyShow("Cruiser", "Always")
 supplyShow("AdvancedCruiser", "Always")
 supplyShow("Installation", "Always")
+supplyShow("Aeolus", "Always")
+supplyShow("Erinyes", "Always")
+
+-- Layout Limits (Global Faction Caps)
+supplyLimit("LayoutFighter", 180)
+supplyLimit("LayoutCorvette", 180)
+supplyLimit("LayoutFrigate", 180)
+supplyLimit("LayoutDestroyer", 180)
+supplyLimit("LayoutBattleCruiser", 180)
+supplyLimit("LayoutResource", 180)
+supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutCruiser", 180)
+
+-- Display Rules (Hide Layout Caps)
+supplyShow("LayoutFighter", "Never")
+supplyShow("LayoutCorvette", "Never")
+supplyShow("LayoutFrigate", "Never")
+supplyShow("LayoutDestroyer", "Never")
+supplyShow("LayoutBattleCruiser", "Never")
+supplyShow("LayoutResource", "Never")
+supplyShow("LayoutBomber", "Never")
+supplyShow("LayoutCruiser", "Never")
 
 -- Indents
 supplyIndent("Cruiser", 1)
 supplyIndent("AdvancedCruiser", 1)
-supplyIndent("Ares", 1)
-supplyIndent("ArtemisDH", 1)
-supplyIndent("AWACS", 1)
-supplyIndent("Faustus", 1)
-supplyIndent("Hades", 1)
+supplyIndent("Aeolus", 1)
 supplyIndent("Deimos", 1)
+supplyIndent("Hades", 1)
 supplyIndent("Colossus", 1)
 supplyIndent("Installation", 1)
 supplyIndent("Iceni", 1)
+supplyIndent("Ares", 1)
+supplyIndent("Erinyes", 1)
+supplyIndent("ArtemisDH", 1)
+supplyIndent("AWACS", 1)
+supplyIndent("Faustus", 1)
 supplyIndent("Moloch", 1)
 supplyIndent("Sobek", 1)
 supplyIndent("Lucifer", 1)

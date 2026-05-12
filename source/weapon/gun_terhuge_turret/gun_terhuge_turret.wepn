@@ -38,7 +38,7 @@ setAngles(NewWeaponType,
     0,
     -180,
     180,
-    0,
+    -2.5,
     90)
 
 setMiscValues(NewWeaponType,

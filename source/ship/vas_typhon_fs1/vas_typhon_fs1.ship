@@ -350,6 +350,7 @@ addShield(NewShipType, 'EMP', 10000, 20)
 
 StartShipHardPointConfig(NewShipType, 'vas_typhon12', 'Weapon_turret12', 'Weapon', 'Innate', 'Damageable', 'vas_typhonturret', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'vas_typhon15', 'Weapon_turret15', 'Weapon', 'Innate', 'Damageable', 'vas_typhonturret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible', 'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

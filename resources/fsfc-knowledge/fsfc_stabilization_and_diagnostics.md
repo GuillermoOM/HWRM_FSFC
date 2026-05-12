@@ -20,6 +20,26 @@ selectionPriority = -1
 ## 2. Telemetry & Performance Monitoring
 Diagnostic logging is handled by `scripts/rules/telemetry.lua`. This script provides a heartbeat of the match status every 30 seconds.
 
+### 3. Dynamic Research Resolution
+To prevent engine crashes caused by rigid numeric ID dependencies, always use the `FSFC_CheckResearch` and `FSFC_IsResearchDone` wrappers.
+
+- **Lua 4.0 Warning**: Never use `_G[var]`. Use `getglobal("var")`.
+- **Dynamic Lookup**: Research nodes are resolved from strings at runtime to ensure the engine has fully initialized the tech tree.
+- **Era Gating**: Use `Util_PickBestShip(fs2_variant, fs1_variant)` for construction. It automatically handles era-based selection via research status or `era_setting` fallbacks.
+
+```lua
+-- Correct Usage
+if (FSFC_CheckResearch("FighterDesign")) then
+    ResearchDemandSet(getglobal("FighterDesign"), 1.5)
+end
+```
+
+### 4. Common Engine Gotchas (Lua 4.0)
+- **No Table Length Operator**: Use `getn(mytable)` instead of `#mytable`.
+- **No string.len**: Use `strlen(mystr)`.
+- **No format**: Use string concatenation `..`.
+- **Global Access**: Use `getglobal()` and `setglobal()`.
+
 ### SobGroup Filter Casing
 Engine-native filter functions in `telemetry.lua` are strictly case-sensitive for the filter type argument.
 - **Display Family**: Must use **`"displayFamily"`**.

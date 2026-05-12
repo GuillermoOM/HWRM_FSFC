@@ -244,7 +244,7 @@ NewShipType.nlipsFarRange = 10000
 --- Rendering
 --------------------------------------------------
 
-NewShipType.meshRenderLimit = 11000
+NewShipType.meshRenderLimit = 12000
 NewShipType.dotRenderLimit = 10
 NewShipType.visibleInSecondary = 0
 NewShipType.goblinsStartFade = 210
@@ -256,8 +256,8 @@ NewShipType.minimumZoomFactor = 0.68
 --------------------------------------------------
 
 NewShipType.minLOD = 0.25
-NewShipType.upLOD = 1000
-NewShipType.downLOD = 800
+NewShipType.upLOD = 6000
+NewShipType.downLOD = 5000
 
 --------------------------------------------------
 --- Selection

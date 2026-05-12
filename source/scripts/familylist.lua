@@ -795,6 +795,11 @@ unitcapsFamily = {
 		numParam = 11,
 		stringParam = "GTF Ares",
 	},
+	{
+		name = "Erinyes",
+		numParam = 11,
+		stringParam = "GTF Erinyes",
+	},
 
 	-- hw1 fighters
 	{
@@ -904,6 +909,11 @@ unitcapsFamily = {
 		name = "AdvancedCruiser",
 		numParam = 35,
 		stringParam = "Advanced Cruisers",
+	},
+	{
+		name = "Aeolus",
+		numParam = 36,
+		stringParam = "GTC Aeolus",
 	},
 
 	{

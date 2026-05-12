@@ -7,7 +7,7 @@ function CpuResource_Init()
   cpMinThreatAddedDistance = 12000 
   SetResourceDockFamily("Utility")
 	sg_minNumCollectors = 5
-	sg_maxNumCollectors = 30
+	sg_maxNumCollectors = 14
 	if (Override_ResourceInit) then
 		Override_ResourceInit()
 	end

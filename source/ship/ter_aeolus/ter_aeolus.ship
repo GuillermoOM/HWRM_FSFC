@@ -132,6 +132,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'AdvancedCruiser', 1.0)
+setSupplyValue(NewShipType, 'Aeolus', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -150,8 +151,8 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 1050
-NewShipType.buildTime = 47
+NewShipType.buildCost = 2450
+NewShipType.buildTime = 65
 NewShipType.buildPriorityOrder = 30
 
 --------------------------------------------------

@@ -7,7 +7,7 @@
 -- Heresy and Terror! :3
 -- May contain traces of thoughts.
 --============================================================================
-TER_COLOSSUS_Normal_OnSet = function(ship)
+VAS_COLOSSUS_Normal_OnSet = function(ship)
     startAnim(ship, "Radar1")
     setLoopCount(ship, "Radar1", 100000000)   --infinite looping.
     startAnim(ship, "Radar2")

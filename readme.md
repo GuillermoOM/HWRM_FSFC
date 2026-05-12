@@ -29,7 +29,11 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 ## Latest Changes:
 
-- Full Vasudan Race Addition
+- **AI Economic Revolution**: Implemented dynamic demand scaling and "Panic Spending" logic. AI now utilizes up to 100% of income and supports "True Huge" matches (300+ fighters).
+- **Era-Aware Intelligence**: AI now intelligently swaps fleet rosters between FS1 (Great War) and FS2 (Second Great War) eras.
+- **Shivan Economic Rebalancing**: Resolved the 11,000 RU Demon bottleneck; Shivans now scale naturally with Cain/Lilith cruisers.
+- **Universal Telemetry**: New real-time census system tracks every ship in the mod (100+ hulls) for post-match data analysis.
+- **AA Beam Precision**: Tuned AA Beam weaponry to prioritize point-defense roles, preventing capital ship "sniping" by anti-fighter turrets.
 
 ## What Works
 
@@ -50,10 +54,10 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 ## Current Issues
 
 - Audio Balancing
-- Weapons Balancing
+- Weapons Balancing (ongoing fine-tuning)
 - Minor Effects improvements
 - Ship health Balancing
-- AI Still needs some improvements
+- Subsystem Hardpoint Stability (especially for FS1 variants)
 
 ## What's missing
 
@@ -66,14 +70,13 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 ## Current Roadmap
 
-1. Add Vasudan Race and Ships
-2. Add AI to Vasudans
-3. Enable Multiplayer (for testing purposes)
-4. Add capital ships subsystems (missing on many ships, needed before implementing research)
-5. Reintegrate Research
-6. Add FS Gametypes
+1. [DONE] Add Vasudan Race and Ships
+2. [DONE] Add AI to Vasudans
+3. Enable Multiplayer (possible, requires testing)
+4. Stabilize capital ship subsystems (Alignment of FS1/FS2 hardpoints)
+5. Reintegrate Research (Ship-by-ship progression)
+6. Add FS Gametypes (Gauntlet, Beam-War)
 7. Add FS Maps
-8. Add Gauntlet Gametype (From existing mod)
 
 ## Brainstorming...
 
@@ -86,3 +89,10 @@ Launch the game, no matter which version of homeworld RM you choose (1 or 2), it
 
 - Shields.... makes ships a bit OP? and doesn't feel easy to balance gameplay wise
 - Weapon subsystems on fighters and bombers... Supposed to improve ships weapons and damage output, being that there are so many ship variances of these classes. Maybe research on unlocking the ships is enough.
+
+## Match Analysis Tools
+
+For developers and advanced users, the mod includes a built-in telemetry and analysis suite:
+
+- **telemetry.lua**: A custom SCAR rule that logs real-time ship counts, economic throughput, and tactical class distribution every 30 seconds to the `HwRM.log`.
+- **analyze_match.py**: Located in `resources/tools/`. A Python script that parses the match logs to generate detailed reports on AI spending, production bottlenecks, and unit survival rates.

@@ -10,9 +10,6 @@ FS2OrionNameplateTable =
 	"ter_orion_nameplate_minnow",
 	"ter_orion_nameplate_nereid",
 	"ter_orion_nameplate_soyakaze",
-}
-
-REST = {
 	"ter_orion_nameplate_galatea",
 	"ter_orion_nameplate_myrmidon",
 	"ter_orion_nameplate_amadeus",
@@ -39,22 +36,28 @@ function onCreate(group, player_index, ship_id)
 end
 
 function updateNameplate(group, player_index, ship_id)
-	if (Player_GetRace(player_index) ~= 10) then
+	-- Use race prefix check instead of hardcoded index 10
+	local racePrefix = PlayerRace_GetString(player_index, "Prefix", "UNK")
+	if (racePrefix ~= "TER_") then
 		return nil;
 	end
-	
+
 	if SobGroup_GetHardPointHealth(group, "Nameplate") == 0 then
-		if SobGroup_AreAnyOfTheseTypes(group, "ter_orion") == 1 then
-			print("Adding nameplate to ter_orion ship in group " .. group)
-			local nameplate = FS2OrionNameplateTable
-				[mod(Player_NumberOfAwakeShips(player_index), getn(FS2OrionNameplateTable))]
+		-- Support both FS2 and FS1 variants
+		if SobGroup_AreAnyOfTheseTypes(group, "ter_orion,ter_orion_fs1") == 1 then
+			print("Adding nameplate to Orion ship in group " .. group)
+			local nNames = getn(FS2OrionNameplateTable)
+			-- Fix for 1-based indexing in Lua: mod(x, n) returns 0..n-1, so add 1
+			local idx = mod(Player_NumberOfAwakeShips(player_index), nNames) + 1
+			local nameplate = FS2OrionNameplateTable[idx]
 			print("Nameplate Chosen: " .. nameplate)
 			SobGroup_CreateSubSystem(group, nameplate)
 		end
 		if SobGroup_AreAnyOfTheseTypes(group, "ter_hecate") == 1 then
-			print("Adding nameplate to ter_hecate ship in group " .. group)
-			local nameplate = HecateNameplateTable
-				[mod(Player_NumberOfAwakeShips(player_index), getn(HecateNameplateTable))]
+			print("Adding nameplate to Hecate ship in group " .. group)
+			local nNames = getn(HecateNameplateTable)
+			local idx = mod(Player_NumberOfAwakeShips(player_index), nNames) + 1
+			local nameplate = HecateNameplateTable[idx]
 			print("Nameplate Chosen: " .. nameplate)
 			SobGroup_CreateSubSystem(group, nameplate)
 		end

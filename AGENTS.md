@@ -26,10 +26,23 @@ This is a **Homeworld Remastered** total conversion mod (FreeSpace: Fleet Comman
 - **Check Gotchas First**: Read `resources/hwrm-wiki/reference/lua_40_gotchas.md` before writing SCAR or AI code.
 - `.ship` file variable order matters — wrong order = crash (see `resources/hwrm-wiki/reference/ship_order.md`)
 - `LoadModel()` MUST precede weapon/hardpoint configs
+- **Innate Hardpoints**: Subsystems must be in the 7th parameter (Default Slot) of `StartShipHardPointConfig` to load at spawn.
+
 - All family names must exist in `familylist.lua`
 - Use `data:` prefix for file paths (e.g., `data:scripts/custom_scripts/myfile.lua`)
-- **No `format`**: This is Lua 4.0: no `#table`, no `string.len()`, no `table.insert()`, and **NO `format()`** — use `getn()`, `strlen()`, `tinsert()`, and concatenation (`..`).
+- **No `format`**: This is Lua 4.0: no `#table`, no `string.len()`, no `table.insert()`, no `_G` (use `getglobal()`), no `local function` (use `function Name()`), and **NO `format()`** — use `getn()`, `strlen()`, `tinsert()`, and concatenation (`..`).
 - **Ship Counting**: Use `SobGroup_Count("Player_Ships" .. i)` for total fleet counts in rules.
+- **AI Scoping**: In custom race `ai_build.lua` scripts, use `s_enemyIndex` and `player_max` for `PlayersUnitTypeCount`. Standard variables like `player_enemy` are often nil.
+- **Weapon Burst Bug**: Always set `fireTime` to at least `0.1s` in `.wepn` files. A `0` fireTime with non-zero burst causes infinite fire rates.
+- **Knowledge Integrity**: When discovering new engine quirks or tactical patterns, update `resources/hwrm-wiki/` and `resources/fsfc-knowledge/` immediately. Also add any necessary references to this instruction file, `AGENTS.md`, and the `rules` and `gotchas` markdown files in `resources/hwrm-wiki/`. Including `.agents/rules/code-style-guide.md` and `.agents/skills/skill_name/` if this will make any future agent more efficient and aware of common development mistakes.
+
+## Skills & Automation
+
+Specialized patterns for common FSFC modding tasks:
+- **Built-Ship Dependent Tech Tree**: Patterns for `def_research.lua` and `ai_upgrades.lua` to enforce ship-by-ship progression. [Skill](.agents/skills/ship_dependent_tech_tree/how_to_implement.md)
+- **Batch Updating Prerequisites**: Python automation for `def_build.lua`. [Skill](.agents/skills/batch_update_build_prerequisites/script_template.md)
+- **Hardpoint & Subsystem Management**: Patterns for `StartShipHardPointConfig` and innate loading. [Skill](.agents/skills/ship_subsystem_management/how_to_configure_hardpoints.md)
+
 
 ## Full Agent Instructions
 

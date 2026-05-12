@@ -14,140 +14,170 @@ if (CPUPLAYERS_NORUSHTIME10 == nil) then CPUPLAYERS_NORUSHTIME10 = -1 end
 if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
 
 -- AI Research Variable Mappings (Engine provided from def_research.lua Name fields)
+-- Ensure common variables exist to avoid 'nil value' errors during script parsing
+if (FIGHTERDESIGN == nil) then FIGHTERDESIGN = -1 end
+if (BOMBERDESIGN == nil) then BOMBERDESIGN = -1 end
+if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
+if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
+if (FS2 == nil) then FS2 = -1 end
+
+function ResearchDemandSet_Vasudan(id_or_name, demand)
+	local id = FSFC_ResolveID(id_or_name)
+	if (id) then
+		ResearchDemandSet(id, demand)
+	end
+end
+
+function ResearchDemandAdd_Vasudan(id_or_name, demand)
+	local id = FSFC_ResolveID(id_or_name)
+	if (id) then
+		ResearchDemandAdd(id, demand)
+	end
+end
 
 function DoResearchTechDemand_Vasudan()
-	local fighterdemand = ShipDemandMaxByClass( eFighter ) * 2
+	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
 	if (fighterdemand > 0) then
-		if (Util_CheckResearch(FIGHTERDESIGN)) then
-			ResearchDemandSet(FIGHTERDESIGN, fighterdemand + 1.0)
+		print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | FighterClass | Demand: " .. fighterdemand)
+		if (FSFC_CheckResearch(FIGHTERDESIGN)) then
+			ResearchDemandSet_Vasudan(FIGHTERDESIGN, fighterdemand + 1.0)
+			FSFC_Log_Research("FighterDesign")
 		end
-		if (Util_CheckResearch(HORUS)) then
-			ResearchDemandSet(HORUS, fighterdemand + 1.0)
+		-- Era-aware parallel research
+		if (FSFC_CheckResearch(HORUS)) then
+			ResearchDemandSet_Vasudan(HORUS, fighterdemand + 1.0)
 			FSFC_Log_Research("Horus")
 		end
-		if (Util_CheckResearch(SETH)) then
-			ResearchDemandSet(SETH, fighterdemand + 1.0)
+		if (FSFC_CheckResearch(SETH)) then
+			ResearchDemandSet_Vasudan(SETH, fighterdemand + 1.1)
 			FSFC_Log_Research("Seth")
 		end
-		if (Util_CheckResearch(THOTH)) then
-			ResearchDemandSet(THOTH, fighterdemand + 1.0)
+		if (FSFC_CheckResearch(THOTH)) then
+			ResearchDemandSet_Vasudan(THOTH, fighterdemand + 1.2)
 			FSFC_Log_Research("Thoth")
 		end
-		if (Util_CheckResearch(PTAH)) then
-			ResearchDemandSet(PTAH, fighterdemand + 1.0)
+		if (FSFC_CheckResearch(PTAH)) then
+			ResearchDemandSet_Vasudan(PTAH, fighterdemand + 1.0)
+			FSFC_Log_Research("Ptah")
 		end
-		if (Util_CheckResearch(SERAPIS)) then
-			ResearchDemandSet(SERAPIS, fighterdemand + 1.0)
+		if (FSFC_CheckResearch(SERAPIS)) then
+			ResearchDemandSet_Vasudan(SERAPIS, fighterdemand + 1.3)
+			FSFC_Log_Research("Serapis")
 		end
-		if (Util_CheckResearch(TAURET)) then
-			ResearchDemandSet(TAURET, fighterdemand + 1.0)
+		if (FSFC_CheckResearch(TAURET)) then
+			ResearchDemandSet_Vasudan(TAURET, fighterdemand + 1.5)
 			FSFC_Log_Research("Tauret")
 		end
 	end
 
-	local bomberdemand = ShipDemandMaxByClass( eCorvette ) * 2
+	local bomberdemand = ShipDemandMaxByClass(eCorvette) * 2
 	if (bomberdemand > 0) then
-		if (Util_CheckResearch(BOMBERDESIGN)) then
-			ResearchDemandSet(BOMBERDESIGN, bomberdemand + 1.0)
+		if (FSFC_CheckResearch(BOMBERDESIGN)) then
+			ResearchDemandSet_Vasudan(BOMBERDESIGN, bomberdemand + 1.0)
+			FSFC_Log_Research("BomberDesign")
 		end
-		if (Util_CheckResearch(OSIRIS)) then
-			ResearchDemandSet(OSIRIS, bomberdemand + 1.0)
+		-- Era-aware parallel research
+		if (FSFC_CheckResearch(OSIRIS)) then
+			ResearchDemandSet_Vasudan(OSIRIS, bomberdemand + 1.0)
 			FSFC_Log_Research("Osiris")
 		end
-		if (Util_CheckResearch(BAKHA)) then
-			ResearchDemandSet(BAKHA, bomberdemand + 1.0)
+		if (FSFC_CheckResearch(BAKHA)) then
+			ResearchDemandSet_Vasudan(BAKHA, bomberdemand + 1.2)
+			FSFC_Log_Research("Bakha")
 		end
-		if (Util_CheckResearch(SEHKMET)) then
-			ResearchDemandSet(SEHKMET, bomberdemand + 1.0)
+		if (FSFC_CheckResearch(SEHKMET)) then
+			ResearchDemandSet_Vasudan(SEHKMET, bomberdemand + 1.5)
 			FSFC_Log_Research("Sehkmet")
 		end
+		-- Amun is often an upgrade or variant, ensure it's prioritized if available
+		if (FSFC_CheckResearch("Amun")) then
+			ResearchDemandSet_Vasudan("Amun", bomberdemand + 1.3)
+		end
 	end
 
-	local cruiserdemand = ShipDemandMaxByClass( eFrigate ) * 2
+	local cruiserdemand = ShipDemandMaxByClass(eFrigate) * 2
 	if (cruiserdemand > 0) then
-		if (Util_CheckResearch(CRUISERDESIGN)) then
-			ResearchDemandSet(CRUISERDESIGN, cruiserdemand + 1.0)
+		if (FSFC_CheckResearch(CRUISERDESIGN)) then
+			ResearchDemandSet_Vasudan(CRUISERDESIGN, cruiserdemand + 1.0)
+			FSFC_Log_Research("CruiserDesign")
 		end
-		if (Util_CheckResearch(ATEN)) then
-			ResearchDemandSet(ATEN, cruiserdemand + 1.0)
+		if (FSFC_CheckResearch(ATEN)) then
+			ResearchDemandSet_Vasudan(ATEN, cruiserdemand + 1.0)
 			FSFC_Log_Research("Aten")
 		end
-		if (Util_CheckResearch(MENTU)) then
-			ResearchDemandSet(MENTU, cruiserdemand + 1.0)
+		if (FSFC_CheckResearch(MENTU)) then
+			ResearchDemandSet_Vasudan(MENTU, cruiserdemand + 1.0)
+			FSFC_Log_Research("Mentu")
 		end
-		if (Util_CheckResearch(SCIENCEVESSEL)) then
-			ResearchDemandSet(SCIENCEVESSEL, cruiserdemand + 0.5)
-		end
-		if (Util_CheckResearch(AWACS)) then
-			local scoutdemand = ShipDemandGet( eScout )
-			if (scoutdemand > 0) then
-				ResearchDemandSet(AWACS, cruiserdemand + scoutdemand)
-			end
+		if (FSFC_CheckResearch(SOBEK)) then
+			ResearchDemandSet_Vasudan(SOBEK, cruiserdemand + 1.0)
+			FSFC_Log_Research("Sobek")
 		end
 	end
 
-	local capitaldemand = ShipDemandMaxByClass( eCapital )
+	local capitaldemand = ShipDemandMaxByClass(eCapital)
 	if (capitaldemand > 0) then
-		if (Util_CheckResearch(CAPITALSHIPDESIGN)) then
-			ResearchDemandSet(CAPITALSHIPDESIGN, capitaldemand + 1.0)
+		if (FSFC_CheckResearch(CAPITALSHIPDESIGN)) then
+			ResearchDemandSet_Vasudan(CAPITALSHIPDESIGN, capitaldemand + 1.0)
+			FSFC_Log_Research("CapitalShipDesign")
 		end
-		if (Util_CheckResearch(TYPHON)) then
-			ResearchDemandSet(TYPHON, capitaldemand + 1.0)
+		if (FSFC_CheckResearch(TYPHON)) then
+			ResearchDemandSet_Vasudan(TYPHON, capitaldemand + 1.0)
 			FSFC_Log_Research("Typhon")
 		end
-		if (Util_CheckResearch(SOBEK)) then
-			ResearchDemandSet(SOBEK, capitaldemand + 1.0)
-			FSFC_Log_Research("Sobek")
+		if (FSFC_CheckResearch(INSTALLATION)) then
+			ResearchDemandSet_Vasudan(INSTALLATION, capitaldemand + 0.5)
 		end
-		if (Util_CheckResearch(INSTALLATION)) then
-			ResearchDemandSet(INSTALLATION, capitaldemand + 0.5)
-		end
-		if (Util_CheckResearch(HATSHEPSUT)) then
-			ResearchDemandSet(HATSHEPSUT, capitaldemand + 1.0)
+		if (FSFC_CheckResearch(HATSHEPSUT)) then
+			ResearchDemandSet_Vasudan(HATSHEPSUT, capitaldemand + 1.0)
 			FSFC_Log_Research("Hatshepsut")
 		end
-		if (Util_CheckResearch(SUPERCAPITALSHIPDESIGN)) then
-			ResearchDemandSet(SUPERCAPITALSHIPDESIGN, capitaldemand + 1.0)
+		if (FSFC_CheckResearch(SUPERCAPITALSHIPDESIGN)) then
+			ResearchDemandSet_Vasudan(SUPERCAPITALSHIPDESIGN, capitaldemand + 1.0)
 		end
-		if (Util_CheckResearch(COLOSSUS)) then
-			ResearchDemandSet(COLOSSUS, capitaldemand + 1.0)
+		if (FSFC_CheckResearch(COLOSSUS)) then
+			ResearchDemandSet_Vasudan(COLOSSUS, capitaldemand + 1.0)
 			FSFC_Log_Research("Colossus")
 		end
 	end
 
 	-- Utility
-	if (Util_CheckResearch(SENTRYGUN)) then
-		ResearchDemandSet(SENTRYGUN, 0.5)
+	if (FSFC_CheckResearch(SENTRYGUN)) then
+		ResearchDemandSet_Vasudan(SENTRYGUN, 0.5)
+		FSFC_Log_Research("SentryGun")
 	end
-	if (Util_CheckResearch(SENTRYANDMINEDEPLOYER)) then
-		ResearchDemandSet(SENTRYANDMINEDEPLOYER, 0.5)
+	if (FSFC_CheckResearch(SENTRYANDMINEDEPLOYER)) then
+		ResearchDemandSet_Vasudan(SENTRYANDMINEDEPLOYER, 0.5)
+		FSFC_Log_Research("SentryAndMineDeployer")
 	end
-	if (Util_CheckResearch(REPAIRSATIS)) then
-		ResearchDemandSet(REPAIRSATIS, 0.5)
+	if (FSFC_CheckResearch(REPAIRSATIS)) then
+		ResearchDemandSet_Vasudan(REPAIRSATIS, 0.5)
+		FSFC_Log_Research("RepairSatis")
 	end
-	if (Util_CheckResearch(REPAIRBAST)) then
-		ResearchDemandSet(REPAIRBAST, 0.5)
+	if (FSFC_CheckResearch(REPAIRBAST)) then
+		ResearchDemandSet_Vasudan(REPAIRBAST, 0.5)
+		FSFC_Log_Research("RepairBast")
 	end
 end
 
 function DoUpgradeDemand_Vasudan()
 	if (s_militaryStrength > 10 or g_LOD == 0) then
-		local numCollectors = NumSquadrons( kCollector )
-		if (numCollectors > 0 and COLLECTORHP ~= nil and Util_CheckResearch(COLLECTORHP)) then
-			ResearchDemandAdd(COLLECTORHP, numCollectors*.1)
+		local numCollectors = NumSquadrons(kCollector)
+		if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
+			ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
 		end
-		local numRefinery = NumSquadrons( kRefinery )
-		if (numRefinery > 0 and DROPOFFHP ~= nil and Util_CheckResearch(DROPOFFHP)) then
-			ResearchDemandAdd(DROPOFFHP, numRefinery*.1)
+		local numRefinery = NumSquadrons(kRefinery)
+		if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
+			ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
 		end
 	end
-	local numDestroyers = NumSquadrons( kDestroyer )
+	local numDestroyers = NumSquadrons(kDestroyer)
 	if (numDestroyers > 0) then
-		if (Util_CheckResearch(SOBEKARMOR)) then
-			ResearchDemandAdd(SOBEKARMOR, numDestroyers*2)
+		if (FSFC_CheckResearch(SOBEKARMOR)) then
+			ResearchDemandAdd_Vasudan(SOBEKARMOR, numDestroyers * 2)
 		end
-		if (Util_CheckResearch(SOBEKSPRINT)) then
-			ResearchDemandAdd(SOBEKSPRINT, numDestroyers*1.5)
+		if (FSFC_CheckResearch(SOBEKSPRINT)) then
+			ResearchDemandAdd_Vasudan(SOBEKSPRINT, numDestroyers * 1.5)
 		end
 	end
 end

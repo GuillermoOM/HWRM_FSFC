@@ -3,14 +3,16 @@ import re
 
 SHIP_DIR = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/source/ship"
 WEAPON_DIR = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/source/weapon"
+SUBSYSTEM_DIR = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/source/subsystem"
 AB_SCRIPT = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/source/scripts/custom_scripts/afterburner.lua"
+UNITCAP_DIR = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/source/scripts/rules/fs_deathmatch/unitcaps"
 
 def parse_afterburners():
     mults = {}
     if os.path.exists(AB_SCRIPT):
         with open(AB_SCRIPT, 'r') as f:
             content = f.read()
-            matches = re.findall(r'AfterburnerTable\["([^"]+)"\]\s*=\s*{\s*([\d\.]+)', content)
+            matches = re.findall(r'AfterburnerTable\[["\']([^"]+)["\']\]\s*=\s*{\s*([\d\.]+)', content)
             for name, mult in matches:
                 mults[name.lower()] = float(mult)
     return mults
@@ -30,6 +32,18 @@ def extract_value(content, key, default="0"):
             if len(parts) >= 3: return parts[2].replace(')', '').strip().strip("'").strip('"')
         return val
     return default
+
+def extract_supply(content):
+    matches = re.findall(r"setSupplyValue\(\s*NewShipType\s*,\s*['\"]([^']+)['\"]\s*,\s*([\d\.]+)", content)
+    if matches:
+        best_val = "0"
+        for fam, val in matches:
+            if fam not in ["Fighter", "Corvette", "Frigate", "SmallCapitalShip", "BigCapitalShip", "Mothership", "Resource", "ResourceLarge"]:
+                best_val = val
+            elif best_val == "0":
+                best_val = val
+        return best_val
+    return "1.0"
 
 def get_weapon_stats(weapon_name):
     actual_dir = None
@@ -53,20 +67,29 @@ def get_weapon_stats(weapon_name):
     start_match = re.search(r'StartWeaponConfig\((.*?)\)', content, re.DOTALL)
     dps, range_val, vel, rof = 0, 0, 0, 0
     if start_match:
-        params = [p.strip().strip("'").strip('"').strip() for p in start_match.group(1).split(',')]
+        params_str = start_match.group(1)
+        params_str = re.sub(r'--.*', '', params_str)
+        params = [p.strip().strip("'").strip('"').strip() for p in params_str.split(',')]
+        
         try:
-            vel, range_val = float(params[5]), float(params[6])
-            t_wait, t_fire = float(params[12]), float(params[13])
-            t_burst_wait = float(params[14]) if len(params) > 14 else 0
-            if params[2] == "InstantHit":
-                dps = (damage * t_fire) / (t_fire + t_wait) if (t_fire + t_wait) > 0 else 0
-                rof = round(1.0 / (t_fire + t_wait), 2) if (t_fire + t_wait) > 0 else 0
+            if len(params) > 16:
+                vel, range_val = float(params[5]), float(params[6])
+                # Arg 15: fireTime (index 14), Arg 16: burstFireTime (index 15), Arg 17: burstWaitTime (index 16)
+                t_fire_time = float(params[14])
+                t_burst_fire = float(params[15])
+                t_burst_wait = float(params[16])
+                
+                if t_burst_fire > 0:
+                    shots = max(1, int(t_burst_fire / t_fire_time)) if t_fire_time > 0 else 1
+                    cycle = t_burst_fire + t_burst_wait
+                    dps = (damage * shots) / cycle
+                    rof = round(shots / cycle, 2)
+                else:
+                    dps = damage / t_fire_time if t_fire_time > 0 else damage
+                    rof = round(1.0 / t_fire_time, 2) if t_fire_time > 0 else 1.0
             else:
-                shots = max(1, int(t_fire / t_wait)) if t_wait > 0 else 1
-                cycle = t_fire + t_burst_wait
-                if cycle <= 0: cycle = t_wait
-                dps = (damage * shots) / cycle if cycle > 0 else 0
-                rof = round(shots / cycle, 2) if cycle > 0 else 0
+                dps = damage
+                rof = 1.0
         except: pass
     
     pen = {"Un": "1", "Lt": "1", "Md": "1", "Hv": "1"}
@@ -83,6 +106,30 @@ def get_weapon_stats(weapon_name):
 
     return {"dps": round(dps, 2), "pen": pen, "name": weapon_name, "dmg": damage, "range": range_val, "vel": vel, "rof": rof, "acc": acc_map}
 
+def get_subsystem_weapons(sub_name):
+    if not sub_name: return []
+    sub_path = os.path.join(SUBSYSTEM_DIR, sub_name, f"{sub_name}.subs")
+    if not os.path.exists(sub_path): return []
+    with open(sub_path, 'r') as f: content = f.read()
+    # Support both single and double quotes
+    matches = re.findall(r"StartSubSystemWeaponConfig\(\s*NewSubSystemType\s*,\s*['\"]([^'\"]+)['\"]", content)
+    return matches
+
+def parse_unit_caps():
+    profiles = {}
+    if not os.path.exists(UNITCAP_DIR): return profiles
+    for filename in sorted(os.listdir(UNITCAP_DIR)):
+        if not filename.endswith(".lua"): continue
+        profile_name = filename.replace(".lua", "")
+        profile_caps = {}
+        with open(os.path.join(UNITCAP_DIR, filename), 'r') as f:
+            content = f.read()
+            matches = re.findall(r'supplyLimit\(\s*"([^"]+)"\s*,\s*(\d+)\s*\)', content)
+            for fam, val in matches: 
+                profile_caps[fam] = int(val)
+        profiles[profile_name] = profile_caps
+    return profiles
+
 def process_ships():
     races = {"ter": [], "shi": [], "vas": []}
     weapons_used = {}
@@ -94,10 +141,22 @@ def process_ships():
         with open(ship_file, 'r') as f: content = f.read()
         prefix = entry[:3]
         
-        # Weapons
         weapons_dict = {}
-        matches = re.findall(r"StartShipWeaponConfig\(\s*NewShipType\s*,\s*'([^']+)'", content)
+        # Base Weapons - Support both quotes
+        matches = re.findall(r"StartShipWeaponConfig\(\s*NewShipType\s*,\s*['\"]([^'\"]+)['\"]", content)
         for m in matches: weapons_dict[m] = weapons_dict.get(m, 0) + 1
+        
+        # Hardpoint Weapons (Subsystems) - Use DOTALL
+        hp_matches = re.findall(r"StartShipHardPointConfig\((.*?)\)", content, re.DOTALL)
+        for hp_str in hp_matches:
+            hp_str = re.sub(r'--.*', '', hp_str)
+            params = [p.strip().strip("'").strip('"') for p in hp_str.split(',')]
+            if len(params) >= 7 and params[6]:
+                sub_name = params[6]
+                sub_weps = get_subsystem_weapons(sub_name)
+                for sw in sub_weps:
+                    weapons_dict[sw] = weapons_dict.get(sw, 0) + 1
+        
         total_dps = 0
         wep_summary = []
         for w, count in weapons_dict.items():
@@ -107,66 +166,30 @@ def process_ships():
                 wep_summary.append(f"{count}x {w.replace('gun_','').replace('ter_','').replace('vas_','').replace('shi_','')}")
                 if w.lower() not in weapons_used: weapons_used[w.lower()] = stats
         
-        # Detailed Abilities
         abilities = {}
-        
-        # CanBuildShips
-        b_match = re.search(r"addAbility\(NewShipType,\s*'CanBuildShips',\s*\d+,\s*'([^']*)',\s*'([^']*)'", content)
-        if b_match:
-            abilities["Build"] = f"Fams: {b_match.group(2)}"
-            
-        # ShipHold (Hangar)
-        # signature: active, dropoffRate, holdSize, rallyEffect, dockFamilies, repairRate
-        sh_match = re.search(r"addAbility\(NewShipType,\s*'ShipHold',\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*'[^']*',\s*'([^']*)'(?:,\s*(-?[\d\.]+))?", content)
+        b_match = re.search(r"addAbility\(NewShipType,\s*['\"]CanBuildShips['\"]\s*,\s*\d+,\s*['\"]([^'\"]*)['\"]\s*,\s*['\"]([^'\"]*)['\"]", content)
+        if b_match: abilities["Build"] = f"Fams: {b_match.group(2)}"
+        sh_match = re.search(r"addAbility\(NewShipType,\s*['\"]ShipHold['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*['\"][^'\"]*['\"],\s*['\"]([^'\"]*)['\"](?:,\s*(-?[\d\.]+))?", content)
         if sh_match:
             abilities["Hangar"] = f"Size:{sh_match.group(2)} | Fams:{sh_match.group(3)}"
             if sh_match.group(4): abilities["Hangar"] += f" | Rep:{sh_match.group(4)}"
-        elif "ShipHold" in content:
-            abilities["Hangar"] = "Yes"
-            
-        # Hyperspace
-        # signature: active, costFactor, costMin, costMax, recoveryTime, transitTime
-        hs_match = re.search(r"addAbility\(NewShipType,\s*'HyperSpaceCommand',\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if hs_match:
-            abilities["Hyperspace"] = f"Min:{hs_match.group(2)} | Fact:{hs_match.group(1)} | Rec:{hs_match.group(4)}s"
-        elif "HyperSpaceCommand" in content:
-            abilities["Hyperspace"] = "Yes"
-            
-        # Repair
-        # signature: active, repairRate, radius
-        rep_match = re.search(r"addAbility\(NewShipType,\s*'RepairCommand',\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if rep_match:
-            abilities["Repair"] = f"Rate:{rep_match.group(1)} | Rad:{rep_match.group(2)}"
-        elif "RepairCommand" in content:
-            abilities["Repair"] = "Yes"
-            
-        # Harvest
-        harv_match = re.search(r"addAbility\(NewShipType,\s*'Harvest',\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if harv_match:
-            abilities["Harvest"] = f"Rate:{harv_match.group(1)} | Cap:{harv_match.group(2)}"
-            
-        # Salvage
+        elif "ShipHold" in content: abilities["Hangar"] = "Yes"
+        hs_match = re.search(r"addAbility\(NewShipType,\s*['\"]HyperSpaceCommand['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
+        if hs_match: abilities["Hyperspace"] = f"Min:{hs_match.group(2)} | Fact:{hs_match.group(1)} | Rec:{hs_match.group(4)}s"
+        elif "HyperSpaceCommand" in content: abilities["Hyperspace"] = "Yes"
+        rep_match = re.search(r"addAbility\(NewShipType,\s*['\"]RepairCommand['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
+        if rep_match: abilities["Repair"] = f"Rate:{rep_match.group(1)} | Rad:{rep_match.group(2)}"
+        elif "RepairCommand" in content: abilities["Repair"] = "Yes"
+        harv_match = re.search(r"addAbility\(NewShipType,\s*['\"]Harvest['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
+        if harv_match: abilities["Harvest"] = f"Rate:{harv_match.group(1)} | Cap:{harv_match.group(2)}"
         if "SalvageCommand" in content: abilities["Salvage"] = "Yes"
-        
-        # Afterburners
-        if entry.lower() in AB_MULTS:
-            abilities["Afterburner"] = f"x{AB_MULTS[entry.lower()]}"
-        
-        # Cloak
-        cl_match = re.search(r"addAbility\(NewShipType,\s*'CloakAbility',\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if cl_match:
-            abilities["Cloak"] = f"Usage:{cl_match.group(4)} | Cost:{cl_match.group(5)} | Regen:{cl_match.group(6)}"
-        
-        # Capture
+        if entry.lower() in AB_MULTS: abilities["Afterburner"] = f"x{AB_MULTS[entry.lower()]}"
+        cl_match = re.search(r"addAbility\(NewShipType,\s*['\"]CloakAbility['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
+        if cl_match: abilities["Cloak"] = f"Usage:{cl_match.group(4)} | Cost:{cl_match.group(5)} | Regen:{cl_match.group(6)}"
         if "CaptureCommand" in content: abilities["Capture"] = "Yes"
-        
-        # Special Attack
-        sa_match = re.search(r"addAbility\(NewShipType,\s*'SpecialAttack',\s*\d+,\s*'([^']+)'", content)
+        sa_match = re.search(r"addAbility\(NewShipType,\s*['\"]SpecialAttack['\"]\s*,\s*\d+,\s*['\"]([^'\"]+)['\"]", content)
         if sa_match: abilities["Special"] = sa_match.group(1)
-        
-        # Research Injection
-        if "sub_research" in content or "Research" in content:
-            abilities["Research"] = "Yes"
+        if "sub_research" in content or "Research" in content: abilities["Research"] = "Yes"
 
         ship_data = {
             "id": entry,
@@ -187,26 +210,48 @@ def process_ships():
             "cVal": extract_value(content, "corvetteValue"), "acVal": extract_value(content, "antiCorvetteValue"),
             "frVal": extract_value(content, "frigateValue"), "afrVal": extract_value(content, "antiFrigateValue"),
             "tVal": extract_value(content, "totalValue"),
+            "supply": extract_supply(content),
+            "squad": extract_value(content, "SquadronSize", "1"),
+            "batch": extract_value(content, "buildBatch", "1"),
             "abilities": abilities
         }
         if prefix in races: races[prefix].append(ship_data)
     return races, weapons_used
 
-def generate_markdown(races, weapons):
+def generate_markdown(races, weapons, unit_caps):
     output = "# FreeSpace: Fleet Command - Master Balance Sheet\n\n"
     output += "## [HOW TO READ THIS SHEET]\n"
     output += "This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.\n\n"
+    output += "## Unit Capacity Profiles (Limits)\n"
+    output += "Defines the total allowed points/ships per family for each match preset.\n\n"
+    profiles = sorted(unit_caps.keys())
+    all_fams = set()
+    for p in unit_caps.values(): all_fams.update(p.keys())
+    sorted_fams = sorted(list(all_fams))
+    output += "| Family | " + " | ".join(profiles) + " |\n"
+    output += "| :--- | " + " | ".join([":---" for _ in profiles]) + " |\n"
+    fs_fams = ["Cruiser", "AdvancedCruiser", "Deimos", "Destroyer", "Hades", "Colossus", "Installation", "Iceni", "Ares", "Erinyes", "ArtemisDH", "AWACS", "Faustus", "Moloch", "Sobek", "Aeolus", "Lucifer", "Sathanas", "Imhotep"]
+    other_fams = [f for f in sorted_fams if f not in fs_fams]
+    for fam in fs_fams + other_fams:
+        if fam not in sorted_fams: continue
+        row = f"| **{fam}** |"
+        for p in profiles:
+            val = unit_caps[p].get(fam, "-")
+            row += f" {val} |"
+        output += row + "\n"
+    output += "\n---\n\n"
     output += "### 1. The Weaponry Matrix\n"
     output += "- **DPS**: Calculated sum of damage over time.\n"
     output += "- **Acc: F/C/Fr/Cp**: Accuracy against **F**ighter, **C**orvette, **Fr**igate, **Cp** (Capital).\n"
     output += "- **Pen: Un/Lt/Md/Hv**: Damage multiplier against **Un**armoured, **Lt** (Light), **Md** (Medium), **Hv** (Heavy) armor families.\n\n"
-    output += "### 2. The Detailed Ability Matrix (New)\n"
+    output += "### 2. The Detailed Ability Matrix\n"
     output += "- **Hangar**: Hangar capacity and supported weight/families.\n"
     output += "- **Hyperspace**: Min cost, multiplier factor, and recovery time.\n"
-    output += "- **Repair**: HP/s repair rate and radius.\n"
-    output += "- **Harvest/Cloak**: Detailed capacity/rates for specialized systems.\n\n"
+    output += "- **Repair**: HP/s repair rate and radius.\n\n"
+    output += "### 3. The Ship Tables\n"
+    output += "- **S/Sq/B**: Supply Cost / Squadron Size / Build Batch Size.\n"
+    output += "- **T**: Total Value (AI evaluation rating).\n\n"
     output += "---\n\n"
-
     output += "## Weaponry Matrix (Accuracy & Penetration)\n"
     output += "| Weapon | Dmg | ROF | DPS | Range | Acc: F/C/Fr/Cp | Pen: Un/Lt/Md/Hv |\n"
     output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
@@ -216,8 +261,6 @@ def generate_markdown(races, weapons):
         pen_str = f"{w['pen']['Un']}/{w['pen']['Lt']}/{w['pen']['Md']}/{w['pen']['Hv']}"
         output += f"| {w['name']} | {w['dmg']} | {w['rof']} | **{w['dps']}** | {w['range']} | {acc_str} | {pen_str} |\n"
     output += "\n---\n\n"
-    
-    # Detailed Fleet Ability Matrix
     output += "## Detailed Ability Breakdown (Stats)\n\n"
     output += "| Ship | Build | Hangar | Hyperspace | Repair | Harvest | Cloak | Special |\n"
     output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
@@ -227,29 +270,23 @@ def generate_markdown(races, weapons):
     for s in all_ships:
         a = s['abilities']
         output += "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} |\n".format(
-            s['name'],
-            a.get("Build", "No"),
-            a.get("Hangar", "No"),
-            a.get("Hyperspace", "No"),
-            a.get("Repair", "No"),
-            a.get("Harvest", "No"),
-            a.get("Cloak", "No"),
-            a.get("Special", "No")
+            s['name'], a.get("Build", "No"), a.get("Hangar", "No"), a.get("Hyperspace", "No"), a.get("Repair", "No"), a.get("Harvest", "No"), a.get("Cloak", "No"), a.get("Special", "No")
         )
     output += "\n---\n\n"
-
     race_names = {"ter": "TERRAN - GTA", "shi": "SHIVAN - Unknown", "vas": "VASUDAN - PVN"}
     for code, name in race_names.items():
         output += f"## [{name}]\n\n"
-        output += "| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | F/AF | C/AC | Fr/AFr | T | Sensors | Spd/Rot/Acc/Bnk |\n"
+        output += "| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |\n"
         output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
         ships = sorted(races[code], key=lambda x: int(x['cost']) if x['cost'].isdigit() else 0)
         for s in ships:
             fam_str = f"{s['armor']} / {s['attack_fam']}"
-            output += f"| {s['name']} | {s['hp']} | {fam_str} | {s['cost']} | {s['time']}s | {s['guns']} | **{s['dps']}** | {s['fVal']}/{s['afVal']} | {s['cVal']}/{s['acVal']} | {s['frVal']}/{s['afrVal']} | {s['tVal']} | {s['sensors']} | {s['speed']}/{s['rot']}/{s['accel']}/{s['bank']} |\n"
+            ssb_str = f"{s['supply']}/{s['squad']}/{s['batch']}"
+            output += f"| {s['name']} | {s['hp']} | {fam_str} | {s['cost']} | {s['time']}s | {s['guns']} | **{s['dps']}** | {ssb_str} | {s['fVal']}/{s['afVal']} | {s['cVal']}/{s['acVal']} | {s['frVal']}/{s['afrVal']} | {s['tVal']} | {s['speed']}/{s['rot']}/{s['accel']}/{s['bank']} |\n"
         output += "\n"
     return output
 
 if __name__ == "__main__":
     r, w = process_ships()
-    print(generate_markdown(r, w))
+    uc = parse_unit_caps()
+    print(generate_markdown(r, w, uc))
