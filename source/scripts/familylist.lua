@@ -915,6 +915,11 @@ unitcapsFamily = {
 		numParam = 36,
 		stringParam = "GTC Aeolus",
 	},
+	{
+		name = "Rakshasa",
+		numParam = 37,
+		stringParam = "SC Rakshasa",
+	},
 
 	{
 		name = "Capital",

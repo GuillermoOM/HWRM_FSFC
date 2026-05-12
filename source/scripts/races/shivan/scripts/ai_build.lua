@@ -32,6 +32,13 @@ kMissileDestroyerFS1 = SHI_LILITH_FS1 -- Realigned with Leviathan tier (Cost 400
 kBattleCruiserFS2 = SHI_RAVANA
 kBattleCruiserFS1 = SHI_LUCIFER
 
+-- Cruiser Classes (Backbone)
+kCruiserFS2 = SHI_CAIN
+kCruiserFS1 = SHI_CAIN_FS1
+kHeavyCruiserFS2 = SHI_LILITH
+kHeavyCruiserFS1 = SHI_LILITH_FS1
+kAdvancedCruiser = SHI_RAKSHASA
+
 function CpuBuild_UpdateRaceVariables()
 	kScout = FSFC_PickBestShip(kScoutFS2, kScoutFS1)
 	kFighterInterceptor = FSFC_PickBestShip(kFighterInterceptorFS2, kFighterInterceptorFS1)
@@ -45,6 +52,11 @@ function CpuBuild_UpdateRaceVariables()
 	kDestroyer = FSFC_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = FSFC_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
+	
+	-- Backbone Cruiser resolution
+	kCruiser = FSFC_PickBestShip(kCruiserFS2, kCruiserFS1)
+	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
+	
 	kCarrier = FSFC_PickBestShip(SHI_DEMON, SHI_DEMON_FS1)
 	kResearch = SHI_COMMNODE
 	kAWACS = SHI_COMMNODE
@@ -189,6 +201,25 @@ function DetermineSpecialDemand_Shivan()
 	ShipDemandAdd(kBattleCruiser, capDemand)
 	
 	-- Shivan Cruiser-Specific Aggression (Rakshasa/Lilith/Cain)
+	-- Backbone Logic: Ensure a minimum fleet presence for standard cruisers
+	local numCain = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
+	local numLilith = NumSquadrons(kHeavyCruiser) + NumSquadronsQ(kHeavyCruiser)
+	
+	-- Cain Baseline (Swarm Escort - 12 wings)
+	if (numCain < 12) then
+		ShipDemandAdd(kCruiser, 2.2)
+	end
+	
+	-- Lilith Baseline (Heavy Swarm - 8 wings)
+	if (numLilith < 8) then
+		ShipDemandAdd(kHeavyCruiser, 1.9)
+	end
+	
+	-- Rakshasa Elite Demand (Capped by unit family, so we can set high demand safely)
+	if (currentRU > 12000) then
+		ShipDemandAdd(kAdvancedCruiser, 3.5)
+	end
+
 	if (enemyCapCount > 8) then
 		-- Force cruiser response to match Terran Deimos/Fenris
 		ShipDemandAddByClass(eFrigate, capDemand * 1.5)

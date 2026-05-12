@@ -56,7 +56,34 @@ If a ship needs a unique cap (e.g., GTF Erinyes), you must register it as a `uni
 3.  **Update `unitcaps/*.lua`**:
     *   Add `supplyLimit("Erinyes", 12)`.
 
+## Pattern: Backbone vs Elite Capacity Split
+Large mods often suffer from "Fighter Swarms" where low-tier units consume all unitcap slots, preventing the AI from building heavy support. This pattern uses tiered families to differentiate capacity pools.
+
+### 1. Backbone Units (Mass Produced)
+Assign these to general families with high caps.
+- **Example**: GTC Fenris (Standard Cruiser)
+- **Family**: `Cruiser`
+- **Limit**: 25-40 (depending on map size)
+
+### 2. Elite Units (Specialists)
+Assign these to specialized sub-families with strict, low caps.
+- **Example**: GTCv Deimos (Elite Corvette/Cruiser)
+- **Families**: `Cruiser` AND `EliteCruiser`
+- **Limit**: 4-6
+- **Result**: The AI can build up to 25 cruisers total, but only 4 can be Deimos class.
+
+### Configuration in `unitcaps/*.lua`
+```lua
+-- Standard Backbone
+supplyLimit("Cruiser", 25)
+
+-- Elite Sub-Category (Hard Restricted)
+supplyLimit("EliteCruiser", 4)
+supplyIndent("EliteCruiser", 1) -- Nest under Cruiser for UI clarity
+```
+
 ## Critical Rules
+
 - **Total Coverage**: If a ship has 3 family tags, ALL 3 must have a limit > 0 defined in the active `.lua` cap file, or the ship will be locked out (0/0 capacity).
 - **Consistency**: Always use the same limits across Small/Normal/Large/Huge files unless a specific balance scaling is desired.
 - **Engine Priority**: `unitcaps` are hard limits. If the AI script demands a ship but the `unitcap` is reached, the build order will fail silently in the background.

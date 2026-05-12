@@ -277,7 +277,7 @@ setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120)
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'ShivanCruiser', '')
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'ShivanCruiser', '')
 
 --------------------------------------------------
 --- Weapons

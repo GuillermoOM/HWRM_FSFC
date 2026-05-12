@@ -265,7 +265,8 @@ LoadSharedModel(NewShipType, "ter_leviathan")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Sgreen', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable', 'ter_leviathan_blob_turret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Sgreen', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable',
+    'ter_leviathan_blob_turret', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'Pihrana', 'Weapon_Missile', 'Weapon', 'Innate', 'Damageable',
     'ter_leviathanmissile', '', '', '', '', '', '', '', '')
 
@@ -286,7 +287,7 @@ setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120)
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'TerranCruiser', '')
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'TerranCruiser', '')
 
 --------------------------------------------------
 --- Weapons

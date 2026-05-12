@@ -68,6 +68,35 @@ local numAeolus = NumSquadrons(TER_AEOLUS) + NumSquadronsQ(TER_AEOLUS)
 if (numAeolus >= 8) then
     ShipDemandSet(TER_AEOLUS, -50) -- Drastically reduces desire
 end
+
+## Pattern: Elite Suppression (Prioritization)
+When elite units (e.g., Erinyes, Ares) are available but the wing strength is below a tactical threshold, "suppress" the demand for standard units. This prevents the AI from clogging the build queue with basic fighters while it should be transitioning to a superior tech tier.
+
+### Implementation in `DetermineSpecialDemand`
+```lua
+-- 1. Check for Elite Tech Availability
+local hasEliteTech = FSFC_CheckResearch(ELITE_TECH)
+
+-- 2. Count current Elite Wings
+local numElite = NumSquadrons(kFighterElite) + NumSquadronsQ(kFighterElite)
+
+-- 3. Suppress Standard Demand if Elites are needed
+if (hasEliteTech and numElite < 4) then
+    -- Throttling: Reduce standard fighter demand by 60%
+    -- This keeps some production but creates "headroom" for the expensive elites
+    fighterDemand = fighterDemand * 0.4
+    FSFC_Log_Demand("Elite Suppression Active", 0.4)
+end
+
+-- 4. Apply the (possibly throttled) demand to standard roles
+if (totalFighters < fighterTarget) then
+    if (numFSup < fighterTarget * 0.4) then
+        ShipDemandAdd(kFighterSuperiority, fighterDemand)
+    end
+    -- ...
+end
+```
+
 ```
 
 ## Best Practices

@@ -24,6 +24,7 @@ Defines the total allowed points/ships per family for each match preset.
 | **Moloch** | 5 | 15 | 10 | 5 | 2 |
 | **Sobek** | 5 | 15 | 10 | 5 | 2 |
 | **Aeolus** | 5 | 15 | 10 | 5 | 2 |
+| **Rakshasa** | 5 | 15 | 10 | 5 | 2 |
 | **Lucifer** | 1 | 2 | 1 | 1 | 0 |
 | **Sathanas** | 1 | 2 | 1 | 1 | 0 |
 | **Imhotep** | 1 | 4 | 2 | 1 | 1 |

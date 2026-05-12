@@ -263,7 +263,8 @@ LoadSharedModel(NewShipType, "ter_fenris")
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'LtTerSlash', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable', 'ter_fenris_blob_turret', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'LtTerSlash', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable',
+    'ter_fenris_blob_turret', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'FusionMortar', 'Weapon_Missile', 'Weapon', 'Innate', 'Damageable',
     'ter_fenrismissile', '', '', '', '', '', '', '', '')
 
@@ -284,7 +285,7 @@ setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120)
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'TerranCruiser', '')
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'TerranCruiser', '')
 
 --------------------------------------------------
 --- Weapons
