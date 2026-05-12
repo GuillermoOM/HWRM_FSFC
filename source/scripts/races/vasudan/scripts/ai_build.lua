@@ -28,7 +28,7 @@ function CpuBuild_UpdateRaceVariables()
 	kDestroyer = Util_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = Util_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kBattleCruiser = Util_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
-	kCarrier = VAS_TYPHON
+	kCarrier = Util_PickBestShip(VAS_TYPHON, VAS_TYPHON_FS1)
 	kResearch = VAS_IMHOTEP
 	kAWACS = VAS_SETEKH
 end
@@ -59,12 +59,27 @@ function DetermineDemandWithNoCounterInfo_Vasudan()
 end
 
 function DetermineSpecialDemand_Vasudan()
-	if (GetRU() > 2000) then
-		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 10) then
+	local currentRU = GetRU()
+	if (currentRU > 2000) then
+		-- Vasudans love their bombers
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 35) then
 			ShipDemandAdd(kInterceptor, 1.5)
 		end
-		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 5) then
-			ShipDemandAdd(kBomber, 1.2)
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 30) then
+			ShipDemandAdd(kBomber, 2.0)
+		end
+
+		-- Production capacity
+		if (currentRU > 10000) then
+			if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < 4) then
+				ShipDemandAdd(kCarrier, 1.1)
+			end
+		end
+
+		-- High resource aggression
+		if (currentRU > 50000) then
+			ShipDemandAdd(kDestroyer, 0.5)
+			ShipDemandAdd(kBattleCruiser, 0.5)
 		end
 	end
 end

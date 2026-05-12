@@ -44,7 +44,7 @@ setPenetration(
 )
 
 setAccuracy(
-NewWeaponType,
+	NewWeaponType,
 	1,
 	{ Swarmer = 0.01 },
 	{ SpaceMine = 0.35 },
@@ -58,7 +58,7 @@ NewWeaponType,
 	{ munition = 0.13 },
 	{ Frigate = 0.80 },
 	{ Resource = 0.80 },
-	{ SmallCapitalShip = 0.80 },
-	{ BigCapitalShip = 0.80 },
-	{ ResourceLarge = 0.60 }
+	{ SmallCapitalShip = 0.00 },
+	{ BigCapitalShip = 0.00 },
+	{ ResourceLarge = 0.00 }
 )

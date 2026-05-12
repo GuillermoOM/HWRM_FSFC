@@ -12,8 +12,8 @@ kInterceptorFS2 = TER_PERSEUS
 kInterceptorFS1 = TER_APOLLO
 kHeavyFighterFS2 = TER_MYRMIDON
 kHeavyFighterFS1 = TER_VALKYRIE
-kBomberFS2 = TER_HERCULESMK2
-kBomberFS1 = TER_ATHENA
+kBomberFS2 = TER_ARTEMIS
+kBomberFS1 = TER_ZEUS
 kDestroyerFS2 = TER_DEIMOS
 kDestroyerFS1 = TER_FENRIS_FS1
 kMissileDestroyerFS2 = TER_AEOLUS
@@ -28,7 +28,7 @@ function CpuBuild_UpdateRaceVariables()
 	kDestroyer = Util_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = Util_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kBattleCruiser = Util_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
-	kCarrier = kBattleCruiserFS1 -- Defaults
+	kCarrier = Util_PickBestShip(TER_HECATE, TER_ORION_FS1)
 	kResearch = TER_FAUSTUS
 	kAWACS = TER_CHARYBDIS
 end
@@ -60,12 +60,27 @@ function DetermineDemandWithNoCounterInfo_Terran()
 end
 
 function DetermineSpecialDemand_Terran()
-	if (GetRU() > 2000) then
-		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 10) then
+	local currentRU = GetRU()
+	if (currentRU > 2000) then
+		-- Increase fighter/bomber caps for "Expert" feel
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 30) then
 			ShipDemandAdd(kInterceptor, 1.5)
 		end
-		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 5) then
-			ShipDemandAdd(kBomber, 1.2)
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 20) then
+			ShipDemandAdd(kBomber, 1.8)
+		end
+		
+		-- Alleviate production bottleneck by demanding more carriers
+		if (currentRU > 10000) then
+			if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < 4) then
+				ShipDemandAdd(kCarrier, 1.0)
+			end
+		end
+
+		-- Persistent Destroyer/Battlecruiser demand if rich
+		if (currentRU > 50000) then
+			ShipDemandAdd(kDestroyer, 0.5)
+			ShipDemandAdd(kBattleCruiser, 0.5)
 		end
 	end
 end

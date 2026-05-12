@@ -1,69 +1,69 @@
-supplyLimit("Fighter", 125);
+supplyLimit("Fighter", 300);
 
-supplyLimit("Scout", 30);
-supplyLimit("Interceptor", 125);
-supplyLimit("Bomber", 125);
-supplyLimit("LanceFighter", 125);
-supplyLimit("Defenders", 30);
-supplyLimit("Defensefighters", 20);
-supplyLimit("CloakedFighters", 30);
+supplyLimit("Scout", 300);
+supplyLimit("Interceptor", 300);
+supplyLimit("Bomber", 300);
+supplyLimit("LanceFighter", 300);
+supplyLimit("Defenders", 50);
+supplyLimit("Defensefighters", 50);
+supplyLimit("CloakedFighters", 50);
 --
 -- Vaygr FamilyOverride Fighter 205
 -- Vaygr ShipOverride Interceptor 175
 -- Vaygr ShipOverride Bomber 175
 --
-supplyLimit("Corvette", 75);
+supplyLimit("Corvette", 150);
 
-supplyLimit("MinelayerCorvette",8);
-supplyLimit("CommandCorvette",4);
-supplyLimit("SalvageCorvette",22);
+supplyLimit("MinelayerCorvette",15);
+supplyLimit("CommandCorvette",10);
+supplyLimit("SalvageCorvette",45);
 --
 -- Vaygr FamilyOverride Corvette 100
 --
-supplyLimit("Frigate", 35);
+supplyLimit("Frigate", 100);
 
-supplyLimit("DefenseFieldFrigate",4);
-supplyLimit("CaptureFrigate",10);
+supplyLimit("DefenseFieldFrigate",10);
+supplyLimit("CaptureFrigate",20);
 --
-supplyLimit("Capital", 27);
+supplyLimit("Capital", 50);
 
-supplyLimit("Destroyer", 11);
-supplyLimit("MissileDestroyer", 6);	
-supplyLimit("Carrier", 5);
-supplyLimit("Battlecruiser",6);
-supplyLimit("HeavyCruiser",6);
-supplyLimit("Shipyard", 1);
+supplyLimit("Destroyer", 15);
+supplyLimit("MissileDestroyer", 10);	
+supplyLimit("Carrier", 10);
+supplyLimit("Battlecruiser",15);
+supplyLimit("HeavyCruiser",15);
+supplyLimit("Shipyard", 2);
 --
-supplyLimit("Utility", 71);
+supplyLimit("Utility", 100);
 
-supplyLimit("Probe", 12);
-supplyLimit("ECMProbe", 12);
-supplyLimit("ProximitySensor", 12);
+supplyLimit("Probe", 25);
+supplyLimit("ECMProbe", 25);
+supplyLimit("ProximitySensor", 25);
 --
-supplyLimit("Resource", 35);
+supplyLimit("Resource", 60);
 
-supplyLimit("ResourceCollector", 30);
-supplyLimit("ResourceController", 5);
+supplyLimit("ResourceCollector", 45);
+supplyLimit("ResourceController", 10);
 --
-supplyLimit("NonCombat", 60);
+supplyLimit("NonCombat", 100);
 
-supplyLimit("Probe_hw1", 12);
-supplyLimit("ProximitySensor_hw1", 12);
-supplyLimit("Research", 1);
-supplyLimit("Research1", 1);
-supplyLimit("Research2", 1);
-supplyLimit("Research3", 1);
-supplyLimit("Research4", 1);
-supplyLimit("Research5", 1);
+supplyLimit("Probe_hw1", 25);
+supplyLimit("ProximitySensor_hw1", 25);
+supplyLimit("Research", 5);
+supplyLimit("Research1", 5);
+supplyLimit("Research2", 5);
+supplyLimit("Research3", 5);
+supplyLimit("Research4", 5);
+supplyLimit("Research5", 5);
 supplyLimit("CloakGenerator", 10);
 supplyLimit("GravWellGenerator", 10);
 supplyLimit("SensorArray", 10);
 --
-supplyLimit("Platform", 35);
+supplyLimit("Platform", 50);
 
-supplyLimit("HyperspacePlatform", 10);
+supplyLimit("HyperspacePlatform", 15);
 --
-supplyLimit("Mothership", 1);
+supplyLimit("Mothership", 2);
 --
 supplyLimit("SinglePlayerMisc", 100);
 
@@ -139,23 +139,23 @@ supplyShow("Research5", "Never");
 
 
 -- Freespace Custom Families
-supplyLimit("Cruiser", 25)
-supplyLimit("AdvancedCruiser", 5)
-supplyLimit("Destroyer", 2)
-supplyLimit("Deimos", 5)
-supplyLimit("Hades", 1)
-supplyLimit("Colossus", 1)
-supplyLimit("Installation", 1)
-supplyLimit("Iceni", 1)
-supplyLimit("Ares", 20)
-supplyLimit("ArtemisDH", 20)
-supplyLimit("AWACS", 2)
-supplyLimit("Faustus", 1)
-supplyLimit("Moloch", 5)
-supplyLimit("Sobek", 5)
-supplyLimit("Lucifer", 1)
-supplyLimit("Sathanas", 1)
-supplyLimit("Imhotep", 1)
+supplyLimit("Cruiser", 75)
+supplyLimit("AdvancedCruiser", 20)
+supplyLimit("Destroyer", 10)
+supplyLimit("Deimos", 20)
+supplyLimit("Hades", 4)
+supplyLimit("Colossus", 2)
+supplyLimit("Installation", 4)
+supplyLimit("Iceni", 2)
+supplyLimit("Ares", 40)
+supplyLimit("ArtemisDH", 40)
+supplyLimit("AWACS", 10)
+supplyLimit("Faustus", 4)
+supplyLimit("Moloch", 15)
+supplyLimit("Sobek", 15)
+supplyLimit("Lucifer", 2)
+supplyLimit("Sathanas", 2)
+supplyLimit("Imhotep", 4)
 
 -- Show Freespace families
 supplyShow("Cruiser", "Always")

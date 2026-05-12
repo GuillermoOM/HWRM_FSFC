@@ -17,13 +17,7 @@ if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
 
 -- AI Research Variable Mappings (Engine provided)
 
-kCollector = TER_ELYSIUM
-kRefinery = TER_ZEPHYRUS
-kInterceptor = TER_VALKYRIE
-kBomber = TER_ZEUS
-kDestroyer = TER_DEIMOS
-kBattleCruiser = TER_ORION
-kCarrier = TER_HECATE
+-- Global variables like kBomber, kInterceptor etc are set by ai_build.lua
 
 function Util_CheckResearch_Terran(id)
 	if (id == nil or id == -1) then
@@ -62,24 +56,30 @@ function DoResearchTechDemand_Terran()
 	--we start each category by asking how much it wants to build each class, then subdividing based off what other shit it wants.
 	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
 	aitrace("  Fighter class demand: " .. tostring(fighterdemand))
-	--print("Fighter demand is "..fighterdemand)
 	if fighterdemand > 0 then
 		if Util_CheckResearch_Terran(FIGHTERDESIGN) then
-			aitrace("    Setting demand for FighterDesign")
 			ResearchDemandSet_Terran(FIGHTERDESIGN, fighterdemand + 1.0)
-			FSFC_Log_Research("Apollo")
 		end
-		-- Tier 1 is FighterDesign (unblocks Apollo)
 
-		-- Tier 2 (Requires Apollo)
-		local numApollo = NumSquadrons_Terran(TER_APOLLO)
-		if numApollo > 0 then
-			if Util_CheckResearch_Terran(VALKYRIE) then
-				local antifighterdemand = ShipDemandMaxByClass(eAntiFighter)
-				if antifighterdemand > 0 then
-					ResearchDemandSet_Terran(VALKYRIE, fighterdemand + antifighterdemand + 1.0)
-					FSFC_Log_Research("Valkyrie")
+		-- Era-aware Tier 1
+		local baseFighter = kInterceptor -- Usually Apollo (FS1) or Perseus (FS2)
+		if Util_CheckResearch_Terran(FIGHTERDESIGN) == nil then -- Already done
+			if IsResearchDone(FS2) == 1 then
+				if Util_CheckResearch_Terran(PERSEUS) then
+					ResearchDemandSet_Terran(PERSEUS, fighterdemand + 1.0)
 				end
+			else
+				if Util_CheckResearch_Terran(APOLLO) then
+					ResearchDemandSet_Terran(APOLLO, fighterdemand + 1.0)
+				end
+			end
+		end
+
+		-- Tier 2+
+		local numFighters = NumSquadrons_Terran(kInterceptor)
+		if numFighters > 0 then
+			if Util_CheckResearch_Terran(VALKYRIE) then
+				ResearchDemandSet_Terran(VALKYRIE, fighterdemand + 1.0)
 			end
 			if Util_CheckResearch_Terran(HERCULES) then
 				ResearchDemandSet_Terran(HERCULES, fighterdemand + 1.0)
@@ -89,43 +89,12 @@ function DoResearchTechDemand_Terran()
 			end
 		end
 
-		-- Tier 3 (Requires Valkyrie, Hercules, or Ulysses)
-		local numValkyrie = NumSquadrons_Terran(TER_VALKYRIE)
-		if numValkyrie > 0 then
-			if Util_CheckResearch_Terran(PERSEUS) then
-				local antifighterdemand = ShipDemandMaxByClass(eAntiFighter)
-				if antifighterdemand > 0 then
-					ResearchDemandSet_Terran(PERSEUS, fighterdemand + antifighterdemand + 1.0)
-					FSFC_Log_Research("Perseus")
+		if IsResearchDone(FS2) == 1 then
+			local numHercules = NumSquadrons_Terran(TER_HERCULES)
+			if numHercules > 0 then
+				if Util_CheckResearch_Terran(HERCULESMK2) then
+					ResearchDemandSet_Terran(HERCULESMK2, fighterdemand + 1.0)
 				end
-			end
-			if Util_CheckResearch_Terran(PEGASUS) then
-				local scoutdemand = ShipDemandMaxByClass(eFighter)
-				if scoutdemand > 0 then
-					ResearchDemandSet_Terran(PEGASUS, scoutdemand + 1.0)
-				end
-			end
-		end
-
-		local numHercules = NumSquadrons_Terran(TER_HERCULES)
-		if numHercules > 0 then
-			if Util_CheckResearch_Terran(HERCULESMK2) then
-				ResearchDemandSet_Terran(HERCULESMK2, fighterdemand + 1.0)
-			end
-		end
-
-		-- Tier 4 (Requires Perseus or Mk2)
-		local numPerseus = NumSquadrons_Terran(TER_PERSEUS)
-		if numPerseus > 0 then
-			if Util_CheckResearch_Terran(ARES) then
-				ResearchDemandSet_Terran(ARES, fighterdemand + 1.0)
-			end
-		end
-
-		local numMk2 = NumSquadrons_Terran(TER_HERCULESMK2)
-		if numMk2 > 0 then
-			if Util_CheckResearch_Terran(ERINYES) then
-				ResearchDemandSet_Terran(ERINYES, fighterdemand + 1.0)
 			end
 		end
 	end
@@ -136,31 +105,37 @@ function DoResearchTechDemand_Terran()
 			ResearchDemandSet_Terran(BOMBERDESIGN, bomberdemand + 1.0)
 		end
 
-		-- Tier 2
-		local numZeus = NumSquadrons_Terran(TER_ZEUS)
-		if numZeus > 0 then
-			if Util_CheckResearch_Terran(ARTEMIS) then
-				ResearchDemandSet_Terran(ARTEMIS, bomberdemand + 1.0)
-				FSFC_Log_Research("Artemis")
+		-- Era-aware progression
+		if IsResearchDone(FS2) == 1 then
+			-- FS2 Branch
+			if Util_CheckResearch_Terran(ZEUS) then
+				ResearchDemandSet_Terran(ZEUS, bomberdemand + 1.0)
 			end
-		end
-
-		-- Tier 3
-		local numArtemis = NumSquadrons_Terran(TER_ARTEMIS)
-		if numArtemis > 0 then
-			if Util_CheckResearch_Terran(MEDUSA) then
-				ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.0)
-				FSFC_Log_Research("Medusa")
+			local numZeus = NumSquadrons_Terran(TER_ZEUS)
+			if numZeus > 0 then
+				if Util_CheckResearch_Terran(ARTEMIS) then
+					ResearchDemandSet_Terran(ARTEMIS, bomberdemand + 1.0)
+				end
 			end
-			if Util_CheckResearch_Terran(URSA) then
-				ResearchDemandSet_Terran(URSA, bomberdemand + 1.0)
-				FSFC_Log_Research("Ursa")
+			local numArtemis = NumSquadrons_Terran(TER_ARTEMIS)
+			if numArtemis > 0 then
+				if Util_CheckResearch_Terran(MEDUSA) then
+					ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.5)
+				end
+				if Util_CheckResearch_Terran(URSA) then
+					ResearchDemandSet_Terran(URSA, bomberdemand + 1.2)
+				end
 			end
-			if Util_CheckResearch_Terran(BOANERGES) then
-				ResearchDemandSet_Terran(BOANERGES, bomberdemand + 1.0)
+		else
+			-- FS1 Branch: Medusa is a direct upgrade or available earlier
+			if Util_CheckResearch_Terran(ZEUS) then
+				ResearchDemandSet_Terran(ZEUS, bomberdemand + 1.0)
 			end
-			if Util_CheckResearch_Terran(ARTEMISDH) then
-				ResearchDemandSet_Terran(ARTEMISDH, bomberdemand + 1.0)
+			local numZeus = NumSquadrons_Terran(TER_ZEUS)
+			if numZeus > 0 or Util_CheckResearch_Terran(ZEUS) == nil then
+				if Util_CheckResearch_Terran(MEDUSA) then
+					ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.5)
+				end
 			end
 		end
 	end

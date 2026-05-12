@@ -1,12 +1,12 @@
-supplyLimit("Fighter", 100);
+supplyLimit("Fighter", 200);
 
-supplyLimit("Scout", 24);
-supplyLimit("Interceptor", 100);
-supplyLimit("Bomber", 100);
-supplyLimit("LanceFighter", 95);
-supplyLimit("Defenders", 25);
-supplyLimit("Defensefighters", 15);
-supplyLimit("CloakedFighters", 25);
+supplyLimit("Scout", 150);
+supplyLimit("Interceptor", 200);
+supplyLimit("Bomber", 150);
+supplyLimit("LanceFighter", 200);
+supplyLimit("Defenders", 40);
+supplyLimit("Defensefighters", 40);
+supplyLimit("CloakedFighters", 40);
 --
 -- Vaygr FamilyOverride Fighter 170
 -- Vaygr ShipOverride Interceptor 140
@@ -14,61 +14,61 @@ supplyLimit("CloakedFighters", 25);
 --
 supplyLimit("Corvette", 60);
 
-supplyLimit("MinelayerCorvette",6);
-supplyLimit("CommandCorvette",3);
-supplyLimit("SalvageCorvette",18);
+supplyLimit("MinelayerCorvette",12);
+supplyLimit("CommandCorvette",8);
+supplyLimit("SalvageCorvette",30);
 --
 -- Vaygr FamilyOverride Corvette 80
 --
-supplyLimit("Frigate", 30);
+supplyLimit("Frigate", 50);
 
-supplyLimit("DefenseFieldFrigate",3);
-supplyLimit("CaptureFrigate",8);		
+supplyLimit("DefenseFieldFrigate",6);
+supplyLimit("CaptureFrigate",15);		
 --
 -- Kushan FamilyOverride Frigate 24
 -- Taiidan FamilyOverride Frigate 24	
 --
-supplyLimit("Capital", 21);
+supplyLimit("Capital", 20);
 	
-supplyLimit("Destroyer", 9);
+supplyLimit("Destroyer", 5);
 supplyLimit("MissileDestroyer", 4);
 supplyLimit("Carrier", 4);
-supplyLimit("Battlecruiser",4);
-supplyLimit("HeavyCruiser",4);
+supplyLimit("Battlecruiser",5);
+supplyLimit("HeavyCruiser",5);
 supplyLimit("Shipyard", 1);
 --
-supplyLimit("Utility", 55);
+supplyLimit("Utility", 60);
 
-supplyLimit("Probe", 8);
-supplyLimit("ECMProbe", 8);
-supplyLimit("ProximitySensor", 8);
+supplyLimit("Probe", 18);
+supplyLimit("ECMProbe", 18);
+supplyLimit("ProximitySensor", 18);
 --
-supplyLimit("Resource", 31);
+supplyLimit("Resource", 45);
 
-supplyLimit("ResourceCollector", 26);
-supplyLimit("ResourceController", 5);
+supplyLimit("ResourceCollector", 30);
+supplyLimit("ResourceController", 6);
 --
-supplyLimit("NonCombat", 40);
+supplyLimit("NonCombat", 60);
 
-supplyLimit("Probe_hw1", 8);
-supplyLimit("ProximitySensor_hw1", 8);
+supplyLimit("Probe_hw1", 18);
+supplyLimit("ProximitySensor_hw1", 18);
 supplyLimit("Research", 1);
 supplyLimit("Research1", 1);
 supplyLimit("Research2", 1);
 supplyLimit("Research3", 1);
 supplyLimit("Research4", 1);
 supplyLimit("Research5", 1);
-supplyLimit("CloakGenerator", 6);
-supplyLimit("GravWellGenerator", 6);
-supplyLimit("SensorArray", 6);
+supplyLimit("CloakGenerator", 8);
+supplyLimit("GravWellGenerator", 8);
+supplyLimit("SensorArray", 8);
 --
-supplyLimit("Platform", 30);
+supplyLimit("Platform", 35);
 
-supplyLimit("HyperspacePlatform", 8);
+supplyLimit("HyperspacePlatform", 10);
 --
 supplyLimit("Mothership", 1);
 --
-supplyLimit("SinglePlayerMisc", 100);
+supplyLimit("SinglePlayerMisc", 60);
 
 
 
@@ -143,23 +143,23 @@ supplyShow("Research5", "Never");
 
 
 -- Freespace Custom Families
-supplyLimit("Cruiser", 25)
-supplyLimit("AdvancedCruiser", 5)
-supplyLimit("Destroyer", 2)
-supplyLimit("Deimos", 5)
-supplyLimit("Hades", 1)
+supplyLimit("Cruiser", 40)
+supplyLimit("AdvancedCruiser", 10)
+supplyLimit("Destroyer", 5)
+supplyLimit("Deimos", 10)
+supplyLimit("Hades", 2)
 supplyLimit("Colossus", 1)
-supplyLimit("Installation", 1)
+supplyLimit("Installation", 2)
 supplyLimit("Iceni", 1)
-supplyLimit("Ares", 20)
-supplyLimit("ArtemisDH", 20)
-supplyLimit("AWACS", 2)
-supplyLimit("Faustus", 1)
-supplyLimit("Moloch", 5)
-supplyLimit("Sobek", 5)
+supplyLimit("Ares", 25)
+supplyLimit("ArtemisDH", 25)
+supplyLimit("AWACS", 5)
+supplyLimit("Faustus", 2)
+supplyLimit("Moloch", 10)
+supplyLimit("Sobek", 10)
 supplyLimit("Lucifer", 1)
 supplyLimit("Sathanas", 1)
-supplyLimit("Imhotep", 1)
+supplyLimit("Imhotep", 2)
 
 -- Show Freespace families
 supplyShow("Cruiser", "Always")

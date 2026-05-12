@@ -20,6 +20,12 @@ if not AI_Telemetry_Loaded then
             FSFC_ResearchLogged[researchName] = 1
         end
     end
+    function FSFC_Log_Threat()
+        if (FSFC_LastThreatTime == nil or gameTime() > FSFC_LastThreatTime + 30) then
+            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: " .. s_enemyIndex)
+            FSFC_LastThreatTime = gameTime()
+        end
+    end
     
     print("[AI_DIAG] Initialized for Player " .. s_playerIndex)
 end

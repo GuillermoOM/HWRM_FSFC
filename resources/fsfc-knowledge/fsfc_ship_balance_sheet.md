@@ -24,8 +24,8 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 ## Weaponry Matrix (Accuracy & Penetration)
 | Weapon | Dmg | ROF | DPS | Range | Acc: F/C/Fr/Cp | Pen: Un/Lt/Md/Hv |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| beam_AABlue | 77.0 | 1.0 | **77.0** | 4500.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
-| beam_AARed | 77.0 | 1.0 | **77.0** | 4500.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
+| beam_AABlue | 77.0 | 1.0 | **77.0** | 4500.0 | 0.7/0.8/0.8/0 | 1/0.8/0.4/0.2 |
+| beam_AARed | 77.0 | 1.0 | **77.0** | 4500.0 | 0.7/0.8/0.8/0 | 1/0.8/0.4/0.2 |
 | Beam_MjolnirBeam | 25000.0 | 1.0 | **25000.0** | 10000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_sgold | 8250.0 | 1.0 | **8250.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_slashgreen | 3850.0 | 1.0 | **3850.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |

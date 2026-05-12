@@ -395,6 +395,7 @@ function CpuBuild_Process()
 			return 1
 		end
 	end
+	if (FSFC_Log_Threat) then FSFC_Log_Threat() end
 	return 0
 end
 

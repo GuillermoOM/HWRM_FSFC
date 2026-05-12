@@ -28,11 +28,11 @@ supplyLimit("CaptureFrigate",6);
 -- Kushan FamilySupplyOverride Frigate 24
 -- Taiidan FamilySupplyOverride Frigate 24		
 --
-supplyLimit("Capital", 13);
+supplyLimit("Capital", 10);
 
-supplyLimit("Destroyer", 6);
+supplyLimit("Destroyer", 2);
 supplyLimit("MissileDestroyer", 2);
-supplyLimit("Carrier", 4);
+supplyLimit("Carrier", 2);
 supplyLimit("Battlecruiser",2);
 supplyLimit("HeavyCruiser",2);
 supplyLimit("Shipyard", 1);
@@ -41,17 +41,17 @@ supplyLimit("Shipyard", 1);
 -- Vaygr FamilySupplyOverride Capital 15
 --
 
-supplyLimit("Utility", 44);
+supplyLimit("Utility", 40);
 
-supplyLimit("Probe", 6);
-supplyLimit("ECMProbe", 6);
-supplyLimit("ProximitySensor", 6);
+supplyLimit("Probe", 12);
+supplyLimit("ECMProbe", 12);
+supplyLimit("ProximitySensor", 12);
 
 --
-supplyLimit("NonCombat", 30);
+supplyLimit("NonCombat", 40);
 
-supplyLimit("Probe_hw1", 6);
-supplyLimit("ProximitySensor_hw1", 6);
+supplyLimit("Probe_hw1", 12);
+supplyLimit("ProximitySensor_hw1", 12);
 supplyLimit("CloakGenerator", 4);
 supplyLimit("GravWellGenerator", 4);
 supplyLimit("SensorArray", 4);
@@ -64,19 +64,19 @@ supplyLimit("Research4", 1);
 supplyLimit("Research5", 1);
 
 --
-supplyLimit("Resource", 26);
+supplyLimit("Resource", 30);
 
-supplyLimit("ResourceCollector", 22);
+supplyLimit("ResourceCollector", 20);
 supplyLimit("ResourceController", 4);
 
 --
-supplyLimit("Platform", 21);
+supplyLimit("Platform", 20);
 
-supplyLimit("HyperspacePlatform", 6);
+supplyLimit("HyperspacePlatform", 4);
 --
 supplyLimit("Mothership", 1);
 --
-supplyLimit("SinglePlayerMisc", 100);
+supplyLimit("SinglePlayerMisc", 40);
 
 
 
@@ -149,11 +149,6 @@ supplyShow("Research5", "Never");
 
 
 -- Freespace Custom Families
-supplyLimit("Cruiser", 25)
-supplyLimit("AdvancedCruiser", 5)
-supplyLimit("Deimos", 5)
-supplyLimit("Hades", 1)
-supplyLimit("Colossus", 1)
 supplyLimit("Installation", 1)
 supplyLimit("Iceni", 1)
 supplyLimit("Ares", 20)

@@ -28,7 +28,7 @@ function CpuBuild_UpdateRaceVariables()
 	kDestroyer = Util_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = Util_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kBattleCruiser = Util_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
-	kCarrier = SHI_DEMON
+	kCarrier = Util_PickBestShip(SHI_DEMON, SHI_DEMON_FS1)
 	kResearch = SHI_COMMNODE
 	kAWACS = SHI_COMMNODE
 end
@@ -63,12 +63,27 @@ function DetermineDemandWithNoCounterInfo_Shivan()
 end
 
 function DetermineSpecialDemand_Shivan()
-	if (GetRU() > 2000) then
-		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 10) then
-			ShipDemandAdd(kInterceptor, 1.5)
+	local currentRU = GetRU()
+	if (currentRU > 2000) then
+		-- Shivans should be more swarming
+		if (NumSquadrons(kInterceptor) + NumSquadronsQ(kInterceptor) < 40) then
+			ShipDemandAdd(kInterceptor, 1.8)
 		end
-		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 5) then
-			ShipDemandAdd(kBomber, 1.2)
+		if (NumSquadrons(kBomber) + NumSquadronsQ(kBomber) < 25) then
+			ShipDemandAdd(kBomber, 1.5)
+		end
+
+		-- Production capacity
+		if (currentRU > 10000) then
+			if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < 4) then
+				ShipDemandAdd(kCarrier, 1.2)
+			end
+		end
+
+		-- High resource aggression
+		if (currentRU > 50000) then
+			ShipDemandAdd(kDestroyer, 0.6)
+			ShipDemandAdd(kBattleCruiser, 0.6)
 		end
 	end
 end
