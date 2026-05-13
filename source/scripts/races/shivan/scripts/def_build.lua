@@ -48,7 +48,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_astaroth",
-		RequiredResearch = "FighterDesign",
+		RequiredResearch = "Astaroth",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "SF Astaroth - Interceptor <c=12AB06>30s</c>",

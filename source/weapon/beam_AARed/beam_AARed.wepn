@@ -60,5 +60,6 @@ setAccuracy(
 	{ Resource = 0.80 },
 	{ SmallCapitalShip = 0.00 },
 	{ BigCapitalShip = 0.00 },
-	{ ResourceLarge = 0.00 }
+	{ ResourceLarge = 0.00 },
+	{ SubSystem = 0.00 }
 )

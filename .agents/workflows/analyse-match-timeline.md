@@ -2,7 +2,7 @@
 description: Perform a timeline analysis of the current match by reading the game logs, then provide a plan for recommendations by looking at AI behavior and balance sheets
 ---
 
-I need you to run the tool "timeline_analysis.py" and create a report of AI behavior and balancing, comparing with the current AI scripting behavior and "fsfc_ship_balance_sheet.md" for any needed information, performing any actions before approving shouldn't be permitted, just present recommendations and maybe ask questions.
+I need you to run the tool "timeline_analysis.py" and create a report of AI behavior and balancing, comparing with the current AI scripting behavior and "fsfc_ship_balance_sheet.md" for any needed information on all relevant ship and weapons statistics, performing any actions before approving shouldn't be permitted, just present recommendations and maybe ask questions.
 
 Give a full report stating timeline notes, highlights of the match, and any additional info that would help identify balancing issues or AI improvements.
 

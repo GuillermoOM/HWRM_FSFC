@@ -1,22 +1,22 @@
-supplyLimit("Fighter", 300);
+supplyLimit("Fighter", 1200);
 
-supplyLimit("Scout", 300);
-supplyLimit("Interceptor", 300);
-supplyLimit("Bomber", 300);
-supplyLimit("LanceFighter", 300);
-supplyLimit("Defenders", 50);
-supplyLimit("Defensefighters", 50);
-supplyLimit("CloakedFighters", 50);
+supplyLimit("Scout", 1200);
+supplyLimit("Interceptor", 1200);
+supplyLimit("Bomber", 900);
+supplyLimit("LanceFighter", 1200);
+supplyLimit("Defenders", 200);
+supplyLimit("Defensefighters", 200);
+supplyLimit("CloakedFighters", 200);
 --
 -- Vaygr FamilyOverride Fighter 205
 -- Vaygr ShipOverride Interceptor 175
 -- Vaygr ShipOverride Bomber 175
 --
-supplyLimit("Corvette", 150);
+supplyLimit("Corvette", 450);
 
-supplyLimit("MinelayerCorvette", 15);
-supplyLimit("CommandCorvette", 10);
-supplyLimit("SalvageCorvette", 45);
+supplyLimit("MinelayerCorvette", 45);
+supplyLimit("CommandCorvette", 30);
+supplyLimit("SalvageCorvette", 135);
 --
 -- Vaygr FamilyOverride Corvette 100
 --
@@ -147,9 +147,9 @@ supplyLimit("Hades", 4)
 supplyLimit("Colossus", 2)
 supplyLimit("Installation", 4)
 supplyLimit("Iceni", 2)
-supplyLimit("Ares", 40)
-supplyLimit("Erinyes", 30)
-supplyLimit("ArtemisDH", 40)
+supplyLimit("Ares", 160)
+supplyLimit("Erinyes", 120)
+supplyLimit("ArtemisDH", 120)
 supplyLimit("AWACS", 10)
 supplyLimit("Faustus", 4)
 supplyLimit("Moloch", 15)
@@ -169,13 +169,13 @@ supplyShow("Erinyes", "Always")
 supplyShow("Rakshasa", "Always")
 
 -- Layout Limits (Global Faction Caps)
-supplyLimit("LayoutFighter", 180)
-supplyLimit("LayoutCorvette", 180)
+supplyLimit("LayoutFighter", 720)
+supplyLimit("LayoutCorvette", 540)
 supplyLimit("LayoutFrigate", 180)
 supplyLimit("LayoutDestroyer", 180)
 supplyLimit("LayoutBattleCruiser", 180)
 supplyLimit("LayoutResource", 180)
-supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutBomber", 540)
 supplyLimit("LayoutCruiser", 180)
 
 -- Display Rules (Hide Layout Caps)

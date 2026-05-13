@@ -60,3 +60,4 @@ end
 - **Queue Headroom**: Avoid clogging the queue with cheap units if high-tier tech is available (see [Elite Suppression Skill](../ai_fleet_diversification/how_to_implement.md)).
 - **Liquidity**: If the AI has > 10,000 RUs and is not building, check for unit cap lockouts or missing `k*` variable assignments.
 - **Scaling**: In late-game, increase the backbone caps to allow the AI to scale its economy into a massive fleet.
+- **Removing Economic Gates**: (CRITICAL) Never use `currentRU > 2000` checks in `ai_build.lua` for primary unit production. This causes the AI to stall during combat when RU income is erratic, leading to a death spiral. Rely on the engine's internal budgeter instead.

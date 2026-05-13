@@ -11,6 +11,10 @@ Search the ship's `.ship` file for all `setSupplyValue` calls. A ship can belong
 -- Example: GTF Loki
 setSupplyValue(NewShipType, 'Fighter', 4.0)
 setSupplyValue(NewShipType, 'Scout', 4.0)
+
+-- RULE: Supply Value SHOULD match SquadronSize for strike craft (Fighters/Bombers).
+-- This ensures 1 Wing = SquadronSize units of capacity.
+
 ```
 
 ### 2. Define Limits in Game Mode Rules
@@ -56,7 +60,20 @@ If a ship needs a unique cap (e.g., GTF Erinyes), you must register it as a `uni
 3.  **Update `unitcaps/*.lua`**:
     *   Add `supplyLimit("Erinyes", 12)`.
 
+### 6. Standardizing Squadron Size and Build Batch
+In the FSFC mod, strike craft variables should be wrapped in `getShipNum` to allow for global tuning.
+
+```lua
+-- GTF Apollo Example
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 4)
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 4)
+```
+- **Fighters/Scouts**: Default to 4.
+- **Bombers**: Default to 3.
+- **Ursa/Assault**: Default to 3 (or 2 for extreme balance).
+
 ## Pattern: Backbone vs Elite Capacity Split
+
 Large mods often suffer from "Fighter Swarms" where low-tier units consume all unitcap slots, preventing the AI from building heavy support. This pattern uses tiered families to differentiate capacity pools.
 
 ### 1. Backbone Units (Mass Produced)
@@ -84,6 +101,10 @@ supplyIndent("EliteCruiser", 1) -- Nest under Cruiser for UI clarity
 
 ## Critical Rules
 
+- **Wing-Based Scaling**: When `supplyValue` matches `SquadronSize`, you can balance in "Wings".
+    - 160 capacity = 10 Fighter Wings (4*4=16 each).
+    - 90 capacity = 10 Bomber Wings (3*3=9 each).
 - **Total Coverage**: If a ship has 3 family tags, ALL 3 must have a limit > 0 defined in the active `.lua` cap file, or the ship will be locked out (0/0 capacity).
 - **Consistency**: Always use the same limits across Small/Normal/Large/Huge files unless a specific balance scaling is desired.
 - **Engine Priority**: `unitcaps` are hard limits. If the AI script demands a ship but the `unitcap` is reached, the build order will fail silently in the background.
+

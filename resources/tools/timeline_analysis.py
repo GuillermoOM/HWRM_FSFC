@@ -25,7 +25,7 @@ def analyze_timeline(log_path):
     
     re_research = re.compile(r"(?:\[(\d+)s\] )?\[AI_DIAG\] (P\d) \| RESEARCH \| Target: ([\w\s&]+)")
     re_want = re.compile(r"(?:\[(\d+)s\] )?\[AI_DIAG\] (P\d) \| WANT \| ([\w\s&]+) \| Demand: ([\d.]+)")
-    re_threat = re.compile(r"(?:\[(\d+)s\] )?\[AI_DIAG\] (P\d) \| THREAT \| Self: (\d+) \| EnemyTotal: (\d+)")
+    re_threat = re.compile(r"(?:\[(\d+)s\] )?\[AI_DIAG\] (P\d) \| THREAT \| Self: (\d+) \| EnemyTotal: (\d+) \| TargetP: (-?\d+)")
 
     with open(log_path, 'r', errors='ignore') as f:
         for line in f:
@@ -113,7 +113,8 @@ def analyze_timeline(log_path):
                 p = thr.group(2)
                 self_t = int(thr.group(3))
                 enem_t = int(thr.group(4))
-                player_stats[p]['threats'].append((line_time, self_t, enem_t))
+                target_p = int(thr.group(5))
+                player_stats[p]['threats'].append((line_time, self_t, enem_t, target_p))
                 continue
 
     # Sort events by time
@@ -167,7 +168,7 @@ def analyze_timeline(log_path):
         print(f"\n[{p}] Status History:")
         threats = sorted(player_stats[p]['threats'])
         last_shown = -999
-        for t, self_t, enem_t in threats:
+        for t, self_t, enem_t, target_p in threats:
             if t - last_shown >= 300 or t == threats[-1][0]:
                 mins = t // 60
                 time_str = f"{mins:02d}m"
@@ -181,7 +182,8 @@ def analyze_timeline(log_path):
                 if p_wants:
                     top_want = sorted(p_wants, key=lambda x: x[1], reverse=True)[0][0]
                 
-                print(f"  {time_str:4}: Threat: {self_t:3} vs {enem_t:3} | Top Want: {top_want}")
+                threat_target = f"P{target_p}" if target_p != -1 else "None"
+                print(f"  {time_str:4}: Threat: {self_t:3} vs {enem_t:3} | Target: {threat_target:5} | Top Want: {top_want}")
                 last_shown = t
 
     print("\n--- TECH VELOCITY (Interval Snapshots) ---")

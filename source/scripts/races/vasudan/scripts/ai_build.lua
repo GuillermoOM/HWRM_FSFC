@@ -43,7 +43,10 @@ function CpuBuild_UpdateRaceVariables()
 	kBomber = kBomberMedium -- Backward compatibility
 	kDestroyer = FSFC_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = FSFC_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
-	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
+	-- Backbone Cruiser resolution
+	kCruiser = FSFC_PickBestShip(VAS_ATEN, VAS_ATEN_FS1)
+	kHeavyCruiser = VAS_MENTU
+	
 	kCarrier = FSFC_PickBestShip(VAS_TYPHON, VAS_TYPHON_FS1)
 	kResearch = VAS_IMHOTEP
 	kAWACS = VAS_SETEKH
@@ -62,14 +65,14 @@ function DetermineDemandWithNoCounterInfo_Vasudan()
 		frigateDemand = frigateDemand + 0.5
 	end
 	
-	ShipDemandAddByClass(eFighter, fighterDemand)
-	ShipDemandAddByClass(eCorvette, corvetteDemand)
-	ShipDemandAddByClass(eFrigate, frigateDemand)
+	FSFC_ShipDemandAddByClass(eFighter, fighterDemand)
+	FSFC_ShipDemandAddByClass(eCorvette, corvetteDemand)
+	FSFC_ShipDemandAddByClass(eFrigate, frigateDemand)
 	
-	if (g_LOD >= 1) then
+	if (g_LOD >= 1 and kDestroyer ~= nil) then
 		ShipDemandAdd(kDestroyer, 0.25)
 	end
-	if (g_LOD >= 2) then
+	if (g_LOD >= 2 and kBattleCruiser ~= nil) then
 		ShipDemandAdd(kBattleCruiser, 0.5)
 	end
 end
@@ -92,13 +95,13 @@ function DetermineSpecialDemand_Vasudan()
 	end
 	
 	if (currentRU > 10000) then
-		fighterTarget = 80
+		fighterTarget = 100
 		bomberTarget = 120 -- Massive bomber surge
 		carrierTarget = 6
 		capDemand = 2.5
 		-- If Terrans are going big, we MUST have Sobeks AND Bombers
 		if (enemyCapCount > 8) then
-			fighterDemand = 0.4
+			fighterDemand = 1.0 -- Vasudans need screens too
 			bomberDemand = 4.0 -- Elite Bomber Rush
 			capDemand = 5.0
 		end
@@ -114,12 +117,16 @@ function DetermineSpecialDemand_Vasudan()
 		bomberDemand = 3.5
 	end
 
-	-- Recon Doctrine: Always have eyes on the field
-	local numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
-	if (s_militaryPop > 10 and numScouts < 1) then
-		ShipDemandAdd(kScout, 2.5)
-	elseif (s_militaryPop > 30 and numScouts < 2) then
-		ShipDemandAdd(kScout, 2.0)
+	-- Recon Doctrine: High persistence scouting
+	local numScouts = 0
+	if (kScout ~= nil) then
+		numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
+		if (numScouts < 3) then
+			ShipDemandAdd(kScout, 4.5)
+			FSFC_Log_Demand("Scouts", 4.5)
+		elseif (numScouts < 6) then
+			ShipDemandAdd(kScout, 2.5)
+		end
 	end
 
 	-- Panic Spending Mode (Preserve the Imperium)
@@ -131,22 +138,28 @@ function DetermineSpecialDemand_Vasudan()
 		fighterDemand = 2.5
 	end
 
-	-- Diversified Fighter Wing: Split target across roles
+	-- Elite Suppression: Throttle Thoth/Tauret if we lack backbone Interceptors
+	local suppression = 1.0
 	local numFInt = NumSquadrons(kFighterInterceptor) + NumSquadronsQ(kFighterInterceptor)
+	if (numFInt < 12) then
+		suppression = 0.4 -- Force Horus/Serapis
+	end
+
+	-- Diversified Fighter Wing: Split target across roles
 	local numFSup = NumSquadrons(kFighterSuperiority) + NumSquadronsQ(kFighterSuperiority)
 	local numFAss = NumSquadrons(kFighterAssault) + NumSquadronsQ(kFighterAssault)
 	local totalFighters = numFInt + numFSup + numFAss
 
 	if (totalFighters < fighterTarget) then
 		-- Vasudans favor their unique Space Superiority (Thoth) and Heavy Assault (Tauret)
-		if (numFSup < fighterTarget * 0.4) then
-			ShipDemandAdd(kFighterSuperiority, fighterDemand)
+		if (kFighterSuperiority ~= nil and numFSup < fighterTarget * 0.4) then
+			ShipDemandAdd(kFighterSuperiority, fighterDemand * suppression)
 		end
-		if (numFInt < fighterTarget * 0.3) then
+		if (kFighterInterceptor ~= nil and numFInt < fighterTarget * 0.3) then
 			ShipDemandAdd(kFighterInterceptor, fighterDemand * 0.8)
 		end
-		if (numFAss < fighterTarget * 0.3) then
-			ShipDemandAdd(kFighterAssault, fighterDemand * 0.9)
+		if (kFighterAssault ~= nil and numFAss < fighterTarget * 0.3) then
+			ShipDemandAdd(kFighterAssault, fighterDemand * 0.9 * suppression)
 		end
 		if (fighterDemand > 1.0) then FSFC_Log_Demand("Fighter Diversification", fighterDemand) end
 	end
@@ -159,29 +172,46 @@ function DetermineSpecialDemand_Vasudan()
 
 	if (totalBombers < bomberTarget) then
 		-- Vasudans prioritize Medium/Heavy for their high-payload doctrine
-		if (numBStrike < bomberTarget * 0.3) then
+		if (kBomberStrike ~= nil and numBStrike < bomberTarget * 0.3) then
 			ShipDemandAdd(kBomberStrike, 1.8)
 		end
-		if (numBMedium < bomberTarget * 0.4) then
+		if (kBomberMedium ~= nil and numBMedium < bomberTarget * 0.4) then
 			ShipDemandAdd(kBomberMedium, 1.6)
 		end
-		if (numBHeavy < bomberTarget * 0.3) then
+		if (kBomberHeavy ~= nil and numBHeavy < bomberTarget * 0.3) then
 			ShipDemandAdd(kBomberHeavy, 1.4)
 		end
 		FSFC_Log_Demand("Vasudan Bomber Swarm", 2.0)
 	end
 
-	if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
+	if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
 		ShipDemandAdd(kCarrier, 1.5)
 		FSFC_Log_Demand("Typhons", 1.5)
 	end
 
-	-- Sobek/Hatshepsut Aggression
-	ShipDemandAdd(kDestroyer, capDemand)
-	ShipDemandAdd(kBattleCruiser, capDemand)
+	-- Backbone Cruiser Logic (Aten/Mentu)
+	local numAten = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
+	local numMentu = NumSquadrons(kHeavyCruiser) + NumSquadronsQ(kHeavyCruiser)
+	
+	if (kCruiser ~= nil and numAten < 10) then
+		ShipDemandAdd(kCruiser, 3.2)
+	end
+	if (kHeavyCruiser ~= nil and numMentu < 6) then
+		ShipDemandAdd(kHeavyCruiser, 2.5)
+	end
+
+	-- Sobek/Hatshepsut Aggression (Throttled by Backbone)
+	if (kDestroyer ~= nil) then
+		if (numAten >= 4) then
+			ShipDemandAdd(kDestroyer, capDemand)
+		else
+			ShipDemandAdd(kDestroyer, 0.5) -- Suppress if escort is missing
+		end
+	end
+	if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
 	
 	-- Special Sobek hunter priority (Tank for the bombers)
-	if (enemyCapCount > 10 and kDestroyer == VAS_SOBEK) then
+	if (enemyCapCount > 10 and kDestroyer ~= nil and kDestroyer == VAS_SOBEK and numAten >= 6) then
 		ShipDemandAdd(VAS_SOBEK, 3.5)
 	end
 
@@ -190,7 +220,7 @@ function DetermineSpecialDemand_Vasudan()
 	end
 
 	-- Prevent AWACS spam
-	if (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2) then
+	if (kAWACS ~= nil and (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2)) then
 		ShipDemandSet(kAWACS, -10)
 	end
 end

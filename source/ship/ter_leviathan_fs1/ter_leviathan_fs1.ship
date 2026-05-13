@@ -64,8 +64,8 @@ NewShipType.canSurround = 1
 --------------------------------------------------
 
 NewShipType.mass = 31000
-NewShipType.thrusterMaxSpeed = 40
-NewShipType.mainEngineMaxSpeed = 40
+NewShipType.thrusterMaxSpeed = 60
+NewShipType.mainEngineMaxSpeed = 60
 NewShipType.rotationMaxSpeed = 9
 NewShipType.thrusterAccelTime = 18
 NewShipType.thrusterBrakeTime = 7

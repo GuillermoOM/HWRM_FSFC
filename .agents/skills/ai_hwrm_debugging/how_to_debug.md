@@ -122,7 +122,24 @@ Use the `/analyse-match-timeline` workflow to parse these logs. This script gene
 - **Tech Velocity**: When each tier (Fighter, Bomber, Cruiser) was unlocked.
 - **Economy**: RU liquidity vs Total production.
 
-## 6. Best Practices & Logging
+## 8. Common HWRM Log Errors
+
+### `Invalid Supply Family [FamilyName]`
+- **Symptom**: `Invalid Supply Family Rakshasa` appears in `HwRM.log`.
+- **Cause**: A family name used in a `.ship` file's `setSupplyValue` call is not defined in `scripts/familylist.lua`.
+- **Fix**: Add the missing family to the `supplyfamily` table in `familylist.lua`.
+
+### `Cannot overwrite function [FunctionName]`
+- **Symptom**: `Cannot overwrite function VAS_COLOSSUS_Normal_OnSet` appears in `HwRM.log`.
+- **Cause**: This usually indicates a **Script Collision**. Multiple scripts are trying to define the same callback function for a ship. 
+- **Fix**: Check for duplicate `.lua` files in the ship's folder or global scripts (e.g., `custom_scripts`) that might be defining the same `_OnSet` or `_OnCreate` function. HWRM only allows one definition for these hooks.
+
+### `HOD Trace: [Path]` (The "Last Breath" Entry)
+- **Symptom**: The log ends immediately after a `HOD Trace` line.
+- **Cause**: The engine crashed while trying to load the model or assets for the ship listed in the trace.
+- **Common Fix**: Check if `LoadModel()` is called correctly in the `.ship` file and that it precedes any weapon or hardpoint configs. Also verify the `.hod` file exists at the specified path.
+
+## 9. Best Practices & Logging
 
 - **Case Sensitivity**: Ship IDs in `def_build.lua` are case-sensitive. `vas_tauret` is NOT `vas_Tauret`.
 - **Diagnostics**: Use `print()` or `aitrace()` to verify variables before passing them to engine functions.

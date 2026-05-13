@@ -71,14 +71,14 @@ function DetermineDemandWithNoCounterInfo_Terran()
 		frigateDemand = frigateDemand + 0.5
 	end
 	
-	ShipDemandAddByClass(eFighter, fighterDemand)
-	ShipDemandAddByClass(eCorvette, corvetteDemand)
-	ShipDemandAddByClass(eFrigate, frigateDemand)
+	FSFC_ShipDemandAddByClass(eFighter, fighterDemand)
+	FSFC_ShipDemandAddByClass(eCorvette, corvetteDemand)
+	FSFC_ShipDemandAddByClass(eFrigate, frigateDemand)
 	
-	if (g_LOD >= 1) then
+	if (g_LOD >= 1 and kDestroyer ~= nil) then
 		ShipDemandAdd(kDestroyer, destroyerDemand + 0.25)
 	end
-	if (g_LOD >= 2) then
+	if (g_LOD >= 2 and kBattleCruiser ~= nil) then
 		ShipDemandAdd(kBattleCruiser, 0.5)
 	end
 end
@@ -102,6 +102,18 @@ function DetermineSpecialDemand_Terran()
 		enemyBomberCount = PlayersUnitTypeCount(s_enemyIndex, player_max, eCorvette) -- Bombers are in eCorvette class in FSFC
 	end
 	
+	-- Recon Doctrine: Early and high persistence scouting
+	local numScouts = 0
+	if (kScout ~= nil) then
+		numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
+		if (numScouts < 3) then
+			ShipDemandAdd(kScout, 4.5)
+			FSFC_Log_Demand("Scouts", 4.5)
+		elseif (numScouts < 6) then
+			ShipDemandAdd(kScout, 1.5)
+		end
+	end
+
 	if (currentRU > 10000) then
 		fighterTarget = 100
 		bomberTarget = 80
@@ -115,15 +127,8 @@ function DetermineSpecialDemand_Terran()
 			interceptorDemand = 2.2 -- Moderate response
 			capDemand = 3.0
 		end
-		
-		-- Recon Doctrine: Always have eyes on the field
-		local numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
-		if (s_militaryPop > 10 and numScouts < 1) then
-			ShipDemandAdd(kScout, 2.5)
-		elseif (s_militaryPop > 30 and numScouts < 2) then
-			ShipDemandAdd(kScout, 2.0)
-		end
 	end
+
 	
 	if (currentRU > 50000) then
 		fighterTarget = 200
@@ -158,13 +163,13 @@ function DetermineSpecialDemand_Terran()
 
 	if (totalFighters < fighterTarget) then
 		-- Prioritize roles based on target count (40% Sup, 30% Int, 30% Ass)
-		if (numFSup < fighterTarget * 0.4) then
+		if (kFighterSuperiority ~= nil and numFSup < fighterTarget * 0.4) then
 			ShipDemandAdd(kFighterSuperiority, fighterDemand * suppression)
 		end
-		if (numFInt < fighterTarget * 0.3) then
+		if (kFighterInterceptor ~= nil and numFInt < fighterTarget * 0.3) then
 			ShipDemandAdd(kFighterInterceptor, fighterDemand * 0.8 * suppression)
 		end
-		if (numFAss < fighterTarget * 0.3) then
+		if (kFighterAssault ~= nil and numFAss < fighterTarget * 0.3) then
 			ShipDemandAdd(kFighterAssault, fighterDemand * 0.7 * suppression)
 		end
 		if (fighterDemand > 2.0) then FSFC_Log_Demand("Fighter Diversification", fighterDemand) end
@@ -177,20 +182,20 @@ function DetermineSpecialDemand_Terran()
 
 		if (totalBombers < bomberTarget) then
 			-- Prioritize roles based on target count
-			if (numBStrike < bomberTarget * 0.4) then
+			if (kBomberStrike ~= nil and numBStrike < bomberTarget * 0.4) then
 				ShipDemandAdd(kBomberStrike, 1.8)
 			end
-			if (numBMedium < bomberTarget * 0.4) then
+			if (kBomberMedium ~= nil and numBMedium < bomberTarget * 0.4) then
 				ShipDemandAdd(kBomberMedium, 1.6)
 			end
-			if (numBHeavy < bomberTarget * 0.2) then
+			if (kBomberHeavy ~= nil and numBHeavy < bomberTarget * 0.2) then
 				ShipDemandAdd(kBomberHeavy, 1.4)
 			end
 			FSFC_Log_Demand("Bomber Diversification", 1.8)
 		end
 		
 		-- Aeolus Anti-Fighter Priority
-		if (enemyFighterCount > 20 or enemyBomberCount > 10) then
+		if (TER_AEOLUS ~= nil and (enemyFighterCount > 20 or enemyBomberCount > 10)) then
 			ShipDemandAdd(TER_AEOLUS, 3.5)
 			FSFC_Log_Demand("Aeolus Guard", 3.5)
 		end
@@ -200,33 +205,38 @@ function DetermineSpecialDemand_Terran()
 		local numCruisers = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
 		local numHCruisers = NumSquadrons(kHeavyCruiser) + NumSquadronsQ(kHeavyCruiser)
 		
-		if (numCruisers < 10) then
-			ShipDemandAdd(kCruiser, 2.0)
+		if (kCruiser ~= nil and numCruisers < 12) then
+			ShipDemandAdd(kCruiser, 3.5) -- Boosted backbone priority
 		end
-		if (numHCruisers < 6) then
-			ShipDemandAdd(kHeavyCruiser, 1.8)
+		if (kHeavyCruiser ~= nil and numHCruisers < 8) then
+			ShipDemandAdd(kHeavyCruiser, 2.5)
 		end
 
-		if (NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
+		if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
 			ShipDemandAdd(kCarrier, 1.2)
 			FSFC_Log_Demand("Hecates", 1.2)
 		end
 
 		-- Persistent Destroyer/Battlecruiser demand if rich
-		ShipDemandAdd(kDestroyer, capDemand)
-		ShipDemandAdd(kBattleCruiser, capDemand)
+		if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
+		if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
 
 		-- Orion Anti-Capital Priority: If enemy has capital ships, the Orion is preferred.
-		if (s_enemyIndex ~= -1) then
+		if (s_enemyIndex ~= -1 and TER_ORION ~= nil) then
 			local enemyCapCount = PlayersUnitTypeCount(s_enemyIndex, player_max, eFrigate) + PlayersUnitTypeCount(s_enemyIndex, player_max, eCapital)
 			if (enemyCapCount > 0) then
-				ShipDemandAdd(TER_ORION, capDemand * 2.0)
-				FSFC_Log_Demand("Orion Beam Suppression", capDemand * 2.0)
+				-- Throttled by Backbone
+				if (numCruisers >= 6) then
+					ShipDemandAdd(TER_ORION, capDemand * 2.5)
+					FSFC_Log_Demand("Orion Suppression", capDemand * 2.5)
+				else
+					ShipDemandAdd(TER_ORION, 0.5)
+				end
 			end
 		end
 
 		-- Elite Fighter Demand (Erinyes)
-		if (totalFighters < fighterTarget) then
+		if (kFighterSpecial1 ~= nil and totalFighters < fighterTarget) then
 			if (numErinyes < 8) then
 				ShipDemandAdd(kFighterSpecial1, 2.5)
 				FSFC_Log_Demand("Erinyes Elite Wing", 2.5)
@@ -238,22 +248,37 @@ function DetermineSpecialDemand_Terran()
 		end
 
 		-- Prevent Special Fighter Spam (Erinyes/Ares)
-		if (numErinyes >= 12) then
+		if (kFighterSpecial1 ~= nil and numErinyes >= 12) then
 			ShipDemandSet(kFighterSpecial1, -100)
 		end
-		if (numAres >= 12) then
+		if (kFighterSpecial2 ~= nil and numAres >= 12) then
 			ShipDemandSet(kFighterSpecial2, -100)
 		end
 
 		-- Prevent Aeolus spam (Elite Flak Cruiser)
-		local numAeolus = NumSquadrons(TER_AEOLUS) + NumSquadronsQ(TER_AEOLUS)
-		if (numAeolus >= 8) then
-			ShipDemandSet(TER_AEOLUS, -50)
+		if (TER_AEOLUS ~= nil) then
+			local numAeolus = NumSquadrons(TER_AEOLUS) + NumSquadronsQ(TER_AEOLUS)
+			if (numAeolus >= 8) then
+				ShipDemandSet(TER_AEOLUS, -50)
+			end
 		end
 
 		-- Prevent AWACS spam
-		if (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2) then
+		if (kAWACS ~= nil and (NumSquadrons(kAWACS) + NumSquadronsQ(kAWACS) >= 2)) then
 			ShipDemandSet(kAWACS, -10)
+		end
+
+		-- Lower Argo/Chronos interest and cap at 2 (Repair ships)
+		if (TER_ARGO ~= nil and TER_CHRONOS ~= nil) then
+			local numArgo = NumSquadrons(TER_ARGO) + NumSquadronsQ(TER_ARGO)
+			local numChronos = NumSquadrons(TER_CHRONOS) + NumSquadronsQ(TER_CHRONOS)
+			if (numArgo + numChronos < 2) then
+				ShipDemandAdd(TER_ARGO, 0.5)
+				ShipDemandAdd(TER_CHRONOS, 0.5)
+			else
+				ShipDemandSet(TER_ARGO, -50)
+				ShipDemandSet(TER_CHRONOS, -50)
+			end
 		end
 end
 

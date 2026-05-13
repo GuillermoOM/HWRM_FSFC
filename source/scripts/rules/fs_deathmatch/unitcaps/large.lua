@@ -1,29 +1,29 @@
-supplyLimit("Fighter", 200);
+supplyLimit("Fighter", 800);
 
-supplyLimit("Scout", 150);
-supplyLimit("Interceptor", 200);
-supplyLimit("Bomber", 150);
-supplyLimit("LanceFighter", 200);
-supplyLimit("Defenders", 40);
-supplyLimit("Defensefighters", 40);
-supplyLimit("CloakedFighters", 40);
+supplyLimit("Scout", 600);
+supplyLimit("Interceptor", 800);
+supplyLimit("Bomber", 450);
+supplyLimit("LanceFighter", 800);
+supplyLimit("Defenders", 160);
+supplyLimit("Defensefighters", 160);
+supplyLimit("CloakedFighters", 160);
 --
 -- Vaygr FamilyOverride Fighter 170
 -- Vaygr ShipOverride Interceptor 140
 -- Vaygr ShipOverride Bomber 140
 --
-supplyLimit("Corvette", 60);
+supplyLimit("Corvette", 180);
 
-supplyLimit("MinelayerCorvette",12);
-supplyLimit("CommandCorvette",8);
-supplyLimit("SalvageCorvette",30);
+supplyLimit("MinelayerCorvette", 36);
+supplyLimit("CommandCorvette", 24);
+supplyLimit("SalvageCorvette", 90);
 --
 -- Vaygr FamilyOverride Corvette 80
 --
 supplyLimit("Frigate", 50);
 
-supplyLimit("DefenseFieldFrigate",6);
-supplyLimit("CaptureFrigate",15);		
+supplyLimit("DefenseFieldFrigate", 6);
+supplyLimit("CaptureFrigate", 15);		
 --
 -- Kushan FamilyOverride Frigate 24
 -- Taiidan FamilyOverride Frigate 24	
@@ -33,8 +33,8 @@ supplyLimit("Capital", 20);
 supplyLimit("Destroyer", 5);
 supplyLimit("MissileDestroyer", 4);
 supplyLimit("Carrier", 4);
-supplyLimit("Battlecruiser",5);
-supplyLimit("HeavyCruiser",5);
+supplyLimit("Battlecruiser", 5);
+supplyLimit("HeavyCruiser", 5);
 supplyLimit("Shipyard", 1);
 --
 supplyLimit("Utility", 60);
@@ -153,9 +153,9 @@ supplyLimit("Hades", 2)
 supplyLimit("Colossus", 1)
 supplyLimit("Installation", 2)
 supplyLimit("Iceni", 1)
-supplyLimit("Ares", 25)
-supplyLimit("Erinyes", 20)
-supplyLimit("ArtemisDH", 25)
+supplyLimit("Ares", 100)
+supplyLimit("Erinyes", 80)
+supplyLimit("ArtemisDH", 75)
 supplyLimit("AWACS", 5)
 supplyLimit("Faustus", 2)
 supplyLimit("Moloch", 10)
@@ -165,13 +165,13 @@ supplyLimit("Sathanas", 1)
 supplyLimit("Imhotep", 2)
 
 -- Layout Limits (Global Faction Caps)
-supplyLimit("LayoutFighter", 180)
-supplyLimit("LayoutCorvette", 180)
+supplyLimit("LayoutFighter", 720)
+supplyLimit("LayoutCorvette", 540)
 supplyLimit("LayoutFrigate", 180)
 supplyLimit("LayoutDestroyer", 180)
 supplyLimit("LayoutBattleCruiser", 5)
 supplyLimit("LayoutResource", 180)
-supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutBomber", 540)
 supplyLimit("LayoutCruiser", 180)
 
 -- Show Freespace families

@@ -26,6 +26,8 @@ if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
 if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
 if (FS1 == nil) then FS1 = -1 end
 if (FS2 == nil) then FS2 = -1 end
+if (ORION == nil) then ORION = -1 end
+if (DEIMOS == nil) then DEIMOS = -1 end
 
 -- Global variables like kBomber, kInterceptor etc are set by ai_build.lua
 
@@ -58,11 +60,11 @@ function DoResearchTechDemand_Terran()
 	local demand = 4.0
 	if (FSFC_CheckResearch(FS1)) then
 		ResearchDemandSet_Terran(FS1, demand)
-		FSFC_Log_Research("FS1")
+		FSFC_Log_Research("FS1", demand)
 	end
 	if (FSFC_CheckResearch(FS2)) then
 		ResearchDemandSet_Terran(FS2, demand)
-		FSFC_Log_Research("FS2")
+		FSFC_Log_Research("FS2", demand)
 	end
 
 	-- 2. UNIT CLASS TECH
@@ -70,48 +72,61 @@ function DoResearchTechDemand_Terran()
 	if (fighterdemand > 0) then
 		print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | FighterClass | Demand: " .. fighterdemand)
 		if (FSFC_CheckResearch(FIGHTERDESIGN)) then
-			ResearchDemandSet_Terran(FIGHTERDESIGN, fighterdemand + 1.0)
-			FSFC_Log_Research("FighterDesign")
+			ResearchDemandSet_Terran(FIGHTERDESIGN, fighterdemand + 1.1)
+			FSFC_Log_Research("FighterDesign", fighterdemand + 1.1)
 		end
 		-- Era-aware progression (Relaxed dependencies)
 		if FSFC_IsResearchDone(FS2) == 1 then
 			if FSFC_CheckResearch(PERSEUS) then
 				ResearchDemandSet_Terran(PERSEUS, fighterdemand + 1.0)
-				FSFC_Log_Research("Perseus")
+				FSFC_Log_Research("Perseus", fighterdemand + 1.0)
 			end
 			if FSFC_CheckResearch(MYRMIDON) then
 				ResearchDemandSet_Terran(MYRMIDON, fighterdemand + 1.2)
-				FSFC_Log_Research("Myrmidon")
+				FSFC_Log_Research("Myrmidon", fighterdemand + 1.2)
 			end
 			if FSFC_CheckResearch(HERCULESMK2) then
 				ResearchDemandSet_Terran(HERCULESMK2, fighterdemand + 1.3)
-				FSFC_Log_Research("HerculesMk2")
+				FSFC_Log_Research("HerculesMk2", fighterdemand + 1.3)
 			end
 			if FSFC_CheckResearch(ARES) then
 				ResearchDemandSet_Terran(ARES, fighterdemand + 1.5)
-				FSFC_Log_Research("Ares")
+				FSFC_Log_Research("Ares", fighterdemand + 1.5)
 			end
 			if FSFC_CheckResearch(ERINYES) then
 				ResearchDemandSet_Terran(ERINYES, fighterdemand + 1.5)
-				FSFC_Log_Research("Erinyes")
+				FSFC_Log_Research("Erinyes", fighterdemand + 1.5)
 			end
 		else
 			-- FS1 Branch
 			if FSFC_CheckResearch(APOLLO) then
 				ResearchDemandSet_Terran(APOLLO, fighterdemand + 1.0)
-				FSFC_Log_Research("Apollo")
+				FSFC_Log_Research("Apollo", fighterdemand + 1.0)
 			end
 			if FSFC_CheckResearch(VALKYRIE) then
 				ResearchDemandSet_Terran(VALKYRIE, fighterdemand + 1.2)
-				FSFC_Log_Research("Valkyrie")
+				FSFC_Log_Research("Valkyrie", fighterdemand + 1.2)
 			end
 			if FSFC_CheckResearch(HERCULES) then
 				ResearchDemandSet_Terran(HERCULES, fighterdemand + 1.3)
-				FSFC_Log_Research("Hercules")
+				FSFC_Log_Research("Hercules", fighterdemand + 1.3)
 			end
 			if FSFC_CheckResearch(ULYSSES) then
 				ResearchDemandSet_Terran(ULYSSES, fighterdemand + 1.1)
-				FSFC_Log_Research("Ulysses")
+				FSFC_Log_Research("Ulysses", fighterdemand + 1.1)
+			end
+		end
+
+		-- Recon Doctrine: Scouts
+		if FSFC_IsResearchDone(FS2) == 1 then
+			if (FSFC_CheckResearch(PEGASUS)) then
+				ResearchDemandSet_Terran(PEGASUS, fighterdemand + 1.0)
+				FSFC_Log_Research("Pegasus", fighterdemand + 1.0)
+			end
+		else
+			if (FSFC_CheckResearch(LOKI)) then
+				ResearchDemandSet_Terran(LOKI, fighterdemand + 1.0)
+				FSFC_Log_Research("Loki", fighterdemand + 1.0)
 			end
 		end
 	end
@@ -119,50 +134,49 @@ function DoResearchTechDemand_Terran()
 	local bomberdemand = ShipDemandMaxByClass(eCorvette) * 2
 	if bomberdemand > 0 then
 		if FSFC_CheckResearch(BOMBERDESIGN) then
-			ResearchDemandSet_Terran(BOMBERDESIGN, bomberdemand + 1.0)
-			FSFC_Log_Research("BomberDesign")
+			ResearchDemandSet_Terran(BOMBERDESIGN, bomberdemand + 1.1)
+			FSFC_Log_Research("BomberDesign", bomberdemand + 1.1)
 		end
-
 		-- Era-aware progression (Relaxed dependencies)
 		if FSFC_IsResearchDone(FS2) == 1 then
 			-- FS2 Branch: Encourage parallel research of different roles
 			if FSFC_CheckResearch(ZEUS) then
 				ResearchDemandSet_Terran(ZEUS, bomberdemand + 1.0)
-				FSFC_Log_Research("Zeus")
+				FSFC_Log_Research("Zeus", bomberdemand + 1.0)
 			end
 			if FSFC_CheckResearch(ARTEMIS) then
 				ResearchDemandSet_Terran(ARTEMIS, bomberdemand + 1.2)
-				FSFC_Log_Research("Artemis")
+				FSFC_Log_Research("Artemis", bomberdemand + 1.2)
 			end
 			if FSFC_CheckResearch(MEDUSA) then
 				ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.5)
-				FSFC_Log_Research("Medusa")
+				FSFC_Log_Research("Medusa", bomberdemand + 1.5)
 			end
 			if FSFC_CheckResearch(BOANERGES) then
 				ResearchDemandSet_Terran(BOANERGES, bomberdemand + 1.0)
-				FSFC_Log_Research("Boanerges")
+				FSFC_Log_Research("Boanerges", bomberdemand + 1.0)
 			end
 			if FSFC_CheckResearch(URSA) then
 				ResearchDemandSet_Terran(URSA, bomberdemand + 1.3)
-				FSFC_Log_Research("Ursa")
+				FSFC_Log_Research("Ursa", bomberdemand + 1.3)
 			end
 		else
 			-- FS1 Branch
 			if FSFC_CheckResearch(ATHENA) then
 				ResearchDemandSet_Terran(ATHENA, bomberdemand + 1.0)
-				FSFC_Log_Research("Athena")
+				FSFC_Log_Research("Athena", bomberdemand + 1.0)
 			end
 			if FSFC_CheckResearch(ZEUS) then
 				ResearchDemandSet_Terran(ZEUS, bomberdemand + 1.2)
-				FSFC_Log_Research("Zeus")
+				FSFC_Log_Research("Zeus", bomberdemand + 1.2)
 			end
 			if FSFC_CheckResearch(MEDUSA) then
 				ResearchDemandSet_Terran(MEDUSA, bomberdemand + 1.5)
-				FSFC_Log_Research("Medusa")
+				FSFC_Log_Research("Medusa", bomberdemand + 1.5)
 			end
 			if FSFC_CheckResearch(URSA) then
 				ResearchDemandSet_Terran(URSA, bomberdemand + 1.0)
-				FSFC_Log_Research("Ursa")
+				FSFC_Log_Research("Ursa", bomberdemand + 1.0)
 			end
 		end
 	end
@@ -170,59 +184,59 @@ function DoResearchTechDemand_Terran()
 	local cruiserdemand = ShipDemandMaxByClass(eFrigate) * 2
 	if cruiserdemand > 0 then
 		if FSFC_CheckResearch(CRUISERDESIGN) then
-			ResearchDemandSet_Terran(CRUISERDESIGN, cruiserdemand + 1.0)
-			FSFC_Log_Research("CruiserDesign")
+			ResearchDemandSet_Terran(CRUISERDESIGN, cruiserdemand + 1.1)
+			FSFC_Log_Research("CruiserDesign", cruiserdemand + 1.1)
 		end
-
 		if FSFC_CheckResearch(REPAIRARGO) then
 			ResearchDemandSet_Terran(REPAIRARGO, cruiserdemand + 0.5)
-			FSFC_Log_Research("RepairArgo")
+			FSFC_Log_Research("RepairArgo", cruiserdemand + 0.5)
 		end
 		if FSFC_CheckResearch(REPAIRCHRONOS) then
 			ResearchDemandSet_Terran(REPAIRCHRONOS, cruiserdemand + 0.5)
-			FSFC_Log_Research("RepairChronos")
+			FSFC_Log_Research("RepairChronos", cruiserdemand + 0.5)
 		end
-
 		if FSFC_IsResearchDone(CRUISERDESIGN) == 1 then
 			if FSFC_CheckResearch(HEAVYCRUISER) then
 				ResearchDemandSet_Terran(HEAVYCRUISER, cruiserdemand + 1.0)
-				FSFC_Log_Research("HeavyCruiser")
+				FSFC_Log_Research("HeavyCruiser", cruiserdemand + 1.0)
 			end
 			if FSFC_CheckResearch(ADVANCEDCRUISER) then
 				ResearchDemandSet_Terran(ADVANCEDCRUISER, cruiserdemand + 1.2)
-				FSFC_Log_Research("AdvancedCruiser")
+				FSFC_Log_Research("AdvancedCruiser", cruiserdemand + 1.2)
 			end
 		end
 	end
 
-	local capitaldemand = ShipDemandMaxByClass(eCapital)
+	local capitaldemand = ShipDemandMaxByClass(eCapital) * 2.5
 	if capitaldemand > 0 then
 		if FSFC_CheckResearch(CAPITALSHIPDESIGN) then
-			ResearchDemandSet_Terran(CAPITALSHIPDESIGN, capitaldemand + 1.0)
-			FSFC_Log_Research("CapitalShipDesign")
+			ResearchDemandSet_Terran(CAPITALSHIPDESIGN, capitaldemand + 1.1)
+			FSFC_Log_Research("CapitalShipDesign", capitaldemand + 1.1)
 		end
-
-		if FSFC_CheckResearch(CORVETTE) then
-			ResearchDemandSet_Terran(CORVETTE, capitaldemand + 1.0)
-			FSFC_Log_Research("Deimos")
+		if (FSFC_CheckResearch(ORION)) then
+			ResearchDemandSet_Terran(ORION, capitaldemand + 1.0)
+			FSFC_Log_Research("Orion", capitaldemand + 1.0)
 		end
-
+		if (FSFC_CheckResearch(DEIMOS)) then
+			ResearchDemandSet_Terran(DEIMOS, capitaldemand + 1.0)
+			FSFC_Log_Research("Deimos", capitaldemand + 1.0)
+		end
 		if FSFC_IsResearchDone(CAPITALSHIPDESIGN) == 1 then
-			if FSFC_CheckResearch(CORVETTE) then
-				ResearchDemandSet_Terran(CORVETTE, capitaldemand + 1.0)
-				FSFC_Log_Research("Deimos")
+			if FSFC_CheckResearch(DEIMOS) then
+				ResearchDemandSet_Terran(DEIMOS, capitaldemand + 1.0)
+				FSFC_Log_Research("Deimos", capitaldemand + 1.0)
 			end
 			if FSFC_CheckResearch(COMMANDCORVETTE) then
 				ResearchDemandSet_Terran(COMMANDCORVETTE, capitaldemand + 1.0)
-				FSFC_Log_Research("Iceni")
+				FSFC_Log_Research("Iceni", capitaldemand + 1.0)
 			end
 			if FSFC_CheckResearch(SUPERDESTROYER) then
 				ResearchDemandSet_Terran(SUPERDESTROYER, capitaldemand + 1.2)
-				FSFC_Log_Research("SuperDestroyer")
+				FSFC_Log_Research("SuperDestroyer", capitaldemand + 1.2)
 			end
 			if FSFC_CheckResearch(JUGGERNAUT) then
 				ResearchDemandSet_Terran(JUGGERNAUT, capitaldemand + 1.3)
-				FSFC_Log_Research("Orion/Hecate")
+				FSFC_Log_Research("Colossus", capitaldemand + 1.3)
 			end
 		end
 	end
@@ -233,15 +247,18 @@ function DoUpgradeDemand_Terran()
 	local numCollectors = NumSquadrons_Terran(kCollector)
 	if numCollectors > 3 then
 		ResearchDemandAdd_Terran(COLLECTORHP, numCollectors * 2)
+		FSFC_Log_Research("CollectorHP", numCollectors * 2)
 	end
 	local numRefineries = NumSquadrons_Terran(kRefinery)
 	if numRefineries > 0 then
 		ResearchDemandAdd_Terran(DROPOFFHP, numRefineries * 3)
+		FSFC_Log_Research("RefineryHP", numRefineries * 3)
 	end
 	-- Carrier Build Speed
 	local numCarriers = NumSquadrons_Terran(kCarrier)
 	if numCarriers > 0 then
 		ResearchDemandAdd_Terran(HECATEBUILDSPEED, numCarriers * 3)
+		FSFC_Log_Research("HecateBuildSpeed", numCarriers * 3)
 	end
 
 	local numDestroyers = NumSquadrons_Terran(TER_DEIMOS)
@@ -253,14 +270,6 @@ function DoUpgradeDemand_Terran()
 		local numFrigateCount = NumSquadrons_Terran(TER_FENRIS) + NumSquadrons_Terran(TER_FENRIS_FS1)
 		if numFrigateCount > 1 then
 			ResearchDemandAdd_Terran(CRUISERHEALTHUPGRADE, numFrigateCount * 5)
-		end
-		local numCapture = NumSquadrons_Terran(TER_ARGO)
-		if numCapture > 1 then
-			ResearchDemandAdd_Terran(CAPTUREABILITY, numCapture * 5)
-		end
-		local numCapture = NumSquadrons_Terran(TER_CHRONOS)
-		if numCapture > 1 then
-			ResearchDemandAdd_Terran(CAPTUREABILITYFS1, numCapture * 5)
 		end
 	end
 	local numBattleCruiser = NumSquadrons_Terran(kBattleCruiser)

@@ -71,10 +71,17 @@ def get_weapon_stats(weapon_name):
         params_str = re.sub(r'--.*', '', params_str)
         params = [p.strip().strip("'").strip('"').strip() for p in params_str.split(',')]
         
-        try:
-            if len(params) > 16:
+        fire_mult = 1.0
+        dmg_mult = 1.0
+        fm_match = re.search(r'setFireMultFactor\(.*?,(.*?)\)', content)
+        if fm_match: fire_mult = float(fm_match.group(1).strip())
+        dm_match = re.search(r'setDamageMultFactor\(.*?,(.*?)\)', content)
+        if dm_match: dmg_mult = float(dm_match.group(1).strip())
+        
+        # RoF/DPS Logic
+        if len(params) > 16:
+            try:
                 vel, range_val = float(params[5]), float(params[6])
-                # Arg 15: fireTime (index 14), Arg 16: burstFireTime (index 15), Arg 17: burstWaitTime (index 16)
                 t_fire_time = float(params[14])
                 t_burst_fire = float(params[15])
                 t_burst_wait = float(params[16])
@@ -82,15 +89,14 @@ def get_weapon_stats(weapon_name):
                 if t_burst_fire > 0:
                     shots = max(1, int(t_burst_fire / t_fire_time)) if t_fire_time > 0 else 1
                     cycle = t_burst_fire + t_burst_wait
-                    dps = (damage * shots) / cycle
-                    rof = round(shots / cycle, 2)
+                    raw_rof = (shots / cycle) * fire_mult
                 else:
-                    dps = damage / t_fire_time if t_fire_time > 0 else damage
-                    rof = round(1.0 / t_fire_time, 2) if t_fire_time > 0 else 1.0
-            else:
-                dps = damage
-                rof = 1.0
-        except: pass
+                    raw_rof = (1.0 / t_fire_time if t_fire_time > 0 else 1.0) * fire_mult
+                
+                rof = round(raw_rof, 2)
+                dps = round(damage * dmg_mult * raw_rof, 2)
+            except:
+                pass
     
     pen = {"Un": "1", "Lt": "1", "Md": "1", "Hv": "1"}
     for k, short in [("Unarmoured", "Un"), ("LightArmour", "Lt"), ("MediumArmour", "Md"), ("HeavyArmour", "Hv")]:
@@ -133,6 +139,14 @@ def parse_unit_caps():
 def process_ships():
     races = {"ter": [], "shi": [], "vas": []}
     weapons_used = {}
+    
+    abilities_to_track = [
+        "MoveCommand", "CanDock", "ShipHold", "HyperSpaceCommand", "CanAttack", 
+        "GuardCommand", "CanBuildShips", "CanBeCaptured", "CanBeRepaired", 
+        "CloakAbility", "SpecialAttack", "RepairCommand", "SalvageCommand",
+        "DefenseFieldAbility", "HyperspaceInhibitorAbility", "CaptureCommand"
+    ]
+
     for entry in sorted(os.listdir(SHIP_DIR)):
         ship_path = os.path.join(SHIP_DIR, entry)
         if not os.path.isdir(ship_path): continue
@@ -171,24 +185,37 @@ def process_ships():
         if b_match: abilities["Build"] = f"Fams: {b_match.group(2)}"
         sh_match = re.search(r"addAbility\(NewShipType,\s*['\"]ShipHold['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*['\"][^'\"]*['\"],\s*['\"]([^'\"]*)['\"](?:,\s*(-?[\d\.]+))?", content)
         if sh_match:
-            abilities["Hangar"] = f"Size:{sh_match.group(2)} | Fams:{sh_match.group(3)}"
-            if sh_match.group(4): abilities["Hangar"] += f" | Rep:{sh_match.group(4)}"
+            abilities["Hangar"] = f"Size:{sh_match.group(2)} / Fams:{sh_match.group(3)}"
+            if sh_match.group(4): abilities["Hangar"] += f" / Rep:{sh_match.group(4)}"
         elif "ShipHold" in content: abilities["Hangar"] = "Yes"
         hs_match = re.search(r"addAbility\(NewShipType,\s*['\"]HyperSpaceCommand['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if hs_match: abilities["Hyperspace"] = f"Min:{hs_match.group(2)} | Fact:{hs_match.group(1)} | Rec:{hs_match.group(4)}s"
+        if hs_match: abilities["Hyperspace"] = f"Min:{hs_match.group(2)} / Fact:{hs_match.group(1)} / Rec:{hs_match.group(4)}s"
         elif "HyperSpaceCommand" in content: abilities["Hyperspace"] = "Yes"
         rep_match = re.search(r"addAbility\(NewShipType,\s*['\"]RepairCommand['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if rep_match: abilities["Repair"] = f"Rate:{rep_match.group(1)} | Rad:{rep_match.group(2)}"
+        if rep_match: abilities["Repair"] = f"Rate:{rep_match.group(1)} / Rad:{rep_match.group(2)}"
         elif "RepairCommand" in content: abilities["Repair"] = "Yes"
         harv_match = re.search(r"addAbility\(NewShipType,\s*['\"]Harvest['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if harv_match: abilities["Harvest"] = f"Rate:{harv_match.group(1)} | Cap:{harv_match.group(2)}"
+        if harv_match: abilities["Harvest"] = f"Rate:{harv_match.group(1)} / Cap:{harv_match.group(2)}"
         if "SalvageCommand" in content: abilities["Salvage"] = "Yes"
         if entry.lower() in AB_MULTS: abilities["Afterburner"] = f"x{AB_MULTS[entry.lower()]}"
         cl_match = re.search(r"addAbility\(NewShipType,\s*['\"]CloakAbility['\"]\s*,\s*\d+,\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+),\s*(-?[\d\.]+)", content)
-        if cl_match: abilities["Cloak"] = f"Usage:{cl_match.group(4)} | Cost:{cl_match.group(5)} | Regen:{cl_match.group(6)}"
+        if cl_match: abilities["Cloak"] = f"Usage:{cl_match.group(4)} / Cost:{cl_match.group(5)} / Regen:{cl_match.group(6)}"
         if "CaptureCommand" in content: abilities["Capture"] = "Yes"
+        if "CanBeCaptured" in content: abilities["Capturable"] = "Yes"
         sa_match = re.search(r"addAbility\(NewShipType,\s*['\"]SpecialAttack['\"]\s*,\s*\d+,\s*['\"]([^'\"]+)['\"]", content)
-        if sa_match: abilities["Special"] = sa_match.group(1)
+        
+        # Track miscellaneous special abilities
+        found_misc = []
+        for ab in abilities_to_track:
+            if ab in content:
+                if ab not in ["MoveCommand", "CanDock", "CanAttack", "GuardCommand", "HyperSpaceCommand", "ShipHold", "CanBuildShips", "CanBeCaptured", "CanBeRepaired", "CloakAbility", "SpecialAttack", "RepairCommand", "SalvageCommand", "CaptureCommand"]:
+                    found_misc.append(ab.replace("Ability", ""))
+        
+        spec_val = sa_match.group(1) if sa_match else ""
+        if found_misc:
+            spec_val = ", ".join([spec_val] + found_misc) if spec_val else ", ".join(found_misc)
+        abilities["Special"] = spec_val if spec_val else "No"
+
         if "sub_research" in content or "Research" in content: abilities["Research"] = "Yes"
 
         ship_data = {
@@ -218,10 +245,52 @@ def process_ships():
         if prefix in races: races[prefix].append(ship_data)
     return races, weapons_used
 
-def generate_markdown(races, weapons, unit_caps):
+def parse_research_costs():
+    research_nodes = []
+    research_files = [
+        "source/scripts/races/terran/scripts/def_research.lua",
+        "source/scripts/races/vasudan/scripts/def_research.lua",
+        "source/scripts/races/shivan/scripts/def_research.lua"
+    ]
+    
+    root_dir = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC"
+    
+    for rel_path in research_files:
+        abs_path = os.path.join(root_dir, rel_path)
+        if not os.path.exists(abs_path): continue
+        race = rel_path.split('/')[3]
+        with open(abs_path, 'r') as f:
+            content = f.read()
+            # Split by nodes
+            nodes = re.findall(r'{(.*?)}', content, re.DOTALL)
+            for node in nodes:
+                name_match = re.search(r'Name\s*=\s*["\']([^"\']+)["\']', node)
+                cost_match = re.search(r'Cost\s*=\s*(\d+)', node)
+                time_match = re.search(r'Time\s*=\s*(\d+)', node)
+                req_match = re.search(r'RequiredResearch\s*=\s*["\']([^"\']*)["\']', node)
+                
+                if name_match and cost_match and time_match:
+                    research_nodes.append({
+                        "race": race.upper(),
+                        "name": name_match.group(1),
+                        "cost": int(cost_match.group(1)),
+                        "time": int(time_match.group(1)),
+                        "req": req_match.group(1) if req_match else "None"
+                    })
+    return research_nodes
+
+
+def generate_markdown(races, weapons, unit_caps, research):
     output = "# FreeSpace: Fleet Command - Master Balance Sheet\n\n"
     output += "## [HOW TO READ THIS SHEET]\n"
     output += "This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.\n\n"
+    output += "## Research Tree Cost Matrix\n"
+    output += "| Race | Node | Cost | Time | Prerequisites |\n"
+    output += "| :--- | :--- | :--- | :--- | :--- |\n"
+    for r in sorted(research, key=lambda x: (x['race'], x['cost'])):
+        output += f"| {r['race']} | {r['name']} | {r['cost']} | {r['time']}s | {r['req']} |\n"
+    output += "\n---\n\n"
+
     output += "## Unit Capacity Profiles (Limits)\n"
     output += "Defines the total allowed points/ships per family for each match preset.\n\n"
     profiles = sorted(unit_caps.keys())
@@ -245,9 +314,13 @@ def generate_markdown(races, weapons, unit_caps):
     output += "- **Acc: F/C/Fr/Cp**: Accuracy against **F**ighter, **C**orvette, **Fr**igate, **Cp** (Capital).\n"
     output += "- **Pen: Un/Lt/Md/Hv**: Damage multiplier against **Un**armoured, **Lt** (Light), **Md** (Medium), **Hv** (Heavy) armor families.\n\n"
     output += "### 2. The Detailed Ability Matrix\n"
+    output += "- **Build**: Build capability and supported families.\n"
+    output += "- **Res**: Research capability (Yes/No).\n"
     output += "- **Hangar**: Hangar capacity and supported weight/families.\n"
-    output += "- **Hyperspace**: Min cost, multiplier factor, and recovery time.\n"
-    output += "- **Repair**: HP/s repair rate and radius.\n\n"
+    output += "- **H-Space**: Min cost, multiplier factor, and recovery time.\n"
+    output += "- **Rep**: HP/s repair rate and radius.\n"
+    output += "- **Cap**: Can be captured by other ships (Yes/No).\n"
+    output += "- **Special**: Includes Cloak, Harvest, Capture, Afterburners, and other unique abilities.\n\n"
     output += "### 3. The Ship Tables\n"
     output += "- **S/Sq/B**: Supply Cost / Squadron Size / Build Batch Size.\n"
     output += "- **T**: Total Value (AI evaluation rating).\n\n"
@@ -262,15 +335,26 @@ def generate_markdown(races, weapons, unit_caps):
         output += f"| {w['name']} | {w['dmg']} | {w['rof']} | **{w['dps']}** | {w['range']} | {acc_str} | {pen_str} |\n"
     output += "\n---\n\n"
     output += "## Detailed Ability Breakdown (Stats)\n\n"
-    output += "| Ship | Build | Hangar | Hyperspace | Repair | Harvest | Cloak | Special |\n"
+    output += "| Ship | Build | Res | Hangar | H-Space | Rep | Cap | Special |\n"
     output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     all_ships = []
     for code in ["ter", "vas", "shi"]: all_ships.extend(races[code])
     all_ships.sort(key=lambda x: x['name'])
     for s in all_ships:
         a = s['abilities']
+        # Consolidate special abilities
+        specials = []
+        if a.get("Special", "No") != "No": specials.append(a["Special"])
+        if a.get("Harvest", "No") != "No": specials.append(f"Harvest({a['Harvest']})")
+        if a.get("Cloak", "No") != "No": specials.append(f"Cloak({a['Cloak']})")
+        if a.get("Capture", "No") != "No": specials.append("Capturer")
+        if a.get("Salvage", "No") != "No": specials.append("Salvage")
+        if a.get("Afterburner", "No") != "No": specials.append(f"Afterburner({a['Afterburner']})")
+        
+        special_str = " / ".join(specials) if specials else "No"
+        
         output += "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} |\n".format(
-            s['name'], a.get("Build", "No"), a.get("Hangar", "No"), a.get("Hyperspace", "No"), a.get("Repair", "No"), a.get("Harvest", "No"), a.get("Cloak", "No"), a.get("Special", "No")
+            s['name'], a.get("Build", "No"), a.get("Research", "No"), a.get("Hangar", "No"), a.get("Hyperspace", "No"), a.get("Repair", "No"), a.get("Capturable", "No"), special_str
         )
     output += "\n---\n\n"
     race_names = {"ter": "TERRAN - GTA", "shi": "SHIVAN - Unknown", "vas": "VASUDAN - PVN"}
@@ -289,4 +373,10 @@ def generate_markdown(races, weapons, unit_caps):
 if __name__ == "__main__":
     r, w = process_ships()
     uc = parse_unit_caps()
-    print(generate_markdown(r, w, uc))
+    res = parse_research_costs()
+    md = generate_markdown(r, w, uc, res)
+    output_path = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/resources/fsfc-knowledge/fsfc_ship_balance_sheet.md"
+    with open(output_path, 'w') as f:
+        f.write(md)
+    print(f"Master Balance Sheet updated at: {output_path}")
+

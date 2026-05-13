@@ -13,6 +13,34 @@ end
 dofilepath("data:ai/default/cpuresource.lua")
 dofilepath("data:ai/default/cpubuildsubsystem.lua")
 
+-- Safe wrappers for engine class functions to prevent 'parameter: nil' crashes
+-- with custom FSFC ships in classdef.lua. Use these instead of the vanilla ones.
+function FSFC_ShipDemandAddByClass(class, demand)
+	local list = squadclass[class]
+	if (list) then
+		local n = getn(list)
+		for i=1, n do
+			local ship = list[i]
+			if (ship ~= nil and ship ~= -1) then
+				ShipDemandAdd(ship, demand)
+			end
+		end
+	end
+end
+
+function FSFC_ShipDemandSetByClass(class, demand)
+	local list = squadclass[class]
+	if (list) then
+		local n = getn(list)
+		for i=1, n do
+			local ship = list[i]
+			if (ship ~= nil and ship ~= -1) then
+				ShipDemandSet(ship, demand)
+			end
+		end
+	end
+end
+
 function CpuBuild_PersonalityDemand()
 	sg_classPersonalityDemand[ eFighter ] = Persona_GetNumber("persona_class_demand_fighter", 0.25)
 	sg_classPersonalityDemand[ eCorvette ] = Persona_GetNumber("persona_class_demand_corvette", 0.5)
@@ -78,10 +106,10 @@ end
 function DetermineClassDemand()
 	for i=0, eMaxCount do
 		if (sg_classPersonalityDemand[ i ] and sg_classPersonalityDemand[ i ]~=0) then
-			ShipDemandSetByClass( i, sg_classPersonalityDemand[ i ] );
+			FSFC_ShipDemandSetByClass( i, sg_classPersonalityDemand[ i ] );
 		end
 	end
-	ShipDemandSetByClass( eUselessShips, -10 )
+	FSFC_ShipDemandSetByClass( eUselessShips, -10 )
 end
 
 function DetermineAntiChassisDemand(enemyIndex)
@@ -224,11 +252,11 @@ function DetermineSpecialDemand()
         if (FIGHTERPRODUCTION ~= nil) then
             numFighterProduction = NumSubSystems(FIGHTERPRODUCTION)
         end
-		if (ShipDemandGet( kInterceptor ) > 0 and numFighterProduction > 0 and NumSquadrons(kInterceptor) < 3 and s_militaryPop < 10) then
+		if (kInterceptor ~= nil and ShipDemandGet( kInterceptor ) > 0 and numFighterProduction > 0 and NumSquadrons(kInterceptor) < 3 and s_militaryPop < 10) then
 			ShipDemandAdd( kInterceptor, 0.5 )
 		end
 	else
-		if (ShipDemandGet( kInterceptor ) > 0 and  NumSquadrons(kInterceptor) < 7 and s_militaryPop < 22) then
+		if (kInterceptor ~= nil and ShipDemandGet( kInterceptor ) > 0 and  NumSquadrons(kInterceptor) < 7 and s_militaryPop < 22) then
 			ShipDemandAdd( kInterceptor, 0.5 )
 		end
 	end
@@ -270,9 +298,12 @@ function DetermineSpecialDemand()
 	end	
 	
  	if ( (GetNumCollecting() > 9 or GetRU() > 1500) and s_militaryPop > 8 and UnderAttackThreat() < -75) then
-		ShipDemandAdd( kBattleCruiser, 0.75 )
-		ShipDemandAdd( kDestroyer, 0.25 )
-		
+		if (kBattleCruiser ~= nil) then
+			ShipDemandAdd( kBattleCruiser, 0.75 )
+		end
+		if (kDestroyer ~= nil) then
+			ShipDemandAdd( kDestroyer, 0.25 )
+		end
 	end
 	
 	local numEnemyBattleCruisers = PlayersUnitTypeCount( player_enemy, player_total, eBattleCruiser )
@@ -446,7 +477,7 @@ function DetermineScoutDemand()
 		if (shipCount < numScoutsDemanded) then
 			ShipDemandAddByClass( eScout, 3.5 )
 			local scoutRand = Rand(100)
-			if (scoutRand > 30) then
+			if (scoutRand > 30 and kScout ~= nil) then
 				ShipDemandAdd( kScout, 1.5 )
 			end
 			sg_randScoutStartBuildTime = gameTime() + 50

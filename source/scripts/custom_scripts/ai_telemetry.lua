@@ -6,6 +6,11 @@ if not AI_Telemetry_Loaded then
     AI_Telemetry_Loaded = 1
 
     FSFC_ResearchLogged = {}
+    FSFC_LastLoggedName = "None"
+    FSFC_LastEmitTime = 0
+    FSFC_LastResearchTime = -100
+    FSFC_TickHighestDemand = 0
+    FSFC_TickHighestName = "None"
     
     function FSFC_Log_Demand(label, demand)
         -- Throttled: Only log high-priority build desires
@@ -72,35 +77,42 @@ if not AI_Telemetry_Loaded then
         return picked
     end
 
-    function FSFC_Log_Research(researchName)
-        if (FSFC_ResearchLogged[researchName] == nil) then
-            local time = gameTime() or 0
-            print("[" .. floor(time) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Target: " .. researchName)
-            FSFC_ResearchLogged[researchName] = 1
+    function FSFC_Log_Research(researchName, demand)
+        local time = gameTime() or 0
+        local d = demand or 1.0
+        
+        -- If this is a new tick, reset the high watermark
+        if (floor(time) ~= floor(FSFC_LastResearchTime)) then
+            -- Log the winner of the PREVIOUS tick if it wasn't logged yet
+            if (FSFC_TickHighestName ~= "None" and FSFC_TickHighestName ~= FSFC_LastLoggedName) then
+                print("[" .. floor(FSFC_LastResearchTime) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Target: " .. FSFC_TickHighestName)
+                FSFC_LastLoggedName = FSFC_TickHighestName
+            end
+            
+            FSFC_TickHighestDemand = d
+            FSFC_TickHighestName = researchName
+            FSFC_LastResearchTime = time
+        elseif (d > FSFC_TickHighestDemand) then
+            FSFC_TickHighestDemand = d
+            FSFC_TickHighestName = researchName
+        end
+
+        -- Periodically emit current leader if enough time passed
+        if (time > FSFC_LastEmitTime + 10) then
+            if (FSFC_TickHighestName ~= "None") then
+                print("[" .. floor(time) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Target: " .. FSFC_TickHighestName)
+                FSFC_LastLoggedName = FSFC_TickHighestName
+                FSFC_LastEmitTime = time
+            end
         end
     end
+
     function FSFC_Log_Threat()
         if (FSFC_LastThreatTime == nil or gameTime() > FSFC_LastThreatTime + 30) then
-            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: " .. s_enemyIndex)
+            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: -1")
             FSFC_LastThreatTime = gameTime()
         end
     end
     
     print("[AI_DIAG] Initialized for Player " .. s_playerIndex)
-
-    -- Diagnostic: Dump numeric globals to find research IDs
-    function FSFC_DumpGlobals()
-        print("[AI_DIAG] Dumping numeric globals...")
-        local count = 0
-        local name, value = next(globals(), nil)
-        while (name) do
-            if (type(value) == "number" and value > 1000) then -- IDs are usually large numbers
-                print("[AI_DIAG] G: " .. name .. " = " .. value)
-                count = count + 1
-            end
-            if (count > 50) then break end -- Limit to avoid flooding
-            name, value = next(globals(), name)
-        end
-    end
-    -- FSFC_DumpGlobals() -- Uncommented for troubleshooting
 end

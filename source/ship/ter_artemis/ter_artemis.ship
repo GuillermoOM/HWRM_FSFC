@@ -69,7 +69,7 @@ NewShipType.relativeMoveFactor = 6
 --- Formations
 --------------------------------------------------
 
-NewShipType.SquadronSize = 3
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 3)
 NewShipType.formationSpacing = 60
 NewShipType.batchFormation = 'Batch_delta'
 NewShipType.strikeGroupRadius = 25
@@ -169,7 +169,7 @@ NewShipType.totalValue = 8
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildBatch = 3
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 3)
 NewShipType.buildCost = 600
 NewShipType.buildTime = 37
 NewShipType.buildPriorityOrder = 20

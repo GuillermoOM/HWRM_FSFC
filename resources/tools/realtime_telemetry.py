@@ -110,15 +110,31 @@ def parse_line(line):
     if p_classes:
         p_id = int(p_classes.group(1))
         if p_id in data.players:
-            data.players[p_id]["classes"] = {"F": p_classes.group(2), "B": p_classes.group(3), "C": p_classes.group(4), "Fr": p_classes.group(5), "Cap": p_classes.group(6), "U": p_classes.group(7)}
+            data.players[p_id]["classes"] = {
+                "F": p_classes.group(2), "B": p_classes.group(3), "C": p_classes.group(4), 
+                "Fr": p_classes.group(5), "Cap": p_classes.group(6), "U": p_classes.group(7),
+                "P": p_classes.group(8)
+            }
     p_threat = re.search(r"\[AI_DIAG\] P(\d) \| THREAT \| Self: (\d+) \| EnemyTotal: (\d+) \| TargetP: (-?\d+)", line)
     if p_threat:
         p_id = int(p_threat.group(1))
         if p_id in data.players:
             data.players[p_id].update({"threat_self": int(p_threat.group(2)), "threat_enemy": int(p_threat.group(3)), "target": int(p_threat.group(4))})
+    
+    if "WANT |" in line:
+        m = re.search(r"P(\d) \| WANT \| (.+) \| Demand: ([\d\.]+)", line)
+        if m:
+            p_id = int(m.group(1))
+            if p_id in data.players:
+                data.players[p_id]["demand"] = f"{m.group(2)} ({float(m.group(3)):.1f})"
+
     if "RESEARCH | Target:" in line:
         m = re.search(r"P(\d) \| RESEARCH \| Target: (.+)", line)
-        if m: data.players[int(m.group(1))]["research"] = m.group(2)
+        if m:
+            p_id = int(m.group(1))
+            if p_id in data.players:
+                data.players[p_id]["research"] = m.group(2)
+                
     if "----------------------------------" in line and data.game_time > 0:
         if not data.history or data.history[-1]["time"] != data.game_time:
             data.history.append({
@@ -137,7 +153,15 @@ def make_player_panel(p_id):
     content.append(f"Fleet: {p['fleet']}\n", style="white")
     content.append(f"RUs: {p['rus']:,}\n", style="green")
     content.append(f"Power: {p['threat_self']}\n", style="bold white")
-    content.append(f"Tech: {p['research'][:15]}", style="bold cyan")
+    
+    # Demand Reflection
+    demand_txt = p['demand'] if p['demand'] != "None" else "Idle"
+    content.append(f"Want: {demand_txt[:18]}\n", style="italic yellow")
+    
+    # Tech Reflection
+    tech_txt = p['research'] if p['research'] != "None" else "None"
+    content.append(f"Tech: {tech_txt[:18]}", style="bold cyan")
+    
     return Panel(content, title=f"P{p_id}", border_style=color)
 
 def generate_layout():
@@ -149,7 +173,9 @@ def generate_layout():
     m = metrics[data.current_graph]
     layout["history"].update(Panel(BrailleGraph(m, ["cyan", "red", "yellow"]), title=f"HISTORICAL: {titles[data.current_graph]}", subtitle="[bold white][1][/] FLEET  [bold white][2][/] RUs  [bold white][3][/] POWER"))
     layout["header"].update(Panel(Text(f"FSFC TACTICAL SENSORS - {data.era}", justify="center", style="bold magenta"), border_style="magenta"))
-    layout["footer"].update(Panel(Text(f"Time: {data.game_time // 60}m {data.game_time % 60}s | Press [bold red]Q[/] to exit tactical view", justify="center"), border_style="dim"))
+    footer_text = Text.from_markup(f"Time: {data.game_time // 60}m {data.game_time % 60}s | Press [reverse bold red] Q [/] to exit tactical view")
+    footer_text.justify = "center"
+    layout["footer"].update(Panel(footer_text, border_style="dim"))
     return layout
 
 def get_key():

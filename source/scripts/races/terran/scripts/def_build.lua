@@ -433,7 +433,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_deimos",
-		RequiredResearch = "Corvette & FS2",
+		RequiredResearch = "Deimos & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 70,
 		DisplayedName = "GTCv Deimos - Corvette <c=12AB06>110s</c>",
@@ -519,7 +519,7 @@ build = {
 		DisplayPriority = 101,
 		DisplayedName = "GTT Argo - Repair <c=12AB06>37s</c>",
 		Description =
-		"<b>Description:</b> The GTT Argo has become the standard military transport vehicle for the Terran fleet. Argos sometimes carry new weapon and combat craft prototypes to and from testing grounds or to front-line deployment positions. Military VIPs occasionally commandeer Argos to travel from star system to star system in some semblance of comfort. Argos are most often used as assault transports, carrying squads of Marines through heavy flak to board enemy vessels that Command has decided to capture rather than destroy. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 2x Flak, Capture ability (Upgrade)",
+		"<b>Description:</b> The GTT Argo has become the standard military transport vehicle for the Terran fleet. Argos sometimes carry new weapon and combat craft prototypes to and from testing grounds or to front-line deployment positions. Military VIPs occasionally commandeer Argos to travel from star system to star system in some semblance of comfort. Argos are most often used as assault transports, carrying squads of Marines through heavy flak to board enemy vessels that Command has decided to boarding rather than destroy. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 2x Flak.",
 	},
 	{
 		Type = Ship,
@@ -619,7 +619,7 @@ build = {
 		DisplayPriority = 106,
 		DisplayedName = "GTFr Chronos - Repair Ship <c=12AB06>37s</c>",
 		Description =
-		"<b>Description:</b> The Chronos is a freighter of civilian design. As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations. These vessels are slow but strong. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 1x Avenger Turret, Capture ability (Upgrade)",
+		"<b>Description:</b> The Chronos is a freighter of civilian design. As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations. These vessels are slow but strong. \n\n<b>Prerequisites:</b> Repair Frigate. \n\n<b>Armaments:</b> 1x Avenger Turret.",
 	},
 	{
 		Type = Ship,

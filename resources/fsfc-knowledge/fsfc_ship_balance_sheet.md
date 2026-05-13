@@ -3,6 +3,139 @@
 ## [HOW TO READ THIS SHEET]
 This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.
 
+## Research Tree Cost Matrix
+| Race | Node | Cost | Time | Prerequisites |
+| :--- | :--- | :--- | :--- | :--- |
+| SHIVAN | cpuplayers_defensive | 1 | 1s |  |
+| SHIVAN | cpuplayers_aggressive | 1 | 1s |  |
+| SHIVAN | cpuplayers_dynamic | 1 | 1s |  |
+| SHIVAN | cpuplayers_norushtime5 | 1 | 1s |  |
+| SHIVAN | cpuplayers_norushtime10 | 1 | 1s |  |
+| SHIVAN | cpuplayers_norushtime15 | 1 | 1s |  |
+| SHIVAN | AllShipBuildSpeed | 1 | 1s |  |
+| SHIVAN | AllShipBuildSpeedHard | 1 | 1s |  |
+| SHIVAN | AllShipBuildSpeedExpert | 1 | 1s |  |
+| SHIVAN | ResourceCollectionRateHard | 1 | 1s |  |
+| SHIVAN | ResourceCollectionRateExpert | 1 | 1s |  |
+| SHIVAN | HeavyGuns | 1 | 1s |  |
+| SHIVAN | FS1 | 10 | 1s |  |
+| SHIVAN | FS2 | 10 | 1s |  |
+| SHIVAN | Manticore | 850 | 40s | FighterDesign |
+| SHIVAN | Astaroth | 1000 | 45s | FighterDesign & FS2 |
+| SHIVAN | Shaitan | 1000 | 40s | BomberDesign & FS1 |
+| SHIVAN | Cain | 1000 | 50s | CruiserDesign |
+| SHIVAN | FighterDesign | 1200 | 40s |  |
+| SHIVAN | Dragon | 1200 | 50s | FighterDesign |
+| SHIVAN | Basilisk | 1200 | 50s | FighterDesign |
+| SHIVAN | Aeshma | 1200 | 50s | FighterDesign & FS2 |
+| SHIVAN | Nahema | 1200 | 50s | BomberDesign & FS2 |
+| SHIVAN | Taurvi | 1400 | 50s | BomberDesign & FS2 |
+| SHIVAN | Mara | 1500 | 60s | FighterDesign & FS2 |
+| SHIVAN | Gorgon | 1500 | 50s | FighterDesign & FS2 |
+| SHIVAN | BomberDesign | 1500 | 50s |  |
+| SHIVAN | MolochArmor | 1500 | 50s | Moloch |
+| SHIVAN | MolochSprint | 1500 | 50s | Moloch |
+| SHIVAN | SentryGun | 1500 | 50s |  |
+| SHIVAN | AdvancedSensors | 1500 | 50s | CruiserDesign |
+| SHIVAN | Nephilim | 1800 | 60s | BomberDesign |
+| SHIVAN | Seraphim | 2000 | 70s | BomberDesign & FS2 |
+| SHIVAN | Rakshasa | 2000 | 60s | CruiserDesign & FS2 |
+| SHIVAN | Moloch | 2000 | 60s | CapitalShipDesign & FS2 |
+| SHIVAN | CruiserDesign | 2500 | 50s |  |
+| SHIVAN | Lilith | 2500 | 70s | CruiserDesign |
+| SHIVAN | Demon | 4000 | 90s | CapitalShipDesign |
+| SHIVAN | Ravana | 4500 | 100s | CapitalShipDesign & FS2 |
+| SHIVAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| SHIVAN | Lucifer | 10000 | 110s | SuperCapitalShipDesign |
+| SHIVAN | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| SHIVAN | Sathanas | 20000 | 200s | SuperCapitalShipDesign & FS2 |
+| TERRAN | FS1 | 10 | 1s |  |
+| TERRAN | FS2 | 10 | 1s |  |
+| TERRAN | Apollo | 850 | 40s | FighterDesign & FS1 |
+| TERRAN | Valkyrie | 850 | 40s | FighterDesign & FS1 |
+| TERRAN | Hercules | 1000 | 45s | FighterDesign |
+| TERRAN | Ulysses | 1000 | 45s | FighterDesign |
+| TERRAN | Pegasus | 1000 | 30s | FighterDesign & FS2 |
+| TERRAN | Zeus | 1000 | 40s | BomberDesign |
+| TERRAN | RepairArgo | 1000 | 50s | CruiserDesign & FS2 |
+| TERRAN | RepairChronos | 1000 | 50s | CruiserDesign & FS1 |
+| TERRAN | CruiserHealthUpgrade | 1000 | 50s | CruiserDesign |
+| TERRAN | HeavyCruiser | 1000 | 50s | CruiserHealthUpgrade |
+| TERRAN | FighterDesign | 1200 | 40s |  |
+| TERRAN | Myrmidon | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | Perseus | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | HerculesMk2 | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | Artemis | 1200 | 50s | BomberDesign & FS2 |
+| TERRAN | ArtemisDH | 1400 | 50s | Artemis & FS2 |
+| TERRAN | Ares | 1500 | 50s | HerculesMk2 & FS2 |
+| TERRAN | BomberDesign | 1500 | 50s |  |
+| TERRAN | Medusa | 1500 | 50s | BomberDesign |
+| TERRAN | Deimos | 1500 | 50s | CapitalShipDesign & FS2 |
+| TERRAN | DeimosArmor | 1500 | 50s | Deimos |
+| TERRAN | DeimosSprint | 1500 | 50s | Deimos |
+| TERRAN | HecateBuildSpeed | 1500 | 50s | CapitalShipDesign & FS2 |
+| TERRAN | SentryGun | 1500 | 50s |  |
+| TERRAN | SentryAndMineDeployer | 1500 | 50s | SentryGun |
+| TERRAN | BeamSentry | 1500 | 50s | SentryAndMineDeployer & FS2 |
+| TERRAN | ScienceVessel | 1500 | 50s | CruiserDesign |
+| TERRAN | Erinyes | 1800 | 60s | HerculesMk2 & FS2 |
+| TERRAN | Boanerges | 1800 | 60s | BomberDesign & FS2 |
+| TERRAN | Ursa | 2000 | 50s | Boanerges |
+| TERRAN | AdvancedCruiser | 2000 | 50s | CruiserDesign & FS2 |
+| TERRAN | Orion | 2000 | 60s | CapitalShipDesign |
+| TERRAN | CommandCorvette | 2000 | 50s | Deimos & CapitalShipDesign |
+| TERRAN | CruiserDesign | 2500 | 50s |  |
+| TERRAN | Installation | 2500 | 75s | CapitalShipDesign |
+| TERRAN | AWACS | 2500 | 50s | CruiserDesign & FS2 |
+| TERRAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| TERRAN | SuperDestroyer | 10000 | 100s | CapitalShipDesign |
+| TERRAN | Juggernaut | 20000 | 200s | SuperDestroyer & Installation & FS2 |
+| VASUDAN | cpuplayers_defensive | 1 | 1s |  |
+| VASUDAN | cpuplayers_aggressive | 1 | 1s |  |
+| VASUDAN | cpuplayers_dynamic | 1 | 1s |  |
+| VASUDAN | cpuplayers_norushtime5 | 1 | 1s |  |
+| VASUDAN | cpuplayers_norushtime10 | 1 | 1s |  |
+| VASUDAN | cpuplayers_norushtime15 | 1 | 1s |  |
+| VASUDAN | AllShipBuildSpeed | 1 | 1s |  |
+| VASUDAN | AllShipBuildSpeedHard | 1 | 1s |  |
+| VASUDAN | AllShipBuildSpeedExpert | 1 | 1s |  |
+| VASUDAN | ResourceCollectionRateHard | 1 | 1s |  |
+| VASUDAN | ResourceCollectionRateExpert | 1 | 1s |  |
+| VASUDAN | HeavyGuns | 1 | 1s |  |
+| VASUDAN | FS1 | 10 | 1s |  |
+| VASUDAN | FS2 | 10 | 1s |  |
+| VASUDAN | Horus | 800 | 35s | FighterDesign & FS1 |
+| VASUDAN | Seth | 850 | 40s | FighterDesign & FS1 |
+| VASUDAN | Thoth | 900 | 45s | FighterDesign |
+| VASUDAN | Osiris | 1000 | 40s | BomberDesign |
+| VASUDAN | Aten | 1000 | 50s | CruiserDesign |
+| VASUDAN | FighterDesign | 1200 | 40s |  |
+| VASUDAN | Ptah | 1200 | 50s | FighterDesign & FS2 |
+| VASUDAN | Serapis | 1200 | 50s | FighterDesign & FS2 |
+| VASUDAN | Bakha | 1200 | 50s | BomberDesign & FS2 |
+| VASUDAN | Tauret | 1500 | 60s | FighterDesign & FS2 |
+| VASUDAN | BomberDesign | 1500 | 50s |  |
+| VASUDAN | ScienceVessel | 1500 | 50s | CruiserDesign |
+| VASUDAN | SobekArmor | 1500 | 50s | Sobek |
+| VASUDAN | SobekSprint | 1500 | 50s | Sobek |
+| VASUDAN | SentryGun | 1500 | 50s |  |
+| VASUDAN | SentryAndMineDeployer | 1500 | 50s | SentryGun |
+| VASUDAN | RepairSatis | 1500 | 50s | CruiserDesign & FS1 |
+| VASUDAN | RepairBast | 1500 | 50s | CruiserDesign & FS2 |
+| VASUDAN | Sehkmet | 1800 | 60s | BomberDesign & FS2 |
+| VASUDAN | Mentu | 2000 | 60s | CruiserDesign & FS2 |
+| VASUDAN | Typhon | 2000 | 60s | CapitalShipDesign |
+| VASUDAN | Sobek | 2000 | 60s | CapitalShipDesign & FS2 |
+| VASUDAN | CruiserDesign | 2500 | 50s |  |
+| VASUDAN | Installation | 2500 | 75s | CapitalShipDesign |
+| VASUDAN | AWACS | 2500 | 50s | CruiserDesign & FS2 |
+| VASUDAN | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
+| VASUDAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| VASUDAN | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| VASUDAN | Colossus | 20000 | 200s | SuperCapitalShipDesign |
+
+---
+
 ## Unit Capacity Profiles (Limits)
 Defines the total allowed points/ships per family for each match preset.
 
@@ -16,47 +149,46 @@ Defines the total allowed points/ships per family for each match preset.
 | **Colossus** | 1 | 2 | 1 | 1 | 0 |
 | **Installation** | 1 | 4 | 2 | 1 | 1 |
 | **Iceni** | 1 | 2 | 1 | 1 | 0 |
-| **Ares** | 20 | 40 | 25 | 20 | 5 |
-| **Erinyes** | 10 | 30 | 20 | 10 | 4 |
-| **ArtemisDH** | 20 | 40 | 25 | 20 | 5 |
+| **Ares** | 32 | 160 | 100 | 80 | 20 |
+| **Erinyes** | 32 | 120 | 80 | 40 | 16 |
+| **ArtemisDH** | 36 | 120 | 75 | 60 | 15 |
 | **AWACS** | 2 | 10 | 5 | 2 | 1 |
 | **Faustus** | 1 | 4 | 2 | 1 | 1 |
 | **Moloch** | 5 | 15 | 10 | 5 | 2 |
 | **Sobek** | 5 | 15 | 10 | 5 | 2 |
 | **Aeolus** | 5 | 15 | 10 | 5 | 2 |
-| **Rakshasa** | 5 | 15 | 10 | 5 | 2 |
 | **Lucifer** | 1 | 2 | 1 | 1 | 0 |
 | **Sathanas** | 1 | 2 | 1 | 1 | 0 |
 | **Imhotep** | 1 | 4 | 2 | 1 | 1 |
 | **Battlecruiser** | 2 | 15 | 5 | 2 | 1 |
-| **Bomber** | 70 | 300 | 150 | 70 | 40 |
+| **Bomber** | 90 | 900 | 450 | 210 | 120 |
 | **Capital** | 10 | 50 | 20 | 10 | 5 |
 | **CaptureFrigate** | 6 | 20 | 15 | 6 | 4 |
 | **Carrier** | 2 | 10 | 4 | 2 | 1 |
 | **CloakGenerator** | 4 | 10 | 8 | 4 | 4 |
-| **CloakedFighters** | 20 | 50 | 40 | 20 | 10 |
-| **CommandCorvette** | 2 | 10 | 8 | 2 | 2 |
-| **Corvette** | 42 | 150 | 60 | 42 | 20 |
-| **Defenders** | 20 | 50 | 40 | 20 | 10 |
+| **CloakedFighters** | 80 | 200 | 160 | 80 | 40 |
+| **CommandCorvette** | 6 | 30 | 24 | 6 | 6 |
+| **Corvette** | 54 | 450 | 180 | 126 | 60 |
+| **Defenders** | 80 | 200 | 160 | 80 | 40 |
 | **DefenseFieldFrigate** | 2 | 10 | 6 | 2 | 2 |
-| **Defensefighters** | 10 | 50 | 40 | 10 | 10 |
+| **Defensefighters** | 40 | 200 | 160 | 40 | 40 |
 | **ECMProbe** | 12 | 25 | 18 | 12 | 6 |
-| **Fighter** | 70 | 300 | 200 | 70 | 60 |
+| **Fighter** | 160 | 1200 | 800 | 280 | 240 |
 | **Frigate** | 21 | 100 | 50 | 21 | 10 |
 | **GravWellGenerator** | 4 | 10 | 8 | 4 | 4 |
 | **HeavyCruiser** | 2 | 15 | 5 | 2 | 1 |
 | **HyperspacePlatform** | 4 | 15 | 10 | 4 | 2 |
-| **Interceptor** | 70 | 300 | 200 | 70 | 60 |
-| **LanceFighter** | 70 | 300 | 200 | 70 | 60 |
+| **Interceptor** | 160 | 1200 | 800 | 280 | 240 |
+| **LanceFighter** | 280 | 1200 | 800 | 280 | 240 |
 | **LayoutBattleCruiser** | 2 | 180 | 5 | 2 | 1 |
-| **LayoutBomber** | 180 | 180 | 180 | 180 | 180 |
-| **LayoutCorvette** | 180 | 180 | 180 | 180 | 180 |
+| **LayoutBomber** | 540 | 540 | 540 | 540 | 540 |
+| **LayoutCorvette** | 540 | 540 | 540 | 540 | 540 |
 | **LayoutCruiser** | 180 | 180 | 180 | 180 | 180 |
 | **LayoutDestroyer** | 180 | 180 | 180 | 180 | 180 |
-| **LayoutFighter** | 180 | 180 | 180 | 180 | 180 |
+| **LayoutFighter** | 720 | 720 | 720 | 720 | 720 |
 | **LayoutFrigate** | 180 | 180 | 180 | 180 | 180 |
 | **LayoutResource** | 180 | 180 | 180 | 180 | 180 |
-| **MinelayerCorvette** | 4 | 15 | 12 | 4 | 4 |
+| **MinelayerCorvette** | 12 | 45 | 36 | 12 | 12 |
 | **MissileDestroyer** | 2 | 10 | 4 | 2 | 1 |
 | **Mothership** | 1 | 2 | 1 | 1 | 1 |
 | **NonCombat** | 40 | 100 | 60 | 40 | 20 |
@@ -65,6 +197,7 @@ Defines the total allowed points/ships per family for each match preset.
 | **Probe_hw1** | 12 | 25 | 18 | 12 | 6 |
 | **ProximitySensor** | 12 | 25 | 18 | 12 | 6 |
 | **ProximitySensor_hw1** | 12 | 25 | 18 | 12 | 6 |
+| **Rakshasa** | 5 | 15 | 10 | 5 | 2 |
 | **Research** | 1 | 5 | 1 | 1 | 1 |
 | **Research1** | - | 5 | 1 | 1 | 1 |
 | **Research2** | - | 5 | 1 | 1 | 1 |
@@ -74,8 +207,8 @@ Defines the total allowed points/ships per family for each match preset.
 | **Resource** | 30 | 60 | 45 | 30 | 15 |
 | **ResourceCollector** | 20 | 45 | 30 | 20 | 10 |
 | **ResourceController** | 4 | 10 | 6 | 4 | 2 |
-| **SalvageCorvette** | 14 | 45 | 30 | 14 | 10 |
-| **Scout** | 18 | 300 | 150 | 18 | 40 |
+| **SalvageCorvette** | 42 | 135 | 90 | 42 | 30 |
+| **Scout** | 48 | 1200 | 600 | 72 | 160 |
 | **SensorArray** | 4 | 10 | 8 | 4 | 4 |
 | **Shipyard** | 1 | 2 | 1 | 1 | 0 |
 | **SinglePlayerMisc** | - | 100 | 60 | 40 | 20 |
@@ -89,9 +222,13 @@ Defines the total allowed points/ships per family for each match preset.
 - **Pen: Un/Lt/Md/Hv**: Damage multiplier against **Un**armoured, **Lt** (Light), **Md** (Medium), **Hv** (Heavy) armor families.
 
 ### 2. The Detailed Ability Matrix
+- **Build**: Build capability and supported families.
+- **Res**: Research capability (Yes/No).
 - **Hangar**: Hangar capacity and supported weight/families.
-- **Hyperspace**: Min cost, multiplier factor, and recovery time.
-- **Repair**: HP/s repair rate and radius.
+- **H-Space**: Min cost, multiplier factor, and recovery time.
+- **Rep**: HP/s repair rate and radius.
+- **Cap**: Can be captured by other ships (Yes/No).
+- **Special**: Includes Cloak, Harvest, Capture, Afterburners, and other unique abilities.
 
 ### 3. The Ship Tables
 - **S/Sq/B**: Supply Cost / Squadron Size / Build Batch Size.
@@ -201,118 +338,118 @@ Defines the total allowed points/ships per family for each match preset.
 
 ## Detailed Ability Breakdown (Stats)
 
-| Ship | Build | Hangar | Hyperspace | Repair | Harvest | Cloak | Special |
+| Ship | Build | Res | Hangar | H-Space | Rep | Cap | Special |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| GTA Charybdis | No | No | Min:130 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Artemis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Artemis D.H. | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Athena | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Boanerges | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Medusa | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Medusa (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Ursa | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Ursa (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTB Zeus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTC Aeolus | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GTC Fenris | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GTC Fenris (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GTC Leviathan | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GTC Leviathan (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GTCv Deimos | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
-| GTD Hades | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:28 | Fams:Fighter, Utility | Rep:60 | Min:800 | Fact:1 | Rec:0s | No | No | No | No |
-| GTD Hecate | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GTD Orion | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GTD Orion (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Apollo | No | No | No | No | No | No | No |
-| GTF Ares | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Erinyes | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Hercules | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Hercules Mk. II | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Loki | No | No | No | No | No | No | No |
-| GTF Myrmidon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Pegasus | No | No | No | No | No | Usage:0 | Cost:0 | Regen:0 | No |
-| GTF Perseus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Ulysses | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Ulysses (FS1) | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTF Valkyrie | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GTFr Chronos | No | No | Min:70 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
-| GTFr Poseidon | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
-| GTG Zephyrus | No | Size:1.0 | Fams: | Rep:0 | Min:60 | Fact:1 | Rec:0s | No | No | No | No |
-| GTI Arcadia | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:16 | Fams:Fighter, Utility | Rep:100 | No | No | No | No | No |
+| GTA Charybdis | No | No | No | Min:130 / Fact:1 / Rec:0s | No | Yes | No |
+| GTB Artemis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2692307692) |
+| GTB Artemis D.H. | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2) |
+| GTB Athena | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.333333333) |
+| GTB Boanerges | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.0625) |
+| GTB Medusa | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3043478261) |
+| GTB Medusa (FS1) | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3043478261) |
+| GTB Ursa | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2857142857) |
+| GTB Ursa (FS1) | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2857142857) |
+| GTB Zeus | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2692307692) |
+| GTC Aeolus | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GTC Fenris | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GTC Fenris (FS1) | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GTC Leviathan | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GTC Leviathan (FS1) | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GTCv Deimos | No | No | No | Min:350 / Fact:1 / Rec:0s | No | Yes | No |
+| GTD Hades | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:28 / Fams:Fighter, Utility / Rep:60 | Min:800 / Fact:1 / Rec:0s | No | Yes | No |
+| GTD Hecate | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GTD Orion | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GTD Orion (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GTF Apollo | No | No | No | No | No | No | Afterburner(x1.478873239) |
+| GTF Ares | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.6071428571) |
+| GTF Erinyes | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.4444444444) |
+| GTF Hercules | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.5789473684) |
+| GTF Hercules Mk. II | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.5) |
+| GTF Loki | No | No | No | No | No | No | Afterburner(x1.4117647059) |
+| GTF Myrmidon | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.1911764706) |
+| GTF Pegasus | No | No | No | No | No | No | Cloak(Usage:0 / Cost:0 / Regen:0) / Afterburner(x1.2) |
+| GTF Perseus | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.1666666667) |
+| GTF Ulysses | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3719512195) |
+| GTF Ulysses (FS1) | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3719512195) |
+| GTF Valkyrie | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3378378378) |
+| GTFr Chronos | No | No | No | Min:70 / Fact:1 / Rec:0s | Rate:400 / Rad:25 | No | No |
+| GTFr Poseidon | Fams: Platform | No | Size:1 / Fams:Fighter, Utility / Rep:400 | No | No | No | No |
+| GTG Zephyrus | No | No | Size:1.0 / Fams: / Rep:0 | Min:60 / Fact:1 / Rec:0s | No | No | No |
+| GTI Arcadia | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:16 / Fams:Fighter, Utility / Rep:100 | No | No | Yes | No |
 | GTNB Pharos | No | No | No | No | No | No | No |
-| GTS Centaur | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
-| GTS Hygeia | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
-| GTSC Faustus | No | No | Min:130 | Fact:1 | Rec:0s | No | No | No | No |
+| GTS Centaur | No | No | No | Min:25 / Fact:1 / Rec:0s | Rate:400 / Rad:0 | No | No |
+| GTS Hygeia | No | No | No | Min:25 / Fact:1 / Rec:0s | Rate:400 / Rad:0 | No | No |
+| GTSC Faustus | No | Yes | No | Min:130 / Fact:1 / Rec:0s | No | Yes | No |
 | GTSG Alastor | No | No | No | No | No | No | No |
 | GTSG Cerberus | No | No | No | No | No | No | No |
 | GTSG Mjolnir | No | No | No | No | No | No | No |
-| GTT Argo | No | No | Min:70 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
-| GTT Elysium | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
-| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:100 | Min:2500 | Fact:1 | Rec:0s | No | No | No | No |
-| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:100 | Min:2500 | Fact:1 | Rec:0s | No | No | No | No |
-| GVA Setekh | No | No | Min:300 | Fact:1 | Rec:0s | No | No | No | No |
-| GVB Bakha | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVB Osiris | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVB Sehkmet | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVC Aten | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GVC Aten (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GVC Mentu | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GVCv Sobek | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
-| GVD Hatshepsut | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GVD Typhon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GVD Typhon (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| GVF Horus | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVF Ptah | No | No | No | No | No | Usage:0 | Cost:0 | Regen:0 | No |
-| GVF Serapis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVF Seth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVF Tauret | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVF Thoth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| GVFr Bes | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
-| GVFr Satis | No | No | Min:50 | Fact:1 | Rec:0s | Rate:400 | Rad:25 | No | No | No |
-| GVG Anuket | No | Size:1.0 | Fams: | Rep:0 | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| GVS Nephthys | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
+| GTT Argo | No | No | No | Min:70 / Fact:1 / Rec:0s | Rate:400 / Rad:25 | No | No |
+| GTT Elysium | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
+| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:100 | Min:2500 / Fact:1 / Rec:0s | No | Yes | No |
+| GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:100 | Min:2500 / Fact:1 / Rec:0s | No | Yes | No |
+| GVA Setekh | No | No | No | Min:300 / Fact:1 / Rec:0s | No | Yes | No |
+| GVB Bakha | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2115384615) |
+| GVB Osiris | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3157894737) |
+| GVB Sehkmet | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2096774194) |
+| GVC Aten | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GVC Aten (FS1) | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GVC Mentu | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| GVCv Sobek | No | No | No | Min:350 / Fact:1 / Rec:0s | No | Yes | No |
+| GVD Hatshepsut | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GVD Typhon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GVD Typhon (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GVF Horus | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.275) |
+| GVF Ptah | No | No | No | No | No | No | Cloak(Usage:0 / Cost:0 / Regen:0) / Afterburner(x1.2) |
+| GVF Serapis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3235294118) |
+| GVF Seth | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.5354330709) |
+| GVF Tauret | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.4464285714) |
+| GVF Thoth | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3636363636) |
+| GVFr Bes | Fams: Platform | No | Size:1 / Fams:Fighter, Utility / Rep:400 | No | No | No | No |
+| GVFr Satis | No | No | No | Min:50 / Fact:1 / Rec:0s | Rate:400 / Rad:25 | No | No |
+| GVG Anuket | No | No | Size:1.0 / Fams: / Rep:0 | Min:70 / Fact:1 / Rec:0s | No | No | No |
+| GVS Nephthys | No | No | No | Min:25 / Fact:1 / Rec:0s | Rate:400 / Rad:0 | No | No |
 | GVSG Edjo | No | No | No | No | No | No | No |
-| NTF Iceni | No | No | Min:350 | Fact:1 | Rec:0s | No | No | No | No |
-| PVB Amun | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| PVF Anubis | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| PVFr Bast | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
-| PVFr Maat | No | Size:0 | Fams: | Rep:0 | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| PVI Karnak | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:16 | Fams:Fighter, Utility | Rep:100 | No | No | No | No | No |
+| NTF Iceni | No | No | No | Min:350 / Fact:1 / Rec:0s | No | Yes | No |
+| PVB Amun | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.5) |
+| PVF Anubis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
+| PVFr Bast | Fams: Platform | No | Size:1 / Fams:Fighter, Utility / Rep:400 | No | No | No | No |
+| PVFr Maat | No | No | Size:0 / Fams: / Rep:0 | Min:70 / Fact:1 / Rec:0s | No | No | No |
+| PVI Karnak | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:16 / Fams:Fighter, Utility / Rep:100 | No | No | Yes | No |
 | PVNB Geb | No | No | No | No | No | No | No |
-| PVS Scarab | No | No | Min:25 | Fact:1 | Rec:0s | Rate:400 | Rad:0 | No | No | No |
-| PVSC Imhotep | No | No | Min:50 | Fact:1 | Rec:0s | No | No | No | No |
+| PVS Scarab | No | No | No | Min:25 / Fact:1 / Rec:0s | Rate:400 / Rad:0 | No | No |
+| PVSC Imhotep | No | Yes | No | Min:50 / Fact:1 / Rec:0s | No | No | No |
 | PVSG Ankh | No | No | No | No | No | No | No |
-| PVT Isis | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
-| SB Nahema | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SB Nephilim | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SB Seraphim | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SB Shaitan | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SB Taurvi | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SC Cain | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SC Cain (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SC Lilith | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SC Lilith (FS1) | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SC Rakshasa | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SCv Moloch | No | No | Min:70 | Fact:1 | Rec:0s | No | No | No | No |
-| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| SD Lucifer | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:28 | Fams:Fighter, Utility | Rep:60 | Min:800 | Fact:1 | Rec:0s | No | No | No | EMP |
-| SD Ravana | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:20 | Fams:Fighter, Utility | Rep:200 | Min:875 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Aeshma | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Astaroth | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Basilisk | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Dragon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Gorgon | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Manticore | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Mara | No | No | Min:30 | Fact:1 | Rec:0s | No | No | No | No |
-| SF Scorpion | No | No | No | No | No | No | No |
-| SFr Asmodeus | No | No | Min:55 | Fact:1 | Rec:0s | Rate:0 | Rad:25 | No | No | No |
-| SFr Mephisto | Fams: Platform | Size:1 | Fams:Fighter, Utility | Rep:400 | No | No | No | No | No |
-| SG Rahu | No | Size:0 | Fams: | Rep:0 | Min:55 | Fact:1 | Rec:0s | No | No | No | No |
-| SJ Sathanas | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Size:60 | Fams:Fighter, Utility | Rep:60 | Min:2000 | Fact:1 | Rec:0s | No | No | No | No |
+| PVT Isis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
+| SB Nahema | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3888888889) |
+| SB Nephilim | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
+| SB Seraphim | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
+| SB Shaitan | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
+| SB Taurvi | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
+| SC Cain | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SC Cain (FS1) | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SC Lilith | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SC Lilith (FS1) | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SC Rakshasa | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SCv Moloch | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
+| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| SD Demon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| SD Lucifer | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:28 / Fams:Fighter, Utility / Rep:60 | Min:800 / Fact:1 / Rec:0s | No | Yes | EMP |
+| SD Ravana | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| SF Aeshma | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2132352941) |
+| SF Astaroth | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2236842105) |
+| SF Basilisk | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3414634146) |
+| SF Dragon | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3636363636) |
+| SF Gorgon | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x0.0) |
+| SF Manticore | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.1231884058) |
+| SF Mara | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.2162162162) |
+| SF Scorpion | No | No | No | No | No | No | Afterburner(x1.4788732394) |
+| SFr Asmodeus | No | No | No | Min:55 / Fact:1 / Rec:0s | Rate:0 / Rad:25 | No | No |
+| SFr Mephisto | Fams: Platform | No | Size:1 / Fams:Fighter, Utility / Rep:400 | No | No | No | No |
+| SG Rahu | No | No | Size:0 / Fams: / Rep:0 | Min:55 / Fact:1 / Rec:0s | No | No | No |
+| SJ Sathanas | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:60 | Min:2000 / Fact:1 / Rec:0s | No | No | No |
 | SSG Belial | No | No | No | No | No | No | No |
 | SSG Trident | No | No | No | No | No | No | No |
-| ST Azrael | No | No | Min:30 | Fact:1 | Rec:0s | No | Rate:200 | Cap:8 | No | No |
+| ST Azrael | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
 | Shivan Comm Node | No | No | No | No | No | No | No |
 
 ---
@@ -347,9 +484,9 @@ Defines the total allowed points/ships per family for each match preset.
 | GTT Argo | 13500 | MediumArmour / Frigate | 625 | 37s | 2x flak_turret | **66.66** | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 140/40/8/60 |
 | GTFr Chronos | 20000 | MediumArmour / ResourceLarge | 625 | 37s | 1x avenger_turret | **70.0** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 190/40/8/60 |
 | GTF Hercules | 250 | Unarmoured / Fighter | 660 | 39s | 1x prometheusfs1, 1x avenger, 1x miss_hornet, 1x miss_fury | **110.63** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 228/85/3/85 |
-| GTC Leviathan (FS1) | 18000 | MediumArmour / Frigate | 750 | 43s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_pihranaturret | **775.0** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 40/9/18/20 |
+| GTC Leviathan (FS1) | 18000 | MediumArmour / Frigate | 750 | 43s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_pihranaturret | **775.0** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
 | GTB Artemis D.H. | 275 | LightArmour / Fighter | 810 | 42s | 1x maxim, 1x miss_Cyclops, 1x miss_Pihrana | **190.17** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 300/100/4/85 |
-| GTC Leviathan | 18000 | MediumArmour / Frigate | 850 | 43s | 3x terlaser_gimble, 4x beam_AABlue, 1x beam_sgreen, 1x miss_pihranaturret | **803.16** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 40/9/18/20 |
+| GTC Leviathan | 18000 | MediumArmour / Frigate | 850 | 43s | 3x terlaser_gimble, 4x beam_AABlue, 1x beam_sgreen, 1x miss_pihranaturret | **803.16** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
 | GTF Erinyes | 325 | Unarmoured / Fighter | 900 | 47s | 1x kayser, 1x circe, 1x miss_tornado, 1x miss_harpoon | **267.26** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 270/95/3.6/85 |
 | GTB Boanerges | 325 | LightArmour / Fighter | 910 | 44s | 1x maxim, 1x miss_Helios, 1x miss_infyrno | **320.84** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 240/63/4/85 |
 | GTF Ares | 425 | Unarmoured / Fighter | 925 | 45s | 1x maxim, 1x prometheusS, 1x miss_trebuchet, 1x miss_tornado | **213.54** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 224/76/2.4/85 |
@@ -442,5 +579,4 @@ Defines the total allowed points/ships per family for each match preset.
 | GVD Typhon (FS1) | 80000 | HeavyArmour / BigCapitalShip | 11000 | 175s | 2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 13x vaslaser_gimble, 3x vashuge_turret | **1218.15** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 |
 | GVD Hatshepsut | 80000 | HeavyArmour / BigCapitalShip | 14000 | 240s | 1x beam_sgold, 5x miss_fluxcannon, 1x heavyflak_turret, 4x beam_AABlue, 6x vashuge_gimble, 10x flak_gimble, 3x beam_bgold | **4955.08** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4/20/10 |
 | GTVA Colossus | 1000000 | HeavyArmour / BigCapitalShip | 50000 | 500s | 10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen | **13673.74** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 125/3/20/40 |
-
 

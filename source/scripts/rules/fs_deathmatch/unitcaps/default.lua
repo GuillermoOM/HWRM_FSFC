@@ -1,16 +1,16 @@
-supplyLimit("Fighter", 70);
-supplyLimit("Scout", 18);
-supplyLimit("Interceptor", 70);
-supplyLimit("Bomber", 70);
-supplyLimit("LanceFighter", 70);
-supplyLimit("Defenders", 20);
-supplyLimit("Defensefighters", 10);
-supplyLimit("CloakedFighters", 20);
+supplyLimit("Fighter", 160);
+supplyLimit("Scout", 48);
+supplyLimit("Interceptor", 160);
+supplyLimit("Bomber", 90);
+supplyLimit("LanceFighter", 280);
+supplyLimit("Defenders", 80);
+supplyLimit("Defensefighters", 40);
+supplyLimit("CloakedFighters", 80);
 
-supplyLimit("Corvette", 42);
-supplyLimit("MinelayerCorvette", 4);
-supplyLimit("CommandCorvette", 2);
-supplyLimit("SalvageCorvette", 14);
+supplyLimit("Corvette", 54);
+supplyLimit("MinelayerCorvette", 12);
+supplyLimit("CommandCorvette", 6);
+supplyLimit("SalvageCorvette", 42);
 
 supplyLimit("Frigate", 21);
 supplyLimit("DefenseFieldFrigate", 2);
@@ -56,9 +56,9 @@ supplyLimit("Hades", 1)
 supplyLimit("Colossus", 1)
 supplyLimit("Installation", 1)
 supplyLimit("Iceni", 1)
-supplyLimit("Ares", 20)
-supplyLimit("Erinyes", 10)
-supplyLimit("ArtemisDH", 20)
+supplyLimit("Ares", 32)
+supplyLimit("Erinyes", 32)
+supplyLimit("ArtemisDH", 36)
 supplyLimit("AWACS", 2)
 supplyLimit("Faustus", 1)
 supplyLimit("Moloch", 5)
@@ -68,13 +68,13 @@ supplyLimit("Sathanas", 1)
 supplyLimit("Imhotep", 1)
 
 -- Layout Limits (Global Faction Caps)
-supplyLimit("LayoutFighter", 180)
-supplyLimit("LayoutCorvette", 180)
+supplyLimit("LayoutFighter", 720)
+supplyLimit("LayoutCorvette", 540)
 supplyLimit("LayoutFrigate", 180)
 supplyLimit("LayoutDestroyer", 180)
 supplyLimit("LayoutBattleCruiser", 2)
 supplyLimit("LayoutResource", 180)
-supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutBomber", 540)
 supplyLimit("LayoutCruiser", 180)
 
 -- Show Freespace families
