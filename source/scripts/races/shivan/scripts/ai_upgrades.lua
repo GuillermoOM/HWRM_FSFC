@@ -19,7 +19,11 @@ if (FIGHTERDESIGN == nil) then FIGHTERDESIGN = -1 end
 if (BOMBERDESIGN == nil) then BOMBERDESIGN = -1 end
 if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
 if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
+if (FS1 == nil) then FS1 = -1 end
 if (FS2 == nil) then FS2 = -1 end
+if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = -1 end
+if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = -1 end
+if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = -1 end
 
 function ResearchDemandSet_Shivan(id_or_name, demand)
 	local id = FSFC_ResolveID(id_or_name)
@@ -36,6 +40,23 @@ function ResearchDemandAdd_Shivan(id_or_name, demand)
 end
 
 function DoResearchTechDemand_Shivan()
+	-- 1. ERA SELECTION
+	local eraDemand = 4.0
+	if (FSFC_CheckResearch(FS1)) then
+		ResearchDemandSet_Shivan(FS1, eraDemand)
+		FSFC_Log_Research("FS1", eraDemand)
+	end
+	if (FSFC_CheckResearch(FS2)) then
+		ResearchDemandSet_Shivan(FS2, eraDemand)
+		FSFC_Log_Research("FS2", eraDemand)
+	end
+
+	-- 2. TACTICS
+	if (FSFC_CheckResearch(CPUPLAYERS_AGGRESSIVE)) then
+		ResearchDemandSet_Shivan(CPUPLAYERS_AGGRESSIVE, 5.0) -- Force aggressive posture
+		FSFC_Log_Research("TacticsAggressive", 5.0)
+	end
+
 	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
 	if (fighterdemand > 0) then
 		print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | FighterClass | Demand: " .. fighterdemand)
@@ -70,8 +91,8 @@ function DoResearchTechDemand_Shivan()
 		end
 		-- Recon Doctrine: Scouts
 		if (FSFC_CheckResearch(ASTAROTH)) then
-			ResearchDemandSet_Shivan(ASTAROTH, fighterdemand + 1.0)
-			FSFC_Log_Research("Astaroth", fighterdemand + 1.0)
+			ResearchDemandSet_Shivan(ASTAROTH, fighterdemand + 2.0)
+			FSFC_Log_Research("Astaroth", fighterdemand + 2.0)
 		end
 	end
 

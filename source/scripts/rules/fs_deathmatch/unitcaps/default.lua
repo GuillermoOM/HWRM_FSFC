@@ -1,5 +1,5 @@
 supplyLimit("Fighter", 160);
-supplyLimit("Scout", 48);
+supplyLimit("Scout", 64);
 supplyLimit("Interceptor", 160);
 supplyLimit("Bomber", 90);
 supplyLimit("LanceFighter", 280);
@@ -19,7 +19,7 @@ supplyLimit("CaptureFrigate", 6);
 supplyLimit("Capital", 10);
 supplyLimit("Destroyer", 2);
 supplyLimit("MissileDestroyer", 2);
-supplyLimit("Carrier", 2);
+supplyLimit("Carrier", 6);
 supplyLimit("Battlecruiser", 2);
 supplyLimit("HeavyCruiser", 2);
 supplyLimit("Shipyard", 1);

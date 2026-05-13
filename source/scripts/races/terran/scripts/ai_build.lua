@@ -94,6 +94,10 @@ function DetermineSpecialDemand_Terran()
 	local fighterDemand = 1.8 -- Added missing fighterDemand
 	local interceptorDemand = 1.5
 
+	-- Safety initialization for custom race environment
+	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
+	if (player_max == nil) then player_max = 0 end
+
 	-- Detect Swarm Threats
 	local enemyFighterCount = 0
 	local enemyBomberCount = 0
@@ -106,11 +110,16 @@ function DetermineSpecialDemand_Terran()
 	local numScouts = 0
 	if (kScout ~= nil) then
 		numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
-		if (numScouts < 3) then
+		if (numScouts < 2) then
+			ShipDemandAdd(kScout, 10.0)
+			FSFC_Log_Demand("Scouts", 10.0)
+			-- Early game queue management: Throttle harvesters slightly if we have NO scouts
+			if (gameTime() < 120 and kCollector ~= nil) then
+				ShipDemandAdd(kCollector, -2.0)
+			end
+		elseif (numScouts < 4) then
 			ShipDemandAdd(kScout, 4.5)
 			FSFC_Log_Demand("Scouts", 4.5)
-		elseif (numScouts < 6) then
-			ShipDemandAdd(kScout, 1.5)
 		end
 	end
 
@@ -220,6 +229,18 @@ function DetermineSpecialDemand_Terran()
 		-- Persistent Destroyer/Battlecruiser demand if rich
 		if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
 		if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
+		
+		if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
+			local hecateDemand = 2.5
+			if (capDemand > 1.5) then
+				hecateDemand = capDemand * 1.5
+			end
+			if (currentRU > 20000) then
+				hecateDemand = hecateDemand + 2.0 -- High interest in production when rich
+			end
+			ShipDemandAdd(kCarrier, hecateDemand)
+			FSFC_Log_Demand("Hecates", hecateDemand)
+		end
 
 		-- Orion Anti-Capital Priority: If enemy has capital ships, the Orion is preferred.
 		if (s_enemyIndex ~= -1 and TER_ORION ~= nil) then

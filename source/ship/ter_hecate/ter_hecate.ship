@@ -152,7 +152,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Capital', 1.0)
-setSupplyValue(NewShipType, 'Destroyer', 1.0)
+setSupplyValue(NewShipType, 'Carrier', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -301,7 +301,7 @@ NewShipType.launchFormation = 'delta'
 --- Custom Code
 --------------------------------------------------
 
-addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate', 'onDestroy', 'gta_hecate', 1)
+addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate', 'onDestroy', '', 1)
 
 --------------------------------------------------
 --- Load Model

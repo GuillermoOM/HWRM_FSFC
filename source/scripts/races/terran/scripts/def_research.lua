@@ -203,7 +203,7 @@ research = {
 	-- Bombers ---------------
 	{
 		Name = "BomberDesign",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -303,7 +303,7 @@ research = {
 	-- Frigates --------------
 	{
 		Name = "CruiserDesign",
-		RequiredResearch = "",
+		RequiredResearch = "BomberDesign",
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,
@@ -613,8 +613,54 @@ research = {
 		TargetName = "ter_charybdis",
 		Icon = Icon_Build,
 		ShortDisplayedName = "AWACS",
-	}
-
-
-
+	},
+	-- AI Only Nodes ---------
+	{
+		Name = "cpuplayers_defensive",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
+	{
+		Name = "cpuplayers_aggressive",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
+	{
+		Name = "cpuplayers_dynamic",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
+	{
+		Name = "cpuplayers_norushtime5",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
+	{
+		Name = "cpuplayers_norushtime10",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
+	{
+		Name = "cpuplayers_norushtime15",
+		RequiredResearch = "",
+		RequiredSubSystems = "",
+		Cost = 1,
+		Time = 1,
+		AIOnly = 1,
+	},
 }

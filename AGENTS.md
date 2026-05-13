@@ -42,6 +42,9 @@ Specialized patterns for common FSFC modding tasks:
 - **Built-Ship Dependent Tech Tree**: Patterns for `def_research.lua` and `ai_upgrades.lua` to enforce ship-by-ship progression. [Skill](.agents/skills/ship_dependent_tech_tree/how_to_implement.md)
 - **Batch Updating Prerequisites**: Python automation for `def_build.lua`. [Skill](.agents/skills/batch_update_build_prerequisites/script_template.md)
 - **Hardpoint & Subsystem Management**: Patterns for `StartShipHardPointConfig` and innate loading. [Skill](.agents/skills/ship_subsystem_management/how_to_configure_hardpoints.md)
+- **AI Reconnaissance Priority**: Ensuring map vision through high-priority early scouting and harvester throttling. [Skill](.agents/skills/ai_reconnaissance_priority/how_to_prioritize.md)
+- **Unit Capacity Configuration**: Standardizing `getShipNum` wrappers and wing-based supply scaling. [Skill](.agents/skills/unit_capacity_configuration/how_to_configure.md)
+- **AI Research Balancing**: Systematic auditing of tech pacing using the `extract_ship_stats.py` tool. [Skill](.agents/skills/ai_research_balancing/how_to_balance.md)
 
 
 ## Full Agent Instructions

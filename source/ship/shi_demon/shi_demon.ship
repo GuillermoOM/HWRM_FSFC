@@ -152,7 +152,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Capital', 1.0)
-setSupplyValue(NewShipType, 'Destroyer', 1.0)
+setSupplyValue(NewShipType, 'Carrier', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating

@@ -32,7 +32,7 @@ supplyLimit("Capital", 20);
 	
 supplyLimit("Destroyer", 5);
 supplyLimit("MissileDestroyer", 4);
-supplyLimit("Carrier", 4);
+supplyLimit("Carrier", 6);
 supplyLimit("Battlecruiser", 5);
 supplyLimit("HeavyCruiser", 5);
 supplyLimit("Shipyard", 1);

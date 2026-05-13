@@ -38,7 +38,7 @@ end
 function updateNameplate(group, player_index, ship_id)
 	-- Use race prefix check instead of hardcoded index 10
 	local racePrefix = PlayerRace_GetString(player_index, "Prefix", "UNK")
-	if (racePrefix ~= "TER_") then
+	if (strfind(racePrefix, "TER") == nil) then
 		return nil;
 	end
 

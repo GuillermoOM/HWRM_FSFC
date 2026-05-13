@@ -47,6 +47,7 @@ function CpuBuild_UpdateRaceVariables()
 	kCruiser = FSFC_PickBestShip(VAS_ATEN, VAS_ATEN_FS1)
 	kHeavyCruiser = VAS_MENTU
 	
+	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
 	kCarrier = FSFC_PickBestShip(VAS_TYPHON, VAS_TYPHON_FS1)
 	kResearch = VAS_IMHOTEP
 	kAWACS = VAS_SETEKH
@@ -88,6 +89,10 @@ function DetermineSpecialDemand_Vasudan()
 	local fighterDemand = 1.8
 	local bomberDemand = 2.0 -- Vasudans love their bombers
 
+	-- Safety initialization for custom race environment
+	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
+	if (player_max == nil) then player_max = 0 end
+
 	-- Facing the Terran "Wall of Steel"?
 	local enemyCapCount = 0
 	if (s_enemyIndex ~= -1) then
@@ -121,11 +126,16 @@ function DetermineSpecialDemand_Vasudan()
 	local numScouts = 0
 	if (kScout ~= nil) then
 		numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
-		if (numScouts < 3) then
+		if (numScouts < 2) then
+			ShipDemandAdd(kScout, 10.0)
+			FSFC_Log_Demand("Scouts", 10.0)
+			-- Early game queue management: Throttle harvesters slightly if we have NO scouts
+			if (gameTime() < 120 and kCollector ~= nil) then
+				ShipDemandAdd(kCollector, -2.0)
+			end
+		elseif (numScouts < 4) then
 			ShipDemandAdd(kScout, 4.5)
 			FSFC_Log_Demand("Scouts", 4.5)
-		elseif (numScouts < 6) then
-			ShipDemandAdd(kScout, 2.5)
 		end
 	end
 
@@ -185,8 +195,15 @@ function DetermineSpecialDemand_Vasudan()
 	end
 
 	if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
-		ShipDemandAdd(kCarrier, 1.5)
-		FSFC_Log_Demand("Typhons", 1.5)
+		local typhonDemand = 2.5
+		if (capDemand > 1.5) then
+			typhonDemand = capDemand * 1.5
+		end
+		if (currentRU > 20000) then
+			typhonDemand = typhonDemand + 2.0 -- High interest in production when rich
+		end
+		ShipDemandAdd(kCarrier, typhonDemand)
+		FSFC_Log_Demand("Typhons", typhonDemand)
 	end
 
 	-- Backbone Cruiser Logic (Aten/Mentu)
@@ -208,8 +225,23 @@ function DetermineSpecialDemand_Vasudan()
 			ShipDemandAdd(kDestroyer, 0.5) -- Suppress if escort is missing
 		end
 	end
-	if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
-	
+
+	-- Hatshepsut Anti-Capital Priority: If enemy has capital ships, the Hatshepsut is preferred.
+	if (s_enemyIndex ~= -1 and kBattleCruiser ~= nil) then
+		if (enemyCapCount > 0) then
+			-- Throttled by Backbone
+			if (numAten >= 6) then
+				ShipDemandAdd(kBattleCruiser, capDemand * 2.5)
+				FSFC_Log_Demand("Hatshepsut Suppression", capDemand * 2.5)
+			else
+				ShipDemandAdd(kBattleCruiser, 0.5)
+			end
+		else
+			-- Persistent Destroyer/Battlecruiser demand
+			ShipDemandAdd(kBattleCruiser, capDemand)
+		end
+	end
+
 	-- Special Sobek hunter priority (Tank for the bombers)
 	if (enemyCapCount > 10 and kDestroyer ~= nil and kDestroyer == VAS_SOBEK and numAten >= 6) then
 		ShipDemandAdd(VAS_SOBEK, 3.5)

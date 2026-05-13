@@ -145,7 +145,7 @@ research = {
 	-- Bombers ---------------
 	{
 		Name = "BomberDesign",
-		RequiredResearch = "",
+		RequiredResearch = "FighterDesign",
 		RequiredSubSystems = "",
 		Cost = 1500,
 		Time = 50,
@@ -203,7 +203,7 @@ research = {
 	-- Cruisers --------------
 	{
 		Name = "CruiserDesign",
-		RequiredResearch = "",
+		RequiredResearch = "BomberDesign",
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,

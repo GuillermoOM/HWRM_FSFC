@@ -32,7 +32,7 @@ supplyLimit("Capital", 5);
 
 supplyLimit("Destroyer", 1);
 supplyLimit("MissileDestroyer", 1);
-supplyLimit("Carrier", 1);
+supplyLimit("Carrier", 6);
 supplyLimit("Battlecruiser", 1);
 supplyLimit("HeavyCruiser", 1);
 supplyLimit("Shipyard", 0);
@@ -164,7 +164,7 @@ supplyLimit("LayoutFighter", 720)
 supplyLimit("LayoutCorvette", 540)
 supplyLimit("LayoutFrigate", 180)
 supplyLimit("LayoutDestroyer", 180)
-supplyLimit("LayoutBattleCruiser", 1)
+supplyLimit("LayoutBattleCruiser", 2)
 supplyLimit("LayoutResource", 180)
 supplyLimit("LayoutBomber", 540)
 supplyLimit("LayoutCruiser", 180)

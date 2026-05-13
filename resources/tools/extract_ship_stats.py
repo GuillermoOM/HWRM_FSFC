@@ -270,12 +270,30 @@ def parse_research_costs():
                 req_match = re.search(r'RequiredResearch\s*=\s*["\']([^"\']*)["\']', node)
                 
                 if name_match and cost_match and time_match:
+                    name = name_match.group(1)
+                    cost = int(cost_match.group(1))
+                    req = req_match.group(1) if req_match else "None"
+                    
+                    # Determine Tier
+                    tier = "T0"
+                    if cost >= 15000: tier = "T4"
+                    elif cost >= 5000: tier = "T3"
+                    elif cost >= 2000: tier = "T2"
+                    elif cost >= 1000: tier = "T1"
+                    
+                    # Determine Era
+                    era = "Universal"
+                    if "FS1" in req or "FS1" in name: era = "FS1"
+                    elif "FS2" in req or "FS2" in name: era = "FS2"
+
                     research_nodes.append({
                         "race": race.upper(),
-                        "name": name_match.group(1),
-                        "cost": int(cost_match.group(1)),
+                        "name": name,
+                        "cost": cost,
                         "time": int(time_match.group(1)),
-                        "req": req_match.group(1) if req_match else "None"
+                        "req": req,
+                        "tier": tier,
+                        "era": era
                     })
     return research_nodes
 
@@ -285,10 +303,10 @@ def generate_markdown(races, weapons, unit_caps, research):
     output += "## [HOW TO READ THIS SHEET]\n"
     output += "This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.\n\n"
     output += "## Research Tree Cost Matrix\n"
-    output += "| Race | Node | Cost | Time | Prerequisites |\n"
-    output += "| :--- | :--- | :--- | :--- | :--- |\n"
+    output += "| Race | Tier | Era | Node | Cost | Time | Prerequisites |\n"
+    output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     for r in sorted(research, key=lambda x: (x['race'], x['cost'])):
-        output += f"| {r['race']} | {r['name']} | {r['cost']} | {r['time']}s | {r['req']} |\n"
+        output += f"| {r['race']} | {r['tier']} | {r['era']} | {r['name']} | {r['cost']} | {r['time']}s | {r['req']} |\n"
     output += "\n---\n\n"
 
     output += "## Unit Capacity Profiles (Limits)\n"

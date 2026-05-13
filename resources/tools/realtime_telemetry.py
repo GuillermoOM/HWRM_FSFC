@@ -154,6 +154,12 @@ def make_player_panel(p_id):
     content.append(f"RUs: {p['rus']:,}\n", style="green")
     content.append(f"Power: {p['threat_self']}\n", style="bold white")
     
+    # Target and Enemy Threat
+    target_p = p['target']
+    target_str = f"P{target_p}" if target_p != -1 else "None"
+    content.append(f"Target: {target_str} ", style="bold red" if target_p != -1 else "dim white")
+    content.append(f"({p['threat_enemy']})\n", style="dim red")
+    
     # Demand Reflection
     demand_txt = p['demand'] if p['demand'] != "None" else "Idle"
     content.append(f"Want: {demand_txt[:18]}\n", style="italic yellow")

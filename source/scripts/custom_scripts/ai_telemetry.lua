@@ -109,7 +109,8 @@ if not AI_Telemetry_Loaded then
 
     function FSFC_Log_Threat()
         if (FSFC_LastThreatTime == nil or gameTime() > FSFC_LastThreatTime + 30) then
-            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: -1")
+            local targetP = s_enemyIndex or -1
+            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: " .. targetP)
             FSFC_LastThreatTime = gameTime()
         end
     end

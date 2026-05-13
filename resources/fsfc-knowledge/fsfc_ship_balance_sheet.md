@@ -4,135 +4,135 @@
 This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.
 
 ## Research Tree Cost Matrix
-| Race | Node | Cost | Time | Prerequisites |
-| :--- | :--- | :--- | :--- | :--- |
-| SHIVAN | cpuplayers_defensive | 1 | 1s |  |
-| SHIVAN | cpuplayers_aggressive | 1 | 1s |  |
-| SHIVAN | cpuplayers_dynamic | 1 | 1s |  |
-| SHIVAN | cpuplayers_norushtime5 | 1 | 1s |  |
-| SHIVAN | cpuplayers_norushtime10 | 1 | 1s |  |
-| SHIVAN | cpuplayers_norushtime15 | 1 | 1s |  |
-| SHIVAN | AllShipBuildSpeed | 1 | 1s |  |
-| SHIVAN | AllShipBuildSpeedHard | 1 | 1s |  |
-| SHIVAN | AllShipBuildSpeedExpert | 1 | 1s |  |
-| SHIVAN | ResourceCollectionRateHard | 1 | 1s |  |
-| SHIVAN | ResourceCollectionRateExpert | 1 | 1s |  |
-| SHIVAN | HeavyGuns | 1 | 1s |  |
-| SHIVAN | FS1 | 10 | 1s |  |
-| SHIVAN | FS2 | 10 | 1s |  |
-| SHIVAN | Manticore | 850 | 40s | FighterDesign |
-| SHIVAN | Astaroth | 1000 | 45s | FighterDesign & FS2 |
-| SHIVAN | Shaitan | 1000 | 40s | BomberDesign & FS1 |
-| SHIVAN | Cain | 1000 | 50s | CruiserDesign |
-| SHIVAN | FighterDesign | 1200 | 40s |  |
-| SHIVAN | Dragon | 1200 | 50s | FighterDesign |
-| SHIVAN | Basilisk | 1200 | 50s | FighterDesign |
-| SHIVAN | Aeshma | 1200 | 50s | FighterDesign & FS2 |
-| SHIVAN | Nahema | 1200 | 50s | BomberDesign & FS2 |
-| SHIVAN | Taurvi | 1400 | 50s | BomberDesign & FS2 |
-| SHIVAN | Mara | 1500 | 60s | FighterDesign & FS2 |
-| SHIVAN | Gorgon | 1500 | 50s | FighterDesign & FS2 |
-| SHIVAN | BomberDesign | 1500 | 50s |  |
-| SHIVAN | MolochArmor | 1500 | 50s | Moloch |
-| SHIVAN | MolochSprint | 1500 | 50s | Moloch |
-| SHIVAN | SentryGun | 1500 | 50s |  |
-| SHIVAN | AdvancedSensors | 1500 | 50s | CruiserDesign |
-| SHIVAN | Nephilim | 1800 | 60s | BomberDesign |
-| SHIVAN | Seraphim | 2000 | 70s | BomberDesign & FS2 |
-| SHIVAN | Rakshasa | 2000 | 60s | CruiserDesign & FS2 |
-| SHIVAN | Moloch | 2000 | 60s | CapitalShipDesign & FS2 |
-| SHIVAN | CruiserDesign | 2500 | 50s |  |
-| SHIVAN | Lilith | 2500 | 70s | CruiserDesign |
-| SHIVAN | Demon | 4000 | 90s | CapitalShipDesign |
-| SHIVAN | Ravana | 4500 | 100s | CapitalShipDesign & FS2 |
-| SHIVAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
-| SHIVAN | Lucifer | 10000 | 110s | SuperCapitalShipDesign |
-| SHIVAN | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
-| SHIVAN | Sathanas | 20000 | 200s | SuperCapitalShipDesign & FS2 |
-| TERRAN | FS1 | 10 | 1s |  |
-| TERRAN | FS2 | 10 | 1s |  |
-| TERRAN | Apollo | 850 | 40s | FighterDesign & FS1 |
-| TERRAN | Valkyrie | 850 | 40s | FighterDesign & FS1 |
-| TERRAN | Hercules | 1000 | 45s | FighterDesign |
-| TERRAN | Ulysses | 1000 | 45s | FighterDesign |
-| TERRAN | Pegasus | 1000 | 30s | FighterDesign & FS2 |
-| TERRAN | Zeus | 1000 | 40s | BomberDesign |
-| TERRAN | RepairArgo | 1000 | 50s | CruiserDesign & FS2 |
-| TERRAN | RepairChronos | 1000 | 50s | CruiserDesign & FS1 |
-| TERRAN | CruiserHealthUpgrade | 1000 | 50s | CruiserDesign |
-| TERRAN | HeavyCruiser | 1000 | 50s | CruiserHealthUpgrade |
-| TERRAN | FighterDesign | 1200 | 40s |  |
-| TERRAN | Myrmidon | 1200 | 50s | FighterDesign & FS2 |
-| TERRAN | Perseus | 1200 | 50s | FighterDesign & FS2 |
-| TERRAN | HerculesMk2 | 1200 | 50s | FighterDesign & FS2 |
-| TERRAN | Artemis | 1200 | 50s | BomberDesign & FS2 |
-| TERRAN | ArtemisDH | 1400 | 50s | Artemis & FS2 |
-| TERRAN | Ares | 1500 | 50s | HerculesMk2 & FS2 |
-| TERRAN | BomberDesign | 1500 | 50s |  |
-| TERRAN | Medusa | 1500 | 50s | BomberDesign |
-| TERRAN | Deimos | 1500 | 50s | CapitalShipDesign & FS2 |
-| TERRAN | DeimosArmor | 1500 | 50s | Deimos |
-| TERRAN | DeimosSprint | 1500 | 50s | Deimos |
-| TERRAN | HecateBuildSpeed | 1500 | 50s | CapitalShipDesign & FS2 |
-| TERRAN | SentryGun | 1500 | 50s |  |
-| TERRAN | SentryAndMineDeployer | 1500 | 50s | SentryGun |
-| TERRAN | BeamSentry | 1500 | 50s | SentryAndMineDeployer & FS2 |
-| TERRAN | ScienceVessel | 1500 | 50s | CruiserDesign |
-| TERRAN | Erinyes | 1800 | 60s | HerculesMk2 & FS2 |
-| TERRAN | Boanerges | 1800 | 60s | BomberDesign & FS2 |
-| TERRAN | Ursa | 2000 | 50s | Boanerges |
-| TERRAN | AdvancedCruiser | 2000 | 50s | CruiserDesign & FS2 |
-| TERRAN | Orion | 2000 | 60s | CapitalShipDesign |
-| TERRAN | CommandCorvette | 2000 | 50s | Deimos & CapitalShipDesign |
-| TERRAN | CruiserDesign | 2500 | 50s |  |
-| TERRAN | Installation | 2500 | 75s | CapitalShipDesign |
-| TERRAN | AWACS | 2500 | 50s | CruiserDesign & FS2 |
-| TERRAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
-| TERRAN | SuperDestroyer | 10000 | 100s | CapitalShipDesign |
-| TERRAN | Juggernaut | 20000 | 200s | SuperDestroyer & Installation & FS2 |
-| VASUDAN | cpuplayers_defensive | 1 | 1s |  |
-| VASUDAN | cpuplayers_aggressive | 1 | 1s |  |
-| VASUDAN | cpuplayers_dynamic | 1 | 1s |  |
-| VASUDAN | cpuplayers_norushtime5 | 1 | 1s |  |
-| VASUDAN | cpuplayers_norushtime10 | 1 | 1s |  |
-| VASUDAN | cpuplayers_norushtime15 | 1 | 1s |  |
-| VASUDAN | AllShipBuildSpeed | 1 | 1s |  |
-| VASUDAN | AllShipBuildSpeedHard | 1 | 1s |  |
-| VASUDAN | AllShipBuildSpeedExpert | 1 | 1s |  |
-| VASUDAN | ResourceCollectionRateHard | 1 | 1s |  |
-| VASUDAN | ResourceCollectionRateExpert | 1 | 1s |  |
-| VASUDAN | HeavyGuns | 1 | 1s |  |
-| VASUDAN | FS1 | 10 | 1s |  |
-| VASUDAN | FS2 | 10 | 1s |  |
-| VASUDAN | Horus | 800 | 35s | FighterDesign & FS1 |
-| VASUDAN | Seth | 850 | 40s | FighterDesign & FS1 |
-| VASUDAN | Thoth | 900 | 45s | FighterDesign |
-| VASUDAN | Osiris | 1000 | 40s | BomberDesign |
-| VASUDAN | Aten | 1000 | 50s | CruiserDesign |
-| VASUDAN | FighterDesign | 1200 | 40s |  |
-| VASUDAN | Ptah | 1200 | 50s | FighterDesign & FS2 |
-| VASUDAN | Serapis | 1200 | 50s | FighterDesign & FS2 |
-| VASUDAN | Bakha | 1200 | 50s | BomberDesign & FS2 |
-| VASUDAN | Tauret | 1500 | 60s | FighterDesign & FS2 |
-| VASUDAN | BomberDesign | 1500 | 50s |  |
-| VASUDAN | ScienceVessel | 1500 | 50s | CruiserDesign |
-| VASUDAN | SobekArmor | 1500 | 50s | Sobek |
-| VASUDAN | SobekSprint | 1500 | 50s | Sobek |
-| VASUDAN | SentryGun | 1500 | 50s |  |
-| VASUDAN | SentryAndMineDeployer | 1500 | 50s | SentryGun |
-| VASUDAN | RepairSatis | 1500 | 50s | CruiserDesign & FS1 |
-| VASUDAN | RepairBast | 1500 | 50s | CruiserDesign & FS2 |
-| VASUDAN | Sehkmet | 1800 | 60s | BomberDesign & FS2 |
-| VASUDAN | Mentu | 2000 | 60s | CruiserDesign & FS2 |
-| VASUDAN | Typhon | 2000 | 60s | CapitalShipDesign |
-| VASUDAN | Sobek | 2000 | 60s | CapitalShipDesign & FS2 |
-| VASUDAN | CruiserDesign | 2500 | 50s |  |
-| VASUDAN | Installation | 2500 | 75s | CapitalShipDesign |
-| VASUDAN | AWACS | 2500 | 50s | CruiserDesign & FS2 |
-| VASUDAN | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
-| VASUDAN | CapitalShipDesign | 5000 | 75s | CruiserDesign |
-| VASUDAN | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
-| VASUDAN | Colossus | 20000 | 200s | SuperCapitalShipDesign |
+| Race | Tier | Era | Node | Cost | Time | Prerequisites |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| SHIVAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
+| SHIVAN | T0 | Universal | cpuplayers_aggressive | 1 | 1s |  |
+| SHIVAN | T0 | Universal | cpuplayers_dynamic | 1 | 1s |  |
+| SHIVAN | T0 | Universal | cpuplayers_norushtime5 | 1 | 1s |  |
+| SHIVAN | T0 | Universal | cpuplayers_norushtime10 | 1 | 1s |  |
+| SHIVAN | T0 | Universal | cpuplayers_norushtime15 | 1 | 1s |  |
+| SHIVAN | T0 | Universal | AllShipBuildSpeed | 1 | 1s |  |
+| SHIVAN | T0 | Universal | AllShipBuildSpeedHard | 1 | 1s |  |
+| SHIVAN | T0 | Universal | AllShipBuildSpeedExpert | 1 | 1s |  |
+| SHIVAN | T0 | Universal | ResourceCollectionRateHard | 1 | 1s |  |
+| SHIVAN | T0 | Universal | ResourceCollectionRateExpert | 1 | 1s |  |
+| SHIVAN | T0 | Universal | HeavyGuns | 1 | 1s |  |
+| SHIVAN | T0 | FS1 | FS1 | 10 | 1s |  |
+| SHIVAN | T0 | FS2 | FS2 | 10 | 1s |  |
+| SHIVAN | T0 | Universal | Manticore | 850 | 40s | FighterDesign |
+| SHIVAN | T1 | FS2 | Astaroth | 1000 | 45s | FighterDesign & FS2 |
+| SHIVAN | T1 | FS1 | Shaitan | 1000 | 40s | BomberDesign & FS1 |
+| SHIVAN | T1 | Universal | Cain | 1000 | 50s | CruiserDesign |
+| SHIVAN | T1 | Universal | FighterDesign | 1200 | 40s |  |
+| SHIVAN | T1 | Universal | Dragon | 1200 | 50s | FighterDesign |
+| SHIVAN | T1 | Universal | Basilisk | 1200 | 50s | FighterDesign |
+| SHIVAN | T1 | FS2 | Aeshma | 1200 | 50s | FighterDesign & FS2 |
+| SHIVAN | T1 | FS2 | Nahema | 1200 | 50s | BomberDesign & FS2 |
+| SHIVAN | T1 | FS2 | Taurvi | 1400 | 50s | BomberDesign & FS2 |
+| SHIVAN | T1 | FS2 | Mara | 1500 | 60s | FighterDesign & FS2 |
+| SHIVAN | T1 | FS2 | Gorgon | 1500 | 50s | FighterDesign & FS2 |
+| SHIVAN | T1 | Universal | BomberDesign | 1500 | 50s | FighterDesign |
+| SHIVAN | T1 | Universal | MolochArmor | 1500 | 50s | Moloch |
+| SHIVAN | T1 | Universal | MolochSprint | 1500 | 50s | Moloch |
+| SHIVAN | T1 | Universal | SentryGun | 1500 | 50s |  |
+| SHIVAN | T1 | Universal | AdvancedSensors | 1500 | 50s | CruiserDesign |
+| SHIVAN | T1 | Universal | Nephilim | 1800 | 60s | BomberDesign |
+| SHIVAN | T2 | FS2 | Seraphim | 2000 | 70s | BomberDesign & FS2 |
+| SHIVAN | T2 | FS2 | Rakshasa | 2000 | 60s | CruiserDesign & FS2 |
+| SHIVAN | T2 | FS2 | Moloch | 2000 | 60s | CapitalShipDesign & FS2 |
+| SHIVAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
+| SHIVAN | T2 | Universal | Lilith | 2500 | 70s | CruiserDesign |
+| SHIVAN | T2 | Universal | Demon | 4000 | 90s | CapitalShipDesign |
+| SHIVAN | T2 | FS2 | Ravana | 4500 | 100s | CapitalShipDesign & FS2 |
+| SHIVAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| SHIVAN | T3 | Universal | Lucifer | 10000 | 110s | SuperCapitalShipDesign |
+| SHIVAN | T3 | Universal | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| SHIVAN | T4 | FS2 | Sathanas | 20000 | 200s | SuperCapitalShipDesign & FS2 |
+| TERRAN | T0 | FS1 | FS1 | 10 | 1s |  |
+| TERRAN | T0 | FS2 | FS2 | 10 | 1s |  |
+| TERRAN | T0 | FS1 | Apollo | 850 | 40s | FighterDesign & FS1 |
+| TERRAN | T0 | FS1 | Valkyrie | 850 | 40s | FighterDesign & FS1 |
+| TERRAN | T1 | Universal | Hercules | 1000 | 45s | FighterDesign |
+| TERRAN | T1 | Universal | Ulysses | 1000 | 45s | FighterDesign |
+| TERRAN | T1 | FS2 | Pegasus | 1000 | 30s | FighterDesign & FS2 |
+| TERRAN | T1 | Universal | Zeus | 1000 | 40s | BomberDesign |
+| TERRAN | T1 | FS2 | RepairArgo | 1000 | 50s | CruiserDesign & FS2 |
+| TERRAN | T1 | FS1 | RepairChronos | 1000 | 50s | CruiserDesign & FS1 |
+| TERRAN | T1 | Universal | CruiserHealthUpgrade | 1000 | 50s | CruiserDesign |
+| TERRAN | T1 | Universal | HeavyCruiser | 1000 | 50s | CruiserHealthUpgrade |
+| TERRAN | T1 | Universal | FighterDesign | 1200 | 40s |  |
+| TERRAN | T1 | FS2 | Myrmidon | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | T1 | FS2 | Perseus | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | T1 | FS2 | HerculesMk2 | 1200 | 50s | FighterDesign & FS2 |
+| TERRAN | T1 | FS2 | Artemis | 1200 | 50s | BomberDesign & FS2 |
+| TERRAN | T1 | FS2 | ArtemisDH | 1400 | 50s | Artemis & FS2 |
+| TERRAN | T1 | FS2 | Ares | 1500 | 50s | HerculesMk2 & FS2 |
+| TERRAN | T1 | Universal | BomberDesign | 1500 | 50s | FighterDesign |
+| TERRAN | T1 | Universal | Medusa | 1500 | 50s | BomberDesign |
+| TERRAN | T1 | FS2 | Deimos | 1500 | 50s | CapitalShipDesign & FS2 |
+| TERRAN | T1 | Universal | DeimosArmor | 1500 | 50s | Deimos |
+| TERRAN | T1 | Universal | DeimosSprint | 1500 | 50s | Deimos |
+| TERRAN | T1 | FS2 | HecateBuildSpeed | 1500 | 50s | CapitalShipDesign & FS2 |
+| TERRAN | T1 | Universal | SentryGun | 1500 | 50s |  |
+| TERRAN | T1 | Universal | SentryAndMineDeployer | 1500 | 50s | SentryGun |
+| TERRAN | T1 | FS2 | BeamSentry | 1500 | 50s | SentryAndMineDeployer & FS2 |
+| TERRAN | T1 | Universal | ScienceVessel | 1500 | 50s | CruiserDesign |
+| TERRAN | T1 | FS2 | Erinyes | 1800 | 60s | HerculesMk2 & FS2 |
+| TERRAN | T1 | FS2 | Boanerges | 1800 | 60s | BomberDesign & FS2 |
+| TERRAN | T2 | Universal | Ursa | 2000 | 50s | Boanerges |
+| TERRAN | T2 | FS2 | AdvancedCruiser | 2000 | 50s | CruiserDesign & FS2 |
+| TERRAN | T2 | Universal | Orion | 2000 | 60s | CapitalShipDesign |
+| TERRAN | T2 | Universal | CommandCorvette | 2000 | 50s | Deimos & CapitalShipDesign |
+| TERRAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
+| TERRAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
+| TERRAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
+| TERRAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| TERRAN | T3 | Universal | SuperDestroyer | 10000 | 100s | CapitalShipDesign |
+| TERRAN | T4 | FS2 | Juggernaut | 20000 | 200s | SuperDestroyer & Installation & FS2 |
+| VASUDAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
+| VASUDAN | T0 | Universal | cpuplayers_aggressive | 1 | 1s |  |
+| VASUDAN | T0 | Universal | cpuplayers_dynamic | 1 | 1s |  |
+| VASUDAN | T0 | Universal | cpuplayers_norushtime5 | 1 | 1s |  |
+| VASUDAN | T0 | Universal | cpuplayers_norushtime10 | 1 | 1s |  |
+| VASUDAN | T0 | Universal | cpuplayers_norushtime15 | 1 | 1s |  |
+| VASUDAN | T0 | Universal | AllShipBuildSpeed | 1 | 1s |  |
+| VASUDAN | T0 | Universal | AllShipBuildSpeedHard | 1 | 1s |  |
+| VASUDAN | T0 | Universal | AllShipBuildSpeedExpert | 1 | 1s |  |
+| VASUDAN | T0 | Universal | ResourceCollectionRateHard | 1 | 1s |  |
+| VASUDAN | T0 | Universal | ResourceCollectionRateExpert | 1 | 1s |  |
+| VASUDAN | T0 | Universal | HeavyGuns | 1 | 1s |  |
+| VASUDAN | T0 | FS1 | FS1 | 10 | 1s |  |
+| VASUDAN | T0 | FS2 | FS2 | 10 | 1s |  |
+| VASUDAN | T0 | FS1 | Horus | 800 | 35s | FighterDesign & FS1 |
+| VASUDAN | T0 | FS1 | Seth | 850 | 40s | FighterDesign & FS1 |
+| VASUDAN | T0 | Universal | Thoth | 900 | 45s | FighterDesign |
+| VASUDAN | T1 | Universal | Osiris | 1000 | 40s | BomberDesign |
+| VASUDAN | T1 | Universal | Aten | 1000 | 50s | CruiserDesign |
+| VASUDAN | T1 | Universal | FighterDesign | 1200 | 40s |  |
+| VASUDAN | T1 | FS2 | Ptah | 1200 | 50s | FighterDesign & FS2 |
+| VASUDAN | T1 | FS2 | Serapis | 1200 | 50s | FighterDesign & FS2 |
+| VASUDAN | T1 | FS2 | Bakha | 1200 | 50s | BomberDesign & FS2 |
+| VASUDAN | T1 | FS2 | Tauret | 1500 | 60s | FighterDesign & FS2 |
+| VASUDAN | T1 | Universal | BomberDesign | 1500 | 50s | FighterDesign |
+| VASUDAN | T1 | Universal | ScienceVessel | 1500 | 50s | CruiserDesign |
+| VASUDAN | T1 | Universal | SobekArmor | 1500 | 50s | Sobek |
+| VASUDAN | T1 | Universal | SobekSprint | 1500 | 50s | Sobek |
+| VASUDAN | T1 | Universal | SentryGun | 1500 | 50s |  |
+| VASUDAN | T1 | Universal | SentryAndMineDeployer | 1500 | 50s | SentryGun |
+| VASUDAN | T1 | FS1 | RepairSatis | 1500 | 50s | CruiserDesign & FS1 |
+| VASUDAN | T1 | FS2 | RepairBast | 1500 | 50s | CruiserDesign & FS2 |
+| VASUDAN | T1 | FS2 | Sehkmet | 1800 | 60s | BomberDesign & FS2 |
+| VASUDAN | T2 | FS2 | Mentu | 2000 | 60s | CruiserDesign & FS2 |
+| VASUDAN | T2 | Universal | Typhon | 2000 | 60s | CapitalShipDesign |
+| VASUDAN | T2 | FS2 | Sobek | 2000 | 60s | CapitalShipDesign & FS2 |
+| VASUDAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
+| VASUDAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
+| VASUDAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
+| VASUDAN | T2 | FS2 | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
+| VASUDAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| VASUDAN | T3 | Universal | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| VASUDAN | T4 | Universal | Colossus | 20000 | 200s | SuperCapitalShipDesign |
 
 ---
 
@@ -180,7 +180,7 @@ Defines the total allowed points/ships per family for each match preset.
 | **HyperspacePlatform** | 4 | 15 | 10 | 4 | 2 |
 | **Interceptor** | 160 | 1200 | 800 | 280 | 240 |
 | **LanceFighter** | 280 | 1200 | 800 | 280 | 240 |
-| **LayoutBattleCruiser** | 2 | 180 | 5 | 2 | 1 |
+| **LayoutBattleCruiser** | 2 | 180 | 5 | 2 | 2 |
 | **LayoutBomber** | 540 | 540 | 540 | 540 | 540 |
 | **LayoutCorvette** | 540 | 540 | 540 | 540 | 540 |
 | **LayoutCruiser** | 180 | 180 | 180 | 180 | 180 |
@@ -208,7 +208,7 @@ Defines the total allowed points/ships per family for each match preset.
 | **ResourceCollector** | 20 | 45 | 30 | 20 | 10 |
 | **ResourceController** | 4 | 10 | 6 | 4 | 2 |
 | **SalvageCorvette** | 42 | 135 | 90 | 42 | 30 |
-| **Scout** | 48 | 1200 | 600 | 72 | 160 |
+| **Scout** | 64 | 1200 | 600 | 72 | 160 |
 | **SensorArray** | 4 | 10 | 8 | 4 | 4 |
 | **Shipyard** | 1 | 2 | 1 | 1 | 0 |
 | **SinglePlayerMisc** | - | 100 | 60 | 40 | 20 |

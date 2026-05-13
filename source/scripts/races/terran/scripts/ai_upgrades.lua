@@ -12,6 +12,9 @@ if (FRIGATEPRODUCTION == nil) then FRIGATEPRODUCTION = -1 end
 if (CPUPLAYERS_NORUSHTIME5 == nil) then CPUPLAYERS_NORUSHTIME5 = -1 end
 if (CPUPLAYERS_NORUSHTIME10 == nil) then CPUPLAYERS_NORUSHTIME10 = -1 end
 if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
+if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = -1 end
+if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = -1 end
+if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = -1 end
 
 -- AI Ship Variable Mappings (Engine provided)
 
@@ -67,6 +70,12 @@ function DoResearchTechDemand_Terran()
 		FSFC_Log_Research("FS2", demand)
 	end
 
+	-- 1.5 TACTICS
+	if (FSFC_CheckResearch(CPUPLAYERS_DYNAMIC)) then
+		ResearchDemandSet_Terran(CPUPLAYERS_DYNAMIC, 3.0)
+		FSFC_Log_Research("TacticsDynamic", 3.0)
+	end
+
 	-- 2. UNIT CLASS TECH
 	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
 	if (fighterdemand > 0) then
@@ -120,13 +129,13 @@ function DoResearchTechDemand_Terran()
 		-- Recon Doctrine: Scouts
 		if FSFC_IsResearchDone(FS2) == 1 then
 			if (FSFC_CheckResearch(PEGASUS)) then
-				ResearchDemandSet_Terran(PEGASUS, fighterdemand + 1.0)
-				FSFC_Log_Research("Pegasus", fighterdemand + 1.0)
+				ResearchDemandSet_Terran(PEGASUS, fighterdemand + 2.0)
+				FSFC_Log_Research("Pegasus", fighterdemand + 2.0)
 			end
 		else
 			if (FSFC_CheckResearch(LOKI)) then
-				ResearchDemandSet_Terran(LOKI, fighterdemand + 1.0)
-				FSFC_Log_Research("Loki", fighterdemand + 1.0)
+				ResearchDemandSet_Terran(LOKI, fighterdemand + 2.0)
+				FSFC_Log_Research("Loki", fighterdemand + 2.0)
 			end
 		end
 	end

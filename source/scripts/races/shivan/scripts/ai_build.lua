@@ -102,6 +102,10 @@ function DetermineSpecialDemand_Shivan()
 	local fighterDemand = 1.8
 	local bomberDemand = 1.5
 
+	-- Safety initialization for custom race environment
+	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
+	if (player_max == nil) then player_max = 0 end
+
 	-- Strategic Analysis: Are the Terrans "Going Big"?
 	local enemyCapCount = 0
 	if (s_enemyIndex ~= -1) then
@@ -130,11 +134,16 @@ function DetermineSpecialDemand_Shivan()
 	local numScouts = 0
 	if (kScout ~= nil) then
 		numScouts = NumSquadrons(kScout) + NumSquadronsQ(kScout)
-		if (numScouts < 3) then
+		if (numScouts < 2) then
+			ShipDemandAdd(kScout, 10.0)
+			FSFC_Log_Demand("Scouts", 10.0)
+			-- Early game queue management: Throttle harvesters slightly if we have NO scouts
+			if (gameTime() < 120 and kCollector ~= nil) then
+				ShipDemandAdd(kCollector, -2.0)
+			end
+		elseif (numScouts < 4) then
 			ShipDemandAdd(kScout, 4.5)
 			FSFC_Log_Demand("Scouts", 4.5)
-		elseif (numScouts < 6) then
-			ShipDemandAdd(kScout, 2.5)
 		end
 	end
 
@@ -203,18 +212,40 @@ function DetermineSpecialDemand_Shivan()
 	end
 
 	if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
-		ShipDemandAdd(kCarrier, 1.5)
-		FSFC_Log_Demand("Demons", 1.5)
+		local demonDemand = 2.5
+		if (capDemand > 1.5) then
+			demonDemand = capDemand * 1.5
+		end
+		if (currentRU > 20000) then
+			demonDemand = demonDemand + 2.0 -- High interest in production when rich
+		end
+		ShipDemandAdd(kCarrier, demonDemand)
+		FSFC_Log_Demand("Demons", demonDemand)
 	end
 
 	-- Persistent Destroyer/Battlecruiser demand
 	if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
-	if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
 	
 	-- Shivan Cruiser-Specific Aggression (Rakshasa/Lilith/Cain)
 	-- Backbone Logic: Ensure a minimum fleet presence for standard cruisers
 	local numCain = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
 	local numLilith = NumSquadrons(kHeavyCruiser) + NumSquadronsQ(kHeavyCruiser)
+
+	-- Ravana Anti-Capital Priority: If enemy has capital ships, the Ravana is preferred.
+	if (s_enemyIndex ~= -1 and kBattleCruiser ~= nil) then
+		if (enemyCapCount > 0) then
+			-- Throttled by Backbone
+			if (numCain >= 6) then
+				ShipDemandAdd(kBattleCruiser, capDemand * 2.5)
+				FSFC_Log_Demand("Ravana Suppression", capDemand * 2.5)
+			else
+				ShipDemandAdd(kBattleCruiser, 0.5)
+			end
+		else
+			-- Persistent Battlecruiser demand
+			ShipDemandAdd(kBattleCruiser, capDemand)
+		end
+	end
 	
 	-- Cain Baseline (Swarm Escort - 12 wings)
 	if (kCruiser ~= nil and numCain < 12) then

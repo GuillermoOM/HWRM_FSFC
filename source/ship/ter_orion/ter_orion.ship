@@ -308,7 +308,7 @@ NewShipType.launchFormation = 'delta'
 --------------------------------------------------
 
 addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate',
-    'onDestroy', 'gta_orion', 1)
+    'onDestroy', '', 1)
 
 --------------------------------------------------
 --- Load Model

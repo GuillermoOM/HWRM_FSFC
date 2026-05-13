@@ -19,7 +19,11 @@ if (FIGHTERDESIGN == nil) then FIGHTERDESIGN = -1 end
 if (BOMBERDESIGN == nil) then BOMBERDESIGN = -1 end
 if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
 if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
+if (FS1 == nil) then FS1 = -1 end
 if (FS2 == nil) then FS2 = -1 end
+if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = -1 end
+if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = -1 end
+if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = -1 end
 
 function ResearchDemandSet_Vasudan(id_or_name, demand)
 	local id = FSFC_ResolveID(id_or_name)
@@ -36,6 +40,23 @@ function ResearchDemandAdd_Vasudan(id_or_name, demand)
 end
 
 function DoResearchTechDemand_Vasudan()
+	-- 1. ERA SELECTION
+	local eraDemand = 4.0
+	if (FSFC_CheckResearch(FS1)) then
+		ResearchDemandSet_Vasudan(FS1, eraDemand)
+		FSFC_Log_Research("FS1", eraDemand)
+	end
+	if (FSFC_CheckResearch(FS2)) then
+		ResearchDemandSet_Vasudan(FS2, eraDemand)
+		FSFC_Log_Research("FS2", eraDemand)
+	end
+
+	-- 2. TACTICS
+	if (FSFC_CheckResearch(CPUPLAYERS_DYNAMIC)) then
+		ResearchDemandSet_Vasudan(CPUPLAYERS_DYNAMIC, 3.0)
+		FSFC_Log_Research("TacticsDynamic", 3.0)
+	end
+
 	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
 	if (fighterdemand > 0) then
 		print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | FighterClass | Demand: " .. fighterdemand)
@@ -67,6 +88,16 @@ function DoResearchTechDemand_Vasudan()
 		if (FSFC_CheckResearch(TAURET)) then
 			ResearchDemandSet_Vasudan(TAURET, fighterdemand + 1.5)
 			FSFC_Log_Research("Tauret", fighterdemand + 1.5)
+		end
+
+		-- Recon Doctrine: Scouts
+		if (FSFC_CheckResearch(HORUS)) then
+			ResearchDemandSet_Vasudan(HORUS, fighterdemand + 2.0)
+			FSFC_Log_Research("Horus", fighterdemand + 2.0)
+		end
+		if (FSFC_CheckResearch(PTAH)) then
+			ResearchDemandSet_Vasudan(PTAH, fighterdemand + 2.0)
+			FSFC_Log_Research("Ptah", fighterdemand + 2.0)
 		end
 	end
 
