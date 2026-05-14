@@ -137,7 +137,7 @@ NewShipType.layoutCenterZ = 50
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'SuperCap_Ter'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'

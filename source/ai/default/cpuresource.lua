@@ -7,7 +7,7 @@ function CpuResource_Init()
   cpMinThreatAddedDistance = 12000 
   SetResourceDockFamily("Utility")
 	sg_minNumCollectors = 5
-	sg_maxNumCollectors = 14
+	sg_maxNumCollectors = 22
 	if (Override_ResourceInit) then
 		Override_ResourceInit()
 	end
@@ -98,7 +98,7 @@ function DoResourceBuild()
 				end
 			end
 		end
-		if (UnderAttackThreat() > -75) then
+		if (UnderAttackThreat() > -20) then
 		return 0
 	end
 		if (sg_resourceControllerRequests == nil) then	-- Handle this if missing otherwise...
@@ -111,7 +111,7 @@ function DoResourceBuild()
 			ShipDemandAddByClass( eRefinery, neededRefineries )
 		end
 		local numSalDropsQueued = numQueueOfClass( eSalvageDropOff )-numActiveOfClass( s_playerIndex, eSalvageDropOff )
-		if(sg_resourceControllerRequests ~= 0 and neededSalvageDropOffs > 0 and numSalDropsQueued==0 and UnderAttackThreat() < -75) then
+		if(sg_resourceControllerRequests ~= 0 and neededSalvageDropOffs > 0 and numSalDropsQueued==0 and UnderAttackThreat() < -20) then
             --aitrace("Requested BUILD salvage drop-off"..neededRefineries)
 			ShipDemandAddByClass( eSalvageDropOff, neededSalvageDropOffs )
 		end

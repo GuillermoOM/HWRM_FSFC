@@ -158,6 +158,7 @@ NewShipType.AttackFamily = 'Fighter'
 NewShipType.DockFamily = 'Fighter'
 NewShipType.AvoidanceFamily = 'Strikecraft'
 NewShipType.DisplayFamily = 'Fighter'
+NewShipType.CombatFamily = 'Fighter_EMPScout'
 NewShipType.AutoFormationFamily = 'Fighter'
 NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
@@ -178,20 +179,21 @@ NewShipType.specialTurnRightManeuver = 'NinetyDegRightTurn, None, None'
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Fighter', 4.0)
+setSupplyValue(NewShipType, 'Scout', 4.0)
 setSupplyValue(NewShipType, 'LayoutFighter', 4.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 10
+NewShipType.fighterValue = 8
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 12
+NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 10
+NewShipType.totalValue = 8
 
 --------------------------------------------------
 --- Sensors
@@ -291,6 +293,7 @@ addAbility(NewShipType, 'CanAttack', 1, 2, 1, 0, 0.35, 1,
     { ResourceLarge = "Fighter_vs_ResourceLarge" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
+addAbility(NewShipType, 'ScoutAbility', 1, 10)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
 addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0,
     'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner',

@@ -49,8 +49,10 @@ function CpuBuild_UpdateRaceVariables()
 	
 	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
 	kCarrier = FSFC_PickBestShip(VAS_TYPHON, VAS_TYPHON_FS1)
+	kShipyard = VAS_KARNAK
+	kJuggernaut = VAS_COLOSSUS
 	kResearch = VAS_IMHOTEP
-	kAWACS = VAS_SETEKH
+	kAWACS = kScout
 end
 
 function DetermineDemandWithNoCounterInfo_Vasudan()
@@ -81,6 +83,25 @@ end
 function DetermineSpecialDemand_Vasudan()
 	local currentRU = GetRU()
 	
+	-- PRODUCTION ESCALATION (User Strategy)
+	local numCollectors = NumSquadrons(kCollector) + NumSquadronsQ(kCollector)
+	if (numCollectors < 12) then
+		ShipDemandAdd(kCollector, 4.5)
+	end
+	
+	local numRefineries = NumSquadrons(kRefinery) + NumSquadronsQ(kRefinery)
+	if (numRefineries < 1) then
+		ShipDemandAdd(kRefinery, 5.5)
+	elseif (numRefineries < 2 and currentRU > 5000) then
+		ShipDemandAdd(kRefinery, 2.5)
+	end
+	
+	local numCarriers = NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier)
+	if (numCarriers < 1 and currentRU > 6000) then
+		ShipDemandAdd(kCarrier, 15.0) -- Priority rush for first GVD Typhon
+		FSFC_Log_Demand("CarrierRush", 15.0)
+	end
+
 	-- VASUDAN ELITE LOGIC (Modernized Response)
 	local fighterTarget = 30
 	local bomberTarget = 40 -- Increased base bomber focus
@@ -206,6 +227,24 @@ function DetermineSpecialDemand_Vasudan()
 		FSFC_Log_Demand("Typhons", typhonDemand)
 	end
 
+	-- Shipyard Escalation: PVI Karnak
+	local numShipyards = NumSquadrons(kShipyard) + NumSquadronsQ(kShipyard)
+	if (kShipyard ~= nil and numShipyards < 1 and currentRU > 15000) then
+		ShipDemandAdd(kShipyard, 10.0)
+		FSFC_Log_Demand("Karnaks", 10.0)
+	elseif (kShipyard ~= nil and numShipyards < 3 and currentRU > 40000) then
+		ShipDemandAdd(kShipyard, 5.0)
+	end
+
+	-- Juggernaut Doctrine: The Colossus (Alliance Asset)
+	if (kJuggernaut ~= nil and FSFC_CheckResearch(COLOSSUS)) then
+		local numJugg = NumSquadrons(kJuggernaut) + NumSquadronsQ(kJuggernaut)
+		if (numJugg < 1 and currentRU > 80000) then
+			ShipDemandAdd(kJuggernaut, 20.0)
+			FSFC_Log_Demand("Colossus", 20.0)
+		end
+	end
+
 	-- Backbone Cruiser Logic (Aten/Mentu)
 	local numAten = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
 	local numMentu = NumSquadrons(kHeavyCruiser) + NumSquadronsQ(kHeavyCruiser)
@@ -219,7 +258,7 @@ function DetermineSpecialDemand_Vasudan()
 
 	-- Sobek/Hatshepsut Aggression (Throttled by Backbone)
 	if (kDestroyer ~= nil) then
-		if (numAten >= 4) then
+		if (numAten >= 3) then
 			ShipDemandAdd(kDestroyer, capDemand)
 		else
 			ShipDemandAdd(kDestroyer, 0.5) -- Suppress if escort is missing
@@ -230,7 +269,7 @@ function DetermineSpecialDemand_Vasudan()
 	if (s_enemyIndex ~= -1 and kBattleCruiser ~= nil) then
 		if (enemyCapCount > 0) then
 			-- Throttled by Backbone
-			if (numAten >= 6) then
+			if (numAten >= 4) then
 				ShipDemandAdd(kBattleCruiser, capDemand * 2.5)
 				FSFC_Log_Demand("Hatshepsut Suppression", capDemand * 2.5)
 			else

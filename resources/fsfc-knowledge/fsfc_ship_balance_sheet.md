@@ -520,7 +520,7 @@ Defines the total allowed points/ships per family for each match preset.
 | SSG Belial | 160 | TurretArmour / Frigate | 75 | 8s | 4x shivsentry_turret | **120.0** | 1.6 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
 | ST Azrael | 2000 | ResArmour / Resource | 400 | 25s | 3x shivlightlaser_turret | **68.58** | 0.17 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 200/60/3/30 |
 | SFr Mephisto | 10000 | LightArmour / ResourceLarge | 400 | 25s | 4x shivlightlaser_gimble | **91.44** | 0.23 | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 210/50/8/60 |
-| SF Astaroth | 300 | Unarmoured / Fighter | 420 | 30s | 2x shivlightlaser, 1x miss_rockeye, 1x miss_empadv | **70.22** | 0.17 | 4.0/4/4 | 10/12 | 0/0 | 0/0 | 10 | 380/109/3/85 |
+| SF Astaroth | 300 | Unarmoured / Fighter | 420 | 30s | 2x shivlightlaser, 1x miss_rockeye, 1x miss_empadv | **70.22** | 0.17 | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 380/109/3/85 |
 | SF Scorpion | 250 | Unarmoured / Fighter | 430 | 28s | 2x shivlightlaser, 1x miss_rockeye | **65.72** | 0.15 | 4.0/4/4 | 3/0 | 0/0 | 0/0 | 3 | 284/180/3/85 |
 | SF Manticore | 300 | Unarmoured / Fighter | 450 | 31s | 2x shivlightlaser, 1x miss_trebuchet, 1x miss_harpoon | **110.72** | 0.25 | 4.0/4/4 | 15/15 | 0/0 | 0/0 | 15 | 414/113/3/85 |
 | SFr Asmodeus | 8000 | MediumArmour / Frigate | 550 | 35s | 1x flak_turret, 3x shivheavylaser_gimble | **225.33** | 0.41 | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 210/40/8/60 |

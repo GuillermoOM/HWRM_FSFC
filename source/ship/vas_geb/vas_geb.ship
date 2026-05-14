@@ -96,14 +96,14 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperPriority'
+NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Probe_Vas'
 NewShipType.AttackFamily = 'Utility'
 NewShipType.DockFamily = 'Utility'
 NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Fighter'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
 
 --------------------------------------------------

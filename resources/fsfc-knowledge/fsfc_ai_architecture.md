@@ -81,8 +81,10 @@ To prevent the "Cloud of Death" (bomber swarms), the AI monitors enemy fleet com
 
 ### 6.2 Recon Doctrine (Battlefield Awareness)
 On large ("True Huge") maps, the AI can become passive if it lacks detection.
-- **Requirement**: The AI is forced to maintain at least 1-2 specialized scouts (`kScout`) once its fleet exceeds 10 ships.
-- **Implementation**: Explicitly checked in `DetermineSpecialDemand` using `NumSquadrons(kScout)`. This ensures stealth recon units like the **Pegasus** or **Scorpion** are always active.
+- **Requirement**: The AI is forced to maintain at least 2 specialized scouts (`kScout`) once its fleet exceeds 10 ships.
+- **Activation**: Scouts MUST have `defaultROE = 'Defensive'` and `defaultStance = 'Aggressive'` in their `.ship` file. Without this, the engine's reconnaissance manager will not deploy them for patrol/exploration tasks.
+- **Mapping**: Map `kAWACS = kScout` in `CpuBuild_UpdateRaceVariables()`. This ensures the AI utilizes mobile scouts for tactical sensor coverage demand.
+- **Implementation**: Explicitly checked in `DetermineSpecialDemand` using `NumSquadrons(kScout)`. This ensures stealth recon units like the **Pegasus** or **Scorpion** are always active and exploring.
 
 ### 6.3 Variable Scoping & Parameter Safety
 When implementing tactical detection or demand in race scripts:
@@ -90,3 +92,10 @@ When implementing tactical detection or demand in race scripts:
 - **CRITICAL**: Always guard `PlayersUnitTypeCount` with `if (s_enemyIndex ~= -1)`. Passing `-1` to the engine-level counting function causes a fatal crash.
 - **CRITICAL**: Ensure all demand variables (e.g., `fighterDemand`) are initialized to a default value before being passed to `ShipDemandAdd`. Passing a `nil` value to `ShipDemandAdd` causes a fatal engine crash.
 - **AFFECTED**: `terran/ai_build.lua`, `vasudan/ai_build.lua`, `shivan/ai_build.lua`.
+
+## 7. Logistics & Economic Scaling
+To prevent late-game military stagnation, the AI must scale its resource drop-off points alongside its collector count.
+
+- **Refinery Demand**: AI is forced to build at least 2 resource controllers (`kRefinery`) as the economy scales beyond 5,000 RU.
+- **Threat Thresholds**: In `cpuresource.lua`, the `UnderAttackThreat()` threshold for building drop-offs is relaxed (e.g., from vanilla -75 to -20). This allows the AI to continue industrial growth during minor combat engagements.
+- **Harvester Throttling**: During the first 120 seconds, the AI may slightly penalize `kCollector` demand if no `kScout` is present to ensure early reconnaissance precedes total economic saturation.

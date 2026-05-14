@@ -54,6 +54,31 @@ local numElite = NumSquadrons(kEliteCruiser) + NumSquadronsQ(kEliteCruiser)
 if (numElite < 4) then
     ShipDemandAdd(kEliteCruiser, 3.5) -- High priority, but will hit low cap quickly
 end
+## Pattern: Logistics Escalation
+Economic growth requires both collectors and resource drop-off points (Refineries/Controllers). If the AI fails to scale its drop-off points, it will hit a build bottleneck where collectors have long transit times, causing RU starvation even if total resources are high.
+
+### Implementation Logic
+In faction `ai_build.lua`:
+```lua
+-- Logistics Escalation
+local numRefineries = NumSquadrons(kRefinery) + NumSquadronsQ(kRefinery)
+if (numRefineries < 1) then
+    ShipDemandAdd(kRefinery, 5.5)
+elseif (numRefineries < 2 and currentRU > 5000) then
+    ShipDemandAdd(kRefinery, 2.5) -- Ensure second drop-off as economy grows
+end
+```
+
+## Pattern: Relaxing Threat Thresholds
+The HWRM AI has a native "Under Attack" check that can suppress logistical production if it perceives too much threat. In high-aggression mods like FSFC, the default thresholds are often too conservative, causing the AI to stop building refineries during minor skirmishes.
+
+### Implementation Logic
+In `cpuresource.lua`:
+```lua
+-- Relax threat threshold from -75 (vanilla) to -20 (aggro)
+if (UnderAttackThreat() > -20) then
+    return 0 -- Still suppress if seriously overwhelmed, but allow minor combat
+end
 ```
 
 ## Best Practices

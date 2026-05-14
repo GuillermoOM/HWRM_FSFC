@@ -117,11 +117,11 @@ setTargetBox(NewShipType, 3, -0.75, -0.3, 0.1, 0.5, -0.25, 0.70)
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Cruiser_Shi'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Capital'
 NewShipType.DisplayFamily = 'Cruiser'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'

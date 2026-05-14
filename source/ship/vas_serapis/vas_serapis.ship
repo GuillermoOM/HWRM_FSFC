@@ -158,6 +158,7 @@ NewShipType.AttackFamily = 'Fighter'
 NewShipType.DockFamily = 'Fighter'
 NewShipType.AvoidanceFamily = 'Strikecraft'
 NewShipType.DisplayFamily = 'Fighter'
+NewShipType.CombatFamily = 'Fighter_Special'
 NewShipType.AutoFormationFamily = 'Fighter'
 NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")

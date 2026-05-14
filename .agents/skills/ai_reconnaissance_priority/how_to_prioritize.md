@@ -43,6 +43,23 @@ To prevent the AI from filling its build queue with resource collectors before t
 if (gameTime() < 120 and kCollector ~= nil and numScouts < 1) then
     ShipDemandAdd(kCollector, -2.0)
 end
+### 4. Ship Stance & ROE (CRITICAL)
+For the HWRM reconnaissance manager to actively deploy units, they MUST be configured in their `.ship` file with active rules of engagement and stances. `Passive`/`Neutral` units will remain docked or idle at the mothership.
+
+```lua
+-- Correct setting for Scouts in .ship files
+NewShipType.defaultROE = 'Defensive'
+NewShipType.defaultStance = 'Aggressive'
+```
+
+### 5. kAWACS Variable Mapping
+The engine's tactical reconnaissance demand is often tied to the `kAWACS` variable. Mapping this to the mobile `kScout` instead of stationary command ships forces the AI to use its scouts for map-wide sensor coverage.
+
+```lua
+function CpuBuild_UpdateRaceVariables()
+    -- ...
+    kAWACS = kScout -- Map AWACS demand to mobile scouts
+end
 ```
 
 ## Implementation Checklist
@@ -52,3 +69,5 @@ end
 - [x] Apply `ShipDemandAdd(kCollector, -2.0)` if `gameTime() < 120` and `numScouts < 1`.
 - [x] Set scout research demand to `fighterdemand + 2.0` in `ai_upgrades.lua`.
 - [x] Ensure unit capacity for `Scout` class is at least 64 (4 wings) in `unitcaps` files.
+- [x] **New**: Set `defaultROE = 'Defensive'` and `defaultStance = 'Aggressive'` in scout `.ship` files.
+- [x] **New**: Map `kAWACS = kScout` in `CpuBuild_UpdateRaceVariables()`.

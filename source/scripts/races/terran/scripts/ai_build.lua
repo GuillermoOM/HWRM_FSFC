@@ -53,8 +53,10 @@ function CpuBuild_UpdateRaceVariables()
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
 	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
 	kCarrier = FSFC_PickBestShip(TER_HECATE, TER_ORION_FS1)
+	kShipyard = TER_ARCADIA
+	kJuggernaut = TER_COLOSSUS
 	kResearch = TER_FAUSTUS
-	kAWACS = TER_CHARYBDIS
+	kAWACS = kScout
 end
 
 function DetermineDemandWithNoCounterInfo_Terran()
@@ -97,6 +99,25 @@ function DetermineSpecialDemand_Terran()
 	-- Safety initialization for custom race environment
 	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
 	if (player_max == nil) then player_max = 0 end
+
+	-- PRODUCTION ESCALATION (User Strategy)
+	local numCollectors = NumSquadrons(kCollector) + NumSquadronsQ(kCollector)
+	if (numCollectors < 12) then
+		ShipDemandAdd(kCollector, 4.5)
+	end
+	
+	local numRefineries = NumSquadrons(kRefinery) + NumSquadronsQ(kRefinery)
+	if (numRefineries < 1) then
+		ShipDemandAdd(kRefinery, 5.5)
+	elseif (numRefineries < 2 and currentRU > 5000) then
+		ShipDemandAdd(kRefinery, 2.5)
+	end
+	
+	local numCarriers = NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier)
+	if (numCarriers < 1 and currentRU > 8000) then
+		ShipDemandAdd(kCarrier, 15.0) -- Priority rush for first GTD Hecate
+		FSFC_Log_Demand("CarrierRush", 15.0)
+	end
 
 	-- Detect Swarm Threats
 	local enemyFighterCount = 0
@@ -227,8 +248,23 @@ function DetermineSpecialDemand_Terran()
 		end
 
 		-- Persistent Destroyer/Battlecruiser demand if rich
-		if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
+		if (kDestroyer ~= nil) then 
+			if (numCruisers >= 4) then
+				ShipDemandAdd(kDestroyer, capDemand) 
+			else
+				ShipDemandAdd(kDestroyer, 0.5)
+			end
+		end
 		if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
+		
+		-- Shipyard Escalation: GTI Arcadia
+		local numShipyards = NumSquadrons(kShipyard) + NumSquadronsQ(kShipyard)
+		if (kShipyard ~= nil and numShipyards < 1 and currentRU > 15000) then
+			ShipDemandAdd(kShipyard, 10.0)
+			FSFC_Log_Demand("Arcadias", 10.0)
+		elseif (kShipyard ~= nil and numShipyards < 3 and currentRU > 40000) then
+			ShipDemandAdd(kShipyard, 5.0)
+		end
 		
 		if (kCarrier ~= nil and NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier) < carrierTarget) then
 			local hecateDemand = 2.5
@@ -240,6 +276,15 @@ function DetermineSpecialDemand_Terran()
 			end
 			ShipDemandAdd(kCarrier, hecateDemand)
 			FSFC_Log_Demand("Hecates", hecateDemand)
+		end
+
+		-- Juggernaut Doctrine: The Colossus
+		if (kJuggernaut ~= nil and FSFC_CheckResearch(COLOSSUS)) then
+			local numJugg = NumSquadrons(kJuggernaut) + NumSquadronsQ(kJuggernaut)
+			if (numJugg < 1 and currentRU > 80000) then
+				ShipDemandAdd(kJuggernaut, 20.0)
+				FSFC_Log_Demand("Colossus", 20.0)
+			end
 		end
 
 		-- Orion Anti-Capital Priority: If enemy has capital ships, the Orion is preferred.

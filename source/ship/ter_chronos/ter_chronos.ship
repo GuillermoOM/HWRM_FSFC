@@ -129,11 +129,11 @@ NewShipType.layoutCenterZ = -10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Controller'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'

@@ -137,7 +137,7 @@ NewShipType.layoutCenterZ = 50
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'SuperCap_Shi'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
@@ -175,6 +175,7 @@ NewShipType.totalValue = 15
 NewShipType.buildCost = 13000
 NewShipType.buildTime = 225
 NewShipType.buildPriorityOrder = 40
+setConcurrentBuildLimit(NewShipType, 0, 2)
 
 --------------------------------------------------
 --- Sensors

@@ -146,10 +146,10 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Utility_Vas'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Frigate'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
 
 --------------------------------------------------

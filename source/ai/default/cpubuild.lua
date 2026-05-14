@@ -347,13 +347,13 @@ end
 function CpuBuild_DefaultShipDemandRules_Easy()	
 	local valueTable =
 	{		
-		{80, 		135, 		8*60},
-		{120,		180,		15*60},
-		{160,		230,		20*60},
-		{220,		300,		30*60},
-		{270,		370,		45*60},
-		{350,		500,		60*60},
-		{500,		1000,		10000*60},
+		{80, 		135, 		8*30},
+		{120,		180,		15*30},
+		{160,		230,		20*30},
+		{220,		300,		30*30},
+		{270,		370,		45*30},
+		{350,		500,		60*30},
+		{500,		1000,		10000*30},
 	}	
 	local minMilitaryValue = CalculateMilitaryValueGoal( valueTable, 0.7 )	
 	aitrace("Aim:"..minMilitaryValue.." CurMil:"..s_selfTotalValue.." Enm:"..s_enemyTotalValue )
@@ -369,13 +369,13 @@ end
 function CpuBuild_DefaultShipDemandRules_Med()	
 	local valueTable =
 	{		
-		{120, 	200, 		8*60},
-		{160,		250,		15*60},
-		{220,		320,		20*60},
-		{280,		400,		30*60},
-		{320,		500,		45*60},
-		{500,		700,		60*60},
-		{700,		1200,		10000*60},
+		{120, 		200, 		8*30},
+		{160,		250,		15*30},
+		{220,		320,		20*30},
+		{280,		400,		30*30},
+		{320,		500,		45*30},
+		{500,		700,		60*30},
+		{700,		1200,		10000*30},
 	}	
 	local minMilitaryValue = CalculateMilitaryValueGoal( valueTable, 0.85 )
 	aitrace("Aim:"..minMilitaryValue.." CurMil:"..s_selfTotalValue.." Enm:"..s_enemyTotalValue )
@@ -540,7 +540,7 @@ function DetermineBuilderClassDemand()
 		local penaltyDemand = dif/2000
 		ShipDemandAddByClass( eBuilder, penaltyDemand );		
 	end
-	local neededMilitaryValue = 30 + (numBuilders-1)*60	
+	local neededMilitaryValue = 30 + (numBuilders-1)*30	
 	local militaryDifDemand = (s_selfTotalValue - neededMilitaryValue)/30
 	if (militaryDifDemand < 0) then
 		ShipDemandAddByClass( eBuilder, militaryDifDemand );		

@@ -58,8 +58,9 @@ function CpuBuild_UpdateRaceVariables()
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
 	
 	kCarrier = FSFC_PickBestShip(SHI_DEMON, SHI_DEMON_FS1)
+	kShipyard = kBattleCruiser -- Map shipyard demand to Ravana/Lucifer
 	kResearch = SHI_COMMNODE
-	kAWACS = SHI_COMMNODE
+	kAWACS = kScout
 end
 
 function DetermineDemandWithNoCounterInfo_Shivan()
@@ -94,6 +95,25 @@ end
 function DetermineSpecialDemand_Shivan()
 	local currentRU = GetRU()
 	
+	-- PRODUCTION ESCALATION (User Strategy)
+	local numCollectors = NumSquadrons(kCollector) + NumSquadronsQ(kCollector)
+	if (numCollectors < 12) then
+		ShipDemandAdd(kCollector, 4.5)
+	end
+	
+	local numRefineries = NumSquadrons(kRefinery) + NumSquadronsQ(kRefinery)
+	if (numRefineries < 1) then
+		ShipDemandAdd(kRefinery, 5.5)
+	elseif (numRefineries < 2 and currentRU > 5000) then
+		ShipDemandAdd(kRefinery, 2.5)
+	end
+	
+	local numCarriers = NumSquadrons(kCarrier) + NumSquadronsQ(kCarrier)
+	if (numCarriers < 1 and currentRU > 6000) then
+		ShipDemandAdd(kCarrier, 15.0) -- Priority rush for first SD Demon
+		FSFC_Log_Demand("CarrierRush", 15.0)
+	end
+
 	-- SHIVAN SWARM LOGIC (Aggressive Tiering)
 	local fighterTarget = 30
 	local bomberTarget = 20
@@ -112,7 +132,7 @@ function DetermineSpecialDemand_Shivan()
 		enemyCapCount = (PlayersUnitTypeCount(s_enemyIndex, player_max, eFrigate) + PlayersUnitTypeCount(s_enemyIndex, player_max, eCapital))
 	end
 	
-	if (currentRU > 8000) then
+	if (currentRU > 5000) then
 		fighterTarget = 80
 		bomberTarget = 60
 		carrierTarget = 6
@@ -124,7 +144,7 @@ function DetermineSpecialDemand_Shivan()
 			bomberDemand = 3.5 -- Shivans should swarm with bombers
 		end
 		-- High RU: The Shivan Swarm
-		if (currentRU > 10000) then
+		if (currentRU > 8000) then
 			fighterTarget = 120
 			fighterDemand = 2.5
 		end
@@ -226,6 +246,14 @@ function DetermineSpecialDemand_Shivan()
 	-- Persistent Destroyer/Battlecruiser demand
 	if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
 	
+	-- Shipyard Escalation: Build more production ships if rich
+	local numShipyards = NumSquadrons(kShipyard) + NumSquadronsQ(kShipyard)
+	if (currentRU > 30000 and numShipyards < 2) then
+		ShipDemandAdd(kShipyard, 10.0)
+	elseif (currentRU > 60000 and numShipyards < 4) then
+		ShipDemandAdd(kShipyard, 5.0)
+	end
+	
 	-- Shivan Cruiser-Specific Aggression (Rakshasa/Lilith/Cain)
 	-- Backbone Logic: Ensure a minimum fleet presence for standard cruisers
 	local numCain = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
@@ -235,7 +263,7 @@ function DetermineSpecialDemand_Shivan()
 	if (s_enemyIndex ~= -1 and kBattleCruiser ~= nil) then
 		if (enemyCapCount > 0) then
 			-- Throttled by Backbone
-			if (numCain >= 6) then
+			if (numCain >= 4) then
 				ShipDemandAdd(kBattleCruiser, capDemand * 2.5)
 				FSFC_Log_Demand("Ravana Suppression", capDemand * 2.5)
 			else
@@ -273,8 +301,19 @@ function DetermineSpecialDemand_Shivan()
 	end
 	
 	-- Safety gate for the ultra-expensive Lucifer (21,500 RUs)
-	if (kBattleCruiser ~= nil and kBattleCruiser == SHI_LUCIFER and currentRU < 45000) then
+	if (kBattleCruiser ~= nil and kBattleCruiser == SHI_LUCIFER and currentRU < 30000) then
 		ShipDemandSet(SHI_LUCIFER, -10)
+	end
+
+	-- Juggernaut Doctrine: The Sathanas
+	if (SHI_SATHANAS ~= nil and FSFC_CheckResearch(SATHANAS)) then
+		local numSath = NumSquadrons(SHI_SATHANAS) + NumSquadronsQ(SHI_SATHANAS)
+		if (numSath < 1 and currentRU > 60000) then
+			ShipDemandAdd(SHI_SATHANAS, 20.0)
+			FSFC_Log_Demand("Sathanas", 20.0)
+		elseif (numSath < 2 and currentRU > 120000) then
+			ShipDemandAdd(SHI_SATHANAS, 10.0)
+		end
 	end
 
 	if (capDemand > 2.0) then
