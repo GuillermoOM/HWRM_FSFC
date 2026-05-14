@@ -1,7 +1,7 @@
 StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Tornado", "Normal", 240, 3220, 0, 0, 0, 0, 1, 0, 1, 0.02, 0.101,
  5, 0, 0, 0, 0, 1, "Normal", 0, 1, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 100, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 35, 35, "")
 
 setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 

@@ -62,7 +62,7 @@ NewMissileType.mainEngineMaxSpeed = 430
 NewMissileType.mainEngineAccelTime = 0.8
 NewMissileType.mainEngineBrakeTime = 0.5
 
-NewMissileType.rotationMaxSpeed = 360
+NewMissileType.rotationMaxSpeed = 200
 NewMissileType.rotationAccelTime = 0.4
 NewMissileType.rotationBrakeTime = 0.4
 

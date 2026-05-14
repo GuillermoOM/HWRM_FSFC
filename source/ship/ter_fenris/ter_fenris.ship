@@ -121,7 +121,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Cruiser_Ter'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Capital'
 NewShipType.DisplayFamily = 'Cruiser'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
@@ -150,7 +150,7 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 500
+NewShipType.buildCost = 700
 NewShipType.buildTime = 30
 NewShipType.buildPriorityOrder = 30
 

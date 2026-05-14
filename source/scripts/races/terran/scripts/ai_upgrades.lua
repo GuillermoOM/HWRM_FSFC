@@ -12,13 +12,14 @@ if (FRIGATEPRODUCTION == nil) then FRIGATEPRODUCTION = -1 end
 if (CPUPLAYERS_NORUSHTIME5 == nil) then CPUPLAYERS_NORUSHTIME5 = -1 end
 if (CPUPLAYERS_NORUSHTIME10 == nil) then CPUPLAYERS_NORUSHTIME10 = -1 end
 if (CPUPLAYERS_NORUSHTIME15 == nil) then CPUPLAYERS_NORUSHTIME15 = -1 end
-if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = -1 end
-if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = -1 end
-if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = -1 end
+if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = getglobal("cpuplayers_aggressive") or -1 end
+if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = getglobal("cpuplayers_dynamic") or -1 end
+if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = getglobal("cpuplayers_defensive") or -1 end
 
 -- AI Ship Variable Mappings (Engine provided)
 
 -- AI Research Variable Mappings (Engine provided from def_research.lua Name fields)
+print("[AI_DIAG] Tactics IDs | Agg: " .. (CPUPLAYERS_AGGRESSIVE or "nil") .. " | Dyn: " .. (CPUPLAYERS_DYNAMIC or "nil") .. " | Def: " .. (CPUPLAYERS_DEFENSIVE or "nil"))
 -- If any of these are missing in the current engine state, they will be nil.
 -- The FSFC_ wrappers handle nil values safely.
 

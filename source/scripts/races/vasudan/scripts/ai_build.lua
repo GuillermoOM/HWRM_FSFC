@@ -3,7 +3,7 @@ aitrace("LOADING VASUDAN BUILD INFO")
 
 kCollector = VAS_ISIS
 kCollectorFS1 = VAS_ISIS
-kRefinery  = VAS_ANUKETBase
+kRefinery  = VAS_ANUKET
 
 -- Era Counterparts
 kScoutFS2 = VAS_PTAH

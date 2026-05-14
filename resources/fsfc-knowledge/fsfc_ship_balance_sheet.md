@@ -1,7 +1,5 @@
-# FreeSpace: Fleet Command - Master Balance Sheet
-
-## [HOW TO READ THIS SHEET]
-This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.
+Master Balance Sheet updated at: /run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/resources/fsfc-knowledge/fsfc_ship_balance_sheet.md
+o-generated from source files.
 
 ## Research Tree Cost Matrix
 | Race | Tier | Era | Node | Cost | Time | Prerequisites |
@@ -41,14 +39,22 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 | SHIVAN | T2 | FS2 | Seraphim | 2000 | 70s | BomberDesign & FS2 |
 | SHIVAN | T2 | FS2 | Rakshasa | 2000 | 60s | CruiserDesign & FS2 |
 | SHIVAN | T2 | FS2 | Moloch | 2000 | 60s | CapitalShipDesign & FS2 |
-| SHIVAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
 | SHIVAN | T2 | Universal | Lilith | 2500 | 70s | CruiserDesign |
 | SHIVAN | T2 | Universal | Demon | 4000 | 90s | CapitalShipDesign |
 | SHIVAN | T2 | FS2 | Ravana | 4500 | 100s | CapitalShipDesign & FS2 |
-| SHIVAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
+| SHIVAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
+| SHIVAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
 | SHIVAN | T3 | Universal | Lucifer | 10000 | 110s | SuperCapitalShipDesign |
-| SHIVAN | T3 | Universal | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| SHIVAN | T4 | Universal | SuperCapitalShipDesign | 15000 | 150s | CapitalShipDesign |
 | SHIVAN | T4 | FS2 | Sathanas | 20000 | 200s | SuperCapitalShipDesign & FS2 |
+| TERRAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
+| TERRAN | T0 | Universal | cpuplayers_aggressive | 1 | 1s |  |
+| TERRAN | T0 | Universal | cpuplayers_dynamic | 1 | 1s |  |
+| TERRAN | T0 | Universal | cpuplayers_norushtime5 | 1 | 1s |  |
+| TERRAN | T0 | Universal | cpuplayers_norushtime10 | 1 | 1s |  |
+| TERRAN | T0 | Universal | cpuplayers_norushtime15 | 1 | 1s |  |
+| TERRAN | T0 | Universal | ResourceCollectionRateHard | 1 | 1s |  |
+| TERRAN | T0 | Universal | ResourceCollectionRateExpert | 1 | 1s |  |
 | TERRAN | T0 | FS1 | FS1 | 10 | 1s |  |
 | TERRAN | T0 | FS2 | FS2 | 10 | 1s |  |
 | TERRAN | T0 | FS1 | Apollo | 850 | 40s | FighterDesign & FS1 |
@@ -84,11 +90,11 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 | TERRAN | T2 | FS2 | AdvancedCruiser | 2000 | 50s | CruiserDesign & FS2 |
 | TERRAN | T2 | Universal | Orion | 2000 | 60s | CapitalShipDesign |
 | TERRAN | T2 | Universal | CommandCorvette | 2000 | 50s | Deimos & CapitalShipDesign |
-| TERRAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
 | TERRAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
 | TERRAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
-| TERRAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
-| TERRAN | T3 | Universal | SuperDestroyer | 10000 | 100s | CapitalShipDesign |
+| TERRAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
+| TERRAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
+| TERRAN | T4 | Universal | SuperDestroyer | 15000 | 150s | CapitalShipDesign |
 | TERRAN | T4 | FS2 | Juggernaut | 20000 | 200s | SuperDestroyer & Installation & FS2 |
 | VASUDAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
 | VASUDAN | T0 | Universal | cpuplayers_aggressive | 1 | 1s |  |
@@ -126,12 +132,12 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 | VASUDAN | T2 | FS2 | Mentu | 2000 | 60s | CruiserDesign & FS2 |
 | VASUDAN | T2 | Universal | Typhon | 2000 | 60s | CapitalShipDesign |
 | VASUDAN | T2 | FS2 | Sobek | 2000 | 60s | CapitalShipDesign & FS2 |
-| VASUDAN | T2 | Universal | CruiserDesign | 2500 | 50s | BomberDesign |
 | VASUDAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
 | VASUDAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
 | VASUDAN | T2 | FS2 | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
-| VASUDAN | T3 | Universal | CapitalShipDesign | 5000 | 75s | CruiserDesign |
-| VASUDAN | T3 | Universal | SuperCapitalShipDesign | 10000 | 100s | CapitalShipDesign |
+| VASUDAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
+| VASUDAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
+| VASUDAN | T4 | Universal | SuperCapitalShipDesign | 15000 | 150s | CapitalShipDesign |
 | VASUDAN | T4 | Universal | Colossus | 20000 | 200s | SuperCapitalShipDesign |
 
 ---
@@ -164,7 +170,7 @@ Defines the total allowed points/ships per family for each match preset.
 | **Bomber** | 90 | 900 | 450 | 210 | 120 |
 | **Capital** | 10 | 50 | 20 | 10 | 5 |
 | **CaptureFrigate** | 6 | 20 | 15 | 6 | 4 |
-| **Carrier** | 2 | 10 | 4 | 2 | 1 |
+| **Carrier** | 6 | 10 | 6 | 6 | 6 |
 | **CloakGenerator** | 4 | 10 | 8 | 4 | 4 |
 | **CloakedFighters** | 80 | 200 | 160 | 80 | 40 |
 | **CommandCorvette** | 6 | 30 | 24 | 6 | 6 |
@@ -239,8 +245,8 @@ Defines the total allowed points/ships per family for each match preset.
 ## Weaponry Matrix (Accuracy & Penetration)
 | Weapon | Dmg | ROF | DPS | Range | Acc: F/C/Fr/Cp | Pen: Un/Lt/Md/Hv |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| beam_AABlue | 77.0 | 0.35 | **27.18** | 4500.0 | 0.7/0.8/0.0/0.00 | 1/0.8/0.4/0.2 |
-| beam_AARed | 77.0 | 0.35 | **27.18** | 4500.0 | 0.7/0.8/0.00/0.00 | 1/0.8/0.4/0.2 |
+| beam_AABlue | 77.0 | 0.35 | **27.18** | 4500.0 | 0.4/0.75/0.0/0.00 | 1/0.8/0.4/0.2 |
+| beam_AARed | 77.0 | 0.35 | **27.18** | 4500.0 | 0.4/0.75/0.00/0.00 | 1/0.8/0.4/0.2 |
 | beam_bfgreen | 41800.0 | 0.03 | **1393.33** | 16000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_bfgreen_turret | 41800.0 | 0.03 | **1393.33** | 16000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_bfred_turret | 40500.0 | 0.09 | **3681.82** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
@@ -254,7 +260,7 @@ Defines the total allowed points/ships per family for each match preset.
 | beam_sgold | 8250.0 | 0.1 | **825.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_sgoldcruiser | 4318.0 | 0.05 | **215.9** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_sgreen | 20000.0 | 0.02 | **444.44** | 5000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
-| beam_sgreencruiser | 3850.0 | 0.1 | **385.0** | 6000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
+| beam_sgreencruiser | 3850.0 | 0.05 | **192.5** | 6000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_slashgreen | 3850.0 | 0.1 | **385.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | beam_sred | 4180.0 | 0.1 | **418.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | Beam_SRed_Turret | 4180.0 | 0.1 | **418.0** | 8000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
@@ -264,7 +270,7 @@ Defines the total allowed points/ships per family for each match preset.
 | gun_avenger | 16.0 | 2.0 | **32.0** | 2000.0 | 1/1/1/1 | 1/0.8/0.4/0.1 |
 | gun_avenger_gimble | 16.0 | 4.0 | **64.0** | 2000.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_avenger_turret | 35.0 | 2.0 | **70.0** | 2000.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
-| gun_bansheenormal | 26.0 | 1.25 | **32.5** | 1950.0 | 0.7/0.8/0.80/0.80 | 1.25/0.8/0.4/0.4 |
+| gun_bansheenormal | 26.0 | 1.25 | **32.5** | 1950.0 | 0.60/0.80/0.80/0.80 | 1.25/0.8/0.4/0.4 |
 | gun_circe | 45.0 | 1.25 | **56.25** | 2700.0 | 1/1/1/1 | 1.25/0.8/0.4/0.4 |
 | gun_disruptor | 30.0 | 2.86 | **85.71** | 2000.0 | 0/0/0/0 | 1/0.4/0.2/0.1 |
 | gun_disruptorfs1 | 15.0 | 1.67 | **25.0** | 1280.0 | 0/0/0/0 | 1/0.4/0.2/0.1 |
@@ -274,7 +280,7 @@ Defines the total allowed points/ships per family for each match preset.
 | gun_kayser | 28.0 | 4.0 | **112.0** | 1950.0 | 1/1/1/1 | 1.25/0.8/0.4/0.4 |
 | gun_lamprey | 20.0 | 1.67 | **33.33** | 1800.0 | 1/1/1/1 | 0.5/0.1/0.1/0.1 |
 | gun_longrangeflak_turret | 40.0 | 3.33 | **133.33** | 6300.0 | 0.3/0.5/0.80/0.80 | 2/1/1/1 |
-| gun_maxim | 26.0 | 3.33 | **86.67** | 7200.0 | 0.1/0.1/1/1 | 2/1/0.8/0.5 |
+| gun_maxim | 26.0 | 3.33 | **86.67** | 7200.0 | 0.60/0.80/1/1 | 2/1/0.8/0.5 |
 | gun_mekhu | 12.0 | 4.0 | **48.0** | 1940.0 | 1/1/1/1 | 1/0.8/0.4/0.1 |
 | gun_mekhu_turret | 12.0 | 4.0 | **48.0** | 3000.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_ml16 | 5.0 | 1.25 | **6.25** | 1800.0 | 1/1/1/1 | 1/0.8/0.4/0.1 |
@@ -295,18 +301,18 @@ Defines the total allowed points/ships per family for each match preset.
 | gun_shivsentry_turret | 15.0 | 2.0 | **30.0** | 2800.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_shivsuperlaser_gimble | 60.0 | 0.83 | **50.0** | 2800.0 | 0.1/0.2/0.80/0.80 | 1/1/0.7/0.4 |
 | gun_shivsuperlaser_turret | 60.0 | 0.83 | **50.0** | 2800.0 | 0.1/0.2/0.80/0.80 | 1/1/0.7/0.4 |
-| gun_subach | 23.0 | 2.0 | **46.0** | 1800.0 | 1/1/1/1 | 1/0.8/0.4/0.1 |
+| gun_subach | 23.0 | 2.0 | **46.0** | 1800.0 | 0.60/0.80/1/1 | 1/0.8/0.4/0.1 |
 | gun_subach_turret | 13.0 | 1.67 | **21.67** | 1800.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.1 |
 | gun_terbig_turret | 250.0 | 0.25 | **62.5** | 4200.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | gun_tercollector_turret | 13.0 | 1.0 | **13.0** | 1940.0 | 0.5/0.6/0.80/0.80 | 1/0.8/0.4/0.1 |
 | gun_terhuge_turret | 500.0 | 0.25 | **125.0** | 4200.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | gun_terhugeturretlaser_gimble | 250.0 | 0.25 | **62.5** | 4200.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
-| gun_terlaser_gimble | 80.0 | 1.0 | **80.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
+| gun_terlaser_gimble | 50.0 | 1.0 | **50.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_terlaser_turret | 43.0 | 1.0 | **43.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_vashuge_gimble | 250.0 | 0.25 | **62.5** | 4200.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | gun_vashuge_turret | 250.0 | 0.25 | **62.5** | 4200.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
-| gun_vaslaser_gimble | 43.0 | 1.0 | **43.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
-| gun_vaslaser_turret | 43.0 | 1.0 | **43.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
+| gun_vaslaser_gimble | 50.0 | 1.0 | **50.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
+| gun_vaslaser_turret | 50.0 | 1.0 | **50.0** | 2750.0 | 0.7/0.8/0.80/0.80 | 1/0.8/0.4/0.2 |
 | gun_vll9 | 10.0 | 2.0 | **20.0** | 1800.0 | 1/1/1/1 | 1/0.8/0.4/0.1 |
 | miss_Cyclops | 2000.0 | 0.05 | **100.0** | 4750.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | miss_empadv | 90.0 | 0.05 | **4.5** | 2750.0 | 0/0/1/1 | 1/1/1/1 |
@@ -314,23 +320,23 @@ Defines the total allowed points/ships per family for each match preset.
 | miss_fighterkiller_turret | 180.0 | 0.25 | **45.0** | 1900.0 | 1/1/0/0 | 1/1/0.2/0.1 |
 | miss_fluxcannon | 500.0 | 0.2 | **100.0** | 8000.0 | 0/0/0.8/1 | 0.25/0.3/1/1 |
 | miss_fury | 30.0 | 0.5 | **15.0** | 2000.0 | 1/1/1/1 | 1/1/1/.75 |
-| miss_fusionmortar | 320.0 | 0.5 | **160.0** | 6000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
+| miss_fusionmortar | 320.0 | 0.25 | **80.0** | 6000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | miss_harbinger | 3200.0 | 0.03 | **106.67** | 3000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
-| miss_harpoon | 200.0 | 0.25 | **50.0** | 2500.0 | 1/1/1/1 | 1/0.8/0.2/0.1 |
+| miss_harpoon | 120.0 | 0.25 | **30.0** | 2500.0 | 1/1/1/1 | 1/0.8/0.2/0.1 |
 | miss_Helios | 6800.0 | 0.03 | **226.67** | 3900.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
-| miss_hornet | 50.0 | 0.61 | **30.3** | 2660.0 | 1/1/1/1 | 1/1/1.0/0.75 |
+| miss_hornet | 25.0 | 0.61 | **15.15** | 2660.0 | 1/1/1/1 | 1/1/1.0/0.75 |
 | miss_infyrno | 150.0 | 0.05 | **7.5** | 2500.0 | 1/1/1/1 | 0.1/0.1/1/0.75 |
-| miss_phoenixv | 350.0 | 0.08 | **29.17** | 3500.0 | 1/1/1/1 | 1.1/1.1/0.5/0.4 |
+| miss_phoenixv | 150.0 | 0.08 | **12.5** | 3500.0 | 1/1/1/1 | 1.1/1.1/0.5/0.4 |
 | miss_pihrana | 70.0 | 0.05 | **3.5** | 4000.0 | 1/1/1/1 | 1/1/1/0.75 |
 | miss_pihranaturret | 100.0 | 0.1 | **10.0** | 3000.0 | 1/1/1/1 | 1/1/1/0.75 |
-| miss_rockeye | 25.0 | 0.25 | **6.25** | 2500.0 | 1/1/1/1 | 1/0.8/0.5/0.3 |
+| miss_rockeye | 80.0 | 0.25 | **20.0** | 2500.0 | 1/1/1/1 | 1/0.8/0.5/0.3 |
 | miss_shivbomb | 2000.0 | 0.05 | **100.0** | 4750.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | miss_shivmegabomb | 6800.0 | 0.03 | **226.67** | 3900.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 | miss_stiletto | 775.0 | 0.05 | **38.75** | 4500.0 | 0/0/0/0 | 0/0/0/0 |
 | miss_stilettoII | 1000.0 | 0.05 | **50.0** | 11000.0 | 0/0/0/0 | 0/0/0/0 |
 | miss_synaptic | 40.0 | 0.05 | **2.0** | 4000.0 | 1/1/1/1 | 1/1/1/0.75 |
 | miss_tempest | 40.0 | 0.5 | **20.0** | 1700.0 | 1/1/1/1 | 1/1/1/.75 |
-| miss_tornado | 50.0 | 0.98 | **49.01** | 3220.0 | 1/1/1/1 | 1/1/1.0/0.75 |
+| miss_tornado | 35.0 | 0.98 | **34.31** | 3220.0 | 1/1/1/1 | 1/1/1.0/0.75 |
 | miss_trebuchet | 840.0 | 0.04 | **35.0** | 10080.0 | 1/1/1/1 | 0.75/1.0/0.5/0.4 |
 | miss_tsunami | 1500.0 | 0.05 | **75.0** | 3000.0 | 0/0/0.80/0.80 | 1/1/0.8/0.5 |
 
@@ -384,7 +390,7 @@ Defines the total allowed points/ships per family for each match preset.
 | GTSG Cerberus | No | No | No | No | No | No | No |
 | GTSG Mjolnir | No | No | No | No | No | No | No |
 | GTT Argo | No | No | No | Min:70 / Fact:1 / Rec:0s | Rate:400 / Rad:25 | No | No |
-| GTT Elysium | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
+| GTT Elysium | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:300 / Cap:6) / Salvage |
 | GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:100 | Min:2500 / Fact:1 / Rec:0s | No | Yes | No |
 | GTVA Colossus | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:100 | Min:2500 / Fact:1 / Rec:0s | No | Yes | No |
 | GVA Setekh | No | No | No | Min:300 / Fact:1 / Rec:0s | No | Yes | No |
@@ -419,7 +425,7 @@ Defines the total allowed points/ships per family for each match preset.
 | PVS Scarab | No | No | No | Min:25 / Fact:1 / Rec:0s | Rate:400 / Rad:0 | No | No |
 | PVSC Imhotep | No | Yes | No | Min:50 / Fact:1 / Rec:0s | No | No | No |
 | PVSG Ankh | No | No | No | No | No | No | No |
-| PVT Isis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
+| PVT Isis | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:300 / Cap:6) / Salvage |
 | SB Nahema | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Afterburner(x1.3888888889) |
 | SB Nephilim | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
 | SB Seraphim | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | No |
@@ -449,134 +455,134 @@ Defines the total allowed points/ships per family for each match preset.
 | SJ Sathanas | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:60 / Fams:Fighter, Utility / Rep:60 | Min:2000 / Fact:1 / Rec:0s | No | No | No |
 | SSG Belial | No | No | No | No | No | No | No |
 | SSG Trident | No | No | No | No | No | No | No |
-| ST Azrael | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:200 / Cap:8) / Salvage |
+| ST Azrael | No | No | No | Min:30 / Fact:1 / Rec:0s | No | No | Harvest(Rate:300 / Cap:6) / Salvage |
 | Shivan Comm Node | No | No | No | No | No | No | No |
 
 ---
 
 ## [TERRAN - GTA]
 
-| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| GTSG Cerberus | 150 | TurretArmour / Frigate | 40 | 5s | 2x avenger_turret | **140.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| GTSG Alastor | 250 | TurretArmour / Frigate | 60 | 7s | 2x sentrylaser_turret | **190.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| GTNB Pharos | 100 | Unarmoured / Utility | 100 | 20s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 500/170/0.11/15 |
-| GTS Centaur | 2000 | LightArmour / Resource | 150 | 9s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 295/95/4/85 |
-| GTS Hygeia | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 280/95/4/85 |
-| GTF Ulysses | 240 | Unarmoured / Fighter | 390 | 26s | 1x subach, 1x morningstar, 1x miss_harpoon | **126.0** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 328/129/2/85 |
-| GTF Ulysses (FS1) | 240 | Unarmoured / Fighter | 390 | 26s | 1x prometheusfs1, 1x avenger, 1x miss_harpoon | **115.33** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 328/129/2/85 |
-| GTT Elysium | 3500 | ResArmour / Resource | 400 | 25s | 1x tercollector_turret | **13.0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 160/60/3/30 |
-| GTFr Poseidon | 4000 | LightArmour / ResourceLarge | 400 | 25s | 4x subach_turret | **86.68** | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 200/50/8/60 |
-| GTC Fenris (FS1) | 18000 | MediumArmour / Frigate | 450 | 30s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_fusionmortar | **925.0** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 90/20/10/20 |
-| GTB Zeus | 200 | LightArmour / Fighter | 450 | 31s | 1x Subach, 1x disruptor, 1x miss_Cyclops, 1x miss_Stiletto | **270.46** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/85/1/85 |
-| GTF Loki | 90 | Unarmoured / Fighter | 460 | 29s | 1x subach, 1x lamprey, 1x miss_harpoon, 1x miss_empadv | **133.83** | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 340/130/2/85 |
-| GTF Apollo | 240 | Unarmoured / Fighter | 470 | 30s | 1x ml16, 1x avenger, 1x miss_rockeye, 1x miss_fury | **59.5** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 284/112.5/3/85 |
-| GTF Valkyrie | 200 | Unarmoured / Fighter | 470 | 30s | 1x bansheenormal, 1x prometheusfs1, 1x miss_phoenixv | **95.0** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 370/103/1/85 |
-| GTB Athena | 250 | LightArmour / Fighter | 490 | 31s | 1x avenger, 1x disruptorfs1, 1x miss_phoenixv, 1x miss_stiletto | **124.92** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 270/80/4/85 |
-| GTC Fenris | 18000 | MediumArmour / Frigate | 500 | 30s | 5x terlaser_gimble, 2x Beam_AABlue, 1x beam_sgreencruiser, 1x miss_fusionmortar | **999.36** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 90/20/10/20 |
-| GTB Medusa | 350 | LightArmour / Fighter | 530 | 35s | 1x prometheusfs1, 2x miss_Cyclops, 1x prometheusfs1_turret | **253.33** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 230/76/4/85 |
-| GTB Medusa (FS1) | 350 | LightArmour / Fighter | 530 | 35s | 1x prometheusfs1, 2x miss_tsunami, 1x prometheusfs1_turret | **203.33** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 230/76/4/85 |
-| GTF Myrmidon | 240 | Unarmoured / Fighter | 590 | 36s | 1x subach, 1x prometheusR, 1x miss_tempest, 1x miss_rockeye | **93.36** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 340/94/2.4/85 |
-| GTB Artemis | 275 | LightArmour / Fighter | 600 | 37s | 1x prometheusR, 1x miss_Cyclops, 1x miss_Pihrana | **124.61** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/76/4/85 |
-| GTG Zephyrus | 10000 | MediumArmour / ResourceLarge | 600 | 30s | 2x terlaser_gimble, 2x subach_turret, 1x flak_turret | **236.67** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 160/20/8/60 |
-| GTF Hercules Mk. II | 275 | Unarmoured / Fighter | 610 | 37s | 1x prometheusr, 1x subach, 1x miss_hornet, 1x miss_tornado, 1x miss_tempest | **166.42** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 240/90/2/85 |
-| GTF Perseus | 265 | Unarmoured / Fighter | 620 | 35s | 1x prometheusR, 1x subach, 1x miss_trebuchet, 1x miss_harpoon | **152.11** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 360/109/2/85 |
-| GTT Argo | 13500 | MediumArmour / Frigate | 625 | 37s | 2x flak_turret | **66.66** | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 140/40/8/60 |
-| GTFr Chronos | 20000 | MediumArmour / ResourceLarge | 625 | 37s | 1x avenger_turret | **70.0** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 190/40/8/60 |
-| GTF Hercules | 250 | Unarmoured / Fighter | 660 | 39s | 1x prometheusfs1, 1x avenger, 1x miss_hornet, 1x miss_fury | **110.63** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 228/85/3/85 |
-| GTC Leviathan (FS1) | 18000 | MediumArmour / Frigate | 750 | 43s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_pihranaturret | **775.0** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
-| GTB Artemis D.H. | 275 | LightArmour / Fighter | 810 | 42s | 1x maxim, 1x miss_Cyclops, 1x miss_Pihrana | **190.17** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 300/100/4/85 |
-| GTC Leviathan | 18000 | MediumArmour / Frigate | 850 | 43s | 3x terlaser_gimble, 4x beam_AABlue, 1x beam_sgreen, 1x miss_pihranaturret | **803.16** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
-| GTF Erinyes | 325 | Unarmoured / Fighter | 900 | 47s | 1x kayser, 1x circe, 1x miss_tornado, 1x miss_harpoon | **267.26** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 270/95/3.6/85 |
-| GTB Boanerges | 325 | LightArmour / Fighter | 910 | 44s | 1x maxim, 1x miss_Helios, 1x miss_infyrno | **320.84** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 240/63/4/85 |
-| GTF Ares | 425 | Unarmoured / Fighter | 925 | 45s | 1x maxim, 1x prometheusS, 1x miss_trebuchet, 1x miss_tornado | **213.54** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 224/76/2.4/85 |
-| GTB Ursa | 550 | MediumArmour / Fighter | 940 | 45s | 2x prometheusfs1, 1x miss_Helios, 1x miss_cyclops, 1x miss_pihrana, 1x prometheusfs1_turret | **416.83** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 210/60/4/85 |
-| GTB Ursa (FS1) | 550 | MediumArmour / Fighter | 940 | 45s | 2x prometheusfs1, 1x miss_tsunami, 1x miss_harbinger, 1x miss_pihrana, 1x prometheusfs1_turret | **271.83** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 210/60/4/85 |
-| GTF Pegasus | 90 | Unarmoured / Fighter | 1000 | 65s | 1x subach, 1x miss_harpoon, 1x miss_stilettoII | **146.0** | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 400/141/2/85 |
-| GTSC Faustus | 12000 | MediumArmour / Frigate | 1500 | 35s | 6x terlaser_gimble | **480.0** | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 125/20/8/20 |
-| GTA Charybdis | 10000 | MediumArmour / Frigate | 2000 | 90s | 6x terlaser_gimble | **480.0** | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 140/20/8/20 |
-| GTC Aeolus | 18000 | MediumArmour / Frigate | 2450 | 65s | 2x beam_AABlue, 2x Flak_Gimble, 2x terhuge_turret, 4x flak_turret, 2x beam_sgreen | **1393.22** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/15/8/20 |
-| GTCv Deimos | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 4x terbig_turret, 6x flak_turret, 3x beam_AABlue, 1x Beam_AABlue, 6x terlaser_gimble, 2x miss_pihrana, 4x beam_slashgreen | **2585.7** | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/12/8/40 |
-| GTSG Mjolnir | 5000 | TurretArmour / Frigate | 3000 | 120s | 1x Beam_MjolnirBeam | **714.29** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/10/8/90 |
-| GTI Arcadia | 200000 | HeavyArmour / BigCapitalShip | 6000 | 100s | 19x terlaser_turret, 5x miss_fighterkiller | **1042.0** | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/1/10 |
-| NTF Iceni | 150000 | HeavyArmour / SmallCapitalShip | 9000 | 210s | 6x terlaser_turret, 4x beam_AABlue, 2x flak_turret, 1x miss_pihrana, 4x terhugeturretlaser_gimble, 2x miss_fighterkiller, 2x terhuge_turret, 4x beam_bgreen | **6306.88** | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 190/8/8/40 |
-| GTD Hecate | 80000 | HeavyArmour / BigCapitalShip | 11000 | 200s | 6x longrangeflak_turret, 6x beam_AABlue, 6x terlaser_gimble, 4x flak_turret, 1x beam_bgreen, 4x beam_slashgreen | **4436.38** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
-| GTD Orion | 80000 | HeavyArmour / BigCapitalShip | 12500 | 215s | 3x beam_AABlue, 3x terlaser_gimble, 3x beam_slashgreen, 2x beam_bgreen, 1x beam_bgreen_turret, 4x heavyflak_turret | **5056.26** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
-| GTD Orion (FS1) | 80000 | HeavyArmour / BigCapitalShip | 12500 | 215s | 6x terlaser_gimble, 6x terhuge_turret | **1230.0** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
-| GTD Hades | 400000 | HeavyArmour / BigCapitalShip | 20000 | 280s | 4x terhuge_turret, 1x miss_fighterkiller, 2x miss_infyrno, 6x shivsuperlaser_turret, 4x terlaser_gimble, 3x beam_bfred_turret, 2x beam_bfgreen_turret | **15012.12** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 80/3.5/20/10 |
-| GTVA Colossus | 1000000 | HeavyArmour / BigCapitalShip | 50000 | 500s | 10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen | **13673.74** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 125/3/20/40 |
+| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | **DPS/RU** | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| GTSG Cerberus | 150 | TurretArmour / Frigate | 40 | 5s | 2x avenger_turret | **140.0** | 3.5 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| GTSG Alastor | 250 | TurretArmour / Frigate | 60 | 7s | 2x sentrylaser_turret | **190.0** | 3.17 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| GTNB Pharos | 100 | Unarmoured / Utility | 100 | 20s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 500/170/0.11/15 |
+| GTS Centaur | 2000 | LightArmour / Resource | 150 | 9s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 295/95/4/85 |
+| GTS Hygeia | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 280/95/4/85 |
+| GTF Ulysses | 480 | Unarmoured / Fighter | 390 | 26s | 1x subach, 1x morningstar, 1x miss_harpoon | **106.0** | 0.27 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 328/129/2/85 |
+| GTF Ulysses (FS1) | 240 | Unarmoured / Fighter | 390 | 26s | 1x prometheusfs1, 1x avenger, 1x miss_harpoon | **95.33** | 0.24 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 328/129/2/85 |
+| GTT Elysium | 3500 | ResArmour / Resource | 400 | 25s | 1x tercollector_turret | **13.0** | 0.03 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 160/60/3/30 |
+| GTFr Poseidon | 4000 | LightArmour / ResourceLarge | 400 | 25s | 4x subach_turret | **86.68** | 0.22 | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 200/50/8/60 |
+| GTC Fenris (FS1) | 18000 | MediumArmour / Frigate | 450 | 30s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_fusionmortar | **605.0** | 1.34 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 90/20/10/20 |
+| GTB Zeus | 450 | LightArmour / Fighter | 450 | 31s | 1x Subach, 1x disruptor, 1x miss_Cyclops, 1x miss_Stiletto | **270.46** | 0.6 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/85/1/85 |
+| GTF Loki | 250 | Unarmoured / Fighter | 460 | 29s | 1x subach, 1x lamprey, 1x miss_harpoon, 1x miss_empadv | **113.83** | 0.25 | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 340/130/2/85 |
+| GTF Apollo | 480 | Unarmoured / Fighter | 470 | 30s | 1x ml16, 1x avenger, 1x miss_rockeye, 1x miss_fury | **73.25** | 0.16 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 284/112.5/3/85 |
+| GTF Valkyrie | 400 | Unarmoured / Fighter | 470 | 30s | 1x bansheenormal, 1x prometheusfs1, 1x miss_phoenixv | **78.33** | 0.17 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 370/103/1/85 |
+| GTB Athena | 500 | LightArmour / Fighter | 490 | 31s | 1x avenger, 1x disruptorfs1, 1x miss_phoenixv, 1x miss_stiletto | **108.25** | 0.22 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 270/80/4/85 |
+| GTB Medusa | 950 | LightArmour / Fighter | 530 | 35s | 1x prometheusfs1, 2x miss_Cyclops, 1x prometheusfs1_turret | **253.33** | 0.48 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 230/76/4/85 |
+| GTB Medusa (FS1) | 350 | LightArmour / Fighter | 530 | 35s | 1x prometheusfs1, 2x miss_tsunami, 1x prometheusfs1_turret | **203.33** | 0.38 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 230/76/4/85 |
+| GTF Myrmidon | 480 | Unarmoured / Fighter | 590 | 36s | 1x subach, 1x prometheusR, 1x miss_tempest, 1x miss_rockeye | **107.11** | 0.18 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 340/94/2.4/85 |
+| GTB Artemis | 800 | LightArmour / Fighter | 600 | 37s | 1x prometheusR, 1x miss_Cyclops, 1x miss_Pihrana | **124.61** | 0.21 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/76/4/85 |
+| GTG Zephyrus | 10000 | MediumArmour / ResourceLarge | 600 | 30s | 2x terlaser_gimble, 2x subach_turret, 1x flak_turret | **176.67** | 0.29 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 160/20/8/60 |
+| GTF Hercules Mk. II | 550 | Unarmoured / Fighter | 610 | 37s | 1x prometheusr, 1x subach, 1x miss_hornet, 1x miss_tornado, 1x miss_tempest | **136.57** | 0.22 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 240/90/2/85 |
+| GTF Perseus | 530 | Unarmoured / Fighter | 620 | 35s | 1x prometheusR, 1x subach, 1x miss_trebuchet, 1x miss_harpoon | **132.11** | 0.21 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 360/109/2/85 |
+| GTT Argo | 13500 | MediumArmour / Frigate | 625 | 37s | 2x flak_turret | **66.66** | 0.11 | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 140/40/8/60 |
+| GTFr Chronos | 20000 | MediumArmour / ResourceLarge | 625 | 37s | 1x avenger_turret | **70.0** | 0.11 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 190/40/8/60 |
+| GTF Hercules | 500 | Unarmoured / Fighter | 660 | 39s | 1x prometheusfs1, 1x avenger, 1x miss_hornet, 1x miss_fury | **95.48** | 0.14 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 228/85/3/85 |
+| GTC Fenris | 18000 | MediumArmour / Frigate | 700 | 30s | 5x terlaser_gimble, 2x Beam_AABlue, 1x beam_sgreencruiser, 1x miss_fusionmortar | **576.86** | 0.82 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 90/20/10/20 |
+| GTC Leviathan (FS1) | 18000 | MediumArmour / Frigate | 750 | 43s | 8x terlaser_gimble, 1x terhuge_turret, 1x miss_pihranaturret | **535.0** | 0.71 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
+| GTB Artemis D.H. | 275 | LightArmour / Fighter | 810 | 42s | 1x maxim, 1x miss_Cyclops, 1x miss_Pihrana | **190.17** | 0.23 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 300/100/4/85 |
+| GTC Leviathan | 18000 | MediumArmour / Frigate | 850 | 43s | 3x terlaser_gimble, 4x beam_AABlue, 1x beam_sgreen, 1x miss_pihranaturret | **713.16** | 0.84 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 60/9/18/20 |
+| GTF Erinyes | 650 | Unarmoured / Fighter | 900 | 47s | 1x kayser, 1x circe, 1x miss_tornado, 1x miss_harpoon | **232.56** | 0.26 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 270/95/3.6/85 |
+| GTB Boanerges | 325 | LightArmour / Fighter | 910 | 44s | 1x maxim, 1x miss_Helios, 1x miss_infyrno | **320.84** | 0.35 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 240/63/4/85 |
+| GTF Ares | 750 | Unarmoured / Fighter | 925 | 45s | 1x maxim, 1x prometheusS, 1x miss_trebuchet, 1x miss_tornado | **198.84** | 0.21 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 224/76/2.4/85 |
+| GTB Ursa | 1250 | MediumArmour / Fighter | 940 | 45s | 2x prometheusfs1, 1x miss_Helios, 1x miss_cyclops, 1x miss_pihrana, 1x prometheusfs1_turret | **416.83** | 0.44 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 210/60/4/85 |
+| GTB Ursa (FS1) | 550 | MediumArmour / Fighter | 940 | 45s | 2x prometheusfs1, 1x miss_tsunami, 1x miss_harbinger, 1x miss_pihrana, 1x prometheusfs1_turret | **271.83** | 0.29 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 210/60/4/85 |
+| GTF Pegasus | 250 | Unarmoured / Fighter | 1000 | 65s | 1x subach, 1x miss_harpoon, 1x miss_stilettoII | **126.0** | 0.13 | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 400/141/2/85 |
+| GTSC Faustus | 12000 | MediumArmour / Frigate | 1500 | 35s | 6x terlaser_gimble | **300.0** | 0.2 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 125/20/8/20 |
+| GTA Charybdis | 10000 | MediumArmour / Frigate | 2000 | 90s | 6x terlaser_gimble | **300.0** | 0.15 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 140/20/8/20 |
+| GTC Aeolus | 18000 | MediumArmour / Frigate | 2450 | 65s | 2x beam_AABlue, 2x Flak_Gimble, 2x terhuge_turret, 4x flak_turret, 2x beam_sgreen | **1393.22** | 0.57 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/15/8/20 |
+| GTCv Deimos | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 4x terbig_turret, 6x flak_turret, 3x beam_AABlue, 1x Beam_AABlue, 6x terlaser_gimble, 2x miss_pihrana, 4x beam_slashgreen | **2405.7** | 0.8 | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/12/8/40 |
+| GTSG Mjolnir | 5000 | TurretArmour / Frigate | 3000 | 120s | 1x Beam_MjolnirBeam | **714.29** | 0.24 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/10/8/90 |
+| GTI Arcadia | 200000 | HeavyArmour / BigCapitalShip | 6000 | 100s | 19x terlaser_turret, 5x miss_fighterkiller | **1042.0** | 0.17 | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/1/10 |
+| NTF Iceni | 150000 | HeavyArmour / SmallCapitalShip | 9000 | 210s | 6x terlaser_turret, 4x beam_AABlue, 2x flak_turret, 1x miss_pihrana, 4x terhugeturretlaser_gimble, 2x miss_fighterkiller, 2x terhuge_turret, 4x beam_bgreen | **6306.88** | 0.7 | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 190/8/8/40 |
+| GTD Hecate | 150000 | HeavyArmour / BigCapitalShip | 11000 | 200s | 6x longrangeflak_turret, 6x beam_AABlue, 6x terlaser_gimble, 4x flak_turret, 1x beam_bgreen, 4x beam_slashgreen | **4256.38** | 0.39 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
+| GTD Orion | 160000 | HeavyArmour / BigCapitalShip | 12500 | 215s | 3x beam_AABlue, 3x terlaser_gimble, 3x beam_slashgreen, 2x beam_bgreen, 1x beam_bgreen_turret, 4x heavyflak_turret | **4966.26** | 0.4 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
+| GTD Orion (FS1) | 80000 | HeavyArmour / BigCapitalShip | 12500 | 215s | 6x terlaser_gimble, 6x terhuge_turret | **1050.0** | 0.08 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/20/10 |
+| GTD Hades | 400000 | HeavyArmour / BigCapitalShip | 20000 | 280s | 4x terhuge_turret, 1x miss_fighterkiller, 2x miss_infyrno, 6x shivsuperlaser_turret, 4x terlaser_gimble, 3x beam_bfred_turret, 2x beam_bfgreen_turret | **14892.12** | 0.74 | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 80/3.5/20/10 |
+| GTVA Colossus | 1000000 | HeavyArmour / BigCapitalShip | 50000 | 500s | 10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen | **13543.74** | 0.27 | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 125/3/20/40 |
 
 ## [SHIVAN - Unknown]
 
-| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| SSG Trident | 100 | TurretArmour / Frigate | 50 | 6s | 2x shivsentry_turret | **60.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| SSG Belial | 160 | TurretArmour / Frigate | 75 | 8s | 4x shivsentry_turret | **120.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| ST Azrael | 2000 | ResArmour / Resource | 400 | 25s | 3x shivlightlaser_turret | **68.58** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 200/60/3/30 |
-| SFr Mephisto | 10000 | LightArmour / ResourceLarge | 400 | 25s | 4x shivlightlaser_gimble | **91.44** | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 210/50/8/60 |
-| SF Astaroth | 100 | Unarmoured / Fighter | 420 | 30s | 2x shivlightlaser, 1x miss_rockeye, 1x miss_empadv | **56.47** | 4.0/4/4 | 10/12 | 0/0 | 0/0 | 10 | 380/109/3/85 |
-| SF Scorpion | 90 | Unarmoured / Fighter | 430 | 28s | 2x shivlightlaser, 1x miss_rockeye | **51.97** | 4.0/4/4 | 3/0 | 0/0 | 0/0 | 3 | 284/180/3/85 |
-| SF Manticore | 100 | Unarmoured / Fighter | 450 | 31s | 2x shivlightlaser, 1x miss_trebuchet, 1x miss_harpoon | **130.72** | 4.0/4/4 | 15/15 | 0/0 | 0/0 | 15 | 414/113/3/85 |
-| SFr Asmodeus | 8000 | MediumArmour / Frigate | 550 | 35s | 1x flak_turret, 3x shivheavylaser_gimble | **225.33** | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 210/40/8/60 |
-| SB Nahema | 300 | LightArmour / Fighter | 550 | 34s | 1x shivmegalaser, 1x miss_infyrno, 1x miss_hornet | **77.8** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 324/60/2.5/85 |
-| SF Aeshma | 125 | Unarmoured / Fighter | 570 | 35s | 2x shivmegalaser, 1x miss_hornet, 1x miss_tornado | **159.31** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 272/109/3/85 |
-| SC Cain | 18000 | MediumArmour / Frigate | 600 | 34s | 5x shivsuperlaser_turret, 1x beam_AARed, 2x miss_fighterkiller, 1x beam_sredcruiser_turret | **534.38** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 120/20/8/20 |
-| SC Cain (FS1) | 18000 | MediumArmour / Frigate | 600 | 34s | 6x shivsuperlaser_turret, 1x shivlightlaser_turret, 2x miss_fighterkiller | **412.86** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 120/20/8/20 |
-| SB Taurvi | 600 | LightArmour / Fighter | 600 | 34s | 1x shivmegalaser, 1x shivheavylaser, 1x miss_shivbomb, 1x miss_pihrana | **207.5** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 274/60/4.5/85 |
-| SF Basilisk | 100 | Unarmoured / Fighter | 620 | 37s | 2x shivmegalaser, 1x miss_hornet, 1x miss_tempest | **130.3** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 246/103/3/85 |
-| SF Dragon | 240 | Unarmoured / Fighter | 670 | 39s | 2x shivheavylaser, 1x miss_harpoon | **178.0** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 330/160/2/85 |
-| SG Rahu | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 3x shivheavylaser_turret | **108.0** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
-| SB Shaitan | 400 | LightArmour / Fighter | 830 | 48s | 1x shivheavylaser, 1x disruptorfs1, 1x miss_shivbomb, 1x miss_stiletto | **227.75** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 264/90/4/85 |
-| SB Nephilim | 500 | LightArmour / Fighter | 840 | 44s | 1x shivlightlaser, 2x shivlightlaser_turret, 1x miss_pihrana, 1x miss_shivbomb, 1x miss_shivmegabomb | **398.75** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 280/60/4/85 |
-| SF Mara | 240 | Unarmoured / Fighter | 860 | 47s | 2x shivheavylaser, 1x miss_harpoon, 1x miss_rockeye | **184.25** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 296/120/2.5/85 |
-| SB Seraphim | 500 | LightArmour / Fighter | 880 | 45s | 3x shivlightlaser, 2x shivlightlaser_turret, 1x miss_shivmegabomb, 1x miss_shivbomb, 1x miss_pihrana, 1x miss_trebuchet | **479.47** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 300/60/4/85 |
-| SF Gorgon | 240 | Unarmoured / Fighter | 890 | 45s | 2x shivmegalaser, 1x miss_hornet, 1x miss_harpoon | **160.3** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 435/180/3/85 |
-| Shivan Comm Node | 40000 | HeavyArmour / BigCapitalShip | 1000 | 70s | None | **0** | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/8/20 |
-| SC Rakshasa | 18000 | MediumArmour / Frigate | 1250 | 60s | 8x shivsuperlaser_turret, 1x beam_AARed, 2x shivheavylaser_turret, 3x beam_sredcruiser | **1000.78** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/15/10/20 |
-| SCv Moloch | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 5x shivsuperlaser_turret, 2x miss_fighterkiller_turret, 4x flak_turret, 2x miss_pihrana, 3x beam_sredmoloch | **1620.32** | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/11/8/10 |
-| SC Lilith | 18000 | MediumArmour / Frigate | 4000 | 140s | 5x shivsuperlaser_turret, 1x beam_AARed, 2x miss_pihrana, 1x beam_lredcruiser_turret | **1647.82** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/10/10/20 |
-| SC Lilith (FS1) | 18000 | MediumArmour / Frigate | 4000 | 140s | 6x shivsuperlaser_turret, 1x shivlightlaser_turret, 2x miss_pihrana | **329.86** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/10/10/20 |
-| SD Demon | 80000 | HeavyArmour / BigCapitalShip | 11500 | 215s | 2x beam_AARed, 2x shivmegafunk_turret, 4x flak_turret, 10x shivsuperlaser_turret, 5x miss_fighterkiller, 2x beam_lred, 1x Beam_SRed_Turret | **3863.54** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
-| SD Demon | 80000 | HeavyArmour / BigCapitalShip | 11500 | 215s | 2x shivlightlaser_turret, 2x shivmegafunk_turret, 4x flak_turret, 13x shivsuperlaser_turret, 5x miss_fighterkiller | **1276.9** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
-| SD Ravana | 80000 | HeavyArmour / BigCapitalShip | 13000 | 225s | 2x beam_AARed, 17x shivsuperlaser_turret, 5x flak_turret, 1x miss_pihrana, 1x Miss_FighterKiller, 2x beam_lred, 2x beam_sred | **4265.51** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
-| SD Lucifer | 500000 | HeavyArmour / BigCapitalShip | 21500 | 305s | 4x shivsuperlaser_gimble, 3x miss_pihrana, 6x shivsuperlaser_turret, 2x beam_lredlucifer | **5760.5** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 90/3.5/20/10 |
-| SJ Sathanas | 1000000 | HeavyArmour / BigCapitalShip | 55000 | 550s | 22x shivsuperlaser_turret, 8x beam_AARed, 11x flak_turret, 5x miss_pihrana, 2x longrangeflak_turret | **1968.23** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 120/3/20/40 |
+| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | **DPS/RU** | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| SSG Trident | 100 | TurretArmour / Frigate | 50 | 6s | 2x shivsentry_turret | **60.0** | 1.2 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| SSG Belial | 160 | TurretArmour / Frigate | 75 | 8s | 4x shivsentry_turret | **120.0** | 1.6 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| ST Azrael | 2000 | ResArmour / Resource | 400 | 25s | 3x shivlightlaser_turret | **68.58** | 0.17 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 200/60/3/30 |
+| SFr Mephisto | 10000 | LightArmour / ResourceLarge | 400 | 25s | 4x shivlightlaser_gimble | **91.44** | 0.23 | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 210/50/8/60 |
+| SF Astaroth | 300 | Unarmoured / Fighter | 420 | 30s | 2x shivlightlaser, 1x miss_rockeye, 1x miss_empadv | **70.22** | 0.17 | 4.0/4/4 | 10/12 | 0/0 | 0/0 | 10 | 380/109/3/85 |
+| SF Scorpion | 250 | Unarmoured / Fighter | 430 | 28s | 2x shivlightlaser, 1x miss_rockeye | **65.72** | 0.15 | 4.0/4/4 | 3/0 | 0/0 | 0/0 | 3 | 284/180/3/85 |
+| SF Manticore | 300 | Unarmoured / Fighter | 450 | 31s | 2x shivlightlaser, 1x miss_trebuchet, 1x miss_harpoon | **110.72** | 0.25 | 4.0/4/4 | 15/15 | 0/0 | 0/0 | 15 | 414/113/3/85 |
+| SFr Asmodeus | 8000 | MediumArmour / Frigate | 550 | 35s | 1x flak_turret, 3x shivheavylaser_gimble | **225.33** | 0.41 | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 210/40/8/60 |
+| SC Cain | 18000 | MediumArmour / Frigate | 550 | 34s | 5x shivsuperlaser_turret, 1x beam_AARed, 2x miss_fighterkiller, 1x beam_sredcruiser_turret | **534.38** | 0.97 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 120/20/8/20 |
+| SB Nahema | 300 | LightArmour / Fighter | 550 | 34s | 1x shivmegalaser, 1x miss_infyrno, 1x miss_hornet | **62.65** | 0.11 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 324/60/2.5/85 |
+| SF Aeshma | 125 | Unarmoured / Fighter | 570 | 35s | 2x shivmegalaser, 1x miss_hornet, 1x miss_tornado | **129.46** | 0.23 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 272/109/3/85 |
+| SC Cain (FS1) | 18000 | MediumArmour / Frigate | 600 | 34s | 6x shivsuperlaser_turret, 1x shivlightlaser_turret, 2x miss_fighterkiller | **412.86** | 0.69 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 120/20/8/20 |
+| SB Taurvi | 600 | LightArmour / Fighter | 600 | 34s | 1x shivmegalaser, 1x shivheavylaser, 1x miss_shivbomb, 1x miss_pihrana | **207.5** | 0.35 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 274/60/4.5/85 |
+| SF Basilisk | 300 | Unarmoured / Fighter | 620 | 37s | 2x shivmegalaser, 1x miss_hornet, 1x miss_tempest | **115.15** | 0.19 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 246/103/3/85 |
+| SF Dragon | 600 | Unarmoured / Fighter | 670 | 39s | 2x shivheavylaser, 1x miss_harpoon | **158.0** | 0.24 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 330/160/2/85 |
+| SG Rahu | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 3x shivheavylaser_turret | **108.0** | 0.14 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
+| SB Shaitan | 400 | LightArmour / Fighter | 830 | 48s | 1x shivheavylaser, 1x disruptorfs1, 1x miss_shivbomb, 1x miss_stiletto | **227.75** | 0.27 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 264/90/4/85 |
+| SB Nephilim | 1250 | LightArmour / Fighter | 840 | 44s | 1x shivlightlaser, 2x shivlightlaser_turret, 1x miss_pihrana, 1x miss_shivbomb, 1x miss_shivmegabomb | **398.75** | 0.47 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 280/60/4/85 |
+| SF Mara | 600 | Unarmoured / Fighter | 860 | 47s | 2x shivheavylaser, 1x miss_harpoon, 1x miss_rockeye | **178.0** | 0.21 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 296/120/2.5/85 |
+| SB Seraphim | 500 | LightArmour / Fighter | 880 | 45s | 3x shivlightlaser, 2x shivlightlaser_turret, 1x miss_shivmegabomb, 1x miss_shivbomb, 1x miss_pihrana, 1x miss_trebuchet | **479.47** | 0.54 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 300/60/4/85 |
+| SF Gorgon | 600 | Unarmoured / Fighter | 890 | 45s | 2x shivmegalaser, 1x miss_hornet, 1x miss_harpoon | **125.15** | 0.14 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 435/180/3/85 |
+| Shivan Comm Node | 40000 | HeavyArmour / BigCapitalShip | 1000 | 70s | None | **0** | 0.0 | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/8/20 |
+| SC Rakshasa | 18000 | MediumArmour / Frigate | 1250 | 60s | 8x shivsuperlaser_turret, 1x beam_AARed, 2x shivheavylaser_turret, 3x beam_sredcruiser | **1000.78** | 0.8 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/15/10/20 |
+| SCv Moloch | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 5x shivsuperlaser_turret, 2x miss_fighterkiller_turret, 4x flak_turret, 2x miss_pihrana, 3x beam_sredmoloch | **1620.32** | 0.54 | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/11/8/10 |
+| SC Lilith | 18000 | MediumArmour / Frigate | 4000 | 140s | 5x shivsuperlaser_turret, 1x beam_AARed, 2x miss_pihrana, 1x beam_lredcruiser_turret | **1647.82** | 0.41 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/10/10/20 |
+| SC Lilith (FS1) | 18000 | MediumArmour / Frigate | 4000 | 140s | 6x shivsuperlaser_turret, 1x shivlightlaser_turret, 2x miss_pihrana | **329.86** | 0.08 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 80/10/10/20 |
+| SD Demon | 160000 | HeavyArmour / BigCapitalShip | 11500 | 215s | 2x beam_AARed, 2x shivmegafunk_turret, 4x flak_turret, 10x shivsuperlaser_turret, 5x miss_fighterkiller, 2x beam_lred, 1x Beam_SRed_Turret | **3863.54** | 0.34 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
+| SD Demon | 80000 | HeavyArmour / BigCapitalShip | 11500 | 215s | 2x shivlightlaser_turret, 2x shivmegafunk_turret, 4x flak_turret, 13x shivsuperlaser_turret, 5x miss_fighterkiller | **1276.9** | 0.11 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
+| SD Ravana | 175000 | HeavyArmour / BigCapitalShip | 13000 | 225s | 2x beam_AARed, 17x shivsuperlaser_turret, 5x flak_turret, 1x miss_pihrana, 1x Miss_FighterKiller, 2x beam_lred, 2x beam_sred | **4265.51** | 0.33 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 80/3.5/20/15 |
+| SD Lucifer | 500000 | HeavyArmour / BigCapitalShip | 21500 | 305s | 4x shivsuperlaser_gimble, 3x miss_pihrana, 6x shivsuperlaser_turret, 2x beam_lredlucifer | **5760.5** | 0.27 | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 90/3.5/20/10 |
+| SJ Sathanas | 1000000 | HeavyArmour / BigCapitalShip | 55000 | 550s | 22x shivsuperlaser_turret, 8x beam_AARed, 11x flak_turret, 5x miss_pihrana, 2x longrangeflak_turret | **1968.23** | 0.04 | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 120/3/20/40 |
 
 ## [VASUDAN - PVN]
 
-| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| PVSG Ankh | 60 | TurretArmour / Frigate | 30 | 4s | 2x avenger_turret | **140.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| GVSG Edjo | 70 | TurretArmour / Frigate | 45 | 6s | 1x avenger_turret | **70.0** | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
-| PVNB Geb | 50 | Unarmoured / Utility | 100 | 20s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 500/170/0.11/15 |
-| GVS Nephthys | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 280/95/4/85 |
-| PVS Scarab | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 295/95/4/85 |
-| PVFr Bast | 4000 | LightArmour / ResourceLarge | 350 | 22s | 3x subach_turret | **65.01** | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 230/50/8/60 |
-| PVF Anubis | 300 | Unarmoured / Fighter | 370 | 24s | 1x vll9, 1x miss_rockeye | **26.25** | 4.0/4/4 | 12/12 | 0/0 | 0/0 | 12 | 330/140/3/85 |
-| GVFr Bes | 4500 | LightArmour / ResourceLarge | 400 | 25s | 2x vaslaser_gimble | **86.0** | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 210/50/8/60 |
-| PVT Isis | 5000 | ResArmour / Resource | 400 | 25s | 2x tercollector_turret | **26.0** | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 160/60/3/30 |
-| GVC Aten | 18000 | MediumArmour / Frigate | 450 | 30s | 2x vaslaser_turret, 2x vaslaser_gimble, 2x beam_aablue, 2x mekhu_turret | **322.36** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 105/20/10/60 |
-| GVC Aten (FS1) | 18000 | MediumArmour / Frigate | 450 | 30s | 2x vaslaser_turret, 2x vaslaser_gimble, 2x mekhu_turret | **268.0** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 105/20/10/60 |
-| GVF Horus | 170 | Unarmoured / Fighter | 475 | 32s | 1x prometheusfs1, 1x morningstar, 1x miss_phoenixv, 1x miss_rockeye | **98.75** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 400/100/3/85 |
-| GVFr Satis | 10000 | MediumArmour / Frigate | 550 | 35s | 1x vashuge_turret, 4x vaslaser_gimble | **234.5** | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 220/40/8/60 |
-| GVB Bakha | 440 | LightArmour / Fighter | 570 | 34s | 1x mekhu, 1x miss_Cyclops, 1x miss_stiletto | **186.75** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/82/5/85 |
-| GVF Seth | 280 | Unarmoured / Fighter | 570 | 35s | 2x Prometheusfs1, 1x miss_hornet, 1x miss_tornado, 1x miss_tempest | **165.97** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 254/80/3/85 |
-| GVF Thoth | 240 | Unarmoured / Fighter | 590 | 36s | 1x mekhu, 1x miss_harpoon | **98.0** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 286/133/3/85 |
-| GVF Serapis | 220 | Unarmoured / Fighter | 690 | 40s | 1x mekhu, 1x prometheuss, 1x miss_harpoon, 1x miss_empadv | **145.36** | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 306/150/3/85 |
-| GVB Osiris | 600 | LightArmour / Fighter | 750 | 40s | 1x prometheusfs1, 1x miss_tsunami, 1x miss_synaptic, 2x subach_turret | **153.67** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 228/72/4/85 |
-| GVG Anuket | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 2x vaslaser_gimble, 2x subach_turret, 1x flak_turret | **162.67** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
-| PVFr Maat | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 2x vaslaser_gimble, 1x avenger_gimble | **150.0** | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
-| GVF Tauret | 300 | Unarmoured / Fighter | 860 | 49s | 1x prometheusR, 1x kayser, 1x miss_tornado, 1x miss_rockeye | **188.37** | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 280/81/3/85 |
-| GVB Sehkmet | 500 | LightArmour / Fighter | 890 | 46s | 1x prometheusS, 1x miss_Helios, 1x miss_infyrno | **277.03** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 248/90/5/85 |
-| GVF Ptah | 90 | Unarmoured / Fighter | 1000 | 65s | 1x mekhu, 1x miss_harpoon, 1x miss_stilettoII | **148.0** | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 400/145/2/85 |
-| PVB Amun | 625 | LightArmour / Fighter | 1310 | 70s | 1x prometheusfs1, 2x miss_harbinger, 1x miss_infyrno, 2x avenger_turret | **394.17** | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 160/60/4/85 |
-| GVC Mentu | 18000 | MediumArmour / Frigate | 1475 | 70s | 8x vaslaser_gimble, 1x flak_turret, 1x beam_AABlue, 2x vashuge_turret, 2x vaslaser_turret, 2x beam_sgoldcruiser | **1047.31** | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/12/8/50 |
-| PVSC Imhotep | 10000 | MediumArmour / Frigate | 1500 | 35s | 2x vaslaser_gimble, 1x miss_fighterkiller, 2x avenger_gimble | **259.0** | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 180/40/8/60 |
-| GVA Setekh | 10000 | MediumArmour / Frigate | 1750 | 78s | 2x vaslaser_gimble, 1x vashuge_turret | **148.5** | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 165/20/8/20 |
-| GVCv Sobek | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 8x vaslaser_gimble, 4x flak_turret, 4x beam_AABlue, 4x vashuge_turret, 2x beam_sgold | **2486.04** | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/12/8/40 |
-| GVD Typhon | 80000 | HeavyArmour / BigCapitalShip | 8000 | 175s | 2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 4x beam_AABlue, 9x vaslaser_gimble, 1x vashuge_turret, 2x beam_bgold | **2895.29** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 |
-| PVI Karnak | 400000 | HeavyArmour / BigCapitalShip | 10000 | 200s | 21x vaslaser_gimble, 17x miss_fighterkiller | **1668.0** | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/1/10 |
-| GVD Typhon (FS1) | 80000 | HeavyArmour / BigCapitalShip | 11000 | 175s | 2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 13x vaslaser_gimble, 3x vashuge_turret | **1218.15** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 |
-| GVD Hatshepsut | 80000 | HeavyArmour / BigCapitalShip | 14000 | 240s | 1x beam_sgold, 5x miss_fluxcannon, 1x heavyflak_turret, 4x beam_AABlue, 6x vashuge_gimble, 10x flak_gimble, 3x beam_bgold | **4955.08** | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4/20/10 |
-| GTVA Colossus | 1000000 | HeavyArmour / BigCapitalShip | 50000 | 500s | 10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen | **13673.74** | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 125/3/20/40 |
+| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | **DPS/RU** | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PVSG Ankh | 60 | TurretArmour / Frigate | 30 | 4s | 2x avenger_turret | **140.0** | 4.67 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| GVSG Edjo | 70 | TurretArmour / Frigate | 45 | 6s | 1x avenger_turret | **70.0** | 1.56 | 1.0/1/1 | 0/8 | 0/0 | 0/0 | 8 | 0/120/0.11/15 |
+| PVNB Geb | 50 | Unarmoured / Utility | 100 | 20s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 500/170/0.11/15 |
+| GVS Nephthys | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 280/95/4/85 |
+| PVS Scarab | 1000 | LightArmour / Resource | 150 | 9s | None | **0** | 0.0 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 295/95/4/85 |
+| PVFr Bast | 4000 | LightArmour / ResourceLarge | 350 | 22s | 3x subach_turret | **65.01** | 0.19 | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 230/50/8/60 |
+| PVF Anubis | 300 | Unarmoured / Fighter | 370 | 24s | 1x vll9, 1x miss_rockeye | **40.0** | 0.11 | 4.0/4/4 | 12/12 | 0/0 | 0/0 | 12 | 330/140/3/85 |
+| GVC Aten | 18000 | MediumArmour / Frigate | 400 | 30s | 2x vaslaser_turret, 2x vaslaser_gimble, 2x beam_aablue, 2x mekhu_turret | **350.36** | 0.88 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 105/20/10/60 |
+| GVFr Bes | 4500 | LightArmour / ResourceLarge | 400 | 25s | 2x vaslaser_gimble | **100.0** | 0.25 | 1.0/1/1 | 0/0 | 10/0 | 0/0 | 10 | 210/50/8/60 |
+| PVT Isis | 5000 | ResArmour / Resource | 400 | 25s | 2x tercollector_turret | **26.0** | 0.07 | 1.0/1/1 | 0/0 | 0/0 | 0/0 | 0 | 160/60/3/30 |
+| GVC Aten (FS1) | 18000 | MediumArmour / Frigate | 450 | 30s | 2x vaslaser_turret, 2x vaslaser_gimble, 2x mekhu_turret | **296.0** | 0.66 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 105/20/10/60 |
+| GVF Horus | 450 | Unarmoured / Fighter | 475 | 32s | 1x prometheusfs1, 1x morningstar, 1x miss_phoenixv, 1x miss_rockeye | **95.83** | 0.2 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 400/100/3/85 |
+| GVFr Satis | 10000 | MediumArmour / Frigate | 550 | 35s | 1x vashuge_turret, 4x vaslaser_gimble | **262.5** | 0.48 | 1.0/1/1 | 0/0 | 0/0 | 8/0 | 8 | 220/40/8/60 |
+| GVB Bakha | 950 | LightArmour / Fighter | 570 | 34s | 1x mekhu, 1x miss_Cyclops, 1x miss_stiletto | **186.75** | 0.33 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 260/82/5/85 |
+| GVF Seth | 500 | Unarmoured / Fighter | 570 | 35s | 2x Prometheusfs1, 1x miss_hornet, 1x miss_tornado, 1x miss_tempest | **136.12** | 0.24 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 254/80/3/85 |
+| GVF Thoth | 480 | Unarmoured / Fighter | 590 | 36s | 1x mekhu, 1x miss_harpoon | **78.0** | 0.13 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 286/133/3/85 |
+| GVF Serapis | 450 | Unarmoured / Fighter | 690 | 40s | 1x mekhu, 1x prometheuss, 1x miss_harpoon, 1x miss_empadv | **125.36** | 0.18 | 4.0/4/4 | 8/8 | 0/0 | 0/0 | 8 | 306/150/3/85 |
+| GVB Osiris | 1100 | LightArmour / Fighter | 750 | 40s | 1x prometheusfs1, 1x miss_tsunami, 1x miss_synaptic, 2x subach_turret | **153.67** | 0.2 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 228/72/4/85 |
+| GVG Anuket | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 2x vaslaser_gimble, 2x subach_turret, 1x flak_turret | **176.67** | 0.22 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
+| PVFr Maat | 18000 | MediumArmour / ResourceLarge | 800 | 45s | 2x vaslaser_gimble, 1x avenger_gimble | **164.0** | 0.2 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 |
+| GVF Tauret | 650 | Unarmoured / Fighter | 860 | 49s | 1x prometheusR, 1x kayser, 1x miss_tornado, 1x miss_rockeye | **187.42** | 0.22 | 4.0/4/4 | 8/2 | 0/6 | 0/6 | 8 | 280/81/3/85 |
+| GVB Sehkmet | 1250 | LightArmour / Fighter | 890 | 46s | 1x prometheusS, 1x miss_Helios, 1x miss_infyrno | **277.03** | 0.31 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 248/90/5/85 |
+| GVF Ptah | 250 | Unarmoured / Fighter | 1000 | 65s | 1x mekhu, 1x miss_harpoon, 1x miss_stilettoII | **128.0** | 0.13 | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 400/145/2/85 |
+| PVB Amun | 1300 | LightArmour / Fighter | 1310 | 70s | 1x prometheusfs1, 2x miss_harbinger, 1x miss_infyrno, 2x avenger_turret | **394.17** | 0.3 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 160/60/4/85 |
+| GVC Mentu | 18000 | MediumArmour / Frigate | 1475 | 70s | 8x vaslaser_gimble, 1x flak_turret, 1x beam_AABlue, 2x vashuge_turret, 2x vaslaser_turret, 2x beam_sgoldcruiser | **1117.31** | 0.76 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/12/8/50 |
+| PVSC Imhotep | 10000 | MediumArmour / Frigate | 1500 | 35s | 2x vaslaser_gimble, 1x miss_fighterkiller, 2x avenger_gimble | **273.0** | 0.18 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 180/40/8/60 |
+| GVA Setekh | 10000 | MediumArmour / Frigate | 1750 | 78s | 2x vaslaser_gimble, 1x vashuge_turret | **162.5** | 0.09 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 165/20/8/20 |
+| GVCv Sobek | 85000 | HeavyArmour / SmallCapitalShip | 3000 | 110s | 8x vaslaser_gimble, 4x flak_turret, 4x beam_AABlue, 4x vashuge_turret, 2x beam_sgold | **2542.04** | 0.85 | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/12/8/40 |
+| GVD Typhon | 160000 | HeavyArmour / BigCapitalShip | 8000 | 175s | 2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 4x beam_AABlue, 9x vaslaser_gimble, 1x vashuge_turret, 2x beam_bgold | **2958.29** | 0.37 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 |
+| PVI Karnak | 400000 | HeavyArmour / BigCapitalShip | 10000 | 200s | 21x vaslaser_gimble, 17x miss_fighterkiller | **1815.0** | 0.18 | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/1/10 |
+| GVD Typhon (FS1) | 80000 | HeavyArmour / BigCapitalShip | 11000 | 175s | 2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 13x vaslaser_gimble, 3x vashuge_turret | **1309.15** | 0.12 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 |
+| GVD Hatshepsut | 180000 | HeavyArmour / BigCapitalShip | 14000 | 240s | 1x beam_sgold, 5x miss_fluxcannon, 1x heavyflak_turret, 4x beam_AABlue, 6x vashuge_gimble, 10x flak_gimble, 3x beam_bgold | **4955.08** | 0.35 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4/20/10 |
+| GTVA Colossus | 1000000 | HeavyArmour / BigCapitalShip | 50000 | 500s | 10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen | **13543.74** | 0.27 | 1.0/1/1 | 0/0 | 0/5 | 80/60 | 110 | 125/3/20/40 |
 

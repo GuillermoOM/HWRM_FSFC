@@ -97,8 +97,8 @@ if not AI_Telemetry_Loaded then
             FSFC_TickHighestName = researchName
         end
 
-        -- Periodically emit current leader if enough time passed
-        if (time > FSFC_LastEmitTime + 10) then
+        -- Periodically emit current leader if enough time passed (Skip for Tactics nodes to reduce noise)
+        if (time > FSFC_LastEmitTime + 10 and FSFC_TickHighestName ~= "TacticsDynamic" and FSFC_TickHighestName ~= "TacticsAggressive" and FSFC_TickHighestName ~= "TacticsDefensive") then
             if (FSFC_TickHighestName ~= "None") then
                 print("[" .. floor(time) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Target: " .. FSFC_TickHighestName)
                 FSFC_LastLoggedName = FSFC_TickHighestName
@@ -109,8 +109,15 @@ if not AI_Telemetry_Loaded then
 
     function FSFC_Log_Threat()
         if (FSFC_LastThreatTime == nil or gameTime() > FSFC_LastThreatTime + 30) then
-            local targetP = s_enemyIndex or -1
-            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. s_selfTotalValue .. " | EnemyTotal: " .. s_enemyTotalValue .. " | TargetP: " .. targetP)
+            local targetP = -1
+            local bestEnemy = s_enemyIndex
+            if (bestEnemy == nil or bestEnemy == -1) then
+                bestEnemy = player_enemy
+            end
+            if (bestEnemy ~= nil and bestEnemy >= 0 and bestEnemy < 8) then
+                targetP = bestEnemy
+            end
+            print("[AI_DIAG] P" .. s_playerIndex .. " | THREAT | Self: " .. (s_selfTotalValue or 0) .. " | EnemyTotal: " .. (s_enemyTotalValue or 0) .. " | TargetP: " .. targetP)
             FSFC_LastThreatTime = gameTime()
         end
     end

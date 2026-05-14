@@ -138,7 +138,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain",
-		RequiredResearch = "Cain & FS2",
+		RequiredResearch = "Cain",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain - Strike Cruiser <c=12AB06>34s</c>",
@@ -148,7 +148,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain_fs1",
-		RequiredResearch = "Cain & FS1",
+		RequiredResearch = "Cain",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain (FS1) - Strike Cruiser <c=12AB06>34s</c>",
@@ -158,7 +158,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith",
-		RequiredResearch = "Lilith & FS2",
+		RequiredResearch = "Lilith",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith - Heavy Cruiser <c=12AB06>140s</c>",
@@ -168,7 +168,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith_fs1",
-		RequiredResearch = "Lilith & FS1",
+		RequiredResearch = "Lilith",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith (FS1) - Heavy Cruiser <c=12AB06>140s</c>",

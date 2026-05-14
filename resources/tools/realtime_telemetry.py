@@ -23,9 +23,9 @@ class MatchData:
         self.era = "Unknown"
         self.game_time = 0
         self.players = {
-            1: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "demand": "None", "classes": {}},
-            2: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "demand": "None", "classes": {}},
-            3: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "demand": "None", "classes": {}},
+            1: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "res_history": [], "stance": "Dynamic", "demands": {}, "last_demand_time": 0, "classes": {}},
+            2: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "res_history": [], "stance": "Dynamic", "demands": {}, "last_demand_time": 0, "classes": {}},
+            3: {"race": "UNK", "fleet": 0, "rus": 0, "total_rus": 0, "threat_self": 0, "threat_enemy": 0, "target": -1, "research": "None", "res_history": [], "stance": "Dynamic", "demands": {}, "last_demand_time": 0, "classes": {}},
         }
         self.history = []
         self.current_graph = 0 
@@ -99,8 +99,14 @@ class BrailleGraph:
 def parse_line(line):
     era_match = re.search(r"\[DIAG\] Era Setting: (.+)", line)
     if era_match: data.era = era_match.group(1)
-    time_match = re.search(r"--- Match Telemetry @ (\d+)s ---", line)
-    if time_match: data.game_time = int(time_match.group(1))
+    
+    # Extract timestamp if available
+    ts_match = re.search(r"\[(\d+)s\]", line)
+    line_ts = int(ts_match.group(1)) if ts_match else data.game_time
+
+    telemetry_time = re.search(r"--- Match Telemetry @ (\d+)s ---", line)
+    if telemetry_time: data.game_time = int(telemetry_time.group(1))
+    
     p_basics = re.search(r"\[DIAG\] P(\d) \((.+)\) \| Fleet: (\d+) \| RUs: (\d+) \| TotalRUs: (\d+)", line)
     if p_basics:
         p_id = int(p_basics.group(1))
@@ -126,14 +132,29 @@ def parse_line(line):
         if m:
             p_id = int(m.group(1))
             if p_id in data.players:
-                data.players[p_id]["demand"] = f"{m.group(2)} ({float(m.group(3)):.1f})"
+                p = data.players[p_id]
+                # If this is a new timestamp for this player, clear previous demands
+                if line_ts > p["last_demand_time"]:
+                    p["demands"] = {}
+                    p["last_demand_time"] = line_ts
+                p["demands"][m.group(2)] = float(m.group(3))
 
     if "RESEARCH | Target:" in line:
         m = re.search(r"P(\d) \| RESEARCH \| Target: (.+)", line)
         if m:
             p_id = int(m.group(1))
             if p_id in data.players:
-                data.players[p_id]["research"] = m.group(2)
+                res_name = m.group(2).strip()
+                if "Tactics" in res_name:
+                    data.players[p_id]["stance"] = res_name.replace("Tactics", "")
+                else:
+                    data.players[p_id]["research"] = res_name
+                    # Only add to history if it's different from the last entry
+                    hist = data.players[p_id]["res_history"]
+                    if not hist or hist[-1] != res_name:
+                        hist.append(res_name)
+                        if len(hist) > 5:
+                            hist.pop(0)
                 
     if "----------------------------------" in line and data.game_time > 0:
         if not data.history or data.history[-1]["time"] != data.game_time:
@@ -144,35 +165,62 @@ def parse_line(line):
                 "p1_p": data.players[1]["threat_self"], "p2_p": data.players[2]["threat_self"], "p3_p": data.players[3]["threat_self"]
             })
 
+RACE_NAMES = {"TER_": "Terran", "SHI_": "Shivan", "VAS_": "Vasudan", "UNK": "Unknown"}
+
+def get_race_name(prefix):
+    return RACE_NAMES.get(prefix, prefix)
+
 def make_player_panel(p_id):
     p = data.players[p_id]
     if p["race"] == "UNK": return Panel(Text("\nWaiting...", justify="center", style="dim"), title=f"P{p_id}", border_style="dim")
     color = "cyan" if "TER" in p["race"] else "red" if "SHI" in p["race"] else "yellow"
     content = Text()
-    content.append(f"{p['race']}\n", style=f"bold {color}")
-    content.append(f"Fleet: {p['fleet']}\n", style="white")
-    content.append(f"RUs: {p['rus']:,}\n", style="green")
-    content.append(f"Power: {p['threat_self']}\n", style="bold white")
+    # Condensed Header Stats
+    content.append(f"F: {p['fleet']} | RU: {p['rus']:,} | Pwr: {p['threat_self']}\n", style="white")
     
-    # Target and Enemy Threat
+    # Target and Stance line
     target_p = p['target']
-    target_str = f"P{target_p}" if target_p != -1 else "None"
-    content.append(f"Target: {target_str} ", style="bold red" if target_p != -1 else "dim white")
-    content.append(f"({p['threat_enemy']})\n", style="dim red")
+    target_race = get_race_name(data.players[target_p]['race']) if target_p in data.players else "None"
+    target_str = f"P{target_p} ({target_race})" if target_p != -1 else "None"
     
-    # Demand Reflection
-    demand_txt = p['demand'] if p['demand'] != "None" else "Idle"
-    content.append(f"Want: {demand_txt[:18]}\n", style="italic yellow")
+    content.append("Tgt: ", style="red")
+    content.append(f"{target_str} ", style="bold red")
+    content.append(f"({p['threat_enemy']}) ", style="red")
+    content.append(f"| {p['stance']}\n", style="cyan")
     
-    # Tech Reflection
-    tech_txt = p['research'] if p['research'] != "None" else "None"
-    content.append(f"Tech: {tech_txt[:18]}", style="bold cyan")
+    content.append("\nBUILD PRIORITIES:\n", style="bold yellow")
     
-    return Panel(content, title=f"P{p_id}", border_style=color)
+    # Demand Reflection (Multi-Want List)
+    demands = p['demands']
+    if not demands:
+        content.append(" • Idle (Ready for orders)\n", style="italic dim yellow")
+    else:
+        # Show top 3 demands to prevent vertical overflow
+        count = 0
+        for name, val in demands.items():
+            if count >= 3:
+                content.append(f" • ... and {len(demands)-3} more\n", style="dim yellow")
+                break
+            # Truncate long names to fit panel width
+            display_name = name[:18] + ".." if len(name) > 20 else name
+            content.append(f" • {display_name} ({val:.1f})\n", style="italic yellow")
+            count += 1
+    
+    # Tech Reflection (History Chain)
+    res_hist = p['res_history']
+    content.append("\nTech: ", style="bold white")
+    if not res_hist:
+        content.append("None", style="dim")
+    else:
+        parts = [f"[bold cyan]{h[:8]}[/]" for h in res_hist]
+        content.append(Text.from_markup(" ➔ ".join(parts)))
+    
+    panel_title = f"P{p_id} ({get_race_name(p['race'])})"
+    return Panel(content, title=panel_title, border_style=color)
 
 def generate_layout():
     layout = Layout()
-    layout.split_column(Layout(name="header", size=3), Layout(name="body", size=10), Layout(name="history"), Layout(name="footer", size=3))
+    layout.split_column(Layout(name="header", size=3), Layout(name="body", size=13), Layout(name="history"), Layout(name="footer", size=3))
     layout["body"].split_row(*[Layout(make_player_panel(i)) for i in [1, 2, 3]])
     titles = ["FLEET STRENGTH", "TOTAL RU ACCUMULATION", "MILITARY POWER"]
     metrics = [("p1_f", "p2_f", "p3_f"), ("p1_ru", "p2_ru", "p3_ru"), ("p1_p", "p2_p", "p3_p")]

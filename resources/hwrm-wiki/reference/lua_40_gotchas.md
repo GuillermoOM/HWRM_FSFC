@@ -9,7 +9,7 @@ Homeworld Remastered uses a restricted Lua 4.0 environment.
 | :--- | :--- |
 | `_G` | `getglobal(name)` |
 | `local function Name()` | `function Name()` (Global) or `Name = function()` |
-| `strupper(s)`, `strlower(s)` | **NIL in AI Scripts**. Only available in SCAR/Speech. |
+| `strupper(s)`, `strlower(s)`, `strfind(s)` | **NIL in AI Scripts**. Only available in SCAR/Speech. Use `s1 == s2` for direct comparison. |
 | `format(str, ...)` | `str .. val .. str` (Concatenation) |
 | `#table` | `getn(table)` |
 | `string.len(s)` | `strlen(s)` |

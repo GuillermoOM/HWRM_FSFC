@@ -21,9 +21,9 @@ if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
 if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
 if (FS1 == nil) then FS1 = -1 end
 if (FS2 == nil) then FS2 = -1 end
-if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = -1 end
-if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = -1 end
-if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = -1 end
+if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = getglobal("cpuplayers_aggressive") or -1 end
+if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = getglobal("cpuplayers_dynamic") or -1 end
+if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = getglobal("cpuplayers_defensive") or -1 end
 
 function ResearchDemandSet_Vasudan(id_or_name, demand)
 	local id = FSFC_ResolveID(id_or_name)
@@ -200,13 +200,17 @@ end
 
 function DoUpgradeDemand_Vasudan()
 	if (s_militaryStrength > 10 or g_LOD == 0) then
-		local numCollectors = NumSquadrons(kCollector)
-		if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
-			ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
+		if (kCollector ~= nil) then
+			local numCollectors = NumSquadrons(kCollector)
+			if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
+				ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
+			end
 		end
-		local numRefinery = NumSquadrons(kRefinery)
-		if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
-			ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
+		if (kRefinery ~= nil) then
+			local numRefinery = NumSquadrons(kRefinery)
+			if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
+				ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
+			end
 		end
 	end
 	local numDestroyers = NumSquadrons(kDestroyer)

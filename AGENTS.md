@@ -45,6 +45,8 @@ Specialized patterns for common FSFC modding tasks:
 - **AI Reconnaissance Priority**: Ensuring map vision through high-priority early scouting and harvester throttling. [Skill](.agents/skills/ai_reconnaissance_priority/how_to_prioritize.md)
 - **Unit Capacity Configuration**: Standardizing `getShipNum` wrappers and wing-based supply scaling. [Skill](.agents/skills/unit_capacity_configuration/how_to_configure.md)
 - **AI Research Balancing**: Systematic auditing of tech pacing using the `extract_ship_stats.py` tool. [Skill](.agents/skills/ai_research_balancing/how_to_balance.md)
+- **AI Research ID Resolution**: Patterns for mapping engine-provided tactical nodes and stance management. [Skill](.agents/skills/ai_research_id_resolution/resolution_patterns.md)
+- **Lua 4.0 String Limitations**: Workarounds for missing `strlower`/`strupper` and robust keyword detection. [Skill](.agents/skills/lua_40_string_limitations/string_patterns.md)
 
 
 ## Full Agent Instructions

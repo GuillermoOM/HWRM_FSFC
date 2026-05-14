@@ -59,10 +59,16 @@ function OnInit()
 end
 
 function Rule_GrantFS1Era()
+	print("FSFC_RULE | Granting FS1 Era...")
 	for i = 0, Universe_PlayerCount() - 1 do
 		if (Player_IsAlive(i) == 1) then
-			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			local prefix = PlayerRace_GetString(i, "Prefix", "")
+			local racePrefix = ""
+			if (prefix ~= nil and prefix ~= "") then
+				racePrefix = strsub(prefix, 1, 3)
+			end
 			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> FS1")
 				Player_GrantResearchOption(i, "FS1")
 				Player_RestrictResearchOption(i, "FS2")
 			end
@@ -72,10 +78,16 @@ function Rule_GrantFS1Era()
 end
 
 function Rule_GrantFS2Era()
+	print("FSFC_RULE | Granting FS2 Era...")
 	for i = 0, Universe_PlayerCount() - 1 do
 		if (Player_IsAlive(i) == 1) then
-			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			local prefix = PlayerRace_GetString(i, "Prefix", "")
+			local racePrefix = ""
+			if (prefix ~= nil and prefix ~= "") then
+				racePrefix = strsub(prefix, 1, 3)
+			end
 			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> FS2")
 				Player_GrantResearchOption(i, "FS2")
 				Player_RestrictResearchOption(i, "FS1")
 			end
@@ -85,10 +97,16 @@ function Rule_GrantFS2Era()
 end
 
 function Rule_GrantBothEras()
+	print("FSFC_RULE | Granting Both Eras...")
 	for i = 0, Universe_PlayerCount() - 1 do
 		if (Player_IsAlive(i) == 1) then
-			local racePrefix = strsub(PlayerRace_GetString(i, "Prefix", ""), 1, 3)
+			local prefix = PlayerRace_GetString(i, "Prefix", "")
+			local racePrefix = ""
+			if (prefix ~= nil and prefix ~= "") then
+				racePrefix = strsub(prefix, 1, 3)
+			end
 			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> BOTH")
 				Player_GrantResearchOption(i, "FS1")
 				Player_GrantResearchOption(i, "FS2")
 			end
