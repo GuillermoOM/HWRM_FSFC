@@ -42,9 +42,9 @@ o-generated from source files.
 | SHIVAN | T2 | Universal | Lilith | 2500 | 70s | CruiserDesign |
 | SHIVAN | T2 | Universal | Demon | 4000 | 90s | CapitalShipDesign |
 | SHIVAN | T2 | FS2 | Ravana | 4500 | 100s | CapitalShipDesign & FS2 |
-| SHIVAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
-| SHIVAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
+| SHIVAN | T3 | Universal | CruiserDesign | 8000 | 120s | BomberDesign |
 | SHIVAN | T3 | Universal | Lucifer | 10000 | 110s | SuperCapitalShipDesign |
+| SHIVAN | T4 | Universal | CapitalShipDesign | 15000 | 180s | CruiserDesign |
 | SHIVAN | T4 | Universal | SuperCapitalShipDesign | 15000 | 150s | CapitalShipDesign |
 | SHIVAN | T4 | FS2 | Sathanas | 20000 | 200s | SuperCapitalShipDesign & FS2 |
 | TERRAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
@@ -92,8 +92,8 @@ o-generated from source files.
 | TERRAN | T2 | Universal | CommandCorvette | 2000 | 50s | Deimos & CapitalShipDesign |
 | TERRAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
 | TERRAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
-| TERRAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
-| TERRAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
+| TERRAN | T3 | Universal | CruiserDesign | 8000 | 120s | BomberDesign |
+| TERRAN | T4 | Universal | CapitalShipDesign | 15000 | 180s | CruiserDesign |
 | TERRAN | T4 | Universal | SuperDestroyer | 15000 | 150s | CapitalShipDesign |
 | TERRAN | T4 | FS2 | Juggernaut | 20000 | 200s | SuperDestroyer & Installation & FS2 |
 | VASUDAN | T0 | Universal | cpuplayers_defensive | 1 | 1s |  |
@@ -135,8 +135,8 @@ o-generated from source files.
 | VASUDAN | T2 | Universal | Installation | 2500 | 75s | CapitalShipDesign |
 | VASUDAN | T2 | FS2 | AWACS | 2500 | 50s | CruiserDesign & FS2 |
 | VASUDAN | T2 | FS2 | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
-| VASUDAN | T3 | Universal | CruiserDesign | 5000 | 80s | BomberDesign |
-| VASUDAN | T3 | Universal | CapitalShipDesign | 10000 | 120s | CruiserDesign |
+| VASUDAN | T3 | Universal | CruiserDesign | 8000 | 120s | BomberDesign |
+| VASUDAN | T4 | Universal | CapitalShipDesign | 15000 | 180s | CruiserDesign |
 | VASUDAN | T4 | Universal | SuperCapitalShipDesign | 15000 | 150s | CapitalShipDesign |
 | VASUDAN | T4 | Universal | Colossus | 20000 | 200s | SuperCapitalShipDesign |
 

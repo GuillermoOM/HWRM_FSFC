@@ -52,9 +52,9 @@ function DoResearchTechDemand_Shivan()
 	end
 
 	-- 2. TACTICS
-	if (FSFC_CheckResearch(CPUPLAYERS_AGGRESSIVE)) then
-		ResearchDemandSet_Shivan(CPUPLAYERS_AGGRESSIVE, 5.0) -- Force aggressive posture
-		FSFC_Log_Research("TacticsAggressive", 5.0)
+	if (FSFC_CheckResearch(CPUPLAYERS_DYNAMIC)) then
+		ResearchDemandSet_Shivan(CPUPLAYERS_DYNAMIC, 3.0)
+		FSFC_Log_Research("TacticsDynamic", 3.0)
 	end
 
 	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
@@ -189,17 +189,13 @@ function DoResearchTechDemand_Shivan()
 end
 
 function DoUpgradeDemand_Shivan()
-	if (kCollector ~= nil) then
-		local numCollectors = NumSquadrons(kCollector)
-		if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
-			ResearchDemandAdd_Shivan(COLLECTORHP, numCollectors * .1)
-		end
+	local numCollectors = FSFC_NumSquadrons(kCollector)
+	if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
+		ResearchDemandAdd_Shivan(COLLECTORHP, numCollectors * .1)
 	end
-	if (kRefinery ~= nil) then
-		local numRefinery = NumSquadrons(kRefinery)
-		if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
-			ResearchDemandAdd_Shivan(DROPOFFHP, numRefinery * .1)
-		end
+	local numRefinery = FSFC_NumSquadrons(kRefinery)
+	if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
+		ResearchDemandAdd_Shivan(DROPOFFHP, numRefinery * .1)
 	end
 end
 

@@ -55,7 +55,26 @@ end
 
 - **Numeric IDs**: All engine-linked functions (`NumSquadrons`, `ResearchDemandSet`) require integer IDs (e.g., `VAS_HORUS`), never string ship names.
 
-## 5. The getglobal Shadowing Trap
+## 5. Safe Ship Counting & Parameter Validation
+
+A critical engine quirk in HWRM is that `NumSquadrons(id)` will crash the game with a `parameter:` error if the ID is `nil` or an invalid type.
+
+- **The Solution**: Use the safe wrapper `FSFC_NumSquadrons(id)` defined in `ai_telemetry.lua`. 
+- **Gotcha - Initialization Order**: Within `DetermineSpecialDemand`, all ship-count assignments MUST occur at the top of the function. Accessing an unassigned local variable (e.g., `if (num < 10)`) results in a `nil` comparison crash.
+
+```lua
+function DetermineSpecialDemand_Terran()
+    -- 1. Initialize Counts First
+    local numFighters = FSFC_NumSquadrons(kInterceptor)
+    
+    -- 2. Logic Second
+    if (numFighters < 10) then
+        ShipDemandAdd(kInterceptor, 1.5)
+    end
+end
+```
+
+## 6. The getglobal Shadowing Trap
 A critical pitfall in HWRM AI modding is overwriting engine-provided global variables with strings.
 
 - **The Trap**: If you define `FIGHTERDESIGN = "FighterDesign"` in your script, you are destroying the numeric ID that the engine assigned to that global variable. 

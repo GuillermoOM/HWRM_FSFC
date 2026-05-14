@@ -38,10 +38,7 @@ if (DEIMOS == nil) then DEIMOS = -1 end
 -- Global safe Util_CheckResearch is provided by ai_telemetry.lua
 
 function NumSquadrons_Terran(id)
-	if (id ~= nil) then
-		return NumSquadrons(id)
-	end
-	return 0
+	return FSFC_NumSquadrons(id)
 end
 
 function ResearchDemandSet_Terran(id_or_name, demand)

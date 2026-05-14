@@ -200,20 +200,16 @@ end
 
 function DoUpgradeDemand_Vasudan()
 	if (s_militaryStrength > 10 or g_LOD == 0) then
-		if (kCollector ~= nil) then
-			local numCollectors = NumSquadrons(kCollector)
-			if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
-				ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
-			end
+		local numCollectors = FSFC_NumSquadrons(kCollector)
+		if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
+			ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
 		end
-		if (kRefinery ~= nil) then
-			local numRefinery = NumSquadrons(kRefinery)
-			if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
-				ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
-			end
+		local numRefinery = FSFC_NumSquadrons(kRefinery)
+		if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
+			ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
 		end
 	end
-	local numDestroyers = NumSquadrons(kDestroyer)
+	local numDestroyers = FSFC_NumSquadrons(kDestroyer)
 	if (numDestroyers > 0) then
 		if (FSFC_CheckResearch(SOBEKARMOR)) then
 			ResearchDemandAdd_Vasudan(SOBEKARMOR, numDestroyers * 2)

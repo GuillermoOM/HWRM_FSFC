@@ -162,6 +162,10 @@ def parse_line(line):
                 "time": data.game_time,
                 "p1_f": data.players[1]["fleet"], "p2_f": data.players[2]["fleet"], "p3_f": data.players[3]["fleet"],
                 "p1_ru": data.players[1]["total_rus"], "p2_ru": data.players[2]["total_rus"], "p3_ru": data.players[3]["total_rus"],
+                "p1_avail": data.players[1]["rus"], "p2_avail": data.players[2]["rus"], "p3_avail": data.players[3]["rus"],
+                "p1_spent": data.players[1]["total_rus"] - data.players[1]["rus"],
+                "p2_spent": data.players[2]["total_rus"] - data.players[2]["rus"],
+                "p3_spent": data.players[3]["total_rus"] - data.players[3]["rus"],
                 "p1_p": data.players[1]["threat_self"], "p2_p": data.players[2]["threat_self"], "p3_p": data.players[3]["threat_self"]
             })
 
@@ -222,10 +226,16 @@ def generate_layout():
     layout = Layout()
     layout.split_column(Layout(name="header", size=3), Layout(name="body", size=13), Layout(name="history"), Layout(name="footer", size=3))
     layout["body"].split_row(*[Layout(make_player_panel(i)) for i in [1, 2, 3]])
-    titles = ["FLEET STRENGTH", "TOTAL RU ACCUMULATION", "MILITARY POWER"]
-    metrics = [("p1_f", "p2_f", "p3_f"), ("p1_ru", "p2_ru", "p3_ru"), ("p1_p", "p2_p", "p3_p")]
+    titles = ["FLEET STRENGTH", "TOTAL RU ACCUMULATION", "MILITARY POWER", "AVAILABLE RUs", "SPENT RUs"]
+    metrics = [
+        ("p1_f", "p2_f", "p3_f"), 
+        ("p1_ru", "p2_ru", "p3_ru"), 
+        ("p1_p", "p2_p", "p3_p"),
+        ("p1_avail", "p2_avail", "p3_avail"),
+        ("p1_spent", "p2_spent", "p3_spent")
+    ]
     m = metrics[data.current_graph]
-    layout["history"].update(Panel(BrailleGraph(m, ["cyan", "red", "yellow"]), title=f"HISTORICAL: {titles[data.current_graph]}", subtitle="[bold white][1][/] FLEET  [bold white][2][/] RUs  [bold white][3][/] POWER"))
+    layout["history"].update(Panel(BrailleGraph(m, ["cyan", "red", "yellow"]), title=f"HISTORICAL: {titles[data.current_graph]}", subtitle="[bold white][1][/] FLEET [bold white][2][/] TOTAL RU [bold white][3][/] POWER [bold white][4][/] AVAIL [bold white][5][/] SPENT"))
     layout["header"].update(Panel(Text(f"FSFC TACTICAL SENSORS - {data.era}", justify="center", style="bold magenta"), border_style="magenta"))
     footer_text = Text.from_markup(f"Time: {data.game_time // 60}m {data.game_time % 60}s | Press [reverse bold red] Q [/] to exit tactical view")
     footer_text.justify = "center"
@@ -255,7 +265,7 @@ def main():
             with Live(generate_layout(), refresh_per_second=4, screen=True) as live:
                 while True:
                     key = get_key()
-                    if key in ['1', '2', '3']:
+                    if key in ['1', '2', '3', '4', '5']:
                         data.current_graph = int(key) - 1
                         live.update(generate_layout())
                     elif key and key.lower() == 'q':

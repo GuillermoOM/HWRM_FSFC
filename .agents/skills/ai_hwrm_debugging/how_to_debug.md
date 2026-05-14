@@ -139,7 +139,29 @@ Use the `/analyse-match-timeline` workflow to parse these logs. This script gene
 - **Cause**: The engine crashed while trying to load the model or assets for the ship listed in the trace.
 - **Common Fix**: Check if `LoadModel()` is called correctly in the `.ship` file and that it precedes any weapon or hardpoint configs. Also verify the `.hod` file exists at the specified path.
 
-## 9. Best Practices & Logging
+### `parameter: attempt to compare nil with number`
+- **Symptom**: This specific error appears in the stack traceback for `Proc_DetermineSpecialDemand`.
+- **Cause**: One of two things:
+    1.  **Direct Nil Parameter**: A `nil` value was passed to the engine function `NumSquadrons(id)`. Unlike some other engine functions, `NumSquadrons` is fatal when passed `nil`.
+    2.  **Initialization Order**: A local variable was used in a comparison (e.g., `if (num < 10)`) **before** it was assigned a value. In Lua 4.0, using an unassigned variable results in `nil`, and `nil < 10` is a fatal error.
+- **Fix**: 
+    1. Use the `FSFC_NumSquadrons(id)` safety wrapper (defined in `ai_telemetry.lua`).
+    2. Ensure all ship-count assignments happen at the **very top** of the function scope.
+
+## 9. The "Trap" Technique (Verifying File Loading)
+
+When debugging AI crashes, you must first confirm the game is actually loading the file you are editing (and not a cached version or a `.big` file).
+
+### How to set the Trap:
+1.  **Syntax Trap**: Insert a deliberate syntax error (e.g., `syntax_error!!!`) at line 1 of the script. If the game doesn't crash on startup/match start, it's NOT loading your file.
+2.  **Path Logging Trap**: Modify the `dofilepath` loop in `source/ai/default/cpubuild.lua` to print the paths it is attempting to load:
+    ```lua
+    local build_path = SelfRace_GetString("path_ai_build", "")
+    print("!!! AI LOADING: " .. build_path)
+    dofilepath(build_path)
+    ```
+
+## 10. Best Practices & Logging
 
 - **Case Sensitivity**: Ship IDs in `def_build.lua` are case-sensitive. `vas_tauret` is NOT `vas_Tauret`.
 - **Diagnostics**: Use `print()` or `aitrace()` to verify variables before passing them to engine functions.

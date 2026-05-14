@@ -98,7 +98,7 @@ function DoResourceBuild()
 				end
 			end
 		end
-		if (UnderAttackThreat() > -20) then
+		if (UnderAttackThreat() > 20) then
 		return 0
 	end
 		if (sg_resourceControllerRequests == nil) then	-- Handle this if missing otherwise...

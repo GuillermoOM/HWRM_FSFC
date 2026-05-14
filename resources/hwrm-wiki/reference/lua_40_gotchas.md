@@ -99,7 +99,9 @@ In `source/scripts/races/[race]/scripts/ai_build.lua`, standard AI variables lik
 - **CRITICAL**: Do NOT use `player_enemy` or `player_total` in custom race scripts.
 - **Canonical**: Use engine-native globals **`s_enemyIndex`** and **`player_max`** when calling `PlayersUnitTypeCount`.
 - **Safety**: Always check if `s_enemyIndex` is not `-1` before performing count logic.
-- **Engine Crash**: Passing `nil` or an undefined class constant to `PlayersUnitTypeCount` or `ShipDemandAdd` will cause a fatal engine crash with a `parameter:` stack trace. Always initialize demand variables before use.
+- **Engine Crash**: Passing `nil` or an undefined class constant to `PlayersUnitTypeCount` or `ShipDemandAdd` will cause a fatal engine crash with a `parameter:` stack trace. 
+- **CRITICAL - `NumSquadrons(nil)`**: Calling `NumSquadrons` with a `nil` argument results in the specific error `parameter: attempt to compare nil with number`. Always use the `FSFC_NumSquadrons` wrapper.
+- **CRITICAL - Initialization Order**: In `DetermineSpecialDemand`, you MUST assign values to local variables (like `numCollectors`) before using them in comparisons. Accessing an unassigned variable returns `nil`, and `nil < number` will crash the AI.
 
 ## 8. Weapon Tuning: The "Death Ray" Glitch
 In `.wepn` files, the interaction between `fireTime` and `burstFireTime` is fragile.

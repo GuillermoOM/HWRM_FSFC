@@ -122,5 +122,10 @@ if not AI_Telemetry_Loaded then
         end
     end
     
+    function FSFC_NumSquadrons(shipID)
+        if (shipID == nil or type(shipID) ~= "number") then return 0 end
+        return NumSquadrons(shipID)
+    end
+    
     print("[AI_DIAG] Initialized for Player " .. s_playerIndex)
 end

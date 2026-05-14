@@ -50,6 +50,7 @@ squadclass[eScout] = {
 
 	VAS_PTAH,
 	VAS_HORUS,
+	VAS_GEB,
 }
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
@@ -63,7 +64,6 @@ squadclass[eRefinery] = {
 
 	VAS_ANUKET,
 	VAS_MAAT,
-	VAS_GEB,
 }
 squadclass[eBuilder] = {
 	HGN_MOTHERSHIP,
@@ -172,12 +172,15 @@ squadclass[eFighter] = {
 	TER_MYRMIDON,
 	TER_APOLLO,
 	TER_VALKYRIE,
+	TER_ERINYES,
+	TER_ARES,
 
 	SHI_AESHMA,
 	SHI_BASILISK,
 	SHI_MANTICORE,
 	SHI_MARA,
 	SHI_GORGON,
+	SHI_DRAGON,
 
 	VAS_AMUN,
 	VAS_SETH,
