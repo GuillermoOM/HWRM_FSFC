@@ -132,20 +132,24 @@ function DoResearchTechDemand_Vasudan()
 	
 	-- Design Bases (always log these — they fire even with 0 fleet demand)
 	if (FSFC_CheckResearch("FIGHTERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), fighterDemand + 1.1)
-		FSFC_Log_Research("FighterDesign", fighterDemand + 1.1)
+		local base = fighterDemand > 0 and fighterDemand or 1.5
+		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), base + 1.1)
+		FSFC_Log_Research("FighterDesign", base + 1.1)
 	end
 	if (FSFC_CheckResearch("BOMBERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), bomberDemand + 1.1)
-		FSFC_Log_Research("BomberDesign", bomberDemand + 1.1)
+		local base = bomberDemand > 0 and bomberDemand or 1.5
+		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), base + 1.1)
+		FSFC_Log_Research("BomberDesign", base + 1.1)
 	end
 	if (FSFC_CheckResearch("CRUISERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("CRUISERDESIGN"), frigateDemand + 1.1)
-		FSFC_Log_Research("CruiserDesign", frigateDemand + 1.1)
+		local base = frigateDemand > 0 and frigateDemand or 1.5
+		ResearchDemandSet(FSFC_ResolveID("CRUISERDESIGN"), base + 1.1)
+		FSFC_Log_Research("CruiserDesign", base + 1.1)
 	end
 	if (FSFC_CheckResearch("CAPITALSHIPDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("CAPITALSHIPDESIGN"), capitalDemand + 1.1)
-		FSFC_Log_Research("CapShipDesign", capitalDemand + 1.1)
+		local base = capitalDemand > 0 and capitalDemand or 1.5
+		ResearchDemandSet(FSFC_ResolveID("CAPITALSHIPDESIGN"), base + 1.1)
+		FSFC_Log_Research("CapShipDesign", base + 1.1)
 	end
 
 	-- Iterate tech table
@@ -155,6 +159,13 @@ function DoResearchTechDemand_Vasudan()
 		local baseDemand = 0
 		if (item.class == eFrigate) then baseDemand = frigateDemand
 		elseif (item.class == eCapital) then baseDemand = capitalDemand end
+		
+		if (baseDemand <= 0) then
+			-- Baseline fallback to prevent starting flagship deadlock
+			if ((item.id == "HATSHEPSUT" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+				baseDemand = 1.5
+			end
+		end
 		
 		if (baseDemand > 0) then
 			local id = FSFC_CheckResearch(item.id, item.shipID)

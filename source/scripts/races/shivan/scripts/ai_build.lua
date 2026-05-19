@@ -161,7 +161,12 @@ function DetermineSpecialDemand_Shivan()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+	if (FSFC_NumSquadrons(kCarrier) >= 2) then
+		if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+		if (kHeavyCruiser ~= nil) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.45, "HeavyCruiser") end
+		if (kAdvancedCruiser ~= nil) then FSFC_ShipDemandAdd(kAdvancedCruiser, 0.5, "AdvancedCruiser") end
+		if (kDestroyer ~= nil) then FSFC_ShipDemandAdd(kDestroyer, 0.45, "Destroyer") end
+	end
 	
 	-- 5. Elite/Endgame Logic (The Sathanas)
 	if (SHI_SATHANAS ~= nil and FSFC_IsResearchDone("Sathanas") == 1) then

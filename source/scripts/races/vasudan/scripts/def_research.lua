@@ -333,7 +333,7 @@ research = {
 	},
 	{
 		Name = "SuperCapitalShipDesign",
-		RequiredResearch = "CapitalShipDesign",
+		RequiredResearch = "CapitalShipDesign & Hatshepsut & Installation & FS2",
 		RequiredSubSystems = "",
 		Cost = 8000,
 		Time = 150,

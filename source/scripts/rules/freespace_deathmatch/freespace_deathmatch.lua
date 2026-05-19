@@ -119,28 +119,37 @@ function timer_updating_fsfc()
 		for playerIndex = 0, Universe_PlayerCount() - 1, 1 do
 			if Player_IsAlive(playerIndex) == 1 then
 				if Player_HasShipWithBuildQueue(playerIndex) == 1 then
-					if (era_setting == 0) then -- FS1 Only, hide FS2
-						local fs2_ships_to_hide = {
-							"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
-							"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
-							"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
-							"ter_hygeia", "ter_argo",
-							"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
-							"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
-							"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
-							"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
-							"shi_gorgon", "shi_astaroth"
-						}
-						for i, ship in fs2_ships_to_hide do
-							Player_RestrictBuildOption(playerIndex, ship)
-						end
-					elseif (era_setting == 1) then -- FS2 Only, hide FS1
-						local fs1_ships_to_hide = {
-							"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
-							"vas_seth", "vas_horus", "vas_thoth", "vas_scarab", "vas_bes", "shi_shaitan",
-						}
-						for i, ship in fs1_ships_to_hide do
-							Player_RestrictBuildOption(playerIndex, ship)
+					-- Era-based ship hiding for FS races
+					local racePrefix = strsub(PlayerRace_GetString(playerIndex, "Prefix", ""), 1, 3)
+					if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+						if (era_setting == 0) then -- FS1 Only
+							local fs2_ships_to_hide = {
+								"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
+								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
+								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
+								"ter_hygeia", "ter_argo", "ter_fenris", "ter_leviathan", "ter_orion", "ter_ulysses",
+								"ter_medusa", "ter_ursa",
+								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
+								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
+								"vas_aten", "vas_typhon",
+								"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
+								"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
+								"shi_gorgon", "shi_astaroth", "shi_cain", "shi_lilith", "shi_demon"
+							}
+							for i, ship in fs2_ships_to_hide do
+								Player_RestrictBuildOption(playerIndex, ship)
+							end
+						elseif (era_setting == 1) then -- FS2 Only
+							local fs1_ships_to_hide = {
+								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
+								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
+								"ter_medusa_fs1", "ter_ursa_fs1",
+								"vas_seth", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1", "vas_typhon_fs1",
+								"shi_basilisk", "shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1", "shi_scorpion"
+							}
+							for i, ship in fs1_ships_to_hide do
+								Player_RestrictBuildOption(playerIndex, ship)
+							end
 						end
 					end
 

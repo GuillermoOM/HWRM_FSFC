@@ -51,6 +51,7 @@ function CpuBuild_UpdateRaceVariables()
 	kMissileDestroyer = FSFC_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kCruiser = FSFC_PickBestShip(kCruiserFS2, kCruiserFS1)
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
+	kAdvancedCruiser = TER_AEOLUS
 	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
 	kCarrier = FSFC_PickBestShip(TER_HECATE, TER_ORION_FS1)
 	kShipyard = TER_ARCADIA
@@ -152,7 +153,12 @@ function DetermineSpecialDemand_Terran()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+	if (FSFC_NumSquadrons(kCarrier) >= 2) then
+		if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+		if (kHeavyCruiser ~= nil) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.45, "HeavyCruiser") end
+		if (kAdvancedCruiser ~= nil) then FSFC_ShipDemandAdd(kAdvancedCruiser, 0.5, "AdvancedCruiser") end
+		if (kDestroyer ~= nil) then FSFC_ShipDemandAdd(kDestroyer, 0.45, "Destroyer") end
+	end
 	
 	-- 5. Elite/Endgame Logic (The Colossus)
 	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Juggernaut") == 1) then

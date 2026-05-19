@@ -134,7 +134,7 @@ This document is the **Universal Source of Truth** for mod balancing. It is auto
 | VASUDAN | T2 | FS2 | Hatshepsut | 3500 | 90s | CapitalShipDesign & FS2 |
 | VASUDAN | T3 | Universal | CapitalShipDesign | 5000 | 180s | CruiserDesign |
 | VASUDAN | T3 | Universal | CruiserDesign | 8000 | 120s | BomberDesign |
-| VASUDAN | T3 | Universal | SuperCapitalShipDesign | 8000 | 150s | CapitalShipDesign |
+| VASUDAN | T3 | FS2 | SuperCapitalShipDesign | 8000 | 150s | CapitalShipDesign & Hatshepsut & Installation & FS2 |
 | VASUDAN | T3 | Universal | Colossus | 12000 | 200s | SuperCapitalShipDesign |
 
 ---
@@ -572,8 +572,8 @@ Defines the total allowed points/ships per family for each match preset.
 | GVB Sehkmet | 1250 | LightArmour / Fighter | 890 | 46s | 1x prometheusS, 1x miss_Helios, 1x miss_infyrno | **277.03** | 0.31 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 248/90/5/85 | 4000/5000 |
 | GVG Anuket | 18000 | MediumArmour / ResourceLarge | 1000 | 45s | 2x vaslaser_gimble, 2x subach_turret, 1x flak_turret | **176.67** | 0.18 | 1.0/1/1 | 0/5 | 0/0 | 0/0 | 5 | 225/18/8/20 | 3500/4500 |
 | GVF Ptah | 250 | Unarmoured / Fighter | 1000 | 65s | 1x mekhu, 1x miss_harpoon, 1x miss_stilettoII | **128.0** | 0.13 | 4.0/4/4 | 8/0 | 0/0 | 0/0 | 8 | 400/145/2/85 | 9000/11000 |
+| GVC Mentu | 18000 | MediumArmour / Frigate | 1300 | 60s | 8x vaslaser_gimble, 1x flak_turret, 1x beam_AABlue, 2x vashuge_turret, 2x vaslaser_turret, 2x beam_sgoldcruiser | **1117.31** | 0.86 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/12/8/50 | 5000/6000 |
 | PVB Amun | 1300 | LightArmour / Fighter | 1310 | 70s | 1x prometheusfs1, 2x miss_harbinger, 1x miss_infyrno, 2x avenger_turret | **394.17** | 0.3 | 3.0/3/3 | 0/0 | 8/0 | 0/8 | 8 | 160/60/4/85 | 4000/5000 |
-| GVC Mentu | 18000 | MediumArmour / Frigate | 1475 | 70s | 8x vaslaser_gimble, 1x flak_turret, 1x beam_AABlue, 2x vashuge_turret, 2x vaslaser_turret, 2x beam_sgoldcruiser | **1117.31** | 0.76 | 1.0/1/1 | 0/12 | 0/0 | 12/0 | 12 | 140/12/8/50 | 5000/6000 |
 | PVSC Imhotep | 10000 | MediumArmour / Frigate | 1500 | 35s | 2x vaslaser_gimble, 1x miss_fighterkiller, 2x avenger_gimble | **273.0** | 0.18 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 180/40/8/60 | 10000/18000 |
 | GVA Setekh | 10000 | MediumArmour / Frigate | 1750 | 78s | 2x vaslaser_gimble, 1x vashuge_turret | **162.5** | 0.09 | 1.0/1/1 | 0/0 | 0/0 | 12/0 | 12 | 165/20/8/20 | 12000/17000 |
 | GVCv Sobek | 85000 | HeavyArmour / SmallCapitalShip | 1800 | 110s | 8x vaslaser_gimble, 4x flak_turret, 4x beam_AABlue, 4x vashuge_turret, 2x beam_sgold | **2542.04** | 1.41 | 1.0/1/1 | 0/0 | 0/0 | 40/30 | 50 | 120/12/8/40 | 6500/7500 |

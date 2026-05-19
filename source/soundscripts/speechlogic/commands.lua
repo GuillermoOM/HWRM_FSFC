@@ -64,21 +64,21 @@ NameMakaan = "Makaan"
 NameEmperor = "Emperor"
 NameSalCap = "SalCap_"
 
-NameTerPilot = "TerPilot_"
-NameTerCruiser = "TerCruiser_"
-NameTerAwacs = "TerAwacs_"
-NameTerCapital = "TerCapital_"
-NameTerCommand = "TerCommand_"
-NameTerColossus = "TerColossus_"
+NameTerPilot = "terPilot_"
+NameTerCruiser = "terCruiser_"
+NameTerAwacs = "terAwacs_"
+NameTerCapital = "terCapital_"
+NameTerCommand = "terCommand_"
+NameTerColossus = "terColossus_"
 
-NameShiCommand = "Shi_"
+NameShiCommand = "shi_"
 
-NameVasPilot = "VasPilot_"
-NameVasCruiser = "VasCruiser_"
-NameVasAwacs = "VasAwacs_"
-NameVasCapital = "VasCapital_"
-NameVasCommand = "VasCommand_"
-NameVasColossus = "TerColossus_"
+NameVasPilot = "vasPilot_"
+NameVasCruiser = "vasCruiser_"
+NameVasAwacs = "vasAwacs_"
+NameVasCapital = "vasCapital_"
+NameVasCommand = "vasCommand_"
+NameVasColossus = "terColossus_"
 
 -- timeout values for speech events
 Frequency_Command = 0.5
@@ -93,6 +93,19 @@ Taiidan = 6
 Terran = 10
 Shivan = 11
 Vasudan = 12
+
+function updateCurrentRaceFromShip(shipname)
+	if shipname ~= nil then
+		local prefix = strsub(shipname, 1, 4)
+		if prefix == "ter_" or prefix == "Ter_" or prefix == "TER_" then
+			currentRace = Terran
+		elseif prefix == "vas_" or prefix == "Vas_" or prefix == "VAS_" then
+			currentRace = Vasudan
+		elseif prefix == "shi_" or prefix == "Shi_" or prefix == "SHI_" then
+			currentRace = Shivan
+		end
+	end
+end
 
 function raceHelper()
 	if currentRace == Vaygr then
@@ -111,6 +124,7 @@ function raceHelper()
 end
 
 function getType(shipname)
+	updateCurrentRaceFromShip(shipname)
 	--first takes care of these special cases for which we don't want to use the AttackFamily
 
 	familyName = "" .. getFamily(shipname)
@@ -198,33 +212,33 @@ end
 
 function GiveFSCommand(commandname, shiptype)
 	-- print("Executing Command: " .. commandname .. " For Ship Type: " .. shiptype .. " Of Race: " .. currentRace)
-
+ 
 	if currentRace == Terran then
 		if shiptype == AWACS then
-			playSpeechActor(commandname, NameTerAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerAwacs, 1, Frequency_Command)
 		elseif shiptype == Colossus then
-			playSpeechActor(commandname, NameTerColossus, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerColossus, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(commandname, NameTerCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(commandname, NameTerCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerCapital, 1, Frequency_Command)
 		elseif shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(commandname, NameTerPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerPilot, 2, Frequency_Command)
 		end
 	elseif currentRace == Vasudan then
 		if shiptype == AWACS then
-			playSpeechActor(commandname, NameVasAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasAwacs, 1, Frequency_Command)
 		elseif shiptype == Colossus then
-			playSpeechActor(commandname, NameVasColossus, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasColossus, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(commandname, NameVasCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(commandname, NameVasCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasCapital, 1, Frequency_Command)
 		elseif shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(commandname, NameVasPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasPilot, 2, Frequency_Command)
 		end
 	elseif currentRace == Shivan then
-		playSpeechActor(commandname, NameShiCommand, NumCapPilots, Frequency_Command)
+		playSpeechActor(commandname, NameShiCommand, 1, Frequency_Command)
 	end
 end
 
@@ -348,6 +362,7 @@ MP_RUsTransferred = 3
 MP_ShipsTransferred = 4
 
 function CommandMultiplay(shipname, event)
+	updateCurrentRaceFromShip(shipname)
 	if event == MP_AllianceRequested then
 		playSpeechActor("COMMAND_AllianceRequested_1", raceHelper(), 0, Frequency_Command)
 	elseif event == MP_AllianceFormed then
@@ -407,8 +422,11 @@ function CommandAttackGiven(shipname, targetname, attackType)
 		return
 	end
 
-	local targetShipType = getType(targetname)
 	local shiptype = getType(shipname)
+	local attackerRace = currentRace
+
+	local targetShipType = getType(targetname)
+	currentRace = attackerRace
 
 	genericShipName = strsub(shipname, 5)
 	genericTargetName = strsub(targetname, 0, 3)

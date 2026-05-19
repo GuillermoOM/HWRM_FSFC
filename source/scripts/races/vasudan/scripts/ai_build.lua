@@ -150,7 +150,11 @@ function DetermineSpecialDemand_Vasudan()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+	if (FSFC_NumSquadrons(kCarrier) >= 2) then
+		if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
+		if (kHeavyCruiser ~= nil) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.8, "HeavyCruiser") end
+		if (kDestroyer ~= nil) then FSFC_ShipDemandAdd(kDestroyer, 0.45, "Destroyer") end
+	end
 	
 	-- 5. Elite/Endgame Logic (The Colossus)
 	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Colossus") == 1) then

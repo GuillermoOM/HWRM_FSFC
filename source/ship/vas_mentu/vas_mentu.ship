@@ -150,8 +150,8 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 1475
-NewShipType.buildTime = 70
+NewShipType.buildCost = 1300
+NewShipType.buildTime = 60
 NewShipType.buildPriorityOrder = 40
 
 --------------------------------------------------
