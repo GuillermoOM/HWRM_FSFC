@@ -30,4 +30,6 @@ end
 
 ## Why this is necessary
 - **Cross-Mod Compatibility**: Without the prefix check, the engine will attempt to grant `Freespace1` to a Hiigaran player, which will throw an error in `HwRM.log` because the Hiigaran research tree lacks that node.
-- **Node Persistence**: Using `DoNotGrant = 1` in `def_research.lua` ensures the node remains hidden and controlled solely by the game mode rules.
+- **The DoNotGrant Trap (CRITICAL GOTCHA)**: Do NOT use `DoNotGrant = 1` in `def_research.lua` for research nodes that are intended to be granted programmatically (e.g. `FS1`, `FS2` eras). The HWRM engine treats `DoNotGrant = 1` as an absolute block, causing APIs like `Player_GrantResearchOption` to fail silently with `unable to grant (tech)` in `HwRM.log`.
+- **Proper Hidden-Node Workaround**: To hide nodes from the player research menu while keeping them accessible to code rules, define them *without* `DoNotGrant = 1` in `def_research.lua`. Instead, restrict them immediately at match initialization using `Player_RestrictResearchOption`, and then grant them when needed using `Player_GrantResearchOption`.
+

@@ -49,7 +49,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_horus",
-		RequiredResearch = "Horus",
+		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "GVF Horus - Interceptor <c=12AB06>32s</c>",
@@ -159,7 +159,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_typhon",
-		RequiredResearch = "Typhon & FS2",
+		RequiredResearch = "CapitalShipDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 310,
 		DisplayedName = "GVD Typhon - Destroyer <c=12AB06>175s</c>",
@@ -169,7 +169,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_typhon_fs1",
-		RequiredResearch = "Typhon & FS1",
+		RequiredResearch = "CapitalShipDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 310,
 		DisplayedName = "GVD Typhon (FS1) - Destroyer <c=12AB06>175s</c>",
@@ -269,7 +269,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_nephthys",
-		RequiredResearch = "FighterDesign",
+		RequiredResearch = "FighterDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 502,
 		DisplayedName = "GVS Nephthys - Support Ship <c=12AB06>9s</c>",
@@ -320,7 +320,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_scarab",
-		RequiredResearch = "FighterDesign",
+		RequiredResearch = "FighterDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 313,
 		DisplayedName = "PVS Scarab - Support Ship <c=12AB06>9s</c>",

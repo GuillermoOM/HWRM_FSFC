@@ -10,6 +10,8 @@ supplyLimit("Utility", 20)
 supplyLimit("Resource", 15)
 supplyLimit("Platform", 10)
 supplyLimit("Mothership", 1)
+supplyLimit("Carrier", 6)
+
 
 -- Resource & Utility Sub-families
 supplyLimit("ResourceCollector", 10)

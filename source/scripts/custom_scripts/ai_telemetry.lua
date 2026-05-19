@@ -11,13 +11,51 @@ if not AI_Telemetry_Loaded then
     FSFC_LastResearchTime = -100
     FSFC_TickHighestDemand = 0
     FSFC_TickHighestName = "None"
+    FSFC_ResearchAccum = {}       -- scratch: name -> demand, cleared per snapshot
+    FSFC_LastDemandPrint = {}     -- per-player throttle for demand snapshot prints
     
-    function FSFC_Log_Demand(label, demand)
-        -- Throttled: Only log high-priority build desires
-        if (demand > 1.5) then
-            local time = gameTime() or 0
-            print("[" .. floor(time) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | WANT | " .. label .. " | Demand: " .. demand)
+    function FSFC_ShipDemandAdd(id, demand, label)
+        if (id == nil or id == -1 or type(id) ~= "number") then return end
+        ShipDemandAdd(id, demand)
+    end
+
+    function FSFC_ShipDemandSet(id, demand, label)
+        if (id == nil or id == -1 or type(id) ~= "number") then return end
+        ShipDemandSet(id, demand)
+    end
+
+    function FSFC_ShipDemandAddByClass(shipClass, demand)
+        if (shipClass == nil or demand == 0) then return end
+        ShipDemandAddByClass(shipClass, demand)
+    end
+
+    -- Print a snapshot of current demand values directly to the log.
+    -- Called at the END of DetermineSpecialDemand. Throttled to once per 10s per player.
+    -- NOTE: AI scripts and SCAR/rule scripts run in SEPARATE Lua scopes.
+    --       Globals set here are NOT visible to telemetry.lua. Use print() only.
+    function FSFC_WriteDemandSnapshot()
+        local time = gameTime() or 0
+        local p = s_playerIndex
+        -- Throttle: skip if we already printed within the last 10 seconds for this player
+        if (FSFC_LastDemandPrint[p] ~= nil and time - FSFC_LastDemandPrint[p] < 10) then
+            return
         end
+        FSFC_LastDemandPrint[p] = time
+        -- Inline tostring(floor(v)) — no helper function needed, and local function is banned in Lua 4.0
+        local coline = (kCollector ~= nil and kCollector ~= -1) and ShipDemandGet(kCollector) or 0
+        local refline = (kRefinery ~= nil and kRefinery ~= -1) and ShipDemandGet(kRefinery) or 0
+        local cvline  = (kCarrier ~= nil and kCarrier ~= -1) and ShipDemandGet(kCarrier) or 0
+        local bcline  = (kBattleCruiser ~= nil and kBattleCruiser ~= -1) and ShipDemandGet(kBattleCruiser) or 0
+        print("[" .. floor(time) .. "s] [AI_DIAG] P" .. p .. " DEMAND |"
+            .. " F:"  .. tostring(floor(ShipDemandMaxByClass(eFighter)))
+            .. " B:"  .. tostring(floor(ShipDemandMaxByClass(eCorvette)))
+            .. " Fr:" .. tostring(floor(ShipDemandMaxByClass(eFrigate)))
+            .. " De:" .. tostring(floor(ShipDemandMaxByClass(eDestroyer)))
+            .. " Ca:" .. tostring(floor(ShipDemandMaxByClass(eCapital)))
+            .. " Cv:" .. tostring(floor(cvline))
+            .. " Bc:" .. tostring(floor(bcline))
+            .. " Co:" .. tostring(floor(coline))
+            .. " Re:" .. tostring(floor(refline)))
     end
 
     function FSFC_ResolveID(id_or_name)
@@ -53,9 +91,17 @@ if not AI_Telemetry_Loaded then
         return IsResearchAvailable(id)
     end
 
-    function FSFC_CheckResearch(id_or_name)
+    function FSFC_CheckResearch(id_or_name, shipID)
         local id = FSFC_ResolveID(id_or_name)
         if (id == nil) then return nil end
+        
+        -- Redundancy check: If we already have the ship, we don't need to research its unlock node
+        if (shipID and shipID ~= -1) then
+            if (FSFC_NumSquadrons(shipID) > 0) then
+                return nil
+            end
+        end
+
         if (IsResearchDone(id) == 0 and IsResearchAvailable(id) == 1) then
             return id
         end
@@ -80,6 +126,14 @@ if not AI_Telemetry_Loaded then
     function FSFC_Log_Research(researchName, demand)
         local time = gameTime() or 0
         local d = demand or 1.0
+
+        -- Accumulate into per-player scratch table for snapshot
+        if (researchName ~= nil and researchName ~= "None") then
+            local existing = FSFC_ResearchAccum[researchName]
+            if (existing == nil or d > existing) then
+                FSFC_ResearchAccum[researchName] = d
+            end
+        end
         
         -- If this is a new tick, reset the high watermark
         if (floor(time) ~= floor(FSFC_LastResearchTime)) then
@@ -107,6 +161,45 @@ if not AI_Telemetry_Loaded then
         end
     end
 
+    -- Print accumulated research demand directly to the log.
+    -- Called at end of DoUpgradeDemand_* so it fires after all FSFC_Log_Research calls this cycle.
+    -- NOTE: Prints directly — AI and SCAR scopes are separate, globals aren't shared.
+    function FSFC_WriteResearchSnapshot()
+        local time = gameTime() or 0
+        local p = s_playerIndex
+        local MAX_RES_ENTRIES = 5
+        -- Build sorted list using next() (no closure/upvalue capture — Lua 4.0 safe)
+        local sorted = {}
+        local rname = next(FSFC_ResearchAccum)
+        while (rname ~= nil) do
+            local demand = FSFC_ResearchAccum[rname]
+            local inserted = 0
+            local n = getn(sorted)
+            for i = 1, n do
+                if (demand > sorted[i].demand) then
+                    tinsert(sorted, i, {name=rname, demand=demand})
+                    inserted = 1
+                    break
+                end
+            end
+            if (inserted == 0) then
+                tinsert(sorted, {name=rname, demand=demand})
+            end
+            rname = next(FSFC_ResearchAccum, rname)
+        end
+        -- Clear accumulator for next cycle
+        FSFC_ResearchAccum = {}
+        -- Only print if there was something accumulated
+        local n = getn(sorted)
+        if (n == 0) then return end
+        if (n > MAX_RES_ENTRIES) then n = MAX_RES_ENTRIES end
+        local out = ""
+        for i = 1, n do
+            out = out .. sorted[i].name .. ":" .. tostring(floor(sorted[i].demand * 10) / 10) .. " "
+        end
+        print("[" .. floor(time) .. "s] [AI_DIAG] P" .. p .. " RESEARCH_DEMAND | " .. out)
+    end
+
     function FSFC_Log_Threat()
         if (FSFC_LastThreatTime == nil or gameTime() > FSFC_LastThreatTime + 30) then
             local targetP = -1
@@ -125,6 +218,34 @@ if not AI_Telemetry_Loaded then
     function FSFC_NumSquadrons(shipID)
         if (shipID == nil or type(shipID) ~= "number") then return 0 end
         return NumSquadrons(shipID)
+    end
+
+    function FSFC_Log_Completed(id_or_name, label)
+        local name = label or id_or_name
+        if (FSFC_ResearchLogged[name] == nil and FSFC_IsResearchDone(id_or_name) == 1) then
+            print("[" .. floor(gameTime() or 0) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Completed: " .. name)
+            FSFC_ResearchLogged[name] = 1
+        end
+    end
+
+    -- Standardized table processor for AI research
+    function FSFC_ProcessResearchTable(tbl, baseDemand)
+        if (tbl == nil) then return end
+        local n = getn(tbl)
+        for i=1, n do
+            local item = tbl[i]
+            local id = FSFC_CheckResearch(item.id)
+            if (id and baseDemand > 0) then
+                local demand = baseDemand + (item.priority or 0)
+                ResearchDemandSet(id, demand)
+                if (item.name) then
+                    FSFC_Log_Research(item.name, demand)
+                end
+            elseif (item.name) then
+                -- If not available for research, check if it was completed
+                FSFC_Log_Completed(item.id or item.name, item.name)
+            end
+        end
     end
     
     print("[AI_DIAG] Initialized for Player " .. s_playerIndex)

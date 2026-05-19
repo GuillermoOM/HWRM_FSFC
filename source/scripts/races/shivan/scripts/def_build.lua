@@ -38,7 +38,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_manticore",
-		RequiredResearch = "FighterDesign",
+		RequiredResearch = "Manticore",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "SF Manticore - Interceptor <c=12AB06>31s</c>",
@@ -48,10 +48,10 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_astaroth",
-		RequiredResearch = "Astaroth",
+		RequiredResearch = "FighterDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "SF Astaroth - Interceptor <c=12AB06>30s</c>",
+		DisplayedName = "SF Astaroth - Scout <c=12AB06>30s</c>",
 		Description =
 		"<b>Description:</b> First encountered in Gamma Draconis, the SF Astaroth is a fast, agile fighter that appears to have achieved its maneuverability at the expense of its armor and weaponry. Once the shields of an Astaroth are down, the fighter can be dispatched quickly. \n\n<b>Prerequisites:</b> Fighter Design, Astaroth. \n\n<b>Armaments:</b> 2x Anti-Bomber Laser, 1x Shivan Heatseeker, 1x Shivan EMP (Upgrade)",
 	},
@@ -138,7 +138,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain",
-		RequiredResearch = "Cain",
+		RequiredResearch = "Cain & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain - Strike Cruiser <c=12AB06>34s</c>",
@@ -148,7 +148,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain_fs1",
-		RequiredResearch = "Cain",
+		RequiredResearch = "Cain & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain (FS1) - Strike Cruiser <c=12AB06>34s</c>",
@@ -158,7 +158,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith",
-		RequiredResearch = "Lilith",
+		RequiredResearch = "Lilith & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith - Heavy Cruiser <c=12AB06>140s</c>",
@@ -168,7 +168,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith_fs1",
-		RequiredResearch = "Lilith",
+		RequiredResearch = "Lilith & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith (FS1) - Heavy Cruiser <c=12AB06>140s</c>",
@@ -188,7 +188,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_demon",
-		RequiredResearch = "Demon & FS2",
+		RequiredResearch = "CapitalShipDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 110,
 		DisplayedName = "SD Demon - Destroyer <c=12AB06>215s</c>",
@@ -198,7 +198,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_demon_fs1",
-		RequiredResearch = "Demon & FS1",
+		RequiredResearch = "CapitalShipDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 110,
 		DisplayedName = "SD Demon (FS1) - Destroyer <c=12AB06>215s</c>",
@@ -299,7 +299,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_scorpion",
-		RequiredResearch = "FighterDesign",
+		RequiredResearch = "FighterDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 9,
 		DisplayedName = "SF Scorpion - Recon <c=12AB06>28s</c>",

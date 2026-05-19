@@ -379,13 +379,13 @@ def generate_markdown(races, weapons, unit_caps, research):
     race_names = {"ter": "TERRAN - GTA", "shi": "SHIVAN - Unknown", "vas": "VASUDAN - PVN"}
     for code, name in race_names.items():
         output += f"## [{name}]\n\n"
-        output += "| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | **DPS/RU** | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk |\n"
-        output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
+        output += "| Ship | HP | Armor / Attack Fam | Cost | Time | Guns | DPS | **DPS/RU** | S/Sq/B | F/AF | C/AC | Fr/AFr | T | Spd/Rot/Acc/Bnk | Sensors |\n"
+        output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
         ships = sorted(races[code], key=lambda x: int(x['cost']) if x['cost'].isdigit() else 0)
         for s in ships:
             fam_str = f"{s['armor']} / {s['attack_fam']}"
             ssb_str = f"{s['supply']}/{s['squad']}/{s['batch']}"
-            output += f"| {s['name']} | {s['hp']} | {fam_str} | {s['cost']} | {s['time']}s | {s['guns']} | **{s['dps']}** | {s['dps_ru']} | {ssb_str} | {s['fVal']}/{s['afVal']} | {s['cVal']}/{s['acVal']} | {s['frVal']}/{s['afrVal']} | {s['tVal']} | {s['speed']}/{s['rot']}/{s['accel']}/{s['bank']} |\n"
+            output += f"| {s['name']} | {s['hp']} | {fam_str} | {s['cost']} | {s['time']}s | {s['guns']} | **{s['dps']}** | {s['dps_ru']} | {ssb_str} | {s['fVal']}/{s['afVal']} | {s['cVal']}/{s['acVal']} | {s['frVal']}/{s['afrVal']} | {s['tVal']} | {s['speed']}/{s['rot']}/{s['accel']}/{s['bank']} | {s['sensors']} |\n"
         output += "\n"
     return output
 

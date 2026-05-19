@@ -56,260 +56,118 @@ function CpuBuild_UpdateRaceVariables()
 	kShipyard = TER_ARCADIA
 	kJuggernaut = TER_COLOSSUS
 	kResearch = TER_FAUSTUS
-	kAWACS = kScout
+	kAWACS = TER_CHARYBDIS
 end
 
 function DetermineDemandWithNoCounterInfo_Terran()
 	local fighterDemand = 0.5
-	local corvetteDemand = 0.3
-	local frigateDemand = 0.15
-	local destroyerDemand = 0.05
+	local corvetteDemand = 0.4
+	local frigateDemand = 0.3
 	
-	if (sg_randFavorShipType < 40) then
-		fighterDemand = fighterDemand + 0.5
-	elseif (sg_randFavorShipType < 70) then
-		corvetteDemand = corvetteDemand + 0.5
+	if (sg_randFavorShipType < 45) then
+		fighterDemand = fighterDemand + 1.0
+	elseif (sg_randFavorShipType < 75) then
+		corvetteDemand = corvetteDemand + 1.0
 	else
-		frigateDemand = frigateDemand + 0.5
+		frigateDemand = frigateDemand + 1.0
 	end
 	
 	FSFC_ShipDemandAddByClass(eFighter, fighterDemand)
 	FSFC_ShipDemandAddByClass(eCorvette, corvetteDemand)
 	FSFC_ShipDemandAddByClass(eFrigate, frigateDemand)
 	
-	if (g_LOD >= 1 and kDestroyer ~= nil) then
-		ShipDemandAdd(kDestroyer, destroyerDemand + 0.25)
+	-- Occasional chance for heavier hulls if tech allows
+	if (g_LOD >= 1) then
+		FSFC_ShipDemandAddByClass(eDestroyer, 0.4)
 	end
-	if (g_LOD >= 2 and kBattleCruiser ~= nil) then
-		ShipDemandAdd(kBattleCruiser, 0.5)
+	if (g_LOD >= 2) then
+		FSFC_ShipDemandAddByClass(eBattleCruiser, 0.3)
 	end
 end
 
 function DetermineSpecialDemand_Terran()
-	local currentRU = GetRU()
-
-	-- Safety initialization for custom race environment
+	-- Safety initialization
 	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
 	if (player_max == nil) then player_max = 0 end
 
-	-- SHIP COUNTS (Standardized for logic gates)
-	local numErinyes = FSFC_NumSquadrons(kFighterSpecial1)
-	local numAres = FSFC_NumSquadrons(kFighterSpecial2)
-	local numCruisers = FSFC_NumSquadrons(kCruiser)
+	-- 1. Gating heavy ships by time (Vanilla style)
+	if (gameTime() < 120) then
+		FSFC_ShipDemandAddByClass(eDestroyer, -10)
+		FSFC_ShipDemandAddByClass(eBattleCruiser, -10)
+		FSFC_ShipDemandAddByClass(eMotherShip, -10)
+	end
+
+	-- 2. Resource Management (Scaled for FSFC Costs)
 	local numCollectors = FSFC_NumSquadrons(kCollector)
-	local numRefineries = FSFC_NumSquadrons(kRefinery)
+	local collectorGoal = 10
+	
+	-- Scale economy with tech
+	if (FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+		collectorGoal = 28
+	elseif (FSFC_IsResearchDone("CruiserDesign") == 1) then
+		collectorGoal = 18
+	end
+	
+	if (numCollectors < collectorGoal) then
+		local demand = 0.5
+		if (numCollectors < 6) then
+			demand = 4.0 -- Emergency start
+		elseif (numCollectors < 12) then
+			demand = 2.0 -- Solid base
+		end
+		FSFC_ShipDemandAdd(kCollector, demand, "ter_elysium")
+	end
+	
+	-- Refinery scaling (1 per 7 resourcers)
+	local numResourcers = numCollectors + FSFC_NumSquadrons(kRefinery)
+	if (numResourcers > 7 and FSFC_NumSquadrons(kRefinery) * 7 < numResourcers) then
+		FSFC_ShipDemandAdd(kRefinery, 1.5, "ter_zephyrus")
+	end
+
+	-- 3. Production Escalation
 	local numCarriers = FSFC_NumSquadrons(kCarrier)
-	local numScouts = FSFC_NumSquadrons(kScout)
+	if (numCarriers < 4) then
+		local demand = 3.0
+		if (numCarriers > 1) then
+			demand = 1.5
+		end
+		FSFC_ShipDemandAdd(kCarrier, demand)
+	end
+
+	-- Wealth Boost (Spend excess RUs)
+	if (GetRU() > 10000) then
+		FSFC_ShipDemandAddByClass(eFighter, 1.5)
+		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
+		FSFC_ShipDemandAdd(kCarrier, 1.0)
+	end
+
 	local numShipyards = FSFC_NumSquadrons(kShipyard)
-	local numJugg = FSFC_NumSquadrons(kJuggernaut)
+	if (numShipyards == 0 and s_selfTotalValue > 60) then
+		FSFC_ShipDemandAdd(kShipyard, 0.5, "ter_arcadia")
+	elseif (numShipyards > 0) then
+		FSFC_ShipDemandSet(kShipyard, -100)
+	end
+
+
+	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
+	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
+	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
+	if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
 	
-	-- TERRAN AEGIS LOGIC (Reactive Defense)
-	local fighterTarget = 30
-	local bomberTarget = 20
-	local carrierTarget = 4
-	local capDemand = 0.5
-	local fighterDemand = 1.8 -- Added missing fighterDemand
-	local interceptorDemand = 1.5
-
-	-- Elite Suppression: If we have the tech but are understrength, throttle standard fighter demand
-	local suppression = 1.0
-	if (FSFC_CheckResearch(ERINYES) or FSFC_CheckResearch(ARES)) then
-		if (numErinyes < 4 or numAres < 2) then
-			suppression = 0.8 -- Softened suppression to maintain fleet backbone
+	-- 5. Elite/Endgame Logic (The Colossus)
+	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Juggernaut") == 1) then
+		if (GetRU() > 30000) then
+			FSFC_ShipDemandAdd(kJuggernaut, 1.0, "ter_colossus")
 		end
 	end
 
-	-- PRODUCTION ESCALATION (User Strategy)
-	if (numCollectors < 12) then
-		ShipDemandAdd(kCollector, 1.5)
-	end
-	
-	if (numRefineries < 1) then
-		ShipDemandAdd(kRefinery, 1.5)
-	elseif (numRefineries < 2 and currentRU > 1000) then
-		ShipDemandAdd(kRefinery, 1.2) -- Aggressive 2nd refinery for economic parity
-	end
-	
-	if (numCarriers < 1 and currentRU > 8000) then
-		ShipDemandAdd(kCarrier, 3.0) -- Gentle rush for first GTD Hecate
-		FSFC_Log_Demand("CarrierRush", 3.0)
+	-- 6. Support/Utility
+	if (kAWACS ~= nil and FSFC_NumSquadrons(kAWACS) < 2) then
+		FSFC_ShipDemandAdd(kAWACS, 0.5, "ter_charybdis")
 	end
 
-	-- Detect Swarm Threats
-	local enemyFighterCount = 0
-	local enemyBomberCount = 0
-	if (s_enemyIndex ~= -1) then
-		enemyFighterCount = PlayersUnitTypeCount(s_enemyIndex, player_max, eFighter)
-		enemyBomberCount = PlayersUnitTypeCount(s_enemyIndex, player_max, eCorvette) -- Bombers are in eCorvette class in FSFC
-	end
-	
-	-- Recon Doctrine: Early and high persistence scouting
-	if (kScout ~= nil) then
-		if (numScouts < 2) then
-			ShipDemandAdd(kScout, 2.0)
-			FSFC_Log_Demand("Scouts", 2.0)
-			-- Early game queue management: Throttle harvesters slightly if we have NO scouts
-			if (gameTime() < 120 and kCollector ~= nil) then
-				ShipDemandAdd(kCollector, -1.0)
-			end
-		elseif (numScouts < 4) then
-			ShipDemandAdd(kScout, 1.0)
-		end
-	end
-
-	if (currentRU > 10000) then
-		fighterTarget = 100
-		bomberTarget = 80
-		carrierTarget = 6
-		capDemand = 1.5
-		-- Reactive Interceptor Surge
-		if (enemyBomberCount > 30 or enemyFighterCount > 50) then
-			interceptorDemand = 2.0 -- Clear the skies
-			capDemand = 2.5
-		elseif (enemyBomberCount > 15 or enemyFighterCount > 20) then
-			interceptorDemand = 1.2 -- Moderate response
-			capDemand = 2.0
-		end
-	end
-
-	
-	if (currentRU > 50000) then
-		fighterTarget = 200
-		bomberTarget = 150
-		carrierTarget = 10
-		capDemand = 2.0
-	end
-
-	-- Panic Spending Mode
-	if (currentRU > 150000) then
-		fighterTarget = 300
-		bomberTarget = 250
-		carrierTarget = 15
-		capDemand = 4.0
-	end
-
-	-- Class-Based Fighter Doctrine
-	FSFC_ShipDemandAddByClass(eFighter, fighterDemand * suppression)
-	-- Minor nudges for era-appropriate best ships
-	if (kFighterSuperiority ~= nil) then ShipDemandAdd(kFighterSuperiority, 0.2) end
-	if (kFighterInterceptor ~= nil) then ShipDemandAdd(kFighterInterceptor, 0.1) end
-	
-	-- Diversified Bomber Strike: Using Class Demand
-	FSFC_ShipDemandAddByClass(eCorvette, 1.0) -- General bomber demand
-	if (kBomberHeavy ~= nil) then
-		ShipDemandAdd(kBomberHeavy, 0.5) -- Nudge for Heavy Assault Bombers
-	end
-		
-		-- Aeolus Anti-Fighter Priority
-		if (TER_AEOLUS ~= nil and (enemyFighterCount > 20 or enemyBomberCount > 10)) then
-			ShipDemandAdd(TER_AEOLUS, 1.5)
-			FSFC_Log_Demand("Aeolus Guard", 1.5)
-		end
-
-		-- Standard Fleet Cruiser Backbone (Using Class Demand)
-		FSFC_ShipDemandAddByClass(eFrigate, 1.5)
-		if (kCruiser ~= nil) then ShipDemandAdd(kCruiser, 0.5) end
-		if (kHeavyCruiser ~= nil) then ShipDemandAdd(kHeavyCruiser, 0.3) end
-
-		if (kCarrier ~= nil and FSFC_NumSquadrons(kCarrier) < carrierTarget) then
-			ShipDemandAdd(kCarrier, 1.2)
-			FSFC_Log_Demand("Hecates", 1.2)
-		end
-
-		-- Persistent Destroyer/Battlecruiser demand if rich
-		if (kDestroyer ~= nil) then 
-			if (numCruisers >= 4) then
-				ShipDemandAdd(kDestroyer, capDemand) 
-			else
-				ShipDemandAdd(kDestroyer, 0.5)
-			end
-		end
-		if (kBattleCruiser ~= nil) then ShipDemandAdd(kBattleCruiser, capDemand) end
-		
-		-- Shipyard Escalation: GTI Arcadia
-		if (kShipyard ~= nil and numShipyards < 1 and currentRU > 15000) then
-			ShipDemandAdd(kShipyard, 2.0)
-			FSFC_Log_Demand("Arcadias", 2.0)
-		elseif (kShipyard ~= nil and numShipyards < 3 and currentRU > 40000) then
-			ShipDemandAdd(kShipyard, 1.0)
-		end
-		
-		if (kCarrier ~= nil and FSFC_NumSquadrons(kCarrier) < carrierTarget) then
-			local hecateDemand = 1.0
-			if (capDemand > 1.5) then
-				hecateDemand = capDemand * 0.8
-			end
-			if (currentRU > 20000) then
-				hecateDemand = hecateDemand + 1.0
-			end
-			ShipDemandAdd(kCarrier, hecateDemand)
-		end
-
-		-- Juggernaut Doctrine: The Colossus
-		if (kJuggernaut ~= nil and FSFC_CheckResearch(COLOSSUS)) then
-			if (numJugg < 1 and currentRU > 80000) then
-				ShipDemandAdd(kJuggernaut, 20.0)
-				FSFC_Log_Demand("Colossus", 20.0)
-			end
-		end
-
-		if (s_enemyIndex ~= -1 and TER_ORION ~= nil) then
-			local enemyCapCount = PlayersUnitTypeCount(s_enemyIndex, player_max, eFrigate) + PlayersUnitTypeCount(s_enemyIndex, player_max, eCapital)
-			if (enemyCapCount > 0) then
-				ShipDemandAdd(TER_ORION, 0.8)
-			end
-		end
-
-		-- Elite Fighter Nudges (End-game favor)
-		if (kFighterSpecial1 ~= nil) then
-			if (numErinyes < 8) then
-				ShipDemandAdd(kFighterSpecial1, 0.1)
-			end
-		end
-		if (kFighterSpecial2 ~= nil) then
-			if (numAres < 4) then
-				ShipDemandAdd(kFighterSpecial2, 0.1)
-			end
-		end
-
-
-		if (capDemand > 1.5) then
-			FSFC_Log_Demand("Capitals", capDemand)
-		end
-
-		-- Prevent Special Fighter Spam (Erinyes/Ares)
-		if (kFighterSpecial1 ~= nil and numErinyes >= 12) then
-			ShipDemandSet(kFighterSpecial1, -100)
-		end
-		if (kFighterSpecial2 ~= nil and numAres >= 12) then
-			ShipDemandSet(kFighterSpecial2, -100)
-		end
-
-		-- Prevent Aeolus spam (Elite Flak Cruiser)
-		if (TER_AEOLUS ~= nil) then
-			local numAeolus = FSFC_NumSquadrons(TER_AEOLUS)
-			if (numAeolus >= 8) then
-				ShipDemandSet(TER_AEOLUS, -50)
-			end
-		end
-
-		-- Prevent AWACS spam
-		if (kAWACS ~= nil and (FSFC_NumSquadrons(kAWACS) >= 2)) then
-			ShipDemandSet(kAWACS, -10)
-		end
-
-		-- Lower Argo/Chronos interest and cap at 2 (Repair ships)
-		if (TER_ARGO ~= nil and TER_CHRONOS ~= nil) then
-			local numArgo = FSFC_NumSquadrons(TER_ARGO)
-			local numChronos = FSFC_NumSquadrons(TER_CHRONOS)
-			if (numArgo + numChronos < 2) then
-				ShipDemandAdd(TER_ARGO, 0.5)
-				ShipDemandAdd(TER_CHRONOS, 0.5)
-			else
-				ShipDemandSet(TER_ARGO, -50)
-				ShipDemandSet(TER_CHRONOS, -50)
-			end
-		end
+	-- Write demand snapshot for global telemetry
+	FSFC_WriteDemandSnapshot()
 end
 
 Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Terran

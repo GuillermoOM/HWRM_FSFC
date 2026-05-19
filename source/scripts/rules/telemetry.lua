@@ -112,8 +112,8 @@ function Rule_GlobalTelemetry()
 			if (shipCounts ~= "") then
 				print("[" .. floor(time) .. "s] [DIAG] P" .. i .. " SHIPS | " .. shipCounts)
 			end
-		end
-	end
+		end  -- if Player_IsAlive
+	end  -- for i
 	print("[DIAG] ----------------------------------")
 end
 
@@ -172,4 +172,5 @@ function LogMatchSettings()
 	-- Start auxiliary rules
 	Rule_AddInterval("Rule_TrackEconomy", 1.0)
 	Rule_AddInterval("Rule_CheckVictory", 5.0)
+	Rule_AddInterval("Rule_GlobalTelemetry", 10)
 end

@@ -172,7 +172,7 @@ NewShipType.totalValue = 15
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 13000
+NewShipType.buildCost = 7000
 NewShipType.buildTime = 225
 NewShipType.buildPriorityOrder = 40
 setConcurrentBuildLimit(NewShipType, 0, 2)
@@ -184,8 +184,8 @@ setConcurrentBuildLimit(NewShipType, 0, 2)
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 5000
-NewShipType.secSensorRange = 6000
+NewShipType.prmSensorRange = 6500
+NewShipType.secSensorRange = 7500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

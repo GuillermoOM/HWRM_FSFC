@@ -5,7 +5,7 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = 'SF Astaroth'
-NewShipType.sobDescription = 'Interceptor'
+NewShipType.sobDescription = 'Recon'
 
 --------------------------------------------------
 --- Health and Armour
@@ -161,6 +161,7 @@ NewShipType.DisplayFamily = 'Fighter'
 NewShipType.CombatFamily = 'Fighter_EMPScout'
 NewShipType.AutoFormationFamily = 'Fighter'
 NewShipType.CollisionFamily = 'Small'
+NewShipType.CombatFamily = 'Fighter_EMPScout'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
 
 --------------------------------------------------
@@ -186,14 +187,14 @@ setSupplyValue(NewShipType, 'LayoutFighter', 4.0)
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 8
+NewShipType.fighterValue = 3
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
 NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 8
+NewShipType.totalValue = 3
 
 --------------------------------------------------
 --- Sensors

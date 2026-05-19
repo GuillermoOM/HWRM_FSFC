@@ -12,19 +12,24 @@ AI logic is split across multiple files to allow race-specific tuning while main
 | `ai_build.lua` | Race | Unit-specific demand multipliers and k* variable assignments |
 | `ai_upgrades.lua` | Race | Research priorities and tech tree progression |
 
-## 2. Research Logging Pattern
-To monitor AI progress without flooding `HwRM.log`, we use a throttled/flagged logging system in `data:scripts/custom_scripts/ai_telemetry.lua`.
+## 2. Telemetry and Diagnostic Logging Pattern
+To monitor AI progress, military priority shifts, and tech pacing without scope-crossing bugs, the FSFC mod uses a direct, log-based IPC model in `data:scripts/custom_scripts/ai_telemetry.lua`.
 
-- **FSFC_Log_Research(techName)**: Logs the target name only once per player session using a state table.
-- **FSFC_Log_Demand(label, demand)**: Logs build intent only if demand > 2.5 (High priority).
+Because the HWRM engine isolates AI and SCAR/level scopes, we print formatted, prefix-tagged diagnostics directly to standard output:
+
+- **FSFC_Log_Research(techName, demand)**: Logs a research priority shift, feeding the highest demand value seen in the current cycle into the research accumulator `FSFC_ResearchAccum[techName]`.
+- **FSFC_WriteDemandSnapshot()**: serializes and prints current build demand classes (e.g. `DEMAND | F:2 B:1 Fr:1 ...`) directly from the AI script thread, throttled to once per 10s per player.
+- **FSFC_WriteResearchSnapshot()**: serializes and prints accumulated research demands (e.g. `RESEARCH_DEMAND | CruiserDesign:5.6 Zeus:4.9 ...`) directly from the upgrades loop using a `next()`-based table loop.
 
 ```lua
--- Example implementation in ai_upgrades.lua
+-- Example: Accumulating research demand in ai_upgrades.lua
 if (FSFC_CheckResearch("FighterDesign")) then
-    ResearchDemandSet(getglobal("FighterDesign"), 1.5)
-    FSFC_Log_Research("FighterDesign")
+    local d = 5.0
+    ResearchDemandSet(getglobal("FighterDesign"), d)
+    FSFC_Log_Research("FighterDesign", d)  -- Feeds telemetry accumulator
 end
 ```
+
 
 ## 3. Ship Selection & Era Parity
 FSFC uses `FSFC_PickBestShip(fs2_variant, fs1_variant)` to handle build logic across match eras. This allows the same AI script to function in both FS1 and FS2 scenarios.
@@ -113,8 +118,17 @@ When implementing tactical detection or demand in race scripts:
 - **AFFECTED**: `terran/ai_build.lua`, `vasudan/ai_build.lua`, `shivan/ai_build.lua`.
 
 ## 7. Logistics & Economic Scaling
-To prevent late-game military stagnation, the AI must scale its resource drop-off points alongside its collector count.
+To prevent late-game military stagnation, the AI must scale its resource drop-off points alongside its collector count, and utilize standardized wealth boosts to avoid RU hoarding.
 
 - **Refinery Demand**: AI is forced to build at least 2 resource controllers (`kRefinery`) as the economy scales beyond 5,000 RU.
 - **Threat Thresholds**: In `cpuresource.lua`, the `UnderAttackThreat()` threshold for building drop-offs is relaxed (e.g., from vanilla -75 to -20). This allows the AI to continue industrial growth during minor combat engagements.
 - **Harvester Throttling**: During the first 120 seconds, the AI may slightly penalize `kCollector` demand if no `kScout` is present to ensure early reconnaissance precedes total economic saturation.
+- **Standardized Wealth Boosts**: All factions implement a wealth boost at `10,000` RU. If a faction's RU wallet exceeds `10,000`, the AI injects additional demand for carrier (`kCarrier`), capital class, and combat wings (`eFighter`, `eCorvette`) to ensure high-liquidity spending.
+- **Emergency builder threshold**: The Shivan emergency builder force-build threshold is standardized to `15,000` RU (down from `25,000` RU) to prevent long periods of lockouts before a builder spawns.
+
+## 8. Game Mode Gating & the DoNotGrant Trap
+Gating eras or gameplay-specific tech trees using code-level rules requires specific configuration in `def_research.lua`.
+
+- **The Trap**: Setting `DoNotGrant = 1` on a research item in `def_research.lua` disables the ability for *both* the research interface and the code engine to grant the tech. Calling `Player_GrantResearchOption(playerIndex, node)` will fail silently with `unable to grant (tech)` in the log, permanently lock-out the AI or player from the tech tree, and cause late-game economic stagnation.
+- **The Solution**: Comment out `DoNotGrant = 1` for nodes intended to be unlocked via match presets or code rules. Instead, lock or restrict the option initially at match initialization using `Player_RestrictResearchOption`, and subsequently lift the restriction and grant the option via code when the unlock conditions are met.
+

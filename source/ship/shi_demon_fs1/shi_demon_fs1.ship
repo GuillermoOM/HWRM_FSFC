@@ -172,7 +172,7 @@ NewShipType.totalValue = 15
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 11500
+NewShipType.buildCost = 6000
 NewShipType.buildTime = 215
 NewShipType.buildPriorityOrder = 40
 
@@ -183,8 +183,8 @@ NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 5000
-NewShipType.secSensorRange = 6000
+NewShipType.prmSensorRange = 6500
+NewShipType.secSensorRange = 7500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

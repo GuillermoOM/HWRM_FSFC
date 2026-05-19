@@ -200,8 +200,8 @@ NewShipType.totalValue = 8
 NewShipType.retaliationRange = 4800
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1500
-NewShipType.prmSensorRange = 9000
-NewShipType.secSensorRange = 11000
+NewShipType.prmSensorRange = 3000
+NewShipType.secSensorRange = 4000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

@@ -58,211 +58,125 @@ function CpuBuild_UpdateRaceVariables()
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
 	
 	kCarrier = FSFC_PickBestShip(SHI_DEMON, SHI_DEMON_FS1)
-	kShipyard = kBattleCruiser -- Map shipyard demand to Ravana/Lucifer
 	kResearch = SHI_COMMNODE
-	kAWACS = kScout
+	kAWACS = SHI_COMMNODE
 end
 
 function DetermineDemandWithNoCounterInfo_Shivan()
-	local fighterDemand = 0.4
-	local corvetteDemand = 0.3
+	local fighterDemand = 0.5
+	local corvetteDemand = 0.4
 	local frigateDemand = 0.3
 	
-	if (sg_randFavorShipType < 40) then
-		fighterDemand = fighterDemand + 0.5
-	elseif (sg_randFavorShipType < 70) then
-		corvetteDemand = corvetteDemand + 0.5
+	if (sg_randFavorShipType < 45) then
+		fighterDemand = fighterDemand + 1.0
+	elseif (sg_randFavorShipType < 75) then
+		corvetteDemand = corvetteDemand + 1.0
 	else
-		frigateDemand = frigateDemand + 0.5
+		frigateDemand = frigateDemand + 1.0
 	end
 	
 	FSFC_ShipDemandAddByClass(eFighter, fighterDemand)
 	FSFC_ShipDemandAddByClass(eCorvette, corvetteDemand)
 	FSFC_ShipDemandAddByClass(eFrigate, frigateDemand)
 	
-	FSFC_Log_Demand("Fighters", fighterDemand)
-	FSFC_Log_Demand("Corvettes", corvetteDemand)
-	FSFC_Log_Demand("Frigates", frigateDemand)
-	
-	if (g_LOD >= 1 and kDestroyer ~= nil) then
-		ShipDemandAdd(kDestroyer, 0.25)
+	-- Occasional chance for heavier hulls if tech allows
+	if (g_LOD >= 1) then
+		FSFC_ShipDemandAddByClass(eDestroyer, 0.4)
 	end
-	if (g_LOD >= 2 and kBattleCruiser ~= nil) then
-		ShipDemandAdd(kBattleCruiser, 0.5)
+	if (g_LOD >= 2) then
+		FSFC_ShipDemandAddByClass(eBattleCruiser, 0.3)
 	end
 end
 
 function DetermineSpecialDemand_Shivan()
-	local currentRU = GetRU()
-
-	-- Safety initialization for custom race environment
+	-- Safety initialization
 	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
 	if (player_max == nil) then player_max = 0 end
 
-	-- SHIP COUNTS (Standardized for logic gates)
+	-- 1. Gating heavy ships by time (Vanilla style)
+	if (gameTime() < 120) then
+		FSFC_ShipDemandAddByClass(eDestroyer, -10)
+		FSFC_ShipDemandAddByClass(eBattleCruiser, -10)
+		FSFC_ShipDemandAddByClass(eMotherShip, -10)
+	end
+
+	-- 2. Resource Management (Scaled for FSFC Costs)
 	local numCollectors = FSFC_NumSquadrons(kCollector)
-	local numRefineries = FSFC_NumSquadrons(kRefinery)
-	local numCarriers = FSFC_NumSquadrons(kCarrier)
-	local numScouts = FSFC_NumSquadrons(kScout)
-	local numShipyards = FSFC_NumSquadrons(kShipyard)
-	local numFSup = FSFC_NumSquadrons(kFighterSuperiority)
-	local numCain = FSFC_NumSquadrons(kCruiser)
-	local numLilith = FSFC_NumSquadrons(kHeavyCruiser)
-	local numJugg = FSFC_NumSquadrons(SHI_SATHANAS)
+	local collectorGoal = 10
 	
-	-- PRODUCTION ESCALATION (User Strategy)
-	if (numCollectors < 12) then
-		ShipDemandAdd(kCollector, 1.5)
+	-- Scale economy with tech
+	if (FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+		collectorGoal = 28
+	elseif (FSFC_IsResearchDone("CruiserDesign") == 1) then
+		collectorGoal = 18
 	end
 	
-	if (numRefineries < 1) then
-		ShipDemandAdd(kRefinery, 1.5)
-	elseif (numRefineries < 2 and currentRU > 1000) then
-		ShipDemandAdd(kRefinery, 1.2) -- Aggressive 2nd refinery for economic parity
+	if (numCollectors < collectorGoal) then
+		local demand = 0.5
+		if (numCollectors < 6) then
+			demand = 4.0 -- Emergency start
+		elseif (numCollectors < 12) then
+			demand = 2.0 -- Solid base
+		end
+		FSFC_ShipDemandAdd(kCollector, demand, "shi_azrael")
 	end
 	
-	if (numCarriers < 1 and currentRU > 6000) then
-		ShipDemandAdd(kCarrier, 3.0) -- Gentle rush for first SD Demon
-		FSFC_Log_Demand("CarrierRush", 3.0)
+	-- Refinery scaling (1 per 7 resourcers)
+	local numResourcers = numCollectors + FSFC_NumSquadrons(kRefinery)
+	if (numResourcers > 7 and FSFC_NumSquadrons(kRefinery) * 7 < numResourcers) then
+		FSFC_ShipDemandAdd(kRefinery, 1.5, "shi_rahu")
 	end
 
-	-- SHIVAN SWARM LOGIC (Aggressive Tiering)
-	local fighterTarget = 30
-	local bomberTarget = 20
-	local carrierTarget = 4
-	local capDemand = 0.8
-	local fighterDemand = 1.8
-	local bomberDemand = 1.5
+	-- 3. Production Escalation (Builders)
+	local numBuilders = FSFC_NumSquadrons(kCarrier)
+	if (numBuilders < 4) then
+		local demand = 3.0
+		if (numBuilders > 1) then
+			demand = 1.5
+		end
+		FSFC_ShipDemandAdd(kCarrier, demand)
+	end
 
-	-- Strategic Analysis: Are the Terrans "Going Big"?
-	local enemyCapCount = 0
-	if (s_enemyIndex ~= -1) then
-		enemyCapCount = (PlayersUnitTypeCount(s_enemyIndex, player_max, eFrigate) + PlayersUnitTypeCount(s_enemyIndex, player_max, eCapital))
-	end
-	
-	if (currentRU > 5000) then
-		fighterTarget = 80
-		bomberTarget = 60
-		carrierTarget = 6
-		capDemand = 2.5
-		-- Throttle fighters if we need capitals to counter enemy cruisers
-		if (enemyCapCount > 10) then
-			fighterDemand = 1.0 -- Don't drop too low, need screens
-			capDemand = 4.0
-			bomberDemand = 3.5 -- Shivans should swarm with bombers
+	-- Wealth Boost (Spend excess RUs)
+	if (GetRU() > 15000) then
+		if (s_ru_high_time == nil) then
+			s_ru_high_time = gameTime()
 		end
-		-- High RU: The Shivan Swarm
-		if (currentRU > 8000) then
-			fighterTarget = 120
-			fighterDemand = 2.5
+		if (gameTime() - s_ru_high_time > 300) then
+			FSFC_ShipDemandAdd(kCruiser, 4.0, "shi_cruiser_force")
+			FSFC_ShipDemandAdd(kBattleCruiser, 4.0, "shi_battlecruiser_force")
+			FSFC_ShipDemandAdd(kCarrier, 4.5, "shi_builder_force")
 		end
+	else
+		s_ru_high_time = nil
 	end
+
+	if (GetRU() > 10000) then
+		FSFC_ShipDemandAddByClass(eFighter, 1.5)
+		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
+		FSFC_ShipDemandAdd(kCarrier, 1.0)
+		FSFC_ShipDemandAdd(kBattleCruiser, 1.0)
+	end
+
+	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
+	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
+	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
+	if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
 	
-	-- Recon Doctrine: High persistence scouting
-	if (kScout ~= nil) then
-		if (numScouts < 2) then
-			ShipDemandAdd(kScout, 2.0)
-			FSFC_Log_Demand("Scouts", 2.0)
-			-- Early game queue management: Throttle harvesters slightly if we have NO scouts
-			if (gameTime() < 120 and kCollector ~= nil) then
-				ShipDemandAdd(kCollector, -1.0)
-			end
-		elseif (numScouts < 4) then
-			ShipDemandAdd(kScout, 1.0)
+	-- 5. Elite/Endgame Logic (The Sathanas)
+	if (SHI_SATHANAS ~= nil and FSFC_IsResearchDone("Sathanas") == 1) then
+		if (GetRU() > 20000) then
+			FSFC_ShipDemandAdd(SHI_SATHANAS, 1.0, "shi_sathanas")
 		end
 	end
 
-	-- Capital Supremacy
-	if (currentRU > 40000) then
-		fighterTarget = 180
-		bomberTarget = 120
-		carrierTarget = 10
-		capDemand = 4.5
+	-- 6. Support/Utility
+	if (kResearch ~= nil and FSFC_NumSquadrons(kResearch) < 2) then
+		FSFC_ShipDemandAdd(kResearch, 0.5, "shi_commnode")
 	end
 
-	-- Panic Spending Mode (The Swarm never stops)
-	if (currentRU > 120000) then
-		fighterTarget = 300
-		bomberTarget = 280
-		carrierTarget = 18
-		capDemand = 7.0
-		fighterDemand = 2.5
-	end
-
-	-- Elite Suppression: Throttle Dragon (FS1 Elite) if we lack backbone
-	local suppression = 1.0
-	if (kFighterSuperiority == SHI_DRAGON and numFSup < 12) then
-		suppression = 0.7 -- Softened suppression to maintain fleet backbone
-	end
-
-	-- Class-Based Fighter Doctrine
-	FSFC_ShipDemandAddByClass(eFighter, fighterDemand)
-	-- Minor nudges for era-appropriate best ships
-	if (kFighterSuperiority ~= nil) then ShipDemandAdd(kFighterSuperiority, 0.2) end
-	if (kFighterInterceptor ~= nil) then ShipDemandAdd(kFighterInterceptor, 0.1) end
-	
-	-- Diversified Shivan Swarm: Using Class Demand
-	FSFC_ShipDemandAddByClass(eCorvette, 1.0) -- General bomber demand
-	if (kBomberHeavy ~= nil) then
-		ShipDemandAdd(kBomberHeavy, 0.5) -- Nudge for Seraphim/Nephilim
-	end
-
-	if (kCarrier ~= nil and FSFC_NumSquadrons(kCarrier) < carrierTarget) then
-		local demonDemand = 1.0
-		if (capDemand > 1.5) then
-			demonDemand = capDemand * 0.8
-		end
-		if (currentRU > 20000) then
-			demonDemand = demonDemand + 1.0
-		end
-		ShipDemandAdd(kCarrier, demonDemand)
-	end
-
-	-- Persistent Destroyer/Battlecruiser demand
-	if (kDestroyer ~= nil) then ShipDemandAdd(kDestroyer, capDemand) end
-	
-	-- Shipyard Escalation: Build more production ships if rich
-	if (currentRU > 30000 and numShipyards < 2) then
-		ShipDemandAdd(kShipyard, 2.0)
-	elseif (currentRU > 60000 and numShipyards < 4) then
-		ShipDemandAdd(kShipyard, 1.0)
-	end
-	
-	-- Shivan Cruiser Backbone (Using Class Demand)
-	FSFC_ShipDemandAddByClass(eFrigate, 1.5)
-	if (kCruiser ~= nil) then ShipDemandAdd(kCruiser, 0.5) end
-	if (kHeavyCruiser ~= nil) then ShipDemandAdd(kHeavyCruiser, 0.4) end
-	if (kAdvancedCruiser ~= nil) then ShipDemandAdd(kAdvancedCruiser, 0.3) end
-
-	if (enemyCapCount > 8) then
-		-- Force cruiser response to match Terran Deimos/Fenris
-		FSFC_ShipDemandAddByClass(eFrigate, capDemand * 1.5)
-		FSFC_Log_Demand("Cruiser Response", capDemand * 1.5)
-	end
-	
-	-- Safety gate for the ultra-expensive Lucifer (21,500 RUs)
-	if (kBattleCruiser ~= nil and kBattleCruiser == SHI_LUCIFER and currentRU < 30000) then
-		ShipDemandSet(SHI_LUCIFER, -10)
-	end
-
-	-- Juggernaut Doctrine: The Sathanas
-	if (SHI_SATHANAS ~= nil and FSFC_CheckResearch(SATHANAS)) then
-		if (numJugg < 1 and currentRU > 60000) then
-			ShipDemandAdd(SHI_SATHANAS, 10.0)
-			FSFC_Log_Demand("Sathanas", 10.0)
-		elseif (numJugg < 2 and currentRU > 120000) then
-			ShipDemandAdd(SHI_SATHANAS, 5.0)
-		end
-	end
-
-	if (capDemand > 2.0) then
-		FSFC_Log_Demand("Capitals", capDemand)
-	end
-	
-	-- Prevent Comm Node spam (limit to 2 for Research/AWACS)
-	if (SHI_COMMNODE ~= nil and (FSFC_NumSquadrons(SHI_COMMNODE) >= 2)) then
-		ShipDemandSet(SHI_COMMNODE, -10)
-	end
+	-- Write demand snapshot for global telemetry
+	FSFC_WriteDemandSnapshot()
 end
 
 Proc_DetermineDemandWithNoCounterInfo = DetermineDemandWithNoCounterInfo_Shivan

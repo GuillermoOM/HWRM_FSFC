@@ -1,4 +1,4 @@
-dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
+local content = [[dofilepath("data:scripts/custom_scripts/ai_telemetry.lua")
 aitrace("LOADING SHIVAN UPGRADE INFO")
 
 -- Legacy Compatibility Layer for Vanilla AI Scripts
@@ -83,6 +83,7 @@ rt_shivan_tech = {
 	
 	{ id = "CAPITALSHIPDESIGN", priority = 1.1, name = "CapitalShipDesign", class = eCapital },
 	{ id = "MOLOCH", priority = 1.0, name = "Moloch", class = eCapital, shipID = SHI_MOLOCH },
+	{ id = "DEMON", priority = 1.8, name = "Demon", class = eCapital, shipID = SHI_DEMON },
 	{ id = "RAVANA", priority = 1.5, name = "Ravana", class = eCapital, shipID = SHI_RAVANA },
 	{ id = "LUCIFER", priority = 1.0, name = "Lucifer", class = eCapital, shipID = SHI_LUCIFER },
 	{ id = "SATHANAS", priority = 1.0, name = "Sathanas", class = eCapital, shipID = SHI_SATHANAS },
@@ -130,23 +131,11 @@ function DoResearchTechDemand_Shivan()
 	local frigateDemand = ShipDemandMaxByClass(eFrigate) * 2
 	local capitalDemand = ShipDemandMaxByClass(eCapital) * 2.5
 	
-	-- Design Bases (always log these — they fire even with 0 fleet demand)
-	if (FSFC_CheckResearch("FIGHTERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), fighterDemand + 1.1)
-		FSFC_Log_Research("FighterDesign", fighterDemand + 1.1)
-	end
-	if (FSFC_CheckResearch("BOMBERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), bomberDemand + 1.1)
-		FSFC_Log_Research("BomberDesign", bomberDemand + 1.1)
-	end
-	if (FSFC_CheckResearch("CRUISERDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("CRUISERDESIGN"), frigateDemand + 1.1)
-		FSFC_Log_Research("CruiserDesign", frigateDemand + 1.1)
-	end
-	if (FSFC_CheckResearch("CAPITALSHIPDESIGN")) then
-		ResearchDemandSet(FSFC_ResolveID("CAPITALSHIPDESIGN"), capitalDemand + 1.1)
-		FSFC_Log_Research("CapShipDesign", capitalDemand + 1.1)
-	end
+	-- Design Bases
+	if (FSFC_CheckResearch("FIGHTERDESIGN")) then ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), fighterDemand + 1.1) end
+	if (FSFC_CheckResearch("BOMBERDESIGN")) then ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), bomberDemand + 1.1) end
+	if (FSFC_CheckResearch("CRUISERDESIGN")) then ResearchDemandSet(FSFC_ResolveID("CRUISERDESIGN"), frigateDemand + 1.1) end
+	if (FSFC_CheckResearch("CAPITALSHIPDESIGN")) then ResearchDemandSet(FSFC_ResolveID("CAPITALSHIPDESIGN"), capitalDemand + 1.1) end
 
 	-- Iterate tech table
 	local m = getn(rt_shivan_tech)
@@ -169,9 +158,6 @@ function DoResearchTechDemand_Shivan()
 
 	-- E. Utility
 	FSFC_ProcessResearchTable(rt_shivan_utility, 1.0)
-
-	-- Write research snapshot after accumulator is fully populated this cycle
-	FSFC_WriteResearchSnapshot()
 end
 
 function DoUpgradeDemand_Shivan()
@@ -183,9 +169,11 @@ function DoUpgradeDemand_Shivan()
 	if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
 		ResearchDemandAdd_Shivan(DROPOFFHP, numRefinery * .1)
 	end
-
-	-- (snapshot moved to end of DoResearchTechDemand_Shivan)
 end
 
 DoUpgradeDemand = DoUpgradeDemand_Shivan
 DoResearchTechDemand = DoResearchTechDemand_Shivan
+]]
+local f = io.open("source/scripts/races/shivan/scripts/ai_upgrades.lua", "w")
+f:write(content)
+f:close()

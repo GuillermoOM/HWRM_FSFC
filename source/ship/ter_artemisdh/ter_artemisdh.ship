@@ -183,7 +183,7 @@ NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 2000
 NewShipType.prmSensorRange = 4000
-NewShipType.secSensorRange = 10000
+NewShipType.secSensorRange = 5000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

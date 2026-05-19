@@ -186,8 +186,8 @@ NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 4000
-NewShipType.secSensorRange = 5000
+NewShipType.prmSensorRange = 3500
+NewShipType.secSensorRange = 4500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

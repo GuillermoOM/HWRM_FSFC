@@ -25,6 +25,10 @@ if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = getglobal("cpupla
 if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = getglobal("cpuplayers_dynamic") or -1 end
 if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = getglobal("cpuplayers_defensive") or -1 end
 
+function NumSquadrons_Vasudan(id)
+	return FSFC_NumSquadrons(id)
+end
+
 function ResearchDemandSet_Vasudan(id_or_name, demand)
 	local id = FSFC_ResolveID(id_or_name)
 	if (id) then
@@ -39,177 +43,149 @@ function ResearchDemandAdd_Vasudan(id_or_name, demand)
 	end
 end
 
+-- 1. ERA INDEPENDENT TECH
+rt_vasudan_core = {
+	{ id = "FS1", priority = 4.0, name = "FS1" },
+	{ id = "FS2", priority = 4.0, name = "FS2" },
+	{ id = "TacticsDynamic", priority = 3.0, name = "TacticsDynamic" },
+}
+
+-- 2. FS1 ERA SHIP UNLOCKS
+rt_vasudan_fs1 = {
+	-- Fighters
+	{ id = "HORUS", priority = 1.0, name = "Horus", class = eFighter, shipID = VAS_HORUS },
+	{ id = "SETH", priority = 1.1, name = "Seth", class = eFighter, shipID = VAS_SETH },
+	{ id = "THOTH", priority = 1.2, name = "Thoth", class = eFighter, shipID = VAS_THOTH },
+	-- Bombers
+	{ id = "OSIRIS", priority = 1.0, name = "Osiris", class = eCorvette, shipID = VAS_OSIRIS },
+	{ id = "Amun", priority = 1.3, name = "Amun", class = eCorvette, shipID = VAS_AMUN },
+}
+
+-- 3. FS2 ERA SHIP UNLOCKS
+rt_vasudan_fs2 = {
+	-- Fighters
+	{ id = "PTAH", priority = 1.0, name = "Ptah", class = eFighter, shipID = VAS_PTAH },
+	{ id = "SERAPIS", priority = 1.3, name = "Serapis", class = eFighter, shipID = VAS_SERAPIS },
+	{ id = "TAURET", priority = 1.5, name = "Tauret", class = eFighter, shipID = VAS_TAURET },
+	-- Bombers
+	{ id = "BAKHA", priority = 1.2, name = "Bakha", class = eCorvette, shipID = VAS_BAKHA },
+	{ id = "SEHKMET", priority = 1.5, name = "Sehkmet", class = eCorvette, shipID = VAS_SEHKMET },
+}
+
+-- 4. CAPITAL/CRUISER TECH (Class-shared)
+rt_vasudan_tech = {
+	{ id = "CRUISERDESIGN", priority = 1.1, name = "CruiserDesign", class = eFrigate },
+	{ id = "ATEN", priority = 1.0, name = "Aten", class = eFrigate, shipID = VAS_ATEN },
+	{ id = "MENTU", priority = 1.0, name = "Mentu", class = eFrigate, shipID = VAS_MENTU },
+	{ id = "SOBEK", priority = 1.0, name = "Sobek", class = eFrigate, shipID = VAS_SOBEK },
+	
+	{ id = "CAPITALSHIPDESIGN", priority = 1.1, name = "CapitalShipDesign", class = eCapital },
+	{ id = "TYPHON", priority = 1.0, name = "Typhon", class = eCapital, shipID = VAS_TYPHON },
+	{ id = "INSTALLATION", priority = 0.5, name = "Installation", class = eCapital },
+	{ id = "HATSHEPSUT", priority = 1.0, name = "Hatshepsut", class = eCapital, shipID = VAS_HATSHEPSUT },
+	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalDesign", class = eCapital },
+	{ id = "COLOSSUS", priority = 1.0, name = "Colossus", class = eCapital, shipID = VAS_COLOSSUS },
+}
+
+-- 5. UTILITY/SPECIAL
+rt_vasudan_utility = {
+	{ id = "SENTRYGUN", priority = 0.5, name = "SentryGun" },
+	{ id = "SENTRYANDMINEDEPLOYER", priority = 0.5, name = "SentryAndMineDeployer" },
+	{ id = "REPAIRSATIS", priority = 0.5, name = "RepairSatis", shipID = VAS_SATIS },
+	{ id = "REPAIRBAST", priority = 0.5, name = "RepairBast", shipID = VAS_BAST },
+}
+
 function DoResearchTechDemand_Vasudan()
-	-- 1. ERA SELECTION
-	local eraDemand = 4.0
-	if (FSFC_CheckResearch(FS1)) then
-		ResearchDemandSet_Vasudan(FS1, eraDemand)
-		FSFC_Log_Research("FS1", eraDemand)
-	end
-	if (FSFC_CheckResearch(FS2)) then
-		ResearchDemandSet_Vasudan(FS2, eraDemand)
-		FSFC_Log_Research("FS2", eraDemand)
-	end
+	-- A. Core Demand (Eras and Tactics)
+	FSFC_ProcessResearchTable(rt_vasudan_core, 1.0)
 
-	-- 2. TACTICS
-	if (FSFC_CheckResearch(CPUPLAYERS_DYNAMIC)) then
-		ResearchDemandSet_Vasudan(CPUPLAYERS_DYNAMIC, 3.0)
-		FSFC_Log_Research("TacticsDynamic", 3.0)
+	-- B. Era-Specific Ship Demand
+	local fighterDemand = ShipDemandMaxByClass(eFighter) * 2
+	local bomberDemand = ShipDemandMaxByClass(eCorvette) * 2
+	
+	local tbl_ships = rt_vasudan_fs1
+	if (FSFC_IsResearchDone("FS2") == 1) then
+		tbl_ships = rt_vasudan_fs2
 	end
 
-	local fighterdemand = ShipDemandMaxByClass(eFighter) * 2
-	if (fighterdemand > 0) then
-		print("[AI_DIAG] P" .. s_playerIndex .. " | WANT | FighterClass | Demand: " .. fighterdemand)
-		if (FSFC_CheckResearch(FIGHTERDESIGN)) then
-			ResearchDemandSet_Vasudan(FIGHTERDESIGN, fighterdemand + 1.1)
-			FSFC_Log_Research("FighterDesign", fighterdemand + 1.1)
-		end
-		-- Era-aware parallel research
-		if (FSFC_CheckResearch(HORUS)) then
-			ResearchDemandSet_Vasudan(HORUS, fighterdemand + 1.0)
-			FSFC_Log_Research("Horus", fighterdemand + 1.0)
-		end
-		if (FSFC_CheckResearch(SETH)) then
-			ResearchDemandSet_Vasudan(SETH, fighterdemand + 1.1)
-			FSFC_Log_Research("Seth", fighterdemand + 1.1)
-		end
-		if (FSFC_CheckResearch(THOTH)) then
-			ResearchDemandSet_Vasudan(THOTH, fighterdemand + 1.2)
-			FSFC_Log_Research("Thoth", fighterdemand + 1.2)
-		end
-		if (FSFC_CheckResearch(PTAH)) then
-			ResearchDemandSet_Vasudan(PTAH, fighterdemand + 1.0)
-			FSFC_Log_Research("Ptah", fighterdemand + 1.0)
-		end
-		if (FSFC_CheckResearch(SERAPIS)) then
-			ResearchDemandSet_Vasudan(SERAPIS, fighterdemand + 1.3)
-			FSFC_Log_Research("Serapis", fighterdemand + 1.3)
-		end
-		if (FSFC_CheckResearch(TAURET)) then
-			ResearchDemandSet_Vasudan(TAURET, fighterdemand + 1.5)
-			FSFC_Log_Research("Tauret", fighterdemand + 1.5)
-		end
-
-		-- Recon Doctrine: Scouts
-		if (FSFC_CheckResearch(HORUS)) then
-			ResearchDemandSet_Vasudan(HORUS, fighterdemand + 2.0)
-			FSFC_Log_Research("Horus", fighterdemand + 2.0)
-		end
-		if (FSFC_CheckResearch(PTAH)) then
-			ResearchDemandSet_Vasudan(PTAH, fighterdemand + 2.0)
-			FSFC_Log_Research("Ptah", fighterdemand + 2.0)
+	local n = getn(tbl_ships)
+	for i=1, n do
+		local item = tbl_ships[i]
+		local baseDemand = 0
+		if (item.class == eFighter) then baseDemand = fighterDemand
+		elseif (item.class == eCorvette) then baseDemand = bomberDemand end
+		
+		if (baseDemand > 0) then
+			local id = FSFC_CheckResearch(item.id, item.shipID)
+			if (id) then
+				ResearchDemandSet(id, baseDemand + item.priority)
+				FSFC_Log_Research(item.name, baseDemand + item.priority)
+			else
+				FSFC_Log_Completed(item.id or item.name, item.name)
+			end
 		end
 	end
 
-	local bomberdemand = ShipDemandMaxByClass(eCorvette) * 2
-	if (bomberdemand > 0) then
-		if (FSFC_CheckResearch(BOMBERDESIGN)) then
-			ResearchDemandSet_Vasudan(BOMBERDESIGN, bomberdemand + 1.1)
-			FSFC_Log_Research("BomberDesign", bomberdemand + 1.1)
-		end
-		-- Era-aware parallel research
-		if (FSFC_CheckResearch(OSIRIS)) then
-			ResearchDemandSet_Vasudan(OSIRIS, bomberdemand + 1.0)
-			FSFC_Log_Research("Osiris", bomberdemand + 1.0)
-		end
-		if (FSFC_CheckResearch(BAKHA)) then
-			ResearchDemandSet_Vasudan(BAKHA, bomberdemand + 1.2)
-			FSFC_Log_Research("Bakha", bomberdemand + 1.2)
-		end
-		if (FSFC_CheckResearch(SEHKMET)) then
-			ResearchDemandSet_Vasudan(SEHKMET, bomberdemand + 1.5)
-			FSFC_Log_Research("Sehkmet", bomberdemand + 1.5)
-		end
-		-- Amun is often an upgrade or variant, ensure it's prioritized if available
-		if (FSFC_CheckResearch("Amun")) then
-			ResearchDemandSet_Vasudan("Amun", bomberdemand + 1.3)
+	-- C. Capital and Cruiser Tech
+	local frigateDemand = ShipDemandMaxByClass(eFrigate) * 2
+	local capitalDemand = ShipDemandMaxByClass(eCapital) * 2.5
+	
+	-- Design Bases (always log these — they fire even with 0 fleet demand)
+	if (FSFC_CheckResearch("FIGHTERDESIGN")) then
+		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), fighterDemand + 1.1)
+		FSFC_Log_Research("FighterDesign", fighterDemand + 1.1)
+	end
+	if (FSFC_CheckResearch("BOMBERDESIGN")) then
+		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), bomberDemand + 1.1)
+		FSFC_Log_Research("BomberDesign", bomberDemand + 1.1)
+	end
+	if (FSFC_CheckResearch("CRUISERDESIGN")) then
+		ResearchDemandSet(FSFC_ResolveID("CRUISERDESIGN"), frigateDemand + 1.1)
+		FSFC_Log_Research("CruiserDesign", frigateDemand + 1.1)
+	end
+	if (FSFC_CheckResearch("CAPITALSHIPDESIGN")) then
+		ResearchDemandSet(FSFC_ResolveID("CAPITALSHIPDESIGN"), capitalDemand + 1.1)
+		FSFC_Log_Research("CapShipDesign", capitalDemand + 1.1)
+	end
+
+	-- Iterate tech table
+	local m = getn(rt_vasudan_tech)
+	for i=1, m do
+		local item = rt_vasudan_tech[i]
+		local baseDemand = 0
+		if (item.class == eFrigate) then baseDemand = frigateDemand
+		elseif (item.class == eCapital) then baseDemand = capitalDemand end
+		
+		if (baseDemand > 0) then
+			local id = FSFC_CheckResearch(item.id, item.shipID)
+			if (id) then
+				ResearchDemandSet(id, baseDemand + item.priority)
+				FSFC_Log_Research(item.name, baseDemand + item.priority)
+			else
+				FSFC_Log_Completed(item.id or item.name, item.name)
+			end
 		end
 	end
 
-	local cruiserdemand = ShipDemandMaxByClass(eFrigate) * 2
-	if (cruiserdemand > 0) then
-		if (FSFC_CheckResearch(CRUISERDESIGN)) then
-			ResearchDemandSet_Vasudan(CRUISERDESIGN, cruiserdemand + 1.1)
-			FSFC_Log_Research("CruiserDesign", cruiserdemand + 1.1)
-		end
-		if (FSFC_CheckResearch(ATEN)) then
-			ResearchDemandSet_Vasudan(ATEN, cruiserdemand + 1.0)
-			FSFC_Log_Research("Aten", cruiserdemand + 1.0)
-		end
-		if (FSFC_CheckResearch(MENTU)) then
-			ResearchDemandSet_Vasudan(MENTU, cruiserdemand + 1.0)
-			FSFC_Log_Research("Mentu", cruiserdemand + 1.0)
-		end
-		if (FSFC_CheckResearch(SOBEK)) then
-			ResearchDemandSet_Vasudan(SOBEK, cruiserdemand + 1.0)
-			FSFC_Log_Research("Sobek", cruiserdemand + 1.0)
-		end
-	end
+	-- E. Utility
+	FSFC_ProcessResearchTable(rt_vasudan_utility, 1.0)
 
-	local capitaldemand = ShipDemandMaxByClass(eCapital) * 2.5
-	-- Research Trap Prevention: Throttle demand if we already have the base capital tech
-	if (FSFC_IsResearchDone(CAPITALSHIPDESIGN) == 1) then
-		capitaldemand = capitaldemand * 0.5
-	end
-	if (capitaldemand > 0) then
-		if (FSFC_CheckResearch(CAPITALSHIPDESIGN)) then
-			ResearchDemandSet_Vasudan(CAPITALSHIPDESIGN, capitaldemand + 1.1)
-			FSFC_Log_Research("CapitalShipDesign", capitaldemand + 1.1)
-		end
-		if (FSFC_CheckResearch(TYPHON)) then
-			ResearchDemandSet_Vasudan(TYPHON, capitaldemand + 1.0)
-			FSFC_Log_Research("Typhon", capitaldemand + 1.0)
-		end
-		if (FSFC_CheckResearch(INSTALLATION)) then
-			ResearchDemandSet_Vasudan(INSTALLATION, capitaldemand + 0.5)
-			FSFC_Log_Research("Installation", capitaldemand + 0.5)
-		end
-		if (FSFC_CheckResearch(HATSHEPSUT)) then
-			ResearchDemandSet_Vasudan(HATSHEPSUT, capitaldemand + 1.0)
-			FSFC_Log_Research("Hatshepsut", capitaldemand + 1.0)
-		end
-		if (FSFC_CheckResearch(SUPERCAPITALSHIPDESIGN)) then
-			ResearchDemandSet_Vasudan(SUPERCAPITALSHIPDESIGN, capitaldemand + 1.0)
-			FSFC_Log_Research("SuperCapitalDesign", capitaldemand + 1.0)
-		end
-		if (FSFC_CheckResearch(COLOSSUS)) then
-			ResearchDemandSet_Vasudan(COLOSSUS, capitaldemand + 1.0)
-			FSFC_Log_Research("Colossus", capitaldemand + 1.0)
-		end
-	end
-
-	-- Utility
-	-- Utility
-	if (FSFC_CheckResearch(SENTRYGUN)) then
-		ResearchDemandSet_Vasudan(SENTRYGUN, 0.5)
-		FSFC_Log_Research("SentryGun", 0.5)
-	end
-	if (FSFC_CheckResearch(SENTRYANDMINEDEPLOYER)) then
-		ResearchDemandSet_Vasudan(SENTRYANDMINEDEPLOYER, 0.5)
-		FSFC_Log_Research("SentryAndMineDeployer", 0.5)
-	end
-	if (FSFC_CheckResearch(REPAIRSATIS)) then
-		ResearchDemandSet_Vasudan(REPAIRSATIS, 0.5)
-		FSFC_Log_Research("RepairSatis", 0.5)
-	end
-	if (FSFC_CheckResearch(REPAIRBAST)) then
-		ResearchDemandSet_Vasudan(REPAIRBAST, 0.5)
-		FSFC_Log_Research("RepairBast", 0.5)
-	end
+	-- Write research snapshot after accumulator is fully populated this cycle
+	FSFC_WriteResearchSnapshot()
 end
 
 function DoUpgradeDemand_Vasudan()
 	if (s_militaryStrength > 10 or g_LOD == 0) then
-		local numCollectors = FSFC_NumSquadrons(kCollector)
+		local numCollectors = NumSquadrons_Vasudan(kCollector)
 		if (numCollectors > 0 and COLLECTORHP ~= nil and FSFC_CheckResearch(COLLECTORHP)) then
 			ResearchDemandAdd_Vasudan(COLLECTORHP, numCollectors * .1)
 		end
-		local numRefinery = FSFC_NumSquadrons(kRefinery)
+		local numRefinery = NumSquadrons_Vasudan(kRefinery)
 		if (numRefinery > 0 and DROPOFFHP ~= nil and FSFC_CheckResearch(DROPOFFHP)) then
 			ResearchDemandAdd_Vasudan(DROPOFFHP, numRefinery * .1)
 		end
 	end
-	local numDestroyers = FSFC_NumSquadrons(kDestroyer)
+	local numDestroyers = NumSquadrons_Vasudan(kDestroyer)
 	if (numDestroyers > 0) then
 		if (FSFC_CheckResearch(SOBEKARMOR)) then
 			ResearchDemandAdd_Vasudan(SOBEKARMOR, numDestroyers * 2)
@@ -220,6 +196,8 @@ function DoUpgradeDemand_Vasudan()
 			FSFC_Log_Research("SobekSprint", numDestroyers * 1.5)
 		end
 	end
+
+	-- (snapshot moved to end of DoResearchTechDemand_Vasudan)
 end
 
 DoUpgradeDemand = DoUpgradeDemand_Vasudan

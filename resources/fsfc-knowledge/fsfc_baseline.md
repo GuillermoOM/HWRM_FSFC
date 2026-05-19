@@ -79,7 +79,23 @@ FreeSpace ship classes are "shifted" when mapped to the Homeworld engine to ensu
 | **Destroyer / Carrier**           | `eDestroyer`     | Mobile Base / Heavy Assault | Hecate, Orion, Typhon, Demon, Ravana |
 | **Super Destroyer / Juggernauts** | `eBattleCruiser` | Flagship / Endgame Siege    | Hades, Colossus, Lucifer, Sathanas   |
 
-## 5. Key Ships by Era (AI Logic Targets)
+## 5. Sensor Range Baseline
+
+FSFC ship sensor ranges are synchronized with HWRM vanilla standards to ensure relative parity in reconnaissance.
+
+| FSFC Role | HWRM Equivalent | Primary Range | Secondary Range |
+| :--- | :--- | :--- | :--- |
+| **Fighters** | `eFighter` | 3000 | 4000 |
+| **Bombers** | `eCorvette` | 4000 | 5000 |
+| **Scouts** | `eFighter` (Scout) | 9000 | 11000 |
+| **Cruisers / Frigates** | `eFrigate` | 5000 | 6000 |
+| **Capitals / Destroyers** | `eDestroyer` | 6500 | 7500 |
+| **Super Capitals** | `eBattleCruiser` | 8000 | 10000 |
+| **AWACS** | Sensor Array | 12000 | 17000 |
+| **Utility** | Resource Unit | 3500 | 4500 |
+| **Installations** | Mothership | 10000 | 18000 |
+
+## 6. Key Ships by Era (AI Logic Targets)
 
 The AI dynamically targets these specific ships based on which Era is active in the game rules.
 

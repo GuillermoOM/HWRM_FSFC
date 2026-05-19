@@ -107,3 +107,39 @@ In `source/scripts/races/[race]/scripts/ai_build.lua`, standard AI variables lik
 In `.wepn` files, the interaction between `fireTime` and `burstFireTime` is fragile.
 - **BUG**: Setting `fireTime = 0` while having a non-zero `burstFireTime` can cause the engine to miscalculate the cooling cycle, resulting in infinite or glitchy high fire rates (the "Death Ray" effect).
 - **Canonical**: Always set a non-zero `fireTime` (minimum `0.1s`) for all weapons, even if they use burst logic.
+
+## 9. Lua 4.0 Closures Are NOT Supported
+
+**CRITICAL**: Lua 4.0 does **not** support closures. Any anonymous function (e.g., a `foreach` callback) **cannot read or write `local` variables declared in the enclosing scope** (upvalues). This causes a load-time crash:
+
+```
+parameter: cannot access a variable in outer scope;
+  last token read: `sorted' at line 164 in string ""
+```
+
+This crash happens inside `CpuBuild_Init` or `CpuResearch_Init`, which means all `FSFC_*` functions defined after the crash point will be nil, causing cascading errors like `attempt to call global 'FSFC_PickBestShip' (a nil value)`.
+
+### Broken Pattern (CRASH)
+```lua
+local sorted = {}
+foreach(myTable, function(key, value)
+    tinsert(sorted, value)   -- ← captures 'sorted' upvalue → CRASH
+end)
+```
+
+### Fix: Use `next()` Instead of `foreach`
+```lua
+local sorted = {}
+local k = next(myTable)
+while (k ~= nil) do
+    local v = myTable[k]
+    -- work with k, v here — no upvalue capture
+    tinsert(sorted, v)
+    k = next(myTable, k)
+end
+```
+
+`foreach` is safe **only** when its callback does not touch any outer `local` variable.
+
+See: `.agents/skills/lua_40_closure_restriction/no_upvalue_capture.md`
+

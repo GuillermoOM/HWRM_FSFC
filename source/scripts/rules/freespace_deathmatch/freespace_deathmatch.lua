@@ -11,7 +11,6 @@ dofilepath("data:scripts/rules/telemetry.lua")
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
 	Rule_Add("RandomMusicRuleFS2")
-	Rule_AddInterval("Rule_GlobalTelemetry", 15)
 	MPRestrict()
 	research = GetGameSettingAsNumber("research")
 	era_setting = GetGameSettingAsNumber("era") -- 0: FS1, 1: FS2, 2: Both

@@ -81,6 +81,30 @@ if (UnderAttackThreat() > -20) then
 end
 ```
 
+## Pattern: Standardized Wealth Boosts & Emergency Thresholds
+To prevent high-tier builder lockouts and resource hoarding, all factions implement consistent wealth boosts and reasonable emergency limits:
+
+1. **The 10,000 RU Wealth Boost**: If the AI's wallet exceeds `10,000` RU, it must inject strong positive demand for fleet-expansion classes to drain the excess resources:
+```lua
+if (GetRU() > 10000) then
+    FSFC_ShipDemandAddByClass(eFighter, 1.5)
+    FSFC_ShipDemandAddByClass(eCorvette, 1.0)
+    FSFC_ShipDemandAdd(kCarrier, 1.0)
+    FSFC_ShipDemandAdd(kBattleCruiser, 1.0)
+end
+```
+2. **Emergency Builder Threshold (15,000 RU)**: Factions requiring an era-unlock for builders (like Shivans requiring `CapitalShipDesign & FS2`) must standardise their emergency fallback threshold to `15,000` RU (down from `25,000` RU) to guarantee builder demand escalates early enough to clear production queues:
+```lua
+if (GetRU() > 15000) then
+    if (gameTime() - s_ru_high_time > 300) then
+        FSFC_ShipDemandAdd(kCruiser, 4.0, "shi_cruiser_force")
+        FSFC_ShipDemandAdd(kBattleCruiser, 4.0, "shi_battlecruiser_force")
+        FSFC_ShipDemandAdd(kCarrier, 4.5, "shi_builder_force")
+    end
+end
+```
+
+
 ## Best Practices
 - **Queue Headroom**: Avoid clogging the queue with cheap units if high-tier tech is available (see [Elite Suppression Skill](../ai_fleet_diversification/how_to_implement.md)).
 - **Liquidity**: If the AI has > 10,000 RUs and is not building, check for unit cap lockouts or missing `k*` variable assignments.

@@ -106,9 +106,8 @@ function timer_updating()
 								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
 								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
 								"ter_medusa_fs1", "ter_ursa_fs1",
-								"vas_seth", "vas_horus", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1",
-								"vas_typhon_fs1",
-								"shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1"
+								"vas_seth", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1", "vas_typhon_fs1",
+								"shi_basilisk", "shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1", "shi_scorpion"
 							}
 							for i, ship in fs1_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)
