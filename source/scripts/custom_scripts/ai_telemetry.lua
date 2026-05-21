@@ -41,6 +41,19 @@ if not AI_Telemetry_Loaded then
             return
         end
         FSFC_LastDemandPrint[p] = time
+        -- Industrial Census
+        local numCarriers = (kCarrier ~= nil and kCarrier ~= -1) and FSFC_NumSquadrons(kCarrier) or 0
+        local numShipyards = (kShipyard ~= nil and kShipyard ~= -1) and FSFC_NumSquadrons(kShipyard) or 0
+        local ru = GetRU()
+        local status = "SPENDING"
+        if (ShipDemandMaxByClass(eFrigate) < 0) then
+            status = "CAP_HIT"   -- eFrigate class suppressed, strike craft should be building
+        elseif (ru > 50000 and ShipDemandMaxByClass(eFighter) < 1) then
+            status = "STALLED"
+        end
+
+        print("[" .. floor(time) .. "s] [AI_DIAG] P" .. p .. " | ECON | RU: " .. floor(ru) .. " | Factories: " .. (numCarriers + numShipyards) .. " | Status: " .. status)
+
         -- Inline tostring(floor(v)) — no helper function needed, and local function is banned in Lua 4.0
         local coline = (kCollector ~= nil and kCollector ~= -1) and ShipDemandGet(kCollector) or 0
         local refline = (kRefinery ~= nil and kRefinery ~= -1) and ShipDemandGet(kRefinery) or 0
@@ -72,6 +85,8 @@ if not AI_Telemetry_Loaded then
             if (id == nil and id_or_name == "BomberDesign") then id = getglobal("BOMBERDESIGN") end
             if (id == nil and id_or_name == "CruiserDesign") then id = getglobal("CRUISERDESIGN") end
             if (id == nil and id_or_name == "CapitalShipDesign") then id = getglobal("CAPITALSHIPDESIGN") end
+            if (id == nil and id_or_name == "CruiserHealthUpgrade") then id = getglobal("CRUISERHEALTHUPGRADE") end
+            if (id == nil and id_or_name == "DeimosArmor") then id = getglobal("DEIMOSARMOR") end
         end
         if (id == nil or type(id) ~= "number") then
             return nil
@@ -220,8 +235,19 @@ if not AI_Telemetry_Loaded then
         return NumSquadrons(shipID)
     end
 
+    function FSFC_NumSquadronsQ(shipID)
+        if (shipID == nil or type(shipID) ~= "number") then return 0 end
+        return NumSquadronsQ(shipID)
+    end
+
     function FSFC_Log_Completed(id_or_name, label)
         local name = label or id_or_name
+        if (id_or_name == "FIGHTERDESIGN" or id_or_name == "BOMBERDESIGN") then
+            local id = FSFC_ResolveID(id_or_name)
+            local done = 0
+            if (id) then done = IsResearchDone(id) end
+            print("[AI_DIAG] P" .. s_playerIndex .. " | DEBUG_COMPLETED | Name: " .. name .. " | ID: " .. tostring(id) .. " | Done: " .. tostring(done))
+        end
         if (FSFC_ResearchLogged[name] == nil and FSFC_IsResearchDone(id_or_name) == 1) then
             print("[" .. floor(gameTime() or 0) .. "s] [AI_DIAG] P" .. s_playerIndex .. " | RESEARCH | Completed: " .. name)
             FSFC_ResearchLogged[name] = 1

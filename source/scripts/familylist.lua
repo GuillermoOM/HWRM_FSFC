@@ -978,6 +978,16 @@ unitcapsFamily = {
 		stringParam = "NTF Iceni",
 	},
 	{
+		name = "Hatshepsut",
+		numParam = 188,
+		stringParam = "GVD Hatshepsut",
+	},
+	{
+		name = "Hatshepsut_FS1",
+		numParam = 189,
+		stringParam = "GVD Hatshepsut (FS1)",
+	},
+	{
 		name = "Hades",
 		numParam = 49,
 		stringParam = "GTI Hades",

@@ -27,7 +27,7 @@ StartWeaponConfig(
 	0
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 50, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
 
 setAngles(NewWeaponType, 80, 0, 0, 0, 0)
 
@@ -51,10 +51,10 @@ setAccuracy(
 	{ Torpedo = 0.5 },
 	{ HeavyMissile = 0.5 },
 	{ SmallMissile = 0.5 },
-	{ Fighter = 0.7 },
-	{ Fighter_hw1 = 0.7 },
-	{ Corvette = 0.8 },
-	{ Corvette_hw1 = 0.8 },
+	{ Fighter = 0.6 },
+	{ Fighter_hw1 = 0.6 },
+	{ Corvette = 0.6 },
+	{ Corvette_hw1 = 0.6 },
 	{ munition = 0.13 },
 	{ Frigate = 0.80 },
 	{ Resource = 0.80 },

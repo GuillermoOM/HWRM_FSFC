@@ -201,16 +201,6 @@ build = {
 		Description = "GTD Orion",
 	},
 	{
-		Type = SubSystem,
-		ThingToBuild = "ter_hecate_nameplate_warlock",
-		RequiredResearch = "DONOTSHOW",
-		RequiredShipSubSystems = "",
-		DisplayPriority = 12,
-		DisplayedName = "GTD Orion",
-		Description = "GTD Orion",
-	},
-
-	{
 		Type = Ship,
 		ThingToBuild = "ter_loki",
 		RequiredResearch = "FighterDesign",
@@ -439,6 +429,16 @@ build = {
 		DisplayedName = "GTCv Deimos - Corvette <c=12AB06>110s</c>",
 		Description =
 		"<b>Description:</b> Deimos-class corvettes, such as the GTCv Actium and the GTCv Lysander, are the newest addition to the Terran fleet. These sleek, ultra-modern warships are the products of a new era of ship design, maximizing maneuverability and firepower. Their hulls are strengthened with collapsed-core molybdenum sheathing for better protection against beam fire, and their Vasudan-designed reactor core provides more energy per ton than any other allied ship class. \n\n<b>Prerequisites:</b> Capital Ship Design, Corvette. \n\n<b>Armaments:</b> 4x Slashing Beam, 4x Anti-Fighter Beam, 6x Flak Turret, 2x Piranha Missile Launcher, 4x Huge Turret, 6x Turret.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "ter_iceni",
+		RequiredResearch = "CommandCorvette",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 75,
+		DisplayedName = "GTCv Iceni - Command Corvette <c=12AB06>140s</c>",
+		Description =
+		"<b>Description:</b> The GTCv Iceni is a unique, one-of-a-kind command corvette. Originally designed by the rebel leader Aken Bosch, it features a heavy array of beam weaponry and specialized command and control systems. It is the only ship of its class in the fleet. \n\n<b>Prerequisites:</b> Command Corvette. \n\n<b>Armaments:</b> 4x Heavy Beam, 2x Light Beam, 6x Anti-Fighter Beam, 12x Turret.",
 	},
 	{
 		Type = Ship,

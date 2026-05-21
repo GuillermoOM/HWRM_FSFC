@@ -21,6 +21,8 @@ if (CRUISERDESIGN == nil) then CRUISERDESIGN = -1 end
 if (CAPITALSHIPDESIGN == nil) then CAPITALSHIPDESIGN = -1 end
 if (FS1 == nil) then FS1 = -1 end
 if (FS2 == nil) then FS2 = -1 end
+if (VAS_HATSHEPSUT_FS1 == nil) then VAS_HATSHEPSUT_FS1 = -1 end
+if (HATSHEPSUT_FS1 == nil) then HATSHEPSUT_FS1 = -1 end
 if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = getglobal("cpuplayers_aggressive") or -1 end
 if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = getglobal("cpuplayers_dynamic") or -1 end
 if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = getglobal("cpuplayers_defensive") or -1 end
@@ -83,6 +85,7 @@ rt_vasudan_tech = {
 	{ id = "TYPHON", priority = 1.0, name = "Typhon", class = eCapital, shipID = VAS_TYPHON },
 	{ id = "INSTALLATION", priority = 0.5, name = "Installation", class = eCapital },
 	{ id = "HATSHEPSUT", priority = 1.0, name = "Hatshepsut", class = eCapital, shipID = VAS_HATSHEPSUT },
+	{ id = "HATSHEPSUT_FS1", priority = 1.0, name = "Hatshepsut_FS1", class = eCapital, shipID = VAS_HATSHEPSUT_FS1 },
 	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalDesign", class = eCapital },
 	{ id = "COLOSSUS", priority = 1.0, name = "Colossus", class = eCapital, shipID = VAS_COLOSSUS },
 }
@@ -91,8 +94,11 @@ rt_vasudan_tech = {
 rt_vasudan_utility = {
 	{ id = "SENTRYGUN", priority = 0.5, name = "SentryGun" },
 	{ id = "SENTRYANDMINEDEPLOYER", priority = 0.5, name = "SentryAndMineDeployer" },
+	{ id = "BEAMSENTRY", priority = 0.5, name = "BeamSentry", shipID = TER_MJOLNIR },
 	{ id = "REPAIRSATIS", priority = 0.5, name = "RepairSatis", shipID = VAS_SATIS },
 	{ id = "REPAIRBAST", priority = 0.5, name = "RepairBast", shipID = VAS_BAST },
+	{ id = "SCIENCEVESSEL", priority = 0.5, name = "ScienceVessel", shipID = VAS_IMHOTEP },
+	{ id = "AWACS", priority = 0.5, name = "AWACS", shipID = VAS_SETEKH },
 }
 
 function DoResearchTechDemand_Vasudan()
@@ -135,11 +141,15 @@ function DoResearchTechDemand_Vasudan()
 		local base = fighterDemand > 0 and fighterDemand or 1.5
 		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), base + 1.1)
 		FSFC_Log_Research("FighterDesign", base + 1.1)
+	else
+		FSFC_Log_Completed("FIGHTERDESIGN", "FighterDesign")
 	end
 	if (FSFC_CheckResearch("BOMBERDESIGN")) then
 		local base = bomberDemand > 0 and bomberDemand or 1.5
 		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), base + 1.1)
 		FSFC_Log_Research("BomberDesign", base + 1.1)
+	else
+		FSFC_Log_Completed("BOMBERDESIGN", "BomberDesign")
 	end
 	if (FSFC_CheckResearch("CRUISERDESIGN")) then
 		local base = frigateDemand > 0 and frigateDemand or 1.5
@@ -162,7 +172,7 @@ function DoResearchTechDemand_Vasudan()
 		
 		if (baseDemand <= 0) then
 			-- Baseline fallback to prevent starting flagship deadlock
-			if ((item.id == "HATSHEPSUT" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+			if ((item.id == "HATSHEPSUT" or item.id == "HATSHEPSUT_FS1" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
 				baseDemand = 1.5
 			end
 		end

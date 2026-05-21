@@ -289,7 +289,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_commnode",
-		RequiredResearch = "AdvancedSensors",
+		RequiredResearch = "AWACS",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 134,
 		DisplayedName = "Shivan Comm Node - AWACS <c=12AB06>70s</c>",

@@ -19,7 +19,7 @@ MASTER_ROSTER = {
 	"vas_seth", "vas_horus", "vas_thoth", "vas_serapis", "vas_tauret", "vas_ptah",
 	"vas_osiris", "vas_bakha", "vas_sehkmet", "vas_amun",
 	"vas_aten", "vas_aten_fs1", "vas_mentu", "vas_sobek", "vas_typhon", "vas_typhon_fs1",
-	"vas_hatshepsut", "vas_colossus", "vas_karnak",
+	"vas_hatshepsut", "vas_hatshepsut_fs1", "vas_colossus", "vas_karnak",
 	"vas_satis", "vas_bes", "vas_ankh", "vas_scarab", "vas_nephthys", "vas_imhotep", "vas_isis", "vas_maat", "vas_anuket",
 	"vas_geb", "vas_setekh", "vas_edjo",
 	"shi_manticore", "shi_basilisk", "shi_dragon", "shi_astaroth", "shi_mara", "shi_aeshma",

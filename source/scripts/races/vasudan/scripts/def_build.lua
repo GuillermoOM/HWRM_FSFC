@@ -188,6 +188,16 @@ build = {
 	},
 	{
 		Type = Ship,
+		ThingToBuild = "vas_hatshepsut_fs1",
+		RequiredResearch = "Hatshepsut_FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 331,
+		DisplayedName = "GVD Hatshepsut (FS1) - Flagship <c=12AB06>240s</c>",
+		Description =
+		"<b>Description:</b> The Great War (FS1) variant of the GVD Hatshepsut class flagship, commissioned to serve as the ultimate Vasudan command ship during the conflict against the Shivans. Lacking the beam technology of the later reconstruction era, this massive vessel relies on an extensive network of heavy kinetic turrets, rapid-fire lasers, flak guns, and blue flux torpedoes. It is a direct match for the heaviest Terran and Shivan capital threats. \n\n<b>Prerequisites:</b> Capital Ship Design, Hatshepsut (FS1). \n\n<b>Armaments:</b> 3x Heavy Turret, 1x Light Turret, 4x Rapid Laser, 11x Flak Turret, 6x Huge Turret, 5x Flux Torpedo.",
+	},
+	{
+		Type = Ship,
 		ThingToBuild = "vas_colossus",
 		RequiredResearch = "Colossus",
 		RequiredShipSubSystems = "",

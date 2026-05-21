@@ -49,4 +49,4 @@ NewSubSystemType.minimumZoomFactor = 0.68
 
 LoadSharedModel(NewSubSystemType, "shi_demonturret01")
 
-StartSubSystemWeaponConfig(NewSubSystemType, "gun_shivsuperlaser_turret", "Weapon_IonCan1", "")
+StartSubSystemWeaponConfig(NewSubSystemType, "gun_shivmegafunk_turret", "Weapon_IonCan1", "")

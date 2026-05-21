@@ -242,7 +242,6 @@ squadclass[eCorvette] = {
 	VAS_BAKHA,
 	VAS_SEHKMET,
 	VAS_OSIRIS,
-	VAS_BES,
 }
 squadclass[eFrigate] = {
 	HGN_ASSAULTFRIGATE,
@@ -360,6 +359,8 @@ squadclass[eAntiFighter] = {
 	VAS_THOTH,
 	VAS_ANUBIS,
 	VAS_SERAPIS,
+	VAS_HORUS,
+	VAS_SETH,
 }
 squadclass[eAntiCorvette] = {
 	HGN_PULSARCORVETTE,
@@ -472,7 +473,10 @@ squadclass[eAntiFrigate] = {
 	TER_MJOLNIR,
 
 	SHI_RAKSHASA,
+	SHI_CAIN,
+	SHI_CAIN_FS1,
 	SHI_LILITH,
+	SHI_LILITH_FS1,
 
 	SHI_NAHEMA,
 	SHI_NEPHILIM,
@@ -495,6 +499,10 @@ squadclass[eAntiFrigate] = {
 	VAS_OSIRIS,
 	VAS_SEHKMET,
 	VAS_AMUN,
+
+	VAS_MENTU,
+	VAS_ATEN,
+	VAS_ATEN_FS1,
 
 	VAS_TYPHON,
 	VAS_TYPHON_FS1,
@@ -753,6 +761,7 @@ squadclass[eUselessShips] = {
 
 	VAS_BAST,
 	VAS_SCARAB,
+	VAS_BES,
 }
 squadclass[eBattleCruiser] = {
 	HGN_BATTLECRUISER,

@@ -33,6 +33,10 @@ if (FS2 == nil) then FS2 = -1 end
 if (ORION == nil) then ORION = -1 end
 if (DEIMOS == nil) then DEIMOS = -1 end
 if (INSTALLATION == nil) then INSTALLATION = -1 end
+if (SUPERDESTROYER == nil) then SUPERDESTROYER = -1 end
+if (HECATE == nil) then HECATE = -1 end
+if (TER_HADES == nil) then TER_HADES = -1 end
+if (TER_HECATE == nil) then TER_HECATE = -1 end
 
 
 -- Global variables like kBomber, kInterceptor etc are set by ai_build.lua
@@ -108,9 +112,19 @@ rt_terran_tech = {
 	{ id = "ORION", priority = 1.0, name = "Orion", class = eCapital, shipID = TER_ORION },
 	{ id = "DEIMOS", priority = 1.0, name = "Deimos", class = eCapital, shipID = TER_DEIMOS },
 	{ id = "COMMANDCORVETTE", priority = 1.0, name = "Iceni", class = eCapital, shipID = TER_ICENI },
-	{ id = "SUPERDESTROYER", priority = 1.2, name = "SuperDestroyer", class = eCapital, shipID = TER_HECATE },
+	{ id = "SUPERDESTROYER", priority = 1.2, name = "SuperDestroyer", class = eCapital, shipID = TER_HADES },
+	{ id = "HECATE", priority = 1.2, name = "Hecate", class = eCapital, shipID = TER_HECATE },
 	{ id = "JUGGERNAUT", priority = 1.3, name = "Colossus", class = eCapital, shipID = TER_COLOSSUS },
 	{ id = "INSTALLATION", priority = 0.8, name = "Installation", class = eCapital, shipID = TER_ARCADIA },
+}
+
+-- 5. UTILITY/SPECIAL
+rt_terran_utility = {
+	{ id = "SENTRYGUN", priority = 0.5, name = "SentryGun" },
+	{ id = "SENTRYANDMINEDEPLOYER", priority = 0.5, name = "SentryAndMineDeployer" },
+	{ id = "BEAMSENTRY", priority = 0.5, name = "BeamSentry", shipID = TER_MJOLNIR },
+	{ id = "SCIENCEVESSEL", priority = 0.5, name = "ScienceVessel", shipID = TER_FAUSTUS },
+	{ id = "AWACS", priority = 0.5, name = "AWACS", shipID = TER_CHARYBDIS },
 }
 
 
@@ -153,10 +167,14 @@ function DoResearchTechDemand_Terran()
 	if (FSFC_CheckResearch("FIGHTERDESIGN")) then
 		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), fighterDemand + 1.1)
 		FSFC_Log_Research("FighterDesign", fighterDemand + 1.1)
+	else
+		FSFC_Log_Completed("FIGHTERDESIGN", "FighterDesign")
 	end
 	if (FSFC_CheckResearch("BOMBERDESIGN")) then
 		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), bomberDemand + 1.1)
 		FSFC_Log_Research("BomberDesign", bomberDemand + 1.1)
+	else
+		FSFC_Log_Completed("BOMBERDESIGN", "BomberDesign")
 	end
 	
 	-- Iterate tech table
@@ -166,6 +184,13 @@ function DoResearchTechDemand_Terran()
 		local baseDemand = 0
 		if (item.class == eFrigate) then baseDemand = frigateDemand
 		elseif (item.class == eCapital) then baseDemand = capitalDemand end
+		
+		if (baseDemand <= 0) then
+			-- Baseline fallback to prevent starting flagship deadlock
+			if ((item.id == "SUPERDESTROYER" or item.id == "HECATE") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+				baseDemand = 1.5
+			end
+		end
 		
 		if (baseDemand > 0) then
 			local id = FSFC_CheckResearch(item.id, item.shipID)
@@ -177,6 +202,9 @@ function DoResearchTechDemand_Terran()
 			end
 		end
 	end
+
+	-- E. Utility
+	FSFC_ProcessResearchTable(rt_terran_utility, 1.0)
 end
 
 
@@ -203,13 +231,13 @@ function DoUpgradeDemand_Terran()
 
 	local numDestroyers = NumSquadrons_Terran(TER_DEIMOS)
 	if numDestroyers > 0 then
-		ResearchDemandAdd_Terran("DeimosArmor", numDestroyers * 2)
+		ResearchDemandAdd_Terran("DEIMOSARMOR", numDestroyers * 2)
 	end
 	local numFrigate = numActiveOfClass(s_playerIndex, eFrigate)
-	if numFrigate > 1 then
+	if numFrigate > 0 then
 		local numFrigateCount = NumSquadrons_Terran(TER_FENRIS) + NumSquadrons_Terran(TER_FENRIS_FS1)
-		if numFrigateCount > 1 then
-			ResearchDemandAdd_Terran("CruiserHealthUpgrade", numFrigateCount * 5)
+		if numFrigateCount >= 1 then
+			ResearchDemandAdd_Terran("CRUISERHEALTHUPGRADE", numFrigateCount * 5)
 		end
 	end
 	local numBattleCruiser = NumSquadrons_Terran(kBattleCruiser)

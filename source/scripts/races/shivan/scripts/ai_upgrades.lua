@@ -84,15 +84,15 @@ rt_shivan_tech = {
 	{ id = "CAPITALSHIPDESIGN", priority = 1.1, name = "CapitalShipDesign", class = eCapital },
 	{ id = "MOLOCH", priority = 1.0, name = "Moloch", class = eCapital, shipID = SHI_MOLOCH },
 	{ id = "RAVANA", priority = 1.5, name = "Ravana", class = eCapital, shipID = SHI_RAVANA },
+	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalShipDesign", class = eCapital },
 	{ id = "LUCIFER", priority = 1.0, name = "Lucifer", class = eCapital, shipID = SHI_LUCIFER },
 	{ id = "SATHANAS", priority = 1.0, name = "Sathanas", class = eCapital, shipID = SHI_SATHANAS },
 }
 
 -- 5. UTILITY/SPECIAL
 rt_shivan_utility = {
-	{ id = "SCORPION", priority = 0.5, name = "Scorpion", shipID = SHI_SCORPION },
-	{ id = "MEPHISTO", priority = 0.5, name = "Mephisto" },
-	{ id = "COMMNODE", priority = 0.5, name = "CommNode", shipID = SHI_COMMNODE },
+	{ id = "SENTRYGUN", priority = 0.5, name = "SentryGun" },
+	{ id = "AWACS", priority = 0.5, name = "AWACS", shipID = SHI_COMMNODE },
 }
 
 function DoResearchTechDemand_Shivan()
@@ -135,11 +135,15 @@ function DoResearchTechDemand_Shivan()
 		local base = fighterDemand > 0 and fighterDemand or 1.5
 		ResearchDemandSet(FSFC_ResolveID("FIGHTERDESIGN"), base + 1.1)
 		FSFC_Log_Research("FighterDesign", base + 1.1)
+	else
+		FSFC_Log_Completed("FIGHTERDESIGN", "FighterDesign")
 	end
 	if (FSFC_CheckResearch("BOMBERDESIGN")) then
 		local base = bomberDemand > 0 and bomberDemand or 1.5
 		ResearchDemandSet(FSFC_ResolveID("BOMBERDESIGN"), base + 1.1)
 		FSFC_Log_Research("BomberDesign", base + 1.1)
+	else
+		FSFC_Log_Completed("BOMBERDESIGN", "BomberDesign")
 	end
 	if (FSFC_CheckResearch("CRUISERDESIGN")) then
 		local base = frigateDemand > 0 and frigateDemand or 1.5
@@ -159,6 +163,13 @@ function DoResearchTechDemand_Shivan()
 		local baseDemand = 0
 		if (item.class == eFrigate) then baseDemand = frigateDemand
 		elseif (item.class == eCapital) then baseDemand = capitalDemand end
+		
+		if (baseDemand <= 0) then
+			-- Baseline fallback to prevent starting flagship deadlock
+			if ((item.id == "LUCIFER" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+				baseDemand = 1.5
+			end
+		end
 		
 		if (baseDemand > 0) then
 			local id = FSFC_CheckResearch(item.id, item.shipID)

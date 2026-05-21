@@ -42,11 +42,11 @@ function CpuBuild_UpdateRaceVariables()
 	kFighterInterceptor = FSFC_PickBestShip(kFighterInterceptorFS2, kFighterInterceptorFS1)
 	kFighterSuperiority = FSFC_PickBestShip(kFighterSuperiorityFS2, kFighterSuperiorityFS1)
 	kFighterAssault = FSFC_PickBestShip(kFighterAssaultFS2, kFighterAssaultFS1)
-	kInterceptor = kFighterSuperiority -- Backward compatibility
+	kInterceptor = kFighterInterceptor -- Fixed deadlock: point to basic interceptor
 	kBomberStrike = FSFC_PickBestShip(kBomberStrikeFS2, kBomberStrikeFS1)
 	kBomberMedium = FSFC_PickBestShip(kBomberMediumFS2, kBomberMediumFS1)
 	kBomberHeavy = FSFC_PickBestShip(kBomberHeavyFS2, kBomberHeavyFS1)
-	kBomber = kBomberMedium -- Backward compatibility
+	kBomber = kBomberStrike -- Fixed deadlock: point to basic strike bomber
 	kDestroyer = FSFC_PickBestShip(kDestroyerFS2, kDestroyerFS1)
 	kMissileDestroyer = FSFC_PickBestShip(kMissileDestroyerFS2, kMissileDestroyerFS1)
 	kCruiser = FSFC_PickBestShip(kCruiserFS2, kCruiserFS1)
@@ -127,7 +127,16 @@ function DetermineSpecialDemand_Terran()
 
 	-- 3. Production Escalation
 	local numCarriers = FSFC_NumSquadrons(kCarrier)
-	if (numCarriers < 4) then
+	local carrierGoal = 4
+	local shipyardGoal = 1
+	
+	-- Expert Overdrive: Scale factories with wealth
+	if (GetRU() > 100000) then
+		carrierGoal = 8
+		shipyardGoal = 2
+	end
+
+	if (numCarriers < carrierGoal) then
 		local demand = 3.0
 		if (numCarriers > 1) then
 			demand = 1.5
@@ -136,16 +145,120 @@ function DetermineSpecialDemand_Terran()
 	end
 
 	-- Wealth Boost (Spend excess RUs)
-	if (GetRU() > 10000) then
+	if (GetRU() > 50000) then
+		FSFC_ShipDemandAddByClass(eFighter, 3.0)
+		FSFC_ShipDemandAddByClass(eCorvette, 3.0)
+		FSFC_ShipDemandAdd(kCarrier, 5.0)
+		
+		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
+		local numHC = 0
+		if (kHeavyCruiser ~= nil) then
+			numHC = FSFC_NumSquadrons(kHeavyCruiser) + FSFC_NumSquadronsQ(kHeavyCruiser)
+		end
+		local numBC = 0
+		if (kBattleCruiser ~= nil) then
+			numBC = FSFC_NumSquadrons(kBattleCruiser) + FSFC_NumSquadronsQ(kBattleCruiser)
+		end
+
+		-- Cap definitions
+		local maxC = 6
+		local maxHC = 3
+		local maxBC = 3
+
+		-- Apply caps by setting negative demand if reached
+		if (numC >= maxC) then
+			FSFC_ShipDemandSet(kCruiser, -100)
+		end
+		if (kHeavyCruiser ~= nil and numHC >= maxHC) then
+			FSFC_ShipDemandSet(kHeavyCruiser, -100)
+		end
+		if (kBattleCruiser ~= nil and numBC >= maxBC) then
+			FSFC_ShipDemandSet(kBattleCruiser, -100)
+		end
+
+		-- When ALL caps are saturated: nuke residual eFrigate class demand and force strike craft
+		-- (ShipDemandSet only caps individual ships; DetermineClassDemand still gives ~15-19 to the whole
+		--  eFrigate class. ShipDemandAddByClass cancels that so fighters win the build queue.)
+		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC) then
+			FSFC_ShipDemandAddByClass(eFrigate, -30)
+			FSFC_ShipDemandAddByClass(eFighter, 12.0)
+			FSFC_ShipDemandAddByClass(eCorvette, 8.0)
+		end
+
+		-- Only add demand if under the caps
+		if (numC < maxC or (kHeavyCruiser ~= nil and numHC < maxHC)) then
+			if (kHeavyCruiser ~= nil and numHC * 2 < numC and numHC < maxHC) then
+				if (numC < maxC) then
+					FSFC_ShipDemandAdd(kCruiser, 5.0, "ter_cruiser_force")
+				end
+				FSFC_ShipDemandAdd(kHeavyCruiser, 15.0, "ter_heavycruiser_force")
+			else
+				if (numC < maxC) then
+					FSFC_ShipDemandAdd(kCruiser, 15.0, "ter_cruiser_force")
+				end
+				if (kHeavyCruiser ~= nil and numHC < maxHC) then
+					FSFC_ShipDemandAdd(kHeavyCruiser, 5.0, "ter_heavycruiser_force")
+				end
+			end
+		end
+
+		if (kBattleCruiser ~= nil and numBC < maxBC) then
+			FSFC_ShipDemandAdd(kBattleCruiser, 10.0, "ter_battlecruiser_force")
+		end
+	elseif (GetRU() > 10000) then
 		FSFC_ShipDemandAddByClass(eFighter, 1.5)
 		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
 		FSFC_ShipDemandAdd(kCarrier, 1.0)
+		
+		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
+		local numHC = 0
+		if (kHeavyCruiser ~= nil) then
+			numHC = FSFC_NumSquadrons(kHeavyCruiser) + FSFC_NumSquadronsQ(kHeavyCruiser)
+		end
+		local numBC = 0
+		if (kBattleCruiser ~= nil) then
+			numBC = FSFC_NumSquadrons(kBattleCruiser) + FSFC_NumSquadronsQ(kBattleCruiser)
+		end
+		
+		local maxC = 6
+		local maxHC = 3
+		local maxBC = 3
+
+		if (numC >= maxC) then
+			FSFC_ShipDemandSet(kCruiser, -100)
+		end
+		if (kHeavyCruiser ~= nil and numHC >= maxHC) then
+			FSFC_ShipDemandSet(kHeavyCruiser, -100)
+		end
+		if (kBattleCruiser ~= nil and numBC >= maxBC) then
+			FSFC_ShipDemandSet(kBattleCruiser, -100)
+		end
+
+		-- When ALL caps are saturated: nuke residual eFrigate class demand and force strike craft
+		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC) then
+			FSFC_ShipDemandAddByClass(eFrigate, -30)
+			FSFC_ShipDemandAddByClass(eFighter, 8.0)
+			FSFC_ShipDemandAddByClass(eCorvette, 6.0)
+		end
+
+		if (numC < maxC or (kHeavyCruiser ~= nil and numHC < maxHC)) then
+			if (kHeavyCruiser ~= nil and numHC * 2 < numC and numHC < maxHC) then
+				if (numC < maxC) then
+					FSFC_ShipDemandAdd(kCruiser, 1.0, "ter_cruiser_mid")
+				end
+				FSFC_ShipDemandAdd(kHeavyCruiser, 3.0, "ter_heavycruiser_mid")
+			else
+				if (numC < maxC) then
+					FSFC_ShipDemandAdd(kCruiser, 3.0, "ter_cruiser_mid")
+				end
+			end
+		end
 	end
 
 	local numShipyards = FSFC_NumSquadrons(kShipyard)
-	if (numShipyards == 0 and s_selfTotalValue > 60) then
+	if (numShipyards < shipyardGoal and s_selfTotalValue > 60) then
 		FSFC_ShipDemandAdd(kShipyard, 0.5, "ter_arcadia")
-	elseif (numShipyards > 0) then
+	elseif (numShipyards >= shipyardGoal) then
 		FSFC_ShipDemandSet(kShipyard, -100)
 	end
 
@@ -153,9 +266,26 @@ function DetermineSpecialDemand_Terran()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (FSFC_NumSquadrons(kCarrier) >= 2) then
-		if (kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.3, "Cruiser") end
-		if (kHeavyCruiser ~= nil) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.45, "HeavyCruiser") end
+	if (FSFC_NumSquadrons(kCarrier) >= 2 or GetRU() > 20000) then
+		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
+		local numHC = 0
+		if (kHeavyCruiser ~= nil) then
+			numHC = FSFC_NumSquadrons(kHeavyCruiser) + FSFC_NumSquadronsQ(kHeavyCruiser)
+		end
+		
+		local maxC = 6
+		local maxHC = 3
+
+		if (numC < maxC or (kHeavyCruiser ~= nil and numHC < maxHC)) then
+			if (kHeavyCruiser ~= nil and numHC * 2 < numC and numHC < maxHC) then
+				if (numC < maxC and kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.15, "Cruiser") end
+				FSFC_ShipDemandAdd(kHeavyCruiser, 0.8, "HeavyCruiser")
+			else
+				if (numC < maxC and kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.45, "Cruiser") end
+				if (kHeavyCruiser ~= nil and numHC < maxHC) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.15, "HeavyCruiser") end
+			end
+		end
+		
 		if (kAdvancedCruiser ~= nil) then FSFC_ShipDemandAdd(kAdvancedCruiser, 0.5, "AdvancedCruiser") end
 		if (kDestroyer ~= nil) then FSFC_ShipDemandAdd(kDestroyer, 0.45, "Destroyer") end
 	end

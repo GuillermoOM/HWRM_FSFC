@@ -299,16 +299,19 @@ def parse_research_costs():
     return research_nodes
 
 
-def generate_markdown(races, weapons, unit_caps, research):
-    output = "# FreeSpace: Fleet Command - Master Balance Sheet\n\n"
-    output += "## [HOW TO READ THIS SHEET]\n"
-    output += "This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.\n\n"
-    output += "## Research Tree Cost Matrix\n"
-    output += "| Race | Tier | Era | Node | Cost | Time | Prerequisites |\n"
-    output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
-    for r in sorted(research, key=lambda x: (x['race'], x['cost'])):
-        output += f"| {r['race']} | {r['tier']} | {r['era']} | {r['name']} | {r['cost']} | {r['time']}s | {r['req']} |\n"
-    output += "\n---\n\n"
+def generate_markdown(races, weapons, unit_caps, research, preserved_header=None):
+    if preserved_header:
+        output = preserved_header
+    else:
+        output = "# FreeSpace: Fleet Command - Master Balance Sheet\n\n"
+        output += "## [HOW TO READ THIS SHEET]\n"
+        output += "This document is the **Universal Source of Truth** for mod balancing. It is auto-generated from source files.\n\n"
+        output += "## Research Tree Cost Matrix\n"
+        output += "| Race | Tier | Era | Node | Cost | Time | Prerequisites |\n"
+        output += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
+        for r in sorted(research, key=lambda x: (x['race'], x['cost'])):
+            output += f"| {r['race']} | {r['tier']} | {r['era']} | {r['name']} | {r['cost']} | {r['time']}s | {r['req']} |\n"
+        output += "\n---\n\n"
 
     output += "## Unit Capacity Profiles (Limits)\n"
     output += "Defines the total allowed points/ships per family for each match preset.\n\n"
@@ -393,8 +396,17 @@ if __name__ == "__main__":
     r, w = process_ships()
     uc = parse_unit_caps()
     res = parse_research_costs()
-    md = generate_markdown(r, w, uc, res)
+    
     output_path = "/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/resources/fsfc-knowledge/fsfc_ship_balance_sheet.md"
+    preserved_header = None
+    if os.path.exists(output_path):
+        with open(output_path, 'r') as f:
+            content = f.read()
+        marker = "## Unit Capacity Profiles (Limits)"
+        if marker in content:
+            preserved_header = content.split(marker)[0]
+            
+    md = generate_markdown(r, w, uc, res, preserved_header=preserved_header)
     with open(output_path, 'w') as f:
         f.write(md)
     print(f"Master Balance Sheet updated at: {output_path}")
