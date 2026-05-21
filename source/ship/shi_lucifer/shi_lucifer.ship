@@ -253,7 +253,7 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 28, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 800, 1600, 0, 0)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5,
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.2,
     'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1',
     'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" },
     { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "Frontal" },
