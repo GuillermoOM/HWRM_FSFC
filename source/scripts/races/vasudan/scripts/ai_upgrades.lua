@@ -85,7 +85,6 @@ rt_vasudan_tech = {
 	{ id = "TYPHON", priority = 1.0, name = "Typhon", class = eCapital, shipID = VAS_TYPHON },
 	{ id = "INSTALLATION", priority = 0.5, name = "Installation", class = eCapital },
 	{ id = "HATSHEPSUT", priority = 1.0, name = "Hatshepsut", class = eCapital, shipID = VAS_HATSHEPSUT },
-	{ id = "HATSHEPSUT_FS1", priority = 1.0, name = "Hatshepsut_FS1", class = eCapital, shipID = VAS_HATSHEPSUT_FS1 },
 	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalDesign", class = eCapital },
 	{ id = "COLOSSUS", priority = 1.0, name = "Colossus", class = eCapital, shipID = VAS_COLOSSUS },
 }
@@ -172,7 +171,7 @@ function DoResearchTechDemand_Vasudan()
 		
 		if (baseDemand <= 0) then
 			-- Baseline fallback to prevent starting flagship deadlock
-			if ((item.id == "HATSHEPSUT" or item.id == "HATSHEPSUT_FS1" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+			if ((item.id == "HATSHEPSUT" or  item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
 				baseDemand = 1.5
 			end
 		end

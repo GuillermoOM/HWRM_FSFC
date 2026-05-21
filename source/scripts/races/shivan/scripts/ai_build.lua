@@ -29,8 +29,6 @@ kDestroyerFS2 = SHI_MOLOCH
 kDestroyerFS1 = SHI_CAIN_FS1      -- Realigned with Fenris tier (Cost 600)
 kMissileDestroyerFS2 = SHI_MOLOCH
 kMissileDestroyerFS1 = SHI_LILITH_FS1 -- Realigned with Leviathan tier (Cost 4000)
-kBattleCruiserFS2 = SHI_RAVANA
-kBattleCruiserFS1 = SHI_LUCIFER
 
 -- Cruiser Classes (Backbone)
 kCruiserFS2 = SHI_CAIN
@@ -58,6 +56,8 @@ function CpuBuild_UpdateRaceVariables()
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
 	
 	kCarrier = FSFC_PickBestShip(SHI_DEMON, SHI_DEMON_FS1)
+	kCarrier2 = FSFC_PickBestShip(SHI_RAVANA, SHI_DEMON_FS1)
+	kBattleCruiser = SHI_LUCIFER
 	kResearch = SHI_COMMNODE
 	kAWACS = SHI_COMMNODE
 end
@@ -128,7 +128,7 @@ function DetermineSpecialDemand_Shivan()
 	end
 
 	-- 3. Production Escalation (Builders)
-	local numBuilders = FSFC_NumSquadrons(kCarrier)
+	local numBuilders = FSFC_NumSquadrons(kCarrier) + FSFC_NumSquadrons(kCarrier2)
 	local carrierGoal = 4
 	local shipyardGoal = 1
 	
@@ -139,11 +139,12 @@ function DetermineSpecialDemand_Shivan()
 	end
 
 	if (numBuilders < carrierGoal) then
-		local demand = 3.0
+		local demand = 2.0
 		if (numBuilders > 1) then
-			demand = 1.5
+			demand = 1.0
 		end
 		FSFC_ShipDemandAdd(kCarrier, demand)
+		FSFC_ShipDemandAdd(kCarrier2, demand)
 	end
 
 	-- Wealth Boost (Spend excess RUs)
@@ -151,6 +152,7 @@ function DetermineSpecialDemand_Shivan()
 		FSFC_ShipDemandAddByClass(eFighter, 3.0)
 		FSFC_ShipDemandAddByClass(eCorvette, 3.0)
 		FSFC_ShipDemandAdd(kCarrier, 5.0)
+		FSFC_ShipDemandAdd(kCarrier2, 5.0)
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -208,7 +210,8 @@ function DetermineSpecialDemand_Shivan()
 	elseif (GetRU() > 10000) then
 		FSFC_ShipDemandAddByClass(eFighter, 1.5)
 		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
-		FSFC_ShipDemandAdd(kCarrier, 1.0)
+		FSFC_ShipDemandAdd(kCarrier, 0.5)
+		FSFC_ShipDemandAdd(kCarrier2, 0.5)
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -258,7 +261,7 @@ function DetermineSpecialDemand_Shivan()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (FSFC_NumSquadrons(kCarrier) >= 2) then
+	if (FSFC_NumSquadrons(kCarrier)+FSFC_NumSquadrons(kCarrier2) >= 2) then
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
 		if (kHeavyCruiser ~= nil) then

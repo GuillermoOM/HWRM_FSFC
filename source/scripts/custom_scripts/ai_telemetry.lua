@@ -42,7 +42,9 @@ if not AI_Telemetry_Loaded then
         end
         FSFC_LastDemandPrint[p] = time
         -- Industrial Census
-        local numCarriers = (kCarrier ~= nil and kCarrier ~= -1) and FSFC_NumSquadrons(kCarrier) or 0
+        local numCarriers1 = (kCarrier ~= nil and kCarrier ~= -1) and FSFC_NumSquadrons(kCarrier) or 0
+        local numCarriers2 = (kCarrier2 ~= nil and kCarrier2 ~= -1) and FSFC_NumSquadrons(kCarrier2) or 0
+        local numCarriers = numCarriers1 + numCarriers2
         local numShipyards = (kShipyard ~= nil and kShipyard ~= -1) and FSFC_NumSquadrons(kShipyard) or 0
         local ru = GetRU()
         local status = "SPENDING"
@@ -57,7 +59,9 @@ if not AI_Telemetry_Loaded then
         -- Inline tostring(floor(v)) — no helper function needed, and local function is banned in Lua 4.0
         local coline = (kCollector ~= nil and kCollector ~= -1) and ShipDemandGet(kCollector) or 0
         local refline = (kRefinery ~= nil and kRefinery ~= -1) and ShipDemandGet(kRefinery) or 0
-        local cvline  = (kCarrier ~= nil and kCarrier ~= -1) and ShipDemandGet(kCarrier) or 0
+        local cvline1  = (kCarrier ~= nil and kCarrier ~= -1) and ShipDemandGet(kCarrier) or 0
+        local cvline2  = (kCarrier2 ~= nil and kCarrier2 ~= -1) and ShipDemandGet(kCarrier2) or 0
+        local cvline = cvline1 + cvline2
         local bcline  = (kBattleCruiser ~= nil and kBattleCruiser ~= -1) and ShipDemandGet(kBattleCruiser) or 0
         print("[" .. floor(time) .. "s] [AI_DIAG] P" .. p .. " DEMAND |"
             .. " F:"  .. tostring(floor(ShipDemandMaxByClass(eFighter)))

@@ -189,7 +189,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_hatshepsut_fs1",
-		RequiredResearch = "Hatshepsut_FS1",
+		RequiredResearch = "SuperCapitalShipDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 331,
 		DisplayedName = "GVD Hatshepsut (FS1) - Flagship <c=12AB06>240s</c>",

@@ -10,7 +10,6 @@ squadclass[eMotherShip] = {
 	TER_COLOSSUS,
 
 	SHI_SATHANAS,
-	SHI_LUCIFER,
 
 	VAS_COLOSSUS,
 }
@@ -91,6 +90,7 @@ squadclass[eBuilder] = {
 	VAS_TYPHON_FS1,
 	VAS_KARNAK,
 	VAS_HATSHEPSUT,
+	VAS_HATSHEPSUT_FS1,
 }
 squadclass[eDropOff] = {
 	HGN_MOTHERSHIP,
@@ -126,6 +126,7 @@ squadclass[eDropOff] = {
 	VAS_TYPHON_FS1,
 	VAS_ANUKET,
 	VAS_MAAT,
+	VAS_HATSHEPSUT_FS1,
 	VAS_HATSHEPSUT,
 }
 squadclass[eSalvageDropOff] = {
@@ -152,6 +153,7 @@ squadclass[eSalvageDropOff] = {
 
 	VAS_TYPHON,
 	VAS_TYPHON_FS1,
+	VAS_HATSHEPSUT_FS1,
 	VAS_HATSHEPSUT,
 }
 squadclass[eFighter] = {
@@ -506,6 +508,7 @@ squadclass[eAntiFrigate] = {
 
 	VAS_TYPHON,
 	VAS_TYPHON_FS1,
+	VAS_HATSHEPSUT_FS1,
 	VAS_HATSHEPSUT,
 	VAS_KARNAK,
 	VAS_COLOSSUS,
@@ -551,6 +554,7 @@ squadclass[eCapital] = {
 	SHI_SATHANAS,
 	SHI_MOLOCH,
 
+	VAS_HATSHEPSUT_FS1,
 	VAS_HATSHEPSUT,
 	VAS_TYPHON,
 	VAS_TYPHON_FS1,
@@ -712,6 +716,8 @@ squadclass[eGoodRepairAttackers] = {
 	TER_AEOLUS,
 	TER_DEIMOS,
 	TER_ICENI,
+	TER_HADES,
+	TER_COLOSSUS,
 
 	TER_ATHENA,
 
@@ -727,6 +733,8 @@ squadclass[eGoodRepairAttackers] = {
 	SHI_LILITH_FS1,
 	SHI_RAKSHASA,
 	SHI_MOLOCH,
+	SHI_LUCIFER,
+	SHI_SATHANAS,
 
 	VAS_SETH,
 	VAS_TAURET,
@@ -735,6 +743,8 @@ squadclass[eGoodRepairAttackers] = {
 	VAS_BAKHA,
 	VAS_OSIRIS,
 	VAS_SEHKMET,
+	Vas_hatshepsut_fs1T_FS1,
+	VAS_COLOSSUS,
 }
 eUselessShips = eMaxCount
 eBattleCruiser = eMaxCount + 1
@@ -776,6 +786,7 @@ squadclass[eBattleCruiser] = {
 	SHI_LUCIFER,
 
 	VAS_COLOSSUS,
+	VAS_HATSHEPSUT_FS1,
 }
 squadclass[eDestroyer] = {
 	HGN_DESTROYER,

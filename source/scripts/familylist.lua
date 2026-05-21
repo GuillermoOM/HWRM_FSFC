@@ -979,13 +979,8 @@ unitcapsFamily = {
 	},
 	{
 		name = "Hatshepsut",
-		numParam = 188,
+		numParam = 200,
 		stringParam = "GVD Hatshepsut",
-	},
-	{
-		name = "Hatshepsut_FS1",
-		numParam = 189,
-		stringParam = "GVD Hatshepsut (FS1)",
 	},
 	{
 		name = "Hades",

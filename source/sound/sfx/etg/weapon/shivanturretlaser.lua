@@ -4,14 +4,14 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 version = 4
-volume = 0.5
+volume = 0.9
 volumeRand = 0.2
 maxPolyphony = 8
 envelope =
 {
     {
         distance = 0,
-        volume = 0.4,
+        volume = 0.8,
         reverb = 0,
         duration = 0,
         equalizer =
@@ -19,7 +19,7 @@ envelope =
     },
     {
         distance = 700,
-        volume = 0.2,
+        volume = 0.4,
         reverb = 0,
         duration = 0,
         equalizer =
@@ -27,7 +27,7 @@ envelope =
     },
     {
         distance = 1400,
-        volume = 0.1,
+        volume = 0.2,
         reverb = 0,
         duration = 0,
         equalizer =

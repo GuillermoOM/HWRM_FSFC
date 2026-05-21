@@ -32,8 +32,6 @@ kCruiserFS2 = TER_FENRIS
 kCruiserFS1 = TER_FENRIS_FS1
 kHeavyCruiserFS2 = TER_LEVIATHAN
 kHeavyCruiserFS1 = TER_LEVIATHAN_FS1
-kBattleCruiserFS2 = TER_ORION
-kBattleCruiserFS1 = TER_ORION_FS1
 kFighterSpecial1 = TER_ERINYES
 kFighterSpecial2 = TER_ARES
 
@@ -52,8 +50,9 @@ function CpuBuild_UpdateRaceVariables()
 	kCruiser = FSFC_PickBestShip(kCruiserFS2, kCruiserFS1)
 	kHeavyCruiser = FSFC_PickBestShip(kHeavyCruiserFS2, kHeavyCruiserFS1)
 	kAdvancedCruiser = TER_AEOLUS
-	kBattleCruiser = FSFC_PickBestShip(kBattleCruiserFS2, kBattleCruiserFS1)
-	kCarrier = FSFC_PickBestShip(TER_HECATE, TER_ORION_FS1)
+	kBattleCruiser = TER_HADES
+	kCarrier = FSFC_PickBestShip(TER_ORION, TER_ORION_FS1)
+	kCarrier2 = FSFC_PickBestShip(TER_HECATE, TER_ORION_FS1)
 	kShipyard = TER_ARCADIA
 	kJuggernaut = TER_COLOSSUS
 	kResearch = TER_FAUSTUS
@@ -126,7 +125,7 @@ function DetermineSpecialDemand_Terran()
 	end
 
 	-- 3. Production Escalation
-	local numCarriers = FSFC_NumSquadrons(kCarrier)
+	local numCarriers = FSFC_NumSquadrons(kCarrier) + FSFC_NumSquadrons(kCarrier2)
 	local carrierGoal = 4
 	local shipyardGoal = 1
 	
@@ -142,6 +141,7 @@ function DetermineSpecialDemand_Terran()
 			demand = 1.5
 		end
 		FSFC_ShipDemandAdd(kCarrier, demand)
+		FSFC_ShipDemandAdd(kCarrier2, demand)
 	end
 
 	-- Wealth Boost (Spend excess RUs)
@@ -149,6 +149,7 @@ function DetermineSpecialDemand_Terran()
 		FSFC_ShipDemandAddByClass(eFighter, 3.0)
 		FSFC_ShipDemandAddByClass(eCorvette, 3.0)
 		FSFC_ShipDemandAdd(kCarrier, 5.0)
+		FSFC_ShipDemandAdd(kCarrier2, 5.0)
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -209,6 +210,7 @@ function DetermineSpecialDemand_Terran()
 		FSFC_ShipDemandAddByClass(eFighter, 1.5)
 		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
 		FSFC_ShipDemandAdd(kCarrier, 1.0)
+		FSFC_ShipDemandAdd(kCarrier2, 1.0)
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -266,7 +268,7 @@ function DetermineSpecialDemand_Terran()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (FSFC_NumSquadrons(kCarrier) >= 2 or GetRU() > 20000) then
+	if (FSFC_NumSquadrons(kCarrier)+FSFC_NumSquadrons(kCarrier2) >= 2 or GetRU() > 20000) then
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
 		if (kHeavyCruiser ~= nil) then

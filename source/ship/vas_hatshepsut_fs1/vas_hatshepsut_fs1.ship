@@ -162,12 +162,12 @@ setSupplyValue(NewShipType, 'LayoutBattleCruiser', 1.0)
 NewShipType.AttackPriorityMultiplier = 0.96
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 10
-NewShipType.neutralValue = 5
+NewShipType.frigateValue = 80
+NewShipType.neutralValue = 30
 NewShipType.antiFighterValue = 5
 NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 15
+NewShipType.antiFrigateValue = 60
+NewShipType.totalValue = 110
 
 --------------------------------------------------
 --- Construction
@@ -176,6 +176,7 @@ NewShipType.totalValue = 15
 NewShipType.buildCost = 7500
 NewShipType.buildTime = 240
 NewShipType.buildPriorityOrder = 40
+setConcurrentBuildLimit(NewShipType, 0, 2)
 
 --------------------------------------------------
 --- Sensors
@@ -192,7 +193,7 @@ NewShipType.detectionStrength = 1
 --- Tactical Overlay Icon
 --------------------------------------------------
 
-NewShipType.TOIcon = 'Rectangle'
+NewShipType.TOIcon = 'Arrow'
 NewShipType.TOScale = 1
 NewShipType.TODistanceFade0 = 14000
 NewShipType.TODistanceDisappear0 = 12000
@@ -335,6 +336,9 @@ StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret27', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret28', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret29', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret30', '')
+StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret02', '')
+StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret03', '')
+StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret04', '')
 
 --------------------------------------------------
 --- Shields
@@ -346,9 +350,6 @@ addShield(NewShipType, 'EMP', 10000, 20)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Bvas1', 'Weapon_Turret02', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas_fs1', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Bvas2', 'Weapon_Turret03', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas_fs1', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Bvas3', 'Weapon_Turret04', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas_fs1', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

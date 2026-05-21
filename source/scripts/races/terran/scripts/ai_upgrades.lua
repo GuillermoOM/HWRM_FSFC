@@ -223,7 +223,7 @@ function DoUpgradeDemand_Terran()
 		FSFC_Log_Research("RefineryHP", numRefineries * 3)
 	end
 	-- Carrier Build Speed
-	local numCarriers = NumSquadrons_Terran(kCarrier)
+	local numCarriers = NumSquadrons_Terran(kCarrier) + NumSquadrons_Terran(kCarrier2)
 	if numCarriers > 0 and HECATEBUILDSPEED ~= nil then
 		ResearchDemandAdd_Terran(HECATEBUILDSPEED, numCarriers * 3)
 		FSFC_Log_Research("HecateBuildSpeed", numCarriers * 3)

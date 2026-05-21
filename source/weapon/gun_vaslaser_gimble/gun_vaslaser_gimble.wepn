@@ -69,9 +69,9 @@ setAccuracy(
     { Corvette = 0.8 },
     { Corvette_hw1 = 0.8 },
     { munition = 0.13 },
-    { Frigate = 0.80 },
-    { Resource = 0.80 },
-    { SmallCapitalShip = 0.80 },
-    { BigCapitalShip = 0.80 },
+    { Frigate = 0.95 },
+    { Resource = 0.90 },
+    { SmallCapitalShip = 0.95 },
+    { BigCapitalShip = 0.95 },
     { ResourceLarge = 0.60 }
 )
