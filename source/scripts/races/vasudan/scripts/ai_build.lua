@@ -15,7 +15,7 @@ kFighterInterceptorFS1 = VAS_HORUS
 kFighterSuperiorityFS2 = VAS_THOTH
 kFighterSuperiorityFS1 = VAS_SETH
 kFighterAssaultFS2 = VAS_TAURET
-kFighterAssaultFS1 = VAS_SETH
+kFighterAssaultFS1 = VAS_ANUBIS
 kHeavyFighterFS2 = VAS_TAURET
 kHeavyFighterFS1 = VAS_THOTH
 kBomberStrikeFS2 = VAS_BAKHA
@@ -91,6 +91,11 @@ function DetermineSpecialDemand_Vasudan()
 		FSFC_ShipDemandAddByClass(eDestroyer, -10)
 		FSFC_ShipDemandAddByClass(eBattleCruiser, -10)
 		FSFC_ShipDemandAddByClass(eMotherShip, -10)
+	end
+
+	-- Nudge FS1 bomber production to counter cruisers/destroyers
+	if (FSFC_IsResearchDone("FS2") == 0) then
+		FSFC_ShipDemandAddByClass(eCorvette, 0.75)
 	end
 
 	-- 2. Resource Management (Scaled for FSFC Costs)
@@ -264,6 +269,12 @@ function DetermineSpecialDemand_Vasudan()
 	local numOsiris = FSFC_NumSquadrons(VAS_OSIRIS)
 	if (numOsiris >= 20) then
 		FSFC_ShipDemandSet(VAS_OSIRIS, -100)
+	end
+	
+	-- Strict cap on Amun heavy bombers (max 20) to prevent queue saturation
+	local numAmun = FSFC_NumSquadrons(VAS_AMUN)
+	if (numAmun >= 20) then
+		FSFC_ShipDemandSet(VAS_AMUN, -100)
 	end
 	
 	-- 5. Elite/Endgame Logic (The Colossus)

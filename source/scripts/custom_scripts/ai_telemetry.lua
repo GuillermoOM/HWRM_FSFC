@@ -24,10 +24,6 @@ if not AI_Telemetry_Loaded then
         ShipDemandSet(id, demand)
     end
 
-    function FSFC_ShipDemandAddByClass(shipClass, demand)
-        if (shipClass == nil or demand == 0) then return end
-        ShipDemandAddByClass(shipClass, demand)
-    end
 
     -- Print a snapshot of current demand values directly to the log.
     -- Called at the END of DetermineSpecialDemand. Throttled to once per 10s per player.

@@ -21,8 +21,8 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 --- Tactics And Multipliers
 --------------------------------------------------
 
-NewShipType.defaultROE = 'Passive'
-NewShipType.defaultStance = 'Neutral'
+NewShipType.defaultROE = 'Defensive'
+NewShipType.defaultStance = 'Aggressive'
 setTacticsMults(NewShipType, 'MAXSPEED', 1.0, 1.10, 1.0)
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.20, 0.80, 1.0)
 setTacticsMults(NewShipType, 'ENGINEBRAKE', 1.0, 1.0, 1.0)
@@ -338,7 +338,7 @@ loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0')
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'vasudanfighter', '', 3, '', 'Root')
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'pvf_old', '', 3, '', 'Root')
 
 --------------------------------------------------
 --- Shields

@@ -2,11 +2,58 @@ dofilepath("data:scripts/SCAR/SCAR_Util.lua")
 dofilepath("data:scripts/scar/restrict.lua")
 dofilepath("data:leveldata/multiplayer/lib/lib.lua")
 dofilepath("data:leveldata/multiplayer/lib/research.lua")
+
+-- Override vanilla research_init to prevent it from force-granting restricted/pre-managed era nodes
+function fsfc_research_init()
+	local playerIndex = 0
+	local isAI = 0
+	local grantThis = 1
+	for playerIndex = 0, Universe_PlayerCount() - 1, 1 do
+		if Player_IsAlive(playerIndex) == 1 then
+			if Player_HasShipWithBuildQueue(playerIndex) == 1 then
+				isAI = Player_GetLevelOfDifficulty(playerIndex)
+				Player_RestrictBuildOption(
+					playerIndex,
+					PlayerRace_GetString(playerIndex, "dm_allresearch_build_restrict", "")
+				)
+				research = nil
+
+				dofilepath(PlayerRace_GetString(playerIndex, "path_research", ""))
+
+				for z, iCount in research do
+					grantThis = 1
+
+					if iCount.DoNotGrant ~= nil then
+						grantThis = 0
+					end
+					if (iCount.AIOnly ~= nil) and (isAI <= 0) then
+						grantThis = 0
+					end
+					if (iCount.HumanOnly ~= nil) and (isAI > 0) then
+						grantThis = 0
+					end
+					
+					-- Era nodes FS1 and FS2 are programmatically managed by the match settings.
+					-- Granting them via All Research Granted will conflict with the chosen Era and cause engine errors.
+					if (iCount.Name == "FS1" or iCount.Name == "FS2") then
+						grantThis = 0
+					end
+
+					if grantThis == 1 then
+						Player_GrantResearchOption(playerIndex, iCount.Name)
+					end
+				end
+				Subtitle_Message_Handler("$14760", 2, "data:sound\\sfx\\ui\\frontend\\CHATMESSAGERECEIVED", playerIndex)
+			end
+		end
+	end
+	Rule_Remove("fsfc_research_init")
+end
 dofilepath("data:leveldata/multiplayer/lib/main.lua")
 dofilepath("data:scripts/scar/fsfc_ui.lua")
 dofilepath("data:leveldata/multiplayer/lib/ruinjections.lua")
 dofilepath("data:leveldata/multiplayer/lib/music.lua")
-dofilepath("data:scripts/rules/telemetry.lua")
+dofilepath("data:scripts/custom_scripts/telemetry.lua")
 
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
@@ -144,7 +191,7 @@ function timer_updating_fsfc()
 								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
 								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
 								"ter_medusa_fs1", "ter_ursa_fs1",
-								"vas_seth", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1",
+								"vas_seth", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1", "vas_amun", "vas_anubis",
 								"shi_basilisk", "shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1", "shi_scorpion"
 							}
 							for i, ship in fs1_ships_to_hide do
@@ -174,7 +221,7 @@ function timer_updating_fsfc()
 		end
 
 		if research == 0 then
-			Rule_AddInterval("research_init", timer_interval)
+			Rule_AddInterval("fsfc_research_init", timer_interval)
 		end
 
 		Rule_AddInterval("UI_init_fsfc", 0.1)

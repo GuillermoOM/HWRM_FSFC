@@ -94,6 +94,28 @@ Terran = 10
 Shivan = 11
 Vasudan = 12
 
+lastPlayerRace = nil
+
+function updatePlayerRaceFromShip(shipname)
+	if shipname ~= nil then
+		local prefix = strsub(shipname, 1, 4)
+		if prefix == "ter_" or prefix == "Ter_" or prefix == "TER_" then
+			lastPlayerRace = Terran
+			currentRace = Terran
+		elseif prefix == "vas_" or prefix == "Vas_" or prefix == "VAS_" then
+			lastPlayerRace = Vasudan
+			currentRace = Vasudan
+		elseif prefix == "shi_" or prefix == "Shi_" or prefix == "SHI_" then
+			lastPlayerRace = Shivan
+			currentRace = Shivan
+		elseif shipname == "STRIKE" or shipname == "STRIKEGROUP" then
+			if lastPlayerRace ~= nil then
+				currentRace = lastPlayerRace
+			end
+		end
+	end
+end
+
 function updateCurrentRaceFromShip(shipname)
 	if shipname ~= nil then
 		local prefix = strsub(shipname, 1, 4)
@@ -262,6 +284,7 @@ function isCapital(shipname)
 end
 
 function CommandWayPointMoveGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -288,6 +311,7 @@ function CommandWayPointMoveGiven(shipname, targetname)
 end
 
 function CommandCancelOrder(shipname, prevOrders)
+	updatePlayerRaceFromShip(shipname)
 	local MoveOrder = 0
 	local AttackOrder = 1
 
@@ -335,6 +359,7 @@ end
 
 -- resource command issued with a target of the given name
 function CommandResourceGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	--if (targetname == "Container") then
 	-- string library not available in luaconfig, so can't use strfind, strlower, strsub
 
@@ -362,7 +387,7 @@ MP_RUsTransferred = 3
 MP_ShipsTransferred = 4
 
 function CommandMultiplay(shipname, event)
-	updateCurrentRaceFromShip(shipname)
+	updatePlayerRaceFromShip(shipname)
 	if event == MP_AllianceRequested then
 		playSpeechActor("COMMAND_AllianceRequested_1", raceHelper(), 0, Frequency_Command)
 	elseif event == MP_AllianceFormed then
@@ -378,6 +403,7 @@ end
 
 -- capture command issued to a ship with the given name
 function CommandCaptureGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 
 	if shipname == "Hgn_MarineFrigate" then
@@ -397,6 +423,7 @@ function CommandCaptureGiven(shipname, targetname)
 end
 
 function CommandAttackGiven(shipname, targetname, attackType)
+	updatePlayerRaceFromShip(shipname)
 	print(
 		"******** COMMAND ATTACK: shipname, targetname, attackType = "
 			.. shipname
@@ -510,6 +537,7 @@ HYP_EnteredInhibitorVolume = 5
 HYP_NotEnoughCash = 6
 
 function CommandHyperspaceGiven(shipname, code)
+	updatePlayerRaceFromShip(shipname)
 	print("** CommandHyperspaceGiven: shipname = " .. shipname .. " code = " .. code)
 	genericShipName = strsub(shipname, 5)
 
@@ -558,6 +586,7 @@ function CommandHyperspaceGiven(shipname, code)
 end
 
 function CommandCombatMan(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -578,6 +607,7 @@ function CommandCombatMan(shipname, targetname)
 end
 
 function CommandMoveAttackGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -598,6 +628,7 @@ function CommandMoveAttackGiven(shipname, targetname)
 end
 
 function CommandLaunchGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	if shipname == "Hgn_Probe" then
 		--playSpeechActor( "COMMAND_ProbeLaunched",raceHelper(), 0)
 		return
@@ -625,6 +656,7 @@ end
 
 -- DEFINED IN TABLE (see Chatter.lua)
 function CommandGuardGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -652,6 +684,7 @@ function CommandGuardGiven(shipname, targetname)
 end
 
 function CommandMoveGiven(shipname, targetnm)
+	updatePlayerRaceFromShip(shipname)
 	--print("** CommandMoveGiven: shipname="..shipname)
 
 	local shiptype = getType(shipname)
@@ -716,6 +749,7 @@ function CommandStrikeGroupFormed(shipname, code)
 end
 
 function CommandDockGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 
 	--eliminate race
@@ -762,6 +796,7 @@ function CommandDockGiven(shipname, targetname)
 end
 
 function CommandParadeGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
@@ -780,6 +815,7 @@ function CommandParadeGiven(shipname, targetname)
 end
 
 function CommandRetireGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	local shiptype = getType(shipname)
 	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
@@ -860,6 +896,7 @@ ACT_Created = 2
 ACT_Reinforced = 3
 
 function CommandHotKeyGroupSelected(shipname, groupNumber, keyAction)
+	updatePlayerRaceFromShip(shipname)
 	if strfind(shipname, "Kpr_") ~= nil then
 		return
 	end
@@ -893,6 +930,7 @@ end
 
 -- was DEFINED IN TABLE (see Chatter.lua)
 function CommandShipsSelected(shipname)
+	updatePlayerRaceFromShip(shipname)
 	--print("**** CommandShipsSelected = "..shipname)
 
 	genericShipName = strsub(shipname, 5)
@@ -1236,6 +1274,7 @@ BUILD_Std = 1
 BUILD_Subsystem = 2
 
 function CommandConstructionComplete(buildingShip, builtItem, buildType)
+	updatePlayerRaceFromShip(buildingShip)
 	print(
 		"*****---- CommandConstructionComplete : buildingShip="
 			.. buildingShip
@@ -1323,6 +1362,7 @@ function CommandConstructionComplete(buildingShip, builtItem, buildType)
 end
 
 function CommandConstructionStarted(buildingShip, builtItem)
+	updatePlayerRaceFromShip(buildingShip)
 	--builtItemFamily = getFamily(builtItem)
 	--if(builtItemFamily == "FRIGATE" or builtItemFamily == "CAPITAL" or builtItemFamily == "SUPERCAP") then
 	--	playSpeechActor("COMMAND_CarrierOrMShipBuildCapitalShip", NameSupportPilot, NumSupportPilots, Frequency_Command )

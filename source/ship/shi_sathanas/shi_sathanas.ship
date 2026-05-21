@@ -246,7 +246,7 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 60, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 2000, 3000, 0, 0)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1, 'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
 addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Shi, Bomber_Shi, Cruiser_Shi, SuperCap_Shi, Utility_Shi, Platform_Shi, Battlecruiser_Shi, Shipyard_Shi, Probe_Shi', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')

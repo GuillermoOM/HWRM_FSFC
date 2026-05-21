@@ -18,7 +18,7 @@ selectionPriority = -1
 ```
 
 ## 2. Telemetry & Performance Monitoring
-Diagnostic logging is handled by `scripts/rules/telemetry.lua`. This script provides a heartbeat of the match status every 30 seconds.
+Diagnostic logging is handled by `scripts/custom_scripts/telemetry.lua`. This script provides a heartbeat of the match status every 30 seconds.
 
 ### 3. Dynamic Research Resolution
 To prevent engine crashes caused by rigid numeric ID dependencies, always use the `FSFC_CheckResearch` and `FSFC_IsResearchDone` wrappers.

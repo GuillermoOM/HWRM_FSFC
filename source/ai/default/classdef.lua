@@ -190,7 +190,6 @@ squadclass[eFighter] = {
 	SHI_GORGON,
 	SHI_DRAGON,
 
-	VAS_AMUN,
 	VAS_SETH,
 	VAS_ANUBIS,
 	VAS_THOTH,
@@ -244,6 +243,7 @@ squadclass[eCorvette] = {
 	VAS_BAKHA,
 	VAS_SEHKMET,
 	VAS_OSIRIS,
+	VAS_AMUN,
 }
 squadclass[eFrigate] = {
 	HGN_ASSAULTFRIGATE,

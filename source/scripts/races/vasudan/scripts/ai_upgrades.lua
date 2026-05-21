@@ -26,6 +26,8 @@ if (HATSHEPSUT_FS1 == nil) then HATSHEPSUT_FS1 = -1 end
 if (CPUPLAYERS_AGGRESSIVE == nil) then CPUPLAYERS_AGGRESSIVE = getglobal("cpuplayers_aggressive") or -1 end
 if (CPUPLAYERS_DYNAMIC == nil) then CPUPLAYERS_DYNAMIC = getglobal("cpuplayers_dynamic") or -1 end
 if (CPUPLAYERS_DEFENSIVE == nil) then CPUPLAYERS_DEFENSIVE = getglobal("cpuplayers_defensive") or -1 end
+if (ANUBIS == nil) then ANUBIS = -1 end
+if (AMUN == nil) then AMUN = -1 end
 
 function NumSquadrons_Vasudan(id)
 	return FSFC_NumSquadrons(id)
@@ -54,13 +56,13 @@ rt_vasudan_core = {
 
 -- 2. FS1 ERA SHIP UNLOCKS
 rt_vasudan_fs1 = {
-	-- Fighters
 	{ id = "HORUS", priority = 1.0, name = "Horus", class = eFighter, shipID = VAS_HORUS },
 	{ id = "SETH", priority = 1.1, name = "Seth", class = eFighter, shipID = VAS_SETH },
+	{ id = "ANUBIS", priority = 1.25, name = "Anubis", class = eFighter, shipID = VAS_ANUBIS },
 	{ id = "THOTH", priority = 1.2, name = "Thoth", class = eFighter, shipID = VAS_THOTH },
 	-- Bombers
 	{ id = "OSIRIS", priority = 1.0, name = "Osiris", class = eCorvette, shipID = VAS_OSIRIS },
-	{ id = "Amun", priority = 1.3, name = "Amun", class = eCorvette, shipID = VAS_AMUN },
+	{ id = "AMUN", priority = 1.3, name = "Amun", class = eCorvette, shipID = VAS_AMUN },
 }
 
 -- 3. FS2 ERA SHIP UNLOCKS

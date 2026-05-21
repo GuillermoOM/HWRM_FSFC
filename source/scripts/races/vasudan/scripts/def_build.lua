@@ -48,6 +48,16 @@ build = {
 	},
 	{
 		Type = Ship,
+		ThingToBuild = "vas_anubis",
+		RequiredResearch = "Anubis",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 8,
+		DisplayedName = "PVF Anubis - Space Superiority <c=12AB06>24s</c>",
+		Description =
+		"<b>Description:</b> The PVF Anubis is a Great War-era Space Superiority fighter of the Vasudan Navy. Boasting high speed and maneuverability, the Anubis is capable of engaging and eliminating any Shivan fighter threat. Equipped with an afterburner and robust weapons mounts, it is a versatile assault platform. \n\n<b>Prerequisites:</b> Fighter Design, Anubis. \n\n<b>Armaments:</b> Vasudan Laser, Rockeye Missiles.",
+	},
+	{
+		Type = Ship,
 		ThingToBuild = "vas_horus",
 		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
@@ -115,6 +125,16 @@ build = {
 		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>46s</c>",
 		Description =
 		"<b>Description:</b> The GVB Sekhmet is a Shivan design that was initially adapted to Vasudan needs by Hammer of Light engineers. The version currently in use was further modified by technicians at Mekhu Enterprises. Sporting four primary weapon banks and three missile/bomb bays, the Sekhmet packs a massive punch. Add in a top speed that surpasses that of some fighters and an ultra-fast molybdenum armor plating, and it's easy to see why the Sekhmet is the favorite bomber among Vasudan pilots. \n\n<b>Prerequisites:</b> Bomber Design, Sehkmet. \n\n<b>Armaments:</b> 4x Prometheus S, 1x GTM-13 Helios, 1x GTM-11 Infyrno (Upgrade).",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_amun",
+		RequiredResearch = "Amun",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 107,
+		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>50s</c>",
+		Description =
+		"<b>Description:</b> The PVB Amun is the primary heavy bombing platform of the Vasudan fleet during the Great War (FS1). Packing extremely thick molybdenum armor, it can absorb enormous defensive fire while delivering devastating payloads to enemy warships. Though slow and lacking agility, the Amun's multiple missile and bomb bays make it a feared weapon on any capital ship battleline. \n\n<b>Prerequisites:</b> Bomber Design, Amun. \n\n<b>Armaments:</b> 2x Prometheus R, 2x GTM-12 Cyclops, 1x GTM-10 Pihrana.",
 	},
 	{
 		Type = Ship,
