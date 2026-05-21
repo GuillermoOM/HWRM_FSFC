@@ -99,7 +99,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_osiris",
-		RequiredResearch = "Osiris",
+		RequiredResearch = "BomberDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 101,
 		DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>40s</c>",
@@ -139,7 +139,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_aten",
-		RequiredResearch = "Aten & FS2",
+		RequiredResearch = "CruiserDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 220,
 		DisplayedName = "GVC Aten - Reserve Cruiser <c=12AB06>30s</c>",
@@ -149,7 +149,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_aten_fs1",
-		RequiredResearch = "Aten & FS1",
+		RequiredResearch = "CruiserDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 220,
 		DisplayedName = "GVC Aten (FS1) - Reserve Cruiser <c=12AB06>30s</c>",

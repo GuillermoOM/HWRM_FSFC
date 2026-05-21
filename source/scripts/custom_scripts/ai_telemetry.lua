@@ -108,12 +108,17 @@ if not AI_Telemetry_Loaded then
 
     function FSFC_CheckResearch(id_or_name, shipID)
         local id = FSFC_ResolveID(id_or_name)
+        local isCapitalTech = nil
         if (id == nil) then return nil end
         
         -- Redundancy check: If we already have the ship, we don't need to research its unlock node
+        -- Bypassed for major warships/carriers to ensure the AI can upgrade starting flagships
         if (shipID and shipID ~= -1) then
-            if (FSFC_NumSquadrons(shipID) > 0) then
-                return nil
+            isCapitalTech = (id_or_name == "RAVANA" or id_or_name == "HECATE" or id_or_name == "MOLOCH" or id_or_name == "SOBEK" or id_or_name == "DEIMOS" or id_or_name == "LUCIFER" or id_or_name == "SATHANAS" or id_or_name == "COLOSSUS" or id_or_name == "HATSHEPSUT" or id_or_name == "TYPHON" or id_or_name == "ORION" or id_or_name == "JUGGERNAUT")
+            if (isCapitalTech == nil) then
+                if (FSFC_NumSquadrons(shipID) > 0) then
+                    return nil
+                end
             end
         end
 

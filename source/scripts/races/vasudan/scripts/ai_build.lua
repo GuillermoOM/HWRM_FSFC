@@ -86,11 +86,22 @@ function DetermineSpecialDemand_Vasudan()
 	if (s_enemyIndex == nil) then s_enemyIndex = -1 end
 	if (player_max == nil) then player_max = 0 end
 
+	local numD = 0
+	local maxD = 6
+	if (kDestroyer ~= nil) then
+		numD = FSFC_NumSquadrons(kDestroyer) + FSFC_NumSquadronsQ(kDestroyer)
+	end
+
 	-- 1. Gating heavy ships by time (Vanilla style)
 	if (gameTime() < 120) then
 		FSFC_ShipDemandAddByClass(eDestroyer, -10)
 		FSFC_ShipDemandAddByClass(eBattleCruiser, -10)
 		FSFC_ShipDemandAddByClass(eMotherShip, -10)
+	end
+
+	-- Apply caps by setting negative demand if reached
+	if (kDestroyer ~= nil and numD >= maxD) then
+		FSFC_ShipDemandSet(kDestroyer, -100)
 	end
 
 	-- Nudge FS1 bomber production to counter cruisers/destroyers
@@ -127,6 +138,9 @@ function DetermineSpecialDemand_Vasudan()
 
 	-- 3. Production Escalation
 	local numCarriers = FSFC_NumSquadrons(kCarrier)
+	if (kCarrier2 ~= nil) then
+		numCarriers = numCarriers + FSFC_NumSquadrons(kCarrier2)
+	end
 	local carrierGoal = 2
 	if (GetRU() > 100000) then
 		carrierGoal = 8
@@ -137,14 +151,47 @@ function DetermineSpecialDemand_Vasudan()
 		if (numCarriers > 0) then
 			demand = 1.0
 		end
-		FSFC_ShipDemandAdd(kCarrier, demand)
+		local c1Demand = demand
+		local c2Demand = demand
+		if (kCarrier ~= nil and kCarrier2 ~= nil and kCarrier ~= kCarrier2) then
+			local count1 = FSFC_NumSquadrons(kCarrier) + FSFC_NumSquadronsQ(kCarrier)
+			local count2 = FSFC_NumSquadrons(kCarrier2) + FSFC_NumSquadronsQ(kCarrier2)
+			if (count1 > count2) then
+				c1Demand = demand * 0.1
+			elseif (count2 > count1) then
+				c2Demand = demand * 0.1
+			end
+		end
+		if (kCarrier ~= nil) then
+			FSFC_ShipDemandAdd(kCarrier, c1Demand)
+		end
+		if (kCarrier2 ~= nil and kCarrier2 ~= kCarrier) then
+			FSFC_ShipDemandAdd(kCarrier2, c2Demand)
+		end
 	end
 
 	-- Wealth Boost (Spend excess RUs)
 	if (GetRU() > 10000) then
 		FSFC_ShipDemandAddByClass(eFighter, 1.5)
 		FSFC_ShipDemandAddByClass(eCorvette, 1.0)
-		FSFC_ShipDemandAdd(kCarrier, 1.0)
+		
+		local c1DemandMid = 1.0
+		local c2DemandMid = 1.0
+		if (kCarrier ~= nil and kCarrier2 ~= nil and kCarrier ~= kCarrier2) then
+			local count1 = FSFC_NumSquadrons(kCarrier) + FSFC_NumSquadronsQ(kCarrier)
+			local count2 = FSFC_NumSquadrons(kCarrier2) + FSFC_NumSquadronsQ(kCarrier2)
+			if (count1 > count2) then
+				c1DemandMid = 0.1
+			elseif (count2 > count1) then
+				c2DemandMid = 0.1
+			end
+		end
+		if (kCarrier ~= nil) then
+			FSFC_ShipDemandAdd(kCarrier, c1DemandMid)
+		end
+		if (kCarrier2 ~= nil and kCarrier2 ~= kCarrier) then
+			FSFC_ShipDemandAdd(kCarrier2, c2DemandMid)
+		end
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -170,12 +217,20 @@ function DetermineSpecialDemand_Vasudan()
 		if (kBattleCruiser ~= nil and numBC >= maxBC) then
 			FSFC_ShipDemandSet(kBattleCruiser, -100)
 		end
+		if (kDestroyer ~= nil and numD >= maxD) then
+			FSFC_ShipDemandSet(kDestroyer, -100)
+		end
 
-		-- When ALL caps are saturated: nuke residual eFrigate class demand and force strike craft
-		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC) then
+		-- When ALL caps are saturated: nuke residual eFrigate/eDestroyer class demand and force strike craft
+		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC and (kDestroyer == nil or numD >= maxD)) then
 			FSFC_ShipDemandAddByClass(eFrigate, -30)
+			FSFC_ShipDemandAddByClass(eDestroyer, -30)
 			FSFC_ShipDemandAddByClass(eFighter, 8.0)
 			FSFC_ShipDemandAddByClass(eCorvette, 6.0)
+		end
+
+		if (kDestroyer ~= nil and numD < maxD) then
+			FSFC_ShipDemandAdd(kDestroyer, 3.0, "vas_destroyer_mid")
 		end
 	end
 	
@@ -183,7 +238,24 @@ function DetermineSpecialDemand_Vasudan()
 	if (GetRU() > 50000) then
 		FSFC_ShipDemandAddByClass(eFighter, 3.0)
 		FSFC_ShipDemandAddByClass(eCorvette, 3.0)
-		FSFC_ShipDemandAdd(kCarrier, 5.0)
+		
+		local c1DemandForce = 5.0
+		local c2DemandForce = 5.0
+		if (kCarrier ~= nil and kCarrier2 ~= nil and kCarrier ~= kCarrier2) then
+			local count1 = FSFC_NumSquadrons(kCarrier) + FSFC_NumSquadronsQ(kCarrier)
+			local count2 = FSFC_NumSquadrons(kCarrier2) + FSFC_NumSquadronsQ(kCarrier2)
+			if (count1 > count2) then
+				c1DemandForce = 0.5
+			elseif (count2 > count1) then
+				c2DemandForce = 0.5
+			end
+		end
+		if (kCarrier ~= nil) then
+			FSFC_ShipDemandAdd(kCarrier, c1DemandForce)
+		end
+		if (kCarrier2 ~= nil and kCarrier2 ~= kCarrier) then
+			FSFC_ShipDemandAdd(kCarrier2, c2DemandForce)
+		end
 		
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
@@ -210,10 +282,14 @@ function DetermineSpecialDemand_Vasudan()
 		if (kBattleCruiser ~= nil and numBC >= maxBC) then
 			FSFC_ShipDemandSet(kBattleCruiser, -100)
 		end
+		if (kDestroyer ~= nil and numD >= maxD) then
+			FSFC_ShipDemandSet(kDestroyer, -100)
+		end
 
-		-- When ALL caps are saturated: nuke residual eFrigate class demand and force strike craft
-		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC) then
+		-- When ALL caps are saturated: nuke residual eFrigate/eDestroyer class demand and force strike craft
+		if (numC >= maxC and numHC >= maxHC and numBC >= maxBC and (kDestroyer == nil or numD >= maxD)) then
 			FSFC_ShipDemandAddByClass(eFrigate, -30)
+			FSFC_ShipDemandAddByClass(eDestroyer, -30)
 			FSFC_ShipDemandAddByClass(eFighter, 12.0)
 			FSFC_ShipDemandAddByClass(eCorvette, 8.0)
 		end
@@ -224,6 +300,9 @@ function DetermineSpecialDemand_Vasudan()
 		end
 		if (kHeavyCruiser ~= nil and numHC < maxHC) then
 			FSFC_ShipDemandAdd(kHeavyCruiser, 10.0, "vas_heavycruiser_force")
+		end
+		if (kDestroyer ~= nil and numD < maxD) then
+			FSFC_ShipDemandAdd(kDestroyer, 10.0, "vas_destroyer_force")
 		end
 		if (kBattleCruiser ~= nil and numBC < maxBC) then
 			FSFC_ShipDemandAdd(kBattleCruiser, 10.0, "vas_battlecruiser_force")
@@ -238,9 +317,17 @@ function DetermineSpecialDemand_Vasudan()
 	
 	if (numShipyards < shipyardGoal) then
 		if (numShipyards == 0 and (s_selfTotalValue > 30 or numCarriers > 0)) then
-			FSFC_ShipDemandAdd(kShipyard, 0.5, "Shipyard")
+			local shipyardDemand = 0.5
+			if (GetRU() > 30000) then
+				shipyardDemand = 15.0
+			end
+			FSFC_ShipDemandAdd(kShipyard, shipyardDemand, "Shipyard")
 		elseif (numShipyards > 0) then
-			FSFC_ShipDemandAdd(kShipyard, 1.0, "SecondShipyard")
+			local secondShipyardDemand = 1.0
+			if (GetRU() > 100000) then
+				secondShipyardDemand = 15.0
+			end
+			FSFC_ShipDemandAdd(kShipyard, secondShipyardDemand, "SecondShipyard")
 		end
 	else
 		FSFC_ShipDemandSet(kShipyard, -100)
@@ -250,7 +337,12 @@ function DetermineSpecialDemand_Vasudan()
 	-- 4. Class-specific "Best Ship" Nudges (Occasional era-favors)
 	if (kFighterSuperiority ~= nil) then FSFC_ShipDemandAdd(kFighterSuperiority, 0.3, "FighterSup") end
 	if (kBomberHeavy ~= nil) then FSFC_ShipDemandAdd(kBomberHeavy, 0.2, "BomberHeavy") end
-	if (FSFC_NumSquadrons(kCarrier) >= 1 or GetRU() > 20000) then
+	
+	local numCarrierCounts = FSFC_NumSquadrons(kCarrier)
+	if (kCarrier2 ~= nil) then
+		numCarrierCounts = numCarrierCounts + FSFC_NumSquadrons(kCarrier2)
+	end
+	if (numCarrierCounts >= 1 or GetRU() > 20000) then
 		local numC = FSFC_NumSquadrons(kCruiser) + FSFC_NumSquadronsQ(kCruiser)
 		local numHC = 0
 		if (kHeavyCruiser ~= nil) then
@@ -262,7 +354,7 @@ function DetermineSpecialDemand_Vasudan()
 
 		if (numC < maxC and kCruiser ~= nil) then FSFC_ShipDemandAdd(kCruiser, 0.4, "Cruiser") end
 		if (kHeavyCruiser ~= nil and numHC < maxHC) then FSFC_ShipDemandAdd(kHeavyCruiser, 0.6, "HeavyCruiser") end
-		if (kDestroyer ~= nil) then FSFC_ShipDemandAdd(kDestroyer, 0.5, "Destroyer") end
+		if (kDestroyer ~= nil and numD < maxD) then FSFC_ShipDemandAdd(kDestroyer, 1.5, "Destroyer") end
 	end
 	
 	-- Strict cap on Osiris bombers (max 20) to prevent queue saturation
@@ -278,9 +370,19 @@ function DetermineSpecialDemand_Vasudan()
 	end
 	
 	-- 5. Elite/Endgame Logic (The Colossus)
+	local numJ = 0
+	local maxJ = 1
+	if (GetRU() > 80000) then
+		maxJ = 2
+	end
+	if (kJuggernaut ~= nil) then
+		numJ = FSFC_NumSquadrons(kJuggernaut) + FSFC_NumSquadronsQ(kJuggernaut)
+	end
 	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Colossus") == 1) then
-		if (GetRU() > 40000) then
-			FSFC_ShipDemandAdd(kJuggernaut, 1.0, "vas_colossus")
+		if (numJ >= maxJ) then
+			FSFC_ShipDemandSet(kJuggernaut, -100)
+		elseif (GetRU() > 40000) then
+			FSFC_ShipDemandAdd(kJuggernaut, 30.0, "vas_colossus")
 		end
 	end
 

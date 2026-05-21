@@ -6,12 +6,6 @@ squadclass[eMotherShip] = {
 	VGR_MOTHERSHIP_MAKAAN,
 	KUS_MOTHERSHIP,
 	TAI_MOTHERSHIP,
-
-	TER_COLOSSUS,
-
-	SHI_SATHANAS,
-
-	VAS_COLOSSUS,
 }
 squadclass[eCollector] = {
 	HGN_RESOURCECOLLECTOR,
@@ -786,6 +780,7 @@ squadclass[eBattleCruiser] = {
 	SHI_LUCIFER,
 
 	VAS_COLOSSUS,
+	VAS_HATSHEPSUT,
 	VAS_HATSHEPSUT_FS1,
 }
 squadclass[eDestroyer] = {

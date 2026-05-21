@@ -61,7 +61,6 @@ rt_vasudan_fs1 = {
 	{ id = "ANUBIS", priority = 1.25, name = "Anubis", class = eFighter, shipID = VAS_ANUBIS },
 	{ id = "THOTH", priority = 1.2, name = "Thoth", class = eFighter, shipID = VAS_THOTH },
 	-- Bombers
-	{ id = "OSIRIS", priority = 1.0, name = "Osiris", class = eCorvette, shipID = VAS_OSIRIS },
 	{ id = "AMUN", priority = 1.3, name = "Amun", class = eCorvette, shipID = VAS_AMUN },
 }
 
@@ -79,7 +78,6 @@ rt_vasudan_fs2 = {
 -- 4. CAPITAL/CRUISER TECH (Class-shared)
 rt_vasudan_tech = {
 	{ id = "CRUISERDESIGN", priority = 1.1, name = "CruiserDesign", class = eFrigate },
-	{ id = "ATEN", priority = 1.0, name = "Aten", class = eFrigate, shipID = VAS_ATEN },
 	{ id = "MENTU", priority = 1.0, name = "Mentu", class = eFrigate, shipID = VAS_MENTU },
 	{ id = "SOBEK", priority = 1.0, name = "Sobek", class = eFrigate, shipID = VAS_SOBEK },
 	
@@ -173,7 +171,7 @@ function DoResearchTechDemand_Vasudan()
 		
 		if (baseDemand <= 0) then
 			-- Baseline fallback to prevent starting flagship deadlock
-			if ((item.id == "HATSHEPSUT" or  item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
+			if ((item.id == "HATSHEPSUT" or item.id == "SUPERCAPITALSHIPDESIGN") and FSFC_IsResearchDone("CapitalShipDesign") == 1) then
 				baseDemand = 1.5
 			end
 		end
