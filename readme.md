@@ -16,7 +16,7 @@ Either install the current version in the [Steam Workshop](https://steamcommunit
 
 Or run from the sourcecode:
 
-1. Download the repository Zip file (click on the greed code button above and click on "download .zip")
+1. Download the repository Zip file (click on the green code button above and click on "download .zip")
 2. Extract the main directory and change its name to "HWRM_FSFC"
 3. Place the directory inside your Homeworld install directory (the one that contains all the homeworld games directories)
 4. Edit the game launch parameters (via steam or a game shortcut) to have the following:
@@ -27,72 +27,52 @@ Or run from the sourcecode:
 
 Launch the game, no matter which version of homeworld RM you choose (1 or 2), it will load the mod.
 
-## Latest Changes:
+## Latest Changes (Research Branch Overhaul):
 
-- **AI Economic Revolution**: Implemented dynamic demand scaling and "Panic Spending" logic. AI now utilizes up to 100% of income and supports "True Huge" matches (300+ fighters).
-- **Era-Aware Intelligence**: AI now intelligently swaps fleet rosters between FS1 (Great War) and FS2 (Second Great War) eras.
-- **Shivan Economic Rebalancing**: Resolved the 11,000 RU Demon bottleneck; Shivans now scale naturally with Cain/Lilith cruisers.
-- **Universal Telemetry**: New real-time census system tracks every ship in the mod (100+ hulls) for post-match data analysis.
-- **AA Beam Precision**: Tuned AA Beam weaponry to prioritize point-defense roles, preventing capital ship "sniping" by anti-fighter turrets.
+- **Unified Game Rules & Match Rules**: Purged legacy, outdated STC library files and unified FS1 and FS2 rulesets into a single, highly polished `freespace_deathmatch` game mode. Included custom starting fleets, era gating rules, and unit capacity controls.
+- **Advanced ship-dependent Tech Tree & Research**: Fully restored ship-by-ship progression research requirements, making unlock paths tactical, progressive, and highly rewarding.
+- **AI Economic & Strategic Overhaul**: Implemented dynamic demand scaling and "Panic Spending" logic. AI now utilizes up to 100% of income, supports "True Huge" matches (300+ fighters), and prioritizes early-game scouting/reconnaissance.
+- **Era-Aware Fleet Rosters & FS1 Variants**: Added fully-configured FS1-era capital ship and strike craft variants (such as GTD Orion FS1, GVD Hatshepsut FS1, GTC Fenris FS1, and SC Cain FS1) with proper innate subsystems and hardpoint spacing.
+- **Universal Telemetry & Development Suite**: Real-time census and telemetry track ship counts and economics during play. Added custom Python scripts (`analyze_match.py`, `timeline_analysis.py`, etc.) for balancing, family auditing, and log parsing.
+- **Engine-Level Stability & Lua 4.0 Compatibility**: Resolved critical Lua 4.0 gotchas such as the closure restriction (no upvalues in `foreach`) and the weapon burst infinite-fire-rate bug, resulting in a rock-solid, crash-free gameplay experience.
 
 ## What Works
 
-- Integration with HW ships on the same game
-- Terran Race:
-  - All ships Migrated
-  - AI
-  - working fleet chatter
-- Shivan Race:
-  - All ships available
-  - AI
-  - working fleet chatter
-- Vasudan Race:
-  - All ships available
-  - AI
-  - working fleet chatter
+- Integration with HW ships in the same game.
+- **Terran Race**: All ships fully migrated, with robust AI, custom progression tech trees, and working ship chatter.
+- **Shivan Race**: All ships migrated, custom AI, fully-integrated tech progression, and working chatter.
+- **Vasudan Race**: All ships migrated, custom AI, fully-integrated tech progression, and working chatter.
+- **Freespace Deathmatch Ruleset**: Consolidated gamemode including custom starting fleets, era gating rules, resource injection, and unit capacity controls.
 
-## Current Issues
+## Current Issues / Tuning
 
-- Audio Balancing
-- Weapons Balancing (ongoing fine-tuning)
-- Minor Effects improvements
-- Ship health Balancing
-- Subsystem Hardpoint Stability (especially for FS1 variants)
+- Ongoing fine-tuning of weapon/ship balance.
+- Visual effect improvements for subspace jumps and shields.
 
-## What's missing
-
-- Original Mod Maps
-- Research (might have to change some bits)
-- Original Mod Gametypes
-- Multiplayer (possible, untested)
-- Ships subsystems (will depend on what the ship can do)
-- Ship's shield effects (Reaaaaally hard thing to do)
-
-## Current Roadmap
-
-1. [DONE] Add Vasudan Race and Ships
-2. [DONE] Add AI to Vasudans
-3. Enable Multiplayer (possible, requires testing)
-4. Stabilize capital ship subsystems (Alignment of FS1/FS2 hardpoints)
-5. Reintegrate Research (Ship-by-ship progression)
-6. Add FS Gametypes (Gauntlet, Beam-War)
-7. Add FS Maps
-
-## Brainstorming...
-
-- Possibly add BP? (Earth Federation race/ships)
-- Integrate player's patch mod for balancing (some files overlap, so I'd need to add it manually and carefully)
-- Proper subspace animation (kinda impossible to do, probably wont be a thing)
-- ???
-
-## Removing unnecesary bits?
-
-- Shields.... makes ships a bit OP? and doesn't feel easy to balance gameplay wise
-- Weapon subsystems on fighters and bombers... Supposed to improve ships weapons and damage output, being that there are so many ship variances of these classes. Maybe research on unlocking the ships is enough.
-
-## Match Analysis Tools
+## Match Analysis & Modding Tools
 
 For developers and advanced users, the mod includes a built-in telemetry and analysis suite:
 
-- **telemetry.lua**: A custom SCAR rule that logs real-time ship counts, economic throughput, and tactical class distribution every 30 seconds to the `HwRM.log`.
-- **analyze_match.py**: Located in `resources/tools/`. A Python script that parses the match logs to generate detailed reports on AI spending, production bottlenecks, and unit survival rates.
+- **telemetry.lua / ai_telemetry.lua**: Custom SCAR rules that log real-time ship counts, economic throughput, and tactical class distribution every 30 seconds to the `HwRM.log`.
+- **Python Tooling** (located in `resources/tools/`):
+  - `analyze_match.py` / `timeline_analysis.py`: Generate detailed post-match reports on spending, production, and bottleneck metrics.
+  - `realtime_telemetry.py`: Plots live graphs and stats.
+  - `extract_ship_stats.py`: Automatically parses and generates ship/weapon balance statistics.
+  - `audit_families.py` / `fix_families.py`: Ensures perfect alignment with family rules.
+
+## Documentation & Developer Resources
+
+This repository now contains a comprehensive, engine-specific knowledge base to make development easy and robust:
+- **FSFC Knowledge Base** (`resources/fsfc-knowledge/`): Documents detailing the FSFC AI architecture, ship balance sheets, unit capacity guidelines, and era gating mechanics.
+- **HWRM Wiki Reference** (`resources/hwrm-wiki/`): A complete reference of Homeworld Remastered Lua 4.0 gotchas, engine API functions, LSP-stubs, variable mappings, and step-by-step modding tutorials.
+
+## Roadmap Progress
+
+1. [DONE] Add Vasudan Race and Ships
+2. [DONE] Add AI to Vasudans
+3. [DONE] Reintegrate Research & Tech Trees (Ship-by-ship progression)
+4. [DONE] Stabilize capital ship subsystems (Alignment and innate loading of FS1/FS2 hardpoints)
+5. [DONE] Unify rules and game types into `freespace_deathmatch`
+6. [DONE] Integrate advanced telemetry and developer tools
+7. [PENDING] Add custom FS Maps
+8. [PENDING] Multiplayer testing & verification
