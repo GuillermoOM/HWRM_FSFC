@@ -55,7 +55,7 @@ squadclass[eRefinery] = {
 	SHI_RAHU,
 
 	VAS_ANUKET,
-	VAS_MAAT,
+
 }
 squadclass[eBuilder] = {
 	HGN_MOTHERSHIP,
@@ -119,7 +119,6 @@ squadclass[eDropOff] = {
 	VAS_TYPHON,
 	VAS_TYPHON_FS1,
 	VAS_ANUKET,
-	VAS_MAAT,
 	VAS_HATSHEPSUT_FS1,
 	VAS_HATSHEPSUT,
 }
@@ -759,13 +758,15 @@ squadclass[eUselessShips] = {
 
 	TER_POSEIDON,
 	TER_FAUSTUS,
-	TER_CHRONOS,
+	TER_CERBERUS,
+	TER_HYGEIA,
 
 	SHI_MEPHISTO,
 
 	VAS_BAST,
 	VAS_SCARAB,
 	VAS_BES,
+	VAS_MAAT,
 }
 squadclass[eBattleCruiser] = {
 	HGN_BATTLECRUISER,

@@ -259,12 +259,22 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bes",
-		RequiredResearch = "SentryAndMineDeployer",
+		RequiredResearch = "SentryAndMineDeployer & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 512,
 		DisplayedName = "GVFr Bes - Sentry Builder <c=12AB06>25s</c>",
 		Description =
 		"<b>Description:</b> For the past 20 years, the GVFr Bes has been the mainstay of Vasudan shipping fleets. While some Terran systems languished in the post-war era, the Vasudans experienced an economic recovery that was miraculous, given the annihilation of their home planet. Experts credit the policies of the restored Imperial government that emerged following Khonsu II's dissolution of the Vasudan parliament. As commerce among the Vasudan systems resumed and expanded into Terran worlds, a new generation of space-faring cargo vessels was required to meet the needs of this burgeoning economy. \n\n<b>Prerequisites:</b> Sentry and Mine Deployer. \n\n<b>Armaments:</b> 2x Turret.",
+	},
+	{
+		Type = Ship,
+		ThingToBuild = "vas_maat",
+		RequiredResearch = "SentryAndMineDeployer & FS1",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 310,
+		DisplayedName = "PVFr Ma'at - Sentry Builder <c=12AB06>30s</c>",
+		Description =
+		"<b>Description:</b> With three turrets, the Ma'at is a hairy target for GTA pilots to attack. However, it is slow enough that it can be destroyed with enough patience. As always, supply ships for the PVN are considered to be valid targets. \n\n<b>Prerequisites:</b> Sentry and Mine Deployer. \n\n<b>Armaments:</b> 3x Turret.",
 	},
 	{
 		Type = Ship,
@@ -317,16 +327,7 @@ build = {
 		"<b>Description:</b> Long range sensor device. Can be deployed to a specific location once after construction. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> None.",
 	},
 
-	{
-		Type = Ship,
-		ThingToBuild = "vas_maat",
-		RequiredResearch = "",
-		RequiredShipSubSystems = "",
-		DisplayPriority = 310,
-		DisplayedName = "PVFr Ma'at - Resource Drop-Off <c=12AB06>30s</c>",
-		Description =
-		"<b>Description:</b> With three turrets, the Ma'at is a hairy target for GTA pilots to attack. However, it is slow enough that it can be destroyed with enough patience. As always, supply ships for the PVN are considered to be valid targets. \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 3x Turret.",
-	},
+
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bast",

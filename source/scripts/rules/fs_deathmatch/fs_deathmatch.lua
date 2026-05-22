@@ -137,10 +137,10 @@ function timer_updating()
 								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
 								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
 								"ter_hygeia", "ter_argo", "ter_fenris", "ter_leviathan", "ter_orion", "ter_ulysses",
-								"ter_medusa", "ter_ursa",
+								"ter_medusa", "ter_ursa", "ter_iceni",
 								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
 								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
-								"vas_aten", "vas_typhon",
+								"vas_aten", "vas_typhon", "vas_bes",
 								"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
 								"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
 								"shi_gorgon", "shi_astaroth", "shi_cain", "shi_lilith", "shi_demon"
@@ -153,7 +153,7 @@ function timer_updating()
 								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
 								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
 								"ter_medusa_fs1", "ter_ursa_fs1",
-								"vas_seth", "vas_thoth", "vas_scarab", "vas_bes", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1","vas_amun", "vas_anubis",
+								"vas_seth", "vas_thoth", "vas_scarab", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1", "vas_amun", "vas_anubis", "vas_maat",
 								"shi_basilisk", "shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1", "shi_scorpion"
 							}
 							for i, ship in fs1_ships_to_hide do

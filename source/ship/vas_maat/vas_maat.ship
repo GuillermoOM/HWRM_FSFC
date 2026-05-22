@@ -5,15 +5,15 @@ NewShipType = StartShipConfig()
 --------------------------------------------------
 
 NewShipType.displayedName = 'PVFr Maat'
-NewShipType.sobDescription = 'Resource Controller'
+NewShipType.sobDescription = 'Sentry and Mine Deployer'
 
 --------------------------------------------------
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 18000)
-NewShipType.regentime = 850
-NewShipType.minRegenTime = 850
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 4500)
+NewShipType.regentime = 225 
+NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
 NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 
@@ -39,8 +39,9 @@ NewShipType.isTransferable = 1
 --- Formations
 --------------------------------------------------
 
-NewShipType.paradeData = 'dummy_parade'
+NewShipType.paradeData = 'vas_mothership_parade'
 NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement
@@ -132,49 +133,45 @@ NewShipType.layoutCenterZ = -10
 NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Utility_Vas'
 NewShipType.AttackFamily = 'ResourceLarge'
-NewShipType.DockFamily = 'Controller'
+NewShipType.DockFamily = 'Frigate'
 NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Small'
-NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour")
+NewShipType.CollisionFamily = 'Big'
+NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
 
 --------------------------------------------------
 --- Supply
 --------------------------------------------------
 
-setSupplyValue(NewShipType, 'Resource', 1.0)
 setSupplyValue(NewShipType, 'Utility', 1.0)
-setSupplyValue(NewShipType, 'ResourceController', 1.0)
-setSupplyValue(NewShipType, 'LayoutResource', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.AttackPriorityMultiplier = 0.92
 NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 0
+NewShipType.corvetteValue = 10
 NewShipType.frigateValue = 0
-NewShipType.neutralValue = 5
-NewShipType.antiFighterValue = 5
+NewShipType.neutralValue = 0
+NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 5
+NewShipType.totalValue = 10
 
 --------------------------------------------------
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 800
-NewShipType.buildTime = 45
-NewShipType.buildPriorityOrder = 30
+NewShipType.buildCost = 400
+NewShipType.buildTime = 25
+NewShipType.buildPriorityOrder = 40
 
 --------------------------------------------------
 --- Sensors
 --------------------------------------------------
 
-NewShipType.retaliationRange = 4800
+NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
 NewShipType.prmSensorRange = 3500
@@ -256,15 +253,17 @@ NewShipType.alternativeHyperspaceTime = 7
 --------------------------------------------------
 
 addAbility(NewShipType, 'MoveCommand', 1, 0)
-addAbility(NewShipType, 'CanDock', 1, 0)
+addAbility(NewShipType, 'CanDock', 1, 1)
 addAbility(NewShipType, 'CanLaunch')
-addAbility(NewShipType, 'ShipHold', 1, 200, 0, 'rallypoint', '', 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 70, 350, 0, 3)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership', 'JustShoot')
-addAbility(NewShipType, 'GuardCommand', 1, 3000, 800)
+addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip', 'JustShoot')
+addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 1, 0.3)
+addAbility(NewShipType, 'RetireAbility', 1, 0)
+addAbility(NewShipType, 'MinelayerAbility', 1, 3.5)
+addAbility(NewShipType, 'CanBuildShips', 1, 'Platform_Vas', 'Platform')
+addAbility(NewShipType, 'ShipHold', 1, 1000, 1, 'rallypoint', 'Fighter, Utility', 400)
 
 --------------------------------------------------
 --- Docking
@@ -300,6 +299,7 @@ LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_HullDefense1', '')
 StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_HullDefense2', '')
 StartShipWeaponConfig(NewShipType, 'gun_avenger_gimble', 'Weapon_HullDefense3', '')
+StartShipWeaponConfig(NewShipType, 'Hgn_MineLayer', 'Weapon_HullDefense3', '')
 
 --------------------------------------------------
 --- Shields
