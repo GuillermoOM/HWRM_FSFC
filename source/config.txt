@@ -34,46 +34,30 @@ WorkshopID: 3586658386
 // description that will appear on the Steam Workshop for this item
 Description:
 
-Retry of the Freespace Fleet Command V4 Mod for Homeworld Remastered.
-
-This is still a long way to go, please follow up closer development on the github repo: https://github.com/GuillermoOM/HWRM_FSFC
-
-## What Works
-
-- Integration with HW ships on the same game
-- Terran Race:
-  - All ships Migrated
-  - AI
-  - working fleet chatter
-- Shivan Race:
-  - All ships available
-  - AI
-  - working fleet chatter
-- Vasudan Race:
-  - All ships available
-  - AI
-  - working fleet chatter
-- Multiplayer
-- Music
-- Menu and Loading Screen
-
-## Current Issues
-
-- Audio Balancing
-
-## What's missing
-
-- Original Mod Maps
-- Research (might have to change some bits)
-- Original Mod Gametypes
-- Multiplayer (possible, untested)
-- Ships subsystems (will depend on what the ship can do)
-- Ship's shield effects (Reaaaaally hard thing to do)
-
-## Current Roadmap
-
-1. Add capital ships subsystems (missing on many ships, needed before implementing research)
-2. Reintegrate Research
-3. Add FS Gametypes
-4. Add FS Maps
-5. Add Gauntlet Gametype (From existing mod)
+[h1]FreeSpace: Fleet Command — Remastered[/h1]
+Welcome to the definitive remaster and continuation of the legendary [b]FreeSpace: Fleet Command (V4)[/b] mod, rebuilt and optimized from the ground up for Homeworld Remastered! 
+Lead the Galactic Terran Alliance (GTA), the Parliamentary Vasudan Navy (PVN), or the terrifying, enigmatic Shivan armada in massive, deep-space tactical warfare. Experience custom mechanics, authentic fleet chatter, specialized AI, and a fully restored progression system.
+[b]🌟 Active Development & Open Source:[/b]
+We are actively developing, balancing, and polishing this mod. Check out our progress, view the source code, or contribute directly on our GitHub repository: 
+👉 [url=https://github.com/GuillermoOM/HWRM_FSFC]HWRM_FSFC GitHub Repository[/url]
+---
+[h2]✨ Key Features & What Works[/h2]
+[list]
+[*] [b]Three Fully Playable Races:[/b] GTA Terrans, PVN Vasudans, and Shivans are fully integrated, playable alongside native Homeworld races.
+[*] [b]Fully Restored Tech Tree & Research:[/b] Progression-based research has been completely restored! Unlock advanced hulls, specialized fighters, and massive capital capital upgrades through ship-dependent tech trees.
+[*] [b]Authentic FreeSpace Experience:[/b] Immersive fleet and pilot chatter, custom FreeSpace music, thematic menu screens, and atmospheric loading screens.
+[*] [b]Revolutionary AI Commanders:[/b] Fully customized AI for all three FreeSpace factions that uses strategic economic scaling, fields scouts, and counter-builds player fleets.
+[*] [b]Consolidated "FreeSpace Deathmatch" Ruleset:[/b] A single, highly optimized gamemode that features era gating (FS1 Great War vs FS2 Second Great War), resource injection rules, and tailored starting fleets.
+[*] [b]Multiplayer Supported:[/b] Jump into battle against friends or cooperative AI in multiplayer matches.
+[/list]
+---
+[h2]🛠️ What We Are Working On (Roadmap)[/h2]
+[list]
+[*] [b]FS Maps & Sectors:[/b] Re-integrating and remastering the original mod maps.
+[*] [b]Gauntlet & Beam-War Gametypes:[/b] Porting custom PvE Gauntlet and specialized game rules.
+[*] [b]Ongoing Balancing:[/b] Constant tuning of weapon stats, sensor range parity, and fighter squadron capacities.
+[*] [b]Visual Polish:[/b] Exploring custom subspace jump effects and energy shields.
+[/list]
+---
+[h2]💬 Help & Community[/h2]
+Have you spotted a bug, or do you have balancing suggestions? Feel free to post in the Steam Discussion threads or open an issue directly on our GitHub page! Your feedback is what keeps the great war going.
