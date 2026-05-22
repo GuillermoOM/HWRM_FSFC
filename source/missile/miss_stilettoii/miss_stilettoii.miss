@@ -54,17 +54,17 @@ NewMissileType.detectionDistance = 10
 --- Movement	
 --------------------------------------------------	
 
-NewShipType.thrusterMaxSpeed = 440
-NewShipType.thrusterAccelTime = 0.8
-NewShipType.thrusterBrakeTime = 0.5
+NewMissileType.thrusterMaxSpeed = 440
+NewMissileType.thrusterAccelTime = 0.8
+NewMissileType.thrusterBrakeTime = 0.5
 
-NewShipType.mainEngineMaxSpeed = 440
-NewShipType.mainEngineAccelTime = 0.8
-NewShipType.mainEngineBrakeTime = 0.5
+NewMissileType.mainEngineMaxSpeed = 440
+NewMissileType.mainEngineAccelTime = 0.8
+NewMissileType.mainEngineBrakeTime = 0.5
 
-NewShipType.rotationMaxSpeed = 325
-NewShipType.rotationAccelTime = 0.4
-NewShipType.rotationBrakeTime = 0.4
+NewMissileType.rotationMaxSpeed = 325
+NewMissileType.rotationAccelTime = 0.4
+NewMissileType.rotationBrakeTime = 0.4
 
 --------------------------------------------------	
 --- Advanced Movement	
@@ -72,13 +72,13 @@ NewShipType.rotationBrakeTime = 0.4
 
 NewMissileType.density = 1
 
-NewShipType.thrusterUsage = 0.5
-NewShipType.accelerationAngle = 60
-NewShipType.mirrorAngle = 30
-NewShipType.maxBankingAmount = 85
-NewShipType.descendPitch = 0
-NewShipType.goalReachEpsilon = 5
-NewShipType.controllerType = "Missile"
+NewMissileType.thrusterUsage = 0.5
+NewMissileType.accelerationAngle = 60
+NewMissileType.mirrorAngle = 30
+NewMissileType.maxBankingAmount = 85
+NewMissileType.descendPitch = 0
+NewMissileType.goalReachEpsilon = 5
+NewMissileType.controllerType = "Missile"
 
 --------------------------------------------------	
 --- Special Flight Maneuvers (missiles)
