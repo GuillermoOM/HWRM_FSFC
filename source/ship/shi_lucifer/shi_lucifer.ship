@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Super Destroyer'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 500000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 500000)
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -21,8 +21,8 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 --- Tactics And Multipliers
 --------------------------------------------------
 
-NewShipType.defaultROE = 'Defensive'
-NewShipType.defaultStance = 'Neutral'
+NewShipType.defaultROE = 'Aggressive'
+NewShipType.defaultStance = 'Aggressive'
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'THRUSTERACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'ROTATION', 0.95, 1.05, 1.0)
@@ -120,11 +120,11 @@ NewShipType.layoutCenterZ = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'SuperCap_Shi'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'BattleCruiser'
+NewShipType.AvoidanceFamily = 'SuperCap'
 NewShipType.DisplayFamily = 'Capital'
 NewShipType.AutoFormationFamily = 'CapShip'
 NewShipType.CollisionFamily = 'Big'
@@ -156,10 +156,9 @@ NewShipType.totalValue = 110
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 21500
+NewShipType.buildCost = 12000
 NewShipType.buildTime = 305
 NewShipType.buildPriorityOrder = 40
-setConcurrentBuildLimit(NewShipType, 0, 2)
 
 --------------------------------------------------
 --- Sensors
@@ -168,8 +167,8 @@ setConcurrentBuildLimit(NewShipType, 0, 2)
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 7000
-NewShipType.secSensorRange = 8000
+NewShipType.prmSensorRange = 8000
+NewShipType.secSensorRange = 10000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------
@@ -254,9 +253,15 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 28, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 800, 1600, 0, 0)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "Frontal" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.2,
+    'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1',
+    'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" },
+    { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "Frontal" },
+    { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
-addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Shi, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
+addAbility(NewShipType, 'CanBuildShips', 1,
+    'Fighter_Shi, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter',
+    'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 250, 0.5, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
 addAbility(NewShipType, 'SpecialAttack', 1, 'EMP')
@@ -292,10 +297,16 @@ LoadModel(NewShipType, 1)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Shi_LRedLucifer1', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable', 'shi_luciferturret01', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Shi_LRedLucifer2', 'Weapon_Beam2', 'Weapon', 'Innate', 'Damageable', 'shi_luciferturret02', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Shi_bombardmentbeam1', 'Weapon_UberBeam1', 'Weapon', 'Innate', 'Damageable', 'Shi_BombardmentBeam', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Shi_bombardmentbeam2', 'Weapon_UberBeam2', 'Weapon', 'Innate', 'Damageable', 'Shi_BombardmentBeam', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_LRedLucifer1', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable',
+    'shi_luciferturret01', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_LRedLucifer2', 'Weapon_Beam2', 'Weapon', 'Innate', 'Damageable',
+    'shi_luciferturret02', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_bombardmentbeam1', 'Weapon_UberBeam1', 'Weapon', 'Innate', 'Damageable',
+    'Shi_BombardmentBeam', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Shi_bombardmentbeam2', 'Weapon_UberBeam2', 'Weapon', 'Innate', 'Damageable',
+    'Shi_BombardmentBeam', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible',
+    'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Weapons
@@ -338,7 +349,8 @@ loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'ShivanCapi
 --- Latch Points
 --------------------------------------------------
 
-loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint0', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3', 'CapturePoint4', 'CapturePoint5')
+loadLatchPointList(NewShipType, 'CapCap', 'CapturePoint0', 'CapturePoint1', 'CapturePoint2', 'CapturePoint3',
+    'CapturePoint4', 'CapturePoint5')
 loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1', 'RepairPoint2')
 
 --------------------------------------------------
@@ -352,4 +364,3 @@ NewShipType.explosiveScuttleDamageOnDeath = 3725
 NewShipType.maxFalloffForce = 500 * 10
 NewShipType.explosiveDamageOnDeath = 745
 NewShipType.radiusDamageEvadeMod = 1.1
-

@@ -30,8 +30,8 @@ AddWeaponResult(NewWeaponType,
     "Hit",
     "DamageHealth",
     "Target",
-    18,
-    18,
+    32,
+    32,
     "")
 
 setAngles(NewWeaponType,

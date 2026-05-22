@@ -42,7 +42,7 @@ setPenetration(
 )
 
 setAccuracy(
-NewWeaponType,
+	NewWeaponType,
 	1,
 	{ Swarmer = 0 },
 	{ SpaceMine = 0 },

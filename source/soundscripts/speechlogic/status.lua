@@ -44,30 +44,30 @@ function GiveFSStatus(statusname, shiptype)
 
 	if currentRace == Terran then
 		if shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(statusname, NameTerPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(statusname, NameTerPilot, 2, Frequency_Command)
 		elseif shiptype == AWACS then
-			playSpeechActor(statusname, NameTerAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameTerAwacs, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(statusname, NameTerCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameTerCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(statusname, NameTerCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameTerCapital, 1, Frequency_Command)
 		elseif shiptype == Colossus then
 			playSpeechActor(statusname, NameTerColossus, 1, Frequency_Command)
 		end
 	elseif currentRace == Vasudan then
 		if shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(statusname, NameVasPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(statusname, NameVasPilot, 2, Frequency_Command)
 		elseif shiptype == AWACS then
-			playSpeechActor(statusname, NameVasAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameVasAwacs, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(statusname, NameVasCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameVasCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(statusname, NameVasCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(statusname, NameVasCapital, 1, Frequency_Command)
 		elseif shiptype == Colossus then
 			playSpeechActor(statusname, NameVasColossus, 1, Frequency_Command)
 		end
 	elseif currentRace == Shivan then
-		playSpeechActor(statusname, NameShiCommand, NumCapPilots, Frequency_Command)
+		playSpeechActor(statusname, NameShiCommand, 1, Frequency_Command)
 	end
 end
 
@@ -200,7 +200,7 @@ attackMap["Vgr_Destroyer"] = { "STATUS_V_Destroyer_Under_Attack", NameCapPilot, 
 attackMap["Vgr_Battlecruiser"] = { "STATUS_V_Battlecruiser_Attack", NameCapPilot, NumCapPilots }
 attackMap["Vgr_ShipYard"] = { "STATUS_V_Shipyard_Under_Attack", NameSupportPilot, NumSupportPilots }
 
-attackMap["Ter_Perseus"] = { "STATUS_underattack", NameTerPilot, NumFighterPilots }
+attackMap["ter_perseus"] = { "STATUS_underattack", NameTerPilot, 2 }
 
 attackMapFC = {}
 attackMapFC["Hgn_Destroyer"] = "STATUS_DestoryerUnderAttack_0"
@@ -217,6 +217,7 @@ attackMapMak["Vgr_Shipyard"] = "STATUS_ShipyardUnderAttack_1"
 FC_OVERRIDE_DISTSQR = 2000
 
 function StatusUnderAttack(shipname, enemy, attackcode)
+	updateCurrentRaceFromShip(shipname)
 	print(
 		"****** StatusUnderAttack: shipname, enemy, attackcode = {"
 			.. shipname
@@ -331,6 +332,7 @@ end
 MAX_CAMERA = 5000 -- beyond this distance, FLEETCOMMAND will inform player
 
 function StatusCaptureComplete(shipname, targetnm, cameradistance)
+	updateCurrentRaceFromShip(shipname)
 	shiptype = getType(targetnm)
 	generictargetnm = strsub(targetnm, 5)
 
@@ -390,6 +392,7 @@ function StatusInMineField(underFireShipName, groupNumber)
 end
 
 function StatusAttackComplete(shipname, groupnum)
+	updateCurrentRaceFromShip(shipname)
 	--if(getFamily(shipname) == "FIGHTER") then
 	--	playSpeechActor("STATUS_StrikeCraftAttackComplete", g_default_frequency)
 	--end
@@ -428,6 +431,7 @@ WorkingOnRepairs = 1
 FinishedRepairs = 2
 
 function StatusRepairs(shipname, targetName, repairStatus)
+	updateCurrentRaceFromShip(shipname)
 	if currentRace >= 10 then
 		shiptype = getType(shipname)
 		if repairStatus == StartingRepairs then
@@ -447,6 +451,7 @@ function StatusRepairs(shipname, targetName, repairStatus)
 end
 
 function StatusShipDestroyed(shipname, code)
+	updateCurrentRaceFromShip(shipname)
 	print("**** StatusShipDestroyed: shipname =" .. shipname .. ", and code = " .. code)
 
 	if code > 0 then
@@ -1030,6 +1035,7 @@ Repaired = 4
 varyEngineSpeech = 0
 
 function StatusSubsystem(ssname, shipname, event)
+	updateCurrentRaceFromShip(shipname)
 	--eliminate race
 	genericShipName = strsub(shipname, 5)
 	genericssname = strsub(ssname, 5)

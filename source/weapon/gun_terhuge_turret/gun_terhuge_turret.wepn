@@ -13,7 +13,7 @@ StartWeaponConfig(
     1,
     1,
     1,
-    4,
+    2,
     0,
     0,
     1,
@@ -38,7 +38,7 @@ setAngles(NewWeaponType,
     0,
     -180,
     180,
-    0,
+    -2.5,
     90)
 
 setMiscValues(NewWeaponType,

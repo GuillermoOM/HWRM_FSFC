@@ -1,28 +1,128 @@
---Shivan
-supplyLimit("Fighter", 135);
-supplyLimit("Bomber", 135);
-supplyLimit("Destroyer", 2);
-supplyLimit("Cruiser", 25);
-supplyLimit("AdvancedCruiser", 4);
+-- Freespace Unit Caps Only
+-- Generic families used by Freespace ships
+supplyLimit("Fighter", 300)
+supplyLimit("Bomber", 300)
+supplyLimit("Scout", 300)
+supplyLimit("Corvette", 100)
+supplyLimit("Frigate", 100)
+supplyLimit("Capital", 40)
+supplyLimit("Utility", 100)
+supplyLimit("Resource", 60)
+supplyLimit("Platform", 50)
+supplyLimit("Mothership", 2)
 
-supplyShow("Corvette", "Never");
-supplyShow("Frigate", "Never");
-supplyShow("Cruiser", "Always");
-supplyShow("AdvancedCruiser", "Always");
-supplyShow("Bomber", "Always");
+-- Resource & Utility Sub-families
+supplyLimit("ResourceCollector", 45)
+supplyLimit("ResourceController", 10)
+supplyLimit("Probe", 25)
+supplyLimit("ECMProbe", 25)
+supplyLimit("ProximitySensor", 25)
+supplyLimit("SensorArray", 8)
+supplyLimit("CloakGenerator", 8)
+supplyLimit("GravWellGenerator", 8)
 
-supplyShow("LayoutBomber", "Never");
-supplyShow("LayoutCruiser", "Never");
+-- Freespace Custom Families
+supplyLimit("Cruiser", 75)
+supplyLimit("AdvancedCruiser", 20)
+supplyLimit("Destroyer", 10)
+supplyLimit("Deimos", 20)
+supplyLimit("Hades", 4)
+supplyLimit("Hatshepsut", 4)
+supplyLimit("Colossus", 2)
+supplyLimit("Installation", 4)
+supplyLimit("Iceni", 2)
+supplyLimit("Ares", 40)
+supplyLimit("ArtemisDH", 40)
+supplyLimit("AWACS", 10)
+supplyLimit("Faustus", 4)
+supplyLimit("Moloch", 15)
+supplyLimit("Sobek", 15)
+supplyLimit("Lucifer", 2)
+supplyLimit("Sathanas", 2)
+supplyLimit("Imhotep", 4)
 
-supplyLimit("LayoutBomber", 180);
-supplyLimit("LayoutCruiser", 180);
-supplyLimit("LayoutBattleCruiser", 1);
+-- Hide Vanilla-specific families that are redundant
+supplyShow("Scout", "Never")
+supplyShow("Interceptor", "Never")
+supplyShow("LanceFighter", "Never")
+supplyShow("Defenders", "Never")
+supplyShow("Defensefighters", "Never")
+supplyShow("CloakedFighters", "Never")
+supplyShow("MinelayerCorvette", "Never")
+supplyShow("CommandCorvette", "Never")
+supplyShow("SalvageCorvette", "Never")
+supplyShow("DefenseFieldFrigate", "Never")
+supplyShow("CaptureFrigate", "Never")
+supplyShow("MissileDestroyer", "Never")
+supplyShow("Carrier", "Never")
+supplyShow("Battlecruiser", "Never")
+supplyShow("HeavyCruiser", "Never")
+supplyShow("Shipyard", "Never")
+supplyShow("Research", "Never")
+supplyShow("Research1", "Never")
+supplyShow("Research2", "Never")
+supplyShow("Research3", "Never")
+supplyShow("Research4", "Never")
+supplyShow("Research5", "Never")
 
-supplyLimit("Lucifer", 1);
-supplyIndent("Lucifer", 1);
+-- Show Freespace families
+supplyShow("Fighter", "Always")
+supplyShow("Bomber", "Always")
+supplyShow("Corvette", "Never")
+supplyShow("Frigate", "Never")
+supplyShow("Cruiser", "Always")
+supplyShow("AdvancedCruiser", "Always")
+supplyShow("Capital", "Always")
+supplyShow("Utility", "NotEmpty")
+supplyShow("Resource", "NotEmpty")
+supplyShow("Platform", "NotEmpty")
+supplyShow("Installation", "Always")
 
-supplyLimit("Sathanas", 1);
-supplyIndent("Sathanas", 1);
+-- Indents
+supplyIndent("Scout", 1)
+supplyIndent("Cruiser", 1)
+supplyIndent("AdvancedCruiser", 1)
+supplyIndent("Ares", 1)
+supplyIndent("ArtemisDH", 1)
+supplyIndent("AWACS", 1)
+supplyIndent("Faustus", 1)
+supplyIndent("Hades", 1)
+supplyIndent("Hatshepsut", 1)
+supplyIndent("Deimos", 1)
+supplyIndent("Colossus", 1)
+supplyIndent("Installation", 1)
+supplyIndent("Iceni", 1)
+supplyIndent("Moloch", 1)
+supplyIndent("Sobek", 1)
+supplyIndent("Lucifer", 1)
+supplyIndent("Sathanas", 1)
+supplyIndent("Imhotep", 1)
+supplyIndent("Destroyer", 1)
+supplyIndent("Bomber", 1)
+supplyIndent("ResourceCollector", 1)
+supplyIndent("ResourceController", 1)
+supplyIndent("Probe", 1)
+supplyIndent("ECMProbe", 1)
+supplyIndent("ProximitySensor", 1)
+supplyIndent("SensorArray", 1)
+supplyIndent("CloakGenerator", 1)
+supplyIndent("GravWellGenerator", 1)
 
-supplyLimit("Moloch", 5);
-supplyIndent("Moloch", 1);
+-- Layout Caps (Internal)
+supplyLimit("LayoutFighter", 180)
+supplyLimit("LayoutCorvette", 180)
+supplyLimit("LayoutFrigate", 180)
+supplyLimit("LayoutDestroyer", 180)
+supplyLimit("LayoutBattleCruiser", 180)
+supplyLimit("LayoutResource", 180)
+supplyLimit("LayoutBomber", 180)
+supplyLimit("LayoutCruiser", 180)
+
+supplyShow("LayoutFighter", "Never")
+supplyShow("LayoutCorvette", "Never")
+supplyShow("LayoutFrigate", "Never")
+supplyShow("LayoutDestroyer", "Never")
+supplyShow("LayoutBattleCruiser", "Never")
+supplyShow("LayoutResource", "Never")
+supplyShow("LayoutBomber", "Never")
+supplyShow("LayoutCruiser", "Never")

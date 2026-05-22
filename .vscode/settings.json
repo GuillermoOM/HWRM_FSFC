@@ -1,0 +1,10 @@
+{
+    "Lua.workspace.library": [
+        "${workspaceFolder}/resources/hwrm-wiki/lsp-stubs"
+    ],
+    "Lua.diagnostics.globals": [
+        "NewShipType",
+        "NewWeaponType",
+        "NewSubSystemType"
+    ]
+}

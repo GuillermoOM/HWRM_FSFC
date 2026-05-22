@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Assault Fighter'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 250
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 500)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -152,7 +152,7 @@ NewShipType.swayRotateFactor = 0.1
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
+NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Fighter_Ter'
 NewShipType.AttackFamily = 'Fighter'
 NewShipType.DockFamily = 'Fighter'

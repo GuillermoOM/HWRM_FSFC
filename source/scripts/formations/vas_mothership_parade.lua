@@ -247,15 +247,15 @@ paradeSlot("vas_typhon", {
 }, 750)
 paradeSlot("vas_karnak", {
 	-1503,
-	0,
+	600,
 	-3404,
 }, {
 	0,
 	0,
 	1,
 }, {
-	-1,
 	0,
+	1,
 	0,
 }, 1000)
 paradeSlot("vas_isis", {

@@ -64,21 +64,21 @@ NameMakaan = "Makaan"
 NameEmperor = "Emperor"
 NameSalCap = "SalCap_"
 
-NameTerPilot = "TerPilot_"
-NameTerCruiser = "TerCruiser_"
-NameTerAwacs = "TerAwacs_"
-NameTerCapital = "TerCapital_"
-NameTerCommand = "TerCommand_"
-NameTerColossus = "TerColossus_"
+NameTerPilot = "terPilot_"
+NameTerCruiser = "terCruiser_"
+NameTerAwacs = "terAwacs_"
+NameTerCapital = "terCapital_"
+NameTerCommand = "terCommand_"
+NameTerColossus = "terColossus_"
 
-NameShiCommand = "Shi_"
+NameShiCommand = "shi_"
 
-NameVasPilot = "VasPilot_"
-NameVasCruiser = "VasCruiser_"
-NameVasAwacs = "VasAwacs_"
-NameVasCapital = "VasCapital_"
-NameVasCommand = "VasCommand_"
-NameVasColossus = "TerColossus_"
+NameVasPilot = "vasPilot_"
+NameVasCruiser = "vasCruiser_"
+NameVasAwacs = "vasAwacs_"
+NameVasCapital = "vasCapital_"
+NameVasCommand = "vasCommand_"
+NameVasColossus = "terColossus_"
 
 -- timeout values for speech events
 Frequency_Command = 0.5
@@ -93,6 +93,41 @@ Taiidan = 6
 Terran = 10
 Shivan = 11
 Vasudan = 12
+
+lastPlayerRace = nil
+
+function updatePlayerRaceFromShip(shipname)
+	if shipname ~= nil then
+		local prefix = strsub(shipname, 1, 4)
+		if prefix == "ter_" or prefix == "Ter_" or prefix == "TER_" then
+			lastPlayerRace = Terran
+			currentRace = Terran
+		elseif prefix == "vas_" or prefix == "Vas_" or prefix == "VAS_" then
+			lastPlayerRace = Vasudan
+			currentRace = Vasudan
+		elseif prefix == "shi_" or prefix == "Shi_" or prefix == "SHI_" then
+			lastPlayerRace = Shivan
+			currentRace = Shivan
+		elseif shipname == "STRIKE" or shipname == "STRIKEGROUP" then
+			if lastPlayerRace ~= nil then
+				currentRace = lastPlayerRace
+			end
+		end
+	end
+end
+
+function updateCurrentRaceFromShip(shipname)
+	if shipname ~= nil then
+		local prefix = strsub(shipname, 1, 4)
+		if prefix == "ter_" or prefix == "Ter_" or prefix == "TER_" then
+			currentRace = Terran
+		elseif prefix == "vas_" or prefix == "Vas_" or prefix == "VAS_" then
+			currentRace = Vasudan
+		elseif prefix == "shi_" or prefix == "Shi_" or prefix == "SHI_" then
+			currentRace = Shivan
+		end
+	end
+end
 
 function raceHelper()
 	if currentRace == Vaygr then
@@ -111,6 +146,7 @@ function raceHelper()
 end
 
 function getType(shipname)
+	updateCurrentRaceFromShip(shipname)
 	--first takes care of these special cases for which we don't want to use the AttackFamily
 
 	familyName = "" .. getFamily(shipname)
@@ -198,33 +234,33 @@ end
 
 function GiveFSCommand(commandname, shiptype)
 	-- print("Executing Command: " .. commandname .. " For Ship Type: " .. shiptype .. " Of Race: " .. currentRace)
-
+ 
 	if currentRace == Terran then
 		if shiptype == AWACS then
-			playSpeechActor(commandname, NameTerAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerAwacs, 1, Frequency_Command)
 		elseif shiptype == Colossus then
-			playSpeechActor(commandname, NameTerColossus, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerColossus, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(commandname, NameTerCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(commandname, NameTerCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerCapital, 1, Frequency_Command)
 		elseif shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(commandname, NameTerPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(commandname, NameTerPilot, 2, Frequency_Command)
 		end
 	elseif currentRace == Vasudan then
 		if shiptype == AWACS then
-			playSpeechActor(commandname, NameVasAwacs, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasAwacs, 1, Frequency_Command)
 		elseif shiptype == Colossus then
-			playSpeechActor(commandname, NameVasColossus, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasColossus, 1, Frequency_Command)
 		elseif shiptype == Frigate then
-			playSpeechActor(commandname, NameVasCruiser, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasCruiser, 1, Frequency_Command)
 		elseif shiptype == Capital or shiptype == Flagship then
-			playSpeechActor(commandname, NameVasCapital, NumCapPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasCapital, 1, Frequency_Command)
 		elseif shiptype == Fighter or shiptype == Corvette or shiptype == Resource then
-			playSpeechActor(commandname, NameVasPilot, NumFighterPilots, Frequency_Command)
+			playSpeechActor(commandname, NameVasPilot, 2, Frequency_Command)
 		end
 	elseif currentRace == Shivan then
-		playSpeechActor(commandname, NameShiCommand, NumCapPilots, Frequency_Command)
+		playSpeechActor(commandname, NameShiCommand, 1, Frequency_Command)
 	end
 end
 
@@ -248,6 +284,7 @@ function isCapital(shipname)
 end
 
 function CommandWayPointMoveGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -274,6 +311,7 @@ function CommandWayPointMoveGiven(shipname, targetname)
 end
 
 function CommandCancelOrder(shipname, prevOrders)
+	updatePlayerRaceFromShip(shipname)
 	local MoveOrder = 0
 	local AttackOrder = 1
 
@@ -321,6 +359,7 @@ end
 
 -- resource command issued with a target of the given name
 function CommandResourceGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	--if (targetname == "Container") then
 	-- string library not available in luaconfig, so can't use strfind, strlower, strsub
 
@@ -348,6 +387,7 @@ MP_RUsTransferred = 3
 MP_ShipsTransferred = 4
 
 function CommandMultiplay(shipname, event)
+	updatePlayerRaceFromShip(shipname)
 	if event == MP_AllianceRequested then
 		playSpeechActor("COMMAND_AllianceRequested_1", raceHelper(), 0, Frequency_Command)
 	elseif event == MP_AllianceFormed then
@@ -363,6 +403,7 @@ end
 
 -- capture command issued to a ship with the given name
 function CommandCaptureGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 
 	if shipname == "Hgn_MarineFrigate" then
@@ -382,6 +423,7 @@ function CommandCaptureGiven(shipname, targetname)
 end
 
 function CommandAttackGiven(shipname, targetname, attackType)
+	updatePlayerRaceFromShip(shipname)
 	print(
 		"******** COMMAND ATTACK: shipname, targetname, attackType = "
 			.. shipname
@@ -407,8 +449,11 @@ function CommandAttackGiven(shipname, targetname, attackType)
 		return
 	end
 
-	local targetShipType = getType(targetname)
 	local shiptype = getType(shipname)
+	local attackerRace = currentRace
+
+	local targetShipType = getType(targetname)
+	currentRace = attackerRace
 
 	genericShipName = strsub(shipname, 5)
 	genericTargetName = strsub(targetname, 0, 3)
@@ -492,6 +537,7 @@ HYP_EnteredInhibitorVolume = 5
 HYP_NotEnoughCash = 6
 
 function CommandHyperspaceGiven(shipname, code)
+	updatePlayerRaceFromShip(shipname)
 	print("** CommandHyperspaceGiven: shipname = " .. shipname .. " code = " .. code)
 	genericShipName = strsub(shipname, 5)
 
@@ -540,6 +586,7 @@ function CommandHyperspaceGiven(shipname, code)
 end
 
 function CommandCombatMan(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -560,6 +607,7 @@ function CommandCombatMan(shipname, targetname)
 end
 
 function CommandMoveAttackGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -580,6 +628,7 @@ function CommandMoveAttackGiven(shipname, targetname)
 end
 
 function CommandLaunchGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	if shipname == "Hgn_Probe" then
 		--playSpeechActor( "COMMAND_ProbeLaunched",raceHelper(), 0)
 		return
@@ -607,6 +656,7 @@ end
 
 -- DEFINED IN TABLE (see Chatter.lua)
 function CommandGuardGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	genericShipName = strsub(shipname, 5)
 
@@ -634,6 +684,7 @@ function CommandGuardGiven(shipname, targetname)
 end
 
 function CommandMoveGiven(shipname, targetnm)
+	updatePlayerRaceFromShip(shipname)
 	--print("** CommandMoveGiven: shipname="..shipname)
 
 	local shiptype = getType(shipname)
@@ -698,6 +749,7 @@ function CommandStrikeGroupFormed(shipname, code)
 end
 
 function CommandDockGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 
 	--eliminate race
@@ -744,6 +796,7 @@ function CommandDockGiven(shipname, targetname)
 end
 
 function CommandParadeGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	shiptype = getType(shipname)
 	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
@@ -762,6 +815,7 @@ function CommandParadeGiven(shipname, targetname)
 end
 
 function CommandRetireGiven(shipname, targetname)
+	updatePlayerRaceFromShip(shipname)
 	local shiptype = getType(shipname)
 	if currentRace >= 10 then
 		GiveFSCommand("COMMAND_Dock", shiptype)
@@ -842,6 +896,7 @@ ACT_Created = 2
 ACT_Reinforced = 3
 
 function CommandHotKeyGroupSelected(shipname, groupNumber, keyAction)
+	updatePlayerRaceFromShip(shipname)
 	if strfind(shipname, "Kpr_") ~= nil then
 		return
 	end
@@ -875,6 +930,7 @@ end
 
 -- was DEFINED IN TABLE (see Chatter.lua)
 function CommandShipsSelected(shipname)
+	updatePlayerRaceFromShip(shipname)
 	--print("**** CommandShipsSelected = "..shipname)
 
 	genericShipName = strsub(shipname, 5)
@@ -1218,6 +1274,7 @@ BUILD_Std = 1
 BUILD_Subsystem = 2
 
 function CommandConstructionComplete(buildingShip, builtItem, buildType)
+	updatePlayerRaceFromShip(buildingShip)
 	print(
 		"*****---- CommandConstructionComplete : buildingShip="
 			.. buildingShip
@@ -1305,6 +1362,7 @@ function CommandConstructionComplete(buildingShip, builtItem, buildType)
 end
 
 function CommandConstructionStarted(buildingShip, builtItem)
+	updatePlayerRaceFromShip(buildingShip)
 	--builtItemFamily = getFamily(builtItem)
 	--if(builtItemFamily == "FRIGATE" or builtItemFamily == "CAPITAL" or builtItemFamily == "SUPERCAP") then
 	--	playSpeechActor("COMMAND_CarrierOrMShipBuildCapitalShip", NameSupportPilot, NumSupportPilots, Frequency_Command )

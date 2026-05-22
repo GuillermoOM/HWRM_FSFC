@@ -5,7 +5,7 @@ StartWeaponConfig(
 	"beam_AABlue",
 	"Normal",
 	0,
-	3000,
+	4500,
 	0,
 	1,
 	0,
@@ -44,21 +44,22 @@ setPenetration(
 )
 
 setAccuracy(
-NewWeaponType,
+	NewWeaponType,
 	1,
 	{ Swarmer = 0.01 },
 	{ SpaceMine = 0.35 },
 	{ Torpedo = 0.5 },
 	{ HeavyMissile = 0.5 },
 	{ SmallMissile = 0.5 },
-	{ Fighter = 0.7 },
-	{ Fighter_hw1 = 0.7 },
-	{ Corvette = 0.8 },
+	{ Fighter = 0.4 },
+	{ Fighter_hw1 = 0.4 },
+	{ Corvette = 0.75 },
 	{ Corvette_hw1 = 0.8 },
 	{ munition = 0.13 },
-	{ Frigate = 0.80 },
+	{ Frigate = 0.0 },
 	{ Resource = 0.80 },
-	{ SmallCapitalShip = 0.80 },
-	{ BigCapitalShip = 0.80 },
-	{ ResourceLarge = 0.60 }
+	{ SmallCapitalShip = 0.00 },
+	{ BigCapitalShip = 0.00 },
+	{ ResourceLarge = 0.00 },
+	{ SubSystem = 0.00 }
 )

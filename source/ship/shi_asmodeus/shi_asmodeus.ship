@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Repair Frigate'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 8000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 8000)
 NewShipType.regentime = 260
 NewShipType.minRegenTime = 260
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -111,11 +111,11 @@ NewShipType.layoutCenterZ = 10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Utility_Shi'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Frigate'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'

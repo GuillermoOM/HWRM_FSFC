@@ -129,14 +129,14 @@ NewShipType.layoutCenterZ = -10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Utility_Shi'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Controller'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Big'
+NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour")
 
 --------------------------------------------------
@@ -166,7 +166,7 @@ NewShipType.totalValue = 5
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 800
+NewShipType.buildCost = 1000
 NewShipType.buildTime = 45
 NewShipType.buildPriorityOrder = 30
 

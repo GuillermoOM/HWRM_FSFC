@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Support Ship'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 1000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 1000)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -120,14 +120,14 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
+NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Utility_Vas'
 NewShipType.AttackFamily = 'Resource'
 NewShipType.DockFamily = 'Corvette'
-NewShipType.AvoidanceFamily = 'StrikeCraft'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Corvette'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
 
 --------------------------------------------------

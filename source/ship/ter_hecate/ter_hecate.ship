@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Destroyer'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 80000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 150000)
 NewShipType.regentime = 1265
 NewShipType.minRegenTime = 1265
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -137,7 +137,7 @@ NewShipType.layoutCenterZ = 50
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'SuperCap_Ter'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
@@ -152,7 +152,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour"
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Capital', 1.0)
-setSupplyValue(NewShipType, 'Destroyer', 1.0)
+setSupplyValue(NewShipType, 'Carrier', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -172,7 +172,7 @@ NewShipType.totalValue = 15
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 11000
+NewShipType.buildCost = 6000
 NewShipType.buildTime = 200
 NewShipType.buildPriorityOrder = 40
 
@@ -183,8 +183,8 @@ NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 5000
-NewShipType.secSensorRange = 6000
+NewShipType.prmSensorRange = 6500
+NewShipType.secSensorRange = 7500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------
@@ -270,7 +270,7 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 20, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 875, 1750, 0, 3)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { Subsystem = "Frontal" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
 addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 180, 0.5, 'CapCap')
@@ -301,7 +301,7 @@ NewShipType.launchFormation = 'delta'
 --- Custom Code
 --------------------------------------------------
 
-addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate', 'onDestroy', 'gta_hecate', 1)
+addCustomCode(NewShipType, 'data:scripts/custom_scripts/add_nameplate.lua', 'onLoad', 'onCreate', 'updateNameplate', 'onDestroy', '', 1)
 
 --------------------------------------------------
 --- Load Model
@@ -352,6 +352,7 @@ StartShipHardPointConfig(NewShipType, 'Sgreen2', 'Weapon_Turret24', 'Weapon', 'I
 StartShipHardPointConfig(NewShipType, 'Sgreen3', 'Weapon_Turret26', 'Weapon', 'Innate', 'Damageable', 'ter_hecateslash', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'Sgreen4', 'Weapon_Turret27', 'Weapon', 'Innate', 'Damageable', 'ter_hecateslash', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'Nameplate', 'Hardpoint_Nameplate', 'System', 'Innate', 'Indestructible', '', 'ter_hecate_nameplate_aquitaine', 'ter_hecate_nameplate_hood', 'ter_hecate_nameplate_meridian', 'ter_hecate_nameplate_morgain', 'ter_hecate_nameplate_phonecia', 'ter_hecate_nameplate_requiem', 'ter_hecate_nameplate_tempest', 'ter_hecate_nameplate_warlock')
+StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Sensors', 'System', 'Innate', 'Indestructible', 'sub_research', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

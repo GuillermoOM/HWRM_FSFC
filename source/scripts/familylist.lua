@@ -795,6 +795,11 @@ unitcapsFamily = {
 		numParam = 11,
 		stringParam = "GTF Ares",
 	},
+	{
+		name = "Erinyes",
+		numParam = 11,
+		stringParam = "GTF Erinyes",
+	},
 
 	-- hw1 fighters
 	{
@@ -905,6 +910,16 @@ unitcapsFamily = {
 		numParam = 35,
 		stringParam = "Advanced Cruisers",
 	},
+	{
+		name = "Aeolus",
+		numParam = 36,
+		stringParam = "GTC Aeolus",
+	},
+	{
+		name = "Rakshasa",
+		numParam = 37,
+		stringParam = "SC Rakshasa",
+	},
 
 	{
 		name = "Capital",
@@ -961,6 +976,11 @@ unitcapsFamily = {
 		name = "Iceni",
 		numParam = 187,
 		stringParam = "NTF Iceni",
+	},
+	{
+		name = "Hatshepsut",
+		numParam = 200,
+		stringParam = "GVD Hatshepsut",
 	},
 	{
 		name = "Hades",

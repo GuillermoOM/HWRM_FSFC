@@ -117,11 +117,11 @@ NewShipType.layoutBoundZ = 100
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Cruiser_Ter'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Capital'
 NewShipType.DisplayFamily = 'Cruiser'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
@@ -132,6 +132,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'AdvancedCruiser', 1.0)
+setSupplyValue(NewShipType, 'Aeolus', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
@@ -150,8 +151,8 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 1050
-NewShipType.buildTime = 47
+NewShipType.buildCost = 2450
+NewShipType.buildTime = 65
 NewShipType.buildPriorityOrder = 30
 
 --------------------------------------------------
@@ -241,7 +242,13 @@ addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 70, 350, 0, 0)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip', 'MoveToTargetAndShoot_Frigate', {Fighter="MoveToTargetAndShoot_Frigate"}, {Fighter_hw1="MoveToTargetAndShoot_Frigate"}, {Corvette="MoveToTargetAndShoot_Frigate"}, {Corvette_hw1="MoveToTargetAndShoot_Frigate"}, {Munition="MoveToTargetAndShoot_Frigate"}, {SmallCapitalShip="MoveToTargetAndShoot_Frigate"}, {BigCapitalShip="MoveToTargetAndShoot_Frigate"}, {SubSystem="MoveToTargetAndShootvsSubsystem"})
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5,
+    'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility,,,, SmallCapitalShip, BigCapitalShip',
+    'frontal_frigate', { Fighter = "MoveToTargetAndShoot_Frigate" },
+    { Fighter_hw1 = "MoveToTargetAndShoot_Frigate" }, { Corvette = "MoveToTargetAndShoot_Frigate" },
+    { Corvette_hw1 = "MoveToTargetAndShoot_Frigate" }, { Munition = "MoveToTargetAndShoot_Frigate" },
+    { SmallCapitalShip = "MoveToTargetAndShoot_Frigate" }, { BigCapitalShip = "MoveToTargetAndShoot_Frigate" },
+    { SubSystem = "MoveToTargetAndShootvsSubsystem" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 600)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, .7, 0.3)
 addAbility(NewShipType, 'CanBeCaptured', 30, 0.1, 'CapCap')
@@ -258,8 +265,10 @@ LoadModel(NewShipType, 1)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Sgreen1', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable', 'ter_aeolusbeam2', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'Sgreen2', 'Weapon_Beam2', 'Weapon', 'Innate', 'Damageable', 'ter_aeolusbeam1', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Sgreen1', 'Weapon_Beam1', 'Weapon', 'Innate', 'Damageable', 'ter_aeolusbeam2', '',
+    '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Sgreen2', 'Weapon_Beam2', 'Weapon', 'Innate', 'Damageable', 'ter_aeolusbeam1', '',
+    '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Shields
@@ -278,7 +287,7 @@ setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120)
 --- Addendum
 --------------------------------------------------
 
-loadShipPatchList(NewShipType, 'data:sound/sfx/ship', 0, '', '', 1, 'TerranCruiser', '')
+loadShipPatchList(NewShipType, 'data:sound/sfx/ship/', 0, '', '', 1, 'TerranCruiser', '')
 
 --------------------------------------------------
 --- Weapons
@@ -307,10 +316,9 @@ loadLatchPointList(NewShipType, 'RepCap', 'RepairPoint0', 'RepairPoint1')
 --------------------------------------------------
 
 NewShipType.minFalloffDamageDist = 100
-NewShipType.maxFalloffDamageDist = 100*2
-NewShipType.maxFalloffScuttleDamageDist = 100*4
+NewShipType.maxFalloffDamageDist = 100 * 2
+NewShipType.maxFalloffScuttleDamageDist = 100 * 4
 NewShipType.explosiveScuttleDamageOnDeath = 945
-NewShipType.maxFalloffForce = 500*10
+NewShipType.maxFalloffForce = 500 * 10
 NewShipType.explosiveDamageOnDeath = 125
 NewShipType.radiusDamageEvadeMod = 1.1
-

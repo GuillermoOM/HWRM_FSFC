@@ -13,7 +13,7 @@ NewShipType.blobNamePriority = 75
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 1000000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 1000000)
 NewShipType.regentime = 2450
 NewShipType.minRegenTime = 2450
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -123,7 +123,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'SuperCap_Vas'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'SuperPriority'
+NewShipType.AvoidanceFamily = 'SuperCap'
 NewShipType.DisplayFamily = 'Capital'
 NewShipType.AutoFormationFamily = 'SuperCap'
 NewShipType.CollisionFamily = 'Big'
@@ -155,7 +155,7 @@ NewShipType.totalValue = 110
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 50000
+NewShipType.buildCost = 25000
 NewShipType.buildTime = 500
 NewShipType.buildPriorityOrder = 20
 setConcurrentBuildLimit(NewShipType, 0, 2)
@@ -167,8 +167,8 @@ setConcurrentBuildLimit(NewShipType, 0, 2)
 NewShipType.retaliationRange = 16800
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 5000
-NewShipType.prmSensorRange = 18000
-NewShipType.secSensorRange = 20000
+NewShipType.prmSensorRange = 8000
+NewShipType.secSensorRange = 10000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------
@@ -248,7 +248,7 @@ addAbility(NewShipType, 'ShipHold', 1, 1000, 60, 'rallypoint', 'Fighter, Utility
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 2500, 3750, 0, 0)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1, 'Capturer,Frigate,SmallCapitalShip,BigCapitalShip,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1, 'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Broadside', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "MoveToTargetAndShoot" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
 addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Vas, Bomber_Vas, Cruiser_Vas, SuperCap_Vas, Utility_Vas, Platform_Vas, Battlecruiser_Vas, Shipyard_Vas, Probe_Vas', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 250, 0.5, 'CapCap')

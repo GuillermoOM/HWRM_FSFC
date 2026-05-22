@@ -59,4 +59,10 @@ setPenetration(NewWeaponType,
     })
 
 setAccuracy(NewWeaponType,
-    1)
+    1,
+    {
+        Fighter = 0.60,
+    },
+    {
+        Corvette = 0.80,
+    })

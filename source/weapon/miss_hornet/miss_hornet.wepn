@@ -1,7 +1,7 @@
 StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Miss_Hornet", "Normal", 40, 2660, 0, 0, 0, 2, 1, 0, 1, 0.15,
     0.6, 6, 0, 0, 0, 0, 1, "Normal", 0, 1, 0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 50, 100, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 25, 25, "")
 
 setAngles(NewWeaponType, 20, 0, 0, 0, 0)
 

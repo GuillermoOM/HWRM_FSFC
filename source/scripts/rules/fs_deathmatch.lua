@@ -6,12 +6,24 @@ SinglePlayer = 0
 
 ExtFilter = "rules_dm"
 
-Race_Paths = "Deathmatch,Extras"
+Race_Paths = "Deathmatch,Extras,terran,vasudan,shivan,observer"
 
 Level_Pass_Tags = "dm"
 Race_Pass_Tags = "race_dm,race_ter,race_shi,race_vas,race_random_fs,race_obs"
 
 GameSetupOptions = {
+	{
+		name = "era",
+		locName = "Era",
+		tooltip = "Select the FreeSpace era",
+		default = 1, -- FS2
+		visible = 1,
+		choices = {
+			"FreeSpace 1", "0",
+			"FreeSpace 2", "1",
+			"Both Eras", "2",
+		},
+	},
 	{
 		name = "resources",
 		locName = "$3240",

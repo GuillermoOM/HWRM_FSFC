@@ -115,7 +115,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'SuperCap_Shi'
 NewShipType.AttackFamily = 'SmallCapitalShip'
 NewShipType.DockFamily = 'SuperCap'
-NewShipType.AvoidanceFamily = 'Capital'
+NewShipType.AvoidanceFamily = 'SuperCap'
 NewShipType.DisplayFamily = 'Capital'
 NewShipType.AutoFormationFamily = 'CapShip'
 NewShipType.CollisionFamily = 'Big'
@@ -145,7 +145,7 @@ NewShipType.totalValue = 50
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 3000
+NewShipType.buildCost = 1800
 NewShipType.buildTime = 110
 NewShipType.buildPriorityOrder = 40
 

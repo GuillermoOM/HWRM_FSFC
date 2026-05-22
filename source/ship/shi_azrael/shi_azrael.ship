@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Resource Collector'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 2000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 2000)
 NewShipType.regentime = 200
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -52,8 +52,8 @@ NewShipType.ignoreRaceWhenDocking = 0
 --------------------------------------------------
 
 NewShipType.mass = 450
-NewShipType.thrusterMaxSpeed = 220
-NewShipType.mainEngineMaxSpeed = 220
+NewShipType.thrusterMaxSpeed = 200
+NewShipType.mainEngineMaxSpeed = 200
 NewShipType.rotationMaxSpeed = 60
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1
@@ -120,7 +120,7 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
+NewShipType.MinimalFamilyToFindPathAround = 'Frigate'
 NewShipType.BuildFamily = 'Utility_Shi'
 NewShipType.AttackFamily = 'Resource'
 NewShipType.DockFamily = 'Utility'
@@ -255,7 +255,7 @@ addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 30, 120, 0, 3)
 addAbility(NewShipType, 'CanAttack', 1, 5, 2, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership', 'JustShoot')
 addAbility(NewShipType, 'SalvageCommand', 1, 200)
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
-addAbility(NewShipType, 'Harvest', 1, 200, 8, 300)
+addAbility(NewShipType, 'Harvest', 1, 300, 6, 400)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 1, 0.3)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
 

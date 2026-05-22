@@ -27,7 +27,7 @@ StartWeaponConfig(
 	0
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 18, 18, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 32, 32, "")
 
 setAngles(NewWeaponType, 90, 0, 0, 0, 0)
 

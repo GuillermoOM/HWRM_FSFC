@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Sentry and Mine Deployer'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 4000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 4000)
 NewShipType.regentime = 175
 NewShipType.minRegenTime = 175
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -146,10 +146,10 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Frigate'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
 
 --------------------------------------------------
@@ -186,8 +186,8 @@ NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 4000
-NewShipType.secSensorRange = 5000
+NewShipType.prmSensorRange = 3500
+NewShipType.secSensorRange = 4500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------
@@ -273,7 +273,7 @@ addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 1, 0.3)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
 addAbility(NewShipType, 'MinelayerAbility', 1, 3.5)
-addAbility(NewShipType, 'CanBuildShips', 1, 'Platform_ter', 'Platform')
+addAbility(NewShipType, 'CanBuildShips', 1, 'Platform_Ter', 'Platform')
 addAbility(NewShipType, 'ShipHold', 1, 1000, 1, 'rallypoint', 'Fighter, Utility', 400)
 
 --------------------------------------------------

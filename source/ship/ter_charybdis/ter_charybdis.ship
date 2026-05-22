@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'AWACS'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 10000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 10000)
 NewShipType.regentime = 315
 NewShipType.minRegenTime = 315
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -112,7 +112,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
@@ -153,8 +153,8 @@ NewShipType.buildPriorityOrder = 30
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 5000
-NewShipType.secSensorRange = 6000
+NewShipType.prmSensorRange = 12000
+NewShipType.secSensorRange = 17000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

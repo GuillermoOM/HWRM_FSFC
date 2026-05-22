@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Interceptor'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 100
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 300)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -166,8 +166,10 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
 --- Special Flight Maneuvers
 --------------------------------------------------
 
-NewShipType.mirrorAboveManeuver = 'ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy'
-NewShipType.mirrorBelowManeuver = 'Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy'
+NewShipType.mirrorAboveManeuver =
+'ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy'
+NewShipType.mirrorBelowManeuver =
+'Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy'
 NewShipType.specialTurnLeftManeuver = 'NinetyDegLeftTurn, None, None'
 NewShipType.specialTurnRightManeuver = 'NinetyDegRightTurn, None, None'
 
@@ -182,14 +184,14 @@ setSupplyValue(NewShipType, 'LayoutFighter', 4.0)
 --- Ship Counter Rating
 --------------------------------------------------
 
-NewShipType.fighterValue = 8
+NewShipType.fighterValue = 15
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 8
+NewShipType.antiFighterValue = 15
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 8
+NewShipType.totalValue = 15
 
 --------------------------------------------------
 --- Sensors
@@ -280,11 +282,19 @@ addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 30, 120, 0, 3)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'CanAttack', 1, 2, 1, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Interceptor_vs_Frigate', { Fighter = "Dogfight" }, { Fighter_hw1 = "Dogfight" }, { Corvette = "Dogfight" }, { Corvette_hw1 = "Dogfight" }, { Frigate = "Fighter_vs_Frigate" }, { SubSystem = "TopAttack_Interceptor_vs_Subsystem" }, { SmallCapitalShip = "Fighter_vs_CapShip" }, { BigCapitalShip = "Fighter_vs_CapShip" }, { Mothership = "Fighter_vs_Mothership" }, { ResourceLarge = "Fighter_vs_ResourceLarge" })
+addAbility(NewShipType, 'CanAttack', 1, 2, 1, 0, 0.35, 1,
+    'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership',
+    'FlyBy_Interceptor_vs_Frigate', { Fighter = "Dogfight" }, { Fighter_hw1 = "Dogfight" }, { Corvette = "Dogfight" },
+    { Corvette_hw1 = "Dogfight" }, { Frigate = "Fighter_vs_Frigate" },
+    { SubSystem = "TopAttack_Interceptor_vs_Subsystem" }, { SmallCapitalShip = "Fighter_vs_CapShip" },
+    { BigCapitalShip = "Fighter_vs_CapShip" }, { Mothership = "Fighter_vs_Mothership" },
+    { ResourceLarge = "Fighter_vs_ResourceLarge" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
-addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0, 'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner', 'shi_manticore', 0.5, 3, 1)
+addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25, 0,
+    'data:scripts/custom_scripts/Afterburner.lua', 'Start_Afterburner', 'Do_Afterburner', 'Finish_Afterburner',
+    'shi_manticore', 0.5, 3, 1)
 
 --------------------------------------------------
 --- Launching
@@ -305,6 +315,7 @@ LoadModel(NewShipType, 1)
 --- Weapons
 --------------------------------------------------
 
+StartShipWeaponConfig(NewShipType, 'gun_shivlightlaser', 'Weapon_Gun1', '')
 StartShipWeaponConfig(NewShipType, 'gun_shivlightlaser', 'Weapon_Gun1', '')
 StartShipWeaponConfig(NewShipType, 'miss_trebuchet', 'Weapon_Missile', '')
 StartShipWeaponConfig(NewShipType, 'miss_harpoon', 'Weapon_Missile2', '')
@@ -338,4 +349,3 @@ NewShipType.explosiveScuttleDamageOnDeath = 15
 NewShipType.maxFalloffForce = 15 * 10
 NewShipType.explosiveDamageOnDeath = 3.4
 NewShipType.radiusDamageEvadeMod = 1.1
-

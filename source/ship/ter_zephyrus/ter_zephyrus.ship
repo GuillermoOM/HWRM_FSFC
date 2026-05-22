@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Resource Controller'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 10000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 10000)
 NewShipType.regentime = 350
 NewShipType.minRegenTime = 300
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -47,8 +47,8 @@ NewShipType.canSurround = 1
 --------------------------------------------------
 
 NewShipType.mass = 20000
-NewShipType.thrusterMaxSpeed = 80
-NewShipType.mainEngineMaxSpeed = 120
+NewShipType.thrusterMaxSpeed = 110
+NewShipType.mainEngineMaxSpeed = 160
 NewShipType.rotationMaxSpeed = 20
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -129,14 +129,14 @@ NewShipType.layoutCenterZ = -10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Controller'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Big'
+NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour")
 
 --------------------------------------------------
@@ -166,7 +166,7 @@ NewShipType.totalValue = 5
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 800
+NewShipType.buildCost = 1000
 NewShipType.buildTime = 30
 NewShipType.buildPriorityOrder = 30
 
@@ -258,7 +258,7 @@ NewShipType.alternativeHyperspaceTime = 7
 addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'CanDock', 1, 0)
 addAbility(NewShipType, 'CanLaunch')
-addAbility(NewShipType, 'ShipHold', 1, 200, 0, 'rallypoint', '', 0)
+addAbility(NewShipType, 'ShipHold', 1, 200, 1.0, 'rallypoint', '', 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 60, 360, 0, 3)

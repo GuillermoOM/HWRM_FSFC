@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Medium Bomber'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 440
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 950)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -69,7 +69,7 @@ NewShipType.relativeMoveFactor = 6
 --- Formations
 --------------------------------------------------
 
-NewShipType.SquadronSize = 3
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 3)
 NewShipType.formationSpacing = 60
 NewShipType.batchFormation = 'Batch_delta'
 NewShipType.strikeGroupRadius = 25
@@ -132,7 +132,7 @@ NewShipType.swayRotateFactor = 0.1
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
+NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Bomber_Vas'
 NewShipType.AttackFamily = 'Fighter'
 NewShipType.DockFamily = 'Fighter'
@@ -169,7 +169,7 @@ NewShipType.totalValue = 8
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildBatch = 3
+NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 3)
 NewShipType.buildCost = 570
 NewShipType.buildTime = 34
 NewShipType.buildPriorityOrder = 20
@@ -182,7 +182,7 @@ NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 2000
 NewShipType.prmSensorRange = 4000
-NewShipType.secSensorRange = 10000
+NewShipType.secSensorRange = 5000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------
@@ -262,7 +262,7 @@ addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 30, 120, 0, 3)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1.5, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Bomber_vs_Frigate', {Fighter="Bomber_vs_Fighter"}, {Fighter_hw1="Bomber_vs_Fighter"}, {Mothership="Bomber_vs_Mothership"}, {Frigate="Bomber_vs_Frigate"}, {SmallCapitalShip="Bomber_vs_Corvette"}, {BigCapitalShip="Bomber_vs_CapShip"}, {SubSystem="TopAttack_Bomber_vs_Subsystem"}, {Corvette="Bomber_vs_Corvette"}, {Corvette_hw1="Bomber_vs_Corvette"}, {ResourceLarge="Flyby_Bomber_vs_ResourceLarge"})
+addAbility(NewShipType, 'CanAttack', 1, 1, 1, 0, 0.35, 1.5, 'BigCapitalShip, SmallCapitalShip, Frigate, Mothership, Utility,,,,, Corvette, Corvette_hw1, Fighter, Fighter_hw1', 'FlyBy_Bomber_vs_Frigate', {Fighter="Bomber_vs_Fighter"}, {Fighter_hw1="Bomber_vs_Fighter"}, {Mothership="Bomber_vs_Mothership"}, {Frigate="Bomber_vs_Frigate"}, {SmallCapitalShip="Bomber_vs_Corvette"}, {BigCapitalShip="Bomber_vs_CapShip"}, {SubSystem="TopAttack_Bomber_vs_Subsystem"}, {Corvette="Bomber_vs_Corvette"}, {Corvette_hw1="Bomber_vs_Corvette"}, {ResourceLarge="Flyby_Bomber_vs_ResourceLarge"})
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'CanBeRepaired')
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)

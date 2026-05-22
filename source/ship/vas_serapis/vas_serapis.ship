@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Interceptor'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 220
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 450)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -158,6 +158,7 @@ NewShipType.AttackFamily = 'Fighter'
 NewShipType.DockFamily = 'Fighter'
 NewShipType.AvoidanceFamily = 'Strikecraft'
 NewShipType.DisplayFamily = 'Fighter'
+NewShipType.CombatFamily = 'Fighter_Special'
 NewShipType.AutoFormationFamily = 'Fighter'
 NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")

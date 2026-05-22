@@ -129,14 +129,14 @@ NewShipType.layoutCenterZ = -10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'Capital'
 NewShipType.BuildFamily = 'Utility_Vas'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Controller'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Big'
+NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour")
 
 --------------------------------------------------
@@ -166,7 +166,7 @@ NewShipType.totalValue = 5
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 800
+NewShipType.buildCost = 1000
 NewShipType.buildTime = 45
 NewShipType.buildPriorityOrder = 30
 
@@ -258,7 +258,7 @@ NewShipType.alternativeHyperspaceTime = 7
 addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'CanDock', 1, 0)
 addAbility(NewShipType, 'CanLaunch')
-addAbility(NewShipType, 'ShipHold', 1, 200, 0, 'rallypoint', '', 0)
+addAbility(NewShipType, 'ShipHold', 1, 200, 1.0, 'rallypoint', '', 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 70, 350, 0, 3)

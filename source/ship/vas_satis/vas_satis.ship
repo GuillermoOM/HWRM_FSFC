@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Repair Frigate'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 10000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 10000)
 NewShipType.regentime = 245
 NewShipType.minRegenTime = 245
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -111,11 +111,11 @@ NewShipType.layoutCenterZ = 10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Utility_Vas'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Frigate'
-NewShipType.AvoidanceFamily = 'Frigate'
+NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
@@ -239,7 +239,7 @@ addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 50, 300, 0, 3)
 addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.5, 'Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Corvette_hw1, Fighter, Fighter_hw1', 'Frontal_SupportFrigate', {Fighter="movetotargetandshoot_Frigate_vs_Fighters"}, {Fighter_hw1="movetotargetandshoot_Frigate_vs_Fighters"}, {Corvette="movetotargetandshoot_Frigate_vs_Corvettes"}, {Corvette_hw1="movetotargetandshoot_Frigate_vs_Corvettes"}, {Munition="Frontal_SupportFrigate"}, {SubSystem="FrontalVsSubSystem"})
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 600)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 1, 0.3)
-addAbility(NewShipType, 'RepairCommand', 1, 0, 25, 1, 'Frontal_SupportFrigate', {Fighter=0}, {Corvette=0})
+addAbility(NewShipType, 'RepairCommand', 1, 400, 25, 1, 'Frontal_SupportFrigate', {Fighter=0}, {Corvette=0})
 
 --------------------------------------------------
 --- Docking

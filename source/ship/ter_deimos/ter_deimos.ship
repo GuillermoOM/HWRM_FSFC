@@ -115,7 +115,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'SuperCap_Ter'
 NewShipType.AttackFamily = 'SmallCapitalShip'
 NewShipType.DockFamily = 'SuperCap'
-NewShipType.AvoidanceFamily = 'Capital'
+NewShipType.AvoidanceFamily = 'SuperCap'
 NewShipType.DisplayFamily = 'Capital'
 NewShipType.AutoFormationFamily = 'CapShip'
 NewShipType.CollisionFamily = 'Big'
@@ -145,7 +145,7 @@ NewShipType.totalValue = 50
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 3000
+NewShipType.buildCost = 1800
 NewShipType.buildTime = 110
 NewShipType.buildPriorityOrder = 20
 
@@ -240,7 +240,7 @@ addAbility(NewShipType, 'MoveCommand', 1, 0)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 350, 1050, 0, 3)
-addAbility(NewShipType, 'CanAttack', 1, 1, 0, 0, 0.35, 1.5, 'Munition, BigCapitalShip, SmallCapitalShip, Capturer, Mothership, Frigate, Corvette, Fighter, Utility', 'MoveToTargetAndShoot', {Fighter="MoveToTargetAndShoot"}, {Fighter_hw1="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Corvette_hw1="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {SubSystem="MoveToTargetAndShoot"})
+addAbility(NewShipType, 'CanAttack', 1, 1, 0, 0, 0.35, 1.5, 'Munition, BigCapitalShip, SmallCapitalShip, Capturer, Mothership, Frigate, Corvette, Fighter, Utility', 'frontal_frigate', {Fighter="MoveToTargetAndShoot"}, {Fighter_hw1="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Corvette_hw1="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {SubSystem="MoveToTargetAndShoot"})
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 800)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, 3.5, 0.3)
 addAbility(NewShipType, 'CanBeCaptured', 90, 0.5, 'CapCap')

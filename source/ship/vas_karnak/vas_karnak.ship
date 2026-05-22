@@ -13,7 +13,7 @@ NewShipType.blobNamePriority = 75
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 400000
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 400000)
 NewShipType.regentime = 1788
 NewShipType.minRegenTime = 1788
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -246,11 +246,12 @@ NewShipType.alternativeHyperspaceTime = 12
 --- Abilities
 --------------------------------------------------
 
+addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'CanDock', 1, 0)
 addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'ShipHold', 1, 1000, 16, 'rallypoint', 'Fighter, Utility', 100)
 addAbility(NewShipType, 'CanAttack', 1, 1, 0, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1, Frigate, Utility, Resource,,,,SmallCapitalShip, BigCapitalShip', 'JustShoot')
-addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_vas, Bomber_vas, Cruiser_vas, SuperCap_vas, Utility_vas, Platform_vas, Battlecruiser_vas, Shipyard_vas, Probe_vas', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
+addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Vas, Bomber_Vas, Cruiser_Vas, SuperCap_Vas, Utility_Vas, Platform_Vas, Battlecruiser_Vas, Shipyard_Vas, Probe_Vas', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')
 addAbility(NewShipType, 'CanBeCaptured', 300, 0.1, 'CapCap')
 addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
 

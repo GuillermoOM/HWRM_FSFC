@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Probe'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = 50
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 50)
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -28,9 +28,9 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.mass = 120
-NewShipType.thrusterMaxSpeed = 0
-NewShipType.mainEngineMaxSpeed = 0
-NewShipType.rotationMaxSpeed = 0
+NewShipType.thrusterMaxSpeed = 500
+NewShipType.mainEngineMaxSpeed = 500
+NewShipType.rotationMaxSpeed = 170
 NewShipType.thrusterAccelTime = 0.11
 NewShipType.thrusterBrakeTime = 0.1
 NewShipType.mainEngineAccelTime = 0.11
@@ -96,14 +96,14 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'SuperPriority'
+NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'Probe_Vas'
 NewShipType.AttackFamily = 'Utility'
 NewShipType.DockFamily = 'Utility'
 NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Fighter'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "Unarmoured")
 
 --------------------------------------------------
@@ -141,8 +141,8 @@ NewShipType.buildPriorityOrder = 10
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 10
-NewShipType.prmSensorRange = 10000
-NewShipType.secSensorRange = 10000
+NewShipType.prmSensorRange = 3500
+NewShipType.secSensorRange = 4500
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

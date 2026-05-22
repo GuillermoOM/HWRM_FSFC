@@ -1,0 +1,192 @@
+# Skill: HWRM Engine Debugging & Crash Prevention
+
+## 1. The "parameter:" Error (Runtime Crash)
+
+The error `parameter:` followed by a stack traceback in `HwRM.log` almost always indicates a **nil argument passed to a C-side engine function**.
+
+### Common Culprits
+
+1.  **`ShipDemandAdd(nil, demand)`**: Happens if a ship variable (e.g., `kInterceptor`) is nil.
+2.  **`ResearchDemandSet(nil, demand)`**: Happens if a research ID is nil.
+3.  **`SobGroup_Count(nil)`**: Happens if a group name is nil.
+
+### Knowledge: Uppercase Global Variables
+
+In this project, ship names MUST be referred to as **uppercase variables** (e.g., `TER_PERSEUS`), not string literals. These variables are mapped to internal engine IDs.
+
+- **The Risk**: If an uppercase variable is used but not defined (returning `nil`), the engine will crash with the `parameter:` error.
+- **Verification**: Always ensure the uppercase variable is one of the recognized ship constants.
+
+```lua
+-- ✅ Correct Project Convention (Uppercase Variable)
+kFighter = TER_PERSEUS
+
+-- ❌ Avoid (String literals are not used for ship IDs in this project)
+kFighter = "ter_perseus"
+```
+
+## 2. Silent FATAL EXIT (Build Menu Crash)
+
+### Symptom
+
+The game suffers a "FATAL EXIT" silently during the load screen or immediately upon skirmish start. The `HwRM.log` abruptly cuts off without a Lua error, usually following a `HOD Trace` for a ship.
+
+### Root Cause
+
+This is almost always caused by a **Subsystem ID Mismatch** in a build definition. If a ship in `def_build.lua` requires a subsystem (`RequiredSubSystems`) that does not exist in the ship's HOD or isn't registered in the subsystem database, the engine crashes while attempting to populate the build UI.
+
+### How to Debug
+
+1. **Trace the Log**: Look at the last `HOD Trace` entry in `HwRM.log`. The ship listed immediately after the trace is likely the culprit.
+2. **Binary Search/Purge**: Temporarily clear all `RequiredSubSystems` strings in `def_build.lua`. If the game loads, the error is in one of those strings.
+3. **Verify IDs**: Cross-reference the requirement with the `.subs` files and the ship's hardpoints.
+
+## 3. Missing Innate Subsystems (Invisible Turrets)
+
+### Symptom
+
+A ship spawns, but its innate turrets or subsystems (e.g., Flak turrets, modules) are invisible or missing, even if they are defined in the `.ship` file.
+
+### Root Cause
+
+This is often caused by placing the subsystem ID in the **wrong parameter slot** in `StartShipHardPointConfig`.
+
+- The engine expects the default innate subsystem in the **7th parameter** (the "Default Slot").
+- If the 7th parameter is `''`, the engine mounts nothing by default, even if the subsystem is listed in the 8th slot.
+
+### How to Fix
+
+Move the subsystem ID to the 7th parameter:
+
+```lua
+-- ✅ Correct
+StartShipHardPointConfig(NewShipType, "Name", "Joint", "Type", "Innate", "Damageable", "subsystem_id", "", ...)
+```
+
+See the full [Hardpoint Configuration Skill](file:///run/media/system/Data/SteamLibrary/steamapps/common/Homeworld/HWRM_FSFC/.agents/skills/ship_subsystem_management/how_to_configure_hardpoints.md) for more details.
+
+## 4. Unit Capacity Build Lockouts
+
+### Symptom
+
+A ship is researchable and appears in the build menu, but it cannot be built (button is greyed out) or it shows **0/0 capacity** despite no units being built.
+
+### Root Cause
+
+This occurs when one or more families assigned to the ship via `setSupplyValue` in its `.ship` file do NOT have a corresponding `supplyLimit` defined in the active game mode's unit cap files (`scripts/rules/[mode]/unitcaps/*.lua`).
+
+- **Engine Logic**: If a ship has multiple family tags (e.g., `Fighter` and `Scout`), the engine requires a limit > 0 for **ALL** of them. If `Scout` is missing or set to 0, the ship is locked out even if `Fighter` has plenty of capacity.
+
+### How to Fix
+
+1. **Identify Families**: Check the ship's `.ship` file for all `setSupplyValue` calls.
+2. **Define Limits**: Ensure every family found is declared in the unit cap files for the current lobby setting (Small, Normal, Large, Huge, and Default).
+3. **Verify Indents**: Use `supplyIndent("SubFamily", 1)` to ensure the sub-family correctly nests under its parent in the UI.
+
+```lua
+-- Fix for lockout
+supplyLimit("Scout", 135)
+supplyIndent("Scout", 1)
+```
+
+## 5. Pattern: High-Fidelity AI Telemetry
+
+Debugging AI behavior across long matches requires granular logging. This project uses custom wrappers to output structured data to `HwRM.log`, which can then be parsed by external tools (e.g., `timeline_analysis.py`).
+
+### Standard Telemetry Hooks
+
+1.  **`FSFC_Log_Research(tech_id)`**: Call this inside `ai_upgrades.lua` whenever a research demand is set or tech is detected.
+2.  **`FSFC_Log_Demand(label, value)`**: Call this in `ai_build.lua` or `ai_subsystems.lua` to track the "desire" for specific units or roles.
+
+### Implementation Example
+
+```lua
+-- In ai_upgrades.lua
+if FSFC_CheckResearch(COMMANDCORVETTE) then
+    ResearchDemandSet_Terran(COMMANDCORVETTE, capitaldemand + 1.0)
+    FSFC_Log_Research("Iceni") -- Telemetry: Tech path identified
+end
+
+-- In ai_build.lua
+if (numErinyes < 4) then
+    ShipDemandAdd(TER_ERINYES, 3.5)
+    FSFC_Log_Demand("Erinyes Wing", 3.5) -- Telemetry: Demand spike
+end
+```
+
+### Analysis Tools
+
+Use the `/analyse-match-timeline` workflow to parse these logs. This script generates a chronological overview of:
+
+- **Strategic Context**: Threat changes every 30s.
+- **Tech Velocity**: When each tier (Fighter, Bomber, Cruiser) was unlocked.
+- **Economy**: RU liquidity vs Total production.
+
+## 8. Common HWRM Log Errors
+
+### `Invalid Supply Family [FamilyName]`
+- **Symptom**: `Invalid Supply Family Rakshasa` appears in `HwRM.log`.
+- **Cause**: A family name used in a `.ship` file's `setSupplyValue` call is not defined in `scripts/familylist.lua`.
+- **Fix**: Add the missing family to the `supplyfamily` table in `familylist.lua`.
+
+### `Cannot overwrite function [FunctionName]`
+- **Symptom**: `Cannot overwrite function VAS_COLOSSUS_Normal_OnSet` appears in `HwRM.log`.
+- **Cause**: This usually indicates a **Script Collision**. Multiple scripts are trying to define the same callback function for a ship. 
+- **Fix**: Check for duplicate `.lua` files in the ship's folder or global scripts (e.g., `custom_scripts`) that might be defining the same `_OnSet` or `_OnCreate` function. HWRM only allows one definition for these hooks.
+
+### `HOD Trace: [Path]` (The "Last Breath" Entry)
+- **Symptom**: The log ends immediately after a `HOD Trace` line.
+- **Cause**: The engine crashed while trying to load the model or assets for the ship listed in the trace.
+- **Common Fix**: Check if `LoadModel()` is called correctly in the `.ship` file and that it precedes any weapon or hardpoint configs. Also verify the `.hod` file exists at the specified path.
+
+### `parameter: attempt to compare nil with number`
+- **Symptom**: This specific error appears in the stack traceback for `Proc_DetermineSpecialDemand`.
+- **Cause**: One of two things:
+    1.  **Direct Nil Parameter**: A `nil` value was passed to the engine function `NumSquadrons(id)`. Unlike some other engine functions, `NumSquadrons` is fatal when passed `nil`.
+    2.  **Initialization Order**: A local variable was used in a comparison (e.g., `if (num < 10)`) **before** it was assigned a value. In Lua 4.0, using an unassigned variable results in `nil`, and `nil < 10` is a fatal error.
+- **Fix**: 
+    1. Use the `FSFC_NumSquadrons(id)` safety wrapper (defined in `ai_telemetry.lua`).
+    2. Ensure all ship-count assignments happen at the **very top** of the function scope.
+
+## 9. The "Trap" Technique (Verifying File Loading)
+
+When debugging AI crashes, you must first confirm the game is actually loading the file you are editing (and not a cached version or a `.big` file).
+
+### How to set the Trap:
+1.  **Syntax Trap**: Insert a deliberate syntax error (e.g., `syntax_error!!!`) at line 1 of the script. If the game doesn't crash on startup/match start, it's NOT loading your file.
+2.  **Path Logging Trap**: Modify the `dofilepath` loop in `source/ai/default/cpubuild.lua` to print the paths it is attempting to load:
+    ```lua
+    local build_path = SelfRace_GetString("path_ai_build", "")
+    print("!!! AI LOADING: " .. build_path)
+    dofilepath(build_path)
+    ```
+
+## 10. Best Practices & Logging
+
+- **Case Sensitivity**: Ship IDs in `def_build.lua` are case-sensitive. `vas_tauret` is NOT `vas_Tauret`.
+- **Diagnostics**: Use `print()` or `aitrace()` to verify variables before passing them to engine functions.
+- **Telemetry**: Check `HwRM.log` for `[AI_DIAG]` tags to see which demand rules are firing before a crash.
+
+## 7. Elite-vs-Standard Production Tuning
+
+### Symptom
+
+The AI builds its elite units (e.g., Deimos, Ares) but then stops production entirely or sits on large RU reserves while being outnumbered.
+
+### Root Cause
+
+This often happens when the AI is only instrumented to build "Special" or "Elite" units. Once these ships hit their low unit caps (e.g., 5/5), the `ShipDemandAdd` logic for those IDs ceases to result in new builds. If there is no demand for "Standard" backbone units, the AI stalls.
+
+### How to Fix
+
+Implement a **Layered Demand** pattern. Always provide a persistent demand for high-cap "Backbone" units (e.g., Fenris, Leviathan) that fires even when the elite roster is full.
+
+```lua
+-- Ensure baseline fleet presence
+local numBackbone = NumSquadrons(kCruiser) + NumSquadronsQ(kCruiser)
+if (numBackbone < 10) then
+    ShipDemandAdd(kCruiser, 2.0) -- Backbone units fill the gap left by elites
+end
+```
+
+See [Balancing Elites vs Standard Units](../ai_production_optimization/balancing_elites_vs_standard_units.md) for the full implementation pattern.
