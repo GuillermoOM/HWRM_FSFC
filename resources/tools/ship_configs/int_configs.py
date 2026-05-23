@@ -73,7 +73,7 @@ TER_PERSEUS = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -516,7 +516,7 @@ TER_VALKYRIE = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -955,7 +955,7 @@ VAS_SERAPIS = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -1398,7 +1398,7 @@ VAS_HORUS = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -1841,7 +1841,7 @@ SHI_ASTAROTH = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -2267,7 +2267,7 @@ SHI_MANTICORE = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",

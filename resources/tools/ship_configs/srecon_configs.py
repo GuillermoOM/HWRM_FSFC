@@ -73,7 +73,7 @@ TER_PEGASUS = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -484,7 +484,7 @@ VAS_PTAH = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",

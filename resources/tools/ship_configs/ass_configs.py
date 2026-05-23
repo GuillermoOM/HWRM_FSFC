@@ -73,7 +73,7 @@ TER_ARES = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -509,7 +509,7 @@ TER_ERINYES = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -956,7 +956,7 @@ TER_HERCULES = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -1391,7 +1391,7 @@ TER_HERCULESMK2 = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -1830,7 +1830,7 @@ VAS_SETH = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -2269,7 +2269,7 @@ VAS_TAURET = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -2704,7 +2704,7 @@ SHI_AESHMA = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -3126,7 +3126,7 @@ SHI_BASILISK = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
