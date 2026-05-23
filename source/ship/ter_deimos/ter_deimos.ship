@@ -251,7 +251,7 @@ addAbility(NewShipType, 'CanBeRepaired', 'RepCap')
 --------------------------------------------------
 
 NewShipType.strikeGroupRadius = 200
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Load Model

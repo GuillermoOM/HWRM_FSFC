@@ -27,28 +27,23 @@ StartWeaponConfig(
 	0
 )
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 18, 18, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 26, 26, "")
 
 setAngles(NewWeaponType, 0, -180, 180, -5, 70)
 
 setMiscValues(NewWeaponType, 0, 0)
 
-
-setPenetration(NewWeaponType,
+setPenetration(
+	NewWeaponType,
 	5,
 	1,
-	{ Unarmoured = 1,
-	},
-	{ LightArmour = 1,
-	},
-	{ MediumArmour = 0.7,
-	},
-	{ HeavyArmour = 0.4,
-	},
-	{ SubSystemArmour = 1,
-	},
-	{ TurretArmour = 1,
-	})
+	{ Unarmoured = 1 },
+	{ LightArmour = 1 },
+	{ MediumArmour = 0.7 },
+	{ HeavyArmour = 0.4 },
+	{ SubSystemArmour = 1 },
+	{ TurretArmour = 1 }
+)
 
 setAccuracy(
 	NewWeaponType,

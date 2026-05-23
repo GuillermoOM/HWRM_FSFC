@@ -40,7 +40,7 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.paradeData = 'dummy_parade'
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement

@@ -48,7 +48,7 @@ NewShipType.addedUnitCaps = 101
 NewShipType.paradeData = 'vas_mothership_parade'
 NewShipType.strikeGroupRadius = 150
 NewShipType.noCombatGrouping = 1
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement

@@ -44,7 +44,7 @@ NewShipType.isTransferable = 0
 NewShipType.paradeData = 'vas_mothership_parade'
 NewShipType.strikeGroupRadius = 200
 NewShipType.noCombatGrouping = 1
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement
