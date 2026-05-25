@@ -1,4 +1,4 @@
-NewShipType = StartShipConfig()artemis.ship
+NewShipType = StartShipConfig()
 
 --------------------------------------------------
 --- Ship info
