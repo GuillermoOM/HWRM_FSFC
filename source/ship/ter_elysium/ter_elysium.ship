@@ -120,7 +120,7 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'Frigate'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'Resource'
 NewShipType.DockFamily = 'Utility'

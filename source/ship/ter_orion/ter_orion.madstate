@@ -10,8 +10,4 @@
 TER_ORION_Normal_OnSet = function(ship)
     startAnim(ship, "Radar01")
     setLoopCount(ship, "Radar01", 100000000)   --infinite looping.
-    startAnim(ship, "Radar02")
-    setLoopCount(ship, "Radar02", 100000000)   --infinite looping.
-    startAnim(ship, "Radar03")
-    setLoopCount(ship, "Radar03", 100000000)   --infinite looping.
 end
