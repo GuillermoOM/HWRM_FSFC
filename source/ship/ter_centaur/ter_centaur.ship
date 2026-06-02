@@ -120,14 +120,14 @@ NewShipType.swayRotateFactor = 0
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
+NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'Resource'
-NewShipType.DockFamily = 'Corvette'
+NewShipType.DockFamily = 'Utility'
 NewShipType.AvoidanceFamily = 'Utility'
 NewShipType.DisplayFamily = 'Utility'
-NewShipType.AutoFormationFamily = 'Corvette'
-NewShipType.CollisionFamily = 'Big'
+NewShipType.AutoFormationFamily = 'Fighter'
+NewShipType.CollisionFamily = 'Small'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
 
 --------------------------------------------------
@@ -155,7 +155,7 @@ NewShipType.totalValue = 0
 --------------------------------------------------
 
 NewShipType.buildCost = 150
-NewShipType.buildTime = 9
+NewShipType.buildTime = 1
 NewShipType.buildPriorityOrder = 20
 
 --------------------------------------------------
