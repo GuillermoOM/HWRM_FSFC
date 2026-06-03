@@ -6,8 +6,8 @@
 - [x] Lilith and Cain should have different mounted turrets.
 - [x] Modify combat music on all levels
 - [x] lower health on resource collectors / controller
-- [ ] Adjust ship costs, Aeolus should be cheaper than Deimos for example
-- [ ] Adjust research of ship unlocking (ship to ship unlocks instead of all at the same time)
+- [x] Adjust ship costs, Aeolus should be cheaper than Deimos for example
+- [x] Adjust research of ship unlocking (ship to ship unlocks instead of all at the same time)
 - [ ] Fix target boxes on sobek, lilith, cain, hecate, hades
 - [ ] Improve build descriptions (good/weak against... Weaponry (including subsystem weapons))
 - [ ] AWACS subsystems research, enhances per stage
