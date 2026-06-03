@@ -29,7 +29,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_ptah",
-		RequiredResearch = "Ptah",
+		RequiredResearch = "Ptah & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
 		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>65s</c>",
@@ -39,7 +39,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_seth",
-		RequiredResearch = "Seth",
+		RequiredResearch = "Seth & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 7,
 		DisplayedName = "GVF Seth - Assault <c=12AB06>35s</c>",
@@ -49,7 +49,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_anubis",
-		RequiredResearch = "Anubis",
+		RequiredResearch = "Anubis & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 8,
 		DisplayedName = "PVF Anubis - Space Superiority <c=12AB06>24s</c>",
@@ -79,7 +79,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_serapis",
-		RequiredResearch = "Serapis",
+		RequiredResearch = "Serapis & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "GVF Serapis - Adv. Interceptor <c=12AB06>40s</c>",
@@ -89,7 +89,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_tauret",
-		RequiredResearch = "Tauret",
+		RequiredResearch = "Tauret & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 8,
 		DisplayedName = "GVF Tauret - Heavy Assault <c=12AB06>49s</c>",
@@ -109,7 +109,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bakha",
-		RequiredResearch = "Bakha",
+		RequiredResearch = "Bakha & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 105,
 		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
@@ -119,7 +119,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_sehkmet",
-		RequiredResearch = "Sehkmet",
+		RequiredResearch = "Sehkmet & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 106,
 		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>46s</c>",
@@ -129,7 +129,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_amun",
-		RequiredResearch = "Amun",
+		RequiredResearch = "Amun & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 107,
 		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>50s</c>",
@@ -159,7 +159,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_mentu",
-		RequiredResearch = "Mentu",
+		RequiredResearch = "Mentu & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 225,
 		DisplayedName = "GVC Mentu - Advanced Cruiser <c=12AB06>70s</c>",
@@ -169,7 +169,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_sobek",
-		RequiredResearch = "Sobek",
+		RequiredResearch = "Sobek & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 300,
 		DisplayedName = "GVCv Sobek - Corvette <c=12AB06>110s</c>",
@@ -199,7 +199,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_hatshepsut",
-		RequiredResearch = "Hatshepsut",
+		RequiredResearch = "Hatshepsut & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 330,
 		DisplayedName = "GVD Hatshepsut - Destroyer <c=12AB06>240s</c>",
@@ -219,7 +219,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_colossus",
-		RequiredResearch = "Colossus",
+		RequiredResearch = "Colossus & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 340,
 		DisplayedName = "GTVA Colossus <c=12AB06>500s</c>",
@@ -249,7 +249,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_satis",
-		RequiredResearch = "RepairSatis",
+		RequiredResearch = "RepairSatis & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 511,
 		DisplayedName = "GVFr Satis - Repair <c=12AB06>35s</c>",
@@ -259,7 +259,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bes",
-		RequiredResearch = "SentryAndMineDeployer & FS2",
+		RequiredResearch = "SentryAndMineDeployer",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 512,
 		DisplayedName = "GVFr Bes - Sentry Builder <c=12AB06>25s</c>",
@@ -289,7 +289,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_mjolnir",
-		RequiredResearch = "BeamSentry",
+		RequiredResearch = "BeamSentry & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 515,
 		DisplayedName = "GTSG Mjolnir - Beam Cannon <c=12AB06>120s</c>",
@@ -299,7 +299,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_setekh",
-		RequiredResearch = "AWACS",
+		RequiredResearch = "AWACS & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 515,
 		DisplayedName = "GVA Setekh - AWACS <c=12AB06>78s</c>",
@@ -331,7 +331,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bast",
-		RequiredResearch = "RepairBast",
+		RequiredResearch = "RepairBast & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 311,
 		DisplayedName = "PVFr Bast - Repair Frigate <c=12AB06>22s</c>",

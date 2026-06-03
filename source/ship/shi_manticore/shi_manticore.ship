@@ -78,7 +78,7 @@ NewShipType.canSurround = 1
 --------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 4)
-NewShipType.buildCost = 450
+NewShipType.buildCost = 405
 NewShipType.buildTime = 31
 NewShipType.buildPriorityOrder = 20
 

@@ -68,7 +68,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_aeshma",
-		RequiredResearch = "Aeshma",
+		RequiredResearch = "Aeshma & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 8,
 		DisplayedName = "SF Aeshma - Assault <c=12AB06>35s</c>",
@@ -78,7 +78,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_mara",
-		RequiredResearch = "Mara",
+		RequiredResearch = "Mara & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 5,
 		DisplayedName = "SF Mara - Adv. Superiority <c=12AB06>47s</c>",
@@ -88,7 +88,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_nahema",
-		RequiredResearch = "Nahema",
+		RequiredResearch = "BomberDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 40,
 		DisplayedName = "SB Nahema - Strike Bomber <c=12AB06>34s</c>",
@@ -98,7 +98,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_taurvi",
-		RequiredResearch = "Taurvi",
+		RequiredResearch = "Taurvi & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 41,
 		DisplayedName = "SB Taurvi - Medium Bomber <c=12AB06>34s</c>",
@@ -118,7 +118,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_seraphim",
-		RequiredResearch = "Seraphim",
+		RequiredResearch = "Seraphim & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 44,
 		DisplayedName = "SB Seraphim - Heavy Bomber <c=12AB06>45s</c>",
@@ -128,7 +128,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_rakshasa",
-		RequiredResearch = "Rakshasa",
+		RequiredResearch = "Rakshasa & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 63,
 		DisplayedName = "SC Rakshasa - Adv. Cruiser <c=12AB06>60s</c>",
@@ -138,7 +138,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain",
-		RequiredResearch = "Cain & FS2",
+		RequiredResearch = "CruiserDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain - Strike Cruiser <c=12AB06>34s</c>",
@@ -148,7 +148,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_cain_fs1",
-		RequiredResearch = "Cain & FS1",
+		RequiredResearch = "CruiserDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 60,
 		DisplayedName = "SC Cain (FS1) - Strike Cruiser <c=12AB06>34s</c>",
@@ -158,7 +158,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith",
-		RequiredResearch = "Lilith & FS2",
+		RequiredResearch = "HeavyCruiser & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith - Heavy Cruiser <c=12AB06>140s</c>",
@@ -168,7 +168,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lilith_fs1",
-		RequiredResearch = "Lilith & FS1",
+		RequiredResearch = "HeavyCruiser & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 65,
 		DisplayedName = "SC Lilith (FS1) - Heavy Cruiser <c=12AB06>140s</c>",
@@ -178,7 +178,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_moloch",
-		RequiredResearch = "Moloch",
+		RequiredResearch = "Moloch & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 75,
 		DisplayedName = "SCv Moloch - Corvette <c=12AB06>110s</c>",
@@ -208,7 +208,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_ravana",
-		RequiredResearch = "Ravana",
+		RequiredResearch = "Ravana & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 116,
 		DisplayedName = "SD Ravana - Destroyer <c=12AB06>225s</c>",
@@ -218,7 +218,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_sathanas",
-		RequiredResearch = "Sathanas",
+		RequiredResearch = "Sathanas & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 119,
 		DisplayedName = "SJ Sathanas <c=12AB06>550s</c>",
@@ -259,7 +259,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_mephisto",
-		RequiredResearch = "",
+		RequiredResearch = "SentryAndMineDeployer",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 131,
 		DisplayedName = "SFr Mephisto - Sentry Builder <c=12AB06>25s</c>",
@@ -279,7 +279,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_asmodeus",
-		RequiredResearch = "",
+		RequiredResearch = "RepairFrigate",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 133,
 		DisplayedName = "SFr Asmodeus - Repair <c=12AB06>35s</c>",
@@ -289,7 +289,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_commnode",
-		RequiredResearch = "AWACS",
+		RequiredResearch = "AWACS & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 134,
 		DisplayedName = "Shivan Comm Node - AWACS <c=12AB06>70s</c>",
@@ -319,7 +319,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_shaitan",
-		RequiredResearch = "Shaitan",
+		RequiredResearch = "BomberDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 42,
 		DisplayedName = "SB Shaitan - Strike Bomber <c=12AB06>48s</c>",

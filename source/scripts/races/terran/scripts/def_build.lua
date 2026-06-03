@@ -233,7 +233,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_perseus",
-		RequiredResearch = "Perseus",
+		RequiredResearch = "Perseus & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 21,
 		DisplayedName = "GTF Perseus - Interceptor <c=12AB06>35s</c>",
@@ -243,7 +243,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ulysses",
-		RequiredResearch = "Ulysses & FS2",
+		RequiredResearch = "Ulysses",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 12,
 		DisplayedName = "GTF Ulysses - Superiority <c=12AB06>26s</c>",
@@ -263,7 +263,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_myrmidon",
-		RequiredResearch = "Myrmidon",
+		RequiredResearch = "Myrmidon & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 22,
 		DisplayedName = "GTF Myrmidon - Adv. Superiority <c=12AB06>36s</c>",
@@ -273,7 +273,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ares",
-		RequiredResearch = "Ares",
+		RequiredResearch = "Ares & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 24,
 		DisplayedName = "GTF Ares - Strategic Assault <c=12AB06>45s</c>",
@@ -283,7 +283,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_erinyes",
-		RequiredResearch = "Erinyes",
+		RequiredResearch = "Erinyes & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 25,
 		DisplayedName = "GTF Erinyes - Heavy Assault <c=12AB06>45s</c>",
@@ -293,7 +293,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_zeus",
-		RequiredResearch = "Zeus",
+		RequiredResearch = "BomberDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 31,
 		DisplayedName = "GTB Zeus - Strike Bomber <c=12AB06>31s</c>",
@@ -303,7 +303,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_artemis",
-		RequiredResearch = "Artemis",
+		RequiredResearch = "Artemis & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 40,
 		DisplayedName = "GTB Artemis - Medium Bomber <c=12AB06>37s</c>",
@@ -323,7 +323,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_medusa",
-		RequiredResearch = "Medusa & FS2",
+		RequiredResearch = "Medusa",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 32,
 		DisplayedName = "GTB Medusa - Medium Bomber <c=12AB06>35s</c>",
@@ -343,7 +343,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_ursa",
-		RequiredResearch = "Ursa & FS2",
+		RequiredResearch = "Ursa",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 33,
 		DisplayedName = "GTB Ursa - Heavy Bomber <c=12AB06>45s</c>",
@@ -363,7 +363,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_boanerges",
-		RequiredResearch = "Boanerges",
+		RequiredResearch = "Boanerges & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 42,
 		DisplayedName = "GTB Boanerges - Heavy Bomber <c=12AB06>44s</c>",
@@ -413,7 +413,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_aeolus",
-		RequiredResearch = "AdvancedCruiser",
+		RequiredResearch = "Aeolus & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 52,
 		DisplayedName = "GTC Aeolus - Adv. Cruiser <c=12AB06>47s</c>",
@@ -423,7 +423,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_deimos",
-		RequiredResearch = "Deimos",
+		RequiredResearch = "Deimos & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 70,
 		DisplayedName = "GTCv Deimos - Corvette <c=12AB06>110s</c>",
@@ -433,7 +433,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_iceni",
-		RequiredResearch = "CommandCorvette",
+		RequiredResearch = "CommandCorvette & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 75,
 		DisplayedName = "GTCv Iceni - Command Corvette <c=12AB06>140s</c>",
@@ -463,7 +463,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_hecate",
-		RequiredResearch = "Hecate",
+		RequiredResearch = "Hecate & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 81,
 		DisplayedName = "GTD Hecate - Destroyer <c=12AB06>200s</c>",
@@ -514,7 +514,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_argo",
-		RequiredResearch = "RepairArgo",
+		RequiredResearch = "RepairFrigate & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 101,
 		DisplayedName = "GTT Argo - Repair <c=12AB06>37s</c>",
@@ -544,7 +544,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_mjolnir",
-		RequiredResearch = "BeamSentry",
+		RequiredResearch = "BeamSentry & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 122,
 		DisplayedName = "GTSG Mjolnir - Beam Sentry <c=12AB06>120s</c>",
@@ -584,7 +584,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_apollo",
-		RequiredResearch = "Apollo",
+		RequiredResearch = "Apollo & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
 		DisplayedName = "GTF Apollo - Space Superiority <c=12AB06>30s</c>",
@@ -594,7 +594,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_valkyrie",
-		RequiredResearch = "Valkyrie",
+		RequiredResearch = "Valkyrie & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 11,
 		DisplayedName = "GTF Valkyrie - Interceptor <c=12AB06>30s</c>",
@@ -604,7 +604,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_athena",
-		RequiredResearch = "BomberDesign",
+		RequiredResearch = "BomberDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 30,
 		DisplayedName = "GTB Athena - Light Bomber <c=12AB06>31s</c>",
@@ -614,7 +614,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_chronos",
-		RequiredResearch = "RepairChronos",
+		RequiredResearch = "RepairFrigate & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 106,
 		DisplayedName = "GTFr Chronos - Repair Ship <c=12AB06>37s</c>",

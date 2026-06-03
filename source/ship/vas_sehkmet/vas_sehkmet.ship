@@ -171,7 +171,7 @@ NewShipType.totalValue = 8
 --------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 3)
-NewShipType.buildCost = 890
+NewShipType.buildCost = 710
 NewShipType.buildTime = 46
 NewShipType.buildPriorityOrder = 20
 
