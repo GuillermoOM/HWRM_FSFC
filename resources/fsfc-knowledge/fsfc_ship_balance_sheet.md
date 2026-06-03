@@ -116,106 +116,108 @@ graph TD
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **T1** | **Fighter Design** | Univ | `ter_loki` (Scout), starting supports | - | 1200 | 40s |
 | **T1** | **Apollo** | FS1 | `ter_apollo` | FighterDesign & FS1 | 850 | 40s |
-| **T1** | **Hercules** | Univ | `ter_hercules` | FighterDesign | 1000 | 45s |
-| **T1** | **Valkyrie** | FS1 | `ter_valkyrie` | FighterDesign & FS1 | 850 | 40s |
-| **T1** | **Perseus** | FS2 | `ter_perseus` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Pegasus** | FS2 | `ter_pegasus` | Perseus & FS2 | 1000 | 30s |
-| **T1** | **Hercules Mk2** | FS2 | `ter_hercules_mk2` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Ares** | FS2 | `ter_ares` | HerculesMk2 & FS2 | 1500 | 50s |
-| **T1** | **Erinyes** | FS2 | `ter_erinyes` | HerculesMk2 & FS2 | 1800 | 60s |
+| **T1** | **Valkyrie** | FS1 | `ter_valkyrie` | FighterDesign & Apollo & FS1 | 850 | 40s |
+| **T1** | **Hercules** | Univ | `ter_hercules` | Valkyrie or Myrmidon | 1000 | 45s |
+| **T1** | **Ulysses** | Univ | `ter_ulysses` | Hercules or Myrmidon | 1000 | 45s |
 | **T1** | **Myrmidon** | FS2 | `ter_myrmidon` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Ulysses** | Univ | `ter_ulysses` | FighterDesign | 1000 | 45s |
-| **T1** | **Bomber Design** | Univ | `ter_athena` | FighterDesign | 1500 | 50s |
-| **T1** | **Zeus** | FS2 | `ter_zeus` | BomberDesign & FS2 | 1000 | 40s |
-| **T1** | **Medusa** | Univ | `ter_medusa` | BomberDesign | 1500 | 50s |
-| **T1** | **Artemis** | FS2 | `ter_artemis` | BomberDesign & FS2 | 1200 | 50s |
-| **T1** | **ArtemisDH** | Univ | `ter_artemisdh` | Artemis | 1400 | 50s |
-| **T1** | **Boanerges** | FS2 | `ter_boanerges` | BomberDesign & FS2 | 1800 | 60s |
-| **T2** | **Ursa** | Univ | `ter_ursa` | BomberDesign | 2000 | 50s |
-| **T1** | **Cruiser Design** | Univ | `ter_fenris` (FS2), `ter_fenris_fs1` (FS1) | BomberDesign | 8000 | 120s |
-| **T1** | **Fenris Armor** | Univ | (Fenris Armor Upgrade) | CruiserDesign | 1000 | 50s |
-| **T1** | **Heavy Cruiser** | Univ | `ter_leviathan` (FS2), `ter_leviathan_fs1` (FS1) | CruiserHealthUpgrade | 1000 | 50s |
-| **T2** | **Aeolus** | FS2 | `ter_aeolus` | CruiserDesign & FS2 | 2000 | 50s |
-| **T3** | **Capital Ship Design**| Univ | `ter_orion` (FS2), `ter_orion_fs1` (FS1) | CruiserDesign | 5000 | 180s |
-| **T1** | **Deimos** | FS2 | `ter_deimos` | CapitalShipDesign & FS2 | 1500 | 50s |
-| **T1** | **Deimos Armor** | FS2 | (Deimos Armor Upgrade) | Deimos | 1500 | 50s |
-| **T1** | **Deimos Sprint** | FS2 | (Deimos Sprint Upgrade) | Deimos | 1500 | 50s |
-| **T2** | **Command Corvette** | FS2 | `ter_iceni` | Deimos & CapitalShipDesign | 2000 | 50s |
-| **T2** | **Hecate** | FS2 | `ter_hecate` | CapitalShipDesign & FS2 | 4500 | 90s |
-| **T3** | **SuperDestroyer** | Univ | `ter_hades` | CapitalShipDesign | 8000 | 150s |
-| **T2** | **Installation** | Univ | `ter_arcadia` | CapitalShipDesign | 2500 | 75s |
-| **T3** | **Juggernaut** | FS2 | `ter_colossus` | SuperDestroyer & Installation & FS2 | 12000 | 200s |
-| **T1** | **Repair Frigate** | Univ | `ter_chronos` (FS1), `ter_argo` (FS2) | CruiserDesign & FS1/FS2 | 1000 | 50s |
+| **T1** | **Perseus** | FS2 | `ter_perseus` | Myrmidon & FS2 | 1200 | 50s |
+| **T1** | **Hercules Mk2** | FS2 | `ter_hercules_mk2` | Perseus & FS2 | 1200 | 50s |
+| **T1** | **Ares** | FS2 | `ter_ares` | HerculesMk2 & FS2 | 1500 | 50s |
+| **T1** | **Erinyes** | FS2 | `ter_erinyes` | Ares & FS2 | 1800 | 60s |
+| **T1** | **Pegasus** | FS2 | `ter_pegasus` | Erinyes & FS2 | 1000 | 30s |
+| **T2** | **Bomber Design** | Univ | `ter_athena` (FS1), `ter_zeus` (FS2) | FighterDesign | 1500 | 50s |
+| **T2** | **Medusa** | Univ | `ter_medusa` | BomberDesign | 1500 | 50s |
+| **T2** | **Ursa** | Univ | `ter_ursa` | Medusa | 2000 | 50s |
+| **T2** | **Artemis** | FS2 | `ter_artemis` | Medusa & FS2 | 1200 | 50s |
+| **T2** | **ArtemisDH** | Univ | `ter_artemisdh` | Artemis | 1400 | 50s |
+| **T2** | **Boanerges** | FS2 | `ter_boanerges` | Ursa & FS2 | 1800 | 60s |
+| **T3** | **Cruiser Design** | Univ | `ter_fenris` (FS2), `ter_fenris_fs1` (FS1) | BomberDesign | 8000 | 120s |
+| **T3** | **Fenris Armor Upgrade** | Univ | (Fenris Armor Upgrade) | CruiserDesign | 1000 | 50s |
+| **T3** | **Heavy Cruiser** | Univ | `ter_leviathan` (FS2), `ter_leviathan_fs1` (FS1) | FenrisArmorUpgrade | 1000 | 50s |
+| **T3** | **Aeolus** | FS2 | `ter_aeolus` | HeavyCruiser & FS2 | 2000 | 50s |
+| **T4** | **Capital Ship Design**| Univ | `ter_orion` (FS2), `ter_orion_fs1` (FS1) | CruiserDesign | 5000 | 180s |
+| **T4** | **Deimos** | FS2 | `ter_deimos` | CapitalShipDesign & FS2 | 1500 | 50s |
+| **T4** | **Deimos Armor** | FS2 | (Deimos Armor Upgrade) | Deimos | 1500 | 50s |
+| **T4** | **Deimos Sprint** | FS2 | (Deimos Sprint Upgrade) | Deimos | 1500 | 50s |
+| **T4** | **Command Corvette** | FS2 | `ter_iceni` | Deimos & CapitalShipDesign | 2000 | 50s |
+| **T4** | **Hecate** | FS2 | `ter_hecate` | CapitalShipDesign & FS2 | 4500 | 90s |
+| **T4** | **Installation** | Univ | `ter_arcadia` | CapitalShipDesign | 2500 | 75s |
+| **T5** | **SuperDestroyer** | Univ | `ter_hades` | CapitalShipDesign | 8000 | 150s |
+| **T6** | **Juggernaut** | FS2 | `ter_colossus` | SuperDestroyer & Installation & FS2 | 12000 | 200s |
+| **T2** | **Repair Frigate** | Univ | `ter_chronos` (FS1), `ter_argo` (FS2) | CruiserDesign | 1000 | 50s |
 | **T1** | **Sentry Gun** | Univ | `ter_alastor`, `ter_cerberus` | - | 1500 | 50s |
-| **T1** | **Mine Deployer** | Univ | `ter_poseidon` | SentryGun | 1500 | 50s |
-| **T1** | **Beam Sentry** | FS2 | `ter_mjolnir` | SentryAndMineDeployer & FS2 | 1500 | 50s |
-| **T1** | **Science Vessel** | Univ | `ter_faustus` | CruiserDesign | 1500 | 50s |
+| **T1** | **Sentry And Mine Deployer** | Univ | `ter_poseidon` | SentryGun | 1500 | 50s |
+| **T2** | **Beam Sentry** | FS2 | `ter_mjolnir` | SentryAndMineDeployer & FS2 | 1500 | 50s |
+| **T2** | **Science Vessel** | Univ | `ter_faustus` | CruiserDesign | 1500 | 50s |
 | **T2** | **AWACS** | FS2 | `ter_charybdis` | CruiserDesign & FS2 | 2500 | 50s |
+| **T2** | **AWACS LVL2** | FS2 | subsystem built on Charybdis -> `awacs_1` | AWACS | 2500 | 50s |
+| **T2** | **AWACS LVL3** | FS2 | sybsystem built on Charybdis -> `awacs_2` | AWACSLVL2 | 2500 | 50s |
+
 
 ### [VASUDAN] - Imperium Technology
 | Tier | Research Node | Era | Ships Instantly Unlocked | Prerequisite | Cost | Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **T1** | **Fighter Design** | Univ | `vas_horus` (Interceptor), starting supports | - | 1200 | 40s |
-| **T1** | **Seth** | FS1 | `vas_seth` | FighterDesign & FS1 | 850 | 40s |
-| **T1** | **Anubis** | FS1 | `vas_anubis` | FighterDesign & FS1 | 700 | 40s |
-| **T1** | **Thoth** | Univ | `vas_thoth` | FighterDesign | 1000 | 45s |
-| **T1** | **Ptah** | FS2 | `vas_ptah` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Serapis** | FS2 | `vas_serapis` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Tauret** | FS2 | `vas_tauret` | FighterDesign & FS2 | 1500 | 60s |
-| **T1** | **Bomber Design** | Univ | `vas_osiris` | FighterDesign | 1500 | 50s |
-| **T1** | **Bakha** | FS2 | `vas_bakha` | BomberDesign & FS2 | 1200 | 50s |
-| **T1** | **Sehkmet** | FS2 | `vas_sehkmet` | BomberDesign & FS2 | 1800 | 60s |
-| **T1** | **Amun** | FS1 | `vas_amun` | BomberDesign & FS1 | 1400 | 50s |
-| **T1** | **Cruiser Design** | Univ | `vas_aten` (FS2), `vas_aten_fs1` (FS1) | BomberDesign | 8000 | 120s |
-| **T2** | **Mentu** | FS2 | `vas_mentu` | CruiserDesign & FS2 | 2000 | 60s |
-| **T1** | **Science Vessel** | Univ | `vas_imhotep` | CruiserDesign | 1500 | 50s |
-| **T3** | **Capital Ship Design**| Univ | `vas_typhon` (FS2), `vas_typhon_fs1` (FS1) | CruiserDesign | 5000 | 180s |
-| **T2** | **Sobek** | FS2 | `vas_sobek` | CapitalShipDesign & FS2 | 2000 | 60s |
-| **T1** | **Sobek Armor** | FS2 | (Sobek Armor Upgrade) | Sobek | 1500 | 50s |
-| **T1** | **Sobek Sprint** | FS2 | (Sobek Sprint Upgrade) | Sobek | 1500 | 50s |
-| **T2** | **Hatshepsut** | FS2 | `vas_hatshepsut` | CapitalShipDesign & FS2 | 3500 | 90s |
-| **T2** | **Installation** | Univ | `vas_karnak` | CapitalShipDesign | 2500 | 75s |
-| **T3** | **Super Capital Ship Design** | Univ | `vas_hatshepsut_fs1` (FS1 Flagship) | CapitalShipDesign & Installation | 6000 | 120s |
-| **T3** | **Colossus** | FS2 | `vas_colossus` | SuperCapitalShipDesign & FS2 | 12000 | 200s |
+| **T1** | **Fighter Design** | Univ | `vas_horus` (scout interceptor) | - | 1200 | 40s |
+| **T1** | **Anubis** | FS1 | `vas_anubis` | FighterDesing & FS1 | 700 | 40s |
+| **T1** | **Seth** | FS1 | `vas_seth` | Anubis & FS1 | 850 | 40s |
+| **T1** | **Thoth** | Univ | `vas_thoth` | Seth or (FighterDesign & FS2) | 1000 | 45s |
+| **T1** | **Serapis** | FS2 | `vas_serapis` | Thoth & FS2 | 1200 | 50s |
+| **T1** | **Tauret** | FS2 | `vas_tauret` | Serapis | 1500 | 60s |
+| **T1** | **Ptah** | FS2 | `vas_ptah` | Serapis | 1200 | 50s |
+| **T2** | **Bomber Design** | Univ | `vas_osiris` | FighterDesign | 1500 | 50s |
+| **T2** | **Amun** | FS1 | `vas_amun` | BomberDesign & FS1 | 1400 | 50s |
+| **T2** | **Bakha** | FS2 | `vas_bakha` | BomberDesign & FS2 | 1200 | 50s |
+| **T2** | **Sehkmet** | FS2 | `vas_sehkmet` | Bakha & FS2 | 1800 | 60s |
+| **T3** | **Cruiser Design** | Univ | `vas_aten` (FS2), `vas_aten_fs1` (FS1) | BomberDesign | 8000 | 120s |
+| **T3** | **Mentu** | FS2 | `vas_mentu` | CruiserDesign & FS2 | 2000 | 60s |
+| **T4** | **Capital Ship Design**| Univ | `vas_typhon` (FS2), `vas_typhon_fs1` (FS1) | CruiserDesign | 5000 | 180s |
+| **T4** | **Sobek** | FS2 | `vas_sobek` | CapitalShipDesign & FS2 | 2000 | 60s |
+| **T4** | **Sobek Armor** | FS2 | (Sobek Armor Upgrade) | Sobek | 1500 | 50s |
+| **T4** | **Sobek Sprint** | FS2 | (Sobek Sprint Upgrade) | Sobek | 1500 | 50s |
+| **T4** | **Hatshepsut** | FS2 | `vas_hatshepsut` | CapitalShipDesign & FS2 | 3500 | 90s |
+| **T4** | **Installation** | Univ | `vas_karnak` | CapitalShipDesign | 2500 | 75s |
+| **T5** | **Super Capital Ship Design** | FS1 | `vas_hatshepsut_fs1` (FS1 Flagship) | CapitalShipDesign & Installation | 6000 | 120s |
+| **T5** | **Juggernaut** | FS2 | `vas_colossus` | Installation & FS2 | 12000 | 200s |
+| **T2** | **Repair Satis** | FS1 | `vas_satis` | CruiserDesign & FS1 | 1500 | 50s |
+| **T2** | **Repair Bast** | FS2 | `vas_bast` | CruiserDesign & FS2 | 1500 | 50s |
 | **T1** | **Sentry Gun** | Univ | `vas_edjo`, `vas_ankh` | - | 1500 | 50s |
-| **T1** | **Deployer** | Univ | `vas_bes` | SentryGun | 1500 | 50s |
+| **T1** | **Sentry And Mine Deployer** | Univ | `vas_bes` | SentryGun | 1500 | 50s |
 | **T2** | **Beam Sentry** | FS2 | `ter_mjolnir` | SentryAndMineDeployer & FS2 | 3000 | 90s |
+| **T2** | **Science Vessel** | Univ | `vas_imhotep` | CruiserDesign | 1500 | 50s |
 | **T2** | **AWACS** | FS2 | `vas_setekh` | CruiserDesign & FS2 | 2500 | 50s |
-| **T1** | **Repair Satis** | FS1 | `vas_satis` | CruiserDesign & FS1 | 1500 | 50s |
-| **T1** | **Repair Bast** | FS2 | `vas_bast` | CruiserDesign & FS2 | 1500 | 50s |
+| **T2** | **AWACS LVL2** | FS2 | subsystem built on setekh -> `awacs_1` | AWACS | 2500 | 50s |
+| **T2** | **AWACS LVL3** | FS2 | sybsystem built on setekh -> `awacs_2` | AWACSLVL2 | 2500 | 50s |
 
 ### [SHIVAN] - Unknown Technology
 | Tier | Research Node | Era | Ships Instantly Unlocked | Prerequisite | Cost | Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **T1** | **Fighter Design** | Univ | `shi_scorpion` (FS1 Scout), `shi_astaroth` (FS2 Scout) | - | 1200 | 40s |
 | **T1** | **Manticore** | Univ | `shi_manticore` | FighterDesign | 850 | 40s |
-| **T1** | **Dragon** | Univ | `shi_dragon` | FighterDesign | 1200 | 50s |
-| **T1** | **Basilisk** | FS1 | `shi_basilisk` | FighterDesign & FS1 | 1200 | 50s |
-| **T1** | **Aeshma** | FS2 | `shi_aeshma` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Mara** | FS2 | `shi_mara` | FighterDesign & FS2 | 1500 | 60s |
-| **T1** | **Astaroth** | FS2 | `shi_astaroth` (recon) | FighterDesign & FS2 | 1500 | 60s |
-| **T1** | **Gorgon** | Univ | `shi_gorgon` | FighterDesign | 1500 | 50s |
-| **T1** | **Bomber Design** | Univ | (None) | FighterDesign | 1500 | 50s |
-| **T1** | **Shaitan** | FS1 | `shi_shaitan` | BomberDesign & FS1 | 1000 | 40s |
-| **T1** | **Nahema** | FS2 | `shi_nahema` | BomberDesign & FS2 | 1200 | 50s |
-| **T1** | **Taurvi** | FS2 | `shi_taurvi` | BomberDesign & FS2 | 1400 | 50s |
-| **T1** | **Nephilim** | Univ | `shi_nephilim` | BomberDesign | 1800 | 60s |
-| **T1** | **Seraphim** | FS2 | `shi_seraphim` | BomberDesign & FS2 | 2000 | 70s |
-| **T1** | **Cruiser Design** | Univ | (None) | BomberDesign | 8000 | 120s |
-| **T1** | **Cain** | Univ | `shi_cain` (FS2), `shi_cain_fs1` (FS1) | CruiserDesign | 1000 | 50s |
-| **T1** | **Lilith** | Univ | `shi_lilith` (FS2), `shi_lilith_fs1` (FS1) | CruiserDesign | 2500 | 70s |
-| **T2** | **Rakshasa** | FS2 | `shi_rakshasa` | CruiserDesign & FS2 | 2000 | 60s |
-| **T3** | **Capital Ship Design**| Univ | `shi_demon` (FS2), `shi_demon_fs1` (FS1) | CruiserDesign | 5000 | 180s |
-| **T2** | **Moloch** | FS2 | `shi_moloch` | CapitalShipDesign & FS2 | 2000 | 60s |
-| **T1** | **Moloch Armor** | FS2 | (Moloch Armor Upgrade) | Moloch | 1500 | 50s |
-| **T1** | **Moloch Sprint** | FS2 | (Moloch Sprint Upgrade) | Moloch | 1500 | 50s |
-| **T2** | **Ravana** | FS2 | `shi_ravana` | CapitalShipDesign & FS2 | 4500 | 100s |
-| **T3** | **Super Capital Ship Design** | Univ | (Sathanas Path) | CapitalShipDesign | 8000 | 150s |
-| **T3** | **Lucifer** | Univ | `shi_lucifer` | SuperCapitalShipDesign | 10000 | 110s |
-| **T3** | **Sathanas** | FS2 | `shi_sathanas` | SuperCapitalShipDesign & FS2 | 12000 | 200s |
+| **T1** | **Basilisk** | Univ | `shi_basilisk` | Manticore | 1200 | 50s |
+| **T1** | **Dragon** | Univ | `shi_dragon` | Manticore | 1200 | 50s |
+| **T1** | **Gorgon** | Univ | `shi_gorgon` | dragon | 1500 | 50s |
+| **T1** | **Mara** | FS2 | `shi_mara` | Manticore & FS2 | 1500 | 60s |
+| **T1** | **Aeshma** | FS2 | `shi_aeshma` | Mara & FS2 | 1200 | 50s |
+| **T2** | **Bomber Design** | Univ | `shi_shaitan` (FS1), `shi_nahema` (FS2) | FighterDesign | 1500 | 50s |
+| **T2** | **Taurvi** | FS2 | `shi_taurvi` | BomberDesign & FS2 | 1400 | 50s |
+| **T2** | **Nephilim** | Univ | `shi_nephilim` | BomberDesign | 1800 | 60s |
+| **T2** | **Seraphim** | FS2 | `shi_seraphim` | Nephilim & FS2 | 2000 | 70s |
+| **T3** | **Cruiser Design** | Univ | `shi_cain_fs1` (FS1), `shi_cain` (FS2) | BomberDesign | 8000 | 120s |
+| **T3** | **Heavy Cruiser** | Univ | `shi_lilith` (FS2), `shi_lilith_fs1` (FS1) | CruiserDesign | 2500 | 70s |
+| **T3** | **Rakshasa** | FS2 | `shi_rakshasa` | HeavyCruiser & FS2 | 2000 | 60s |
+| **T4** | **Capital Ship Design**| Univ | `shi_demon` (FS2), `shi_demon_fs1` (FS1) | CruiserDesign | 5000 | 180s |
+| **T4** | **Moloch** | FS2 | `shi_moloch` | CapitalShipDesign & FS2 | 2000 | 60s |
+| **T4** | **Moloch Armor** | FS2 | (Moloch Armor Upgrade) | Moloch | 1500 | 50s |
+| **T4** | **Moloch Sprint** | FS2 | (Moloch Sprint Upgrade) | Moloch | 1500 | 50s |
+| **T4** | **Ravana** | FS2 | `shi_ravana` | CapitalShipDesign & FS2 | 4500 | 100s |
+| **T5** | **Super Capital Ship Design** | Univ | `shi_lucifer` | CapitalShipDesign | 8000 | 150s |
+| **T6** | **Juggernaut** | FS2 | `shi_sathanas` | Lucifer & FS2 | 12000 | 200s |
+| **T2** | **Repair Frigate** | Univ | `shi_asmodeus` | CruiserDesign | 1500 | 50s |
 | **T1** | **Sentry Gun** | Univ | `shi_belial`, `shi_trident` | - | 1500 | 50s |
-| **T2** | **AWACS** | Univ | `shi_commnode` (Comm Node) | CruiserDesign | 1500 | 50s |
-
+| **T2** | **Sentry And Mine Deployer** | Univ | `shi_mephisto` | SentryGun | 1500 | 50s |
+| **T2** | **AWACS** | FS2 | `shi_commnode` | CruiserDesign & FS2 | 1500 | 50s |
+| **T2** | **AWACS LVL2** | FS2 | subsystem built on shicommnode -> `awacs_1` | AWACS | 2500 | 50s |
+| **T2** | **AWACS LVL3** | FS2 | sybsystem built on shicommnode-> `awacs_2` | AWACSLVL2 | 2500 | 50s |
 ---
 
 ---

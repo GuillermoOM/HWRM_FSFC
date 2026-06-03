@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'AdvancedCruiser'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 18000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 85000)
 NewShipType.regentime = 565
 NewShipType.minRegenTime = 565
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -151,7 +151,7 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 1250
+NewShipType.buildCost = 1500
 NewShipType.buildTime = 60
 NewShipType.buildPriorityOrder = 30
 

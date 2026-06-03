@@ -252,7 +252,7 @@ LoadModel(NewShipType, 1)
 
 StartShipHardPointConfig(NewShipType, 'AWACS0', 'Hardpoint_AWACS', 'System', 'Generic', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '', ')')
 StartShipHardPointConfig(NewShipType, 'AWACS1', 'Hardpoint_AWACS2', 'System', 'Generic', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '', ')')
-StartShipHardPointConfig(NewShipType, 'AWACS2', 'Hardpoint_AWACS3', 'System', 'Generic', 'Indestructible', 'awacs_2', '', '', '', '', '', '', '', '', ')')
+StartShipHardPointConfig(NewShipType, 'AWACS2', 'Hardpoint_AWACS3', 'System', 'Generic', 'Indestructible', '', 'awacs_2', '', '', '', '', '', '', '', ')')
 
 --------------------------------------------------
 --- Shields

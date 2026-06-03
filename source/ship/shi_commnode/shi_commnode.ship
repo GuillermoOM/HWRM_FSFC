@@ -242,8 +242,8 @@ addShield(NewShipType, 'EMP', 310, 17)
 
 NewShipType.canRetireSubSystems = 1
 StartShipHardPointConfig(NewShipType, 'AWACS0', 'HardpointAWACS', 'System', 'Generic', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'AWACS1', 'HardpointAWACS2', 'System', 'Generic', 'Indestructible', 'awacs_1', '', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'AWACS2', 'HardpointAWACS3', 'System', 'Generic', 'Indestructible', 'awacs_2', '', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS1', 'HardpointAWACS2', 'System', 'Generic', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS2', 'HardpointAWACS3', 'System', 'Generic', 'Indestructible', '', 'awacs_2', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Addendum
