@@ -1,3 +1,5 @@
+FSFC_Vanilla_NonDetermChunk = nil
+
 --  hw2 level exporter generated file
 --=============================================================================
 --  Name    : 4P_Rings_Of_Hraal.level
@@ -81,7 +83,7 @@ function DetermChunk()
 
 end -- end of deterministic function
 
-function NonDetermChunk()
+function FSFC_Vanilla_NonDetermChunk()
 	addPebble("Pebble_2",	{-28165, 0, -9935}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_2",	{-28539, 0, -8418}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_2",	{-27538, 0, -11018}, 0.000, 0.000, 0.000)
@@ -396,9 +398,10 @@ player[3] = {
 
 
 -- [FSFC] Safely inject FS music while preserving all vanilla level generation
-local original_NonDetermChunk = NonDetermChunk
 function NonDetermChunk()
-    if original_NonDetermChunk then original_NonDetermChunk() end
+    if FSFC_Vanilla_NonDetermChunk then 
+        FSFC_Vanilla_NonDetermChunk() 
+    end
 
     local ambientTracks = {
         "data:sound/music/fs2_aquits",

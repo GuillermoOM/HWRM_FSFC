@@ -1,3 +1,5 @@
+FSFC_Vanilla_NonDetermChunk = nil
+
 --  hw2 level exporter generated file
 --=============================================================================
 --  Name    : 5P_Silumin_Training_Grounds.level
@@ -63,7 +65,7 @@ function DetermChunk()
 
 end -- end of deterministic function
 
-function NonDetermChunk()
+function FSFC_Vanilla_NonDetermChunk()
 	addPebble("Pebble_0",	{-16364, 2, -7561}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-15985, 201, -6777}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-15681, -1000, -6070}, 0.000, 0.000, 0.000)
@@ -595,9 +597,10 @@ player[4] = {
 
 
 -- [FSFC] Safely inject FS music while preserving all vanilla level generation
-local original_NonDetermChunk = NonDetermChunk
 function NonDetermChunk()
-    if original_NonDetermChunk then original_NonDetermChunk() end
+    if FSFC_Vanilla_NonDetermChunk then 
+        FSFC_Vanilla_NonDetermChunk() 
+    end
 
     local ambientTracks = {
         "data:sound/music/fs2_aquits",

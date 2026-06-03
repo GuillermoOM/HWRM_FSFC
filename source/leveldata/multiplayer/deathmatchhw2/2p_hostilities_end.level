@@ -1,3 +1,5 @@
+FSFC_Vanilla_NonDetermChunk = nil
+
 --  hw2 level exporter generated file
 --=============================================================================
 --  Name    : 2P_Hostilities_End.level
@@ -114,7 +116,7 @@ function DetermChunk()
 
 end -- end of deterministic function
 
-function NonDetermChunk()
+function FSFC_Vanilla_NonDetermChunk()
 	addPebble("Pebble_0",	{-3800, -4533, -23343}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-9989, -3061, -18651}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-18783, -2618, -10858}, 0.000, 0.000, 0.000)
@@ -1023,9 +1025,10 @@ player[1] = {
 
 
 -- [FSFC] Safely inject FS music while preserving all vanilla level generation
-local original_NonDetermChunk = NonDetermChunk
 function NonDetermChunk()
-    if original_NonDetermChunk then original_NonDetermChunk() end
+    if FSFC_Vanilla_NonDetermChunk then 
+        FSFC_Vanilla_NonDetermChunk() 
+    end
 
     local ambientTracks = {
         "data:sound/music/fs2_aquits",

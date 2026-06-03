@@ -1,3 +1,5 @@
+FSFC_Vanilla_NonDetermChunk = nil
+
 --  hw2 level exporter generated file
 --=============================================================================
 --  Name    : 2P_Kharam_Wreck.level
@@ -42,7 +44,7 @@ function DetermChunk()
 
 end -- end of deterministic function
 
-function NonDetermChunk()
+function FSFC_Vanilla_NonDetermChunk()
 	addPebble("Pebble_0",	{1762, -5281, 502}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-3016, -4217, -128}, 0.000, 0.000, 0.000)
 	addPebble("Pebble_0",	{-2987, -5285, -2567}, 0.000, 0.000, 0.000)
@@ -985,9 +987,10 @@ player[1] = {
 
 
 -- [FSFC] Safely inject FS music while preserving all vanilla level generation
-local original_NonDetermChunk = NonDetermChunk
 function NonDetermChunk()
-    if original_NonDetermChunk then original_NonDetermChunk() end
+    if FSFC_Vanilla_NonDetermChunk then 
+        FSFC_Vanilla_NonDetermChunk() 
+    end
 
     local ambientTracks = {
         "data:sound/music/fs2_aquits",

@@ -143,7 +143,7 @@ function timer_updating()
 								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
 								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
 								"ter_hygeia", "ter_argo", "ter_fenris", "ter_leviathan", "ter_orion", "ter_ulysses",
-								"ter_medusa", "ter_ursa", "ter_iceni",
+								"ter_medusa", "ter_ursa", "ter_iceni", "ter_zeus",
 								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
 								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
 								"vas_aten", "vas_typhon", "vas_bes",
