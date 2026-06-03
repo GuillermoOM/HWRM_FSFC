@@ -205,7 +205,7 @@ build = {
 		ThingToBuild = "ter_loki",
 		RequiredResearch = "FighterDesign",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 20,
+		DisplayPriority = 1,
 		DisplayedName = "GTF Loki - Recon <c=12AB06>29s</c>",
 		Description =
 		"<b>Description:</b> The GTF Loki is designated as a fighter, but it's more of a heavy reconnaissance craft. The Loki's micro-roughened hull and shielded exhaust chamber give it an extremely reduced profile to detection sensors. This makes it ideal for reconnaissance and infiltration missions that rely on stealth rather than firepower. Lacking the weaponry and armor to survive prolonged battles, the Loki can usually stay alive long enough for its high maneuverability and speed to discourage pursuers. Lokis are widely used by NTF forces. \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> 2x GTW Subach HL-7, 2x GTW-83 Lamprey, 1x GTM-19 Harpoon, 1x GTM-41 EMP Adv (Upgrade)",
@@ -514,7 +514,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_argo",
-		RequiredResearch = "RepairFrigate & FS2",
+		RequiredResearch = "RepairArgo",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 101,
 		DisplayedName = "GTT Argo - Repair <c=12AB06>37s</c>",
@@ -586,7 +586,7 @@ build = {
 		ThingToBuild = "ter_apollo",
 		RequiredResearch = "Apollo & FS1",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 10,
+		DisplayPriority = 2,
 		DisplayedName = "GTF Apollo - Space Superiority <c=12AB06>30s</c>",
 		Description =
 		"<b>Description:</b> The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault. \n\n<b>Prerequisites:</b> Fighter Design, Apollo. \n\n<b>Armaments:</b> 4x ML-16 Laser, 4x GTW-15 Avenger (Upgrade), 1x GTM-MX50, 1x GTM-2 Fury.",
@@ -596,7 +596,7 @@ build = {
 		ThingToBuild = "ter_valkyrie",
 		RequiredResearch = "Valkyrie & FS1",
 		RequiredShipSubSystems = "",
-		DisplayPriority = 11,
+		DisplayPriority = 3,
 		DisplayedName = "GTF Valkyrie - Interceptor <c=12AB06>30s</c>",
 		Description =
 		"<b>Description:</b> Using the old GTF Angel scout fighter as a template, the GTA created the Valkyrie interceptor fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and a weak hull. \n\n<b>Prerequisites:</b> Fighter Design, Valkyrie. \n\n<b>Armaments:</b> 4x GTW-7 Banshee, 2x GTW-65 Railgun (Silent Threat Upgrade), 2x GTM Phoenix-V.",
@@ -614,7 +614,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_chronos",
-		RequiredResearch = "RepairFrigate & FS1",
+		RequiredResearch = "RepairChronos",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 106,
 		DisplayedName = "GTFr Chronos - Repair Ship <c=12AB06>37s</c>",

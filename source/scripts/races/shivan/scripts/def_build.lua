@@ -218,7 +218,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_sathanas",
-		RequiredResearch = "Sathanas & FS2",
+		RequiredResearch = "Juggernaut & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 119,
 		DisplayedName = "SJ Sathanas <c=12AB06>550s</c>",
@@ -228,7 +228,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_lucifer",
-		RequiredResearch = "Lucifer",
+		RequiredResearch = "SuperCapitalShipDesign",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 118,
 		DisplayedName = "SD Lucifer - Super Destroyer <c=12AB06>305s</c>",

@@ -85,8 +85,8 @@ rt_shivan_tech = {
 	{ id = "MOLOCH", priority = 1.0, name = "Moloch", class = eCapital, shipID = SHI_MOLOCH },
 	{ id = "RAVANA", priority = 1.5, name = "Ravana", class = eCapital, shipID = SHI_RAVANA },
 	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalShipDesign", class = eCapital },
-	{ id = "LUCIFER", priority = 1.0, name = "Lucifer", class = eCapital, shipID = SHI_LUCIFER },
-	{ id = "SATHANAS", priority = 1.0, name = "Sathanas", class = eCapital, shipID = SHI_SATHANAS },
+	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalShipDesign", class = eCapital, shipID = SHI_LUCIFER },
+	{ id = "JUGGERNAUT", priority = 1.0, name = "Juggernaut", class = eCapital, shipID = SHI_SATHANAS },
 }
 
 -- 5. UTILITY/SPECIAL

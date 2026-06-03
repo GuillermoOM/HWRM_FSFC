@@ -56,7 +56,7 @@ rt_vasudan_core = {
 
 -- 2. FS1 ERA SHIP UNLOCKS
 rt_vasudan_fs1 = {
-	{ id = "HORUS", priority = 1.0, name = "Horus", class = eFighter, shipID = VAS_HORUS },
+	{ id = "HORUS", priority = 1.0, name = "FighterDesign", class = eFighter, shipID = VAS_HORUS },
 	{ id = "SETH", priority = 1.1, name = "Seth", class = eFighter, shipID = VAS_SETH },
 	{ id = "ANUBIS", priority = 1.25, name = "Anubis", class = eFighter, shipID = VAS_ANUBIS },
 	{ id = "THOTH", priority = 1.2, name = "Thoth", class = eFighter, shipID = VAS_THOTH },
@@ -82,11 +82,11 @@ rt_vasudan_tech = {
 	{ id = "SOBEK", priority = 1.0, name = "Sobek", class = eFrigate, shipID = VAS_SOBEK },
 	
 	{ id = "CAPITALSHIPDESIGN", priority = 1.1, name = "CapitalShipDesign", class = eCapital },
-	{ id = "TYPHON", priority = 1.0, name = "Typhon", class = eCapital, shipID = VAS_TYPHON },
+	{ id = "TYPHON", priority = 1.0, name = "CapitalShipDesign", class = eCapital, shipID = VAS_TYPHON },
 	{ id = "INSTALLATION", priority = 0.5, name = "Installation", class = eCapital },
 	{ id = "HATSHEPSUT", priority = 1.0, name = "Hatshepsut", class = eCapital, shipID = VAS_HATSHEPSUT },
-	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalDesign", class = eCapital },
-	{ id = "COLOSSUS", priority = 1.0, name = "Colossus", class = eCapital, shipID = VAS_COLOSSUS },
+	{ id = "SUPERCAPITALSHIPDESIGN", priority = 1.0, name = "SuperCapitalShipDesign", class = eCapital },
+	{ id = "JUGGERNAUT", priority = 1.0, name = "Juggernaut", class = eCapital, shipID = VAS_COLOSSUS },
 }
 
 -- 5. UTILITY/SPECIAL

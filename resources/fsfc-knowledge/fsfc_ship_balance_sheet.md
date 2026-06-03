@@ -144,7 +144,8 @@ graph TD
 | **T4** | **Installation** | Univ | `ter_arcadia` | CapitalShipDesign | 2500 | 75s |
 | **T5** | **SuperDestroyer** | Univ | `ter_hades` | CapitalShipDesign | 8000 | 180s |
 | **T6** | **Juggernaut** | FS2 | `ter_colossus` | SuperDestroyer & Installation & FS2 | 12000 | 240s |
-| **T2** | **Repair Frigate** | Univ | `ter_chronos` (FS1), `ter_argo` (FS2) | CruiserDesign | 1000 | 50s |
+| **T2** | **Repair Chronos** | Univ | `ter_chronos` | CruiserDesign & FS1 | 1000 | 50s |
+| **T2** | **Repair Argo** | Univ | `ter_argo` | CruiserDesign & FS1 | 1000 | 50s |
 | **T1** | **Sentry Gun** | Univ | `ter_alastor`, `ter_cerberus` | - | 1500 | 50s |
 | **T1** | **Sentry And Mine Deployer** | Univ | `ter_poseidon` | SentryGun | 1500 | 50s |
 | **T2** | **Beam Sentry** | FS2 | `ter_mjolnir` | SentryAndMineDeployer & FS2 | 1500 | 50s |
@@ -211,7 +212,7 @@ graph TD
 | **T4** | **Moloch Sprint** | FS2 | (Moloch Sprint Upgrade) | Moloch | 1500 | 50s |
 | **T4** | **Ravana** | FS2 | `shi_ravana` | CapitalShipDesign & FS2 | 4500 | 100s |
 | **T5** | **Super Capital Ship Design** | Univ | `shi_lucifer` | CapitalShipDesign | 8000 | 180s |
-| **T6** | **Juggernaut** | FS2 | `shi_sathanas` | Lucifer & FS2 | 12000 | 240s |
+| **T6** | **Juggernaut** | FS2 | `shi_sathanas` | SuperCapitalShipDesign & FS2 | 12000 | 240s |
 | **T2** | **Repair Frigate** | Univ | `shi_asmodeus` | CruiserDesign | 1500 | 50s |
 | **T1** | **Sentry Gun** | Univ | `shi_belial`, `shi_trident` | - | 1500 | 50s |
 | **T2** | **Sentry And Mine Deployer** | Univ | `shi_mephisto` | SentryGun | 1500 | 50s |

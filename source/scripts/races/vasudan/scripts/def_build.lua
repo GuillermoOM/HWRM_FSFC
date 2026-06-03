@@ -219,7 +219,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_colossus",
-		RequiredResearch = "Colossus & FS2",
+		RequiredResearch = "Juggernaut & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 340,
 		DisplayedName = "GTVA Colossus <c=12AB06>500s</c>",

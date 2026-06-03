@@ -8,9 +8,9 @@
 - [x] lower health on resource collectors / controller
 - [x] Adjust ship costs, Aeolus should be cheaper than Deimos for example
 - [x] Adjust research of ship unlocking (ship to ship unlocks instead of all at the same time)
+- [ ] AWACS subsystems research, enhances per stage
 - [ ] Fix target boxes on sobek, lilith, cain, hecate, hades
 - [ ] Improve build descriptions (good/weak against... Weaponry (including subsystem weapons))
-- [ ] AWACS subsystems research, enhances per stage
 
 - [ ] Proper bomber formations
 - [ ] Proper cruiser formations
