@@ -10,7 +10,7 @@
 - [x] Adjust research of ship unlocking (ship to ship unlocks instead of all at the same time)
 - [x] Fix target boxes on sobek, lilith, cain, hecate, hades
 - [x] AWACS subsystems research, enhances per stage
-- [ ] Improve build descriptions (good/weak against... Weaponry (including subsystem weapons))
+- [x] Improve build descriptions (good/weak against... Weaponry (including subsystem weapons))
 
 - [ ] Proper bomber formations
 - [ ] Proper cruiser formations
