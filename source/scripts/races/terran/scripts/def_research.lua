@@ -38,8 +38,6 @@ research = {
 	},
 	-- Era Switches (Hidden) ---
 
-
-
 	-- Fighters --------------
 	{
 		Name = "FighterDesign",
@@ -347,8 +345,7 @@ research = {
 		Time = 50,
 		DisplayedName = "Fenris Armor <c=0e0160>(50s)</c>",
 		DisplayPriority = 41,
-		Description =
-		"Reinforced Armor plating for older Terran cruisers. Moderately increases health GTC Fenris class. Allows Production of GTC Leviathan class.",
+		Description = "Reinforced Armor plating for older Terran cruisers. Moderately increases health GTC Fenris class. Allows Production of GTC Leviathan class.",
 		UpgradeType = Modifier,
 		TargetType = Ship,
 		TargetName = "ter_fenris",
@@ -587,10 +584,10 @@ research = {
 		Time = 50,
 		DisplayedName = "AWACS <c=0e0160>(50s)</c>",
 		DisplayPriority = 30,
-		Description = "Unlocks AWACS vessels: Charybdis.",
+		Description = "Advanced Warning and Control systems for GTA Charybids AWACS. Effectively doubles friendly sensor ranges in proximity to AWACS.",
 		TargetType = Ship,
 		TargetName = "ter_charybdis",
-		Icon = Icon_Build,
+		Icon = Icon_Tech,
 		ShortDisplayedName = "AWACS <c=0e0160>(50s)</c>",
 	},
 	-- AI Only Nodes ---------
@@ -724,11 +721,15 @@ research = {
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,
-		DisplayedName = "AWACS LVL2 <c=0e0160>(50s)</c>",
 		DisplayPriority = 1,
-		Description = "Unlocks AWACS LVL2.",
-		Icon = Icon_Tech,
-		ShortDisplayedName = "AWACS LVL2",
+		Description = "Enhanced defensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Friendly ships are are detected in 70% of normal range while in AWACS area.",
+		TargetType = Ship,
+		TargetName = "ter_charybdis",
+		UpgradeType = Modifier,
+		UpgradeName = "SensorDistortion",
+		UpgradeValue = 0.7,
+		Icon = Icon_Health,
+		ShortDisplayedName = "AWACS Level II",
 	},
 	{
 		Name = "AWACSLVL3",
@@ -736,10 +737,15 @@ research = {
 		RequiredSubSystems = "",
 		Cost = 2500,
 		Time = 50,
-		DisplayedName = "AWACS LVL3 <c=0e0160>(50s)</c>",
+		DisplayedName = "AWACS LVL3 - Offensive EW<c=0e0160>(50s)</c>",
 		DisplayPriority = 1,
-		Description = "Unlocks AWACS LVL3.",
-		Icon = Icon_Tech,
-		ShortDisplayedName = "AWACS LVL3",
+		Description = "Enhanced offensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Enemy vessels have 30% reduced accuracy while in friendly AWACS range.",
+		TargetType = Ship,
+		TargetName = "ter_charybdis",
+		UpgradeType = Ability,
+		UpgradeName = "SensorPing",
+		Icon = Icon_Ability,
+		ShortDisplayedName = "AWACS Level III",
 	},
 }
+

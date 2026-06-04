@@ -201,6 +201,26 @@ build = {
 		Description = "GTD Orion",
 	},
 	{
+		Type = SubSystem,
+		ThingToBuild = "awacs_1",
+		RequiredResearch = "AWACSLVL2",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 1,
+		DisplayedName = "AWACS Level II - Defensive EW",
+		Description = "<b>Decreases Enemy Detection Range</b> \n\n<b>Description:</b> Enhanced defensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Friendly ships are are detected in 70% of normal range while in AWACS area. \n\n<b>Prerequisites:</b> AWACS Level II.",
+	},
+	{
+		Type = SubSystem,
+		ThingToBuild = "awacs_2",
+		RequiredResearch = "AWACSLVL3",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 2,
+		DisplayedName = "AWACS Level III - Offensive EW ",
+		Description = "<b>Decreases Enemy Accuracy</b> \n\n<b>Description:</b> Enhanced offensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Enemy vessels have 30% reduced accuracy while in friendly AWACS range. \n\n<b>Prerequisites:</b> AWACS Level III.",
+	},
+
+
+	{
 		Type = Ship,
 		ThingToBuild = "ter_loki",
 		RequiredResearch = "FighterDesign",

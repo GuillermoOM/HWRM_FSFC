@@ -35,6 +35,8 @@ setTacticsMults(NewShipType, 'FIRERATE', 0.98, 1.02, 1.0)
 
 NewShipType.isTransferable = 1
 
+setTargetBox(NewShipType, 0, -0.15, -0.6, -0.7, 0.15, -0.2, 0.4)
+
 --------------------------------------------------
 --- Movement
 --------------------------------------------------
