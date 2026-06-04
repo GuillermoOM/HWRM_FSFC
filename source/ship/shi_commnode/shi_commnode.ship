@@ -223,7 +223,7 @@ NewShipType.alternativeHyperspaceTime = 7
 --------------------------------------------------
 
 addAbility(NewShipType, 'SensorPing', 1, 0, 15, 4)
-addAbility(NewShipType, "CanBuildShips", 0, "Subsystem_All", "SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 0, "Subsystem_All", "SubSystemModule, SubSystemSensors")
 
 --------------------------------------------------
 --- Load Model
@@ -242,9 +242,10 @@ addShield(NewShipType, 'EMP', 310, 17)
 --------------------------------------------------
 
 NewShipType.canRetireSubSystems = 1
-StartShipHardPointConfig(NewShipType, 'AWACS0', 'HardpointAWACS', 'System', 'Generic', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'AWACS1', 'HardpointAWACS2', 'System', 'Generic', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '', '')
-StartShipHardPointConfig(NewShipType, 'AWACS2', 'HardpointAWACS3', 'System', 'Generic', 'Indestructible', '', 'awacs_2', '', '', '', '', '', '', '', '')
+
+StartShipHardPointConfig(NewShipType, 'AWACS0', 'HardpointAWACS', 'System', 'Sensors', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS1', 'HardpointAWACS2', 'System', 'Sensors', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS2', 'HardpointAWACS3', 'System', 'Sensors', 'Indestructible', '', 'awacs_2', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Addendum
