@@ -18,7 +18,7 @@ NewSubSystemType.sobDescription =
 NewSubSystemType.type = "System"
 NewSubSystemType.typeString = "HyperspaceSensor"
 
-NewSubSystemType.innate = 1
+NewSubSystemType.innate = 0
 
 --------------------------------------------------
 --- Families
