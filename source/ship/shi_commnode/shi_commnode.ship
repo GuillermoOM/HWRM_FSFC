@@ -223,7 +223,7 @@ NewShipType.alternativeHyperspaceTime = 7
 --------------------------------------------------
 
 addAbility(NewShipType, 'SensorPing', 1, 0, 15, 4)
-addAbility(NewShipType, "CanBuildShips", 0, "Subsystem_All", "SubSystemModule, SubSystemSensors")
+addAbility(NewShipType, "CanBuildShips", 1, "Subsystem_All", "SubSystemModule, SubSystemSensors")
 
 --------------------------------------------------
 --- Load Model

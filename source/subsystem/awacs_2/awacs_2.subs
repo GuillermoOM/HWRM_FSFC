@@ -16,7 +16,7 @@ NewSubSystemType.sobDescription =
 	"Level 3 AWACS \nDecreases enemy accuracy by 30% \nEnables long-range sensor ping ability"
 
 NewSubSystemType.type = "System"
-NewSubSystemType.typeString = "HyperspaceSensor"
+NewSubSystemType.typeString = "AWACS2"
 
 NewSubSystemType.innate = 0
 
