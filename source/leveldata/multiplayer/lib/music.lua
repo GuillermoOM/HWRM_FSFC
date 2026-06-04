@@ -52,7 +52,9 @@ function RandomMusicRuleFS2()
 
 	if kickoff == 0 then
 		kickoff = 1
-		randNum = random(getn(PlayList))
+		local plLen = 0
+		while PlayList[plLen + 1] do plLen = plLen + 1 end
+		randNum = random(plLen)
 		track_title = PlayList[randNum]
 		track_length = LengthList[randNum]
 		PlayMusicRule(track_title, MUS_Ambient)
@@ -62,7 +64,9 @@ function RandomMusicRuleFS2()
 	m_timer = m_timer + 0.5
 
 	if m_timer > track_length then
-		randNum = random(getn(PlayList))
+		local plLen = 0
+		while PlayList[plLen + 1] do plLen = plLen + 1 end
+		randNum = random(plLen)
 		track_title = PlayList[randNum]
 		track_length = tonumber(LengthList[randNum])
 		PlayMusicRule(track_title, MUS_Ambient)
@@ -111,7 +115,9 @@ function RandomMusicRuleFS1()
 
 	if kickoff == 0 then
 		kickoff = 1
-		randNum = random(getn(PlayList))
+		local plLen = 0
+		while PlayList[plLen + 1] do plLen = plLen + 1 end
+		randNum = random(plLen)
 		track_title = PlayList[randNum]
 		track_length = LengthList[randNum]
 		PlayMusicRule(track_title, MUS_Ambient)
@@ -121,7 +127,9 @@ function RandomMusicRuleFS1()
 	m_timer = m_timer + 0.5
 
 	if m_timer > track_length then
-		randNum = random(getn(PlayList))
+		local plLen = 0
+		while PlayList[plLen + 1] do plLen = plLen + 1 end
+		randNum = random(plLen)
 		track_title = PlayList[randNum]
 		track_length = tonumber(LengthList[randNum])
 		PlayMusicRule(track_title, MUS_Ambient)

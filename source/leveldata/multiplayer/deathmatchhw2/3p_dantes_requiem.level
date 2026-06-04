@@ -1198,8 +1198,12 @@ function NonDetermChunk()
         "data:sound/music/battle/fs1_worldsapartbattle",
     }
 
-    local ambIndex = random(1, getn(ambientTracks))
-    local battleIndex = random(1, getn(battleTracks))
+    local ambLen = 0
+    while ambientTracks[ambLen + 1] do ambLen = ambLen + 1 end
+    local ambIndex = random(1, ambLen)
+    local battleLen = 0
+    while battleTracks[battleLen + 1] do battleLen = battleLen + 1 end
+    local battleIndex = random(1, battleLen)
     
     setDefaultMusic(ambientTracks[ambIndex])
     setBattleMusic(battleTracks[battleIndex])

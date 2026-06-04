@@ -56,7 +56,7 @@ We are actively developing, balancing, and polishing this mod. Check out our pro
 [*] [b]FS Maps & Sectors:[/b] Re-integrating and remastering the original mod maps.
 [*] [b]Gauntlet & Beam-War Gametypes:[/b] Porting custom PvE Gauntlet and specialized game rules.
 [*] [b]Ongoing Balancing:[/b] Constant tuning of weapon stats, sensor range parity, and fighter squadron capacities.
-[*] [b]Visual Polish:[/b] Exploring custom subspace jump effects and energy shields.
+[*] [b]Visual Polish:[/b] Exploring energy shields.
 [/list]
 ---
 [h2]💬 Help & Community[/h2]
