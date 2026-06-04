@@ -117,8 +117,8 @@ graph TD
 | **T1** | **Fighter Design** | Univ | `ter_loki` (Scout), starting supports | - | 1200 | 40s |
 | **T1** | **Apollo** | FS1 | `ter_apollo` | FighterDesign & FS1 | 850 | 40s |
 | **T1** | **Valkyrie** | FS1 | `ter_valkyrie` | FighterDesign & Apollo & FS1 | 850 | 40s |
-| **T1** | **Hercules** | Univ | `ter_hercules` | Valkyrie or Myrmidon | 1000 | 45s |
-| **T1** | **Ulysses** | Univ | `ter_ulysses` | Hercules or Myrmidon | 1000 | 45s |
+| **T1** | **Hercules** | Univ | `ter_hercules` | Valkyrie \| Myrmidon | 1000 | 45s |
+| **T1** | **Ulysses** | Univ | `ter_ulysses` | Hercules \| Myrmidon | 1000 | 45s |
 | **T1** | **Myrmidon** | FS2 | `ter_myrmidon` | FighterDesign & FS2 | 1200 | 50s |
 | **T1** | **Perseus** | FS2 | `ter_perseus` | Myrmidon & FS2 | 1200 | 50s |
 | **T1** | **Hercules Mk2** | FS2 | `ter_hercules_mk2` | Perseus & FS2 | 1200 | 50s |
@@ -161,7 +161,7 @@ graph TD
 | **T1** | **Fighter Design** | Univ | `vas_horus` (scout interceptor) | - | 1200 | 40s |
 | **T1** | **Anubis** | FS1 | `vas_anubis` | FighterDesing & FS1 | 700 | 40s |
 | **T1** | **Seth** | FS1 | `vas_seth` | Anubis & FS1 | 850 | 40s |
-| **T1** | **Thoth** | Univ | `vas_thoth` | Seth or (FighterDesign & FS2) | 1000 | 45s |
+| **T1** | **Thoth** | Univ | `vas_thoth` | Seth \| (FighterDesign & FS2) | 1000 | 45s |
 | **T1** | **Serapis** | FS2 | `vas_serapis` | Thoth & FS2 | 1200 | 50s |
 | **T1** | **Tauret** | FS2 | `vas_tauret` | Serapis | 1500 | 60s |
 | **T1** | **Ptah** | FS2 | `vas_ptah` | Serapis | 1200 | 50s |

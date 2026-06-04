@@ -83,7 +83,7 @@ research = {
 	},
 	{
 		Name = "Thoth",
-		RequiredResearch = "Seth or (FighterDesign & FS2)",
+		RequiredResearch = "Seth | (FighterDesign & FS2)",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 45,

@@ -83,7 +83,7 @@ research = {
 	},
 	{
 		Name = "Hercules",
-		RequiredResearch = "Valkyrie or Myrmidon",
+		RequiredResearch = "Valkyrie | Myrmidon",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 45,
@@ -97,7 +97,7 @@ research = {
 	},
 	{
 		Name = "Ulysses",
-		RequiredResearch = "Hercules or Myrmidon",
+		RequiredResearch = "Hercules | Myrmidon",
 		RequiredSubSystems = "",
 		Cost = 1000,
 		Time = 45,
@@ -338,7 +338,7 @@ research = {
 		ShortDisplayedName = "Repair Chronos <c=0e0160>(50s)</c>",
 	},
 	{
-		Name = "CruiserHealthUpgrade",
+		Name = "FenrisArmorUpgrade",
 		RequiredResearch = "CruiserDesign",
 		RequiredSubSystems = "",
 		Cost = 1000,
@@ -702,18 +702,6 @@ research = {
 		Description = "Unlocks Aeolus.",
 		Icon = Icon_Tech,
 		ShortDisplayedName = "Aeolus",
-	},
-	{
-		Name = "FenrisArmorUpgrade",
-		RequiredResearch = "CruiserDesign",
-		RequiredSubSystems = "",
-		Cost = 1000,
-		Time = 50,
-		DisplayedName = "Fenris Armor Upgrade <c=0e0160>(50s)</c>",
-		DisplayPriority = 1,
-		Description = "Unlocks Fenris Armor Upgrade.",
-		Icon = Icon_Tech,
-		ShortDisplayedName = "Fenris Armor Upgrade",
 	},
 	{
 		Name = "AWACSLVL2",
