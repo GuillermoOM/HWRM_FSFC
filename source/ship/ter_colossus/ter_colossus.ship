@@ -155,8 +155,8 @@ NewShipType.totalValue = 110
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 25000
-NewShipType.buildTime = 500
+NewShipType.buildCost = 15000
+NewShipType.buildTime = 300
 NewShipType.buildPriorityOrder = 20
 setConcurrentBuildLimit(NewShipType, 0, 2)
 
