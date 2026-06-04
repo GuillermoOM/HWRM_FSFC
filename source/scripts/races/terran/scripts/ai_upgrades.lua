@@ -77,7 +77,6 @@ rt_terran_fs1 = {
 	{ id = "ULYSSES", priority = 1.1, name = "Ulysses", class = eFighter, shipID = TER_ULYSSES },
 	-- Bombers
 	{ id = "ATHENA", priority = 1.0, name = "BomberDesign", class = eCorvette, shipID = TER_ATHENA },
-	{ id = "ZEUS", priority = 1.2, name = "Zeus", class = eCorvette, shipID = TER_ZEUS },
 	{ id = "MEDUSA", priority = 1.5, name = "Medusa", class = eCorvette, shipID = TER_MEDUSA },
 	{ id = "URSA", priority = 1.0, name = "Ursa", class = eCorvette, shipID = TER_URSA },
 }
@@ -92,7 +91,6 @@ rt_terran_fs2 = {
 	{ id = "ERINYES", priority = 1.5, name = "Erinyes", class = eFighter, shipID = TER_ERINYES },
 	{ id = "PEGASUS", priority = 2.0, name = "Pegasus", class = eFighter, shipID = TER_PEGASUS },
 	-- Bombers
-	{ id = "ZEUS", priority = 1.0, name = "Zeus", class = eCorvette, shipID = TER_ZEUS },
 	{ id = "ARTEMIS", priority = 1.2, name = "Artemis", class = eCorvette, shipID = TER_ARTEMIS },
 	{ id = "MEDUSA", priority = 1.5, name = "Medusa", class = eCorvette, shipID = TER_MEDUSA },
 	{ id = "BOANERGES", priority = 1.0, name = "Boanerges", class = eCorvette, shipID = TER_BOANERGES },
@@ -103,7 +101,6 @@ rt_terran_fs2 = {
 rt_terran_tech = {
 	{ id = "CRUISERDESIGN", priority = 1.1, name = "CruiserDesign", class = eFrigate },
 	{ id = "HEAVYCRUISER", priority = 1.0, name = "HeavyCruiser", class = eFrigate, shipID = TER_LEVIATHAN },
-	{ id = "ADVANCEDCRUISER", priority = 1.2, name = "AdvancedCruiser", class = eFrigate, shipID = TER_AEOLUS },
 	{ id = "REPAIRARGO", priority = 0.5, name = "RepairArgo", class = eFrigate, shipID = TER_ARGO },
 	{ id = "REPAIRCHRONOS", priority = 0.5, name = "RepairChronos", class = eFrigate, shipID = TER_CHRONOS },
 	

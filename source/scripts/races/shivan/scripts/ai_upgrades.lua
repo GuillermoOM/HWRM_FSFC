@@ -58,7 +58,6 @@ rt_shivan_fs1 = {
 	{ id = "BASILISK", priority = 1.3, name = "Basilisk", class = eFighter, shipID = SHI_BASILISK },
 	{ id = "GORGON", priority = 1.6, name = "Gorgon", class = eFighter, shipID = SHI_GORGON },
 	-- Bombers
-	{ id = "SHAITAN", priority = 1.0, name = "Shaitan", class = eCorvette, shipID = SHI_SHAITAN },
 	{ id = "NEPHILIM", priority = 1.0, name = "Nephilim", class = eCorvette, shipID = SHI_NEPHILIM },
 }
 
@@ -67,17 +66,14 @@ rt_shivan_fs2 = {
 	-- Fighters
 	{ id = "AESHMA", priority = 1.4, name = "Aeshma", class = eFighter, shipID = SHI_AESHMA },
 	{ id = "MARA", priority = 1.5, name = "Mara", class = eFighter, shipID = SHI_MARA },
-	{ id = "ASTAROTH", priority = 2.0, name = "Astaroth", class = eFighter, shipID = SHI_ASTAROTH },
 	-- Bombers
 	{ id = "TAURVI", priority = 1.2, name = "Taurvi", class = eCorvette, shipID = SHI_TAURVI },
-	{ id = "NAHEMA", priority = 1.5, name = "Nahema", class = eCorvette, shipID = SHI_NAHEMA },
 	{ id = "SERAPHIM", priority = 1.5, name = "Seraphim", class = eCorvette, shipID = SHI_SERAPHIM },
 }
 
 -- 4. CAPITAL/CRUISER TECH (Class-shared)
 rt_shivan_tech = {
 	{ id = "CRUISERDESIGN", priority = 1.1, name = "CruiserDesign", class = eFrigate },
-	{ id = "CAIN", priority = 1.0, name = "Cain", class = eFrigate, shipID = SHI_CAIN },
 	{ id = "LILITH", priority = 1.0, name = "Lilith", class = eFrigate, shipID = SHI_LILITH },
 	{ id = "RAKSHASA", priority = 1.0, name = "Rakshasa", class = eFrigate, shipID = SHI_RAKSHASA },
 	
