@@ -142,7 +142,7 @@ graph TD
 | **T4** | **Command Corvette** | FS2 | `ter_iceni` | Deimos & CapitalShipDesign | 2000 | 50s |
 | **T4** | **Hecate** | FS2 | `ter_hecate` | CapitalShipDesign & FS2 | 4500 | 90s |
 | **T4** | **Installation** | Univ | `ter_arcadia` | CapitalShipDesign | 2500 | 75s |
-| **T5** | **SuperDestroyer** | Univ | `ter_hades` | CapitalShipDesign | 8000 | 180s |
+| **T5** | **SuperDestroyer** | Univ | `ter_hades` | CapitalShipDesign & Installation | 8000 | 180s |
 | **T6** | **Juggernaut** | FS2 | `ter_colossus` | SuperDestroyer & Installation & FS2 | 12000 | 240s |
 | **T2** | **Repair Chronos** | Univ | `ter_chronos` | CruiserDesign & FS1 | 1000 | 50s |
 | **T2** | **Repair Argo** | Univ | `ter_argo` | CruiserDesign & FS1 | 1000 | 50s |
