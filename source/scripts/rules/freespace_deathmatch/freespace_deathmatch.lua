@@ -219,6 +219,8 @@ function timer_updating_fsfc()
 								"vas_aten",
 								"vas_typhon",
 								"vas_bes",
+								"vas_edjo",
+								"vas_mjolnir",
 
 								"shi_mara",
 								"shi_aeshma",
@@ -254,8 +256,9 @@ function timer_updating_fsfc()
 								"ter_faustus",
 
 								"vas_imhotep",
+								"vas_satis",
+								"vas_osiris",
 								"vas_seth",
-								"vas_thoth",
 								"vas_scarab",
 								"vas_aten_fs1",
 								"vas_typhon_fs1",
@@ -263,6 +266,7 @@ function timer_updating_fsfc()
 								"vas_amun",
 								"vas_anubis",
 								"vas_maat",
+								"vas_ankh",
 
 								"shi_shaitan",
 								"shi_cain_fs1",

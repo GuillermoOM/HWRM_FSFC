@@ -116,15 +116,15 @@ graph TD
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **T1** | **Fighter Design** | Univ | `ter_loki` (Scout), starting supports | - | 1200 | 40s |
 | **T1** | **Apollo** | FS1 | `ter_apollo` | FighterDesign & FS1 | 850 | 40s |
-| **T1** | **Valkyrie** | FS1 | `ter_valkyrie` | FighterDesign & Apollo & FS1 | 850 | 40s |
-| **T1** | **Hercules** | Univ | `ter_hercules` | Valkyrie \| Myrmidon | 1000 | 45s |
-| **T1** | **Ulysses** | Univ | `ter_ulysses` | Hercules \| Myrmidon | 1000 | 45s |
+| **T1** | **Valkyrie** | FS1 | `ter_valkyrie` | FighterDesign & Apollo | 850 | 40s |
+| **T1** | **Hercules** | Univ | `ter_hercules` | Valkyrie \| (FighterDesign & FS2) | 1000 | 45s |
+| **T1** | **Ulysses** | Univ | `ter_ulysses` | Hercules \| (FighterDesign & FS2) | 1000 | 45s |
 | **T1** | **Myrmidon** | FS2 | `ter_myrmidon` | FighterDesign & FS2 | 1200 | 50s |
-| **T1** | **Perseus** | FS2 | `ter_perseus` | Myrmidon & FS2 | 1200 | 50s |
-| **T1** | **Hercules Mk2** | FS2 | `ter_hercules_mk2` | Perseus & FS2 | 1200 | 50s |
-| **T1** | **Ares** | FS2 | `ter_ares` | HerculesMk2 & FS2 | 1500 | 50s |
-| **T1** | **Erinyes** | FS2 | `ter_erinyes` | Ares & FS2 | 1800 | 60s |
-| **T1** | **Pegasus** | FS2 | `ter_pegasus` | Erinyes & FS2 | 1000 | 30s |
+| **T1** | **Perseus** | FS2 | `ter_perseus` | Myrmidon | 1200 | 50s |
+| **T1** | **Hercules Mk2** | FS2 | `ter_hercules_mk2` | Perseus | 1200 | 50s |
+| **T1** | **Ares** | FS2 | `ter_ares` | HerculesMk2 | 1500 | 50s |
+| **T1** | **Erinyes** | FS2 | `ter_erinyes` | Ares | 1800 | 60s |
+| **T1** | **Pegasus** | FS2 | `ter_pegasus` | Erinyes | 1000 | 30s |
 | **T2** | **Bomber Design** | Univ | `ter_athena` (FS1), `ter_zeus` (FS2) | FighterDesign | 1500 | 50s |
 | **T2** | **Medusa** | Univ | `ter_medusa` | BomberDesign | 1500 | 50s |
 | **T2** | **Ursa** | Univ | `ter_ursa` | Medusa | 2000 | 50s |

@@ -165,6 +165,7 @@ function timer_updating()
 								"ter_ursa",
 								"ter_iceni",
 								"ter_zeus",
+
 								"vas_ptah",
 								"vas_serapis",
 								"vas_tauret",
@@ -180,6 +181,9 @@ function timer_updating()
 								"vas_aten",
 								"vas_typhon",
 								"vas_bes",
+								"vas_edjo",
+								"vas_mjolnir",
+
 								"shi_mara",
 								"shi_aeshma",
 								"shi_nahema",
@@ -212,9 +216,11 @@ function timer_updating()
 								"ter_medusa_fs1",
 								"ter_ursa_fs1",
 								"ter_faustus",
+
 								"vas_imhotep",
+								"vas_satis",
+								"vas_osiris",
 								"vas_seth",
-								"vas_thoth",
 								"vas_scarab",
 								"vas_aten_fs1",
 								"vas_typhon_fs1",
@@ -222,6 +228,8 @@ function timer_updating()
 								"vas_amun",
 								"vas_anubis",
 								"vas_maat",
+								"vas_ankh",
+
 								"shi_shaitan",
 								"shi_cain_fs1",
 								"shi_lilith_fs1",

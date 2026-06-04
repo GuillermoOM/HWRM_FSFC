@@ -102,17 +102,16 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "vas_amun",
-		RequiredResearch = "Amun | (BomberDesign & FS1)",
+		RequiredResearch = "Amun",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>50s</c>",
 		Description = "<b>Description:</b> The PVB Amun is the primary heavy bombing platform of the Vasudan fleet during the Great War (FS1). Packing extremely thick molybdenum armor, it can absorb enormous defensive fire while delivering devastating payloads to enemy warships. Though slow and lacking agility, the Amun's multiple missile and bomb bays make it a feared weapon on any capital ship battleline. \n\n<b>Good Against:</b> Capital Ships, Installations \n<b>Weak Against:</b> Interceptors, Fighters, Corvettes \n\n<b>Prerequisites:</b> Bomber Design, Amun. \n\n<b>Armaments:</b> 1x Prometheusfs1, 2x Harbinger, 1x Infyrno, 2x Avenger Turret.",
 	},
-
 	{
 		Type = Ship,
 		ThingToBuild = "vas_bakha",
-		RequiredResearch = "Bakha",
+		RequiredResearch = "BomberDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
 		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
@@ -262,7 +261,7 @@ build = {
 	},
 	{
 		Type = Ship,
-		ThingToBuild = "ter_mjolnir",
+		ThingToBuild = "vas_mjolnir",
 		RequiredResearch = "BeamSentry",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
