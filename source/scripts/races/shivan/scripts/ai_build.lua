@@ -375,7 +375,7 @@ function DetermineSpecialDemand_Shivan()
 	if (kJuggernaut ~= nil) then
 		numJ = FSFC_NumSquadrons(kJuggernaut) + FSFC_NumSquadronsQ(kJuggernaut)
 	end
-	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Sathanas") == 1) then
+	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Juggernaut") == 1) then
 		if (numJ >= maxJ) then
 			FSFC_ShipDemandSet(kJuggernaut, -100)
 		elseif (GetRU() > 20000) then

@@ -70,7 +70,7 @@ TER_LOKI = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",
@@ -506,7 +506,7 @@ SHI_SCORPION = {
     "Main Ship Data": {"variables": {"isTransferable": "1"}, "functions": []},
     "Formations": {
         "variables": {
-            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 4)',
+            "SquadronSize": 'getShipNum(NewShipType, "SquadronSize", 1)',
             "formationSpacing": "30",
             "batchFormation": '"Batch_delta"',
             "strikeGroupSpeed": "5000",

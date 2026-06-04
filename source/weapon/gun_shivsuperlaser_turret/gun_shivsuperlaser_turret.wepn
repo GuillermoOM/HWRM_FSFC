@@ -33,21 +33,17 @@ setAngles(NewWeaponType, 0, -80, 80, -5, 80)
 
 setMiscValues(NewWeaponType, 0, 0)
 
-setPenetration(NewWeaponType,
+setPenetration(
+	NewWeaponType,
 	5,
 	1,
-	{ Unarmoured = 1,
-	},
-	{ LightArmour = 1,
-	},
-	{ MediumArmour = 0.7,
-	},
-	{ HeavyArmour = 0.4,
-	},
-	{ SubSystemArmour = 1,
-	},
-	{ TurretArmour = 1,
-	})
+	{ Unarmoured = 1 },
+	{ LightArmour = 1 },
+	{ MediumArmour = 0.7 },
+	{ HeavyArmour = 0.4 },
+	{ SubSystemArmour = 1 },
+	{ TurretArmour = 1 }
+)
 
 setAccuracy(
 	NewWeaponType,

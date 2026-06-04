@@ -2,4 +2,4 @@
 -nomovies
 -luatrace
 -traceHODs
--moddatapath HWRM_FSFC\source
+-moddatapath HWRM_FSFC\\source

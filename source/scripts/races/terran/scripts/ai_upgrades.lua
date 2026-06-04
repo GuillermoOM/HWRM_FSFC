@@ -75,9 +75,8 @@ rt_terran_fs1 = {
 	{ id = "VALKYRIE", priority = 1.2, name = "Valkyrie", class = eFighter, shipID = TER_VALKYRIE },
 	{ id = "HERCULES", priority = 1.3, name = "Hercules", class = eFighter, shipID = TER_HERCULES },
 	{ id = "ULYSSES", priority = 1.1, name = "Ulysses", class = eFighter, shipID = TER_ULYSSES },
-	{ id = "LOKI", priority = 2.0, name = "Loki", class = eFighter, shipID = TER_LOKI },
 	-- Bombers
-	{ id = "ATHENA", priority = 1.0, name = "Athena", class = eCorvette, shipID = TER_ATHENA },
+	{ id = "ATHENA", priority = 1.0, name = "BomberDesign", class = eCorvette, shipID = TER_ATHENA },
 	{ id = "ZEUS", priority = 1.2, name = "Zeus", class = eCorvette, shipID = TER_ZEUS },
 	{ id = "MEDUSA", priority = 1.5, name = "Medusa", class = eCorvette, shipID = TER_MEDUSA },
 	{ id = "URSA", priority = 1.0, name = "Ursa", class = eCorvette, shipID = TER_URSA },
@@ -109,12 +108,12 @@ rt_terran_tech = {
 	{ id = "REPAIRCHRONOS", priority = 0.5, name = "RepairChronos", class = eFrigate, shipID = TER_CHRONOS },
 	
 	{ id = "CAPITALSHIPDESIGN", priority = 1.1, name = "CapitalShipDesign", class = eCapital },
-	{ id = "ORION", priority = 1.0, name = "Orion", class = eCapital, shipID = TER_ORION },
+	{ id = "ORION", priority = 1.0, name = "CapitalShipDesign", class = eCapital, shipID = TER_ORION },
 	{ id = "DEIMOS", priority = 1.0, name = "Deimos", class = eCapital, shipID = TER_DEIMOS },
-	{ id = "COMMANDCORVETTE", priority = 1.0, name = "Iceni", class = eCapital, shipID = TER_ICENI },
+	{ id = "COMMANDCORVETTE", priority = 1.0, name = "CommandCorvette", class = eCapital, shipID = TER_ICENI },
 	{ id = "SUPERDESTROYER", priority = 1.2, name = "SuperDestroyer", class = eCapital, shipID = TER_HADES },
 	{ id = "HECATE", priority = 1.2, name = "Hecate", class = eCapital, shipID = TER_HECATE },
-	{ id = "JUGGERNAUT", priority = 1.3, name = "Colossus", class = eCapital, shipID = TER_COLOSSUS },
+	{ id = "JUGGERNAUT", priority = 1.3, name = "Juggernaut", class = eCapital, shipID = TER_COLOSSUS },
 	{ id = "INSTALLATION", priority = 0.8, name = "Installation", class = eCapital, shipID = TER_ARCADIA },
 }
 

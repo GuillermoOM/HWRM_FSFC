@@ -63,7 +63,7 @@ SpeechVolDuckingLevel = 0.2
 FEMusic = "data:sound/music/FS2_Cinema"
 
 -- FEBattleMusic: string, the file to use as the battle music during combat
--- FEBattleMusic = "data:sound/music/battle/battle_01"
+FEBattleMusic = "data:sound/music/battle/fs2_genesisbattle"
 
 -- FEmusicVol: float 0.0 - 1.0, sets the volume of the front end music
 FEmusicVol = 0.8

@@ -378,7 +378,7 @@ function DetermineSpecialDemand_Vasudan()
 	if (kJuggernaut ~= nil) then
 		numJ = FSFC_NumSquadrons(kJuggernaut) + FSFC_NumSquadronsQ(kJuggernaut)
 	end
-	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Colossus") == 1) then
+	if (kJuggernaut ~= nil and FSFC_IsResearchDone("Juggernaut") == 1) then
 		if (numJ >= maxJ) then
 			FSFC_ShipDemandSet(kJuggernaut, -100)
 		elseif (GetRU() > 40000) then

@@ -48,7 +48,7 @@ NewShipType.addedUnitCaps = 101
 NewShipType.paradeData = 'terran_parade'
 NewShipType.strikeGroupRadius = 150
 NewShipType.noCombatGrouping = 1
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement
@@ -132,6 +132,8 @@ NewShipType.layoutBoundZ = 350
 NewShipType.layoutCenterX = -20
 NewShipType.layoutCenterY = 0
 NewShipType.layoutCenterZ = 50
+
+setTargetBox(NewShipType, 0, -0.2, 0.2, -0.75, 0.2, 0.5, 0.85)
 
 --------------------------------------------------
 --- Families

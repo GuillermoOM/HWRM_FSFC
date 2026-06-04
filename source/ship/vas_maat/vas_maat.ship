@@ -40,7 +40,7 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.paradeData = 'vas_mothership_parade'
-NewShipType.canSurround = 1
+
 
 
 --------------------------------------------------

@@ -376,8 +376,8 @@ NewResearchMenu = {
 						GetFacilityButton("Platform", "$5236", 96, { 0/64, 256/512, 64/64, 320/512 }),
 						GetFacilityButton("NonCombat", "$5280", 110, { 0/64, 448/512, 64/64, 512/512 }),
 				
-                        GetFacilityButton("Bomber", "BOMBER", 91, { 0/64, 64/512, 64/64, 128/512 }),
-                        GetFacilityButton("Cruiser", "CRUISER", 92, { 0/64, 128/512, 64/64, 192/512 }),
+                        			GetFacilityButton("Bomber", "BOMBER", 91, { 0/64, 64/512, 64/64, 128/512 }),
+			                        GetFacilityButton("Cruiser", "CRUISER", 92, { 0/64, 128/512, 64/64, 192/512 }),
 
 						--GetFacilityButton("Resource", "$2638", 109, { 0/64, 320/512, 64/64, 384/512 }),
 						--GetFacilityButton("SubSystemModule", "$2643", 95, { 0/64, 384/512, 64/64, 448/512 }),

@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'AdvancedCruiser'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 18000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 85000)
 NewShipType.regentime = 565
 NewShipType.minRegenTime = 565
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -21,8 +21,8 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.2)
 --- Tactics And Multipliers
 --------------------------------------------------
 
-NewShipType.defaultROE = 'Aggressive'
-NewShipType.defaultStance = 'Aggressive'
+NewShipType.defaultROE = 'Neutral'
+NewShipType.defaultStance = 'Neutral'
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'THRUSTERACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'ROTATION', 0.95, 1.05, 1.0)
@@ -57,7 +57,7 @@ NewShipType.relativeMoveFactor = 3
 
 NewShipType.formationSpacing = 250
 NewShipType.strikeGroupRadius = 100
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement
@@ -151,7 +151,7 @@ NewShipType.totalValue = 12
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 1250
+NewShipType.buildCost = 1500
 NewShipType.buildTime = 60
 NewShipType.buildPriorityOrder = 30
 

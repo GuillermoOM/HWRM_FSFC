@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Heavy Cruiser'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 18000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 15000)
 NewShipType.regentime = 750
 NewShipType.minRegenTime = 750
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.2)
@@ -57,7 +57,7 @@ NewShipType.relativeMoveFactor = 3
 
 NewShipType.formationSpacing = 250
 NewShipType.strikeGroupRadius = 100
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement

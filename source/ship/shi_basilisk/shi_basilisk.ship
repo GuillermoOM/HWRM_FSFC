@@ -22,7 +22,7 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 --------------------------------------------------
 
 NewShipType.defaultROE = 'Defensive'
-NewShipType.defaultStance = 'Aggressive'
+NewShipType.defaultStance = 'Neutral'
 setTacticsMults(NewShipType, 'MAXSPEED', 1.0, 1.10, 1.0)
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.20, 0.80, 1.0)
 setTacticsMults(NewShipType, 'ENGINEBRAKE', 1.0, 1.0, 1.0)
@@ -67,18 +67,18 @@ NewShipType.isTransferable = 1
 --- Formations
 --------------------------------------------------
 
-NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 4)
+NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 30
-NewShipType.batchFormation = 'Batch_delta'
+NewShipType.batchFormation = 'Batch_ScatterDL'
 NewShipType.strikeGroupSpeed = 5000
-NewShipType.canSurround = 0
+NewShipType.canSurround = 1
 
 --------------------------------------------------
 --- Construction
 --------------------------------------------------
 
 NewShipType.buildBatch = getShipNum(NewShipType, "buildBatch", 4)
-NewShipType.buildCost = 620
+NewShipType.buildCost = 450
 NewShipType.buildTime = 37
 NewShipType.buildPriorityOrder = 20
 

@@ -40,7 +40,7 @@ NewShipType.isTransferable = 1
 --------------------------------------------------
 
 NewShipType.paradeData = 'dummy_parade'
-NewShipType.canSurround = 1
+
 
 --------------------------------------------------
 --- Movement
@@ -129,14 +129,14 @@ NewShipType.layoutCenterZ = -10
 --- Families
 --------------------------------------------------
 
-NewShipType.MinimalFamilyToFindPathAround = 'Capital'
+NewShipType.MinimalFamilyToFindPathAround = 'Mothership'
 NewShipType.BuildFamily = 'Utility_Ter'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Controller'
-NewShipType.AvoidanceFamily = 'Utility'
+NewShipType.AvoidanceFamily = 'Frigate'
 NewShipType.DisplayFamily = 'Utility'
 NewShipType.AutoFormationFamily = 'Frigate'
-NewShipType.CollisionFamily = 'Small'
+NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour")
 
 --------------------------------------------------

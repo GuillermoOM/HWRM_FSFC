@@ -11,7 +11,7 @@ NewShipType.sobDescription = 'Resource Collector'
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 2000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 2500)
 NewShipType.regentime = 200
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)

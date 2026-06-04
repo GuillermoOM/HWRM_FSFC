@@ -67,7 +67,6 @@ dofilepath("data:scripts/scar/fsfc_ui.lua")
 
 function OnInit()
 	Volume_AddSphere("centre", { -11111, 11111, 11111 }, 10)
-	Rule_Add("RandomMusicRuleFS2")
 	Rule_Add("Rule_GrantEraBySetting")
 	MPRestrict()
 	nocruisers = GetGameSettingAsNumber("nocruisers")
@@ -93,8 +92,15 @@ function OnInit()
 		suffix = "carriersonly1"
 	elseif (era_setting == 0) then
 		suffix = "fs1"
+		RandomMusicRuleFS1()
+		Rule_Add("RandomMusicRuleFS1")
 	elseif (era_setting == 1) then
 		suffix = "fs2"
+		RandomMusicRuleFS2()
+		Rule_Add("RandomMusicRuleFS2")
+	else
+		RandomMusicRuleFS2()
+		Rule_Add("RandomMusicRuleFS2")
 	end
 	SetStartFleetSuffix(suffix)
 
@@ -133,11 +139,11 @@ function timer_updating()
 					if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
 						if (era_setting == 0) then -- FS1 Only
 							local fs2_ships_to_hide = {
-								"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
+								"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes","ter_alastor",
 								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
 								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
 								"ter_hygeia", "ter_argo", "ter_fenris", "ter_leviathan", "ter_orion", "ter_ulysses",
-								"ter_medusa", "ter_ursa", "ter_iceni",
+								"ter_medusa", "ter_ursa", "ter_iceni", "ter_zeus",
 								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
 								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
 								"vas_aten", "vas_typhon", "vas_bes",
@@ -150,7 +156,7 @@ function timer_updating()
 							end
 						elseif (era_setting == 1) then -- FS2 Only
 							local fs1_ships_to_hide = {
-								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos",
+								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos","ter_centaur",
 								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
 								"ter_medusa_fs1", "ter_ursa_fs1",
 								"vas_seth", "vas_thoth", "vas_scarab", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1", "vas_amun", "vas_anubis", "vas_maat",
