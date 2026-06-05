@@ -32,10 +32,10 @@ function fsfc_research_init()
 					if (iCount.HumanOnly ~= nil) and (isAI > 0) then
 						grantThis = 0
 					end
-					
+
 					-- Era nodes FS1 and FS2 are programmatically managed by the match settings.
 					-- Granting them via All Research Granted will conflict with the chosen Era and cause engine errors.
-					if (iCount.Name == "FS1" or iCount.Name == "FS2") then
+					if iCount.Name == "FS1" or iCount.Name == "FS2" then
 						grantThis = 0
 					end
 
@@ -69,15 +69,15 @@ function OnInit()
 
 	-- Starting fleet suffix priority
 	local suffix = ""
-	if (carriersonly == 1) then
+	if carriersonly == 1 then
 		suffix = "carriersonly"
-	elseif (carriersonly == 2) then
+	elseif carriersonly == 2 then
 		suffix = "carriersonly1"
-	elseif (era_setting == 0) then
+	elseif era_setting == 0 then
 		suffix = "fs1"
 		RandomMusicRuleFS1()
 		Rule_Add("RandomMusicRuleFS1")
-	elseif (era_setting == 1) then
+	elseif era_setting == 1 then
 		suffix = "fs2"
 		RandomMusicRuleFS2()
 		Rule_Add("RandomMusicRuleFS2")
@@ -87,10 +87,10 @@ function OnInit()
 	end
 	SetStartFleetSuffix(suffix)
 
-	if (era_setting == 0) then
+	if era_setting == 0 then
 		FREESPACE_ERA = 1
 		Rule_Add("Rule_GrantFS1Era")
-	elseif (era_setting == 1) then
+	elseif era_setting == 1 then
 		FREESPACE_ERA = 2
 		Rule_Add("Rule_GrantFS2Era")
 	else
@@ -113,13 +113,13 @@ end
 function Rule_GrantFS1Era()
 	print("FSFC_RULE | Granting FS1 Era...")
 	for i = 0, Universe_PlayerCount() - 1 do
-		if (Player_IsAlive(i) == 1) then
+		if Player_IsAlive(i) == 1 then
 			local prefix = PlayerRace_GetString(i, "Prefix", "")
 			local racePrefix = ""
-			if (prefix ~= nil and prefix ~= "") then
+			if prefix ~= nil and prefix ~= "" then
 				racePrefix = strsub(prefix, 1, 3)
 			end
-			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+			if racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI" then
 				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> FS1")
 				Player_GrantResearchOption(i, "FS1")
 				Player_RestrictResearchOption(i, "FS2")
@@ -132,13 +132,13 @@ end
 function Rule_GrantFS2Era()
 	print("FSFC_RULE | Granting FS2 Era...")
 	for i = 0, Universe_PlayerCount() - 1 do
-		if (Player_IsAlive(i) == 1) then
+		if Player_IsAlive(i) == 1 then
 			local prefix = PlayerRace_GetString(i, "Prefix", "")
 			local racePrefix = ""
-			if (prefix ~= nil and prefix ~= "") then
+			if prefix ~= nil and prefix ~= "" then
 				racePrefix = strsub(prefix, 1, 3)
 			end
-			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+			if racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI" then
 				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> FS2")
 				Player_GrantResearchOption(i, "FS2")
 				Player_RestrictResearchOption(i, "FS1")
@@ -151,13 +151,13 @@ end
 function Rule_GrantBothEras()
 	print("FSFC_RULE | Granting Both Eras...")
 	for i = 0, Universe_PlayerCount() - 1 do
-		if (Player_IsAlive(i) == 1) then
+		if Player_IsAlive(i) == 1 then
 			local prefix = PlayerRace_GetString(i, "Prefix", "")
 			local racePrefix = ""
-			if (prefix ~= nil and prefix ~= "") then
+			if prefix ~= nil and prefix ~= "" then
 				racePrefix = strsub(prefix, 1, 3)
 			end
-			if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
+			if racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI" then
 				print("FSFC_RULE | Player " .. i .. " (" .. racePrefix .. ") -> BOTH")
 				Player_GrantResearchOption(i, "FS1")
 				Player_GrantResearchOption(i, "FS2")
@@ -174,31 +174,105 @@ function timer_updating_fsfc()
 				if Player_HasShipWithBuildQueue(playerIndex) == 1 then
 					-- Era-based ship hiding for FS races
 					local racePrefix = strsub(PlayerRace_GetString(playerIndex, "Prefix", ""), 1, 3)
-					if (racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI") then
-						if (era_setting == 0) then -- FS1 Only
+					if racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI" then
+						if era_setting == 0 then -- FS1 Only
 							local fs2_ships_to_hide = {
-								"ter_herculesmk2", "ter_perseus", "ter_myrmidon", "ter_ares", "ter_erinyes",
-								"ter_artemis", "ter_artemisdh", "ter_boanerges", "ter_aeolus", "ter_deimos",
-								"ter_hecate", "ter_colossus", "ter_mjolnir", "ter_charybdis", "ter_pegasus",
-								"ter_hygeia", "ter_argo", "ter_fenris", "ter_leviathan", "ter_orion", "ter_ulysses",
-								"ter_medusa", "ter_ursa", "ter_iceni", "ter_zeus",
-								"vas_ptah", "vas_serapis", "vas_tauret", "vas_bakha", "vas_sehkmet", "vas_mentu",
-								"vas_sobek", "vas_hatshepsut", "vas_colossus", "vas_setekh", "vas_nephthys", "vas_bast",
-								"vas_aten", "vas_typhon", "vas_bes",
-								"shi_mara", "shi_aeshma", "shi_nahema", "shi_taurvi",
-								"shi_seraphim", "shi_rakshasa", "shi_ravana", "shi_moloch", "shi_sathanas",
-								"shi_gorgon", "shi_astaroth", "shi_cain", "shi_lilith", "shi_demon"
+								"ter_herculesmk2",
+								"ter_perseus",
+								"ter_myrmidon",
+								"ter_ares",
+								"ter_erinyes",
+								"ter_alastor",
+								"ter_artemis",
+								"ter_artemisdh",
+								"ter_boanerges",
+								"ter_aeolus",
+								"ter_deimos",
+								"ter_hecate",
+								"ter_colossus",
+								"ter_mjolnir",
+								"ter_charybdis",
+								"ter_pegasus",
+								"ter_hygeia",
+								"ter_argo",
+								"ter_fenris",
+								"ter_leviathan",
+								"ter_orion",
+								"ter_ulysses",
+								"ter_medusa",
+								"ter_ursa",
+								"ter_iceni",
+								"ter_zeus",
+
+								"vas_ptah",
+								"vas_serapis",
+								"vas_tauret",
+								"vas_bakha",
+								"vas_sehkmet",
+								"vas_mentu",
+								"vas_sobek",
+								"vas_hatshepsut",
+								"vas_colossus",
+								"vas_setekh",
+								"vas_nephthys",
+								"vas_bast",
+								"vas_aten",
+								"vas_typhon",
+								"vas_bes",
+								"vas_edjo",
+								"vas_mjolnir",
+
+								"shi_mara",
+								"shi_aeshma",
+								"shi_nahema",
+								"shi_taurvi",
+								"shi_seraphim",
+								"shi_rakshasa",
+								"shi_ravana",
+								"shi_moloch",
+								"shi_sathanas",
+								"shi_astaroth",
+								"shi_cain",
+								"shi_lilith",
+								"shi_demon",
 							}
 							for i, ship in fs2_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)
 							end
-						elseif (era_setting == 1) then -- FS2 Only
+						elseif era_setting == 1 then -- FS2 Only
 							local fs1_ships_to_hide = {
-								"ter_apollo", "ter_valkyrie", "ter_athena", "ter_cerberus", "ter_chronos","ter_centaur",
-								"ter_fenris_fs1", "ter_leviathan_fs1", "ter_orion_fs1", "ter_ulysses_fs1",
-								"ter_medusa_fs1", "ter_ursa_fs1",
-								"vas_seth", "vas_thoth", "vas_scarab", "vas_aten_fs1", "vas_typhon_fs1","vas_hatshepsut_fs1", "vas_amun", "vas_anubis", "vas_maat",
-								"shi_basilisk", "shi_shaitan", "shi_cain_fs1", "shi_lilith_fs1", "shi_demon_fs1", "shi_scorpion"
+								"ter_apollo",
+								"ter_valkyrie",
+								"ter_athena",
+								"ter_cerberus",
+								"ter_chronos",
+								"ter_centaur",
+								"ter_fenris_fs1",
+								"ter_leviathan_fs1",
+								"ter_orion_fs1",
+								"ter_ulysses_fs1",
+								"ter_medusa_fs1",
+								"ter_ursa_fs1",
+								"ter_faustus",
+
+								"vas_imhotep",
+								"vas_satis",
+								"vas_osiris",
+								"vas_seth",
+								"vas_scarab",
+								"vas_aten_fs1",
+								"vas_typhon_fs1",
+								"vas_hatshepsut_fs1",
+								"vas_amun",
+								"vas_anubis",
+								"vas_maat",
+								"vas_ankh",
+
+								"shi_shaitan",
+								"shi_cain_fs1",
+								"shi_lilith_fs1",
+								"shi_demon_fs1",
+								"shi_scorpion",
 							}
 							for i, ship in fs1_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)
@@ -207,11 +281,14 @@ function timer_updating_fsfc()
 					end
 
 					-- Carriers Only restrictions for FS races
-					if (carriersonly > 0) then
+					if carriersonly > 0 then
 						local super_ships_to_hide = {
-							"ter_hades", "ter_colossus",
-							"vas_colossus","vas_hatshepsut_fs1",
-							"shi_lucifer", "shi_sathanas"
+							"ter_hades",
+							"ter_colossus",
+							"vas_colossus",
+							"vas_hatshepsut_fs1",
+							"shi_lucifer",
+							"shi_sathanas",
 						}
 						for i, ship in super_ships_to_hide do
 							Player_RestrictBuildOption(playerIndex, ship)
@@ -240,10 +317,10 @@ function timer_updating_fsfc()
 		end
 	elseif timer_timing == 2 then
 		for i = 0, Universe_PlayerCount() - 1 do
-			if (Player_IsAlive(i) == 1) then
-				if (era_setting == 0) then
+			if Player_IsAlive(i) == 1 then
+				if era_setting == 0 then
 					Player_RestrictResearchOption(i, "FS2")
-				elseif (era_setting == 1) then
+				elseif era_setting == 1 then
 					Player_RestrictResearchOption(i, "FS1")
 				end
 			end

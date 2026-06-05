@@ -52,7 +52,7 @@ GameSetupOptions = {
 			"Small",
 			"$3216",
 			"Normal",
-			"$3217",
+			"3217",
 			"Large",
 			"$4801",
 			"Huge", --to localize

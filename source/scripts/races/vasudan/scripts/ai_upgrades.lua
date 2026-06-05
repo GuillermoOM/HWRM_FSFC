@@ -58,7 +58,6 @@ rt_vasudan_core = {
 rt_vasudan_fs1 = {
 	{ id = "HORUS", priority = 1.0, name = "FighterDesign", class = eFighter, shipID = VAS_HORUS },
 	{ id = "SETH", priority = 1.1, name = "Seth", class = eFighter, shipID = VAS_SETH },
-	{ id = "ANUBIS", priority = 1.25, name = "Anubis", class = eFighter, shipID = VAS_ANUBIS },
 	{ id = "THOTH", priority = 1.2, name = "Thoth", class = eFighter, shipID = VAS_THOTH },
 	-- Bombers
 	{ id = "AMUN", priority = 1.3, name = "Amun", class = eCorvette, shipID = VAS_AMUN },
@@ -71,7 +70,6 @@ rt_vasudan_fs2 = {
 	{ id = "SERAPIS", priority = 1.3, name = "Serapis", class = eFighter, shipID = VAS_SERAPIS },
 	{ id = "TAURET", priority = 1.5, name = "Tauret", class = eFighter, shipID = VAS_TAURET },
 	-- Bombers
-	{ id = "BAKHA", priority = 1.2, name = "Bakha", class = eCorvette, shipID = VAS_BAKHA },
 	{ id = "SEHKMET", priority = 1.5, name = "Sehkmet", class = eCorvette, shipID = VAS_SEHKMET },
 }
 

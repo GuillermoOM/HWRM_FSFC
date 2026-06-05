@@ -36,6 +36,7 @@ This is a **Homeworld Remastered** total conversion mod (FreeSpace: Fleet Comman
 - **Weapon Burst Bug**: Always set `fireTime` to at least `0.1s` in `.wepn` files. A `0` fireTime with non-zero burst causes infinite fire rates.
 - **No Closures in Lua 4.0**: `foreach` callbacks CANNOT capture outer `local` variables (upvalues). This causes a load-time crash: `cannot access a variable in outer scope`. Use `next(table)` / `next(table, key)` loops instead. See gotcha #9 and `.agents/skills/lua_40_closure_restriction/`.
 - **Knowledge Integrity**: When discovering new engine quirks or tactical patterns, update `resources/hwrm-wiki/` and `resources/fsfc-knowledge/` immediately. Also add any necessary references to this instruction file, `AGENTS.md`, and the `rules` and `gotchas` markdown files in `resources/hwrm-wiki/`. Including `.agents/rules/code-style-guide.md` and `.agents/skills/skill_name/` if this will make any future agent more efficient and aware of common development mistakes.
+- **Clean Repository**: Any patching code or script that will be used to temporarily modify files must be placed in `scratch/` directory.
 
 ## Skills & Automation
 

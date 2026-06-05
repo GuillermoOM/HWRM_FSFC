@@ -238,7 +238,7 @@ addAbility(NewShipType, 'GuardCommand', 1, 3000, 600)
 addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 50, 300, 0, 3)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 1, 3, .7, 0.3)
 addAbility(NewShipType, 'SensorPing', 1, 0, 15, 4)
-addAbility(NewShipType, 'SensorDistortion', 'OwnShipsWithinRadius', 'Linear', 1, 1, 5000)
+addAbility(NewShipType, "CanBuildShips", 1, "Subsystem_All", "SubSystemModule, SubSystemSensors")
 
 --------------------------------------------------
 --- Load Model
@@ -250,8 +250,9 @@ LoadModel(NewShipType, 1)
 --- HardPoints
 --------------------------------------------------
 
-StartShipHardPointConfig(NewShipType, 'Research', 'Hardpoint_Lab', 'System', 'Innate', 'Damageable', 'sub_research', '',
-    '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS0', 'Hardpoint_lab', 'System', 'Sensors', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS1', 'Hardpoint_lab', 'System', 'Sensors', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'AWACS2', 'Hardpoint_lab', 'System', 'Sensors', 'Indestructible', '', 'awacs_2', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Shields

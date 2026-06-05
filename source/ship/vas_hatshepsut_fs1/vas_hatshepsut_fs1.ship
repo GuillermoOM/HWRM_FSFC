@@ -173,7 +173,7 @@ NewShipType.totalValue = 110
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 7500
+NewShipType.buildCost = 8000
 NewShipType.buildTime = 240
 NewShipType.buildPriorityOrder = 40
 setConcurrentBuildLimit(NewShipType, 0, 2)
@@ -309,14 +309,14 @@ LoadSharedModel(NewShipType, "vas_hatshepsut")
 --- Weapons
 --------------------------------------------------
 
-StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret01', '')
+StartShipWeaponConfig(NewShipType, 'beam_sgold', 'Weapon_Turret01', '')
 StartShipWeaponConfig(NewShipType, 'miss_fluxcannon', 'Weapon_Turret05', '')
 StartShipWeaponConfig(NewShipType, 'miss_fluxcannon', 'Weapon_Turret06', '')
 StartShipWeaponConfig(NewShipType, 'miss_fluxcannon', 'Weapon_Turret07', '')
 StartShipWeaponConfig(NewShipType, 'miss_fluxcannon', 'Weapon_Turret08', '')
 StartShipWeaponConfig(NewShipType, 'miss_fluxcannon', 'Weapon_Turret09', '')
 StartShipWeaponConfig(NewShipType, 'gun_heavyflak_turret', 'Weapon_Turret10', '')
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_Turret11', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Turret11', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret12', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret13', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret14', '')
@@ -325,8 +325,8 @@ StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret16', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret17', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret18', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret19', '')
-StartShipWeaponConfig(NewShipType, 'gun_vaslaser_gimble', 'Weapon_Turret20', '')
-StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret21', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Turret20', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Turret21', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret22', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret23', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret24', '')
@@ -335,10 +335,7 @@ StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret26', '')
 StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret27', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret28', '')
 StartShipWeaponConfig(NewShipType, 'gun_vashuge_gimble', 'Weapon_Turret29', '')
-StartShipWeaponConfig(NewShipType, 'gun_flak_gimble', 'Weapon_Turret30', '')
-StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret02', '')
-StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret03', '')
-StartShipWeaponConfig(NewShipType, 'gun_vashuge_turret', 'Weapon_Turret04', '')
+StartShipWeaponConfig(NewShipType, 'beam_AABlue', 'Weapon_Turret30', '')
 
 --------------------------------------------------
 --- Shields
@@ -350,6 +347,9 @@ addShield(NewShipType, 'EMP', 10000, 20)
 --- HardPoints
 --------------------------------------------------
 
+StartShipHardPointConfig(NewShipType, 'Bvas1', 'Weapon_Turret02', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Bvas2', 'Weapon_Turret03', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas', '', '', '', '', '', '', '', '')
+StartShipHardPointConfig(NewShipType, 'Bvas3', 'Weapon_Turret04', 'Weapon', 'Innate', 'Damageable', 'vas_hatbvas', '', '', '', '', '', '', '', '')
 
 --------------------------------------------------
 --- Debris

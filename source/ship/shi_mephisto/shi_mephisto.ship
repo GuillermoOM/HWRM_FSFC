@@ -147,7 +147,7 @@ NewShipType.BuildFamily = 'Utility_Shi'
 NewShipType.AttackFamily = 'ResourceLarge'
 NewShipType.DockFamily = 'Frigate'
 NewShipType.AvoidanceFamily = 'Utility'
-NewShipType.DisplayFamily = 'Utility'
+NewShipType.DisplayFamily = 'Platform'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
 NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "LightArmour")
@@ -175,8 +175,8 @@ NewShipType.totalValue = 10
 --- Construction
 --------------------------------------------------
 
-NewShipType.buildCost = 400
-NewShipType.buildTime = 25
+NewShipType.buildCost = 500
+NewShipType.buildTime = 20
 NewShipType.buildPriorityOrder = 40
 
 --------------------------------------------------
