@@ -274,7 +274,7 @@ function timer_updating_fsfc()
 								"shi_lilith_fs1",
 								"shi_demon_fs1",
 								"shi_scorpion",
-								"ter_trident",
+								"shi_trident",
 							}
 							for i, ship in fs1_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)

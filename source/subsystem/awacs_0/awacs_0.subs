@@ -16,7 +16,7 @@ NewSubSystemType.sobDescription =
 	"Level 1 AWACS \nIncreases friendly sensors range. \nEnables tracking of vessels through Subspace."
 
 NewSubSystemType.type = "System"
-NewSubSystemType.typeString = "HyperspaceSensor"
+NewSubSystemType.typeString = "AWACS0"
 
 NewSubSystemType.innate = 1
 

@@ -33,7 +33,7 @@ setTacticsMults(NewShipType, 'FIRERATE', 0.98, 1.02, 1.0)
 --- Main Ship Data
 --------------------------------------------------
 
-NewShipType.isTransferable = 1
+NewShipType.isTransferable = 0
 
 --------------------------------------------------
 --- Advanced Movement
@@ -143,7 +143,7 @@ NewShipType.totalValue = 12
 --------------------------------------------------
 
 NewShipType.buildCost = 2000
-NewShipType.buildTime = 1
+NewShipType.buildTime = 90
 NewShipType.buildPriorityOrder = 30
 
 --------------------------------------------------

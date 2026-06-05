@@ -587,6 +587,7 @@ research = {
 		Cost = 2500,
 		Time = 50,
 		DisplayPriority = 1,
+		DisplayedName = "AWACS LVL2 - Defensive EW<c=0e0160>(50s)</c>",
 		Description = "Enhanced defensive Electronic Warfare (EW) suite for AWACS Vessel. Friendly ships are are detected in 70% of normal range while in AWACS area.",
 		TargetType = Ship,
 		TargetName = "ter_charybdis",

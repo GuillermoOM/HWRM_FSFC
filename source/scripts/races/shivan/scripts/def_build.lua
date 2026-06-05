@@ -3,27 +3,6 @@ Ship = 0
 SubSystem = 1
 build = {
 
-	-- Subsystems
-
-	{
-		Type = SubSystem,
-		ThingToBuild = "awacs_1",
-		RequiredResearch = "AWACSLVL2",
-		RequiredShipSubSystems = "",
-		DisplayPriority = 1,
-		DisplayedName = "AWACS Level II - Defensive EW",
-		Description = "<b>Decreases Enemy Detection Range</b> \n\n<b>Description:</b> Enhanced defensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Friendly ships are are detected in 70% of normal range while in AWACS area. \n\n<b>Prerequisites:</b> AWACS Level II.",
-	},
-	{
-		Type = SubSystem,
-		ThingToBuild = "awacs_2",
-		RequiredResearch = "AWACSLVL3",
-		RequiredShipSubSystems = "AWACS1",
-		DisplayPriority = 2,
-		DisplayedName = "AWACS Level III - Offensive EW ",
-		Description = "<b>Decreases Enemy Accuracy</b> \n\n<b>Description:</b> Enhanced offensive Electronic Warfare (EW) suite for GTA Charybids AWACS. Enemy vessels have 30% reduced accuracy while in friendly AWACS range. \n\n<b>Prerequisites:</b> AWACS Level III.",
-	},
-
 	-- Fighters
 	{
 		Type = Ship,
@@ -316,5 +295,25 @@ build = {
 		DisplayPriority = 4,
 		DisplayedName = "Shivan Comm Node - AWACS <c=12AB06>70s</c>",
 		Description = "<b>Description:</b> All details concerning this object have been classified level Omega, accessible only by those immediately authorized by the GTVA Security Council. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> AWACS. \n\n<b>Armaments:</b> None.",
+	},
+
+	-- Subsystems
+	{
+		Type = SubSystem,
+		ThingToBuild = "awacs_1",
+		RequiredResearch = "AWACSLVL2",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 1,
+		DisplayedName = "AWACS Level II - Defensive EW",
+		Description = "<b>Decreases Enemy Detection Range</b> \n\n<b>Description:</b> Enhanced defensive Electronic Warfare (EW) suite for AWACS. Friendly ships are are detected in 70% of normal range while in AWACS area. \n\n<b>Prerequisites:</b> AWACS Level II.",
+	},
+	{
+		Type = SubSystem,
+		ThingToBuild = "awacs_2",
+		RequiredResearch = "AWACSLVL3",
+		RequiredShipSubSystems = "AWACS1",
+		DisplayPriority = 2,
+		DisplayedName = "AWACS Level III - Offensive EW ",
+		Description = "<b>Decreases Enemy Accuracy</b> \n\n<b>Description:</b> Enhanced offensive Electronic Warfare (EW) suite for AWACS. Enemy vessels have 30% reduced accuracy while in friendly AWACS range. \n\n<b>Prerequisites:</b> AWACS Level III.",
 	},
 }
