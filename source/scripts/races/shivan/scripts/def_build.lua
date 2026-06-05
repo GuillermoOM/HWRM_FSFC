@@ -254,7 +254,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_trident",
-		RequiredResearch = "SentryGun",
+		RequiredResearch = "SentryGun & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "SSG Trident - Sentry Gun <c=12AB06>6s</c>",
@@ -263,7 +263,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "shi_belial",
-		RequiredResearch = "SentryGun",
+		RequiredResearch = "SentryGun & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "SSG Belial - Sentry Gun <c=12AB06>8s</c>",

@@ -485,7 +485,7 @@ research = {
 		Time = 20,
 		DisplayedName = "Sentry Gun <c=0e0160>(20s)</c>",
 		DisplayPriority = 1,
-		Description = "Unlocks Sentry Guns: Alastor, Cerberus.",
+		Description = "Unlocks Sentry Guns.",
 		TargetType = Ship,
 		TargetName = "ter_alastor",
 		Icon = Icon_Build,

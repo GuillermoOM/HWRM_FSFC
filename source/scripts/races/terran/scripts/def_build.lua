@@ -542,7 +542,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_cerberus",
-		RequiredResearch = "SentryGun",
+		RequiredResearch = "SentryGun & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
 		DisplayedName = "GTSG Cerberus - Sentry Gun <c=12AB06>5s</c>",
@@ -551,7 +551,7 @@ build = {
 	{
 		Type = Ship,
 		ThingToBuild = "ter_alastor",
-		RequiredResearch = "SentryGun",
+		RequiredResearch = "SentryGun & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
 		DisplayedName = "GTSG Alastor - Sentry Gun <c=12AB06>7s</c>",
