@@ -57,6 +57,7 @@ NewShipType.relativeMoveFactor = 3
 
 NewShipType.formationSpacing = 250
 NewShipType.strikeGroupRadius = 150
+NewShipType.canSurround=1
 
 
 --------------------------------------------------
