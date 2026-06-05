@@ -60,7 +60,18 @@ CameraMaxVelocity = 1000.0
 SpeechVolDuckingLevel = 0.2
 
 -- FEMusic: string, the file to use as the Front End Music Track, also is the default mission music if nothing is selected
-FEMusic = "data:sound/music/FS2_Cinema"
+local menuTracks = {
+	"data:sound/music/fs1_brief1",
+	"data:sound/music/fs1_brief2",
+	"data:sound/music/fs1_menu",
+	"data:sound/music/fs2_brief1",
+	"data:sound/music/fs2_brief2",
+	"data:sound/music/fs2_brief3",
+	"data:sound/music/fs2_brief4",
+	"data:sound/music/fs2_brief5",
+	"data:sound/music/fs2_menu",
+}
+FEMusic = menuTracks[random(1, 9)]
 
 -- FEBattleMusic: string, the file to use as the battle music during combat
 FEBattleMusic = "data:sound/music/battle/fs2_genesisbattle"

@@ -46,7 +46,7 @@ NewMainMenu = {
 	-- Flags
 	pixelUVCoords = 1, -- Enter pixel coords for texture coords
 	--UINavDefaultSelectedElementName = "lstBoxChat2",
-	UINavDefaultSelectedElementName = "btnTutorial",
+	UINavDefaultSelectedElementName = "btnPlayerVsCPU",
 	
 	--Hotkeys = {
 	--	{ "FE_ExitToWindows()",INKE_KeyDown, 0, "Exit to operating system",    { ALTKEY, F4KEY } },
@@ -240,7 +240,7 @@ NewMainMenu = {
 				autosize = 1,
 				
 				Text = {	
-					text = "4.0 RC6 (2023-11-06)",
+					text = "5.0-85c20753 (2026-06-04)",
 					font = "ButtonFont",
 					vAlign = "Top",
 					color = {119,166,191,255},
