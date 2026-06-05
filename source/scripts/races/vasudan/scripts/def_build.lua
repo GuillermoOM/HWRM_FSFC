@@ -40,7 +40,7 @@ build = {
 		RequiredResearch = "Seth",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVF Seth - Assault <c=12AB06>35s</c>",
+		DisplayedName = "GVF Seth - Assault <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> The solidly built GVF Seth is a versatile Great War-era fighter that still performs dual roles as bomber escort and bomber interceptor. The Seth's relatively slow cruising speed is deceptive, as its Mekhu-Sahr plasma powerplant can give it an incredible afterburner boost, more than doubling its velocity. A total of six weapon banks and a wide variety of loadouts give the Seth the needed punch to eliminate incoming bombers quickly. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Capital Ships \n\n<b>Prerequisites:</b> Fighter Design, Seth. \n\n<b>Armaments:</b> 2x Prometheusfs1, 1x Hornet, 1x Tornado, 1x Tempest.",
 	},
 	{
@@ -49,7 +49,7 @@ build = {
 		RequiredResearch = "Horus | (FighterDesign & FS2)",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
-		DisplayedName = "GVF Horus - Interceptor <c=12AB06>32s</c>",
+		DisplayedName = "GVF Horus - Interceptor <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> The GVF Horus was the fastest fighter class during the Great War and it's still the fastest fighter in the GTVA fleet. Its weapon capacity is average for a fighter, with four primary banks and two missile bays. The Horus pays for its speed and maneuverability with thin armor and relatively weak shields. The Horus shines as a bomber interceptor, a role Allied Command puts it in as often as possible. For offensive operations against well-defended targets, however, the Horus is a poor choice. \n\n<b>Good Against:</b> Fighters, Bombers \n<b>Weak Against:</b> Corvettes, Capital Ships \n\n<b>Prerequisites:</b> Fighter Design, Horus. \n\n<b>Armaments:</b> 1x Prometheusfs1, 1x Morningstar, 1x Phoenixv, 1x Rockeye.",
 	},
 	{
@@ -58,7 +58,7 @@ build = {
 		RequiredResearch = "Thoth",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
-		DisplayedName = "GVF Thoth - Superiority <c=12AB06>36s</c>",
+		DisplayedName = "GVF Thoth - Superiority <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> The GVF Thoth has been manufactured exclusively in the Sahr Corp.'s shipyards at Altair for over 40 years. During the heyday of the Hammer of Light, the HoL captured these yards and the Thoth became a primary fighter among HoL forces. When these shipyards were recaptured, the Thoth once again became an important component of the Vasudan navy. In the hands of a skilled pilot, the Thoth's maneuverability and small size make it a hard target to hit. A single missile bank means that a Thoth pilot relies on his primary weapons to make most kills. \n\n<b>Good Against:</b> Fighters, Bombers \n<b>Weak Against:</b> Corvettes, Capital Ships \n\n<b>Prerequisites:</b> Fighter Design, Thoth. \n\n<b>Armaments:</b> 1x Mekhu, 1x Harpoon.",
 	},
 	{
@@ -76,7 +76,7 @@ build = {
 		RequiredResearch = "Tauret & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 6,
-		DisplayedName = "GVF Tauret - Heavy Assault <c=12AB06>49s</c>",
+		DisplayedName = "GVF Tauret - Heavy Assault <c=12AB06>45s</c>",
 		Description = "<b>Description:</b> While integrating cutting-edge technology developed in collaboration with the Terrans, the Tauret boasts a distinctly Vasudan design. Its unusual configuration was inspired by the Apsu-Hek, a creature that once inhabited the deserts of Vasuda Prime. The Apsu-Hek has become an emblem of the Vasudan diaspora, and the Tauret continues the tradition of symbolic design. Armed with six gun mounts and two large missile banks, the Tauret has the speed and firepower to challenge both fighters and warships. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Capital Ships \n\n<b>Prerequisites:</b> Fighter Design, Tauret. \n\n<b>Armaments:</b> 1x Prometheusr, 1x Kayser, 1x Tornado, 1x Rockeye.",
 	},
 	{
@@ -85,7 +85,7 @@ build = {
 		RequiredResearch = "Ptah & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 7,
-		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>65s</c>",
+		DisplayedName = "GVF Ptah - Stealth Recon <c=12AB06>30s</c>",
 		Description = "<b>Description:</b> The stealth prototype GVF Ptah was a top-secret development project assigned to Vasudan conglomerate Akheton Corp. Designed to be invisible to standard detection arrays mounted on combat craft, Ptahs have performed admirably during their OpEval period. The masking materials and blending technologies used across their outer surfaces seem to confuse Shivan detection systems as well. The Ptah is currently available only to select fighter units in the Vasudan navy, with no word on when they will be more widely distributed. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Fighters, Corvettes \n\n<b>Prerequisites:</b> Fighter Design, Ptah. \n\n<b>Armaments:</b> 1x Mekhu, 1x Harpoon, 1x Stilettoii.",
 	},
 
@@ -96,7 +96,7 @@ build = {
 		RequiredResearch = "BomberDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
-		DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>40s</c>",
+		DisplayedName = "GVB Osiris - Reserve Bomber <c=12AB06>50s</c>",
 		Description = "<b>Description:</b> The GVB Osiris was the primary bomber of the PVN during the Great War. It is showing its age during the current conflict, as the more advanced Bakha and Sekhmet bombers have replaced it on the front lines in most theatres of conflict. Osiris bombers still in service have been retrofitted to make them compatible with most GTVA missiles and bombs. If well-protected by fighter escorts, a wing of Osiris bombers can still wreak havoc on enemy cruisers and corvettes. \n\n<b>Good Against:</b> Capital Ships, Installations \n<b>Weak Against:</b> Interceptors, Fighters, Corvettes \n\n<b>Prerequisites:</b> Bomber Design, Osiris. \n\n<b>Armaments:</b> 1x Prometheusfs1, 1x Tsunami, 1x Synaptic, 2x Subach Turret.",
 	},
 	{
@@ -105,7 +105,7 @@ build = {
 		RequiredResearch = "Amun",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>50s</c>",
+		DisplayedName = "PVB Amun - Heavy Bomber <c=12AB06>70s</c>",
 		Description = "<b>Description:</b> The PVB Amun is the primary heavy bombing platform of the Vasudan fleet during the Great War (FS1). Packing extremely thick molybdenum armor, it can absorb enormous defensive fire while delivering devastating payloads to enemy warships. Though slow and lacking agility, the Amun's multiple missile and bomb bays make it a feared weapon on any capital ship battleline. \n\n<b>Good Against:</b> Capital Ships, Installations \n<b>Weak Against:</b> Interceptors, Fighters, Corvettes \n\n<b>Prerequisites:</b> Bomber Design, Amun. \n\n<b>Armaments:</b> 1x Prometheusfs1, 2x Harbinger, 1x Infyrno, 2x Avenger Turret.",
 	},
 	{
@@ -114,7 +114,7 @@ build = {
 		RequiredResearch = "BomberDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
-		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>34s</c>",
+		DisplayedName = "GVB Bakha - Strike Bomber <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> Learning a lesson from the bomber losses of the Great War, Vasudan defense contractor Akheton designed the GVB Bakha, a fast, agile bomber that could still deliver a warship-shattering payload. The Bakha's dual Akh-12 engines are baffled and masked, giving it a small profile for heat-seeking missiles. The bomber's speed and maneuverability make it the craft of choice for taking out destroyers and corvettes with multiple flak, AAA, and anti-ship beam turrets. Over 6,000 Bakhas have been produced in the orbiting shipyards around Vasuda Prime. \n\n<b>Good Against:</b> Capital Ships, Installations \n<b>Weak Against:</b> Interceptors, Fighters, Corvettes \n\n<b>Prerequisites:</b> Bomber Design, Bakha. \n\n<b>Armaments:</b> 1x Mekhu, 1x Cyclops, 1x Stiletto.",
 	},
 	{
@@ -123,7 +123,7 @@ build = {
 		RequiredResearch = "Sehkmet",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
-		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>46s</c>",
+		DisplayedName = "GVB Sehkmet - Heavy Bomber <c=12AB06>60s</c>",
 		Description = "<b>Description:</b> The GVB Sekhmet is a Shivan design that was initially adapted to Vasudan needs by Hammer of Light engineers. The version currently in use was further modified by technicians at Mekhu Enterprises. Sporting four primary weapon banks and three missile/bomb bays, the Sekhmet packs a massive punch. Add in a top speed that surpasses that of some fighters and an ultra-fast molybdenum armor plating, and it's easy to see why the Sekhmet is the favorite bomber among Vasudan pilots. \n\n<b>Good Against:</b> Capital Ships, Installations \n<b>Weak Against:</b> Interceptors, Fighters, Corvettes \n\n<b>Prerequisites:</b> Bomber Design, Sehkmet. \n\n<b>Armaments:</b> 1x Prometheuss, 1x Helios, 1x Infyrno.",
 	},
 
@@ -134,7 +134,7 @@ build = {
 		RequiredResearch = "CruiserDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
-		DisplayedName = "GVC Aten (FS1) - Reserve Cruiser <c=12AB06>30s</c>",
+		DisplayedName = "GVC Aten (FS1) - Reserve Cruiser <c=12AB06>60s</c>",
 		Description = "<b>Description:</b> The GVC Aten is among the smallest and weakest of the GTVA's cruiser classes, with thin armor and only a few, relatively weak turrets. Terran fighters and bombers exploited these weaknesses during the early years of the Great War, when the Terran and Vasudans were still enemies. The Aten is most often seen in the current conflict as a rear guard defense for convoys or installations, backing up wings of fighters and bombers. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Destroyers, Bombers \n\n<b>Prerequisites:</b> Cruiser Design \n\n<b>Armaments:</b> 2x Vasudan Laser Turret, 2x Vasudan Laser Gimble, 2x Mekhu Turret.",
 	},
 	{
@@ -143,7 +143,7 @@ build = {
 		RequiredResearch = "CruiserDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVC Aten - Reserve Cruiser <c=12AB06>30s</c>",
+		DisplayedName = "GVC Aten - Reserve Cruiser <c=12AB06>60s</c>",
 		Description = "<b>Description:</b> The GVC Aten is among the smallest and weakest of the GTVA's cruiser classes, with thin armor and only a few, relatively weak turrets. Terran fighters and bombers exploited these weaknesses during the early years of the Great War, when the Terran and Vasudans were still enemies. The Aten is most often seen in the current conflict as a rear guard defense for convoys or installations, backing up wings of fighters and bombers. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Destroyers, Bombers \n\n<b>Prerequisites:</b> Cruiser Design \n\n<b>Armaments:</b> 2x Vasudan Laser Turret, 2x Vasudan Laser Gimble, 2x Aablue, 2x Mekhu Turret.",
 	},
 	{
@@ -152,7 +152,7 @@ build = {
 		RequiredResearch = "Mentu",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
-		DisplayedName = "GVC Mentu - Advanced Cruiser <c=12AB06>70s</c>",
+		DisplayedName = "GVC Mentu - Advanced Cruiser <c=12AB06>80s</c>",
 		Description = "<b>Description:</b> The GVC Mentu cruiser is the lightest of the new Vasudan warships. Following the Great War, allied scientists developed the beam cannons that now serve as the primary armaments of today's GTVA warships. Rather than modify existing ships, the Vasudans developed new designs to mount these weapons. The Mentu's 16 turrets include heavy beam cannons for duking it out with other warships, as well as AAA and flak turrets to fend off smaller craft. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Destroyers, Bombers \n\n<b>Prerequisites:</b> Cruiser Design, Mentu. \n\n<b>Armaments:</b> 8x Vasudan Laser Gimble, 1x Flak Turret, 1x Aa Blue, 2x Vasudan Huge Turret, 2x Vasudan Laser Turret, 2x S Goldcruiser.",
 	},
 
@@ -163,7 +163,7 @@ build = {
 		RequiredResearch = "Sobek",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
-		DisplayedName = "GVCv Sobek - Corvette <c=12AB06>110s</c>",
+		DisplayedName = "GVCv Sobek - Corvette <c=12AB06>120s</c>",
 		Description = "<b>Description:</b> Design of the GVCv Sobek began in the dark days after the destruction of Vasuda Prime by the Shivans in the Great War. The Vasudan navy wanted a vessel that could single-handedly counter powerful Shivan cruisers and provide critical support to Vasudan destroyers in battles against Shivan capital ships. The Sobek class fills those requirements admirably. Bristling with almost two dozen turrets, these corvettes are a terror to all vessels of cruiser size and below, while presenting a dire threat even to ships far larger than themselves. \n\n<b>Good Against:</b> Fighters, Bombers \n<b>Weak Against:</b> Capital Ships \n\n<b>Prerequisites:</b> Capital Ship Design, Sobek. \n\n<b>Armaments:</b> 8x Vasudan Laser Gimble, 4x Flak Turret, 4x Aa Blue, 4x Vasudan Huge Turret, 2x S Gold.",
 	},
 	{
@@ -172,7 +172,7 @@ build = {
 		RequiredResearch = "CapitalShipDesign & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVD Typhon (FS1) - Destroyer <c=12AB06>175s</c>",
+		DisplayedName = "GVD Typhon (FS1) - Destroyer <c=12AB06>180s</c>",
 		Description = "<b>Description:</b> The GVD Typhon was the height of Vasudan military technology when it appeared to face Terran forces during the early days of the Terran-Vasudan War. The first Typhon was sighted at the Vega Engagement and quickly destroyed the GTD Eisenhower and much of the 4th fleet. The more recent Hatshepsut class of destroyers is larger and wields a deadlier array of armaments, but the Typhon is still a match for almost any foe. Up to 30 wings of fighters or bombers can be housed within its docking bays, ready to engage at a moment's notice. \n\n<b>Good Against:</b> Cruisers, Corvettes, Capital Ships \n<b>Weak Against:</b> Bombers, Super Destroyers \n\n<b>Prerequisites:</b> Capital Ship Design, Typhon. \n\n<b>Armaments:</b> 2x Vasudan Huge Gimble, 7x Vasudan Huge Turret, 4x Fighterkiller, 14x Vasudan Laser Gimble.",
 	},
 	{
@@ -181,7 +181,7 @@ build = {
 		RequiredResearch = "CapitalShipDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVD Typhon - Destroyer <c=12AB06>175s</c>",
+		DisplayedName = "GVD Typhon - Destroyer <c=12AB06>180s</c>",
 		Description = "<b>Description:</b> The GVD Typhon was the height of Vasudan military technology when it appeared to face Terran forces during the early days of the Terran-Vasudan War. The first Typhon was sighted at the Vega Engagement and quickly destroyed the GTD Eisenhower and much of the 4th fleet. The more recent Hatshepsut class of destroyers is larger and wields a deadlier array of armaments, but the Typhon is still a match for almost any foe. Up to 30 wings of fighters or bombers can be housed within its docking bays, ready to engage at a moment's notice. \n\n<b>Good Against:</b> Cruisers, Corvettes, Capital Ships \n<b>Weak Against:</b> Bombers, Super Destroyers \n\n<b>Prerequisites:</b> Capital Ship Design, Typhon. \n\n<b>Armaments:</b> 2x Vasudan Huge Gimble, 5x Flak Turret, 4x Fighterkiller, 4x Aa Blue, 9x Vasudan Laser Gimble, 1x Vasudan Huge Turret, 2x B Gold.",
 	},
 
@@ -200,7 +200,7 @@ build = {
 		RequiredResearch = "Installation",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
-		DisplayedName = "PVI Karnak - Installation <c=12AB06>200s</c>",
+		DisplayedName = "PVI Karnak - Installation <c=12AB06>180s</c>",
 		Description = "<b>Description:</b> The gargantuan Karnak installation is the Vasudans' answer to the GTI Arcadia.  This monstrous facility bristles with dozens of turrets and can house up to two full squadrons of fighters.  Its primary purpose is to serve as a construction and maintenance yard for the Vasudan fleets. \n\n<b>Good Against:</b> Fighters, Corvettes \n<b>Weak Against:</b> Bombers, Capital Ships \n\n<b>Prerequisites:</b> Installation. \n\n<b>Armaments:</b> 21x Vasudan Laser Gimble, 17x Fighterkiller.",
 	},
 	{
@@ -218,7 +218,7 @@ build = {
 		RequiredResearch = "Juggernaut & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 6,
-		DisplayedName = "GTVA Colossus <c=12AB06>500s</c>",
+		DisplayedName = "GTVA Colossus <c=12AB06>300s</c>",
 		Description = "<b>Description:</b> The GTVA Colossus resulted from an endeavor unprecedented in Terran or Vasudan history. This 6-kilometer-long behemoth is the result of 20 years of joint effort from dozens of contractors of both races. The Colossus is the most powerful space-faring warship ever made, bristling with over 60 weapon turrets. It also houses 60 fighter and bomber wings and requires a crew of over 30,000. The firepower of the Colossus is greater than that of most GTVA battle groups. \n\n<b>Good Against:</b> Capital Ships \n<b>Weak Against:</b> Massive Bomber Swarms \n\n<b>Prerequisites:</b> Super Capital Ship Design, Colossus. \n\n<b>Armaments:</b> 10x Terran Huge Turret, 12x Flak Turret, 8x Terran Laser Gimble, 10x Aa Blue, 2x Pihrana, 8x Rockeye, 7x Slash Green, 6x Bf Green.",
 	},
 
@@ -238,7 +238,7 @@ build = {
 		RequiredResearch = "SentryGun & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 1,
-		DisplayedName = "GVSG Edjo - Sentry Gun <c=12AB06>6s</c>",
+		DisplayedName = "GVSG Edjo - Sentry Gun <c=12AB06>20s</c>",
 		Description = "<b>Description:</b> When the GTVA asked the Vasudan navy to upgrade the Great War-era Ankh sentry gun platform, the GVSG Edjo was the Vasudans' answer. The Edjo has significantly more armor plating than the Ankh, improving its survivability, but the Vasudans placed only one small cannon turret on the new platform, giving it half the punch of the Ankh. After seeing the Edjo, the Terrans quietly began developing their own advanced sentry gun platforms. The Vasudan navy seems content to leave this aspect of military technology to the Terrans. \n\n<b>Good Against:</b> Fighters, Bombers \n<b>Weak Against:</b> Corvettes, Capital Ships \n\n<b>Prerequisites:</b> Sentry Gun. \n\n<b>Armaments:</b> 1x Avenger Turret.",
 	},
 	{
@@ -247,7 +247,7 @@ build = {
 		RequiredResearch = "SentryAndMineDeployer & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVFr Bes - Sentry Builder <c=12AB06>25s</c>",
+		DisplayedName = "GVFr Bes - Sentry Builder <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> For the past 20 years, the GVFr Bes has been the mainstay of Vasudan shipping fleets. While some Terran systems languished in the post-war era, the Vasudans experienced an economic recovery that was miraculous, given the annihilation of their home planet. Experts credit the policies of the restored Imperial government that emerged following Khonsu II's dissolution of the Vasudan parliament. As commerce among the Vasudan systems resumed and expanded into Terran worlds, a new generation of space-faring cargo vessels was required to meet the needs of this burgeoning economy. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> Sentry and Mine Deployer. \n\n<b>Armaments:</b> 2x Vasudan Laser Gimble.",
 	},
 	{
@@ -256,7 +256,7 @@ build = {
 		RequiredResearch = "SentryAndMineDeployer & FS1",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
-		DisplayedName = "PVFr Ma'at - Sentry Builder <c=12AB06>30s</c>",
+		DisplayedName = "PVFr Ma'at - Sentry Builder <c=12AB06>25s</c>",
 		Description = "<b>Description:</b> With three turrets, the Ma'at is a hairy target for GTA pilots to attack. However, it is slow enough that it can be destroyed with enough patience. As always, supply ships for the PVN are considered to be valid targets. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> Sentry and Mine Deployer. \n\n<b>Armaments:</b> 3x Turret.",
 	},
 	{
@@ -294,7 +294,7 @@ build = {
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 2,
-		DisplayedName = "GVG Anuket - Drop-off <c=12AB06>30s</c>",
+		DisplayedName = "GVG Anuket - Drop-off <c=12AB06>40s</c>",
 		Description = "<b>Description:</b> The GVG Anuket was originally designed for resource extraction in the volatile environment of gas giants. More recently, the Anuket has been modified for nebular operations. The Anuket has the most sophisticated sensor array available, enabling it to navigate the intense EM maelstroms of supernova remnants. In the nebula, the Anuket plays two important roles. First, the miner collects samples for scientific analysis and serves as a laboratory for field experiments. Second, the Anuket gathers deuterium-rich gas for use in the fusion drives that power the allied fleet. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> None. \n\n<b>Armaments:</b> 2x Vasudan Laser Gimble, 2x Subach Turret, 1x Flak Turret.",
 	},
 	{
@@ -312,7 +312,7 @@ build = {
 		RequiredResearch = "FighterDesign & FS2",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 3,
-		DisplayedName = "GVS Nephthys - Support Ship <c=12AB06>9s</c>",
+		DisplayedName = "GVS Nephthys - Support Ship <c=12AB06>20s</c>",
 		Description = "<b>Description:</b> The GVS Nephtys is the Vasudans' new support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Mekhu Enterprises built a cargo bay into the rear of the ship, enabling it to carry extra supplies and munitions during emergencies. Mekhu Enterprises licensed the GTS Hygeia's magnetic-stasis delivery system from Triton Dynamics, so both ships are equally adept at re-supplying combat craft with missiles and bombs. The high number of warheads carried by the Nephtys makes it a dangerous ship to be near when it blows up. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> Fighter Design. \n\n<b>Armaments:</b> None.",
 	},
 	{
@@ -321,7 +321,7 @@ build = {
 		RequiredResearch = "RepairSatis",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 4,
-		DisplayedName = "GVFr Satis - Repair <c=12AB06>35s</c>",
+		DisplayedName = "GVFr Satis - Repair <c=12AB06>50s</c>",
 		Description = "<b>Description:</b> When the first Satis-class freighter was encountered by Terran forces during the Terran-Vasudan War, its firepower led Terran Command to classify it as a light cruiser. Only after a disabled Satis was captured did its true nature become known. Now designated the GVFr Satis class, these freighters still serve as an iron fist within the velvet glove of a freighter convoy. Few enemy fighters who mistake a Satis for a Ma'at or Bes live to regret their error. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> Repair Satis. \n\n<b>Armaments:</b> 1x Vasudan Huge Turret, 4x Vasudan Laser Gimble.",
 	},
 	{
@@ -348,7 +348,7 @@ build = {
 		RequiredResearch = "AWACS",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 5,
-		DisplayedName = "GVA Setekh - AWACS <c=12AB06>78s</c>",
+		DisplayedName = "GVA Setekh - AWACS <c=12AB06>50s</c>",
 		Description = "<b>Description:</b> The GVA Setekh is the Vasudan class of AWACS vessels, comparable to the Terran GTA Charybdis class. Setekhs are smaller, less heavily armored, and have half the turrets of Charybdis ships. Despite these shortcomings, the Vasudan navy insists upon deploying Setekhs in Vasudan battle groups, claiming the Vasudan versions are more appropriate for their fleets. Setekhs' crystalline detection arrays provide their fleets with doubled radar range within the nebular region. Every Vasudan battle group operating in this theatre has a wing of Setekhs attached to it. \n\n<b>Good Against:</b> None \n<b>Weak Against:</b> Everything \n\n<b>Prerequisites:</b> AWACS. \n\n<b>Armaments:</b> 2x Vasudan Laser Gimble, 1x Vasudan Huge Turret.",
 	},
 }
