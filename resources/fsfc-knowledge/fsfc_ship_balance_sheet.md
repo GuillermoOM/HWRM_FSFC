@@ -174,9 +174,9 @@ graph TD
 | **T4** | **Sobek Armor** | FS2 | (Sobek Armor Upgrade) | Sobek | 1500 | 50s |
 | **T4** | **Sobek Sprint** | FS2 | (Sobek Sprint Upgrade) | Sobek | 1500 | 50s |
 | **T4** | **Hatshepsut** | FS2 | `vas_hatshepsut` | Hatshepsut & FS2 | 12000 | 240s |
-| **T4** | **Installation** | Univ | `vas_karnak` | Installation | 1500 | 50s |
-| **T5** | **Super Capital Ship Design** | FS1 | `vas_hatshepsut` | Hatshepsut & FS2 | 12000 | 240s |
-| **T6** | **Juggernaut** | FS2 | `vas_colossus` | Juggernaut & FS2 | 1500 | 50s |
+| **T4** | **Super Destroyer** | FS1 | `vas_hatshepsut_fs1` | Installation & FS2 | 12000 | 240s |
+| **T4** | **Installation** | Univ | `vas_karnak` | Installation | 7500 | 50s |
+| **T6** | **Juggernaut** | FS2 | `vas_colossus` | Hatshepsut & Installation & FS2 | 22500 | 50s |
 | **T1** | **Sentry Gun** | Univ | `vas_ankh` | SentryGun & FS1 | 1500 | 50s |
 | **T1** | **Sentry And Mine Deployer** | Univ | `vas_maat` | SentryAndMineDeployer & FS1 | 1500 | 50s |
 | **T2** | **Beam Sentry** | FS2 | `vas_mjolnir` | BeamSentry | 1500 | 50s |
@@ -482,6 +482,8 @@ Defines the total allowed points/ships per family for each match preset.
 | GVC Mentu | No | No | No | Min:70 / Fact:1 / Rec:0s | No | Yes | No |
 | GVCv Sobek | No | No | No | Min:350 / Fact:1 / Rec:0s | No | Yes | No |
 | GVD Hatshepsut | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
+| GVI Karnak | 100000 | HeavyArmour | 5000 | 180s | None | **0** | 0.0 | 1.0 | 0 | 0 | 0 | 0 | 0 | 0/0 |
+| GVJ Colossus | 25000 | JuggernautArmour | 15000 | 300s | None | **0** | 0.0 | 1.0 | 0 | 0 | 0 | 0 | 0 | 0/0 |
 | GVD Hatshepsut (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | No | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
 | GVD Typhon | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
 | GVD Typhon (FS1) | Fams: Utility, Fighter, Bomber, Cruiser, Capital, Platform | Yes | Size:20 / Fams:Fighter, Utility / Rep:200 | Min:875 / Fact:1 / Rec:0s | No | Yes | No |
@@ -664,7 +666,7 @@ Defines the total allowed points/ships per family for each match preset.
 | PVI Karnak | 400000 | HeavyArmour / BigCapitalShip | 4500 | 200s | 21x vaslaser_gimble, 17x miss_fighterkiller | **1815.0** | 0.4 | 1.0/1/1 | 0/5 | 0/0 | 15/0 | 20 | 0/5/1/10 | 10000/18000 |
 |GVD Typhon|160000|HeavyArmour / BigCapitalShip|5000|180s|2x vashuge_gimble, 5x flak_turret, 4x miss_fighterkiller, 4x beam_AABlue, 9x vaslaser_gimble, 1x vashuge_turret, 2x beam_bgold|**2958.29**|0.49|1.0/1/1|0/5|0/0|10/0|15|60/4.5/16/10|6500/7500|
 | GVD Typhon (FS1) | 80000 | HeavyArmour / BigCapitalShip | 6000 | 175s | 2x vashuge_gimble, 7x vashuge_turret, 4x miss_fighterkiller, 14x vaslaser_gimble | **1442.5** | 0.24 | 1.0/1/1 | 0/5 | 0/0 | 10/0 | 15 | 60/4.5/16/10 | 6500/7500 |
-|GVD Hatshepsut|180000|HeavyArmour / BigCapitalShip|8000|240s|1x beam_sgold, 5x miss_fluxcannon, 1x heavyflak_turret, 4x beam_AABlue, 6x vashuge_gimble, 10x flak_gimble, 3x beam_bgold|**4955.08**|0.71|1.0/1/1|0/5|0/0|10/0|15|60/4/20/10|6500/7500|
-| GVD Hatshepsut (FS1) | 380000 | HeavyArmour / BigCapitalShip | 7500 | 240s | 4x vashuge_turret, 5x miss_fluxcannon, 1x heavyflak_turret, 2x vaslaser_gimble, 6x vashuge_gimble, 12x flak_gimble | **1639.89** | 0.22 | 1.0/1/1 | 0/5 | 0/0 | 80/60 | 110 | 60/4/20/10 | 6500/7500 |
+|GVD Hatshepsut|180000|HeavyArmour / BigCapitalShip|5000|240s|1x beam_sgold, 5x miss_fluxcannon, 1x heavyflak_turret, 4x beam_AABlue, 6x vashuge_gimble, 10x flak_gimble, 3x beam_bgold|**4955.08**|0.71|1.0/1/1|0/5|0/0|10/0|15|60/4/20/10|6500/7500|
+| GVD Hatshepsut (FS1) | 380000 | HeavyArmour / BigCapitalShip | 8000 | 240s | 4x vashuge_turret, 5x miss_fluxcannon, 1x heavyflak_turret, 2x vaslaser_gimble, 6x vashuge_gimble, 12x flak_gimble | **1639.89** | 0.22 | 1.0/1/1 | 0/5 | 0/0 | 80/60 | 110 | 60/4/20/10 | 6500/7500 |
 |GTVA Colossus|1000000|HeavyArmour / BigCapitalShip|15000|300s|10x terhuge_turret, 12x flak_turret, 8x terlaser_gimble, 10x beam_AABlue, 2x miss_pihrana, 8x miss_rockeye, 7x beam_slashgreen, 6x beam_bfgreen|**15193.74**|0.61|1.0/1/1|0/0|0/5|80/60|110|125/3/20/40|8000/10000|
 
