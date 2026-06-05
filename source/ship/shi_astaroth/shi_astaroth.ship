@@ -70,8 +70,7 @@ NewShipType.isTransferable = 1
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = 'Batch_ScatterDL'
-NewShipType.strikeGroupSpeed = 5000
-NewShipType.canSurround = 1
+NewShipType.canSurround = 0
 
 --------------------------------------------------
 --- Construction
@@ -202,9 +201,9 @@ NewShipType.totalValue = 3
 
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 3000
-NewShipType.secSensorRange = 4000
+NewShipType.visualRange=1500
+NewShipType.prmSensorRange=9000
+NewShipType.secSensorRange=11000
 NewShipType.detectionStrength = 1
 
 --------------------------------------------------

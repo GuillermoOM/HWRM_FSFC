@@ -47,6 +47,7 @@ NewShipType.addedUnitCaps = 101
 
 NewShipType.paradeData = 'terran_parade'
 NewShipType.strikeGroupRadius = 150
+NewShipType.canSurround=1
 NewShipType.noCombatGrouping = 1
 
 

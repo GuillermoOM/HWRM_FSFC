@@ -70,8 +70,7 @@ NewShipType.isTransferable = 1
 NewShipType.SquadronSize = getShipNum(NewShipType, "SquadronSize", 1)
 NewShipType.formationSpacing = 30
 NewShipType.batchFormation = 'Batch_ScatterDL'
-NewShipType.strikeGroupSpeed = 5000
-NewShipType.canSurround = 1
+NewShipType.canSurround = 0
 
 --------------------------------------------------
 --- Construction
@@ -273,7 +272,7 @@ addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 30, 120, 0, 3)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'CanAttack', 1, 2, 1, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Interceptor_vs_Frigate', { Fighter = "Dogfight" }, { Fighter_hw1 = "Dogfight" }, { Corvette = "Dogfight" }, { Corvette_hw1 = "Dogfight" }, { Frigate = "Fighter_vs_Frigate" }, { SubSystem = "TopAttack_Interceptor_vs_Subsystem" }, { SmallCapitalShip = "Fighter_vs_CapShip" }, { BigCapitalShip = "Fighter_vs_CapShip" }, { Mothership = "Fighter_vs_Mothership" }, { ResourceLarge = "Fighter_vs_ResourceLarge" })
+addAbility(NewShipType, 'CanAttack', 1, 2, 1, 0, 0.35, 1, 'Fighter, Fighter_hw1, Corvette, Corvette_hw1,,,,, Frigate, SmallCapitalShip, BigCapitalShip, Mothership', 'FlyBy_Interceptor_vs_Frigate_Fs', { Fighter = "Dogfight" }, { Fighter_hw1 = "Dogfight" }, { Corvette = "Dogfight" }, { Corvette_hw1 = "Dogfight" }, { Frigate = "Fighter_vs_Frigate" }, { SubSystem = "TopAttack_Interceptor_vs_Subsystem" }, { SmallCapitalShip = "Fighter_vs_CapShip" }, { BigCapitalShip = "Fighter_vs_CapShip" }, { Mothership = "Fighter_vs_Mothership" }, { ResourceLarge = "Fighter_vs_ResourceLarge" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 500)
 addAbility(NewShipType, 'HyperspaceViaGateCommand', 0, 3, .25, 0)
 addAbility(NewShipType, 'RetireAbility', 1, 0)
