@@ -21,7 +21,7 @@ NewShipType.rearArmourDamage = getShipNum(NewShipType, "rearArmourDamage", 1.0)
 --- Tactics And Multipliers
 --------------------------------------------------
 
-NewShipType.defaultROE = 'Neutral'
+NewShipType.defaultROE = 'Defensive'
 NewShipType.defaultStance = 'Neutral'
 setTacticsMults(NewShipType, 'ENGINEACCEL', 1.10, 0.90, 1.0)
 setTacticsMults(NewShipType, 'THRUSTERACCEL', 1.10, 0.90, 1.0)
@@ -252,7 +252,7 @@ addAbility(NewShipType, 'CanLaunch')
 addAbility(NewShipType, 'ShipHold', 1, 1000, 28, 'rallypoint', 'Fighter, Utility', 60)
 addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'WaypointMove')
-addAbility(NewShipType, 'HyperSpaceCommand', 0, 1, 800, 1600, 0, 0)
+addAbility(NewShipType, 'HyperSpaceCommand', 1, 1, 800, 1600, 0, 0)
 addAbility(NewShipType, 'CanAttack', 1, 1, 0, 1, 0.35, 1.2, 'BigCapitalShip,SmallCapitalShip,Frigate,Capturer,Mothership,Utility,,,,,Corvette, Corvette_hw1,Fighter, Fighter_hw1', 'Frontal', { Fighter = "MoveToTargetAndShoot" }, { Fighter_hw1 = "MoveToTargetAndShoot" }, { Corvette = "MoveToTargetAndShoot" }, { Corvette_hw1 = "MoveToTargetAndShoot" }, { Frigate = "Frontal" }, { Munition = "MoveToTargetAndShoot" }, { SubSystem = "MoveToTargetAndShoot" })
 addAbility(NewShipType, 'GuardCommand', 1, 3000, 1000)
 addAbility(NewShipType, 'CanBuildShips', 1, 'Fighter_Ter, Bomber_Ter, Cruiser_Ter, SuperCap_Ter, Utility_Ter, Platform_Ter, Battlecruiser_Ter, Shipyard_Ter, Probe_Ter', 'Utility, Fighter, Bomber, Cruiser, Capital, Platform')

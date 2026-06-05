@@ -115,7 +115,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
 NewShipType.BuildFamily = 'SuperCap_Ter'
 NewShipType.AttackFamily = 'SmallCapitalShip'
 NewShipType.DockFamily = 'SuperCap'
-NewShipType.AvoidanceFamily = 'SuperCap'
+NewShipType.AvoidanceFamily = 'Capital'
 NewShipType.DisplayFamily = 'Capital'
 NewShipType.AutoFormationFamily = 'CapShip'
 NewShipType.CollisionFamily = 'Big'
@@ -127,6 +127,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "HeavyArmour"
 
 setSupplyValue(NewShipType, 'Capital', 1.0)
 setSupplyValue(NewShipType, 'Deimos', 1.0)
+setSupplyValue(NewShipType, "LayoutDestroyer", 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating

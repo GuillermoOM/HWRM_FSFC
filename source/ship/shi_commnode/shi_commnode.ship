@@ -13,7 +13,7 @@ NewShipType.blobNamePriority = 75
 --- Health and Armour
 --------------------------------------------------
 
-NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 40000)
+NewShipType.maxhealth = getShipNum(NewShipType, "maxhealth", 15000)
 NewShipType.regentime = 450
 NewShipType.minRegenTime = 350
 NewShipType.sideArmourDamage = getShipNum(NewShipType, "sideArmourDamage", 1.0)
@@ -102,7 +102,7 @@ NewShipType.layoutCenterZ = 50
 --------------------------------------------------
 
 NewShipType.MinimalFamilyToFindPathAround = 'MotherShip'
-NewShipType.BuildFamily = 'Utility_Shi'
+NewShipType.BuildFamily = 'Platform_Shi'
 NewShipType.AttackFamily = 'BigCapitalShip'
 NewShipType.DockFamily = 'Shipyard'
 NewShipType.AvoidanceFamily = 'MotherShip'
@@ -221,7 +221,8 @@ NewShipType.alternativeHyperspaceTime = 7
 --------------------------------------------------
 --- Abilities
 --------------------------------------------------
-
+---
+addAbility(NewShipType, 'ParadeCommand', 1)
 addAbility(NewShipType, 'SensorPing', 1, 0, 15, 4)
 addAbility(NewShipType, "CanBuildShips", 1, "Subsystem_All", "SubSystemModule, SubSystemSensors")
 
@@ -240,8 +241,6 @@ addShield(NewShipType, 'EMP', 310, 17)
 --------------------------------------------------
 --- HardPoints
 --------------------------------------------------
-
-NewShipType.canRetireSubSystems = 1
 
 StartShipHardPointConfig(NewShipType, 'AWACS0', 'HardpointAWACS', 'System', 'Sensors', 'Indestructible', 'awacs_0', '', '', '', '', '', '', '', '')
 StartShipHardPointConfig(NewShipType, 'AWACS1', 'HardpointAWACS2', 'System', 'Sensors', 'Indestructible', '', 'awacs_1', '', '', '', '', '', '', '')

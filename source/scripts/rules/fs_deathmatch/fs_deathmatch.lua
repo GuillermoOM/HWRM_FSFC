@@ -197,6 +197,7 @@ function timer_updating()
 								"shi_cain",
 								"shi_lilith",
 								"shi_demon",
+								"shi_belial",
 							}
 							for i, ship in fs2_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)
@@ -235,6 +236,7 @@ function timer_updating()
 								"shi_lilith_fs1",
 								"shi_demon_fs1",
 								"shi_scorpion",
+								"shi_trident",
 							}
 							for i, ship in fs1_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)

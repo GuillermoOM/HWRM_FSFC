@@ -343,7 +343,7 @@ research = {
 		Time = 50,
 		DisplayedName = "Sentry Gun <c=0e0160>(50s)</c>",
 		DisplayPriority = 17,
-		Description = "Unlocks Sentry Guns: Edjo, Ankh.",
+		Description = "Unlocks Sentry Guns.",
 		TargetType = Ship,
 		TargetName = "vas_ankh",
 		Icon = Icon_Build,

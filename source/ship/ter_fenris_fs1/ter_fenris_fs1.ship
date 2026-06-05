@@ -56,7 +56,7 @@ NewShipType.relativeMoveFactor = 3
 --------------------------------------------------
 
 NewShipType.formationSpacing = 250
-NewShipType.strikeGroupRadius = 100
+NewShipType.strikeGroupRadius = 150
 NewShipType.canSurround = 1
 
 --------------------------------------------------
@@ -121,7 +121,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Cruiser_Ter'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Capital'
+NewShipType.AvoidanceFamily = 'Frigate'
 NewShipType.DisplayFamily = 'Cruiser'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
@@ -132,6 +132,7 @@ NewShipType.ArmourFamily = getShipStr(NewShipType, "ArmourFamily", "MediumArmour
 --------------------------------------------------
 
 setSupplyValue(NewShipType, 'Cruiser', 1.0)
+setSupplyValue(NewShipType, 'LayoutCruiser', 1.0)
 
 --------------------------------------------------
 --- Ship Counter Rating
