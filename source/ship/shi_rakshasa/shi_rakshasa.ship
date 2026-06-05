@@ -56,7 +56,7 @@ NewShipType.relativeMoveFactor = 3
 --------------------------------------------------
 
 NewShipType.formationSpacing = 250
-NewShipType.strikeGroupRadius = 100
+NewShipType.strikeGroupRadius = 150
 
 
 --------------------------------------------------
@@ -121,7 +121,7 @@ NewShipType.MinimalFamilyToFindPathAround = 'SuperCap'
 NewShipType.BuildFamily = 'Cruiser_Shi'
 NewShipType.AttackFamily = 'Frigate'
 NewShipType.DockFamily = 'Shipyard'
-NewShipType.AvoidanceFamily = 'Capital'
+NewShipType.AvoidanceFamily = 'Frigate'
 NewShipType.DisplayFamily = 'Cruiser'
 NewShipType.AutoFormationFamily = 'Frigate'
 NewShipType.CollisionFamily = 'Big'
