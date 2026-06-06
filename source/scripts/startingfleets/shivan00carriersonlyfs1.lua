@@ -3,7 +3,7 @@ PersistantData = {
   },
   Squadrons = {
     {
-      type = "Shi_Ravana",
+      type = "Shi_Demon",
       subsystems = {
       },
       shiphold = {

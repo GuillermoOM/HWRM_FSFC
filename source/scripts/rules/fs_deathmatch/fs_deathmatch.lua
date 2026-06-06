@@ -61,7 +61,6 @@ dofilepath("data:leveldata/multiplayer/lib/dev.lua")
 dofilepath("data:leveldata/multiplayer/lib/main.lua")
 dofilepath("data:leveldata/multiplayer/lib/carriersonly.lua")
 dofilepath("data:leveldata/multiplayer/lib/nocruisers.lua")
-dofilepath("data:leveldata/multiplayer/lib/strikecraftgamemode.lua")
 dofilepath("data:leveldata/multiplayer/lib/music.lua")
 dofilepath("data:scripts/scar/fsfc_ui.lua")
 
@@ -70,7 +69,6 @@ function OnInit()
 	Rule_Add("Rule_GrantEraBySetting")
 	MPRestrict()
 	nocruisers = GetGameSettingAsNumber("nocruisers")
-	strikecraftgamemode = GetGameSettingAsNumber("strikecraftgamemode")
 	cpuplayers = GetGameSettingAsNumber("cpuplayers")
 	bounties = GetGameSettingAsNumber("bounties")
 	research = GetGameSettingAsNumber("research")
@@ -90,12 +88,14 @@ function OnInit()
 		suffix = "carriersonly"
 	elseif carriersonly == 2 then
 		suffix = "carriersonly1"
-	elseif era_setting == 0 then
-		suffix = "fs1"
+	end
+
+	if era_setting == 0 then
+		suffix = suffix .. "fs1"
 		RandomMusicRuleFS1()
 		Rule_Add("RandomMusicRuleFS1")
 	elseif era_setting == 1 then
-		suffix = "fs2"
+		suffix = suffix .. "fs2"
 		RandomMusicRuleFS2()
 		Rule_Add("RandomMusicRuleFS2")
 	else
@@ -248,12 +248,19 @@ function timer_updating()
 					if carriersonly > 0 then
 						if racePrefix == "TER" or racePrefix == "VAS" or racePrefix == "SHI" then
 							local super_ships_to_hide = {
+								"ter_orion",
+								"ter_hecate",
 								"ter_hades",
 								"ter_colossus",
 								"vas_colossus",
+								"vas_hatshepsut",
 								"vas_hatshepsut_fs1",
+								"vas_typhon_fs1",
+								"vas_typhon",
 								"shi_lucifer",
 								"shi_sathanas",
+								"shi_ravana",
+								"shi_demon",
 							}
 							for i, ship in super_ships_to_hide do
 								Player_RestrictBuildOption(playerIndex, ship)
@@ -272,9 +279,6 @@ function timer_updating()
 
 		if nocruisers == 1 then
 			Rule_AddInterval("nocruisers_init", timer_interval)
-		end
-		if strikecraftgamemode == 1 then
-			Rule_AddInterval("strikecraftgamemode_init", timer_interval)
 		end
 
 		if research == 0 then

@@ -37,8 +37,6 @@ GameSetupOptions = {
 			"1.0",
 			"$3243",
 			"2.0",
-			"Big AF",
-			"20.0",
 		},
 	},
 	{
@@ -216,8 +214,6 @@ GameSetupOptions = {
 			"0",
 			"$3184",
 			"1",
-			"$4802",
-			"2",
 		},
 	},
 	{
@@ -230,19 +226,6 @@ GameSetupOptions = {
 			"$3221",
 			"0",
 			"$3222",
-			"1",
-		},
-	},
-	{
-		name = "strikecraftgamemode",
-		locName = "$3141",
-		tooltip = "$3142",
-		default = 0,
-		visible = 1,
-		choices = {
-			"$3222",
-			"0",
-			"$3221",
 			"1",
 		},
 	},
