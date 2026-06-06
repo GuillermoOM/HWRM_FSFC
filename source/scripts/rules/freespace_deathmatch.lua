@@ -79,8 +79,8 @@ GameSetupOptions = {
 	},
 	{
 		name = "carriersonly",
-		locName = "Destroyers Only",
-		tooltip = "Only allow destroyers as Capital Ships.",
+		locName = "Super Capitals Disabled",
+		tooltip = "Only allow Regular Capital Ships.",
 		default = 0,
 		visible = 1,
 		choices = {
@@ -88,8 +88,6 @@ GameSetupOptions = {
 			"0",
 			"$3184",
 			"1",
-			"$4802",
-			"2",
 		},
 	},
 	{

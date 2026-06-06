@@ -69,11 +69,7 @@ function OnInit()
 
 	-- Starting fleet suffix priority
 	local suffix = ""
-	if carriersonly == 1 then
-		suffix = "carriersonly"
-	elseif carriersonly == 2 then
-		suffix = "carriersonly1"
-	elseif era_setting == 0 then
+	if era_setting == 0 then
 		suffix = "fs1"
 		RandomMusicRuleFS1()
 		Rule_Add("RandomMusicRuleFS1")
