@@ -24,5 +24,13 @@ PersistantData = {
 			size = 1,
 			number = 1,
 		},
+		{
+			type = "ter_centaur",
+			subsystems = {},
+			shiphold = {},
+			name = "",
+			size = 1,
+			number = 1,
+		},
 	},
 }

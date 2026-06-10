@@ -8,7 +8,7 @@ This is a **Homeworld Remastered** total conversion mod (FreeSpace: Fleet Comman
 - **Races**: Terran (`ter_`), Vasudan (`vas_`), Shivan (`shiv_`)
 - **Mod source**: `source/` — all game-affecting files
 - **FSFC Knowledge base**: `resources/fsfc-knowledge/` — 2 structured reference documents
-- **HWRM Wiki Reference**: `resources/hwrm-wiki/` — structured modding documentation (functions, variables, rules, tutorials)
+- **HWRM Wiki Reference**: `/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld 347380/GBXTools/WorkshopTool/mod-tools/KarosGraveyard.wiki` — structured modding documentation (functions, variables, rules, tutorials)
 - **Vanilla reference**: Sibling workspace `HWRM/` — original game scripts (read-only)
 - **Templates**: `resources/script_templates/` — canonical file templates
 - **Original Mod Resources (Extracted BIG)**: `/run/media/system/Data/SteamLibrary/steamapps/common/Homeworld 347380/GBXTools/WorkshopTool/uncompressed_bigs/freespace_remastered` - for any missing references in local knowledge base that could be added, these are the original mod files where I'm fixing and remastering from (read only)
@@ -61,8 +61,6 @@ Specialized patterns for common FSFC modding tasks:
 - **Era-Specific Ship Refactoring**: Step-by-step refactoring workflows for outdated ship configuration presets. [Skill](.agents/skills/era_specific_ship_refactoring/pattern_guide.md)
 - **Game Mode Content Gating**: Mechanics for gating and locking custom content depending on active rule configurations. [Skill](.agents/skills/game_mode_exclusive_content_gating/how_to_gate.md)
 - **Race Assignment Verification**: Validating custom race characteristics and script boundaries at match startup. [Skill](.agents/skills/race_assignment_verification/how_to_verify.md)
-
-
 
 ## Full Agent Instructions
 

@@ -221,9 +221,9 @@ NewShipType.minimumZoomFactor = 0.75
 --- Level of Detail
 --------------------------------------------------
 
-NewShipType.minLOD = 0.2
-NewShipType.upLOD = 1500
-NewShipType.downLOD = 1505
+NewShipType.minLOD = 0.25
+NewShipType.upLOD = 700
+NewShipType.downLOD = 500
 
 --------------------------------------------------
 --- Selection
