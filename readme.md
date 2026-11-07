@@ -66,13 +66,4 @@ This repository now contains a comprehensive, engine-specific knowledge base to 
 - **FSFC Knowledge Base** (`resources/fsfc-knowledge/`): Documents detailing the FSFC AI architecture, ship balance sheets, unit capacity guidelines, and era gating mechanics.
 - **HWRM Wiki Reference** (`resources/hwrm-wiki/`): A complete reference of Homeworld Remastered Lua 4.0 gotchas, engine API functions, LSP-stubs, variable mappings, and step-by-step modding tutorials.
 
-## Roadmap Progress
 
-1. [DONE] Add Vasudan Race and Ships
-2. [DONE] Add AI to Vasudans
-3. [DONE] Reintegrate Research & Tech Trees (Ship-by-ship progression)
-4. [DONE] Stabilize capital ship subsystems (Alignment and innate loading of FS1/FS2 hardpoints)
-5. [DONE] Unify rules and game types into `freespace_deathmatch`
-6. [DONE] Integrate advanced telemetry and developer tools
-7. [PENDING] Add custom FS Maps
-8. [PENDING] Multiplayer testing & verification
