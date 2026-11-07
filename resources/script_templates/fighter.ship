@@ -187,7 +187,7 @@ NewShipType.launchFormation = "n_delta"
 --------------------------------------------------
 
 addAbility(NewShipType, "CanDock", 1, 1)
-NewShipType.holdSlots = 4
+NewShipType.holdSlots = 1
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1

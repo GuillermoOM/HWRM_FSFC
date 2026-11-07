@@ -85,7 +85,7 @@ NewShipType.buildPriorityOrder = 20
 --- Docking
 --------------------------------------------------
 
-NewShipType.holdSlots = 4
+NewShipType.holdSlots = 1
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1

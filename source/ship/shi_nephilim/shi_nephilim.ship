@@ -273,7 +273,7 @@ addAbility(NewShipType, 'CustomCommand', 1, 'Speed Burst', 1, 0, 60, 0, 1, 0.25,
 --- Docking
 --------------------------------------------------
 
-NewShipType.holdSlots = 3
+NewShipType.holdSlots = 1
 NewShipType.dockTimeBetweenTwoFormations = 0.5
 NewShipType.dockTimeBeforeStart = 0.5
 NewShipType.dockNrOfShipsInDockFormation = 1
